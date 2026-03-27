@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"TILE.*SIZE\\\\|tile.*width\\\\|tile.*height\" /Users/apple/krita_gpu/krita/libs/image/tiles3/*.h)",
+      "Bash(git checkout:*)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/master/include/vk_mem_alloc.h\" -o /Users/apple/krita_gpu/krita/3rdparty_vendor/vma/include/vk_mem_alloc.h)",
+      "Bash(find /Users/apple/krita_gpu/krita/libs/image/tiles3 -name \"*.h\" -exec basename {})",
+      "Bash(grep -r \"__TILE_DATA_WIDTH\\\\|__TILE_DATA_HEIGHT\\\\|WIDTH.*=\\\\|HEIGHT.*=\" /Users/apple/krita_gpu/krita/libs/image/tiles3/*.h)",
+      "Bash(grep -r \"const.*WIDTH.*=\\\\|const.*HEIGHT.*=\" /Users/apple/krita_gpu/krita/libs/image/tiles3/*.cc /Users/apple/krita_gpu/krita/libs/image/tiles3/*.cpp)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(find /Users/apple/krita_gpu/krita -type f -name *RenderedDab*)",
+      "Bash(find /Users/apple/krita_gpu/krita -type f -name *DabCache*)",
+      "Bash(find /Users/apple/krita_gpu/krita -type f -name kis_auto_brush*)",
+      "Bash(find /Users/apple/krita_gpu/krita -type f -name *mask_generator*)",
+      "Bash(grep -E \"\\\\.\\(h|cpp\\)$\")",
+      "Bash(find /Users/apple/krita_gpu/krita/libs -type d -name *composite* -o -type d -name *blend*)",
+      "Bash(find /Users/apple/krita_gpu/krita -type d -name *gl* -o -type d -name *gpu* -o -type d -name *vulkan*)",
+      "Bash(find /Users/apple/krita_gpu -type f -name *.md)",
+      "Bash(grep -E \"\\\\.h$\")",
+      "Bash(grep -r \"class Kis.*Renderer\" /Users/apple/krita_gpu/krita/libs/ui/opengl/*.h)",
+      "Bash(grep -n \"class.*Bridge\" /Users/apple/krita_gpu/krita/libs/ui/opengl/*.h)",
+      "Bash(find /Users/apple/krita_gpu/krita -type d -name *vulkan*)",
+      "Bash(find /Users/apple/krita_gpu -path */libs/image/brushengine/* -name *.h -type f)",
+      "Bash(find /Users/apple/krita_gpu -path */libs/ui/tool/* -name *.h -type f)",
+      "Bash(grep -i \"\\\\.h$\")",
+      "Bash(grep -r KisFreehandStrokeStrategy /Users/apple/krita_gpu --include=*.h --include=*.cpp)",
+      "Bash(find /Users/apple/krita_gpu -path */plugins/paintops/defaultpaintops/* -name *.h -type f)",
+      "Bash(grep -n \"class.*Factory\" /Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/*.cpp /Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/*.h)",
+      "Bash(grep -rn \"vkQueueWaitIdle\\\\|vkDeviceWaitIdle\" /Users/apple/krita_gpu/krita/libs/image_vulkan/*.cpp)",
+      "Bash(git status:*)"
+    ]
+  }
+}
