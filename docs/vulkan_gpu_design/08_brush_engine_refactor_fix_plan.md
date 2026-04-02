@@ -511,7 +511,7 @@
 - ✅ T5-1 已完成第一版：已新增共享 `KisVulkanGpuBlendMode`，brush runtime、preset analyzer、node sync 改为引用同一份 GPU blend enum / composite 映射
 - ✅ T5-2 已完成第一版：`compositeOpId -> GpuBlendMode` 已收口到共享 C++ 映射，不再在三处各自维护表
 - ✅ T5-3 已完成第一版：`dab_round.comp`、`dab_stamp.comp`、`dab_round_subgroup.comp`、`layer_composite.comp` 的 blend 数学已下沉到共享 `shaders/common/kis_blend.glsl`
-- ⚠️ T5-4 仍待完成：layer path 的支持矩阵冻结、文档口径更新与端到端一致性验证仍未收口
+- ⚠️ T5-4 已完成第一版：`brush / layer / analyzer` 的支持矩阵已冻结到共享 path-aware blend matrix，并补充单元测试防止三处漂移；文档口径已同步，但端到端一致性验证仍未收口
 
 ### 完成判定
 

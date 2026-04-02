@@ -160,7 +160,7 @@ CPU 基线仍覆盖以下能力族：
   基础参数读取、`brush_definition` 解析、dynamics、spacing 与 composite passthrough 已集中到 `KisVulkanBrushRuntime`。
 
 - **Composite 不再是硬编码 normal**  
-  现在已存在 Krita composite string → 共享 GPU blend enum / 映射 → shader switch 的完整链路；brush runtime、preset analyzer、node sync 已引用同一份 C++ 映射，brush / layer shader 的 blend 数学也已下沉到共享 GLSL include；但 layer path 的支持矩阵冻结与端到端验证仍未完成。
+  现在已存在 Krita composite string → 共享 GPU blend enum / 映射 → shader switch 的完整链路；brush runtime、preset analyzer、node sync 已引用同一份 C++ 映射，brush / layer shader 的 blend 数学也已下沉到共享 GLSL include；`brush / layer / analyzer` 的支持矩阵已冻结到共享 path-aware blend matrix，但端到端一致性验证仍未完成。
 
 - **CPU fallback 已从“宽松误入”改为“严格拒绝”**  
   这对稳定性和用户预期都非常关键。
@@ -173,7 +173,7 @@ CPU 基线仍覆盖以下能力族：
    `BrushEngine::ensureBackendInitialized()` 在 `recordDabs()` / `processStrokePoints()` 首次触发时延迟初始化 backend，并自动上传 pending images；`recordDabs()` 在初始化失败时也不会消费 dab。但 `BrushEngine::initialize()` 新增的 allocator 当前未从 `KisVulkanCanvas` 透传，导致 `StampBrushBackend` 的纹理上传链仍不能算完全打通。
 
 2. **shared runtime 仍是“基础共享语义”而不是“完整共享语义”**  
-   它已经比之前健康得多，但尚未吸收生产级资源常驻策略、texture/masking 的显存缓存、mirror / airbrush / sharpness / wash 的完整共享语义，也未统一 brush 与 layer 的 blend 支持口径。
+  它已经比之前健康得多，但尚未吸收生产级资源常驻策略、texture/masking 的显存缓存、mirror / airbrush / sharpness / wash 的完整共享语义；brush 与 layer 的 blend 支持口径虽已冻结到统一矩阵，但端到端图像验证仍未收口。
 
 3. **feature gate 严格了很多，但“放行条件”和“真实运行时能力”并未完全对齐**  
    wrap-around 已改为运行时检测，sharpness / scatter / lightness strength 的提取都已增强；但 `LightnessStrength` 当前仍是“已提取未完全生效”，`color_source` 的 gate 已放开而运行时依据仍需补强。
@@ -197,7 +197,7 @@ CPU 基线仍覆盖以下能力族：
 | predefined brush | 完整支持 | analyzer 已允许进入 GPU，runtime / shader 路径已存在，目标走 stamp backend | 已进入目标范围，但仍受 allocator 透传缺口与端到端验证阻断 |
 | text brush | 完整支持 | analyzer 识别到，但明确回退 CPU | 可后置 |
 | spacing / auto spacing | 完整统一折算 | runtime 已有基础实现 | 已改善但仍需对齐 CPU 语义 |
-| composite op | Krita 真实透传 | 已抽出共享 GPU blend enum / composite 映射与共享 GLSL blend 库；layer path 仍待完成支持矩阵冻结与系统验证 | 架构已明显收口，但未完全定版 |
+| composite op | Krita 真实透传 | 已抽出共享 GPU blend enum / composite 映射与共享 GLSL blend 库，并把 brush / layer / analyzer 的支持矩阵冻结到共享 path-aware 查询；端到端验证仍待完成 | 架构已明显收口，但未完全定版 |
 | texture | 完整支持 | per-stroke 参数链已闭合（bypass ring buffer），pending image 延迟上传已实现 | 参数通路已具备，但资源常驻与 stamp 端到端验证未完成 |
 | masking brush | 完整支持 | pending image 延迟上传已实现，依赖 stamp path | 参数通路已具备，但资源常驻与 stamp 端到端验证未完成 |
 | color source / mix / HSV / darken | 完整支持 | HSV / Mix / Darken 已有 CPU 侧实现；`LightnessStrength` 已提取；`color_source` 已放开 gate | 部分具备，但状态描述需分级，不能视为整体完成 |
@@ -388,7 +388,7 @@ CPU 基线仍覆盖以下能力族：
 - ✅ **扩展 blend mode 集合** — 从 8 种增加到 15 种（新增 SoftLight/HardLight/Difference/Exclusion/Add/Subtract/Divide），三个 shader 同步更新
 - ✅ **Wash mode（非增量模式）V1** — shader 级 `FLAG_WASH_MODE` 使用 max-alpha 合成防止重叠加深；per-dab 不乘 opacity；完整间接绘制层待后续迭代
 - ⚠️ **PresetAnalyzer gate 更新** — `color_hsv`、`color_mix`、`color_darken`、`wash_mode` 的 gate 已移除；`lightness_strength` 与 `color_source` 的运行时依据仍需补强，当前不应直接视为“完全闭合”
-- ⚠️ **Composite 架构收口** — 已抽出共享 `GpuBlendMode`、统一 `compositeOpId -> GpuBlendMode` 映射，并把 brush / layer shader 的 blend 数学下沉到共享 GLSL include；但支持矩阵冻结与端到端验证仍未完成
+- ⚠️ **Composite 架构收口** — 已抽出共享 `GpuBlendMode`、统一 `compositeOpId -> GpuBlendMode` 映射，并把 brush / layer shader 的 blend 数学下沉到共享 GLSL include；`brush / layer / analyzer` 的支持矩阵也已冻结到共享 path-aware blend matrix，并补充单元测试防止三处漂移；端到端验证仍未完成
 
 待完成事项：
 
@@ -399,7 +399,7 @@ CPU 基线仍覆盖以下能力族：
 - 🔲 Wash mode V2：独立间接绘制 GPU buffer + stroke-end 通过 `layer_composite.comp` 合成
 - 🔲 Predefined Brush 端到端运行时验证
 - 🔲 Sharpness 的 1px 快路径（整数坐标对齐）
-- 🔲 冻结 brush / layer / analyzer 三处支持矩阵并完成端到端验证
+- 🔲 完成 brush / layer / analyzer 三处 composite 支持矩阵的端到端验证
 - 🔲 一致性修正与性能回归
 
 ### 阶段 D：建立验收与回归体系
