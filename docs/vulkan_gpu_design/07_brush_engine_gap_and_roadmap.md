@@ -397,7 +397,7 @@ CPU 基线仍覆盖以下能力族：
 - 🔲 `LightnessStrength` 运行时语义闭环
 - 🔲 `color_source` 的真实支持范围收敛
 - 🔲 Wash mode V2：独立间接绘制 GPU buffer + stroke-end 通过 `layer_composite.comp` 合成
-- 🔲 Predefined Brush 端到端运行时验证
+- ⚠️ Predefined Brush 验证基础已补第一版 —— 已新增样本级 sanity：`testing_predefined_lod_spc13.kpp`、`testing_predefined_lod.kpp`、`testing_1000px_stamp_450_rotated.kpp` 的 preset analyzer + runtime 资源准备测试，并补上 `VULKAN_STARTED` canvasState 持久化修复；但 CPU / OpenGL / Vulkan 出图对照与 UV/旋转/ratio/softness 验证仍待完成
 - 🔲 Sharpness 的 1px 快路径（整数坐标对齐）
 - 🔲 完成 brush / layer / analyzer 三处 composite 支持矩阵的端到端验证
 - 🔲 一致性修正与性能回归

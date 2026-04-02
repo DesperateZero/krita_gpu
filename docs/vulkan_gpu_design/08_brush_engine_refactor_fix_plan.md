@@ -276,10 +276,12 @@
   - `testing_predefined_lod_spc13.kpp`：现有 predefined LOD 基线
   - `testing_predefined_lod.kpp`：备用 predefined LOD 基线
   - `testing_1000px_stamp_450_rotated.kpp`：旋转类样本
+  - `colorsmudge_predefined.kpp`：真实复杂预设（用于覆盖更多 runtime 组合）
 
 完成标准：
 
 - 至少有一组可冻结的 predefined brush 样本集
+  - 样本集已接入最小自动化 sanity（preset analyzer + runtime 资源准备），避免“文件存在但链路断开”
 
 ### 完成判定
 
