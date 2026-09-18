@@ -1,47 +1,50 @@
-# 第一个原型版本大纲 (Prototype V1 MVP)
+# 第一个 MVP 大纲
 
-> **状态更新**：Prototype V1 的目标是验证“Vulkan 画布 + GPU 计算 + 显示”链路可行性，目前相关基础设施已落地并可运行；但仍需要把 Krita 的真实输入/笔刷/图层系统接线到 Vulkan 入口，才能进入日常可用阶段。
+> 本文已按当前架构决策重写。旧版“单图层 sparse image 能画即可算 MVP”的定义已废止。权威口径见
+> [00_status_and_mvp_contract.md](00_status_and_mvp_contract.md)，全局 P0 总纲和唯一执行顺序见
+> [22_p0_vulkan_baseline_reconstruction.md](22_p0_vulkan_baseline_reconstruction.md) 与
+> [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md)。笔迹执行见
+> [10_gpu_stroke_foundation.md](10_gpu_stroke_foundation.md)。
 
-## MVP 目标 (Minimum Viable Product)
-第一个原型（Prototype V1）的目标是**验证核心架构的可行性**，即证明 "UI输入 -> Compute Shader处理 -> Vulkan Swapchain显示" 这条纯 GPU 管线能够跑通，并展现出超越现有 CPU 架构的潜力。
+## 目标
 
-MVP 将极其精简，暂时剥离所有非核心功能（如滤镜、变形、复杂的笔刷引擎特性等）。
+验证一个面向真实绘画的统一页面系统，而不是只验证 Vulkan API 能否显示和 dispatch。
 
-## 核心功能范围
+## 必须包含
 
-1. **单图层渲染 (Single Layer Rendering)**
-   * 不支持图层组、蒙版、混合模式（仅支持 Normal 模式）。
-   * 画布完全驻留在 VRAM 中（通过 `VK_KHR_sparse_binding` 实现逻辑上的无限画布）。
-   * 仅处理一个基础的像素图层。
+1. 受控重置、旧 runtime 删除和下游 UI adapter 组装的单向 target 图；backend 只依赖 `kritaimage`，paintop
+   只依赖 backend-neutral session。
+2. Krita 现有 tile/COW/undo/swap 演进出的唯一 canonical PageStore。
+3. 逻辑 tile 与设备物理页正确解耦；fixed-slot slab 与 direct/operation-scoped binding 为基线，sparse 仅为可选 provider。
+4. UMA 共享 mapped page 与 CPU/GPU 所有权切换。
+5. dGPU VRAM cache 与 RAM backing 自动转录。
+6. 唯一 unified SSD store 的写出、恢复、校验和空间回收。
+7. generation、lease、authority、pin、in-flight 和失败状态机。
+8. `SubmissionCoordinator` 的 queue 独占、timeline DAG、command arena 和零阻塞线程边界。
+9. 基于 `GraphEpoch`/`ActiveTargetSet` 的 lower/target/upper 图层剪枝。
+10. 绘画感知温度、预算和迟滞。
+11. 独立于 swapchain 的 page-batched GPU stroke lane。
+12. generation COW undo、immutable save epoch 和 cancel/recovery。
+13. `SurfaceFormat`、codec、4/8/16 字节格式与 truthful capability/LoD。
+14. 文档级 session、多 canvas 隔离和只消费 DisplaySurface 的 UI adapter。
+15. BackendReadyToken、设备能力探测和完整验收后的产品入口。
 
-2. **基础笔刷 (Basic Brush Engine)**
-   * 仅支持最基础的圆形笔刷（Round Brush）。
-   * 不包含纹理、动态颗粒或复杂的动态形状。
-   * 支持基本的压力感应（控制不透明度和笔刷大小）。
-   * 通过 Ring Buffer 将笔迹点传递给 Compute Shader 进行 Dab 生成与混合。
+## 可以限制但不能绕开
 
-3. **基础画布导航 (Canvas Navigation)**
-   * 丝滑的平移 (Pan) 和缩放 (Zoom)。
-   * 平移和缩放操作必须是完全异步的，不能因渲染未完成而掉帧。
+- 可以先以单目标图层和 Auto Round Brush 建立第一条 stroke golden path，但 PageStore/codec 和 capability
+  必须从第一天支持完整 `SurfaceFormat` 身份，并覆盖 4/8/16 字节像素及不支持格式的前置 CPU 路由。
+- 可以让 CPU reference backend 立即完成 ticket，但消费者从第一天就只能使用异步 ticket API；不得先暴露同步 transfer/wait 接口再改造。
+- 可以先只对安全 blend 生成 upper overlay，其余走 replay。
+- 不可以用固定大图、手工 bind/upload、只有 VRAM/RAM、逐 dab dispatch、stroke-end 整图回读或仅 CPU 测试替代目标架构。
 
-## 技术实现要点
+## 当前状态
 
-* **Vulkan 基础设施**：一个能在主窗口正常显示的 `KisVulkanCanvas`，以及一个管理实例、设备、队列的 `VulkanDeviceManager`。
-* **稀疏纹理 (Sparse Texture)**：分配一张巨大的逻辑 2D Image，但在 MVP 阶段，我们只需为其中心（视口初始位置）以及笔刷划过的地方绑定物理内存页面。
-* **Compute Shader 管线**：
-  * 一个简单的 `.comp` 着色器，读取 Ring Buffer 中的 `(x, y, pressure)`。
-  * 将圆形图案（通过 SDF 距离场或基础算法）绘制到绑定的物理 Tile 上。
-* **无锁输入与呈现 (Lock-free Input & Present)**：
-  * UI 线程负责将鼠标/压感笔事件推入无锁队列。
-  * 渲染线程负责消耗队列，调用 `vkCmdDispatch`，并在完成后执行 `vkQueuePresentKHR`。
+仓库中已有 device/swapchain、sparse image、staging、transfer、brush compute、render thread 和同步框架，但三层自动转录、UMA 权威共享页、温度策略、图层剪枝和端到端验证尚未实现。因此本 MVP 未完成。
 
-## 成功标准 (Success Criteria) [已达成]
-1. 在 4K/8K 分辨率画布下，使用 1000px 以上的巨型笔刷快速涂抹，UI 界面（包括平移缩放）帧率稳定在 60Hz/120Hz（取决于显示器），没有任何“笔刷跟手感”卡顿。
-2. 通过 RenderDoc 抓帧证明：整个绘制过程中没有任何 CPU 到 GPU 的像素数据回传或同步阻塞（除了命令提交和 Ring Buffer 更新）。
-3. 显存分配平稳，没有发生频繁的 `vkAllocateMemory` 调用。
+## 成功标准
 
-> 说明：上述“已达成”主要针对 Vulkan 子系统内部的原型链路验证；并不等同于 Krita 真实笔刷系统/图层系统已全量切换到 Vulkan。
-
----
-👉 **下一步计划**：核心计算管线已通，即将进入前端表现层完善阶段，详见 [Prototype V2 (Feature Parity) 大纲](05_prototype_v2_outline.md)。
-👉 **并行推进**：在前端表现层对齐的同时，需要启动“核心接线”工作（输入接线、图层栈接线、撤销/保存一致性），详见 [开发步骤蓝图](03_development_steps.md) 的 Phase 7。
+- 小预算压力测试覆盖 VRAM↔RAM↔SSD 并保持 checksum 一致。
+- UMA 路径没有画布像素复制，只有显式同步和 cache maintenance。
+- 当前目标页在快速绘画中保持 pinned/hot；有效 checkpoint 覆盖的非目标源页可下沉。
+- 只有 BR0–BR6 和 Tier 0–4 全通过后，Krita 正常入口才开放 Vulkan；启用后可画、可撤销、可保存并重开一致。
+- validation layer 无相关错误，所有性能数字都有测试环境和可复现脚本。

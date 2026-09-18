@@ -1,203 +1,129 @@
-# 开发步骤蓝图 (Development Steps Roadmap)
+# 开发步骤与验收门槛
 
-整个新架构将分阶段推进，确保在每个阶段都能获得可运行、可测试、可回退的结果。
-> **当前状态（以仓库现状为准）**：Phase 1-7 全部完成（7A 更新协议、7B 笔刷适配、7C 图层栈、7D 撤销/保存闭环）；接下来推进 Phase 8-9 补齐位深/色彩/混合/非破坏等正确性与主要功能。
+> 本文是便于阅读的阶段摘要。全局唯一执行计划、进入条件、删除清单和提交顺序以
+> [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md) 为准，机器门禁以
+> [30_p0_ci_architecture_guards.md](30_p0_ci_architecture_guards.md) 为准。旧 `Phase*`、`G*` 标号只用于追溯，
+> 不再构成可并行选择的项目路线。虚拟纹理的算法工作包映射见
+> [32_virtual_texture_architecture_decisions.md](32_virtual_texture_architecture_decisions.md)。
 
-## 里程碑分层（建议）
-为避免“底层很强但无法用于日常创作”，路线图按三层推进：
-1. **后端可跑（Phase 1-6）**：Vulkan 设备/显存/稀疏画布/线程/显示与装饰就绪。
-2. **核心可用（Phase 7）**：打通 Krita 的真实输入/笔刷/图层栈/撤销保存最小闭环。
-3. **结果正确 + 主要功能（Phase 8-9）**：位深与色彩管理对齐、混合模式覆盖、滤镜与非破坏节点逐步接入。
+## 当前总评
 
-## ✅ Phase 1: 搭建基于 Vulkan 的底层显存管理与虚拟纹理 (Sparse Binding) 框架
-**状态：已完成**
-* 引入 Vulkan SDK 和 MoltenVK 依赖。
-* 开发 `VulkanDeviceManager`，处理设备选择、队列族提取及基本扩展启用（特别是 Sparse Binding 相关）。
-* 集成 Vulkan Memory Allocator (VMA)，预分配大块显存池（Memory Pooling），避免运行时 `vkAllocateMemory`。
-* 在 `libs/ui/canvas` 创建 `KisVulkanCanvas`，建立基本的三重缓冲 Swapchain 交换机制，替换原有的 OpenGL Canvas 显示逻辑（仅做纯色/简单纹理填充验证）。
+- 旧 Vulkan 原型：已归档并从当前 production tree 删除；不再有可运行 Vulkan 产品路径。
+- 新 Vulkan 子系统：只有显式失败的 PageStore/backend/UI adapter 第一版 skeleton，尚不是冻结 ABI。
+- 正常应用入口与 readiness：旧假成功入口已删除，新入口保持关闭，尚无 ready device/session/view。
+- 模块边界：旧 `kritaimagevulkan <-> kritaui` 构建环已切断；foundation target/private-public/WSI owner 尚待落实。
+- canonical storage：Krita 已有 tile/COW/undo/swap 基础，但尚未统一为 generation/lease/replica PageStore。
+- 虚拟纹理 MVP：未完成；当前 L3 没有真实 SSD，UMA 不是 canonical pointer bypass。
+- queue/线程：新 coordinator 只有空壳，未形成 queue 唯一所有者和完整 ticket DAG，零阻塞不成立。
+- GPU stroke、撤销/保存、多层合成：旧实验仅在 archive；新树没有可运行实现。
+- device/shader/compositor/display/WSI：旧算法有提取价值，但新 foundation owner、ABI 和测试尚未落地。
+- 格式/颜色/LoD：新能力保持关闭，尚无 codec/pipeline/golden 支持矩阵。
 
-## ✅ Phase 2: 重构 KisTileManager，实现 GPU 驻留画布与 L1/L2/L3 分级缓存机制
-**状态：已完成**
-* 建立平行模块 `libs/image_vulkan`。
-* 开发 `KisVulkanTileData`，利用 `VK_KHR_sparse_binding` 和 `VK_KHR_sparse_residency`，创建一个逻辑上巨大的虚拟 2D 图像画布。
-* 实现 L1 (VRAM) 与 L2 (RAM) 的缓存置换逻辑：
-  * 创建专用的 Vulkan Transfer Queue。
-  * 利用 Timeline Semaphores (`VK_KHR_timeline_semaphore`) 编写异步预取队列，在视口平移（Pan）时提前加载 Tile。
-* 对 Apple Silicon / PC 核显开启 UMA 内存类型分配（`HOST_VISIBLE | HOST_COHERENT | DEVICE_LOCAL`），实现零拷贝（Zero-copy）。
+因此下一步不是“接通现有入口”，而是受控重置。
 
-## ✅ Phase 3: 开发 Vulkan Compute Shader 驱动的核心笔刷引擎，对标 llama.cpp 的高效 GPU 调度
-**状态：已完成**
-* 编写第一批 `.comp` (Compute Shader) 代码，替代 `KisPainter` 的 CPU 像素生成与混合。
-* 将 UI 线程捕获的触控笔输入流（坐标、压感、倾斜）映射到 GPU 的 Ring Buffer（环形缓冲区）。
-* 借助 `Push Constants` 实现极低延迟的高频笔刷参数更新。
-* 使用 Compute Shader 读取 Ring Buffer 数据，并行生成笔尖印迹（Dab Generation）并写入 L1 VRAM 绑定的物理页面。
+## BR0：干净校正基线
 
-## ✅ Phase 4: 实现 UMA 架构的零拷贝优化与异步多重缓冲 (Multi-buffering) 渲染管线
-**状态：已完成**
-* 彻底分离 UI 输入采集线程和 GPU Compute 提交线程。
-* 完善三重缓冲机制：
-  * **Buffer A (Front)**: 当前显示的 Swapchain 图像。
-  * **Buffer B (Compute)**: 正在执行 Compute Shader 混合的后台缓冲。
-  * **Buffer C (Input)**: 正在接收 UI 无锁写入笔刷数据的输入缓冲。
-* 探索 Vulkan Subgroup 操作（如 `subgroupAdd`），优化超大笔刷像素混合的内存带宽瓶颈。
+目标：清除错误运行路径，使以后只能在正确边界上扩展。
 
-## ✅ Phase 5: 剥离并替换现有的 OpenGL Canvas，完成核心图层与笔刷显示链路的打通
-**状态：已完成**
-* 在 Vulkan 画布模式下初始化笔刷引擎、图层合成器与同步路由（CPU↔GPU 的最小框架）。
-* 提供基础的图层合成计算路径（用于验证合成调度与资源绑定模型）。
-* 增加性能基准与调试信息，便于衡量 VRAM 驻留与提交开销。
+- 归档当前原型，记录 upstream/submodule SHA、构建选项、trace 和测试资产。
+- 从更新后的目标 Krita upstream 建新分支。
+- 删除 TileManager+sparse canvas+global PaintRouter runtime、旧入口、stroke-end download 和双向 CMake 依赖。
+- 建立 `kritavulkanbackend -> kritaimage`，以及下游
+  `kritavulkanuiadapter -> {kritaui, kritavulkanbackend}` 单向 target；paintop 不链接 concrete backend。
+- 冻结 foundation device/submission/resource/shader/composite/display/WSI owner 与 private/public 边界。
+- 保持 Vulkan 用户功能不可用；CPU/OpenGL 回归必须完全通过。
+- 安装依赖图、禁用符号、queue API 和 wait API 静态守卫。
 
-> 说明：Phase 5 的“打通”主要指 Vulkan 子系统内部链路可运行；与 Krita 真实工具输入链路、真实图层栈/投影系统的接线仍属于后续阶段（见 Phase 7）。
+验收：旧 runtime 不在生产构建中、依赖无环、foundation target/private-public 与旧能力提取清单冻结、CPU-only
+和 Vulkan-foundation 构建有证据、用户无法进入半初始化 Vulkan、CPU/OpenGL 与 upstream 一致。
 
-## ✅ Phase 6: 构建完整的图形显示管线与前端交互层 (Graphics Pipeline & UI)
-**状态：已完成 — 图形管线、异步渲染、画布装饰全部就绪**
+## BR1：Canonical PageStore
 
-### 6.1 ✅ 核心图形管线 (已完成)
-* 废弃临时 `vkCmdBlitImage`，实现真正的 Vulkan 图形管线 (Graphics Pipeline)。
-* 新增 `KisVulkanGraphicsPipeline` 类，管理画布显示和笔刷轮廓两套图形管线。
-* 新增 `canvas_display.vert` / `canvas_display.frag` 着色器：
-  * 支持相机变换 (Camera Transform)：从 `KisCoordinatesConverter` 获取 widgetToImage 矩阵，通过 Push Constants 传入 Shader。
-  * 实现 Bicubic (Catmull-Rom) 高质量图像采样，替代最近邻采样。
-  * 内置棋盘格透明背景渲染。
-  * 高倍缩放时自动切换为最近邻采样以保持像素艺术清晰度。
-* 新增 `brush_outline.vert` / `brush_outline.frag` 着色器，为原生 Vulkan 笔刷轮廓渲染提供基础。
-* `renderFrame()` 完全重构：Compute Shader (笔刷) → Barrier → Render Pass (图形管线显示 + 叠加层)。
+目标：让 Krita 逻辑 tile、COW、undo、swap 成为唯一 canonical page 身份。
 
-### 6.2 ✅ 笔刷轮廓渲染 (已完成)
-* `KisTool::paintToolOutline()` 新增 `KisVulkanCanvas` 分支（`dynamic_cast` 路由）。
-* `KisVulkanCanvas::paintToolOutline()` 实现完整的轮廓顶点生成：
-  * 粗轮廓 (thickness > 1)：Miter-Joint 三角列表，含接头限制和法线计算。
-  * 细轮廓 (thickness == 1)：直接线条带。
-* `paintEvent()` 在 `renderFrame()` 前通过 `drawDecorations()` 收集轮廓数据。
-* `renderFrame()` 在 Render Pass 中使用 `BrushOutlineFill/Line` 管线绘制轮廓。
+- 在 `kritaimage` 内建立 `SurfaceId + LogicalPageId + Generation`。
+- 吸收 `KisTileDataStore`、`KisMementoManager`、`KisSwappedDataStore`，不新建平行存储。
+- 冻结 read/write request、lease、publish/cancel 与 backend-neutral completion ticket。
+- iterator/accessor 通过 CPU access facade 保持现有语义。
+- 建立 reference state machine、随机迁移/取消/failure property test。
 
-### 6.3 ✅ 异步渲染线程激活 (已完成)
-* 正式启动 `KisVulkanRenderThread`，将完整渲染管线（acquire → compute → graphics → present）移至独立线程。
-* 新增 `SwapchainSnapshot` POD 结构体，避免 libs/image_vulkan 对 libs/ui 的头文件依赖。
-* 新增 `RenderState` 结构体，UI 线程通过 mutex 保护的拷贝机制向渲染线程传递逐帧数据（相机矩阵、轮廓顶点、画布状态）。
-* 实现 `pauseRendering()` / `resumeRendering()` 暂停/恢复机制，用于窗口 Resize 时安全重建 Swapchain。
-* `renderFrame()` 重构为轻量级状态更新包装：收集轮廓数据 → 构建 RenderState → 信号唤醒渲染线程。
-* 通过 `framePresented` 信号驱动 `update()` 形成持续渲染循环，彻底消除 UI 线程的 GPU 阻塞。
+验收：纯 CPU 绘画、clone/COW、undo/redo、save/reopen 与 upstream 像素一致；同一 page 没有第二身份。
 
-### 6.4 ✅ 画布装饰渲染 (已完成)
-* 在 `canvas_display.frag` 片段着色器中实现像素网格 (Pixel Grid) 渲染：
-  * Push Constants 扩展至 112 字节，新增 `pixelGridColor`、`pixelGridThreshold`、`pixelGridEnabled` 参数。
-  * 使用 `fract()` 在图像坐标上检测像素边界，零几何开销，比 OpenGL 的 `GL_LINES` 方案更高效。
-  * 支持用户自定义颜色和缩放阈值（从 `KisConfig` 读取）。
-* 新增 QPainter 装饰叠加层 (Decoration Overlay) 管线：
-  * `decoration_overlay.vert` / `decoration_overlay.frag` 着色器：全屏三角形 + 纹理采样 + Alpha 混合。
-  * `KisVulkanGraphicsPipeline` 新增叠加层纹理管理：`resizeDecorationOverlay()`、`uploadDecorationOverlay()`、`recordDecorationOverlay()`。
-  * 使用 VMA 分配 GPU 端 RGBA8 图像和 CPU 端暂存缓冲区（持久映射），通过 `vkCmdCopyBufferToImage` 上传。
-* `paintEvent()` 重构：将装饰绘制目标从 1x1 虚拟 QImage 改为匹配 widget 尺寸的全尺寸 QImage。
-* `RenderState` 新增 `decorationPixels` / `decorationWidth` / `decorationHeight` / `hasDecoration` 字段。
-* `processFrame()` 在 Render Pass 前上传叠加层纹理，在 Render Pass 内（画布 + 轮廓之后）绘制装饰叠加层。
-* 兼容所有现有 QPainter 装饰类型：网格、参考线、选区蚂蚁线、绘画助手、画布镜像轴等。
+## BR2：SubmissionCoordinator
 
-## ✅ Phase 7: Krita 核心链路接线 (Core Wiring & Minimal Usability)
-**状态：已完成**
-**核心策略：API 兼容层 + GPU 原生计算** — 绘画热路径保持 GPU 原生（Ring Buffer → Compute Shader → 稀疏纹理，零像素跨越 CPU↔GPU），同时增加与 Krita 核心系统的接口适配层。
+目标：建立 Vulkan 工作的唯一提交、同步与资源退休系统。
 
-> 详细分析与数据流图见 [06_branch_vs_design_analysis.md](06_branch_vs_design_analysis.md)。
->
-> **方向澄清**：Phase 7 不是”退回 CPU 计算”。绘画过程中 CPU→GPU 只传递 dab 参数（64 字节），不传递像素。所有像素级计算（dab 生成、混合、图层合成）保持 GPU 执行。CPU↔GPU 像素传输仅发生在非实时路径（笔画结束异步下载、CPU 侧操作上传、保存导出等）。
->
-> **关键断层已全部补齐**：~~`startUpdateCanvasProjection` 返回 null（7A）~~、~~`syncToCPU` 骨架代码（7D：现已写入 `KisPaintDevice::writeBytes()`）~~、~~笔刷引擎零连接（7B）~~、~~图层栈零连接（7C）~~。Phase 7 核心链路完整闭环。
+- 一个 coordinator 独占所有 `VkQueue` 和 submit/bind/present API。
+- transfer、sparse、compute、graphics、present 形成显式 timeline DAG。
+- 每 queue family 使用按完成值回收的 command arena。
+- descriptor、allocation、binding-table slot、swapchain generation 按 ticket 延迟退休。
+- UI/input 无 Vulkan wait；CPU 缺页 job 使用 continuation，不占住 worker。
 
-### ✅ Phase 7A: 更新协议适配 — `KisVulkanUpdateInfo`
-**状态：已完成**
-**前置依赖**：无（Phase 6 已完成）
-**目标**：让 Vulkan 画布能感知 CPU 侧图像变更（滤镜/变换/粘贴/撤销回放）。
-* 创建 `KisVulkanUpdateInfo`（类似 `KisOpenGLUpdateInfo`），携带受影响瓦片列表与像素数据。
-* 创建 `KisVulkanTileUpdateEntry`，每个条目对应一个 64×64 GPU 瓦片的像素数据（通过 `KisPaintDevice::readBytes()` 读取）。
-* 实现 `startUpdateCanvasProjection(rc)`：计算 rc 覆盖的瓦片网格，从 CPU 投影读取像素，构建 `KisVulkanUpdateInfo`。
-* 实现 `updateCanvasProjection(info)`：将瓦片像素数据通过 `uploadTileData()` + Transfer Queue 上传到 GPU 稀疏纹理页。
-* 完善 `syncToGPU(rect, projection)` 方法：从指定 `KisPaintDevice` 读取像素并上传到 GPU 瓦片。
-* 支持全瓦片直接上传和部分瓦片读-改-写两种路径。
-* 支持更新压缩（`tryMergeWith`）——合并脏矩形与瓦片列表。
-* 修复了 Phase 5 中 `startUpdateCanvasProjection` 返回 null 导致 `KisCanvasUpdatesCompressor::putUpdateInfo()` 崩溃的问题。
+验收：源码和二进制只有 coordinator 调用 queue API；共享/独立 queue family 均无 validation 错误；无热路径
+wait-idle 或无限 fence wait。
 
-**不影响绘画热路径**：笔刷输入仍然通过 Ring Buffer 直达 GPU Compute Shader，不经过此协议。此协议仅服务于 CPU 侧操作→GPU 的单向同步。
+## BR3：UMA、dGPU、RAM 与 SSD replica
 
-**成功标准**：CPU 侧执行滤镜/变换后，Vulkan 画布正确显示更新结果。
+目标：在一个 PageStore 状态机下实现全自动透明转录。
 
-### ✅ Phase 7B: 笔刷引擎适配 — `KisVulkanPaintOp`
-**状态：已完成**
-**前置依赖**：7A（需要更新协议来显示撤销回放结果）
-**目标**：让 Krita 笔刷预设能通过 GPU 执行，保留笔刷生态兼容性。
-* 创建 `KisVulkanPaintOp`（实现 `KisPaintOp` 接口），在 `paintAt()`/`paintLine()` 中将 dab 参数转发给 Ring Buffer → GPU 引擎。
-* **CPU 侧保留**（微秒级纯算术，非瓶颈）：间距计算、动态曲线、压感映射。
-* **GPU 侧不变**：dab 光栅化和像素混合仍由 Compute Shader 在稀疏纹理上就地执行。
-* 初始版本仅支持圆形自动笔刷（`dab_round.comp`），其他引擎自动回退 CPU 路径。
-* 在 `KisPaintOpRegistry` 中注册 Vulkan 加速标记，由引擎自动选择。
+- UMA canonical arena 持久映射、host-visible、device-addressable；CPU pointer/GPU address 访问同一物理页。
+- dGPU 用 fixed-slot buffer 和 operation-scoped direct/local binding 映射逻辑页；atlas/sparse 只是可选优化。
+- RAM 与 VRAM 是同 generation replica，authority 只在 producer 完成并校验后切换。
+- SSD 只演进 Krita 当前 swap，使用 generation record、checksum、原子 index commit 和后台 GC。
+- 统一预算、pin、in-flight、温度事件和 backpressure。
 
-**热路径新增开销**：仅 `KisPaintInformation` → Ring Buffer 的参数提取（几次浮点运算），无像素分配/拷贝/GPU 等待。
+验收：UMA 稳态 canvas-pixel copy 为零；小预算下 VRAM→RAM→SSD→RAM→VRAM 强制循环不丢像素；SSD
+失败/取消/损坏不改变 authority。
 
-**成功标准**：标准”Basic-5 Size Opacity”预设绘制笔画，结果可见且与 OpenGL 路径视觉一致。
+## BR4：GraphEpoch、ActiveTargetSet 与语义温度
 
-### ✅ Phase 7C: 图层栈元数据适配
-**状态：已完成**
-**前置依赖**：7A
-**目标**：让 `KisNode` 树变更驱动 GPU 合成。图层像素数据始终驻留在 GPU 虚拟纹理中，合成始终在 GPU 执行。
-* `KisVulkanNodeSync`（新类）：监听 `KisImage::sigNodeChanged` / `sigLayersChangedAsync` 和 `KisNodeManager::sigNodeActivated` 信号。
-* 遍历 KisNode 树，提取可见 `KisPaintLayer` 的元数据（不透明度、可见性、混合模式、堆叠顺序）。
-* 活跃图层 → 使用稀疏纹理（零开销），其他可见图层 → 每层独立 VkImage（从 CPU projection 上传）。
-* `KisVulkanLayerCompositor` 从映射表读取配置，执行 GPU Compute 合成（8 种混合模式）。
-* 渲染线程 `processFrame()` 插入 Phase A2 合成阶段（笔刷 dab 后、图形管线前），仅在 >1 可见图层时激活。
-* 不支持的节点类型（调整图层、滤镜蒙版等）：静默跳过，待 Phase 9。
+目标：利用“stroke 只写目标图层”的绘画事实剪枝非目标路径。
 
-**实现文件**：
-* `libs/image_vulkan/KisVulkanNodeSync.h/cpp` — 信号监听 + KisNode 树遍历 + VkImage 管理
-* `libs/image_vulkan/KisVulkanRenderThread.h/cpp` — 新增 `setLayerCompositor()` + Phase A2 合成调度
-* `libs/ui/vulkan/KisVulkanCanvas.cpp` — 创建 NodeSync、连接信号、传递合成器至渲染线程
+- 每笔冻结 `GraphEpoch`、`ActiveTargetSet`、layer/property generation。
+- 下层形成精确 LowerCheckpoint；上层按 overlay/operator/replay 分类。
+- backdrop-dependent blend、filter、mask 保留 replay bundle，不能在透明背景错误拍平。
+- derived cache 持有完整 dependency vector；图层图变化创建新 epoch。
+- `CoveredCold` 必须有 CoverageCertificate；温度按 safety、semantic class、cost/CLOCK history 决定，不另建 LRU 真相。
+- canonical target、projection、derived composite、DisplaySurface 身份彻底分离。
 
-**跨越边界的数据**：仅元数据（整数/布尔值/枚举，几十字节/次变更）。像素上传仅在图层切换时发生（非实时路径）。
+验收：随机图层图/属性/帧变化不能命中 stale cache；剪枝前后像素一致；非目标页可以安全下沉。
 
-**成功标准**：创建 3 个图层，在不同图层绘制，调整可见性和不透明度，结果正确。
+## BR5：GPU stroke、undo 与保存
 
-### ✅ Phase 7D: 撤销/保存异步同步闭环
-**状态：已完成**
-**前置依赖**：7A + 7B
-**目标**：让 GPU 绘制的结果可撤销、可保存。
-* **笔画完成时**（非实时路径）：
-  - `~KisVulkanPaintOp` 调用 `strokeEnd()` → `flushAndPause()` 确保渲染线程完成所有 GPU 计算
-  - `syncToCPU(strokeBounds)` 下载脏瓦片：`downloadTileData()` 通过 `vkCmdCopyImageToBuffer` 将瓦片从 Sparse Image 拷贝到 Staging Buffer，`submitAndWait()` 阻塞等待 DMA 完成
-  - 下载的像素通过 `KisPaintDevice::writeBytes()` 写入 CPU 侧画板设备
-  - `finishStrokeCallback()` 中 `KisTransaction::endAndTake()` → `commit()` memento → 撤销系统正确捕获 diff
-  - **UMA 优化**：Apple Silicon 上 Staging Buffer 位于 `HOST_VISIBLE | HOST_COHERENT` 内存，CPU 直接读取（Zero-copy）
-* **撤销时**：`KisTransactionData::undo()` → `rollback(memento)` → `KisPaintDevice` 恢复 → `sigNodeChanged` → Phase 7A 更新协议自动上传回 GPU。
-* **保存时**：`flushAll()` 暂停渲染线程 → 下载所有已分配瓦片到 `KisPaintDevice` → 恢复渲染。
-* **渲染线程同步**：新增 `flushAndPause()` 方法，先 `notifyNewInput()` + `requestRepaint()` 确保最后的 dab 被处理，再暂停等待帧完成（通过 in-flight fence 保证）。
+目标：让 GPU stroke 成为 PageStore 的普通 lease/ticket consumer。
 
-**实现文件**：
-* `libs/image_vulkan/KisVulkanPaintRouter.h/cpp` — `setPaintDevice()`、`syncToCPU()` 写入 `writeBytes()`、`strokeEnd()` 暂停+同步+恢复、`flushAll()` 全量下载
-* `libs/image_vulkan/KisVulkanRenderThread.h/cpp` — 新增 `flushAndPause()` 方法
-* `libs/image_vulkan/KisVulkanPaintOp.cpp` — 构造函数传递 `painter()->device()` 到路由器
+- PaintOp 从 `KisPaintExecutionContext` 获取文档 session，不访问 canvas/global router。
+- resolved dab 进入无丢失 journal，并按 page 稳定分桶；同页严格按 sequence 执行。
+- page-batched kernel 取 write lease，first-write 创建 generation COW。
+- stroke commit 依赖最后 publish ticket，不暂停 render thread、不下载整笔像素。
+- undo 保存旧 generation 引用；save 获取 immutable image epoch，绘画可继续下一 generation。
+- capability/format 在 begin stroke 前决定整笔 GPU 或 CPU route。
 
-**成功标准**：绘制 → 撤销 → 重做 → 保存 → 重新打开，结果一致。
+验收：overlapping dab、selection、alpha lock、wash、undo/cancel/save/reopen 与 reference 一致；没有 per-dab
+submit/wait，失败只丢弃新 write generation。
 
-### Phase 7 整体成功标准
-* 自由绘制（圆形自动笔刷）可用、可撤销、可保存。
-* 多图层（最小集合）可正确合成并随属性变更更新。
-* CPU 侧操作（滤镜/变换/粘贴）结果能正确反映到 Vulkan 画布。
-* 不满足能力（位深/节点类型/引擎类型）时可稳定回退 CPU 路径，不崩溃。
-* 建议执行顺序：7A → 7B & 7C（可并行） → 7D。
+## BR6：Vulkan UI、DisplaySurface 与产品开放
 
-## 📅 Phase 8: 颜色/位深/显示正确性 (Color, Bit Depth & Display Correctness)
-**状态：计划中**
-* **位深与格式**：从 8-bit 路径扩展到 Krita 常用高位深显示与处理路径（含 HDR Swapchain 的能力探测与降级策略）。
-* **色彩管理**：对接显示滤镜与 OCIO，确保显示与现有路径一致（LUT、色彩空间转换、曝光等）。
-* **混合与通道**：扩展混合模式覆盖，并支持通道可见性筛选等核心调试/创作能力。
+目标：建立只消费 derived display 的 UI adapter，并在完整 MVP 后原子开放。
 
-### Phase 8 成功标准
-* 同一文档在 OpenGL 与 Vulkan 下视觉结果可对照一致（定义一组基准用例与容差）。
-* HDR/高位深能力可用或可降级，且行为可预测。
+- 后端完整初始化后才产生不可伪造的 `BackendReadyToken`。
+- `DocumentGpuSession` 归属 `KisImage`；同文档多 canvas 共享，不同文档隔离。
+- canvas 必须同时拿到 token、swapchain 和 session 才能替换普通 canvas。
+- Presenter 只构造 `PresentRequest`；queue present 仍由 coordinator 执行。
+- resize/out-of-date/minimize 使用 swapchain generation 退休，不 wait-idle。
+- 完成 SurfaceFormat、color conversion、proofing/display filter 和 truthful LoD/capability。
 
-## 📅 Phase 9: 滤镜与非破坏节点最小闭环 (Filters & Non-destructive Nodes)
-**状态：计划中**
-* **选择最小集**：先支持 1-2 类最常用非破坏节点（如调整图层/滤镜蒙版的最小功能集），建立 GPU 求值与缓存策略。
-* **扩展滤镜框架**：逐步覆盖滤镜（xxxFilter）、生成器与变换类节点的执行与回退。
-* **性能与稳定性**：建立跨节点的缓存复用、tile 驻留策略与一致性验证流程。
+验收：多文档、多 canvas、关闭、resize、device loss、颜色与显示测试通过；Tier 0–4 全绿；此时才允许开放
+Vulkan 用户选项。
 
-### Phase 9 成功标准
-* 非破坏编辑在 Vulkan 模式下可用且结果可对照一致。
-* 常用滤镜可在 Vulkan 下执行或可回退，且不会破坏撤销/保存语义。
+## 首个 MVP 出口
+
+首个 MVP 不是“Vulkan 画布能显示”，而是同时满足：
+
+- 错误旧 runtime 已从源码树和构建图消失；
+- canonical page/generation/lease/ticket 接口冻结并有 CI 守卫；
+- UMA、VRAM、RAM、SSD、display 只能作为 replica、policy 或 consumer 扩展；
+- UI/input 的零阻塞由计数和 trace 证明；
+- page-batched GPU stroke、COW undo、immutable save 和 GraphEpoch 合成闭环；
+- 4/8/16 字节像素格式及不支持格式的前置 CPU 路由有测试；
+- 用户入口只在完整验收后打开。

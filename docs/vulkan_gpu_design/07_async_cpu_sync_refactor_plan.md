@@ -1,133 +1,95 @@
-# Vulkan 纯异步 CPU 回传重构方案 (Async CPU Sync Refactor Plan)
+# CPU/GPU 一致性与异步访问方案
 
-## 1. 现状与痛点分析
-当前在 feature/vulkan-phase7d-undo-save 分支中，笔画结束（Stroke End）时，Vulkan 引擎需要将 GPU 渲染的瓦片数据（Tiles）回传给 CPU 的 KisPaintDevice，以供 Krita 的撤销/重做（Undo/Redo）和保存系统使用。
+> 旧版仅围绕“stroke end 下载 staging”设计，现已被 canonical PageStore 架构取代。本文保留 Krita
+> transaction 的业务要求，不保留旧 `KisVulkanSyncStrokeStrategy` runtime。统一状态与 MVP 边界见
+> [00_status_and_mvp_contract.md](00_status_and_mvp_contract.md)，PageStore 权威设计见
+> [25_p0_canonical_pagestore_krita_tile_cow_swap.md](25_p0_canonical_pagestore_krita_tile_cow_swap.md)。
 
-虽然 Phase 7D 引入了 downloadTilesBatched 将 DMA 传输开销从 O(N) 降到了 O(1)，但其本质仍然是**同步阻塞**的：
-在 UI 线程（主线程）中，KisVulkanPaintRouter::strokeEnd() 最终调用了 submitAndWait()，这会执行 vkWaitSemaphores 强制阻塞主线程，直到所有几十兆的像素通过 PCIe 总线传回主存，最后再同步执行 KisPaintDevice::writeBytes。
+## 1. 统一原则
 
-对于追求极致手感的绘图软件，这种设计在处理超大笔刷或长笔画时，会导致用户抬笔瞬间感受到明显的 UI 冻结（微卡顿）。
+- 页面只能有一个明确的 authoritative version。
+- CPU/GPU 访问通过 read/write lease 获取，不能由调用者直接 map、copy 或 wait。
+- 每次写入增加 generation。
+- dirty、pin、in-flight、transfer batch 和 graph epoch 必须可观察。
+- Krita stroke/undo transaction 需求通过新 document session/commit job 接入；当前
+  `KisVulkanSyncStrokeStrategy` 的 stroke-end 下载模型在 BR0 删除，不作为兼容层保留。
+- stroke end 只追加 End marker 并取得 `StrokeCommitTicket`，不得暂停 render/executor 或等待 GPU。
+- transaction 在新 generation 可恢复后由后台 job 发布；新笔迹通过 page last-writer ticket 排序。
 
-## 2. 目标与设计原则
-*   **纯异步无阻塞**：UI 线程在鼠标抬起时，只负责提交 DMA 命令，绝不等待传输完成。
-*   **最小入侵原则**：不修改 Krita 核心的 KisTransaction 和 KisPaintDevice 底层锁机制。
-*   **安全与一致性**：完美融入 Krita 原有的 KisStrokeStrategy 调度器，利用现有的防并发和任务排队机制，避免撤销数据损坏或状态不一致。
+## 2. UMA 路径
 
-## 3. 架构设计：基于 KisStrokeJob 的异步回传机制
+UMA 使用共享 mapped canonical page：
 
-Krita 拥有成熟的 KisStrokeStrategy 后台任务调度系统。我们将 Vulkan 的回传过程拆分为两个阶段：
-
-*   **阶段一：主线程提交 (UI Thread)**
-    鼠标抬起时，计算受影响的 Tile，向 Transfer Queue 提交 DMA 复制命令 (vkCmdCopyImageToBuffer)，拿到一个 Timeline Semaphore 值。**不等待**，直接返回。
-*   **阶段二：后台线程等待与写入 (Worker Thread)**
-    利用 KisStrokeStrategy 创建一个后台 Job。这个 Job 在 Krita 的线程池中执行：它先调用 vkWaitSemaphores 等待 DMA 完成，然后将 Staging Buffer 的数据写入 KisPaintDevice，最后执行 KisTransaction::commit。
-
-### 时序图比对
-
-**当前同步阻塞模式 (Phase 7D):**
 ```text
-UI Thread:
-User Pen Up -> strokeEnd() 
-  -> m_renderThread->flushAndPause()
-  -> scheduleImageToStaging(...)
-  -> vkQueueSubmit()
-  -> vkWaitSemaphores()    [!!! UI THREAD BLOCKED !!!]
-  -> m_paintDevice->writeBytes()
-  -> m_renderThread->resumeRendering()
-  -> KisTransaction::commit()
+GPU write
+-> signal timeline
+-> CPU read lease waits
+-> invalidate（仅 non-coherent）
+-> CPU pointer access
 ```
 
-**目标纯异步模式:**
+CPU 写入后：
+
 ```text
-UI Thread:
-User Pen Up -> strokeEnd()
-  -> m_renderThread->flushAndPause()
-  -> scheduleImageToStaging(...)
-  -> timelineVal = vkQueueSubmit() [Returns immediately]
-  -> m_renderThread->resumeRendering()
-  -> image->startStroke(new KisVulkanSyncStrokeStrategy(timelineVal, ...))
-  -> image->endStroke()
-
-Worker Thread (KisImage Scheduler):
-KisVulkanSyncStrokeStrategy::doStrokeCallback()
-  -> vkWaitSemaphores(timelineVal) [Background thread blocks, UI is free]
-  -> m_paintDevice->writeBytes()
-KisVulkanSyncStrokeStrategy::finishStrokeCallback()
-  -> KisTransaction::commit()
+CPU write lease
+-> flush（仅 non-coherent）
+-> release + generation update
+-> GPU barrier/wait
 ```
 
-## 4. 详细实施步骤 (Implementation Steps)
+不执行画布像素 staging copy。stroke end 只封口 journal；只有实际 CPU consumer 获取 read lease 时才执行
+必要的 CPU 可见性同步。undo transaction 依赖 snapshot/journal 的 Recoverable ticket。
 
-### Step 1: 改造 KisVulkanTransferQueue 支持纯异步提交
-当前 KisVulkanTileManager::downloadTilesBatched 直接调用了 submitAndWait()。我们需要拆分它。
+## 3. dGPU 路径
 
-*   修改 KisVulkanTileManager.h / .cpp：
-    新增方法 `uint64_t downloadTilesBatchedAsync(const QVector<KisVulkanTileDataSP> &tiles)`
-    该方法内部调用 m_transferQueue->submitAsync() 并返回生成的 timelineValue，但不执行 wait。
+dGPU 页面在 VRAM cache 与 RAM backing 间转录：
 
-### Step 2: 实现 KisVulkanSyncStrokeStrategy
-在 libs/image_vulkan 目录下新建 KisVulkanSyncStrokeStrategy，继承自 KisSimpleStrokeStrategy。
+- GPU 写入使 VRAM version authoritative。
+- CPU 消费或 VRAM 淘汰触发页级回写。
+- transfer batch 返回 timeline value 和受影响 page generation。
+- graphics/compute submit 显式等待上传；CPU job 只等待自己消费的下载。
+- 回写失败时保留 VRAM page，禁止解绑或复用。
+- 松笔不自动回写全部 dirty page；journal 与 before-image 保留到新 generation 有安全恢复来源。
 
-```cpp
-class KisVulkanSyncStrokeStrategy : public KisSimpleStrokeStrategy {
-public:
-    KisVulkanSyncStrokeStrategy(
-        KisVulkanTileManager *tileManager,
-        KisPaintDeviceSP paintDevice,
-        const QVector<KisVulkanTileDataSP> &tiles,
-        uint64_t timelineValue,
-        KisTransaction *transaction); // 接管 Transaction 的所有权
+## 4. SSD 路径
 
-    void initStrokeCallback() override;
-    void doStrokeCallback(KisStrokeJobData *data) override;
-    void finishStrokeCallback() override;
-    void cancelStrokeCallback() override;
+- SSD 路径只能是 `KisTileDataStore`/`KisSwappedDataStore` 演进出的 unified store；Vulkan 不创建独立 swap。
+- 只有 RAM/UMA 中有 CPU 可读的有效 exact generation（VRAM-only 内容须先 materialize）后才能写入 SSD。
+- SSD record 包含 surface/page id、generation、format、checksum。
+- SSD 完成前 RAM authoritative page 不得释放。
+- 恢复时先校验，再发布新的 RAM backing。
 
-private:
-    KisVulkanTileManager *m_tileManager;
-    KisPaintDeviceSP m_paintDevice;
-    QVector<KisVulkanTileDataSP> m_tiles;
-    uint64_t m_timelineValue;
-    QScopedPointer<KisTransaction> m_transaction;
-};
-```
+## 5. Undo/Redo
 
-**关键逻辑**：
-*   在 doStrokeCallback 中：调用 m_tileManager->transferQueue()->waitForValue(m_timelineValue)。等待完成后，遍历 m_tiles，执行 m_paintDevice->writeBytes()。
-*   在 finishStrokeCallback 中：执行 m_transaction->commit(new KisPostExecutionUndoAdapter())。
+- 在第一次写目标页前创建 copy-on-write before-image。
+- UMA 可以复制到同一 shared arena 的 snapshot page；压力下异步下沉到 SSD。
+- dGPU 可以在 GPU 内复制或回写到 RAM snapshot，由 backend 选择。
+- derived composite/cache page 不进入文档 undo，只保留 canonical target page 变化。
+- transaction 只有在所有 required snapshot 可恢复时才能 commit。
 
-### Step 3: 修改 KisVulkanPaintRouter 和 KisVulkanPaintOp
-将 strokeEnd 的逻辑重定向到新的 Strategy。
+## 6. 当前代码状态
 
-*   **修改 KisVulkanPaintOp**：
-    原本在 ~KisVulkanPaintOp 中直接 m_transaction->endAndTake() 并 commit。现在需要将 KisTransaction 的所有权传递给 KisVulkanPaintRouter 或直接封装进 KisVulkanSyncStrokeStrategy。
-*   **修改 KisVulkanPaintRouter::syncToCPUAsync()**：
-    ```cpp
-    void KisVulkanPaintRouter::syncToCPUAsync(const QRect &dirtyRect, KisTransaction *transaction) {
-        auto tiles = m_tileManager->tilesInRect(dirtyRect);
-        uint64_t timelineVal = m_tileManager->downloadTilesBatchedAsync(tiles);
-        
-        KisImageSP image = m_paintDevice->image();
-        KisStrokeId strokeId = image->startStroke(
-            new KisVulkanSyncStrokeStrategy(m_tileManager, m_paintDevice, tiles, timelineVal, transaction)
-        );
-        image->endStroke(strokeId);
-    }
-    ```
+已有：
 
-### Step 4: 解决 Staging Buffer 竞态问题 (Critical)
-**问题**：如果用户极快地画了两笔。笔画 1 正在后台等待 DMA，此时它的 Tile 处于 L1_Hot 状态且关联了 Staging Buffer A。笔画 2 开始画，如果它复用了同一个 Tile 的 Staging Buffer A，就会破坏笔画 1 尚未写回主存的数据。
+- async download result；
+- timeline wait；
+- detached staging buffer；
+- `KisStrokeJob` 内 `writeBytes()`；
+- transaction commit。
 
-**解决方案**：
-*   在 KisVulkanTileData 中，不再维持单一的 stagingBuffer 指针。
-*   在 downloadTilesBatchedAsync 发生时，将当前 Tile 的 Staging Buffer **剥离（Detach）** 并转移给 KisVulkanSyncStrokeStrategy 独占拥有。
-*   KisVulkanTileData 的 staging 指针置空。如果下一笔立刻需要下载，缓存系统（KisVulkanTileCache）会为该 Tile 分配一个新的 Staging Buffer。
-*   当后台线程的 KisVulkanSyncStrokeStrategy 完成 writeBytes 后，负责将剥离的 Staging Buffer 归还给 KisVulkanTileCache 的内存池。
+未完成：
 
-## 5. 风险与回退预案
-*   **风险**：Krita 的调度器可能会因为某些屏障任务（Barrier Jobs）推迟 KisVulkanSyncStrokeStrategy 的执行。如果延迟过长，用户可能会看到历史状态不一致。
-*   **对策**：Krita 的 KisStrokeStrategy 天然支持 Exclusivity 设置。将此任务设置为适当的并发级别，由于它只是回读数据并不改变图层拓扑，可以安全地并发执行。
-*   **回退预案**：通过 KisConfig 提供一个开关 useAsyncVulkanSync。如果遇到难以解决的撤销栈崩溃问题，可以一键退回到当前的同步 submitAndWait() 模式。
+- 统一 lease/state machine；
+- GPU-side transfer wait；
+- UMA pointer path；
+- 把现有 Krita swap 升级为 generation-aware unified SSD backing，并接入同一 PageStore；
+- failure/cancel generation 处理；
+- undo/save/reopen 测试。
 
-## 6. 结论
-此方案完美契合了 Krita 的现有架构，利用了经过千锤百炼的 KisStrokeStrategy 机制来处理 Vulkan 的异步回读。它以**最小的系统入侵**，彻底解除了主线程的 PCIe 总线等待，将为 Krita 的 Vulkan 引擎带来真正“零延迟”的电竞级手感。
+因此当前实现只能作为 Krita transaction 业务接入和错误案例的参考。新基线不得直接延续
+`flushAndPause -> download -> writeBytes` 状态机，也不能用兼容 wrapper 把它包装成 PageStore commit。
+
+目标 stroke 时序与完成状态见 [10_gpu_stroke_foundation.md](10_gpu_stroke_foundation.md)。
+Queue/ticket 细节见 [14_submission_tickets_and_queue_topology.md](14_submission_tickets_and_queue_topology.md)，
+Krita canonical PageStore 接入见 [17_krita_pagestore_integration.md](17_krita_pagestore_integration.md)，transaction/保存/恢复见
+[18_undo_save_cancel_and_recovery.md](18_undo_save_cancel_and_recovery.md)。
