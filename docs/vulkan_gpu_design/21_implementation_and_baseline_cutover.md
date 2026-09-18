@@ -19,7 +19,7 @@ Krita input / PaintOp
   -> SubmissionCoordinator ticket DAG
   -> page-batched StrokeCompute
   -> publish page generations
-  -> GraphEpoch incremental composite
+  -> EvaluationPlanner incremental task DAG/composite
   -> Derived DisplaySurface
   -> Presenter builds PresentRequest
   -> SubmissionCoordinator presents
@@ -43,7 +43,8 @@ Production stroke 接入必须等待：
 - **BR1**：Krita tiles3/COW/undo/swap 已演进为唯一 canonical PageStore；
 - **BR2**：SubmissionCoordinator 独占 submit/bind/present，command/resource retirement 已验证；
 - **BR3**：UMA/dGPU/RAM/SSD replica 与 authority handoff 已通过强制迁移；
-- **BR4**：GraphEpoch、ActiveTargetSet、lower/upper cache 和 DisplaySurface identity 已冻结。
+- **BR4**：authoring lowerer、typed EvalGraphIR、EvaluationPlanner task DAG、EvaluationEpoch、Layer lower/upper
+  optimization cache 和 DisplaySurface identity 已冻结。
 
 在这些条件完成前，只允许开发纯协议、reference executor、shader 数学和 offscreen test asset；不得把它们接到
 用户 canvas，也不得保留旧 runtime 供“过渡验证”。
@@ -68,7 +69,7 @@ paintop/save/undo/cpu consumers -> kritaimage
 - generation-aware dirty event；
 - memento/snapshot/immutable image epoch；
 - `KisPaintExecutionContext` 和 document acceleration session slot；
-- `GraphEpoch`、`ActiveTargetSet` 与 planner contracts。
+- `KisEvaluationGraphTypes`、authoring lowerer、EvaluationEpoch、MutationRootSet 与 task planner contracts。
 
 这里不包含 Vulkan、descriptor、queue、swapchain 或 device memory 类型。
 
@@ -254,11 +255,12 @@ codec/kernel 的组合在 begin stroke 前整笔路由 CPU。
 - SSD fail/cancel/corruption 不丢失最后 authority；
 - swapchain 阻塞时 stroke generation 继续推进。
 
-## 11. SB5：GraphEpoch、合成与可见状态
+## 11. SB5：EvaluationEpoch、任务图、合成与可见状态
 
 ### 工作
 
-- stroke begin 捕获 immutable `GraphEpoch`/`ActiveTargetSet`；
+- stroke begin 捕获 immutable `EvaluationEpoch`/非空 writable targets，并把对应 value 映射为 mutation roots；
+- EvaluationPlanner 只重建 requested output 的相交 task/pages；Layer lower/upper 是可选优化而非通用 ABI；
 - target publish 只使相交 dependency pages 失效；
 - lower checkpoint、upper operator/overlay/replay 按完整 generation vector 读取；
 - composite completion 发布 derived DisplaySurface generation；
@@ -343,7 +345,7 @@ GPU stroke 不能自己打开隐藏设置，也不能因 Auto Round golden 通�
 9. `backend: add dgpu replica stroke path`
 10. `image: bind first-write cow and commit generations`
 11. `image: add immutable save epoch and continuation jobs`
-12. `backend: add graph-epoch incremental composite`
+12. `backend: add evaluation-epoch incremental task/composite path`
 13. `backend: add prepared brush resources and capability gate`
 14. `ui: consume completed display surface only`
 

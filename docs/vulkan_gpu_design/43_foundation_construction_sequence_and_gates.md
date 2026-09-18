@@ -17,13 +17,15 @@
 当前执行快照（2026-09-18）：
 
 - F0：target/owner/public-private 设计和 legacy 判定已完成；
-- F1：`kritavulkanbase`、显式 shader asset target、backend、internal UI adapter target 已落 CMake，尚未实际 configure/build；
+- F1：`kritavulkanbase`、显式 shader asset target、backend、internal UI adapter target 已落 CMake，CPU-only 与
+  foundation 配置/构建均已验证；
 - F2：legacy extraction matrix 已完成，算法/fixture 尚未复制进入新树；
-- F3：device evidence、shader catalog/ABI、memory/pipeline contract 已落位，native probe、SPIR-V asset 和 offscreen
-  smoke 尚未实现；
+- F3：device evidence、shader catalog/ABI、memory/pipeline contract 已落位；build-generated SPIR-V、reflection/ABI
+  校验、native Vulkan/VMA compute offscreen smoke 已实现并通过；
 - F4：完整 submission packet、completion source 和 resource retirement contract 已落位，native queue executor 尚未实现；
 - F5：SurfaceVersion/access view、private executor、composite/display/WSI skeleton 已完成第一轮重排；
-- F6：当前环境没有 CMake/Ninja/Qt 构建依赖，尚无编译或运行证据，BR0 不能关闭。
+- F6：工具链、未修改 upstream baseline、重放后 CPU-only/foundation 构建、architecture guard、真实
+  offscreen smoke 和稳定核心回归均有证据；BR0 净变更已位于目标 upstream 之上，BR0 已关闭。
 
 ## 2. F0：结构冻结
 
@@ -232,7 +234,8 @@ F4 只建立 BR2 所需的 private protocol、fake model 和最小 offscreen smo
 - `KisBackendServiceRegistry`、`KisCompletionRegistry` 的原则；
 - `KisPageStore`、`KisPageStateMachine`、`KisPageReplicaProvider`；
 - `KisDocumentGpuSession`、`KisPaintExecutionContext`；
-- `KisLayerSegmentPlanner`、`KisDerivedCompositeCache`；
+- `KisEvaluationGraphTypes`、`KisEvaluationGraphLowerer`、`KisLayerStackLowerer`、`KisEvaluationPlanner`、
+  `KisDerivedSurfaceCache`；
 - `KisStrokeCoordinator`、`KisPageWorkCompiler`；
 - `KisVulkanBackendBootstrap`、`KisVulkanSubmissionCoordinator`、`KisVulkanPageReplicaProvider` 的责任名称。
 
@@ -248,7 +251,7 @@ F4 只建立 BR2 所需的 private protocol、fake model 和最小 offscreen smo
 - base：device service、capability snapshot、queue topology、allocator；
 - submission：packet、arena set、resource reclaimer；
 - shaders：manifest/catalog/pipeline repository；
-- composite：access plan adapter、composite executor；
+- evaluation/composite：authoring lowerer、EvalGraphIR、task planner、access plan adapter、specialized composite executor；
 - display：DisplaySurface snapshot、display executor；
 - WSI：native surface descriptor、swapchain session、present result；
 - diagnostics：trace ids/counters/failure report。
@@ -257,7 +260,7 @@ F4 只建立 BR2 所需的 private protocol、fake model 和最小 offscreen smo
 
 - 增加 `SurfaceVersion`/derived surface snapshot，不能用一个 page version 表示整 surface；
 - lease 返回 typed CPU view 或 operation-scoped GPU access view；
-- capabilities 从 bool 集合演进为按 format/pass/feature 的 immutable descriptor；
+- capabilities 从 bool 集合演进为按 operation/version/port ValueType/format/feature 的 immutable descriptor；
 - ticket 明确 source generation、completion/failure/cancel；
 - view id、document id、service id 使用不同强类型；
 - UI presenter 不产生虚构 completion ticket，实际 WSI operation 由 backend service 返回。
@@ -300,6 +303,10 @@ BR0 只有在下列全部满足后关闭：
 
 如果当前环境缺工具链，只能记录“F0/F2 文档和静态门禁完成”，不能关闭 F1/F3/F6。
 
+2026-09-18 的实际执行记录见
+[45_br0_build_and_regression_evidence_20260918.md](45_br0_build_and_regression_evidence_20260918.md)。净变更已重放到
+目标 upstream，并在重放后的树上复验全部门禁；BR0 已正式关闭，BR1 可以按既定顺序开始。
+
 ## 9. Foundation 之后的全局顺序
 
 F0–F6 不替代后续阶段：
@@ -309,7 +316,7 @@ F0–F6 不替代后续阶段：
 | BR1 | contracts/reference/fakes | Krita tile/COW/undo/swap 的唯一 canonical PageStore |
 | BR2 | device/shader base、submission packet/fake | production coordinator、timeline DAG、retirement、fault closure |
 | BR3 | allocator/page binding skeleton | UMA/dGPU/RAM/SSD replica 与强制迁移 |
-| BR4 | blend math/composite skeleton | GraphEpoch、segment semantics、derived cache、温度和 composite correctness |
+| BR4 | evaluation/composite skeleton | EvalGraphIR/reference lowerer/task DAG、EvaluationEpoch、layer optimization、derived cache、温度和 composite correctness |
 | BR5 | brush math/parser/resource fixtures | journal/page work/kernel/undo/save 的 GPU stroke 闭环 |
 | BR6 | display math/WSI skeleton | 多 view、swapchain generation、color/display、fallback 和产品门禁 |
 

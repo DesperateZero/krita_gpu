@@ -39,13 +39,15 @@
 | `KisCompletionRegistry` | GPU timeline、CPU job、I/O 的统一 opaque ticket bridge | 已实现线程安全 source、单调 ticket、终态冲突拒绝 | Foundation；native bridge 在 BR2 |
 | `KisSurfaceCodecRegistry` | exact `SurfaceFormat` codec 选择 | 已实现 codec identity/version 注册、重复拒绝、ambiguous claim fail-closed | Foundation/BR1 |
 | `KisBackendServiceRegistry` | 不可变 device service 证据与唯一 ready-token 构造边界 | 已验证完整 report、精确 generation、revoke；当前无真实 report producer | Foundation/BR2 |
-| `KisDocumentGpuSession` | 文档归属的 backend-neutral acceleration session | 纯接口 | BR2/BR3 |
-| `KisPaintExecutionContext` | PaintOp 显式 document/target/session/capability snapshot | 只接受显式构造数据 | BR5 接线 |
+| `KisDocumentGpuSession` | 文档归属的 backend-neutral acceleration session；按 operation/version/input-output ValueType/format 查询能力 | 纯接口与精确 capability contract | BR2/BR3/BR4 |
+| `KisPaintExecutionContext` | PaintOp 显式 document/writable-target-set/session/capability snapshot | 只接受显式构造数据 | BR5 接线 |
 | `KisUnifiedSsdPageStore` | 演进现有 swap 的唯一 SSD provider | 不声明 durable/Ssd capability | BR3 |
 | `KisResidencyController` | safety 后的语义温度、预算和迁移计划 | 不产生迁移 | BR4 |
-| `KisLayerSegmentPlanner` | GraphEpoch/ActiveTargetSet lower-target-upper 精确切分 | 不产生 plan | BR4 |
-| `KisDerivedCompositeCache` | exact dependency cache 与 CoverageCertificate | 查询恒 miss、publish 拒绝 | BR4 |
-| `KisCompositeTypes` | SurfaceVersion、exact composite access plan、DisplaySurface snapshot | 值类型、完整 validation contract 已落位 | BR4/BR6 |
+| `KisEvaluationGraphTypes` | immutable typed EvalGraphIR、EvaluationEpoch、value/port/edge/context contract | 开放 ValueType、逐端口 format 和 fail-closed validation 已落位 | BR4 |
+| `KisEvaluationGraphLowerer` / `KisLayerStackLowerer` | versioned authoring snapshot → EvalGraphIR；Layer 仅是兼容 frontend | schema gate 已落位，lower 恒失败 | BR4 |
+| `KisEvaluationPlanner` | EvalGraphIR requested outputs → backend-neutral execution task DAG | 不产生 plan | BR4 |
+| `KisDerivedSurfaceCache` | operation/input/property/context-qualified surface cache 与 CoverageCertificate | 查询恒 miss、publish 拒绝 | BR4 |
+| `KisCompositeTypes` | 一种 surface operation access plan、DisplaySurface snapshot | extensible operation identity 与 validation contract 已落位 | BR4/BR6 |
 
 这些 public header 禁止出现 Vulkan、VMA、window/canvas 类型。`KisBackendReadyToken` 构造私有，当前只有
 `KisBackendServiceRegistry` 是 friend；默认 token 永远 invalid。
@@ -113,19 +115,18 @@ UI 只在拿到真实 ready token、matching document session、display surface 
 - 除 `SubmissionCoordinator` 外不得出现 queue submit/bind/present API；
 - 新 backend 与 UI adapter 不得出现 device/queue idle、无限等待；UI adapter 不得调用 queue API。
 
-当前脚本通过只证明结构负向条件，不证明 C++ 编译、Vulkan 初始化、像素正确性或性能。
+当前脚本通过只证明结构负向条件；C++ 编译、Vulkan 初始化和 CPU/OpenGL 回归证据独立记录在
+[45_br0_build_and_regression_evidence_20260918.md](45_br0_build_and_regression_evidence_20260918.md)，仍不构成像素端到端或性能结论。
 
 `libs/vulkanbackend/tests/KisVulkanFoundationContractsTest.cpp` 已加入 registry、shader catalog、memory budget、
-pipeline state、coordinator/WSI generation 的 contract tests；当前环境无 CMake/Qt，测试仅为代码存在，尚无运行证据。
+pipeline state、coordinator/WSI generation 的 contract tests，当前运行结果为 11/11 通过。另有 backend-neutral
+PageStore/Evaluation Graph foundation test（9/9）与真实 Vulkan/VMA compute offscreen smoke，均已运行通过。
 
-## 7. BR0 剩余关闭项
+## 7. BR0 关闭状态
 
-1. 确认目标 Krita upstream revision，并把本次切换重放到该干净基线。
-2. 按 41–44 完成 foundation target/目录/private-public/WSI/shader ABI 的结构冻结。
-3. 按 [42_legacy_vulkan_capability_extraction_matrix.md](42_legacy_vulkan_capability_extraction_matrix.md) 提取旧算法、
-   fixture 与平台事实；不恢复旧对象图。
-4. 收敛当前 skeleton：内部类取消 public ABI，补齐缺失类占位，修正 SurfaceVersion/access view/capability/ticket。
-5. 在具备 CMake/Ninja/Qt/Krita 依赖的环境完成 CPU-only 与 Vulkan-foundation configure。
-6. 构建 `kritaimage`、foundation/backend/offscreen tests、`kritaui` 和未注册产品入口的 UI adapter。
-7. Vulkan 关闭条件下运行 CPU/OpenGL 核心回归，确认移除入口没有行为变化。
-8. 将静态脚本接入 CI；只有以上结果有可复现记录后才关闭 BR0、进入 BR1 production 实现。
+1. 目标 revision 已固定为 `origin/master` `9a24ae0d8c`；未修改 baseline 的 CPU/OpenGL 构建与稳定核心
+   回归 5/5 通过。
+2. BR0 净变更已重放到该基线，并重新通过 CPU-only、Vulkan foundation、shader ABI/offscreen、PageStore、
+   architecture guard 和 CPU/OpenGL 6/6 对照套件；产品入口、target DAG 与 public/private 边界未回退。
+3. BR0 已正式关闭。后续只能按 BR1–BR6 的阶段门禁补 production 实现，不得把 foundation smoke 扩写为
+   后续阶段完成证据。

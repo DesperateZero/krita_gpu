@@ -18,8 +18,10 @@ Canvas
 新路径：
 
 ```text
-canonical PageStore
- -> immutable access/work plan
+Layer/Flow Authoring Snapshot
+ -> schema-specific Lowerer -> EvalGraphIR
+ -> EvaluationPlanner -> immutable execution task DAG
+ -> PageStore/ValueStore exact access plan
  -> pass-specific executor
  -> SubmissionCoordinator
  -> published canonical generation or derived DisplaySurface
@@ -148,28 +150,30 @@ Snapshot/MaskPageAccessView[]
 
 ## 6. Composite 语义分层
 
-### 6.1 Planner 位于 `kritaimage`
+### 6.1 Lowerer 与 Planner 位于 `kritaimage`
 
-`LayerSegmentPlanner` 根据 Krita node graph 生成 backend-neutral plan：
+Layer Tree、未来 Flow graph 和外部 workflow adapter 先生成 versioned immutable authoring snapshot，再由各自 lowerer
+生成同一个 `EvalGraphIR`：
 
 ```text
-GraphEpoch
-ActiveTargetSet
-SegmentId / NodeDependencyVector
-Input SurfaceVersions
-Output DerivedSurfaceVersion reservation
-Dirty PageSet
-Operator semantics
-Replay requirements
-Format/working-space requirements
+EvaluationEpoch
+MutationRootSet
+Typed Node/Port/Edge descriptors
+RequestedOutputs
+OperationId / SemanticVersion
+Region/Purity/Determinism contract
+Input ValueVersions
 ```
 
-它决定什么可 checkpoint、什么可作为 overlay/operator、什么必须 replay。Vulkan executor 不自行解释 Krita node
-tree，也不因为 shader 支持一个 blend mode就跳过 mask/filter/group 语义。
+`KisEvaluationPlanner` 再从 requested outputs 反向裁剪并产生 backend-neutral execution task DAG。只有
+`KisLayerStackLowerer` 可以把线性图层结构标记为 lower/target/upper 优化，并决定什么可 checkpoint、什么可作为
+overlay/operator、什么必须 replay。该分类不能进入通用 IR 或 Vulkan ABI。
+
+Vulkan executor 不解释 Krita node tree/Flow graph，也不因为 shader 支持一个 blend mode 就跳过 mask/filter/group 语义。
 
 ### 6.2 Access plan
 
-PageStore/derived cache 把 semantic plan 解析成 exact access plan：
+PageStore/derived cache 把 task DAG 中一个 surface operation 解析成 exact access plan：
 
 - input read leases；
 - output write/derived leases；
@@ -189,11 +193,12 @@ PageStore/derived cache 把 semantic plan 解析成 exact access plan：
 - 返回 submission packet/producer ticket；
 - 不直接把 derived page 标记 valid。
 
-completion 后由 cache/PageStore 核对 GraphEpoch 和 dependency vector，再发布 derived surface。过期结果直接丢弃。
+completion 后由 cache/PageStore 核对 EvaluationEpoch、operation semantic version、evaluation context 和 dependency
+vector，再发布 derived surface。过期结果直接丢弃。
 
 ## 7. Composite 能力梯度
 
-不能用一个“GPU compositor supported”布尔值。能力按 operator/节点/format 声明：
+不能用一个“GPU compositor supported”布尔值。能力按 operation id/semantic version/value type/format 声明：
 
 ### C0：基础验证
 
@@ -223,7 +228,7 @@ completion 后由 cache/PageStore 核对 GraphEpoch 和 dependency vector，再�
 - backdrop-dependent operator；
 - replay bundle 与非局部 invalidation。
 
-某 segment 超出能力时 planner 选择 CPU/reference producer 或保留 replay，不允许 shader 静默忽略节点。
+某 operation 超出能力时 planner 选择 CPU/reference producer；Layer 优化也可保留 replay，不允许 shader 静默忽略节点。
 
 ## 8. DisplaySurface 与显示 pass
 
@@ -356,8 +361,9 @@ surface descriptor，并创建 Vulkan surface/swapchain。旧 `.mm` 代码只作
 
 ### Composite
 
-- node/operator/format capability matrix；
-- random layer graph 对 CPU reference；
+- operation/version/value-type/format capability matrix；
+- source/diamond/fan-out/multi-output/random DAG 和 random layer graph 对 CPU reference；
+- Layer Tree 与等价 Flow lowering 结果一致；
 - graph/property generation 变化使旧输出不可发布；
 - lower/upper cache 与 full recomposite 相同；
 - backdrop-dependent 节点不被错误拍平。

@@ -96,7 +96,7 @@ flowchart LR
     BR0["BR0 干净基线"] --> BR1["BR1 Canonical PageStore"]
     BR1 --> BR2["BR2 SubmissionCoordinator"]
     BR2 --> BR3["BR3 UMA/dGPU/SSD replicas"]
-    BR3 --> BR4["BR4 GraphEpoch/温度/剪枝"]
+    BR3 --> BR4["BR4 EvalGraphIR/EvaluationEpoch/温度"]
     BR4 --> BR5["BR5 GPU stroke/undo/save"]
     BR5 --> BR6["BR6 UI/display/用户入口"]
 ```
@@ -154,21 +154,25 @@ SubmissionCoordinator fake，但不能在 canonical PageStore 未冻结时让 Vu
   `kritavulkanbackend` disabled skeleton；建立未被 `KisCanvas2` 或应用链接的 `kritavulkanuiadapter` disabled
   skeleton。
 - Foundation skeleton 已升级为可验证契约：核心 registry、device/shader/memory/pipeline/submission/resource、
-  pass preparation 与 WSI intent 具备实际状态和失败检查；native Vulkan probe/allocator/queue/shader/swapchain 仍未实现。
-- 安装 `build-tools/ci-scripts/check-vulkan-architecture.sh`，当前静态运行通过。
+  pass preparation 与 WSI intent 具备实际状态和失败检查；独立 smoke 已实现真实 Vulkan device、VMA allocator、
+  build-generated SPIR-V、compute queue submit 和 5 秒有界 timeline wait，但 production queue/swapchain 仍未实现。
+- 安装 `build-tools/ci-scripts/check-vulkan-architecture.sh` 并接入 GitLab CI，当前静态运行通过。
 - 完成删除后的结构复审，确认旧 runtime 不应恢复，同时确认 device/allocator/shader/pipeline/composite/display/WSI
-  根基与 legacy extraction 尚未落位；当前 exported skeleton 是 provisional 设计探针，不是已冻结接口。
+  owner 与 legacy extraction 判定已经落位；内部实现保持非安装 ABI，产品入口仍关闭。
+- CMake 3.29.3、Ninja、Qt 6.8 和 Vulkan SDK 1.4.341 环境已补齐。最新未修改 `origin/master`
+  `9a24ae0d8c` 的 CPU/OpenGL baseline 构建和稳定核心测试 5/5 通过；当前树 CPU-only、foundation、shader、
+  offscreen、UI adapter 构建及稳定核心测试 6/6 通过。完整证据见
+  [45_br0_build_and_regression_evidence_20260918.md](45_br0_build_and_regression_evidence_20260918.md)。
 
 尚未达到 BR0 出口：
 
 - 尚未把当前分支重放到已确认版本的目标 Krita upstream；不能把“已有分支 HEAD”误称为“更新后的 upstream
-  干净基线”。
-- 当前执行环境没有 CMake/Ninja 和既有 build tree，尚未完成 CPU/OpenGL configure、build 和回归。
-- 尚未按 [43_foundation_construction_sequence_and_gates.md](43_foundation_construction_sequence_and_gates.md) 完成
-  foundation target 重排、shader asset/ABI、device/offscreen smoke 和 public/private header 收敛。
+  干净基线”。截至证据记录时当前分支比 `origin/master` 少 944 个 upstream 提交、独有 17 个提交。
+- 重放完成后必须在新 HEAD 上复跑 CPU-only、foundation、shader/offscreen、architecture guard 和 CPU/OpenGL
+  对照套件；重放前不能关闭 BR0。
 - 核心 registry 可以产生仅供内部协调的 surface identity、completion ticket 和经完整 report 验证的 ready token；
-  但当前没有真实 foundation evidence，正常 bootstrap 不产生 ready token，document session 只能停在 Initializing，
-  任何 Vulkan 产品运行能力仍为关闭。
+  isolated smoke 已有真实 foundation evidence，但该证据没有接入正常 bootstrap；document session 仍只能停在
+  Initializing，任何 Vulkan 产品运行能力仍为关闭。
 
 类与文件占位清单见
 [40_br0_code_cutover_and_skeleton_inventory.md](40_br0_code_cutover_and_skeleton_inventory.md)。
@@ -271,7 +275,7 @@ BR2 不要求画笔或 canvas 可见；用 fake workload 和测试 surface 证�
 - binding snapshot、staging和physical slot只在last-use ticket后退休；
 - 三个 domain 共用一个状态机，不存在 backend 私有 page truth。
 
-## 9. BR4：ActiveTargetSet、温度和图层剪枝
+## 9. BR4：EvalGraphIR、MutationRootSet、温度和图层剪枝
 
 权威设计见 [28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md)。
 驻留策略和预测算法服从
@@ -279,20 +283,23 @@ BR2 不要求画笔或 canvas 可见；用 fake workload 和测试 surface 证�
 
 ### 9.1 工作
 
-1. stroke 开始时冻结 `GraphEpoch`、`ActiveTargetSet`、layer/property generations。
-2. 实现 `LayerSegmentPlanner` 的 lower/target/upper 精确切分。
-3. lower checkpoint、upper operator/overlay/replay 带完整 dependency vector。
-4. backdrop-dependent blend/filter/mask 保存 replay bundle，不做错误透明背景 flatten。
-5. canonical projection、derived composite 和 DisplaySurface 身份彻底分离。
-6. 温度控制器先执行 safety eligibility，再按 semantic class 和 cost/CLOCK history 选候选。
-7. 为被有效 derived cache 覆盖的非目标页生成 `CoverageCertificate`，只有证书有效时标为 `CoveredCold`。
-8. 使用 materialization P95 推导有界 trajectory corridor、deadline和soft-pin TTL；prefetch 不创建 generation。
-9. 完成多文档公平性、高低水位、minimum residence、cooldown和backpressure。
+1. 冻结 Authoring Graph → EvalGraphIR → Execution Task DAG 三层边界；通用层不得出现 Layer/Vulkan 类型。
+2. 实现 versioned authoring snapshot、Layer Tree reference lowerer、CPU evaluator 和 `KisEvaluationPlanner`。
+3. EvalGraphIR 明确 typed ports/edges、requested outputs、operation semantic version、ROI/purity/determinism contract。
+4. `EvaluationEpoch::MutationRootSet` 允许为空；stroke 开始时冻结非空 writable targets 并映射为 mutation roots。
+5. Layer lowering optimization 实现 lower/target/upper 精确切分；分类不得进入通用 IR/executor ABI。
+6. lower checkpoint、upper operator/overlay/replay 带完整 dependency vector；backdrop-dependent 语义不错误 flatten。
+7. canonical projection、derived evaluation output 和 DisplaySurface 身份彻底分离。
+8. 温度控制器先执行 safety eligibility，再按 semantic class 和 cost/CLOCK history 选候选。
+9. 为被有效 derived cache 覆盖的非目标页生成 `CoverageCertificate`，只有证书有效时标为 `CoveredCold`。
+10. 使用 materialization P95 推导有界 trajectory corridor、deadline和soft-pin TTL；prefetch 不创建 generation。
+11. 完成多文档公平性、高低水位、minimum residence、cooldown和backpressure。
 
 ### 9.2 出口
 
-- layer graph/property/frame/target 变化创建新 epoch，不原地篡改旧 cache；
-- 随机图层图测试不会接受 stale derived page；
+- authoring graph/property/frame/context/operation version 变化创建新 epoch，不原地篡改旧 cache；
+- source/diamond/fan-out/multi-output/random DAG 和空 MutationRootSet 测试不会接受 stale derived output；
+- Layer Tree 与等价 Flow graph 的 CPU reference 输出和 dependency identity 一致；
 - display descriptor 精确绑定声明的 DisplaySurface generation；
 - 非目标页剪枝不改变像素；
 - stale CoverageCertificate 接受数为零；
@@ -306,7 +313,7 @@ GPU stroke 权威设计见 [10_gpu_stroke_foundation.md](10_gpu_stroke_foundatio
 
 ### 10.1 工作
 
-1. PaintOp 通过 `KisPaintExecutionContext` 获取文档 session 和明确 target identity。
+1. PaintOp 通过 `KisPaintExecutionContext` 获取文档 session 和非空、唯一的 writable target identities。
 2. stroke frontend 产生 immutable resolved commands/journal；不访问 UI canvas。
 3. `PageWorkCompiler` 稳定地按 page 分桶，页内按 stroke sequence 执行 overlapping dabs。
 4. 通过 PageStore write lease 进行 first-write generation COW。
@@ -373,7 +380,7 @@ BR5 完成仍不意味着开放 Vulkan canvas；产品显示闭环在 BR6。
 9. `backend: add fixed-slot gpu arenas and immutable bindings`
 10. `backend: add uma shared replica and ownership protocol`
 11. `backend: add deadline-aware dgpu migrations and reserves`
-12. `image: add graph epoch coverage certificates and residency policy`
+12. `image: add evaluation epoch coverage certificates and residency policy`
 13. `stroke: add journal page compiler and ordered kernels`
 14. `image: bind undo save cancel to immutable generations`
 15. `ui: add display-surface-only vulkan adapter`
@@ -392,7 +399,7 @@ BR5 完成仍不意味着开放 Vulkan canvas；产品显示闭环在 BR6。
 | BR1 | PageStore/Krita integration、分片状态机、transaction、CPU reference、COW/swap |
 | BR2 | SubmissionCoordinator、ticket、command/resource retirement |
 | BR3 | fixed-slot binding、UMA/dGPU/SSD residency、deadline迁移和durability/GC |
-| BR4 | GraphEpoch、ActiveTargetSet、CoverageCertificate、语义温度/预测、composite/display 数据流 |
+| BR4 | EvalGraphIR/lowerer/task DAG、EvaluationEpoch、MutationRootSet、CoverageCertificate、语义温度、evaluation/display 数据流 |
 | BR5 | stroke protocol/compiler/kernel、resource、undo/save/recovery |
 | BR6 | WSI/presenter/UI adapter、能力开放和产品门禁 |
 

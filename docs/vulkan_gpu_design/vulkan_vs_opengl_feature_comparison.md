@@ -18,7 +18,7 @@
 | SSD backing | Krita 已有 `KisTileDataStore`/`KisSwappedDataStore` swap 基础 | Vulkan `L3_Cold` 未接入现有 swap，也没有 generation/checksum/authority 闭环 | 未统一 |
 | UMA 指针旁路 | 非目标 | 只检测 UMA/host-visible，画布仍需 staging/image 路径 | 未实现 |
 | 自动温度管理 | CPU 缓存策略成熟 | 简单 age/prefetch | 未实现 |
-| 目标图层剪枝 | CPU 投影体系 | 尚无 ActiveTargetSet/segment/checkpoint 模型 | 未实现 |
+| 目标图层剪枝 | CPU 投影体系 | 尚无 MutationRootSet/segment/checkpoint 模型 | 未实现 |
 | 高位深/色彩/OCIO | 成熟 | 主要固定 RGBA8，占位接口 | 未实现 |
 | 滤镜/非破坏节点 | 成熟 | NodeSync 只处理直接 paint layer | 未实现 |
 | 自动测试 | 大量 | 3 组 Vulkan 相关 CPU 侧测试 | 明显不足 |
@@ -35,7 +35,7 @@
 ## 下一步
 
 先执行 BR0 受控重置并保持 Vulkan 用户入口关闭，再依次完成 canonical PageStore、SubmissionCoordinator、
-replica、GraphEpoch、GPU stroke/undo/save，最后在 BR6 接入 UI/display。基本多层剪枝、格式身份和三层转录属于
+replica、EvaluationEpoch、GPU stroke/undo/save，最后在 BR6 接入 UI/display。基本多层剪枝、格式身份和三层转录属于
 首个 MVP，不能推迟到入口启用后。详细顺序见 [03_development_steps.md](03_development_steps.md)。
 全局重建与旧路径删除顺序见 [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md)，
 GPU stroke 内部施工见 [21_implementation_and_baseline_cutover.md](21_implementation_and_baseline_cutover.md)，

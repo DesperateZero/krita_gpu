@@ -293,7 +293,7 @@ UMA G -> direct CPU lease
 统一策略输入：
 
 - canonical/derived；
-- ActiveTargetSet/trajectory halo；
+- MutationRootSet/trajectory halo；
 - viewport/display；
 - dirty/authority writeback成本；
 - before-image/undo retention；
@@ -304,7 +304,7 @@ UMA G -> direct CPU lease
 - document/session budget/fairness。
 
 策略输出只选择：保留、预取、materialize、handoff、retire候选。它不能直接修改 page state 或绕过安全检查。
-`CoveredCold` 必须由带 GraphEpoch、ActiveTargetSet、property/source generation 和 replay route 的
+`CoveredCold` 必须由带 EvaluationEpoch、MutationRootSet、property/source generation 和 replay route 的
 `CoverageCertificate` 证明。
 
 ## 10. 预算

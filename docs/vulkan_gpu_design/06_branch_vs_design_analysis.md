@@ -118,9 +118,10 @@ SurfaceRegistry
 
 Sparse image、atlas、buffer 或 display image 都是 backend 选择或派生缓存。
 
-### 4.2 从“活动层特殊路径”转向 ActiveTargetSet
+### 4.2 从“活动层特殊路径”转向 EvalGraphIR 与显式 writable targets
 
-每个 stroke epoch 明确可写目标集合。其余节点只读，并切成可缓存 segment：
+每个 stroke epoch 明确 writable target 集合并映射成 EvalGraphIR mutation roots。其余 Layer 节点只读，
+`KisLayerStackLowerer` 可将线性结构切成可缓存 segment：
 
 ```text
 C0 -> T0 -> C1 -> ... -> Tn -> Cn

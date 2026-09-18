@@ -20,7 +20,7 @@
 | 稳定页面分桶、microtile、页内顺序和 GPU kernel | [13_page_work_compiler_and_gpu_kernel.md](13_page_work_compiler_and_gpu_kernel.md) |
 | timeline ticket、queue 拓扑、线程所有权和资源回收 | [14_submission_tickets_and_queue_topology.md](14_submission_tickets_and_queue_topology.md) |
 | Stroke 与 UMA/dGPU/SSD Residency 的连接 | [15_stroke_residency_and_memory_backends.md](15_stroke_residency_and_memory_backends.md) |
-| ActiveTargetSet、增量合成、DisplaySurface 和 Presenter | [16_incremental_composite_and_presenter.md](16_incremental_composite_and_presenter.md) |
+| MutationRootSet、增量合成、DisplaySurface 和 Presenter | [16_incremental_composite_and_presenter.md](16_incremental_composite_and_presenter.md) |
 | PageStore 如何成为 `KisPaintDevice` 的同一权威存储 | [17_krita_pagestore_integration.md](17_krita_pagestore_integration.md) |
 | Undo/Redo、保存、取消、失败和设备恢复 | [18_undo_save_cancel_and_recovery.md](18_undo_save_cancel_and_recovery.md) |
 | Brush resource、PreparedBrushProgram 和能力门禁 | [19_brush_resources_and_capability_gate.md](19_brush_resources_and_capability_gate.md) |
@@ -130,8 +130,8 @@ PixelFormat / ColorSpace
 
 ```text
 StrokeId
-GraphEpoch
-ActiveTargetSet
+EvaluationEpoch
+WritableTargetSet
 TargetSurfaceGenerations
 PreparedBrushProgram
 CanvasTransform
@@ -140,7 +140,7 @@ UndoPolicy
 BackendSelection
 ```
 
-`ActiveTargetSet`、图层图 revision、brush program 和 backend 在 epoch 中不改变。图层切换、
+`WritableTargetSet`、EvaluationEpoch、brush program 和 backend 在 stroke epoch 中不改变。图层切换、
 资源失效或不兼容操作必须关闭当前 epoch，再创建新 epoch。
 
 ### 4.3 `ResolvedDab`
@@ -219,7 +219,7 @@ SubmissionTicket
 - `StrokeExecutor`：生成 page-batched compute workload。
 - `SubmissionCoordinator`：唯一拥有 queue submission 顺序和 timeline 分配。
 - `StrokeCommitter`：发布 generation、undo transaction 和 recoverability 状态。
-- `IncrementalCompositeScheduler`：只重算受目标页影响的可见派生页。
+- `IncrementalEvaluationScheduler`：只重算受目标页影响的可见派生页。
 - `Presenter`：显示最近已完成的 DisplaySurface generation，不参与 stroke 完成判定。
 
 ## 5. 端到端时序
@@ -245,7 +245,7 @@ PageStateMachine
   -> publish matching pending generations after completion
   -> emit dirty page/revision events
 
-IncrementalCompositeScheduler
+IncrementalEvaluationScheduler
   -> wait on StrokeCompute ticket in GPU dependency graph
   -> rebuild affected Lower/Target/Upper/Display pages only
   -> signal DisplayReady ticket
@@ -418,7 +418,7 @@ Krita undo transaction 只能在 Recoverable 后发布，但发布过程由异�
 
 ### 10.4 保存和 CPU consumer
 
-- 保存开始时捕获 graph epoch 与 canonical page generation map。
+- 保存开始时捕获 evaluation epoch 与 canonical page generation map。
 - serializer 在后台逐页申请该 generation 的 read lease。
 - UMA 直接读共享页；独显按页异步回传。
 - 后续笔迹生成新 generation，不改变已捕获的保存快照。
@@ -564,7 +564,7 @@ oldest outstanding sequence
 ## 16. 施工顺序
 
 以下 `GS*` 只是 BR5 内部及其前置 reference 工作包。BR0 必须先删除旧 runtime，BR1–BR4 必须先冻结
-PageStore、SubmissionCoordinator、replica 和 GraphEpoch；本文不构成另一条全局切换路线。
+PageStore、SubmissionCoordinator、replica 和 EvaluationEpoch；本文不构成另一条全局切换路线。
 
 ### GS0：协议与 reference executor
 

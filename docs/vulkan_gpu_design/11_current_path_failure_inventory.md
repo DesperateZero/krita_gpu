@@ -53,14 +53,14 @@ KisVulkanPaintRouter::strokeEnd
   -> resume render thread
 ```
 
-相关入口：
+历史入口（已在 BR0 删除，仅保留名称用于考古，不再作为有效源码链接）：
 
-- [`KisVulkanPaintOp.cpp`](../../krita/libs/image_vulkan/KisVulkanPaintOp.cpp)
-- [`KisVulkanPaintRouter.cpp`](../../krita/libs/image_vulkan/KisVulkanPaintRouter.cpp)
-- [`KisVulkanRingBuffer.h`](../../krita/libs/image_vulkan/KisVulkanRingBuffer.h)
-- [`KisVulkanBrushEngine.cpp`](../../krita/libs/image_vulkan/KisVulkanBrushEngine.cpp)
-- [`KisVulkanRenderThread.cpp`](../../krita/libs/image_vulkan/KisVulkanRenderThread.cpp)
-- [`KisVulkanSyncStrokeStrategy.cpp`](../../krita/libs/image_vulkan/KisVulkanSyncStrokeStrategy.cpp)
+- `KisVulkanPaintOp.cpp`
+- `KisVulkanPaintRouter.cpp`
+- `KisVulkanRingBuffer.h`
+- `KisVulkanBrushEngine.cpp`
+- `KisVulkanRenderThread.cpp`
+- `KisVulkanSyncStrokeStrategy.cpp`
 
 ### 2.1 正常应用入口尚未闭环
 
@@ -267,8 +267,8 @@ frame loop；compute 与 present 共用 loop 后，这个 sleep 同时限制笔�
 当前 compositor 可以在每个显示 frame 进入多层合成，现有输出 descriptor、target 清零、layout、descriptor 生命周期
 和 NodeSync invalidation 均未形成端到端证明。非活动层整图 image 还绕过页面预算。
 
-后果不是单纯“图层多时慢”，而是结果、内存规模和失效范围都无法证明。目标替代为 ActiveTargetSet segment、
-page-level dirty propagation 和 DisplaySurface，见
+后果不是单纯“图层多时慢”，而是结果、内存规模和失效范围都无法证明。目标替代为 typed EvalGraphIR、
+显式 writable-target/mutation-root mapping、Layer segment optimization、page-level dirty propagation 和 DisplaySurface，见
 [16_incremental_composite_and_presenter.md](16_incremental_composite_and_presenter.md)。
 
 ### 4.8 Prefetch 没有形成真实输入闭环

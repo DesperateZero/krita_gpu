@@ -10,7 +10,7 @@
 - 页面只能有一个明确的 authoritative version。
 - CPU/GPU 访问通过 read/write lease 获取，不能由调用者直接 map、copy 或 wait。
 - 每次写入增加 generation。
-- dirty、pin、in-flight、transfer batch 和 graph epoch 必须可观察。
+- dirty、pin、in-flight、transfer batch 和 evaluation epoch 必须可观察。
 - Krita stroke/undo transaction 需求通过新 document session/commit job 接入；当前
   `KisVulkanSyncStrokeStrategy` 的 stroke-end 下载模型在 BR0 删除，不作为兼容层保留。
 - stroke end 只追加 End marker 并取得 `StrokeCommitTicket`，不得暂停 render/executor 或等待 GPU。

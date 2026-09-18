@@ -75,18 +75,21 @@ wait-idle 或无限 fence wait。
 验收：UMA 稳态 canvas-pixel copy 为零；小预算下 VRAM→RAM→SSD→RAM→VRAM 强制循环不丢像素；SSD
 失败/取消/损坏不改变 authority。
 
-## BR4：GraphEpoch、ActiveTargetSet 与语义温度
+## BR4：EvalGraphIR、EvaluationEpoch 与语义温度
 
-目标：利用“stroke 只写目标图层”的绘画事实剪枝非目标路径。
+目标：先建立不依赖 Layers/Vulkan 的通用求值图，再利用“stroke 只写目标图层”的事实做 layer-specific 剪枝。
 
-- 每笔冻结 `GraphEpoch`、`ActiveTargetSet`、layer/property generation。
-- 下层形成精确 LowerCheckpoint；上层按 overlay/operator/replay 分类。
+- 固定 Authoring Graph → EvalGraphIR → Execution Task DAG 三层边界。
+- 完成 Layer Tree reference lowerer、CPU evaluator、typed ports/edges、ROI/halo 与 exact cache key。
+- EvaluationEpoch 的 `MutationRootSet` 可为空；每笔另行冻结非空 writable targets 并映射为 mutation roots。
+- Layer lowerer 可令下层形成精确 LowerCheckpoint、上层按 overlay/operator/replay 分类；这些不是通用 IR 类型。
 - backdrop-dependent blend、filter、mask 保留 replay bundle，不能在透明背景错误拍平。
-- derived cache 持有完整 dependency vector；图层图变化创建新 epoch。
+- derived cache 持有 operation/input/property/context 的完整 dependency vector；authoring graph 变化创建新 epoch。
 - `CoveredCold` 必须有 CoverageCertificate；温度按 safety、semantic class、cost/CLOCK history 决定，不另建 LRU 真相。
 - canonical target、projection、derived composite、DisplaySurface 身份彻底分离。
 
-验收：随机图层图/属性/帧变化不能命中 stale cache；剪枝前后像素一致；非目标页可以安全下沉。
+验收：source/diamond/fan-out/multi-output/random DAG、空 MutationRootSet、随机图层属性/帧变化不能命中 stale
+cache；Layer 与等价 Flow lowering 的 CPU reference 输出一致；剪枝前后像素一致；非目标页可以安全下沉。
 
 ## BR5：GPU stroke、undo 与保存
 
@@ -124,6 +127,6 @@ Vulkan 用户选项。
 - canonical page/generation/lease/ticket 接口冻结并有 CI 守卫；
 - UMA、VRAM、RAM、SSD、display 只能作为 replica、policy 或 consumer 扩展；
 - UI/input 的零阻塞由计数和 trace 证明；
-- page-batched GPU stroke、COW undo、immutable save 和 GraphEpoch 合成闭环；
+- page-batched GPU stroke、COW undo、immutable save 和 EvaluationEpoch 合成闭环；
 - 4/8/16 字节像素格式及不支持格式的前置 CPU 路由有测试；
 - 用户入口只在完整验收后打开。

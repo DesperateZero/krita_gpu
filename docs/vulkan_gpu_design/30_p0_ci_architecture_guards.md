@@ -15,6 +15,8 @@ P0 校正不能依赖 code review 记忆来维持方向。以下事实必须由 
 5. PageStore 的 generation、lease、authority handoff 不变量不可旁路。
 6. capability 的每个 `true` 都有对应实现和 golden test。
 7. 旧 runtime、全局 router 和第二套 swap/cache 不会以“临时兼容”名义返回。
+8. Layer/Flow 只能经 versioned lowerer 进入 typed EvalGraphIR；Layer 专用 planner、封闭值类型枚举和
+   composite-only cache 不得重新成为全局求值接口。
 
 CI 只认可可复现证据：构建图、AST/符号扫描、状态机测试、Vulkan validation、像素 golden、fault
 injection 和性能 trace。文档声明或手工演示不能替代其中任何一项。
@@ -238,6 +240,8 @@ BR0 后，production source tree 中以下符号或语义不得存在：
 
 ```text
 CapabilityId
+OperationId / SemanticVersion
+Input/Output ValueType(typeId/version/storage class)
 Supported SurfaceFormat set
 Required device features
 Required shader/kernel variant
@@ -312,7 +316,7 @@ alpha-lock/wash 组合都有 CPU reference comparison。
 
 ### 11.4 Graph 和显示
 
-- layer graph、属性、mask、filter、animation frame 随机变化；
+- EvalGraphIR topology/ports、Layer/Flow equivalent graph、属性、mask、filter、animation frame 随机变化；
 - lower checkpoint 和 upper operator/replay dependency vector 校验；
 - backdrop-dependent upper 不能在透明背景错误拍平；
 - display descriptor 精确绑定所声明的 DisplaySurface generation；
@@ -338,7 +342,7 @@ DocumentSessionId
 SurfaceId
 LogicalPageId
 Generation
-GraphEpochId
+EvaluationEpochId
 StrokeId
 SubmissionId
 GpuTicket
@@ -373,7 +377,8 @@ validation error 为零。帧率均值不能替代交互延迟分位数、最长
 - dependency graph、public header self-compile、forbidden symbol/API；
 - PageStore reference state machine/property tests；
 - shard/dedup/transaction/ProviderEpoch/ABA state-space tests；
-- CPU pixel reference、codec、GraphEpoch dependency；
+- CPU pixel reference、codec、EvaluationEpoch dependency；
+- authoring snapshot/lowerer、open ValueType、typed EvalGraphIR、source/diamond/fan-out/multi-output 与空 MutationRootSet；
 - SSD fake store/fault injection；
 - 文档链接与架构关键词一致性。
 
@@ -412,7 +417,7 @@ validation error 为零。帧率均值不能替代交互延迟分位数、最长
 ### Tier 4：Krita 产品闭环
 
 - undo/redo/save/reopen；
-- layer graph/mask/filter/color/display；
+- EvalGraphIR/Layer/Flow、mask/filter/color/display；
 - 多文档、多 canvas、WSI 生命周期；
 - 性能基线和交互延迟。
 
@@ -426,7 +431,7 @@ Vulkan 用户选项启用前全部必跑。
 | BR1 | CPU canonical PageStore 与原 Krita tile/COW/undo/save 像素一致，分片/dedup/transaction 状态机 property test 通过 |
 | BR2 | queue API 唯一所有者、timeline/command retirement、validation/fault injection 通过 |
 | BR3 | UMA domain-copy=0、direct/local binding、dGPU deadline batch、SSD durability/GC、强制迁移与 handoff fault test 通过 |
-| BR4 | GraphEpoch 随机变更、CoverageCertificate、semantic CLOCK/cost、bounded prediction 和图层剪枝通过 |
+| BR4 | Layer/Flow equivalent lowering、random EvalGraphIR/EvaluationEpoch、mixed executor stale publish、CoverageCertificate、semantic CLOCK/cost、bounded prediction 和图层剪枝通过 |
 | BR5 | stroke golden、COW undo、immutable save、cancel/recovery、格式矩阵通过 |
 | BR6 | 多 canvas、WSI、display/color/filter、完整产品回归和性能门禁通过 |
 

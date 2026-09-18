@@ -85,7 +85,7 @@ Pending transaction/session tickets
 
 - 绑定一个 BackendReadyToken/device generation；
 - 注册该文档 canonical surfaces 的 Vulkan replica provider；
-- 持有 StrokeCoordinator、LayerSegmentPlanner/composite backend、document operation ledger；
+- 持有 StrokeCoordinator、EvaluationGraph lowerer/planner、derived cache/composite backend、document operation ledger；
 - 不持有 QWidget/QWindow；
 - 不由任一 canvas 独占。
 
@@ -112,7 +112,7 @@ PaintOp/StrokeStrategy 创建时获得显式 context：
 ```text
 DocumentId
 Image/Graph handle
-Target PaintDevice/Surface identity
+Non-empty unique WritableTarget PaintDevice/Surface identities
 DocumentGpuSession handle（可空）
 Backend capability snapshot
 Stroke scheduler/transaction context
@@ -120,7 +120,7 @@ Stroke scheduler/transaction context
 
 规则：
 
-- context 从实际 `KisImage`/target 构建，不从 active canvas 查找；
+- context 从实际 `KisImage`/writable targets 构建，不从 active canvas 查找；
 - headless、无 canvas、多个 canvas 都可工作；
 - context 中 session handle 使用 generation/weak ownership 防止文档关闭后悬空；
 - GPU 不可用时 session 为空，factory 正常选择 CPU paintop；

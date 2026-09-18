@@ -30,7 +30,7 @@
 ```text
 DocumentId
 DocumentSessionId
-GraphEpochId
+EvaluationEpochId
 StrokeId
 BatchId
 ChunkId
@@ -298,7 +298,7 @@ power/thermal state（移动设备）
 - undo/save/cancel/device-loss 测试通过；
 - 多文档、多 canvas、关闭其中一个 canvas 测试通过；
 - 4/8/16 字节像素和不支持格式的前置 CPU 路由通过；
-- layer graph 随机变更与 derived dependency generation 校验通过；
+- EvalGraphIR 随机 DAG、Layer/Flow equivalent lowering 与 derived dependency generation 校验通过；
 - validation/sync validation 通过；
 - p95/p99 不超过目标 profile 已批准预算；
 - 无未解释 latency spike 或 generation mismatch。

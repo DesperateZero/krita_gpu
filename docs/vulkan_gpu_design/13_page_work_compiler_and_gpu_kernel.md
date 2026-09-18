@@ -270,7 +270,7 @@ storeTarget(pixel, dst)
 - 以 `(targetIndex, PageId)` 建立 PageJob。
 - 独立目标可并行。
 - 若算法定义目标间顺序，epoch 必须携带 stage graph，并用 ticket 串联。
-- 未声明为 active target 的 surface 不能获得 write lease。
+- 未声明在 stroke writable target set 中的 surface 不能获得 write lease。
 
 ## 10. CPU Reference Executor
 

@@ -21,7 +21,8 @@
 6. 唯一 unified SSD store 的写出、恢复、校验和空间回收。
 7. generation、lease、authority、pin、in-flight 和失败状态机。
 8. `SubmissionCoordinator` 的 queue 独占、timeline DAG、command arena 和零阻塞线程边界。
-9. 基于 `GraphEpoch`/`ActiveTargetSet` 的 lower/target/upper 图层剪枝。
+9. 通用 EvalGraphIR/lowerer/task DAG，以及基于 `EvaluationEpoch`/writable-target mapping 的 Layer
+   lower/target/upper 优化。
 10. 绘画感知温度、预算和迟滞。
 11. 独立于 swapchain 的 page-batched GPU stroke lane。
 12. generation COW undo、immutable save epoch 和 cancel/recovery。

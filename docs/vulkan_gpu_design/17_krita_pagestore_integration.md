@@ -25,6 +25,8 @@ surface/page/generation/lease/replica 语义。迁移完成前后，逻辑 tile 
 ```text
 libs/image
   SurfaceRegistry + Canonical PageStore
+  EvaluationGraph types/lowerers/planner + DerivedSurfaceCache
+  non-surface Value/Resource Store contract
   KisPixelAccessPlan / Session / TileView
   KisPixelSnapshot / Transaction integration
   Surface/Page ids and backend-neutral ticket handle
@@ -35,7 +37,7 @@ kritavulkanbackend
   Vulkan PageReplicaProvider
   Stroke compiler/executor
   Vulkan submission/timeline implementation
-  GPU composite backend
+  operation-specific GPU executors, including composite
 
 libs/ui/vulkan
   Presenter / swapchain / input-facing canvas adapter
@@ -236,7 +238,7 @@ OldGeneration
 NewGeneration
 WriterDomain
 WriterTicket
-GraphEpoch
+EvaluationEpoch
 ```
 
 消费者根据 generation 决定：
@@ -250,10 +252,11 @@ GraphEpoch
 
 ### 7.2 Projection
 
-- GPU composite 消费 canonical surfaces 的 read lease。
+- EvalGraphIR 的 surface operation（包括 GPU composite）消费 canonical surfaces 的 read lease。
 - CPU projection consumer 先在 worker 取得 CPU read session。
 - UI 不通过 `updateCanvasProjection()` 临时同步下载 GPU tile。
-- active target 与 image projection 的语义由 graph/segment planner 决定，不再让两套 image 谁是 canvas source 相互覆盖。
+- writable target 与 image projection 的语义由 EvalGraphIR/EvaluationPlanner 决定；Layer segment 只作为 lowerer
+  optimization，不再让两套 image 谁是 canvas source 相互覆盖。
 
 ## 8. Transaction 与 Snapshot 接口
 

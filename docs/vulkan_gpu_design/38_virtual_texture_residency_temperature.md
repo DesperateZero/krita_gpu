@@ -1,7 +1,7 @@
 # 虚拟纹理语义温度、自动驻留与预测方案
 
 > 本文定义 ResidencyController 的选择算法。状态正确性服从
-> [33_virtual_texture_pagestore_state_machine.md](33_virtual_texture_pagestore_state_machine.md)，GraphEpoch 与图层剪枝服从
+> [33_virtual_texture_pagestore_state_machine.md](33_virtual_texture_pagestore_state_machine.md)，EvalGraphIR、EvaluationEpoch 与 Layer 优化服从
 > [28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md)。温度策略只能提出 operation，不能直接
 > 修改 PageStore 或 provider 状态。
 
@@ -81,12 +81,12 @@ PageStore/provider 对每个输出重新做安全校验。
 
 ```text
 StrokeEpochBegin/End
-ActiveTargetSetChanged
+MutationRootSetChanged
 TargetPageRequested/Published
 TrajectoryPredictionAdded/Expired
 ViewportEntered/Left
 DisplayDependencyAdded/Released
-GraphEpochChanged
+EvaluationEpochChanged
 CoverageCertificateCreated/Invalidated
 UndoRetentionAdded/Released
 SaveEpochCaptured/Released
@@ -96,7 +96,7 @@ BudgetChanged
 DocumentFocused/Backgrounded/Closed
 ```
 
-事件包含 Page/Surface/GraphEpoch、deadline、reason 和 dependency generation。策略日志必须可重放。
+事件包含 Page/Surface/EvaluationEpoch、deadline、reason 和 dependency generation。策略日志必须可重放。
 
 ## 5. Semantic class
 
@@ -120,24 +120,25 @@ DocumentFocused/Backgrounded/Closed
 
 ```text
 CoverageCertificate
-  GraphEpochId
-  ActiveTargetSet
+  EvaluationEpochId
+  MutationRootSet (optional)
+  ProducerNodeId / OutputPortId / OperationSemanticVersion
+  EvaluationContextDigest
   covered Surface/Page range
-  lower/upper derived Surface/Page generations
-  source dependency generation vector
-  layer/property/mask/filter revisions
+  source Value/Page generation vector
+  derived Surface/Page generation
   valid viewport/region
-  replay/rebuild route
+  producer/replay/rebuild route
   certificate generation
 ```
 
 只有以下条件同时满足才标记 `CoveredCold`：
 
-- 当前 epoch 内该 source 不在 ActiveTargetSet；
+- 当前 epoch 内该 source 不在 MutationRootSet；
 - derived result 精确覆盖需要的合成区域；
 - dependency vector 与 source/property generations 相符；
 - backdrop-dependent 内容有 replay/operator 而非错误透明 flatten；
-- invalidation 能从 graph/property/frame/target 变化传播到证书。
+- invalidation 能从 authoring graph/property/frame/context/operation-version/target 变化传播到证书。
 
 证书失效只改变温度/合成选择，不改变 canonical source generation。需要 source 时按 exact generation materialize。
 
@@ -234,7 +235,7 @@ writeback debt
 - velocity、bounded acceleration/curvature；
 - brush conservative bounds、spacing、rotation/scatter 上界；
 - selection/filter/neighborhood halo；
-- current ActiveTargetSet；
+- current MutationRootSet；
 - measured materialization P95。
 
 ### 11.2 Horizon
@@ -253,7 +254,7 @@ H = clamp(
 - target write 页生成带 deadline 的 prefetch；
 - lower/upper dependency 只按实际 composite plan 请求；
 - soft pin TTL 不超过 horizon + grace；
-- pen-up、方向突变、target/graph epoch变化立即让旧 hint 过期；
+- pen-up、方向突变、target/evaluation epoch变化立即让旧 hint 过期；
 - prefetch 不创建 generation，不获取长期 write lease。
 
 预测 miss 只导致异步 residency wait/跳过中间显示帧，不能漏画。
@@ -340,7 +341,7 @@ correctness gates 为依据，不能只比较 cache hit rate。
 
 ### RT2：Semantic classes/CoverageCertificate
 
-- GraphEpoch/ActiveTargetSet；
+- EvaluationEpoch/MutationRootSet；
 - derived dependency invalidation；
 - CoveredCold。
 

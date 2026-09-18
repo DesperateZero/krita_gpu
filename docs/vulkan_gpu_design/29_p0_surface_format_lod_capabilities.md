@@ -57,14 +57,20 @@ SurfaceCodec
 能力不是Canvas全局bool，而是descriptor查询：
 
 ```text
-queryCapability(OperationKind,
-                SurfaceFormat,
+queryCapability(OperationId,
+                OperationSemanticVersion,
+                Input/Output PortSignature(
+                    ValueType(typeId/version/storage class),
+                    SurfaceFormatId?),
                 Brush/Node semantics,
                 DeviceDescriptor)
 -> Supported variant / Unsupported reason
 ```
 
-OperationKind包括：
+`SurfaceFormatId` 与端口位置绑定；一次 capability entry 表达一个精确 input/output signature。不能把所有
+格式压成无位置的集合，否则 A→B 转换、多输入混合与同格式 pass 会被错误地视为同一能力。
+
+OperationId 至少覆盖：
 
 - canonical page read/write；
 - AutoRound/brush algorithm；
@@ -157,7 +163,7 @@ LoD支持至少需要：
 - viewport/zoom level选择；
 - sampling/filter语义；
 - rebuild/eviction；
-- 与stroke/GraphEpoch/display同步。
+- 与stroke/EvaluationEpoch/display同步。
 
 ### Capability
 
@@ -185,9 +191,9 @@ Recovery support
 
 ## 10. 前置路由
 
-operation开始前：
+operation 开始前：
 
-1. 解析target/input formats和完整语义。
+1. 从 EvalGraphIR 解析 operation/version、value types、target/input formats 和完整语义。
 2. 查询document/backend capability snapshot。
 3. 选择GPU、CPU PageStore、成熟display backend或reject。
 4. 冻结到operation/stroke/view epoch。

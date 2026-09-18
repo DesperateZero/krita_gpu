@@ -21,7 +21,7 @@
 - 独显 VRAM cache；
 - dirty/generation/pin/in-flight 状态机；
 - 绘画感知的自动温度管理；
-- `ActiveTargetSet` 驱动的图层剪枝；
+- `MutationRootSet` 驱动的图层剪枝；
 - lower checkpoint 与安全的 upper cache/replay；
 - 强制迁移、撤销和保存正确性测试。
 
@@ -174,7 +174,7 @@ checkpoint、display 和部分 upper cache 是 derived page：
 - 可以在压力下丢弃；
 - 不作为文档保存权威数据；
 - 必须记录 dependency revision；
-- rebuild 前检查 graph epoch 和 target set。
+- rebuild 前检查 evaluation epoch 和 mutation roots/writable targets。
 
 ## 4. 后端设计
 
@@ -236,14 +236,17 @@ SSD 明确区分仅保证 live session 可读的 `SessionSpill` 与经过 data/m
 `RecoveryCheckpoint`。不得每页 fsync 或立即读回；完整提交、恢复和 GC 协议见
 [37_virtual_texture_ssd_segment_store.md](37_virtual_texture_ssd_segment_store.md)。
 
-## 5. ActiveTargetSet 与图层剪枝
+## 5. Evaluation Graph、MutationRootSet 与图层剪枝
+
+通用 EvalGraphIR 和 task DAG 服从 [28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md)。
+本节 lower/upper 只描述 `KisLayerStackLowerer` 可识别的 layer-specific residency 优化。
 
 ### 5.1 Stroke epoch
 
 开始笔画时冻结：
 
-- `GraphEpoch`
-- `ActiveTargetSet`
+- `EvaluationEpoch`
+- 非空 stroke writable targets，以及它们映射出的 `MutationRootSet`
 - 目标 surface generation
 - 相关 blend/group/mask 依赖
 
@@ -434,12 +437,13 @@ BR4 才接入温度和图层剪枝。任何 `VT*` 都不得绕过这些进入条
 - 多 surface 竞争测试。
 - safety/semantic/CLOCK-cost 三层策略、CoverageCertificate、bounded trajectory corridor 和多文档公平性。
 
-### VT6：LayerSegmentPlanner
+### VT6：EvaluationPlanner 与 Layer lowering optimization
 
-- ActiveTargetSet。
+- typed EvalGraphIR、requested outputs、通用 task DAG 与空 MutationRootSet。
+- stroke writable targets 到 mutation roots 的映射。
 - lower checkpoint。
 - upper overlay/operator/replay 分类。
-- graph epoch、revision 和局部 invalidation。
+- evaluation epoch、operation/context revision 和局部 invalidation。
 
 ### VT7：绘画消费者
 
@@ -460,7 +464,8 @@ BR4 才接入温度和图层剪枝。任何 `VT*` 都不得绕过这些进入条
 1. BR1：冻结来自 tiles3/COW/swap 的 Surface/Page/State 与 reference tests。
 2. BR2：引入统一 ticket、GPU-side wait、queue 独占和资源退休。
 3. BR3：依次接入 UMA arena、dGPU fixed-slot/binding replica、unified SSD store 和 safe authority handoff。
-4. BR4：引入 ResidencyController、ActiveTargetSet、LayerSegmentPlanner、checkpoint 和 upper replay。
+4. BR4：引入 EvalGraphIR/reference lowerer/EvaluationPlanner、ResidencyController、MutationRootSet、Layer
+   checkpoint 和 upper replay optimization。
 5. BR5：接入 brush/undo/save consumer。
 6. BR6：接入 DisplaySurface UI，并在全部压力、性能、格式和故障测试通过后开放入口。
 

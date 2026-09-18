@@ -27,7 +27,8 @@
 - 新 target 是单向依赖的 `kritavulkanbackend -> kritaimage`；当前 `kritaui` 不链接该 target，也不编译 Vulkan
   canvas。产品只保留既有 CPU/OpenGL/QPainter 路径。
 - `kritaimage` 已加入 PageStore/Surface/generation/lease/ticket、state machine、document session/context、format
-  codec、unified SSD、residency、derived cache、stroke protocol/compiler 的接口骨架；`kritavulkanbackend` 已加入
+  codec、unified SSD、residency、`EvalGraphIR`/lowerer/planner、derived surface cache、stroke protocol/compiler
+  的接口骨架；`kritavulkanbackend` 已加入
   bootstrap、submission、command arena、binding table、replica provider、document session 和 stroke executor
   骨架；独立且未接入产品的 `kritavulkanuiadapter` target 已加入 view/presenter/canvas gate 骨架。
 - 第一版空壳已升级为 Foundation 契约：Surface/Completion/BackendService registry 具备线程安全 identity、单调
@@ -36,19 +37,23 @@
   状态机。涉及 native Vulkan allocation/command/queue/swapchain 的方法仍显式失败，不代表 BR1–BR6 已实现。
 - Krita 既有 `KisTileDataStore`、`KisMementoManager` 和 `KisSwappedDataStore` 仍承担当前 CPU tile、COW/undo 与
   swap 语义；尚未完成 PageStore 吸收。
-- 第一批静态门禁可复现通过，但本工作区仍没有可用构建目录，也没有 `cmake`/`ninja`，因此不能声明当前分支
-  可编译、可启动、CPU/OpenGL 回归通过或 BR0 出口完成。
-- 当前树仍没有可运行 Vulkan 产品功能，也没有真实 device probe、SPIR-V foundation asset、native queue submit、
-  页面迁移、UMA pointer bypass、合成、GPU stroke、swapchain、撤销/保存的端到端验证证据。
-- 对删除范围的二次审计确认：删除旧 `Canvas/RenderThread/TileManager/global router` 运行路径是正确的，但当前
-  skeleton 尚未覆盖 device service、allocator/resource retirement、shader manifest/ABI、composite/display executor
-  和 backend WSI session；现有 exported skeleton 也只是 provisional 设计探针，不能在完成 foundation 结构审查前
-  视为冻结 ABI。
+- 静态架构门禁已接入 GitLab CI；当前树的 CPU-only 与 Vulkan-foundation 双架构配置/构建均通过，
+  `kritaimage`、`kritaui`、backend、offscreen smoke 和未接产品入口的 UI adapter 均有可复现构建证据。
+- Foundation 已有构建期生成并校验的 SPIR-V checksum asset、reflection/ABI manifest、真实 Vulkan 1.2 device、
+  VMA buffer、compute dispatch 和有界 timeline wait smoke；该 smoke 不链接 UI，产品 Vulkan 入口仍关闭。
+- 当前树仍没有可运行 Vulkan 产品功能，也没有页面迁移、UMA pointer bypass、业务合成、GPU stroke、swapchain、
+  撤销/保存的端到端验证证据；这些仍分别属于 BR1–BR6，不能由 foundation smoke 代替。
+- 最新未修改 `origin/master` 的 CPU/OpenGL baseline 与当前树稳定核心回归分别通过 5/5 和 6/6；额外 4 个
+  测试在两棵树上以相同方式因未安装 bundle 资源或既有 scheduler/checksum 崩溃失败，已作为 upstream parity
+  限制记录，不计为本次回归。
+- BR0 净变更已重放到目标 upstream `origin/master` `9a24ae0d8c` 之上；重放前状态保存在
+  `archive/br0-pre-upstream-replay-20260918`。最新树已重新完成 CPU-only、Vulkan foundation、真实 offscreen、
+  稳定核心回归和依赖边界验证，BR0 正式关闭。
 
 因此，当前项目应描述为：
 
-> 已完成 BR0 的旧运行路径删除、构建环切断与第一版禁用骨架；BR0 还必须完成 foundation target/private-public
-> 结构、旧能力提取清单、目标 upstream 对齐以及 CPU/OpenGL/Vulkan-foundation 构建回归，才能关闭。
+> BR0 已完成：旧运行路径删除、构建环切断、foundation target/private-public 结构、shader/device/offscreen
+> 验证、CI 门禁、CPU/OpenGL 对照回归，以及在目标 upstream 上的重放后全量复验均已通过。
 > BR1–BR6 尚未开始实现可运行能力。
 
 ## 3. 第一个 MVP 的不可裁剪目标
@@ -83,9 +88,10 @@
    - 温度不能只是普通 LRU/age。
    - 必须考虑目标图层、viewport、笔迹预测、dirty 写回代价、重建代价、依赖扇出和替代缓存覆盖度。
 
-7. **目标图层剪枝与派生合成缓存**
-   - 每个 stroke epoch 冻结 `ActiveTargetSet`；通常只有当前图层可写，允许少量多目标操作。
-   - 非目标节点在该 epoch 内视为只读，可形成下层 checkpoint、上层 overlay/operator/replay cache。
+7. **通用求值图、目标图层剪枝与派生缓存**
+   - Layer Tree 与未来 Flow authoring model 必须 lower 到同一个 immutable、typed `EvalGraphIR`。
+   - `EvaluationEpoch` 的 `MutationRootSet` 可为空；每个 stroke 另行冻结非空 `writableTargets` 并映射为 mutation roots。
+   - Layer frontend 可把非目标节点识别为只读，形成下层 checkpoint、上层 overlay/operator/replay cache；该分类不是通用图 ABI。
    - 被有效派生缓存覆盖的非目标源页可以快速降温并转录到 RAM/SSD。
 
 8. **GPU 原生笔迹执行**
@@ -117,13 +123,16 @@ generation 的 replica 或 derived consumer。目标模块边界如下：
 - `DiscreteGpuPageBackend`：提供 VRAM cache、transfer 与 sparse/atlas 后端。
 - unified SSD provider：由现有 `KisTileDataStore`/`KisSwappedDataStore` 演进，只存在于 `kritaimage`。
 - `DocumentGpuSession`：归属 `KisImage` 的 backend-neutral session slot；同文档多 canvas 共享，不同文档隔离。
-- `LayerSegmentPlanner`：根据 `ActiveTargetSet` 切分只读 segment。
-- `CompositeCheckpointCache`：保存可丢弃、可重建的下层/上层派生结果。
+- `KisEvaluationGraphLowerer`：把 versioned authoring snapshot 转为统一、不可变的 `EvalGraphIR`。
+- `KisLayerStackLowerer`：现有 Layer Tree 的兼容 frontend，并可附加 lower/target/upper 优化提示。
+- `KisEvaluationPlanner`：从 requested outputs 生成 ROI/依赖明确的 backend-neutral execution task DAG。
+- `KisDerivedSurfaceCache`：按 operation/input/property/context generations 保存可丢弃、可重建的图像输出。
+- Value/Resource Store：保存 scalar/text/tensor/model/external artifact 等非 surface value；不得并入 PageStore。
 - `StrokeJournal`：保存不可变 resolved dab chunk 和恢复所需命令历史。
 - `PageWorkCompiler`：将连续 dab 序列稳定编译为有序 page job。
 - `StrokeExecutor`：执行 page-batched kernel，不逐 dab 提交。
 - `SubmissionCoordinator`：统一 queue submission、timeline ticket 和延迟资源回收。
-- `IncrementalCompositeScheduler`：把目标页 generation 变化传播到局部 DisplaySurface。
+- `IncrementalEvaluationScheduler`：把目标页 generation 变化传播到局部 DisplaySurface。
 - `Presenter`：只为最近已完成的 DisplaySurface 构造 `PresentRequest`；实际 `vkQueuePresentKHR` 仍由
   `SubmissionCoordinator` 独占。
 
@@ -139,9 +148,12 @@ GPU stroke 的执行与同步细节以 [10_gpu_stroke_foundation.md](10_gpu_stro
 内部施工见 [21_implementation_and_baseline_cutover.md](21_implementation_and_baseline_cutover.md)；全局 P0
 删除边界和 BR0–BR6 顺序见 [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md)。
 
-## 5. 图层剪枝口径
+## 5. 通用求值与图层剪枝口径
 
-单目标绘画时，图层栈至少拆为：
+Authoring Graph、EvalGraphIR 和 Execution Task DAG 必须分离。通用 IR 用 typed ports/edges 表达 source、diamond、
+fan-out 和多输出，不出现 lower/upper 或 Vulkan 类型；纯生成/显示图允许空 `MutationRootSet`。
+
+仅当 Layer Tree lower 后识别出线性绘画结构时，单目标图层栈至少拆为：
 
 ```text
 只读下层 -> LowerCheckpoint
@@ -153,7 +165,8 @@ GPU stroke 的执行与同步细节以 [10_gpu_stroke_foundation.md](10_gpu_stro
 - 上层只有在 blend/group 语义允许时才能预合成为 overlay。
 - 对 backdrop 有非线性依赖的上层必须保存 replay bundle 或按脏区重算，不能把透明背景上的 RGBA 快照当成普遍正确结果。
 - 多目标操作把图层图切成 `C0 -> T0 -> C1 -> ... -> Tn -> Cn`，其中 `C` 是只读 segment，`T` 是可写目标。
-- “当前 stroke 不可写”不等于节点永远不可变；图层属性、滤镜、动画或外部编辑会创建新的 graph/stroke epoch 并使相关缓存失效。
+- “当前 stroke 不可写”不等于节点永远不可变；图层属性、滤镜、动画、Flow 连接或外部编辑会创建新的
+  evaluation/stroke epoch 并使相关缓存失效。
 
 ## 6. 温度与回收口径
 
@@ -174,7 +187,7 @@ GPU stroke 的执行与同步细节以 [10_gpu_stroke_foundation.md](10_gpu_stro
 - pinned/in-flight page 不可回收；
 - derived cache 可以丢弃，但 canonical data 必须至少有一个权威副本；
 - 迁移决策需要迟滞，避免 VRAM/RAM/SSD 之间反复抖动。
-- `CoveredCold` 必须由 GraphEpoch/dependency generations 完整的 `CoverageCertificate` 证明。
+- `CoveredCold` 必须由 EvaluationEpoch/dependency generations 完整的 `CoverageCertificate` 证明。
 
 ## 7. 路线顺序
 
@@ -185,7 +198,7 @@ GPU stroke 的执行与同步细节以 [10_gpu_stroke_foundation.md](10_gpu_stro
 2. **BR1**：把现有 tile/COW/undo/swap 吸收到 canonical PageStore；先证明纯 CPU 像素一致。
 3. **BR2**：建立独占全部 queue API 的 `SubmissionCoordinator`、timeline DAG、command arena 与资源退休。
 4. **BR3**：接入 UMA、dGPU、RAM、SSD replica；通过 pointer bypass 与强制迁移校验。
-5. **BR4**：建立 GraphEpoch、ActiveTargetSet、图层剪枝、derived cache 和语义温度。
+5. **BR4**：建立 EvalGraphIR/reference lowerer、EvaluationEpoch、通用 task DAG、derived cache、图层剪枝和语义温度。
 6. **BR5**：GPU stroke 消费 page lease/ticket，完成 generation COW undo 与 immutable save epoch。
 7. **BR6**：UI 只消费 derived DisplaySurface；完成多 canvas、WSI、颜色/显示过滤和安全回退后才开放用户选项。
 
@@ -214,7 +227,7 @@ GPU stroke 的执行与同步细节以 [10_gpu_stroke_foundation.md](10_gpu_stro
 - 语义温度与预测：[38_virtual_texture_residency_temperature.md](38_virtual_texture_residency_temperature.md)
 - 虚拟纹理性能决策门禁：[39_virtual_texture_performance_gates.md](39_virtual_texture_performance_gates.md)
 - Submission/线程/零阻塞：[27_p0_submission_threading_zero_blocking.md](27_p0_submission_threading_zero_blocking.md)
-- GraphEpoch/projection/display：[28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md)
+- Evaluation Graph/Projection/Display：[28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md)
 - SurfaceFormat/LoD/capability：[29_p0_surface_format_lod_capabilities.md](29_p0_surface_format_lod_capabilities.md)
 - CI 架构守卫：[30_p0_ci_architecture_guards.md](30_p0_ci_architecture_guards.md)
 - 受控重置与唯一全局执行顺序：[31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md)
@@ -222,6 +235,7 @@ GPU stroke 的执行与同步细节以 [10_gpu_stroke_foundation.md](10_gpu_stro
 - 旧 Vulkan 能力、缺口与逐项提取判定：[42_legacy_vulkan_capability_extraction_matrix.md](42_legacy_vulkan_capability_extraction_matrix.md)
 - Foundation 施工与 BR0 构建门禁：[43_foundation_construction_sequence_and_gates.md](43_foundation_construction_sequence_and_gates.md)
 - Shader/compositor/canvas 重建：[44_shader_compositor_canvas_reconstruction.md](44_shader_compositor_canvas_reconstruction.md)
+- BR0 构建、测试与 upstream 对照证据：[45_br0_build_and_regression_evidence_20260918.md](45_br0_build_and_regression_evidence_20260918.md)
 - 虚拟纹理现状/旧代码证据：[09_virtual_texture_status_and_roadmap.md](09_virtual_texture_status_and_roadmap.md)
 - Stroke 如何消费 residency：[15_stroke_residency_and_memory_backends.md](15_stroke_residency_and_memory_backends.md)
 - GPU stroke 总纲：[10_gpu_stroke_foundation.md](10_gpu_stroke_foundation.md)

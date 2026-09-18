@@ -146,7 +146,7 @@ pin/in-flight state
 ```
 
 温度只决定候选顺序，不覆盖安全规则。dirty、pinned、in-flight 或最后权威副本不能因分数低被直接回收。
-`CoveredCold` 只有在 GraphEpoch、ActiveTargetSet、property/source generations 和 replay route 组成的
+`CoveredCold` 只有在 EvaluationEpoch、MutationRootSet、property/source generations 和 replay route 组成的
 `CoverageCertificate` 有效时成立。
 
 ### 4.3 轨迹预测

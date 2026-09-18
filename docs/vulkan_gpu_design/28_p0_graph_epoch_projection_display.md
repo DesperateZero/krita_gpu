@@ -1,297 +1,291 @@
-# P0：GraphEpoch、Projection、Derived Cache 与 Display
+# P0：Evaluation Graph、Projection、Derived Cache 与 Display
 
-> 本文解决 projection、活动层和显示共用一张 image、非目标整图常驻、compositor 输出未实际绑定、
-> NodeSync/失效不完整和多 canvas 显示耦合。
+> 本文定义图像求值的长期中间表示和运行边界。现有 Layer Tree 与未来 Flow/ComfyUI 风格节点编辑器都是
+> authoring frontend；两者必须 lower 到同一个 backend-neutral `EvalGraphIR`，不能各自建立 PageStore、
+> compositor 或 Vulkan runtime。文件名保留旧 `graph_epoch` 仅为现有链接稳定，不代表继续采用 layer-only 模型。
 
-## 1. Surface 角色绝对分离
+## 1. 永久架构：三种图不可混同
 
-### Canonical
+```text
+Authoring Graph
+  Layer Tree / Flow Graph / imported workflow
+        |
+        | immutable snapshot + schema-specific lowerer
+        v
+Evaluation Graph IR (EvalGraphIR)
+  typed ports / semantic operations / ROI rules / exact generations
+        |
+        | EvaluationPlanner + cache/capability resolution
+        v
+Execution Task DAG
+  page/region jobs / CPU-GPU-external partition / tickets
+        |
+        v
+PageStore + ValueStore + backend executors + publication
+```
+
+- **Authoring Graph** 是保存、撤销和 UI 编辑对象；可以是树，也可以是任意 DAG。
+- **EvalGraphIR** 是不可变的语义 DAG；不持有 `KisNode*`、QObject、VkImage、queue 或 canvas。
+- **Execution Task DAG** 是一次请求的物理计划；可因 viewport、缓存、预算和设备能力不同而变化，不进入文档。
+- UI 节点不能直接生成 Vulkan command；Vulkan executor 也不能解释 Layer Tree 或 Flow 文档格式。
+
+## 2. Surface 与通用 Value
+
+### 2.1 Surface
 
 每个 `KisPaintDevice`/frame 有独立 canonical surface：
 
-- paint layer content；
+- paint content；
 - mask/selection canonical data；
-- filter/clone等节点自身参数或源数据（按节点语义）。
+- filter/clone 等节点自身的 canonical 参数或源数据。
 
-canonical surface 由 PageStore 管理，不是 VkImage，也不由 canvas 拥有。
+canonical surface 由 PageStore 管理，不是 VkImage，也不由 canvas 拥有。ProjectionSurface、DisplaySurface、
+checkpoint、LOD 和中间图像输出都是带 dependency identity 的 derived surface，可丢弃重建且不进入文档 undo。
 
-### Derived
+### 2.2 非 Surface value
+
+Flow 若需要 scalar、vector、color、text、metadata、tensor、latent、model reference 或 external artifact，使用
+`KisEvaluationValueId/Version` 表达。非图像值由独立 Value/Resource Store 管理；禁止为了节点通用性把
+PageStore 扩成万能对象仓库。
+
+端口类型使用开放的 `typeId + semanticVersion`，因此未来 Flow/custom node 无需扩充核心类型枚举；封闭的
+`StorageClass` 只区分 Surface、inline value、resource 与 external ownership，不承担节点语义。
+Surface 端口同时携带逐端口 `SurfaceFormatId`；能力描述符匹配完整 input/output port signature，不能用一个
+无位置含义的“支持格式集合”误判 format conversion 或多输入节点。
+
+## 3. Authoring Snapshot 与 Lowerer
+
+`KisAuthoringGraphSnapshot` 是带 `schemaId/schemaVersion` 的不可变输入，payload 不得含 native pointer。
 
 ```text
-LowerCheckpointSurface
-UpperOverlaySurface
-UpperOperatorSurface
-UpperReplayBundle
-ProjectionSurface
-DisplaySurface
-LodPyramidSurface
-UiOverlaySurface
+KisImage/KisNode Layer Tree -> KisLayerStackLowerer --+
+Future Flow document       -> KisFlowGraphLowerer -----+-> EvalGraphIR
+Imported external workflow -> adapter/lowerer ---------+
 ```
 
-derived surface：
+- `KisLayerStackLowerer` 是兼容 frontend，不是全局 planner。
+- lowerer 必须完整表达 group、mask、filter、blend、animation、color semantics；无法证明时 fail closed。
+- `.kra` Layer Tree 可长期保留；Flow 可包含 LayerStack 子图，Layer 面板也可成为受约束子图的专用视图。
+- 第一阶段不冻结外部插件 ABI；先用内部、可版本化描述符和 CPU reference 固定语义。
 
-- 带 dependency generation vector；
-- 可丢弃重建；
-- 不能覆盖/替代 canonical authority；
-- 每页单独 publish；
-- 不进入文档 undo（除非节点语义明确将其变成canonical结果）。
-
-## 2. `GraphEpoch`
+## 4. `EvaluationEpoch` 与 EvalGraphIR
 
 ```text
-GraphEpochId
-DocumentId
-LayerGraphVersion
-ActiveTargetSet
-NodeTopologySnapshot
+EvaluationEpochId
+DocumentId / GraphRevision
+EvaluationContext(time/frame/LOD/working-space/policy)
+Typed Node/Port/Edge descriptors
+RequestedOutputs
+MutationRootSet (optional)
 PropertyGenerations
-AnimationFrame/Time
-SurfaceGenerationInputs
-LowerSegments
-TargetSegments
-UpperSegments
-DisplayPolicyVersion
+OperationId / SemanticVersion
+Region/Purity/Determinism contracts
 ```
 
-epoch不可变。以下事件创建新epoch：
+epoch 不可变。下列变化创建新 epoch：
 
-- target set变化；
-- 节点添加/删除/重排；
-- blend/opacity/visibility/property变化；
-- mask/filter/group配置变化；
-- animation frame/time语义变化；
-- color/format转换改变图求值；
-- 无法局部表达的外部CPU编辑。
+- authoring topology、连接或 requested output 改变；
+- node property、resource、seed 或 implementation semantic version 改变；
+- animation time/frame、LOD、working space 或 display/evaluation policy 改变；
+- writable target/mutation root 改变；
+- 无法局部表达的外部编辑。
 
-旧epoch in-flight工作可以完成物理执行，但completion只有在epoch/generation匹配时才能publish。
+纯生成、查看或导出图允许空 `MutationRootSet`。绘画 stroke 自己仍必须声明非空 `writableTargets`，lowering 时将
+对应 value 映射为 mutation roots。旧 epoch 的工作可以完成物理执行，但只有 epoch、依赖和 output reservation
+全部匹配时才能 publish。
 
-## 3. LayerSegmentPlanner
+Authoring snapshot 中的每个 mutation root 必须精确引用一个 surface-backed canonical input；重复、悬空或
+非 Surface root 一律拒绝。Lowering 后的 root 再指向该 epoch 对应的 produced value，避免 SurfaceId/ValueId
+之间靠约定猜测。
 
-### 单目标
+## 5. 节点语义契约
+
+每个 EvalGraphIR node 至少声明：
+
+- 稳定 `OperationId + SemanticVersion`；
+- 带开放 ValueType 与逐 Surface 端口格式的 input/output ports；
+- immutable parameters/property generations；
+- `Pointwise/Halo/Transform/Global/External` region policy；
+- `Pure/Stateful/SideEffecting` purity；
+- `Deterministic/Seeded/NonDeterministic` determinism；
+- format/working-space requirements；
+- CPU reference 或明确 unsupported 路径。
+
+每个 node 都必须产生至少一个带 generation 的可追踪 output；真正 side-effecting node 也必须产生 receipt/effect
+token，并由 requested output 显式触发，不能依靠“遍历到它就执行”的隐式副作用。
+
+能力按 operation/version/value type/format 声明，不能用单一“GPU compositor supported”布尔值。未知 operation、
+不匹配 semantic version 或缺资源必须 pending/unsupported/failed，不能当透明像素继续执行。
+
+## 6. EvaluationPlanner 与 Execution Task DAG
+
+`KisEvaluationPlanner` 只消费 exact EvalGraphIR：
+
+1. 从 requested outputs 反向裁剪不可达节点；
+2. 校验 DAG、port type、format 和 cycle policy；
+3. 传播 dirty region、transform 和 halo；
+4. 查询 exact derived cache；
+5. 依据 capability 将任务分配给 CPU、GPU 或 external async executor；
+6. 产生显式 task dependencies、output reservations 和 cancellation identity；
+7. 再由 PageStore/ValueStore 解析 access plan 和 readiness tickets。
+
+普通图只允许 DAG。需要反馈的工作流必须使用有明确 state/time 边界的 delay/state node，不能把隐式 cycle 交给
+scheduler 猜测。
+
+## 7. Layer Stack 是 lowering 优化，不是核心模型
+
+现有图层栈可被 lower 为通用语义 DAG：
 
 ```text
-LowerReadOnlySegment
-  -> LowerCheckpoint
-WritableTarget
-UpperReadOnlySegment
-  -> Overlay / Operator / Replay
--> Projection/Display
+CanonicalSurfaceSource -> mask/filter/style -> CompositeOp -> ... -> Projection output
 ```
 
-### 多目标
+在此 DAG 上，`KisLayerStackLowerer` 可以识别绘画时的线性结构并附加优化提示：
 
 ```text
-C0 -> T0 -> C1 -> T1 -> ... -> Tn -> Cn
+LowerReadOnlySegment -> LowerCheckpoint
+WritableTarget       -> changed target pages
+UpperReadOnlySegment -> Overlay / Operator / Replay
 ```
 
-- `T`只包含ActiveTargetSet声明的可写surface。
-- `C`在epoch内不可写，可缓存/replay。
-- Planner输出精确dependency和dirty propagation graph。
-- 节点不支持GPU求值时，整个相关segment在CPU通过canonical lease求值，再发布derived generation；不能偷用陈旧projection。
+多目标可形成 `C0 -> T0 -> C1 -> ... -> Tn -> Cn`。Lower/Upper 是 layer-stack-specific optimization，不能出现在
+通用 EvalGraphIR 或 executor ABI 中；任意分叉、合流、多输出和共享子图仍由通用 edge/task DAG 表达。
 
-## 4. Lower/Upper 语义
+未知/未证明的 upper 语义默认 Replay 或 CPU reference：
 
-### LowerCheckpoint
+- backdrop-independent 内容才允许 Overlay；
+- 可参数化应用到任意 backdrop 的内容可缓存 Operator；
+- backdrop-dependent blend/filter/mask/group 保存 prepared inputs 并按脏区 Replay。
 
-- 表示目标输入之前所有下层的精确合成结果；
-- target stroke期间保持稳定；
-- viewport/halo页hot，其余可冷；
-- dependency包含所有参与source/property generation。
+## 8. Derived Surface Cache
 
-### UpperOverlay
-
-仅用于数学上backdrop-independent的结果。普通source-over可按定义缓存source/coverage，但仍需明确opacity、
-premultiplication、mask和color semantics。
-
-### UpperOperator
-
-保存可应用到任意backdrop的参数化操作，不把结果错误拍平为透明RGBA。
-
-### UpperReplay
-
-backdrop-dependent blend、filter、mask、group保存prepared source/参数/dependency，在target改变的dirty region重放。
-
-未知/未证明语义默认Replay或CPU route，不能默认Overlay。
-
-## 5. Dependency Generation Vector
-
-每个derived page记录：
+每个 derived page 的 key 至少包含：
 
 ```text
-GraphEpochId
-Output Surface/Page/Generation
-Input Surface/Page/Generation[]
-PropertyGeneration[]
-Kernel/Codec/ColorTransform Version
-ValidRegion
+EvaluationEpochId
+ProducerNodeId / OutputPortId
+OperationId / SemanticVersion
+Input ValueVersions
+Input Surface/Page/Generations
+PropertyGenerations
+EvaluationContextDigest
+Output Page/ValidRegion
 ProducerTicket
 ```
 
-cache hit必须逐项匹配。只比较“节点最近修改时间”或全局dirty bool不足以证明有效。
+常量 generator 可以没有 surface input，但仍必须携带 operation、parameter/context 和 output identity。cache hit 必须
+逐项匹配；只比较“节点最近修改时间”、全局 dirty bool 或透明占位输出都不成立。
 
-## 6. Dirty propagation
+## 9. Dirty/ROI 传播与发布
 
-canonical page publish事件：
+canonical publish event：
 
 ```text
-SurfaceId/PageId
+Value/Surface/Page identity
 Old/New Generation
-GraphEpochId
+EvaluationEpochId
 WriterTicket
 ChangedRegion
 ```
 
-planner/scheduler：
+scheduler 根据 node region contract 把 region 传播到下游。Pointwise 保持局部，Halo 扩张，Transform 做坐标映射，
+Global 才允许全值失效，External 按其显式契约处理。每个 output page/value 只有在完整 producer 完成，且 epoch、输入
+generation、semantic version 和 reservation 仍匹配时发布；过期结果直接丢弃。
 
-1. 找到依赖该page/property的derived nodes；
-2. 将region转换到各节点坐标/halo；
-3. 只使相交derived page失效；
-4. 保留仍匹配的Lower/Upper cache；
-5. 请求source read lease/output write lease；
-6. 提交CPU/GPU operation；
-7. generation/epoch匹配后publish。
+## 10. Composite access plan 与 executor
 
-全画布重算只能由明确无法界定的节点/变换触发，不是普通stroke默认。
+`KisCompositeAccessPlan` 是一种 surface-specific operation plan，不是全局图计划。它携带 extensible
+`operationId/semanticVersion`、exact input generations、output reservation、working format、page leases 和 tickets。
 
-## 7. Projection
+`KisVulkanCompositeExecutor`：
 
-`KisImage::projection()` 语义对应一个derived ProjectionSurface/view，而不是向活动层sparse image上传CPU flattened pixels。
+- 只验证并编码已支持 operation；
+- 不读取 Authoring Graph；
+- 不做全图调度或 capability fallback；
+- 不自行申请 canonical authority；
+- 不直接 publish derived output；
+- 不持有或调用 raw queue。
 
-永久规则：
+CPU reference、Vulkan 和 future external executor 必须服从同一 output reservation/publication 规则。
 
-- projection从canonical node surfaces和graph epoch求值；
-- active target仍是自己的canonical surface；
-- projection不能alias writable target；
-- Canvas不把CPU projection raw bytes覆盖target GPU replica；
-- CPU projection consumer通过derived/canonical leases；
-- GPU projection/composite由LayerSegmentPlanner产生exact output generation。
+## 11. Projection 与 DisplaySurface
 
-删除 `KisVulkanUpdateInfo` 中按64×64携带 raw projection pixel copy 的模型。
+`KisImage::projection()` 对应 EvalGraphIR 某个 requested output 的 derived ProjectionSurface/view：
 
-## 8. DisplaySurface
+- projection 从 canonical/value inputs 与 EvaluationEpoch 求值；
+- writable target 保持自己的 canonical surface；
+- projection 不 alias writable target；
+- Canvas 不把 CPU projection raw bytes 覆盖 target GPU replica；
+- GPU/CPU producer 都发布 exact output generation。
 
-DisplaySurface是面向视图的derived输出：
+DisplaySurface 是面向 view 的进一步 derived output，包含 EvaluationEpoch、projection dependencies、display transform、
+viewport/LOD、page generations 和 ready tickets。多个 canvas 共享 document evaluation/cache，但拥有独立 view transform、
+DisplaySurface variant 和 WSI lifetime。
 
-```text
-Document/GraphEpoch
-Projection dependency generation
-Display Color Transform/Filter generation
-View LOD/scale policy
-Page generations
-Ready tickets
-```
+Presenter 只采样最新已完成 snapshot；显示/resize/surface lost 不阻塞 stroke 或 EvaluationPlanner。
 
-- Display descriptor必须绑定该DisplaySurface exact generation/view，不使用局部变量“选择composite image”后仍保留旧descriptor。
-- 每页完整producer完成后publish。
-- Presenter可复用上一完整snapshot。
-- 多canvas可有不同DisplaySurface/view transform，但共享canonical/Projection cache。
-- display失效/重建不改变canonical page。
+## 12. Residency 与 CoverageCertificate
 
-## 9. Compositor Pipeline
+EvaluationGraph 提供的语义类别至少包括：
 
-输入：
+- writable mutation root/output：`CurrentWrite`；
+- trajectory corridor：`PredictedWrite`；
+- visible requested-output dependencies：`VisibleExact`；
+- replay/checkpoint source：`ReplayOrCheckpoint`；
+- undo/save retention：`UndoOrSaveRetention`；
+- 被有效 derived output 覆盖的 canonical：`CoveredCold`；
+- rebuildable output：`DerivedDiscardable`。
 
-- explicit source surface/page/generation；
-- destination derived write lease；
-- blend/node/property descriptor；
-- dirty/halo rect；
-- previous derived dependency（如需）。
+`CoverageCertificate` 必须包含 EvaluationEpoch、mutation roots、source/property generations、evaluation context 和
+producer/replay route。通用图的空 mutation roots 合法；但证书仍必须证明被覆盖 canonical page 的完整依赖。
 
-输出：
+## 13. 交互与重型/外部节点
 
-- output generation；
-- dependency vector；
-- producer ticket；
-- validity region。
+- 交互绘画任务使用低延迟、page/ROI 优先的 QoS。
+- tensor/model/remote generation 使用异步、可取消、可恢复的 QoS。
+- external node 不得让 presenter 或 brush host thread 无界等待。
+- 非确定节点必须把 seed/run identity 纳入 generation/cache key；真正 side effect 不得由普通 cache replay 重复执行。
 
-禁止：
+## 14. 实现路线
 
-- 每dispatch临时descriptor无限分配；
-- target未clear/未初始化；
-- layout假定`UNDEFINED`；
-- full-canvas image绕过PageStore预算；
-- compositor输出没有更新display binding；
-- active layer与projection共享image。
+### EG0：接口与 reference
 
-## 10. 温度与非目标剪枝
+- `KisEvaluationGraphTypes`、authoring snapshot/lowerer、`KisEvaluationPlanner` skeleton。
+- Layer Tree reference lowerer 与 CPU evaluator。
+- source/diamond/fan-out/multi-output/random DAG tests。
 
-GraphEpoch提供语义事件给ResidencyController：
+### EG1：Derived surface/value core
 
-- active target/output: `CurrentWrite`；
-- trajectory corridor: `PredictedWrite`；
-- visible lower/display/upper exact dependency: `VisibleExact`；
-- replay source/checkpoint: `ReplayOrCheckpoint`；
-- transaction/undo/save retained: `UndoOrSaveRetention`；
-- 被有效derived覆盖的canonical: `CoveredCold`；
-- offscreen low-dependency: `OffscreenCold`；
-- derived rebuildable: `DerivedDiscardable`。
+- exact cache key、invalid/publish/rebuild。
+- non-surface ValueStore contract；PageStore 保持图像页专用。
 
-`CoveredCold` 必须有包含 GraphEpoch、target、property/source generations 和 replay route 的
-`CoverageCertificate`。温度策略按 safety、semantic class、cost/CLOCK history 分层，不维护脱离
-generation/dependency 的独立 age 真相。完整算法见
-[38_virtual_texture_residency_temperature.md](38_virtual_texture_residency_temperature.md)。
+### EG2：ROI 与 mixed execution
 
-## 11. 多 Canvas
+- pointwise/halo/transform/global propagation。
+- CPU/GPU mixed task DAG、unsupported operation fallback 和 stale completion rejection。
 
-- 一个DocumentGpuSession维护GraphEpoch/Projection/共享derived cache。
-- 每view attachment维护viewport、transform、DisplaySurface variant、swapchain generation。
-- 一个view关闭不清理共享canonical/composite仍被其他view使用的page。
-- 不同display filter/color profile形成不同DisplaySurface dependency generation。
-- view不可见时可降低其display cache温度，不停止document stroke/undo/save。
+### EG3：Layer optimization 与 composite
 
-## 12. UI Overlay
+- lower/target/upper optimization pass。
+- overlay/operator/replay golden；page-batched composite access plan。
 
-- outline、guide、selection、assistant不写Document ProjectionSurface。
-- GPU primitive或UiOverlaySurface带独立generation/dirty region。
-- selection canonical mask变化可以同时使document graph和UI outline依赖失效。
-- 禁止每帧全窗口QImage生成/复制/上传。
+### EG4：Projection/Display
 
-## 13. 实现路线
+- projection requested output、per-page DisplaySurface publish。
+- Presenter exact snapshot、多 canvas、color/display dependencies。
 
-### GD0：Graph snapshot/reference
+### EG5：Flow authoring frontend
 
-- GraphEpoch/PropertyGeneration/ActiveTargetSet。
-- CPU reference LayerSegmentPlanner和dependency tests。
+- Flow serialization/undo/UI；与 Layer frontend lower 到同一 EvalGraphIR。
+- 外部 workflow adapter 只通过 versioned operation/value contracts 接入。
 
-### GD1：Derived surface core
+## 15. 验收门槛
 
-- dependency vector、invalid/publish/rebuild。
-- LowerCheckpoint/ProjectionSurface reference。
-
-### GD2：GPU composite
-
-- page-batched source/output leases。
-- descriptor/view exact generation。
-- output clear/layout/ticket。
-
-### GD3：DisplaySurface
-
-- color/display dependency、per-page publish。
-- Presenter exact snapshot。
-
-### GD4：Upper分类
-
-- overlay/operator/replay golden tests。
-- CPU fallback segment。
-
-### GD5：多canvas/overlay
-
-- shareddocument cache、per-view display。
-- dirty UiOverlay，删除全窗口upload。
-
-### GD6：旧projection path删除
-
-- 删除raw `KisVulkanUpdateInfo`、active alias、full layer VkImage和NodeSync旧假设。
-
-## 14. 验收门槛
-
-- 每PaintDevice canonical surface独立，projection/display全为derived。
-- active target不alias projection/display image。
-- derived page持有完整dependency vector并拒绝stale completion。
-- LowerCheckpoint与Upper分类像素正确。
-- compositor output exact generation实际绑定到display descriptor。
-- 普通stroke只局部重算必要page。
-- CoveredCold非目标canonical可安全下沉。
-- 多canvas共享document内容且独立display/WSI。
-- UI overlay不再每帧全窗口上传。
-- 旧raw projection upload/NodeSync整图路径从基线删除。
+- Layer Tree 与等价 Flow graph 对 CPU reference 产生相同像素和 dependency identity。
+- EvalGraphIR 支持 source、diamond、fan-out、多输出及空 MutationRootSet。
+- property/input/time/format/semantic-version 任一变化都只失效正确下游。
+- CPU/GPU/external 混合任务不能发布旧 epoch 或半完成 output。
+- PageStore 不持有 model/text/tensor 等非 surface object。
+- layer lower/upper 优化不出现在通用 planner/executor ABI。
+- projection/display 不 alias canonical writable target；多 canvas 共享文档结果且 WSI 隔离。
+- 旧 raw projection upload、NodeSync 整图路径和 layer-only global planner 不得恢复。

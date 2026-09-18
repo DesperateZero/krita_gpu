@@ -136,7 +136,7 @@ SSD fast/slow and injected-latency profiles
 
 ### W4：频繁切层/属性/滤镜
 
-检验 GraphEpoch 失效、derived rebuild、旧 coverage 拒绝和反向迁移。
+检验 EvaluationEpoch 失效、derived rebuild、旧 coverage 拒绝和反向迁移。
 
 ### W5：Undo/save 并发
 

@@ -13,7 +13,7 @@
 
 - 已解析命令不丢失；
 - 同一输入在相同资源 generation 下可确定性重放；
-- backend、目标集合和图层图在一次 epoch 内冻结；
+- backend、writable target 集合和 EvaluationEpoch/EvalGraphIR 在一次 stroke epoch 内冻结；
 - journal 有界且不会通过覆盖旧数据控制容量；
 - end/cancel 是显式记录，不依赖对象析构时猜测 GPU 状态；
 - GPU、CPU fallback、undo 和设备恢复消费同一逻辑命令格式。
@@ -40,9 +40,8 @@ button/modifier state
 
 ```text
 StrokeId
-GraphEpoch
-ActiveTargetSet
-TargetSurfaceId[]
+EvaluationEpoch
+WritableTargetSurfaceId[]
 TargetBaseGeneration[]
 PreparedBrushProgramId
 BrushSemanticVersion
@@ -57,8 +56,9 @@ ExecutionBackend
 规则：
 
 - `StrokeId` 全进程单调唯一，不能复用。
-- `GraphEpoch` 标识图层图、mask、group、blend 属性的稳定视图。
-- `ActiveTargetSet` 显式列出可写 surface；未列入的节点在该 epoch 内只读。
+- `EvaluationEpoch` 标识 lower 后 EvalGraphIR、context 和 operation semantics 的稳定视图。
+- `WritableTargetSurfaceId[]` 是 stroke 的非空可写集合；lowerer 将对应 value 映射进 EvaluationEpoch 的
+  `MutationRootSet`。纯求值图自身允许空 MutationRootSet。
 - `ExecutionBackend` 在 begin 时选择，不能在 epoch 中从 GPU 切到 CPU 或反向切换。
 - brush/resource generation 必须在 journal 退休前保持可访问或可恢复。
 
@@ -278,7 +278,7 @@ hard limit 不能通过以下方式解决：
 
 `beginStroke()` 原子捕获 epoch desc，并完成：
 
-- target set 和 graph epoch 校验；
+- writable target set 和 evaluation epoch 校验；
 - backend 选择；
 - brush program/resource generation pin；
 - undo transaction/snapshot policy 初始化；

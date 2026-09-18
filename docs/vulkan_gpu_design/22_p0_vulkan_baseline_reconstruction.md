@@ -1,7 +1,7 @@
 # P0 校正总纲：重建方向无误的 Vulkan 基线
 
 > 本文是 Vulkan 全局 P0 校正的权威总纲，覆盖模块依赖、canonical data、replica、文档会话、提交线程、
-> 图层图、格式能力、自动化边界和基线重置。GPU stroke 是其中一个 consumer，继续服从
+> 通用求值图、Layer/Flow frontend、格式能力、自动化边界和基线重置。GPU stroke 是其中一个 consumer，继续服从
 > [10_gpu_stroke_foundation.md](10_gpu_stroke_foundation.md) 及其专题文档。
 
 ## 0. 结论与权威层级
@@ -44,7 +44,7 @@
 | UMA/dGPU/SSD/温度细化 | [35_virtual_texture_uma_pointer_bypass.md](35_virtual_texture_uma_pointer_bypass.md)–[38_virtual_texture_residency_temperature.md](38_virtual_texture_residency_temperature.md) |
 | 虚拟纹理性能决策与基准门禁 | [39_virtual_texture_performance_gates.md](39_virtual_texture_performance_gates.md) |
 | Queue 独占、command arena、零阻塞与关闭 | [27_p0_submission_threading_zero_blocking.md](27_p0_submission_threading_zero_blocking.md) |
-| GraphEpoch、ActiveTargetSet、projection、compositor、display | [28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md) |
+| EvalGraphIR/lowerer/task DAG、EvaluationEpoch、projection、display | [28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md) |
 | SurfaceFormat、颜色、LoD 与能力声明 | [29_p0_surface_format_lod_capabilities.md](29_p0_surface_format_lod_capabilities.md) |
 | CI 架构守卫与测试矩阵 | [30_p0_ci_architecture_guards.md](30_p0_ci_architecture_guards.md) |
 | 归档、删除、BR0–BR6 和基线切换 | [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md) |
@@ -60,8 +60,10 @@ flowchart TD
     SAVE["Undo / Save / CPU Operations"] --> PS
 
     DS --> PS["SurfaceRegistry + PageStore<br/>位于 kritaimage"]
-    DS --> LP["LayerSegmentPlanner"]
-    LP --> DC["Derived Composite Cache"]
+    DS --> AG["Layer / Flow Authoring Snapshot"]
+    AG --> LG["Schema Lowerer -> EvalGraphIR"]
+    LG --> EP["EvaluationPlanner -> Task DAG"]
+    EP --> DC["Derived Surface Cache"]
 
     PS --> RAM["RAM / UMA Shared Arena"]
     PS --> SSD["Unified SSD Page Store"]
@@ -234,19 +236,22 @@ GPU stroke 的最终形态已经在以下文档完整建立，本总纲不删减
 
 它必须作为 canonical PageStore 的 lease/ticket consumer 实现，不能重新拥有 tile、swap、undo 或 display authority。
 
-## 7. ActiveTargetSet 与非目标图层剪枝
+## 7. Evaluation Graph、MutationRootSet 与非目标图层剪枝
 
-每个 stroke 创建不可变 `GraphEpoch`：
+Layer Tree 与未来 Flow graph 必须先 lower 到同一个 typed EvalGraphIR。每次求值使用不可变 `EvaluationEpoch`：
 
 ```text
-GraphEpoch
-├── ActiveTargetSet
-├── LayerGraphVersion
+EvaluationEpoch
+├── GraphRevision / EvaluationContext
+├── Typed Nodes / Ports / Edges
+├── RequestedOutputs
+├── MutationRootSet (optional)
 ├── PropertyGenerations
-├── LowerSegments
-├── TargetSegments
-└── UpperSegments
+└── Operation SemanticVersions
 ```
+
+纯求值的 MutationRootSet 可以为空。stroke 另行声明非空 writable targets，并在 Layer lowering 时映射为 mutation
+roots；只有 Layer-specific optimization 才产生 lower/target/upper 分类：
 
 单目标时：
 
@@ -261,7 +266,7 @@ LowerCheckpoint -> WritableTarget -> UpperReplay/UpperOperator -> Display
 - 普通 source-over 上层可缓存为 operator/overlay。
 - backdrop-dependent blend、filter、mask 必须保存 replay bundle，不能在透明背景上错误拍平。
 - derived cache 带完整 dependency generation vector。
-- 图层属性、节点图、动画帧或目标集变化时创建新 epoch，不原地修改旧缓存。
+- authoring graph、属性、动画帧、evaluation context、operation version 或目标集变化时创建新 epoch，不原地修改旧缓存。
 - 被有效 lower/upper cache 覆盖的非目标 canonical 页标记 `CoveredCold`，优先下沉 RAM/SSD。
 
 ## 8. 线程与“零阻塞”硬定义
@@ -328,7 +333,7 @@ CI 增加结构检查：
 - selection、alpha lock、wash、撤销、立即保存/重开。
 - 多文档、多 canvas、关闭其中一个 canvas。
 - 同 queue family 与独立 queue family 两套同步矩阵。
-- layer graph 随机变更与 derived cache generation 校验。
+- EvalGraphIR source/diamond/fan-out/multi-output/random 变更、Layer/Flow equivalent lowering 与 derived cache generation 校验。
 - 4/8/16 字节像素格式及不支持格式的前置 CPU 路由。
 
 ## 11. 执行顺序
@@ -360,9 +365,10 @@ CI 增加结构检查：
 - 完成 pointer bypass、VRAM replica、SSD durability。
 - 强制迁移测试通过。
 
-### BR4：ActiveTargetSet、温度与图层剪枝
+### BR4：EvalGraphIR、MutationRootSet、温度与图层剪枝
 
-- 完成 GraphEpoch、lower/upper cache、dependency invalidation。
+- 完成 authoring lowerer、typed EvalGraphIR、EvaluationPlanner task DAG、EvaluationEpoch 和 dependency invalidation。
+- 完成 Layer lower/upper cache optimization，但不把该分类放入通用 IR/executor ABI。
 - 温度只消费语义事件，不再维护独立 age/LRU 真相。
 - 最终策略按 safety eligibility、semantic class、cost/CLOCK history 分层；`CoveredCold` 必须有
   `CoverageCertificate`。

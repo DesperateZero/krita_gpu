@@ -180,7 +180,7 @@ contract 的 mode 才进入 pipeline manifest。
 - descriptor 生命周期与清零/layout 不闭合；
 - 只覆盖简单 visible paint layer；
 - 不表达 group、mask、filter、pass-through、inherit alpha、clipping、backdrop dependency；
-- 没有 GraphEpoch/dependency vector/cache invalidation；
+- 没有 EvaluationEpoch/dependency vector/cache invalidation；
 - 输出 image 未可靠成为 canvas 实际采样源；
 - resize/shutdown 使用 device idle。
 
@@ -191,7 +191,8 @@ contract 的 mode 才进入 pipeline manifest。
 - compositor class E0；
 - dirty region 与 layer metadata 输入只能作为 E1 行为参考。
 
-新 compositor 从 `LayerSegmentPlanner -> CompositeAccessPlan -> page executor -> derived surface publication` 重建。
+新 compositor 从 `authoring lowerer -> EvalGraphIR -> KisEvaluationPlanner -> CompositeAccessPlan -> page executor ->
+derived surface publication` 重建。lower/target/upper 仅是 Layer frontend 的 lowering 优化。
 
 ## 7. display、outline 与 canvas
 
@@ -229,7 +230,7 @@ device pixel ratio。它不能迁移，因为同时拥有 TileManager、RenderTh
 - logical tile 被近似等同 sparse granularity；
 - dirty eviction 可在 durable handoff 前解绑；
 - `Tier/L3_Cold` 没有 SSD record；
-- prefetch age/LRU 不理解 ActiveTargetSet/GraphEpoch/CoverageCertificate；
+- prefetch age/LRU 不理解 MutationRootSet/EvaluationEpoch/CoverageCertificate；
 - fallback dense 8192×8192 不是可扩展后端；
 - GPU canvas 与 Krita tiles3/COW/swap 形成双权威；
 - UMA 只是 allocation/staging 变体。

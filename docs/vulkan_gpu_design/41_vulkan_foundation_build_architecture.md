@@ -82,7 +82,7 @@ flowchart TD
 
 保留现有 shared target，不创建第二个 image/page core。它承载：
 
-- `SurfaceId`、`PageKey`、generation、image/graph epoch；
+- `SurfaceId`、`PageKey`、generation、image/evaluation epoch；
 - canonical PageStore、lease、publication、authority handoff；
 - tile/COW/memento/undo/swap 的演进实现；
 - backend-neutral completion、replica provider 和 document session interface；
@@ -176,7 +176,7 @@ libs/vulkanbackend/
 | pipelines | `KisVulkanPipelineRepository` | key 含 shader、format、alpha、feature、device generation |
 | pages | `KisVulkanPageReplicaProvider` | 只拥有物理 replica；不改 canonical publication |
 | bindings | `KisVulkanPageBindingTable` | operation-scoped 或 generation-qualified；默认私有 |
-| composite | `KisVulkanCompositeExecutor` | 消费 GraphEpoch/segment plan/leases，输出 derived surface |
+| evaluation/composite | `KisVulkanCompositeExecutor` | 消费已解析的 exact composite operation/access plan；不解释 authoring graph 或全局 task DAG |
 | display | `KisVulkanDisplayExecutor` | 消费 DisplaySurface snapshot；不采样 active layer alias |
 | WSI | `KisVulkanSwapchainSession` | 每 view 一份 generation；不拥有 document/session |
 
@@ -344,8 +344,11 @@ pipeline 创建不允许发生在首个 dab 的 UI/input 热路径；准备失�
 旧 `layer_composite.comp` 只能作为 blend 研究输入，不能迁移为新 compositor。新结构必须先分离：
 
 ```text
-LayerSegmentPlanner (kritaimage, semantic plan)
- -> CompositeAccessPlan (pages/generations/dependencies)
+Layer/Flow Authoring Snapshot
+ -> schema-specific Lowerer
+ -> EvalGraphIR (typed semantic DAG)
+ -> KisEvaluationPlanner (execution task DAG)
+ -> CompositeAccessPlan (one surface operation; pages/generations/dependencies)
  -> KisVulkanCompositeExecutor (backend, compute encoding)
  -> derived Composite/DisplaySurface generation
  -> KisVulkanDisplayExecutor (sampling/color/display pass)
@@ -355,9 +358,10 @@ LayerSegmentPlanner (kritaimage, semantic plan)
 必要边界：
 
 - composite 不持有整张固定 RGBA8 canvas；
+- lower/target/upper 仅是 `KisLayerStackLowerer` 的优化，不进入 Vulkan 或通用 EvalGraphIR ABI；
 - input/output 都是 exact surface/page generation lease；
 - blend、mask、filter、group、backdrop dependency 由 plan 明确表达；
-- display descriptor 必须绑定已完成的 DisplaySurface snapshot，而不是 active target；
+- display descriptor 必须绑定已完成的 DisplaySurface snapshot，而不是 writable target；
 - color conversion、proofing/display filter 与 checker/overlay 分 pass 或有明确 working/output space；
 - derived surface 可丢弃，不能反向成为 canonical authority。
 

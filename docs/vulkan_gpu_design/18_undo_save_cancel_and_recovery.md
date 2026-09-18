@@ -53,7 +53,7 @@ transaction 记录：
 ```text
 StrokeId
 TargetSurfaceId
-GraphEpoch
+EvaluationEpoch
 PageId -> BeforeGeneration/SnapshotHandle
 PageId -> AfterGeneration
 SnapshotReadyTicket
@@ -183,7 +183,7 @@ journal 后仍假设可以 redo replay。
 再捕获：
 
 ```text
-Document/GraphEpoch
+Document/EvaluationEpoch
 Node/Frame topology revision
 Canonical SurfaceId set
 每页 requested generation map
@@ -285,7 +285,7 @@ generation `G` 可恢复，当且仅当至少一个条件成立：
 
 - 关闭或取消旧 epoch；
 - 已提交 writer 依据旧 target identity 完成/恢复；
-- 新 graph epoch 不能复用旧 pending generation；
+- 新 evaluation epoch 不能复用旧 pending generation；
 - stale completion 被 identity/generation check 拒绝。
 
 ## 11. 应用关闭与文档关闭

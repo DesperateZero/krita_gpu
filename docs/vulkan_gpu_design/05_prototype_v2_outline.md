@@ -1,7 +1,7 @@
 # 第二阶段能力扩展：在 P0 MVP 基线上扩大多层与笔刷覆盖
 
-> 前置条件是 [04_prototype_v1_outline.md](04_prototype_v1_outline.md) 的完整 P0 MVP 已验收。GraphEpoch、
-> ActiveTargetSet、lower/upper 剪枝、derived DisplaySurface 和基本多层正确性已经属于第一个 MVP；本文不能
+> 前置条件是 [04_prototype_v1_outline.md](04_prototype_v1_outline.md) 的完整 P0 MVP 已验收。typed EvalGraphIR、
+> EvaluationEpoch、MutationRootSet、Layer lower/upper 优化、derived DisplaySurface 和基本多层正确性已经属于第一个 MVP；本文不能
 > 被用来把这些高代价基础推迟到后续。当前尚未进入本阶段。
 > 多层增量合成服从 [16_incremental_composite_and_presenter.md](16_incremental_composite_and_presenter.md)，笔刷能力解除门禁服从 [19_brush_resources_and_capability_gate.md](19_brush_resources_and_capability_gate.md)。
 
@@ -14,9 +14,9 @@
 
 ### 多层合成
 
-- 在 MVP 已有 `ActiveTargetSet`、LowerCheckpoint、UpperOperator/Replay 和 generation invalidation 上扩展更多
+- 在 MVP 已有通用 EvalGraphIR、`MutationRootSet`、Layer LowerCheckpoint、UpperOperator/Replay 和 generation invalidation 上扩展更多
   blend、group、mask、filter 与 animation 组合。
-- 增加复杂多 target 操作和更广的 dependency graph 优化，但不改变 GraphEpoch 语义。
+- 增加复杂多 target 操作和更广的 dependency graph 优化，但不改变 EvaluationEpoch 语义。
 
 ### 笔刷能力
 

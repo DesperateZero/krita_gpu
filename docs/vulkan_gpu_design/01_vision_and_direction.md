@@ -29,13 +29,20 @@
   不是文档保存格式。
 - sparse image、atlas 或 sampled image 都是设备后端或派生缓存，不能决定上层对象模型。
 
-### 3. 以绘画目标集驱动调度
+### 3. 统一求值图，Layer 与 Flow 共享运行核心
 
-- 一个 stroke epoch 内只有 `ActiveTargetSet` 可写，通常只有当前图层。
+- Layer Tree、未来 Flow 编辑器和外部工作流只是 authoring frontend，统一 lower 到 immutable typed EvalGraphIR。
+- Authoring Graph、EvalGraphIR、Execution Task DAG 三层分离；UI 不生成 Vulkan command，executor 不解释文档图。
+- 图像/蒙版 value 进入 PageStore；scalar/text/tensor/model 等进入独立 Value/Resource Store。
+- capability 按 operation/semantic version/open value type/format 声明，未知语义 fail closed 或走 CPU reference。
+
+### 4. 以绘画目标集驱动调度
+
+- EvalGraphIR 的 `MutationRootSet` 可以为空；stroke 另行声明非空 writable targets，通常只有当前图层，并映射为 mutation roots。
 - 非目标图层只读，可由 lower checkpoint、upper overlay/operator/replay cache 替代。
 - 温度管理综合 viewport、笔迹预测、重建成本和替代缓存覆盖度，而不是只看最近访问时间。
 
-### 4. GPU 原生绘画与局部合成
+### 5. GPU 原生绘画与局部合成
 
 - CPU 将输入解析为不可变、单调有序的 resolved dab journal；已接受命令不会因固定 ring 满而丢失。
 - dab 按目标页面稳定分桶，同页在一个 page job 内按序混合，不使用逐 dab dispatch/barrier。
@@ -50,7 +57,7 @@
 [16_incremental_composite_and_presenter.md](16_incremental_composite_and_presenter.md) 与
 [17_krita_pagestore_integration.md](17_krita_pagestore_integration.md)。
 
-### 5. 正确性优先于功能数量
+### 6. 正确性优先于功能数量
 
 - 位深、颜色空间、blend、mask、group 和非破坏节点必须有对照测试。
 - 不支持的能力要明确门禁和回退，不能以近似结果冒充支持。
@@ -61,7 +68,7 @@
 - 保留 CPU/OpenGL 路径作为对照和安全回退。
 - 通过受控重置删除旧 Vulkan runtime，不以兼容开关保留错误数据模型；Vulkan 在 BR0–BR6 与整个 MVP
   验收前不可对用户启用。
-- 先把 Krita 现有 tile/COW/undo/swap 演进为统一页面系统，再接入 replica、图层图、单层笔刷、撤销/保存和显示。
+- 先把 Krita 现有 tile/COW/undo/swap 演进为统一页面系统，再接入 replica、EvalGraphIR/Layer frontend、单层笔刷、撤销/保存和显示。
 - 节点图、滤镜和高级笔刷共享同一 surface/page/residency 基础设施，避免继续增加特例资源路径。
 
 ### 7. 单向模块与文档会话

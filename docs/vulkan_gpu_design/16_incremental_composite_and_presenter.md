@@ -1,9 +1,10 @@
 # 增量合成、DisplaySurface 与 Presenter 隔离
 
 > 本文定义 stroke 输出如何形成可显示结果，以及 WSI/swapchain 为什么不能成为笔迹执行的前置依赖。
-> 全局 GraphEpoch/projection/display 权威设计见
+> 全局 EvaluationEpoch/projection/display 权威设计见
 > [28_p0_graph_epoch_projection_display.md](28_p0_graph_epoch_projection_display.md)，queue API 所有权见
 > [27_p0_submission_threading_zero_blocking.md](27_p0_submission_threading_zero_blocking.md)。
+> 本文的 lower/upper/segment 只属于 Layer Tree lowering optimization；通用 Flow DAG 使用 typed port/edge/task。
 
 ## 1. 目标
 
@@ -11,7 +12,7 @@
 - 图层合成只重算受 page generation 变化影响的区域。
 - Presenter 只读取已经完成的 DisplaySurface generation。
 - acquire、present、resize、遮挡、最小化和 surface lost 不阻塞 stroke。
-- 非目标图层利用 ActiveTargetSet 形成 lower/upper 派生缓存，不保持全栈 GPU-hot。
+- Layer frontend 利用 stroke writable targets/mutation roots 形成 lower/upper 派生缓存，不保持全栈 GPU-hot。
 - decorations/outline 不通过每帧全窗口 CPU bitmap upload 污染 stroke/display 时序。
 
 ## 2. Surface 分工
@@ -29,7 +30,7 @@ UiOverlaySurface         grid/guide/selection 等非文档内容
 
 只有 CanonicalLayerSurface 进入文档保存权威数据。其他 surface 记录 dependency generation，可丢弃重建。
 
-## 3. Stroke epoch 图层切分
+## 3. Layer lowering 的 stroke epoch 优化
 
 ### 3.1 单目标
 
@@ -41,8 +42,8 @@ ReadOnlyUpperSegment -> Overlay / Operator / Replay
 
 epoch begin 冻结：
 
-- GraphEpoch；
-- ActiveTargetSet；
+- EvaluationEpoch；
+- 非空 writable targets 及其映射出的 MutationRootSet；
 - segment 边界；
 - node/blend/mask revision；
 - lower/upper dependency set。
@@ -88,14 +89,14 @@ PageId / Region
 OldGeneration
 NewGeneration
 WriterTicket
-GraphEpoch
+EvaluationEpoch
 ```
 
 ### 5.2 传播
 
-`IncrementalCompositeScheduler`：
+`IncrementalEvaluationScheduler` 在通用 task DAG 上传播失效；对于 Layer lowering optimization：
 
-1. 校验 GraphEpoch 和 dependency revision。
+1. 校验 EvaluationEpoch 和 dependency revision。
 2. 找到相交 lower/target/upper/display pages。
 3. 保留仍有效 lower checkpoint。
 4. 选择 overlay/operator/replay stage。
@@ -112,7 +113,7 @@ GraphEpoch
 
 DisplaySurface 是指定 display transform 前或后的派生页面集合，必须明确：
 
-- source graph epoch；
+- source evaluation epoch；
 - target/lower/upper dependency generations；
 - color/display transform version；
 - viewport/LOD；
@@ -124,7 +125,7 @@ DisplaySurface 是指定 display transform 前或后的派生页面集合，必�
 - 正在构建的 generation 与 presenter 正在读取的 generation 分离。
 - 一个 DisplaySurface page 只有在完整 composite stage 完成后发布。
 - Presenter 可以混合读取不同 page 的最新完整 generation，但每页不能读取半完成写入。
-- graph epoch 变化时旧 display page 可以继续显示到新页完成，不能误标为新 epoch。
+- evaluation epoch 变化时旧 display page 可以继续显示到新页完成，不能误标为新 epoch。
 
 ### 6.3 存储
 
@@ -246,9 +247,10 @@ Presenter 不持有 `VkQueue`，也不直接调用 `vkQueueSubmit` 或 `vkQueueP
 
 ## 12. 实现路线
 
-### CP0：Segment planner reference
+### CP0：Evaluation reference 与 Layer optimization
 
-- 单目标 lower/target/upper 切分。
+- source/diamond/fan-out/multi-output task DAG 和空 MutationRootSet。
+- Layer Tree 单目标 lower/target/upper 切分。
 - upper 分类和 CPU reference composite。
 - dependency revision/invalid region 测试。
 
