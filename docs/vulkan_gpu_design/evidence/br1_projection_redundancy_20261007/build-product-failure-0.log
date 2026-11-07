@@ -1,0 +1,157 @@
+ninja: Entering directory `/Users/apple/krita_gpu/krita/_build-br0-cpu'
+[0/2] Re-checking globbed directories...
+[1/14] Automatic MOC for target kritaimage
+[2/13] Building CXX object libs/image/CMakeFiles/kritaimage.dir/pagestore/KisTiledDataManagerPageStoreBackend.cpp.o
+[3/13] Linking CXX shared library bin/libkritaimage.21.0.0.dylib
+ld: warning: -single_module is obsolete
+ld: warning: -multiply_defined is obsolete
+ld: warning: -single_module is obsolete
+ld: warning: -multiply_defined is obsolete
+[4/13] Creating library symlink bin/libkritaimage.21.dylib bin/libkritaimage.dylib
+[5/13] Automatic MOC for target kis_async_merger_test
+[6/13] Automatic MOC for target kis_tiled_data_manager_test
+[7/13] Building CXX object libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test_autogen/mocs_compilation.cpp.o
+[8/13] Building CXX object libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test_autogen/mocs_compilation.cpp.o
+[9/13] Building CXX object libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o
+FAILED: [code=1] libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DFILES_DATA_DIR=\"/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/data/\" -DFILES_DEFAULT_DATA_DIR=\"/Users/apple/krita_gpu/krita/sdk/tests/data/\" -DFILES_OUTPUT_DIR=\"/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tiles3/tests\" -DKCOREADDONS_LIB -DKGUIADDONS_LIB -DQT_CORE5COMPAT_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0x050E00 -DQT_GUI_LIB -DQT_MAC_USE_COCOA -DQT_NO_DEBUG -DQT_NO_SIGNALS_SLOTS_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING -DQT_OPENGL_LIB -DQT_PRINTSUPPORT_LIB -DQT_SQL_LIB -DQT_STRICT_ITERATORS -DQT_SVG_LIB -DQT_TESTCASE_BUILDDIR=\"/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tiles3/tests\" -DQT_TESTCASE_SOURCEDIR=\"/Users/apple/krita_gpu/krita/libs/image/tiles3/tests\" -DQT_TESTLIB_LIB -DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DSYSTEM_RESOURCES_DATA_DIR=\"/Users/apple/krita_gpu/krita/krita/data/\" -DTRANSLATION_DOMAIN=\"krita\" -D_DARWIN_C_SOURCE -D_LARGEFILE64_SOURCE -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tiles3/tests -I/Users/apple/krita_gpu/krita/libs/image/tiles3/tests -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tiles3/tests/kis_tiled_data_manager_test_autogen/include -I/Users/apple/krita_gpu/krita/_build-br0-cpu -I/Users/apple/krita_gpu/krita -I/Users/apple/krita_gpu/krita/libs/image/gpustroke -I/Users/apple/krita_gpu/krita/libs/image/pagestore -I/Users/apple/krita_gpu/krita/libs/image/brushengine -I/Users/apple/krita_gpu/krita/libs/image/filter -I/Users/apple/krita_gpu/krita/libs/image/generator -I/Users/apple/krita_gpu/krita/libs/image/layerstyles -I/Users/apple/krita_gpu/krita/libs/image/processing -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image -I/Users/apple/krita_gpu/krita/libs/image -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/version -I/Users/apple/krita_gpu/krita/libs/version -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/widgets -I/Users/apple/krita_gpu/krita/libs/widgets -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/global -I/Users/apple/krita_gpu/krita/libs/global -I/Users/apple/krita_gpu/krita/libs/flake/commands -I/Users/apple/krita_gpu/krita/libs/flake/tools -I/Users/apple/krita_gpu/krita/libs/flake/svg -I/Users/apple/krita_gpu/krita/libs/flake/text -I/Users/apple/krita_gpu/krita/libs/flake/resources -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/flake -I/Users/apple/krita_gpu/krita/libs/flake -I/Users/apple/krita_gpu/krita/libs/pigment/resources -I/Users/apple/krita_gpu/krita/libs/pigment/compositeops -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/pigment -I/Users/apple/krita_gpu/krita/libs/pigment -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/koplugin -I/Users/apple/krita_gpu/krita/libs/koplugin -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/store -I/Users/apple/krita_gpu/krita/libs/store -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/resources -I/Users/apple/krita_gpu/krita/libs/resources -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/command -I/Users/apple/krita_gpu/krita/libs/command -I/Users/apple/krita_gpu/krita/libs/widgetutils/config -I/Users/apple/krita_gpu/krita/libs/widgetutils/xmlgui -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/widgetutils -I/Users/apple/krita_gpu/krita/libs/widgetutils -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/multiarch -I/Users/apple/krita_gpu/krita/libs/multiarch -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/resourcewidgets -I/Users/apple/krita_gpu/krita/libs/resourcewidgets -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/psdutils -I/Users/apple/krita_gpu/krita/libs/psdutils -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/metadata -I/Users/apple/krita_gpu/krita/libs/metadata -I/Users/apple/krita_gpu/krita/_build-br0-cpu/sdk/tests -I/Users/apple/krita_gpu/krita/sdk/tests -I/Users/apple/krita_gpu/krita/libs/image/tests/pagestore -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tests -I/Users/apple/krita_gpu/krita/libs/image/tests -isystem /Users/apple/krita_gpu/krita/_install/include -isystem /Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers -iframework /Users/apple/krita_gpu/krita/_install/lib -isystem /Users/apple/krita_gpu/krita/_install/mkspecs/macx-clang -isystem /Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KI18n -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KConfig -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KConfigCore -isystem /Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KItemViews -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KConfigGui -isystem /Users/apple/krita_gpu/krita/_install/include/OpenEXR -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KWidgetsAddons -isystem /Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KCoreAddons -isystem /Users/apple/krita_gpu/krita/_install/include/freetype2 -isystem /Users/apple/krita_gpu/krita/_install/include/harfbuzz -isystem /Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KGuiAddons -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KCompletion -isystem /Users/apple/krita_gpu/krita/_install/include/eigen3 -isystem /Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers -fno-operator-names -Wno-gnu-zero-variadic-macro-arguments -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Wvla -Wdate-time -fdiagnostics-color=always -fexceptions -O2 -g -DNDEBUG -std=gnu++17 -arch x86_64 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -mmacosx-version-min=12 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden   -mmacosx-version-min=12 -Wno-macro-redefined -Wno-deprecated-register -MD -MT libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o -MF libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o.d -o libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o -c /Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:787:13: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  787 |             QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:802:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  802 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:805:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  805 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(512,
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:1156:8: error: no matching member function for call to 'clear'
+ 1156 |     dm.clear(QRect(0, 0, 64, 64), reinterpret_cast<const quint8 *>(color.constData()));
+      |     ~~~^~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:198:17: note: candidate function not viable: requires 0 arguments, but 2 were provided
+  198 |     inline void clear() {
+      |                 ^
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:179:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  179 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  180 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  181 |                       quint8 def) {
+      |                       ~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:188:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  188 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  189 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  190 |                       const quint8 * def) {
+      |                       ~~~~~~~~~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:1157:8: error: no matching member function for call to 'clear'
+ 1157 |     dm.clear(QRect(128, 0, 64, 64), reinterpret_cast<const quint8 *>(color.constData()));
+      |     ~~~^~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:198:17: note: candidate function not viable: requires 0 arguments, but 2 were provided
+  198 |     inline void clear() {
+      |                 ^
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:179:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  179 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  180 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  181 |                       quint8 def) {
+      |                       ~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:188:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  188 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  189 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  190 |                       const quint8 * def) {
+      |                       ~~~~~~~~~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:1163:8: error: no matching member function for call to 'clear'
+ 1163 |     dm.clear(hole, reinterpret_cast<const quint8 *>(blank.constData()));
+      |     ~~~^~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:198:17: note: candidate function not viable: requires 0 arguments, but 2 were provided
+  198 |     inline void clear() {
+      |                 ^
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:179:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  179 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  180 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  181 |                       quint8 def) {
+      |                       ~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:188:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  188 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  189 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  190 |                       const quint8 * def) {
+      |                       ~~~~~~~~~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:1174:8: error: no matching member function for call to 'clear'
+ 1174 |     dm.clear(hole, reinterpret_cast<const quint8 *>(color.constData()));
+      |     ~~~^~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:198:17: note: candidate function not viable: requires 0 arguments, but 2 were provided
+  198 |     inline void clear() {
+      |                 ^
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:179:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  179 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  180 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  181 |                       quint8 def) {
+      |                       ~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_datamanager.h:188:17: note: candidate function not viable: requires 5 arguments, but 2 were provided
+  188 |     inline void clear(qint32 x, qint32 y,
+      |                 ^     ~~~~~~~~~~~~~~~~~~~
+  189 |                       qint32 w, qint32 h,
+      |                       ~~~~~~~~~~~~~~~~~~~
+  190 |                       const quint8 * def) {
+      |                       ~~~~~~~~~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:1280:46: warning: lambda capture 'index' is not required to be captured for this use [-Wunused-lambda-capture]
+ 1280 |         observation.reader = std::thread([&, index] {
+      |                                            ~~^~~~~
+4 warnings and 4 errors generated.
+[10/13] Building CXX object libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test.cpp.o
+ninja: build stopped: subcommand failed.

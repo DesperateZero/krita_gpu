@@ -1,0 +1,40 @@
+{
+  "product_commit": "1177fa5ecab8318fe044b071342eb0ab51654e27",
+  "product_changes": 0,
+  "results": {
+    "arm64": {
+      "pid": 6892,
+      "actual_exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 1.6735413330607116,
+      "markers": [
+        "DUAL_NATIVE_FREE diagnostic_abort=1 child_exit=134 munmap=1 mach_vm=1 abort=1 child_reaped=1"
+      ],
+      "selected_image_loaded": true,
+      "interposer_loaded": true,
+      "diagnostic_abort": true,
+      "munmap_failure": true,
+      "mach_vm_failure": true,
+      "abort_reached": true
+    },
+    "x86_64": {
+      "pid": 6908,
+      "actual_exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.5059781250311062,
+      "markers": [
+        "DUAL_NATIVE_FREE diagnostic_abort=1 child_exit=134 munmap=1 mach_vm=1 abort=1 child_reaped=1"
+      ],
+      "selected_image_loaded": true,
+      "interposer_loaded": true,
+      "diagnostic_abort": true,
+      "munmap_failure": true,
+      "mach_vm_failure": true,
+      "abort_reached": true
+    }
+  },
+  "conclusion": "both native release failures reach terminate; diagnostic SIGABRT guard reaps the child",
+  "limit": "default macOS abort remains unqualified because the host retained the child as UE"
+}

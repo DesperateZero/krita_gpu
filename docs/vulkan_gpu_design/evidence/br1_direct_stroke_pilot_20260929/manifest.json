@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "captured_at_utc": "2026-09-29T04:53:02Z",
+  "head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "scope": "Explicit direct/common persistent FreehandStrokeStrategy pilot; default tool enable remains off",
+  "batch_source_files_sha256": "be301485d7a6629fbc6eaf4d6ee5f1fbc61156eafb27a9842c76d24f53c8b923",
+  "source_files": {
+    "libs/image/kis_painter.cc": "2a5911cf9cd4fa932a83102d6d4fae1f0e6a8cdd7d5864666039d05c8ecc92ec",
+    "libs/image/kis_painter.h": "0cf913f9f221c3895f7a4e6585ebbb829e9b67920a7732de076a1dce32e410c4",
+    "libs/image/kis_painter_blt_multi_fixed.cpp": "47c33f4c22e7997ee976f9f98f29645c0269deb3f70ec86c0444c856c2ad5a37",
+    "libs/image/kis_painter_p.h": "990c5c17ca5beed6af0cbd1dd3e9163b3ba66c143d1be5dd298e18c82f9ebb61",
+    "libs/ui/tests/freehand_stroke_test.cpp": "2eea33e57b33e64b2dfa8c10756a23b1427731168b7ddb0d7c42bce980ec91d6",
+    "libs/ui/tests/freehand_stroke_test.h": "6f778d7cbb06388b30c6c5940bc50f3d1c3183f83d24505202124d68587065db",
+    "libs/ui/tool/strokes/freehand_stroke.cpp": "769dc57030e8f65f21fe580f89c58e89579284ab621670a73d8b722dc44bd624",
+    "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp": "987149b80dd997c603e18eba9a5284e0a92867a77e72a4c4657a36cdee559e71",
+    "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.h": "363906c3909b3e0067aa7db2732cc8fe72b329aa0c95e5af8f9d3b55e2e8ab0f",
+    "plugins/paintops/defaultpaintops/brush/kis_brushop.cpp": "5e8163b2101c54a9ea0721bfb82a2726a4e7099a1f114de3f2e2ac77d60d0a47",
+    "plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.cpp": "b562adf72aea21caa928d0c834af5ebc527201993080c340156243737d3e52e2"
+  },
+  "binaries": {
+    "FreehandStrokeTest": "247540159832783615512fe6a6354c6f4e422a5dc5563b6f7395c11f6bac55e9",
+    "KisPainterStrokeCompletionTest": "573c0e67bef8bcd2b6aba228269cb44fe714e20963674fa6d1fbc8660520e096",
+    "KisDabRenderingQueueTest": "972b4847e399c254f2666c3019a0043b3280c68dfb44ffdc97d13a4fb37ab26f",
+    "libkritaimage": "4db51bc00cc1541b66481a044f63666599d904ecb561886b35a392fe6c002e51",
+    "libkritaui": "74244ba4a7febcd1dc0a6e1387560324016c795f72ec6c502db9758c49a6b9e8"
+  },
+  "tests": [
+    {
+      "target": "KisDabRenderingQueueTest",
+      "cases": ["testBrushPagePartition", "testSharpnessLine"],
+      "arm64": {"passed": 50, "failed": 0, "skipped": 0},
+      "x86_64": {"passed": 50, "failed": 0, "skipped": 0}
+    },
+    {
+      "target": "FreehandStrokeTest",
+      "cases": ["testPersistentAutoBrushStroke", "testPersistentAutoBrushStrokeCancelled"],
+      "arm64": {"passed": 4, "failed": 0, "skipped": 0},
+      "x86_64": {"passed": 4, "failed": 0, "skipped": 0}
+    },
+    {
+      "target": "KisPainterStrokeCompletionTest",
+      "cases": ["testPixelFailure"],
+      "arm64": {"passed": 22, "failed": 0, "skipped": 0},
+      "x86_64": {"passed": 22, "failed": 0, "skipped": 0}
+    }
+  ],
+  "architecture": {
+    "passed": true,
+    "manifest_entries": 21,
+    "ownership_facts": 25,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1814,
+    "reverse_call_edges": 19634,
+    "callback_registrations": 17,
+    "external_intrusion_files": 19
+  }
+}

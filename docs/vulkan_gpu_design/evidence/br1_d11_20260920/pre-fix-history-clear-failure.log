@@ -1,0 +1,14 @@
+********* Start testing of KisTiledDataManagerTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisTiledDataManagerTest::initTestCase()
+QWARN  : KisTiledDataManagerTest::testPageStoreHistoryClearStagesAbsence(4) WARNING: configured swap location is not writable, using a fall-back location "/Users/apple/.qttest/Library/Application Support/kis_tiled_data_manager_test/swap" -> "/private/var/folders/c9/1npx65jj2c92d11w_125xmsm0000gn/T"
+QWARN  : KisTiledDataManagerTest::testPageStoreHistoryClearStagesAbsence(4) PageStore CPU mutation acquisition failed: "write base is not visible to the transaction"
+QWARN  : KisTiledDataManagerTest::testPageStoreHistoryClearStagesAbsence(4) SAFE ASSERT (krita): "ensurePageStoreWriteAccess()" in file /Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile.h, line 102
+QWARN  : KisTiledDataManagerTest::testPageStoreHistoryClearStagesAbsence(4) SAFE ASSERT (krita): "false" in file /Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc, line 1120
+FAIL!  : KisTiledDataManagerTest::testPageStoreHistoryClearStagesAbsence(4) Compared values are not the same
+   Actual   (dm.extent())        : QRect(0,0 0x0) (bottomright -1,-1)
+   Expected (QRect(0, 0, 64, 64)): QRect(0,0 64x64) (bottomright 63,63)
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp(737)]
+PASS   : KisTiledDataManagerTest::cleanupTestCase()
+Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 4ms
+********* Finished testing of KisTiledDataManagerTest *********

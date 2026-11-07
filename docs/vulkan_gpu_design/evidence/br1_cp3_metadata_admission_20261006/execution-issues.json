@@ -1,0 +1,16 @@
+{
+  "product_regressions": [],
+  "analysis_repair": "analysis-repair.json",
+  "issues": [
+    {
+      "type": "analysis-only",
+      "failure": "analyze_cpu expected zero main samples outside inner loop",
+      "resolution": "Keep three outer testSharedBaseline samples in totals and diagnostics; report product attribution for actual inner-loop samples. Same four raw profiles; no benchmark reruns or sample-size changes."
+    },
+    {
+      "type": "skill-validation-environment",
+      "failure": "System Python lacked PyYAML",
+      "resolution": "Existing workspace .venv Python successfully ran skill-creator quick_validate; no dependency installation."
+    }
+  ]
+}

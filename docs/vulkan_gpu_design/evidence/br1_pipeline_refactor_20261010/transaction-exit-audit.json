@@ -1,0 +1,135 @@
+{
+  "base": "16a4ff59eb01e87dc435afb81a305413d32223bb",
+  "commit": "cb942b6eff6d2afe19f87311e1febf2ccb98c655",
+  "source_diff_sha256": "1009f4fc13ef77229790e09331876e95c62355c2befd7048c2557794fcc7847b",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "kis_tiled_data_manager_test": [
+        1817,
+        0,
+        0
+      ],
+      "KisPageStoreReferenceTest": [
+        1019,
+        0,
+        0
+      ],
+      "KisPageStoreCpuMutationTest": [
+        1739,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ],
+      "kis_lockless_stack_test": [
+        31,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "kis_tiled_data_manager_test": [
+        1817,
+        0,
+        0
+      ],
+      "KisPageStoreReferenceTest": [
+        1019,
+        0,
+        0
+      ],
+      "KisPageStoreCpuMutationTest": [
+        1739,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ],
+      "kis_lockless_stack_test": [
+        31,
+        0,
+        0
+      ]
+    }
+  },
+  "identities": {
+    "arm64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_lockless_stack_test": "069a54db49149c5d042719318ea1d41d2556ef32f163ec9d8e1a36c99da3999f",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "c058ae111343c139c2b733ff2e9edf93a37e230a96a8a2d31e320789659e3705",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "8bc4e448fa9b347182a0f4b11fa17c0546d1e8ecfe3b2e04282e6e75cc32ca58",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "700eda6302dd767fc7809fbaf0745f3ea53edf0f37329873f3e39e3ddc70d451",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "0ae886fd2c2f6d2096b918f5f57dc0cacd98c85ed6f8c85893d6b9ef2cba4310",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "218f892c13975520603c4737dffd83328b1785d34eac499007efeafe21244a68",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6fa9cc808e5533b4b5358f603a161bfdc6c30b61e7c89fa967a069a1240428e0"
+      }
+    },
+    "x86_64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "700eda6302dd767fc7809fbaf0745f3ea53edf0f37329873f3e39e3ddc70d451",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "8bc4e448fa9b347182a0f4b11fa17c0546d1e8ecfe3b2e04282e6e75cc32ca58",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "c058ae111343c139c2b733ff2e9edf93a37e230a96a8a2d31e320789659e3705",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "0ae886fd2c2f6d2096b918f5f57dc0cacd98c85ed6f8c85893d6b9ef2cba4310",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_lockless_stack_test": "069a54db49149c5d042719318ea1d41d2556ef32f163ec9d8e1a36c99da3999f",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6fa9cc808e5533b4b5358f603a161bfdc6c30b61e7c89fa967a069a1240428e0",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "218f892c13975520603c4737dffd83328b1785d34eac499007efeafe21244a68"
+      }
+    }
+  },
+  "passed_total": 10450,
+  "old_symbols_absent": "collectEpochBookkeepingLocked",
+  "public_semantics": null,
+  "installation_allocation_probe": null,
+  "numstat": [
+    "11\t11\tbuild-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "1\t1\tbuild-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+    "7800\t7368\tbuild-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "6\t5\tlibs/image/pagestore/KisPageHistoryCollector.cpp",
+    "4\t1\tlibs/image/pagestore/KisPageHistoryCollector_p.h",
+    "9\t5\tlibs/image/pagestore/KisPagePublicationCoordinator.cpp",
+    "3\t5\tlibs/image/pagestore/KisPageReadCoordinator.cpp",
+    "100\t0\tlibs/image/tests/KisPageStoreCpuMutationTest.cpp"
+  ],
+  "source_hashes": {
+    "build-tools/ci-scripts/pagestore-audit/baseline-source.json": "e8eba12091490d25bc4dff54c368dd1791a90e0bb5c6fd435f6fc10c92169a6c",
+    "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json": "4c5eb29c4fb4a51cb33e42cb63cc8b9f92eb3a00565d41542f959ce7a8829d02",
+    "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json": "724124782f874ae161b58b36d9c449fbfd8c4113d6782b2d1c52c58aea46d687",
+    "libs/image/pagestore/KisPageHistoryCollector.cpp": "f5f132e8a6d70e92bc5d989e64bd959c3c3add5fd58ee03e116c5eae7be46c8f",
+    "libs/image/pagestore/KisPageHistoryCollector_p.h": "f41c6bf4e0df5c6ef0a2a8f8375ae77b56aa21598f1b47811eedd64d708963dc",
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp": "5d535dbf6814dcbd48b7f8d111710ffa1622bd0004d3efea46b1adf259e7c648",
+    "libs/image/pagestore/KisPageReadCoordinator.cpp": "3e09e557e5189ec3cd75a7f0a17d34f51ca7d602ec47a69164f283486ede992a",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "62a467e3523b8d1fa948fb8168c10f91106aee30688bef48d8caa94917e4600b"
+  },
+  "audit_arguments": {
+    "package": "transaction-exit",
+    "base": "16a4ff59eb01e87dc435afb81a305413d32223bb",
+    "commit": "cb942b6eff6d2afe19f87311e1febf2ccb98c655",
+    "batch": "transaction-exit-full-r0",
+    "absent": "collectEpochBookkeepingLocked",
+    "public_semantics": null,
+    "allocation_probe": null,
+    "installation_frees": "forbid"
+  },
+  "limits": "Safety and source audit only; no time benefit claim."
+}

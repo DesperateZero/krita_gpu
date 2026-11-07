@@ -1,0 +1,232 @@
+{
+  "scope": "outer evidence only. Tracked HEAD tree and local nonignored paths. Logical bytes. Content matches preserve path/mode separately. Remote availability and necessity not implied.",
+  "head": "79696014367c886c691914bb3d8fc0de95b320ee",
+  "local_thin_pack_simulation": {
+    "head": "79696014367c886c691914bb3d8fc0de95b320ee",
+    "advertised_personal_refs": {
+      "refs/heads/main": "4af8c0a344c34e21b0dcbee77cd5759cb372ac80",
+      "refs/heads/refactor/brush-s2-predefined-sanity": "3b940b4f885f673c8e491a02ef561b829f92fc98"
+    },
+    "simulated_thin_pack_bytes": 2706956387,
+    "scope": "local pack against advertised tips, no push; transport framing and server negotiation excluded",
+    "simulated_fast_forward_batches": [
+      {
+        "to": "d277af01c8e61699b7393da08dc9ac5ba8e8cf18",
+        "bytes": 1421579604
+      },
+      {
+        "to": "79696014367c886c691914bb3d8fc0de95b320ee",
+        "bytes": 1285952074
+      }
+    ]
+  },
+  "roles_by_git_status": {
+    "HEAD": {
+      "document": [
+        740,
+        8000046
+      ],
+      "log_or_trace": [
+        34772,
+        2165517715
+      ],
+      "structured_data": [
+        8809,
+        866167564
+      ],
+      "driver_or_tool": [
+        2876,
+        15195740
+      ],
+      "experimental_diff": [
+        497,
+        115352069
+      ],
+      "source_or_fixture": [
+        2689,
+        60688308
+      ],
+      "packed_evidence": [
+        242,
+        2454278089
+      ],
+      "other_review": [
+        1760,
+        140828422
+      ],
+      "build_output": [
+        9,
+        1608329
+      ]
+    },
+    "untracked": {
+      "other_review": [
+        6286,
+        1933167808
+      ],
+      "document": [
+        259,
+        5654564
+      ],
+      "log_or_trace": [
+        61590,
+        10741466939
+      ],
+      "structured_data": [
+        44283,
+        24134532927
+      ],
+      "experimental_diff": [
+        1489,
+        1045326448
+      ],
+      "driver_or_tool": [
+        960,
+        5613681
+      ],
+      "build_output": [
+        6151,
+        31456255609
+      ],
+      "source_or_fixture": [
+        21903,
+        564949841
+      ],
+      "packed_evidence": [
+        128,
+        39517046
+      ]
+    }
+  },
+  "untracked_routes_counts_and_bytes": {
+    "distinct_content_pending_review": [
+      15129,
+      46340191885
+    ],
+    "content_in_tracked_blob": [
+      24824,
+      167139367
+    ],
+    "local_same_content": [
+      5572,
+      3223129037
+    ],
+    "content_in_tracked_tar": [
+      97106,
+      20115075841
+    ],
+    "content_in_other_reachable_git_blob": [
+      418,
+      80948733
+    ]
+  },
+  "distinct_pending_counts_and_bytes_by_one_representative_role": {
+    "other_review": [
+      1911,
+      898340478
+    ],
+    "document": [
+      97,
+      679961
+    ],
+    "log_or_trace": [
+      5015,
+      1380052237
+    ],
+    "structured_data": [
+      3033,
+      20322538736
+    ],
+    "experimental_diff": [
+      263,
+      681305129
+    ],
+    "driver_or_tool": [
+      365,
+      2054761
+    ],
+    "build_output": [
+      4087,
+      23027941405
+    ],
+    "source_or_fixture": [
+      259,
+      26007686
+    ],
+    "packed_evidence": [
+      99,
+      1271492
+    ]
+  },
+  "tracked_archives": {
+    "sets_ok": 236,
+    "sets_failed": 0,
+    "parts": 242,
+    "packed_bytes": 2454278089,
+    "regular_members": 112324
+  },
+  "distinct_payload_tar_zstd_level_3": {
+    "experimental-sources": {
+      "unique_files": 984,
+      "logical_bytes": 710047537,
+      "zstd_bytes": 62322431,
+      "sha256": "1fcbd79d6216640e843a1699a211a818d3f6803b1ee89571f0c49ad5fcc2bf72",
+      "saved_locally": true
+    },
+    "build-output": {
+      "unique_files": 4087,
+      "logical_bytes": 23027941405,
+      "zstd_bytes": 5159545755,
+      "sha256": "15f6ebe29f2aa19f26446c065369ec349c5dccb74c5a9f5b910d3256482d53a0",
+      "saved_locally": false
+    },
+    "measurements-and-other": {
+      "unique_files": 10058,
+      "logical_bytes": 22602202943,
+      "zstd_bytes": 2167052824,
+      "sha256": "93714b4e386724fa8f91ef46eca1046582d859c859473086202f6691b4bc7ffe",
+      "saved_locally": false
+    }
+  },
+  "experimental_source_readback": {
+    "verified_blob_count": 984,
+    "paths": 1246,
+    "path_map": "experimental-sources-paths.jsonl.gz",
+    "map_sha256": "2924cf16ea8d45f9306797c0e3315a092667cd865f3bf07ea313d7d4317c7277"
+  },
+  "pending_remote": "All archive and bundle availability claims here are local checks. Persist and verify delivery receipts before removing any source.",
+  "dedup_order": [
+    "same content in a tracked evidence blob",
+    "same content in a regular member of a verified tracked tar set",
+    "same Git blob reachable from a named local branch tip in the outer or inner repo",
+    "other local path with same file type, SHA-256 and size",
+    "one representative to review per remaining content"
+  ],
+  "recovery_index": {
+    "DISPOSITION.jsonl.gz": {
+      "bytes": 12009088,
+      "sha256": "40cab7a3a60ebab40c6443062aacc4c07f5c78e2e4b662556c2c7b81f9c65a3a",
+      "availability": "local, pending durable transfer"
+    },
+    "history-blobs.json": {
+      "bytes": 34419,
+      "sha256": "04493b77653612fb2c983a3f6ea6f3ecee04e33e78047c1ab250893ed5305465",
+      "availability": "local, pending durable transfer"
+    },
+    "archive-checks.json": {
+      "bytes": 129726,
+      "sha256": "02be333a63ec5d8262722e0c6ff5f5433fd6e817d88a5dfba4d4f3bf9fa97c13",
+      "availability": "local, pending durable transfer"
+    },
+    "experimental-sources-paths.jsonl.gz": {
+      "bytes": 53519,
+      "sha256": "2924cf16ea8d45f9306797c0e3315a092667cd865f3bf07ea313d7d4317c7277",
+      "availability": "local, pending durable transfer"
+    },
+    "experimental-sources.tar.zst": {
+      "bytes": 62322431,
+      "sha256": "1fcbd79d6216640e843a1699a211a818d3f6803b1ee89571f0c49ad5fcc2bf72",
+      "availability": "local, pending durable transfer"
+    }
+  }
+}

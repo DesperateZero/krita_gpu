@@ -83,6 +83,17 @@ OperationId 至少覆盖：
 
 一个format支持display不等于支持GPU brush写入。
 
+semantic capability 只回答“能否正确执行”，不等于“应否自动选择”。后端另以 operation variant、SurfaceFormat、
+page-count/work-size、device/driver/power state 和 profile version 查询性能资格：
+
+```text
+PerformanceQualification = AutoPreferred | ForcedDiagnosticOnly | StaleOrUnknown
+CpuEta / AcceleratorEta / confidence / risk margin
+```
+
+它服从 39 的同机成熟 CPU product baseline。`ForcedDiagnosticOnly` 仍可在测试中验证正确性，但产品 Auto 必须前置 CPU
+route；不能把 correctness `Supported` 展示成该 workload 已获得 GPU 加速。
+
 ## 4. Format 支持矩阵
 
 每个backend build生成可查询矩阵：
@@ -185,6 +196,7 @@ Operation variants
 Fallback route
 Golden/validation/stress test ids
 Recovery support
+PerformanceProfileId / qualification（不进入 semantic identity）
 ```
 
 无对应test id的capability在CI中不能进入allow list。
@@ -194,8 +206,9 @@ Recovery support
 operation 开始前：
 
 1. 从 EvalGraphIR 解析 operation/version、value types、target/input formats 和完整语义。
-2. 查询document/backend capability snapshot。
-3. 选择GPU、CPU PageStore、成熟display backend或reject。
+2. 查询document/backend correctness capability snapshot。
+3. 查询当前 workload/device-state 的 performance qualification；只有 `AutoPreferred` 才选择 GPU/UMA，否则选择 CPU
+   PageStore、成熟 display backend 或 reject。
 4. 冻结到operation/stroke/view epoch。
 5. 不在执行一半因format/resource miss切换。
 

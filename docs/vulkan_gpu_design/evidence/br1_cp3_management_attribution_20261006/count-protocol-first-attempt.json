@@ -1,0 +1,14 @@
+{
+  "question": "Actual per-operation foreground control-allocation/budget-settlement cardinality, K1 vs K16",
+  "product": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "diagnostic": "One copied budget TU with thread-local entry counters; original helper workload unchanged; no per-call clocks, heap logs or main product edits",
+  "arch": "arm64",
+  "rows": [[1024,1,4,1],[1024,16,4,1]],
+  "blocks": 2,
+  "order": [["control","counts"],["counts","control"]],
+  "duration_ms": 250,
+  "counter_fields": ["fits_locked","control_allocate","storage_owner_allocate","storage_owner_deallocate","storage_owner_deref","local_prepare","parent_prepare","local_settle","parent_settle","raw_control_free","local_release_live","parent_release_live"],
+  "scope": "Reset and snapshot on calling thread outside first-write and steady-write timers, independently of setup, full validation and teardown; background counters excluded",
+  "stopping": "Exactly 8 sequential processes; stop on correctness, loaded-library, bounded exit or identity failure; retain every attempt",
+  "qualification": "Counts diagnostic only. ON/OFF pair assesses perturbation descriptively, not a new gate sample. Counter calls are not exclusive elapsed time."
+}

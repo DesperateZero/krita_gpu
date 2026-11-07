@@ -1,0 +1,84 @@
+[
+  {
+    "test": "testPageStorePackedReadCapturesOneView",
+    "retired_implementation_assertions": [
+      "const auto before = store->sessionStats();",
+      "const auto views = store->readScopeStatistics().capturedReadViewsCreated;",
+      "QCOMPARE(store->readScopeStatistics().capturedReadViewsCreated, views + 1);",
+      "QCOMPARE(store->sessionStats().readRequestsCreated, before.readRequestsCreated);",
+      "QCOMPARE(store->sessionStats().registeredPages, before.registeredPages);",
+      "QCOMPARE(store->sessionStats().defaultMaterializationRequests, before.defaultMaterializationRequests);",
+      "QVERIFY(!store->sessionStats().hasOutstandingCapabilities());"
+    ],
+    "preserved": "Original pixel, fixed visibility, retention, owner/mode and capability assertions; default NativeResult direct consumer",
+    "state": "ported_pending_execution"
+  },
+  {
+    "test": "testPageStoreIteratorFixedView",
+    "retired_implementation_assertions": [
+      "const auto views = store->readScopeStatistics().capturedReadViewsCreated;",
+      "const auto requests = store->sessionStats().readRequestsCreated;",
+      "QCOMPARE(store->readScopeStatistics().capturedReadViewsCreated, views + (terminal ? 2 : 1));",
+      "QCOMPARE(store->sessionStats().readRequestsCreated, requests);",
+      "QVERIFY(!store->sessionStats().hasOutstandingCapabilities());"
+    ],
+    "preserved": "Original pixel, fixed visibility, retention, owner/mode and capability assertions; default NativeResult direct consumer",
+    "state": "ported_pending_execution"
+  },
+  {
+    "test": "testPageStoreIteratorLiveWriteCompatibility",
+    "retired_implementation_assertions": [
+      "const auto sealed = store->mutationStatistics().pagesSealed;",
+      "QCOMPARE(store->mutationStatistics().pagesSealed, sealed);"
+    ],
+    "preserved": "Original pixel, fixed visibility, retention, owner/mode and capability assertions; default NativeResult direct consumer",
+    "state": "ported_pending_execution"
+  },
+  {
+    "test": "testPageStoreIteratorOtherThreadReadsSealedView",
+    "retired_implementation_assertions": [],
+    "preserved": "Original pixel, fixed visibility, retention, owner/mode and capability assertions; default NativeResult direct consumer",
+    "state": "ported_pending_execution"
+  },
+  {
+    "test": "testPageStoreReadCursorBounded",
+    "retired_implementation_assertions": [
+      "const auto initial = store->sessionStats();",
+      "const auto views = store->readScopeStatistics().capturedReadViewsCreated;",
+      "QCOMPARE(store->readScopeStatistics().capturedReadViewsCreated, views + 1);",
+      "QCOMPARE(store->sessionStats().registeredPages, initial.registeredPages);",
+      "QCOMPARE(store->sessionStats().readRequestsCreated, initial.readRequestsCreated);",
+      "QCOMPARE(store->sessionStats().defaultMaterializationRequests, initial.defaultMaterializationRequests);",
+      "QVERIFY(!store->sessionStats().hasOutstandingCapabilities());"
+    ],
+    "preserved": "Original pixel, fixed visibility, retention, owner/mode and capability assertions; default NativeResult direct consumer",
+    "state": "ported_pending_execution"
+  },
+  {
+    "test": "testPageStoreWrappedIteratorFixedView",
+    "retired_implementation_assertions": [
+      "const auto views = store->readScopeStatistics().capturedReadViewsCreated;",
+      "const auto requests = store->sessionStats().readRequestsCreated;",
+      "QCOMPARE(store->readScopeStatistics().capturedReadViewsCreated, views + 1);",
+      "QCOMPARE(store->sessionStats().readRequestsCreated, requests);",
+      "QVERIFY(!store->sessionStats().hasOutstandingCapabilities());"
+    ],
+    "preserved": "Original pixel, fixed visibility, retention, owner/mode and capability assertions; default NativeResult direct consumer",
+    "state": "ported_pending_execution"
+  },
+  {
+    "test": "testPageStoreRepeatIteratorFixedView",
+    "retired_implementation_assertions": [
+      "const auto views = store->readScopeStatistics().capturedReadViewsCreated;",
+      "const auto requests = store->sessionStats().readRequestsCreated;",
+      "QCOMPARE(store->readScopeStatistics().capturedReadViewsCreated, views + 1);",
+      "const auto beforeFill = store->readScopeStatistics().capturedReadViewsCreated;",
+      "QCOMPARE(store->readScopeStatistics().capturedReadViewsCreated, beforeFill + 1);",
+      "QCOMPARE(store->readScopeStatistics().capturedReadViewsCreated, beforeFill + 1);",
+      "QCOMPARE(store->sessionStats().readRequestsCreated, requests);",
+      "QVERIFY(!store->sessionStats().hasOutstandingCapabilities());"
+    ],
+    "preserved": "Original pixel, fixed visibility, retention, owner/mode and capability assertions; default NativeResult direct consumer",
+    "state": "ported_pending_execution"
+  }
+]

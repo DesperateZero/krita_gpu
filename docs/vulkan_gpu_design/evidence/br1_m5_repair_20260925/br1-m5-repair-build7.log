@@ -1,0 +1,114 @@
+ninja: Entering directory `krita/_build-br0-cpu'
+[1/4] Automatic MOC for target kis_tiled_data_manager_test
+[2/3] Building CXX object libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:630:13: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  630 |             QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:645:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  645 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:648:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  648 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(512,
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+3 warnings generated.
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:630:13: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  630 |             QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:645:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  645 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:648:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  648 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(512,
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+3 warnings generated.
+[3/3] Linking CXX executable bin/kis_tiled_data_manager_test

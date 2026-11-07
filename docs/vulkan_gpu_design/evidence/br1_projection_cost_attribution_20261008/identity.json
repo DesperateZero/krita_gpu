@@ -1,0 +1,33 @@
+{
+  "outer_parent": "3e97333c79c22dbc5306233c288dc693fe0add69",
+  "sources": {
+    "current": {
+      "head": "fb57b8b69be74a38602fb2f0cd1c6e4374b843e3",
+      "tracked_status": ""
+    },
+    "upstream": {
+      "head": "9a24ae0d8c070884fb013594191002e1a1b39a19",
+      "tracked_status": "M libs/ui/tests/CMakeLists.txt"
+    }
+  },
+  "product_tree": "c359cd98aacd2bb1d1882f1c78c1ef62209c4735",
+  "production_changes": 0,
+  "product_test_changes": 0,
+  "purpose": "bounded diagnostic variants only; no production candidate or gain",
+  "runtime_paths": 128,
+  "prerequisites": {
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/MANIFEST.json": "db15349d9b9560b9a9f6f4f4d46869ff0b20985af842397c49479b992d010d12",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fixture-build-identity.json": "450efb009aacd3b6153ae305e885ff5d8aa65d290ebb64abc9cd4e0170f2d9ac",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/payload-build-identity.json": "4dda25598627d6b7292fdfc901da2574e22ab0e10f83625838f08b1b63a75f01",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/borrowed-object-identities.json": "052ef35e00b920dfc382a58824d8a964196db499e89838a8febbd8afc0e18846",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/raw-evidence.tar.xz": "1b2bbd73de63e3ebdce2556a5dd588eeb4159e839ecca4668ebb20669f941e57"
+  },
+  "initial_plan": "PLAN-initial.md verifies the original build-identity PLAN.md digest; PLAN.md additionally records the bounded followup",
+  "object_policy": "borrowed object digests retained in build-identity; objects excluded from raw archive; three linked diagnostic libraries included",
+  "method_commands": [
+    "clang++ -std=c++17 -arch arm64 selftest.cpp cost_observer.cpp -o selftest",
+    "BR1_COST_MODE={0,2,3} ./selftest (three independent invocations)",
+    "clang++ -std=c++17 -arch arm64 -I . selftest_base.cpp detail-current/cost_observer.cpp -o selftest-base",
+    "BR1_COST_MODE=3 ./selftest-base"
+  ]
+}

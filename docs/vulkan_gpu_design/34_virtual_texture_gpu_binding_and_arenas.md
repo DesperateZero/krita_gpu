@@ -1,5 +1,7 @@
 # 虚拟纹理 GPU 页绑定、Arena 与物理寻址方案
 
+> 2026-11-04 新版后端扩展设计：[105完整规范](evidence/br1_pagestore_equivalent_pipeline_20261010/v3-minimum-write-rewrite-r0/UNIFIED_BACKEND_DESIGN.md)。逻辑64×64、buffer slab/direct-local binding基线不变；物理slot/stride/收费和真实GPU输入接入新结果协议。 当前只完成设计，CPU产品0fd96保持；不据此声称GPU/完整能力已实装。旧实现名称不能覆盖105的目标责任，未迁消费者在原矩阵追踪。
+
 > 本文定义 GPU replica 的物理布局和 shader 绑定 ABI。状态发布服从
 > [33_virtual_texture_pagestore_state_machine.md](33_virtual_texture_pagestore_state_machine.md)，queue/ticket 服从
 > [27_p0_submission_threading_zero_blocking.md](27_p0_submission_threading_zero_blocking.md)。

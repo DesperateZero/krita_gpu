@@ -1,0 +1,110 @@
+{
+  "scope": "Actual public Fresh N1024/K16 steady loop; diagnostics separate from performance",
+  "exclusive_product_frames_all_threads": [
+    {
+      "symbol": "KisBackingBudgetController::fitsLocked(KisBackingBudgetDelta const&, std::array<unsigned long long, 7ul> const&, unsigned long long, bool, unsigned long long) const",
+      "exclusive_sample_count": 126
+    },
+    {
+      "symbol": "KisMutationStorageOwner::deref()",
+      "exclusive_sample_count": 28
+    },
+    {
+      "symbol": "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)",
+      "exclusive_sample_count": 25
+    },
+    {
+      "symbol": "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_0::operator()(KisBackingBudgetController*, unsigned long long) const",
+      "exclusive_sample_count": 24
+    },
+    {
+      "symbol": "KisPageOwnerLedger::prepareBackingChangesImpl(std::vector<KisBackingClassChange, KisMutationStorageAllocator<KisBackingClassChange>>, KisPageTransitionEffect const*, long long, QString*)",
+      "exclusive_sample_count": 22
+    },
+    {
+      "symbol": "<deduplicated_symbol>",
+      "exclusive_sample_count": 21
+    },
+    {
+      "symbol": "KisBackingBudgetController::releaseSharedNonPayloadLive(unsigned long long, KisPageAccessDomain, unsigned long long)",
+      "exclusive_sample_count": 18
+    },
+    {
+      "symbol": "KisPageOwnerLedger::Private::storePreparedChange(std::vector<KisBackingClassChange, KisMutationStorageAllocator<KisBackingClassChange>>, KisBackingBudgetReservation, KisReplicaHandle const&, std::vector<(anonymous namespace)::PreparedRetirementCredit, KisMutationStorageAllocator<(anonymous namespace)::PreparedRetirementCredit>>)",
+      "exclusive_sample_count": 10
+    },
+    {
+      "symbol": "KisPageOwnerLedger::releaseRetiredBacking(KisReplicaHandle const&)",
+      "exclusive_sample_count": 10
+    },
+    {
+      "symbol": "KisCpuResidentAllocationIndex<Tiles3Allocation>::binding(KisReplicaHandle const&, KisCpuResidentReadStatus*)",
+      "exclusive_sample_count": 9
+    },
+    {
+      "symbol": "KisReplicaHandle::isValid() const",
+      "exclusive_sample_count": 9
+    },
+    {
+      "symbol": "kisPageStorageAllocationBytes(unsigned long, unsigned long)",
+      "exclusive_sample_count": 9
+    },
+    {
+      "symbol": "KisPageOwnerLedger::Private::applyBackingChange(KisBackingClassChange const&, KisBackingBudgetDelta*)",
+      "exclusive_sample_count": 8
+    },
+    {
+      "symbol": "(anonymous namespace)::ShardRecordStore::snapshot<KisPageWorkingVersion>(KisPageVersion const&, KisPageWorkingVersion*) const",
+      "exclusive_sample_count": 7
+    },
+    {
+      "symbol": "KisTiles3PageReplicaProvider::Private::ResidencyObserver::observation(KisTileData*, KisPageAccessDomain*, unsigned long long*) const",
+      "exclusive_sample_count": 7
+    },
+    {
+      "symbol": "operator==(KisReplicaHandle const&, KisReplicaHandle const&)",
+      "exclusive_sample_count": 7
+    },
+    {
+      "symbol": "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)",
+      "exclusive_sample_count": 6
+    },
+    {
+      "symbol": "KisBackingBudgetController::releaseLive(KisBackingBudgetClass, KisPageAccessDomain, unsigned long long)",
+      "exclusive_sample_count": 6
+    },
+    {
+      "symbol": "KisImageEpochRootSnapshot::resolve(KisPageKey const&, KisPageVersion*) const",
+      "exclusive_sample_count": 6
+    },
+    {
+      "symbol": "KisTiles3PageReplicaProvider::retire(KisPageOperationId, KisReplicaHandle const&, KisCompletionTicket const&)",
+      "exclusive_sample_count": 6
+    },
+    {
+      "symbol": "CompletionSourceState::complete(unsigned long long, KisCompletionStatus, CompletionInterval*&)",
+      "exclusive_sample_count": 5
+    },
+    {
+      "symbol": "CompletionSourceState::status(unsigned long long) const",
+      "exclusive_sample_count": 5
+    },
+    {
+      "symbol": "KisMutationStorageOwner::allocate(unsigned long, unsigned long)",
+      "exclusive_sample_count": 5
+    },
+    {
+      "symbol": "KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::shared_ptr<KisPageMutationExecution::Private> const&, bool)",
+      "exclusive_sample_count": 5
+    },
+    {
+      "symbol": "boost::container::copy_assign_range_alloc_n<boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void>, void>, boost::move_iterator<KisPageWorkingReplica*>, KisPageWorkingReplica*>(boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void>, void>&, boost::move_iterator<KisPageWorkingReplica*>, unsigned long, KisPageWorkingReplica*, unsigned long)",
+      "exclusive_sample_count": 5
+    },
+    {
+      "symbol": "boost::container::vector<KisPageWorkingReplica, boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void>, void>, void>::assign<boost::move_iterator<KisPageWorkingReplica*>>(boost::move_iterator<KisPageWorkingReplica*>, boost::move_iterator<KisPageWorkingReplica*>, boost::move_detail::disable_if_or<void, boost::move_detail::is_same<boost::move_detail::integral_constant<unsigned int, 1u>, boost::move_detail::integral_constant<unsigned int, 0u>>, boost::move_detail::is_convertible<boost::move_iterator<KisPageWorkingReplica*>, unsigned long>, boost::container::dtl::is_input_iterator<boost::move_iterator<KisPageWorkingReplica*>, has_iterator_category<boost::move_iterator<KisPageWorkingReplica*>>::value>, boost::move_detail::bool_<false>>::type*)",
+      "exclusive_sample_count": 5
+    }
+  ],
+  "qualification": "All-thread exclusive localization only; background waits and nested inclusive frames are not used for causal percentages or projected speedup"
+}

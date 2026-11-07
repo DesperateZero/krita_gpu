@@ -1,0 +1,19 @@
+********* Start testing of KisPageStorePhysicalClaimTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisPageStorePhysicalClaimTest::initTestCase()
+QWARN  : KisPageStorePhysicalClaimTest::sourceConsumersRespectWriter(generic) WARNING: configured swap location is not writable, using a fall-back location "/Users/apple/Library/Application Support/KisPageStorePhysicalClaimTest/swap" -> "/private/var/folders/c9/1npx65jj2c92d11w_125xmsm0000gn/T"
+PASS   : KisPageStorePhysicalClaimTest::sourceConsumersRespectWriter(generic)
+PASS   : KisPageStorePhysicalClaimTest::sourceConsumersRespectWriter(native)
+PASS   : KisPageStorePhysicalClaimTest::sourceConsumersRespectWriter(native-preclone)
+PASS   : KisPageStorePhysicalClaimTest::sourceConsumersRespectWriter(parked)
+PASS   : KisPageStorePhysicalClaimTest::sourceConsumersRespectWriter(parked-preclone)
+PASS   : KisPageStorePhysicalClaimTest::parkedWriterReservation(1)
+PASS   : KisPageStorePhysicalClaimTest::parkedWriterReservation(4)
+PASS   : KisPageStorePhysicalClaimTest::parkedWriterReservation(8)
+PASS   : KisPageStorePhysicalClaimTest::parkedWriterReservation(16)
+PASS   : KisPageStorePhysicalClaimTest::revokedWriterReservation(parked)
+PASS   : KisPageStorePhysicalClaimTest::revokedWriterReservation(pinned)
+PASS   : KisPageStorePhysicalClaimTest::parkedWriterConcurrentConsumers()
+PASS   : KisPageStorePhysicalClaimTest::cleanupTestCase()
+Totals: 14 passed, 0 failed, 0 skipped, 0 blacklisted, 5ms
+********* Finished testing of KisPageStorePhysicalClaimTest *********

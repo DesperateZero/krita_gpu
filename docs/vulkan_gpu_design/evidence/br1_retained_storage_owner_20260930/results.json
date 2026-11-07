@@ -1,0 +1,96 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 4.511,
+    "totals": [
+      "Totals: 653 passed, 0 failed, 0 skipped, 0 blacklisted, 581ms"
+    ],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 6.516,
+    "totals": [
+      "Totals: 1246 passed, 0 failed, 0 skipped, 0 blacklisted, 3287ms"
+    ],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 12.912,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 108ms"
+    ],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.517,
+    "totals": [
+      "Totals: 653 passed, 0 failed, 0 skipped, 0 blacklisted, 784ms"
+    ],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.859,
+    "totals": [
+      "Totals: 1246 passed, 0 failed, 0 skipped, 0 blacklisted, 3621ms"
+    ],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 13.436,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 244ms"
+    ],
+    "passed": true
+  }
+]

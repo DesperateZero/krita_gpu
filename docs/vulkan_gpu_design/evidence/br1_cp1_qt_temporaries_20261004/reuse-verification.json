@@ -1,0 +1,37 @@
+{
+  "verified": true,
+  "rows": [
+    {
+      "mode": "normal",
+      "parent_identity_sha256": "861464ed2b9ae33cbdf8d4bcdf8329bf6d8c3f9f354d83ad5b8947ccb5083990",
+      "current_identity_sha256": "a6cfaec080b11430172dfb2f87f83f5cfa39bf5f8e5147981848e05c369e5c5b",
+      "unchanged_link_inputs_verified": 407,
+      "copied_binaries_verified": {
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/KisPageStoreFoundationTest": "9cb96d7d30e3e19e70871d21fae95d01e7de02450b0a63302773ffec51f7dcbc",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/FreehandStrokeTest": "2d87e2756776f8a2fe64bcdc57f3c05b88c23ec8bbab1bd0e85925e51df4b033",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/KisCompletionRegistryTest": "70ad77a06db6c055e8dbeb73f1ee2f17b0c55a29f1679457cd94300465684e28",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/KisPageStoreReadBaselineTest": "93917c46c0867e9595869a0f53f15e1762a8a556b735ceddb52c41b162002460",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/KisPageStorePhysicalClaimTest": "f691ff7e03fa097576ed9d1be5cfd8f3d3d086a4e7b0ae8640cc2959cf357fbd",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/KisPageStoreReferenceTest": "5f254d928b06182134d9c12a074555147a72dc9fc8865ae727eeb142678989c8",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/KisPageStoreResidentReadTest": "f27f1b561f94eacfecd48ba4fb5f73229d7a61398bce764560ef1c90cb116994",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/normal/bin/KisPageStoreCpuMutationTest": "5b244f24febec7571108e47ece7f432ad15a923b0b49b286c7c1a811eca58f3a"
+      }
+    },
+    {
+      "mode": "tsan",
+      "parent_identity_sha256": "dbd304fc95b278625136dab2fd2fb1735a91722ee29cf3161c6030cb71c30eb7",
+      "current_identity_sha256": "677ebc0aba62a631ee1280dedc31787d4a2d4887007fe1c0ac85a1b834dbc794",
+      "unchanged_link_inputs_verified": 398,
+      "copied_binaries_verified": {
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/tsan/bin/KisPageStoreFoundationTest": "faf8c442ceb460471689168e47f3206352445c00651af1b9d8a57e1106a29c04",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/tsan/bin/KisCompletionRegistryTest": "91b4ae0c12bcc64e9fe4afe0ca928e7a521989420ecbf865281416d8024b3930",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/tsan/bin/KisPageStoreReadBaselineTest": "7e5b5af9d5e27f949dbe28f03c0a11f25d6f6ab66e956cbac182ccc6be05d81d",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/tsan/bin/KisPageStorePhysicalClaimTest": "90e31d5c376193de83eb9bc23f9c63ddaf4951ba8ada4df4ca5c9c9dffc72245",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/tsan/bin/KisPageStoreReferenceTest": "8758565e85f645ad248e44516fbe7f49efc2fe58b6d92bc209278471039b05e8",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/tsan/bin/KisPageStoreResidentReadTest": "868ed21d43808fb10703402041b815028cd2fd9e43ce39044e178eb929532549",
+        "/Users/apple/krita_gpu/build/br1-cp1-qt-temporaries-20261004/tsan/bin/KisPageStoreCpuMutationTest": "790ab719640a37b76f3ced0cb1b20df13494cca947404b1d207ab981cbf3b8de"
+      }
+    }
+  ],
+  "scope": "Post-build validation that every inherited actual link input and copied binary exactly matches the recorded parent build, including the pre-build digest of each input."
+}

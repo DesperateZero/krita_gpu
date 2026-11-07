@@ -1,0 +1,34 @@
+{
+  "product": "f0c40a5d195f1c20a0f915faaef18b1f3ee5b575",
+  "document_base": "1be6fd7623c06da12474dc9c6cfa535e46702b4a",
+  "tracked_product_clean": true,
+  "product_changes": 0,
+  "process_counts": {
+    "preflight": 62,
+    "calibration": 640,
+    "hit": 320,
+    "miss": 1280,
+    "fixed-m5-fresh": 320,
+    "fixed-m5-history": 320
+  },
+  "completed_fixture_samples": 161396,
+  "unique_inputs_verified": 3637,
+  "all_expected_processes_exit_zero_reaped_work_image_verified": true,
+  "protocol_frozen_utc": "2026-10-06T10:04:53.128461+00:00",
+  "protocol_sha256": "d8eac1e1f6e42115ceb87ca53514bce88f3fec7692cf42f64f0bba5a498c7b5c",
+  "inherited_source_hashes": 2315,
+  "inherited_runtime_hashes": 163,
+  "qualification": {
+    "same_image_hit": true,
+    "same_image_miss": false,
+    "selection_image_equivalence": false,
+    "M6_complete": false,
+    "remaining": [
+      "Metadata >=25% comparable pre-reconstruction used/reserved/slack denominator is not supplied by these performance samples.",
+      "CP0 complete required inventory/build qualification and real natural producer/trace coverage remain separately audited.",
+      "No GPU performance, M7/M8 or business default qualification."
+    ]
+  },
+  "failures": "All statistical failures retained; one pre-sample fixture compile error retained in execution-issues.json",
+  "archive_policy": "Raw logs, snapshots, commands and hash manifests included; binaries/objects remain local and reproducible from product plus selection-control.patch"
+}

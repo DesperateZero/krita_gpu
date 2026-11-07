@@ -1,0 +1,32 @@
+{
+  "kind": "correctness-only",
+  "started": "2026-09-21T00:02:53.625Z",
+  "runs": [
+    {
+      "binary": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_painter_test",
+      "args": [
+        "testSimpleBlt",
+        "testPageStoreBitBltReadBoundary",
+        "testPageStoreBitBltLiveSource",
+        "testPageStoreBitBltSelfCopy"
+      ],
+      "environment": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+      },
+      "log": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_painter_mutation_20260921/float-diagnostic-painter.log",
+      "exitCode": 8,
+      "signal": null,
+      "name": "kis_painter_test",
+      "totals": [
+        67,
+        8,
+        0,
+        0
+      ],
+      "passed": false
+    }
+  ],
+  "finished": "2026-09-21T00:03:04.499Z"
+}

@@ -4,6 +4,12 @@
 > 旧 Vulkan runtime 在 BR0 就从新树删除，而不是等本文的新 stroke 能显示后再删除。全局唯一顺序见
 > [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md)，全局 P0 边界见
 > [22_p0_vulkan_baseline_reconstruction.md](22_p0_vulkan_baseline_reconstruction.md)。
+>
+> 当前状态：BR0 已结清，BR1 canonical 功能/正确性 cutover 已形成 51 的证据，但 resident CPU production path
+> 以 `BR1-PERF` 重开，见
+> [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)；GPU first-write 同样服从
+> [68](archive/br1_pre_m6_20260925/documents/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md) 的统一 write-plan、条件 backing handoff 与硬预算。本文的
+> GPU stroke 接线仍属于 BR5，不改变 BR1-PERF→BR2→BR6 的 production 顺序。
 
 ## 1. 最终基线定义
 
@@ -40,7 +46,8 @@ GPU stroke 是 PageStore 的 consumer，不拥有 tile identity、COW、swap、q
 Production stroke 接入必须等待：
 
 - **BR0**：旧 runtime、global router、factory wrap、双向 CMake 依赖、旧入口已删除；
-- **BR1**：Krita tiles3/COW/undo/swap 已演进为唯一 canonical PageStore；
+- **BR1**：Krita tiles3/COW/undo/swap 已演进为唯一 canonical PageStore，且 resident CPU/virtual default/persistent
+  epoch root 已通过 52 的结构与 upstream 差分性能门禁；
 - **BR2**：SubmissionCoordinator 独占 submit/bind/present，command/resource retirement 已验证；
 - **BR3**：UMA/dGPU/RAM/SSD replica 与 authority handoff 已通过强制迁移；
 - **BR4**：authoring lowerer、typed EvalGraphIR、EvaluationPlanner task DAG、EvaluationEpoch、Layer lower/upper
@@ -147,6 +154,7 @@ paintop/save/undo/cpu consumers -> kritaimage
 - 定义 Accepted/Sealed/Compiled/Submitted/Executed/Visible/Recoverable 终态；
 - 实现稳定 page/microtile 分桶；
 - 实现 CPU page-batched reference executor；
+- 明确 reference executor 只作像素 oracle；性能基线另取启用 SIMD/线程优化的实际 CPU product path；
 - 建立 sequence accounting、batch partition invariance 和 overlap golden；
 - 定义 journal/residency backpressure，队列满不丢已接受 dab。
 
@@ -237,7 +245,8 @@ codec/kernel 的组合在 begin stroke 前整笔路由 CPU。
 - CPU pointer 与 GPU address 指向同一 physical page；
 - coherent 仍执行 timeline ordering，non-coherent 执行 flush/invalidate；
 - stroke end 不生成画布 download；
-- 稳态 canvas-pixel copy counter 为零。
+- 同一兼容驻留 shared backing 的真实 CPU↔GPU 交接中 payload migration count/bytes 为零，COW/undo/derived copy
+  单列；零迁移不是零同步/总耗时，适用条件与计数覆盖见 39 的 5.7。
 
 ### dGPU
 
@@ -279,7 +288,8 @@ codec/kernel 的组合在 begin stroke 前整笔路由 CPU。
 
 ### 工作
 
-- 第一次写页创建 generation COW before-image；
+- 第一次写页由 PageStore 选择 `HandoffRecoverable`、完全预检的 `HandoffCommitOnly`、`FreshPayload` 或必要的
+  generation COW；undo/cancel 需要旧值时保留 exact before，同 batch 后续写复用 pending；
 - End marker seal journal，commit 依赖最后 publish/recoverability ticket；
 - 现有 `KisMementoManager`/oldData 演进为 generation snapshot reference；
 - undo-before-complete 等待可能 writer 后发布 restore generation；
@@ -304,13 +314,15 @@ codec/kernel 的组合在 begin stroke 前整笔路由 CPU。
 - program identity 包含 semantic、resource、pipeline、format 和 recovery generation；
 - preset 选中时异步 prepare，不在首 dab 上传/编译；
 - begin stroke 前求 manifest、device、format、kernel、golden 的交集；
-- `Supported` 才进入 GPU，其他整笔走同一 PageStore 的 CPU execution；
+- begin stroke 前同时查询 39 的 brush/format/page-count/device-state performance profile；
+- semantic `Supported` 且 `AutoPreferred` 才进入产品 GPU route，其他整笔走同一 PageStore 的 CPU execution；
 - texture/mask/predefined/airbrush/wash/neighbor-read 逐项增加 CPU/GPU golden；
 - resource cache 受统一预算控制，不另建 canvas SSD/cache。
 
 ### 出口
 
 - capability 的每个 `true` 对应 GPU golden 和 undo/save/pressure test；
+- correctness support 与 performance qualification 分开；GPU 劣势/tiny/queue contention 下在首写前 CPU route；
 - epoch 中不切 backend/resource generation；
 - PaintOp 不持 raw backend/canvas pointer；
 - 近似 Wash、未消费 ColorSource/Lightness 不宣称支持；
@@ -382,18 +394,21 @@ GPU stroke 不能自己打开隐藏设置，也不能因 Auto Round golden 通�
 - command/dispatch 粒度是 page/micro-batch，不是 dab；
 - stroke compute 不依赖 swapchain semaphore/image；
 - backpressure 可观察且不冻结 UI。
+- 同时报告 CPU-only、forced accelerator、Auto；Auto median/P95 ≤ CPU-only 1.10×，P99/最长停顿 ≤1.25×。
 
 ### 同步与资源
 
 - coordinator 独占 submit/bind/present；
 - command/descriptor/allocation 按 ticket 退休；
 - UI/input/stroke-end presenter wait count 为零；
-- UMA canvas copy bytes 为零；
+- UMA 同一兼容驻留 shared backing 的真实 CPU↔GPU 交接中 payload migration count/bytes 为零（39 的 5.7）；
+  COW/undo/derived copy 单列，CPU-only 未交接不能授予 UMA Pass；
 - dGPU/SSD authority handoff failure 保留旧 replica。
 
 ### Transaction
 
-- first-write generation COW；
+- first-write 消费 coordinator 生成的 canonical inline plan；有旧值/取消/失败需求时 generation COW，同一未发布段只做一次；
+- GPU/UMA current/history/pending/in-flight/retiring backing 服从 owner ledger 和硬预算，压力时背压或显式失败；
 - undo-before-complete、cancel-after-submit、redo 正确；
 - immutable save epoch 与并发新 stroke 隔离；
 - device loss 对已放行能力可恢复或显式失败。

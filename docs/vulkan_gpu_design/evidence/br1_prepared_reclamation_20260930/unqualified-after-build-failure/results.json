@@ -1,0 +1,106 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 5.302,
+    "totals": [
+      "Totals: 653 passed, 0 failed, 0 skipped, 0 blacklisted, 510ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 7.366,
+    "totals": [
+      "Totals: 1245 passed, 1 failed, 0 skipped, 0 blacklisted, 3270ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::metadataArenaBudgetTracksAllocator() 'f.error.contains(QStringLiteral(\"budget\"))' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 14.224,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 103ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.723,
+    "totals": [
+      "Totals: 653 passed, 0 failed, 0 skipped, 0 blacklisted, 770ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 3.981,
+    "totals": [
+      "Totals: 1245 passed, 1 failed, 0 skipped, 0 blacklisted, 3714ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::metadataArenaBudgetTracksAllocator() 'f.error.contains(QStringLiteral(\"budget\"))' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 13.499,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 246ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

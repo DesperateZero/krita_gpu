@@ -1,0 +1,70 @@
+[
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "control-history-current",
+      "--source",
+      "fresh-history-throughput.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.371317708
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "control-history-m5",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--root",
+      "build/br1-fixed-m5-20261005/source",
+      "--build",
+      "../build"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.363271333
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_control_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "control-history-current",
+      "--source",
+      "fresh-history-throughput.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.4133013340000002
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_control_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "control-history-m5",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--root",
+      "build/br1-fixed-m5-20261005/source",
+      "--build",
+      "../build"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.419856459
+  }
+]

@@ -1,0 +1,14 @@
+********* Start testing of KisPageStoreCpuMutationTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisPageStoreCpuMutationTest::initTestCase()
+QWARN  : KisPageStoreCpuMutationTest::adoptionRemovalRemainsAbsentUntilSeal(reject0-newDefault0) WARNING: configured swap location is not writable, using a fall-back location "/Users/apple/Library/Application Support/KisPageStoreCpuMutationTest/swap" -> "/private/var/folders/c9/1npx65jj2c92d11w_125xmsm0000gn/T"
+PASS   : KisPageStoreCpuMutationTest::adoptionRemovalRemainsAbsentUntilSeal(reject0-newDefault0)
+FAIL!  : KisPageStoreCpuMutationTest::adoptionRemovalRemainsAbsentUntilSeal(reject0-newDefault1) Compared values are not the same
+   Actual   (f.store->adoptSynchronousHostWrite(tx, key(), f.provider->providerId(), f.provider->providerEpoch(), KisPagePriority::Normal, nullptr, &f.error)): 0
+   Expected (!reject)                                                                                                                                         : 1
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp(935)]
+PASS   : KisPageStoreCpuMutationTest::adoptionRemovalRemainsAbsentUntilSeal(reject1-newDefault0)
+PASS   : KisPageStoreCpuMutationTest::adoptionRemovalRemainsAbsentUntilSeal(reject1-newDefault1)
+PASS   : KisPageStoreCpuMutationTest::cleanupTestCase()
+Totals: 5 passed, 1 failed, 0 skipped, 0 blacklisted, 4ms
+********* Finished testing of KisPageStoreCpuMutationTest *********

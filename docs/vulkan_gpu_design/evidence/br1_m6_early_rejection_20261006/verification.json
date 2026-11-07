@@ -1,0 +1,103 @@
+{
+  "frozen_inputs_verified": 24,
+  "candidate_inputs_verified": 2500,
+  "source_parent": "f0c40a5d195f1c20a0f915faaef18b1f3ee5b575",
+  "source_patch_sha256": "88f78d74b0b675af041a8b73cf7a5b1e04ff79ca753fe52cd030a3f9be823923",
+  "current_head": "79e1c8d1eff509e683c120df25861eb21512fb5f",
+  "experiments": {
+    "preflight": {
+      "processes": 92,
+      "raw_fixture_samples": 180,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2500
+    },
+    "mechanism": {
+      "processes": 40,
+      "raw_fixture_samples": 80,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2500
+    },
+    "parent_comparison": {
+      "processes": 1600,
+      "raw_fixture_samples": 115200,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2500
+    },
+    "calibration": {
+      "processes": 1600,
+      "raw_fixture_samples": 217600,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2500
+    },
+    "hit": {
+      "processes": 320,
+      "raw_fixture_samples": 43520,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2500
+    },
+    "miss": {
+      "processes": 1280,
+      "raw_fixture_samples": 174080,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2500
+    },
+    "fixed-m5-fresh": {
+      "processes": 320,
+      "raw_fixture_samples": 0,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2444
+    },
+    "fixed-m5-history": {
+      "processes": 320,
+      "raw_fixture_samples": 0,
+      "all_exited_reaped_work_checked": true,
+      "identity_files": 2448
+    }
+  },
+  "experiment_runtime_processes": 5572,
+  "formal_performance_processes": 5440,
+  "raw_fixture_samples": 550660,
+  "final_qtest_processes": 38,
+  "final_qtest_totals": [
+    11116,
+    0,
+    0
+  ],
+  "final_resource_probe_processes": 6,
+  "parent_negative_control_processes": 6,
+  "expected_failed_assertions": 102,
+  "pre_measurement_repairs": [
+    {
+      "scope": "pre-sample evidence fixture compilation",
+      "failure": "Missing explicit KisPageStoreDiagnostics_p.h include for optional mechanism observer",
+      "log": "validation-prepare/02.log",
+      "preserved_source": "failed-probe-arm64-01/baseline.cpp",
+      "fix": "Add the original diagnostic header; no product change or samples taken",
+      "rerun": "validation-prepare-02, starting from fixture builds"
+    },
+    {
+      "scope": "first full arm64 safety",
+      "failure": "tileReadCacheLifetime terminal0 four bpp rows retried a candidate prepared while a reader was active; early rejection makes that candidate invalid",
+      "log": "safety-matrix-arm64/KisPageStorePhysicalClaimTest.log",
+      "preserved_diff": "pre-fixture-repair/product.patch",
+      "fix": "Document advisory prepare refusal and re-prepare after pin release in the existing test; retain late-arriving reader claim checks",
+      "performance_samples_started": false
+    }
+  ],
+  "qualification": {
+    "mechanism_prediction_met": true,
+    "same_image_hit": true,
+    "same_image_miss": false,
+    "selection_equivalence": false,
+    "protected_fresh": true,
+    "protected_history": true,
+    "M6_complete": false,
+    "remaining": [
+      "Metadata >=25% comparable pre-reconstruction residency denominator",
+      "CP0 full required and applicable build qualification",
+      "Business natural positive trace/distribution, GPU, M7/M8 remain separate"
+    ]
+  },
+  "no_optional_extension": true,
+  "verification_script_sha256": "48688c9a14cbb193efa7d03b83235fc3ebbc6dbcb7f8344989ab6b0c92217996"
+}

@@ -1,0 +1,1295 @@
+[
+  {
+    "record": "profile-00-current",
+    "rows": [
+      {
+        "phase": "Stroke",
+        "actor": "history_collector",
+        "samples": 39,
+        "exclusive_mechanisms": {
+          "provider_ledger_completion": 5,
+          "physical_heap": 7,
+          "metadata": 5,
+          "budget_storage": 5,
+          "retirement": 16,
+          "epoch": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "main",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "other_worker",
+        "samples": 62,
+        "exclusive_mechanisms": {
+          "other": 47,
+          "physical_heap": 15
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "projection",
+        "samples": 299,
+        "exclusive_mechanisms": {
+          "retirement": 4,
+          "provider_ledger_completion": 51,
+          "adapter_manager": 47,
+          "read_binding": 15,
+          "physical_heap": 34,
+          "budget_storage": 38,
+          "metadata": 28,
+          "mutation_publication": 75,
+          "other": 4,
+          "epoch": 3
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 82,
+          "prepareFreshReplica": 54,
+          "fillWithPixel": 34,
+          "sealImpl": 32,
+          "commitLocked": 31,
+          "setupProjection": 85,
+          "compositeWithProjection": 214,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "reclamation_dispatch",
+        "samples": 34,
+        "exclusive_mechanisms": {
+          "retirement": 17,
+          "physical_heap": 7,
+          "budget_storage": 8,
+          "metadata": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "retirement",
+        "samples": 23,
+        "exclusive_mechanisms": {
+          "provider_ledger_completion": 7,
+          "physical_heap": 7,
+          "retirement": 4,
+          "budget_storage": 5
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "stroke",
+        "samples": 626,
+        "exclusive_mechanisms": {
+          "pixel_brush": 230,
+          "provider_ledger_completion": 45,
+          "mutation_publication": 57,
+          "adapter_manager": 152,
+          "budget_storage": 27,
+          "other": 34,
+          "physical_heap": 74,
+          "metadata": 7
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 104,
+          "prepareFreshReplica": 51,
+          "fillWithPixel": 31,
+          "sealImpl": 18,
+          "commitLocked": 4,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 308
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "history_collector",
+        "samples": 4,
+        "exclusive_mechanisms": {
+          "retirement": 2,
+          "metadata": 1,
+          "epoch": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "other_worker",
+        "samples": 12,
+        "exclusive_mechanisms": {
+          "metadata": 4,
+          "physical_heap": 2,
+          "provider_ledger_completion": 1,
+          "epoch": 1,
+          "budget_storage": 1,
+          "other": 1,
+          "adapter_manager": 1,
+          "mutation_publication": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "projection",
+        "samples": 17,
+        "exclusive_mechanisms": {
+          "physical_heap": 2,
+          "metadata": 4,
+          "mutation_publication": 9,
+          "adapter_manager": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 1,
+          "commitLocked": 7,
+          "setupProjection": 17,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "reclamation_dispatch",
+        "samples": 5,
+        "exclusive_mechanisms": {
+          "retirement": 1,
+          "physical_heap": 2,
+          "budget_storage": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "retirement",
+        "samples": 5,
+        "exclusive_mechanisms": {
+          "provider_ledger_completion": 2,
+          "retirement": 1,
+          "physical_heap": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "history_collector",
+        "samples": 7,
+        "exclusive_mechanisms": {
+          "metadata": 2,
+          "retirement": 3,
+          "epoch": 1,
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "main",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "other_worker",
+        "samples": 10,
+        "exclusive_mechanisms": {
+          "metadata": 4,
+          "mutation_publication": 1,
+          "other": 3,
+          "physical_heap": 1,
+          "provider_ledger_completion": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "projection",
+        "samples": 65,
+        "exclusive_mechanisms": {
+          "mutation_publication": 9,
+          "provider_ledger_completion": 31,
+          "metadata": 4,
+          "epoch": 1,
+          "adapter_manager": 12,
+          "budget_storage": 5,
+          "pixel_brush": 1,
+          "physical_heap": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 39,
+          "prepareFreshReplica": 27,
+          "fillWithPixel": 26,
+          "sealImpl": 5,
+          "commitLocked": 5,
+          "setupProjection": 0,
+          "compositeWithProjection": 65,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "reclamation_dispatch",
+        "samples": 7,
+        "exclusive_mechanisms": {
+          "retirement": 5,
+          "physical_heap": 1,
+          "budget_storage": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "history_collector",
+        "samples": 4,
+        "exclusive_mechanisms": {
+          "metadata": 1,
+          "physical_heap": 1,
+          "retirement": 1,
+          "epoch": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "main",
+        "samples": 30,
+        "exclusive_mechanisms": {
+          "other": 8,
+          "adapter_manager": 3,
+          "physical_heap": 13,
+          "provider_ledger_completion": 2,
+          "budget_storage": 1,
+          "pixel_brush": 2,
+          "read_binding": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "other_worker",
+        "samples": 4,
+        "exclusive_mechanisms": {
+          "other": 4
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "reclamation_dispatch",
+        "samples": 7,
+        "exclusive_mechanisms": {
+          "physical_heap": 3,
+          "budget_storage": 1,
+          "retirement": 2,
+          "read_binding": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "retirement",
+        "samples": 3,
+        "exclusive_mechanisms": {
+          "provider_ledger_completion": 1,
+          "physical_heap": 1,
+          "budget_storage": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      }
+    ]
+  },
+  {
+    "record": "profile-01-upstream",
+    "rows": [
+      {
+        "phase": "Stroke",
+        "actor": "other_worker",
+        "samples": 80,
+        "exclusive_mechanisms": {
+          "other": 66,
+          "physical_heap": 14
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "projection",
+        "samples": 25,
+        "exclusive_mechanisms": {
+          "other": 14,
+          "physical_heap": 4,
+          "provider_ledger_completion": 1,
+          "adapter_manager": 6
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 6,
+          "compositeWithProjection": 17,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "stroke",
+        "samples": 363,
+        "exclusive_mechanisms": {
+          "pixel_brush": 271,
+          "physical_heap": 59,
+          "other": 29,
+          "provider_ledger_completion": 1,
+          "adapter_manager": 3
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "other_worker",
+        "samples": 6,
+        "exclusive_mechanisms": {
+          "adapter_manager": 2,
+          "physical_heap": 3,
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "main",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "other_worker",
+        "samples": 4,
+        "exclusive_mechanisms": {
+          "physical_heap": 1,
+          "adapter_manager": 3
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "projection",
+        "samples": 8,
+        "exclusive_mechanisms": {
+          "pixel_brush": 3,
+          "other": 2,
+          "provider_ledger_completion": 1,
+          "physical_heap": 1,
+          "adapter_manager": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 8,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "main",
+        "samples": 11,
+        "exclusive_mechanisms": {
+          "physical_heap": 6,
+          "other": 3,
+          "adapter_manager": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "other_worker",
+        "samples": 6,
+        "exclusive_mechanisms": {
+          "other": 5,
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      }
+    ]
+  },
+  {
+    "record": "profile-02-upstream",
+    "rows": [
+      {
+        "phase": "Stroke",
+        "actor": "main",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "other_worker",
+        "samples": 83,
+        "exclusive_mechanisms": {
+          "other": 69,
+          "physical_heap": 14
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "projection",
+        "samples": 46,
+        "exclusive_mechanisms": {
+          "other": 26,
+          "pixel_brush": 4,
+          "adapter_manager": 6,
+          "physical_heap": 6,
+          "provider_ledger_completion": 4
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 1,
+          "compositeWithProjection": 36,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "stroke",
+        "samples": 382,
+        "exclusive_mechanisms": {
+          "pixel_brush": 294,
+          "other": 29,
+          "physical_heap": 57,
+          "adapter_manager": 1,
+          "provider_ledger_completion": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "main",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "other_worker",
+        "samples": 4,
+        "exclusive_mechanisms": {
+          "adapter_manager": 3,
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "projection",
+        "samples": 5,
+        "exclusive_mechanisms": {
+          "provider_ledger_completion": 2,
+          "adapter_manager": 1,
+          "other": 1,
+          "pixel_brush": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 5,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "main",
+        "samples": 7,
+        "exclusive_mechanisms": {
+          "physical_heap": 6,
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "other_worker",
+        "samples": 2,
+        "exclusive_mechanisms": {
+          "physical_heap": 1,
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      }
+    ]
+  },
+  {
+    "record": "profile-03-current",
+    "rows": [
+      {
+        "phase": "Stroke",
+        "actor": "history_collector",
+        "samples": 44,
+        "exclusive_mechanisms": {
+          "retirement": 27,
+          "provider_ledger_completion": 5,
+          "metadata": 5,
+          "budget_storage": 4,
+          "physical_heap": 3
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "main",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "other": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "other_worker",
+        "samples": 69,
+        "exclusive_mechanisms": {
+          "physical_heap": 11,
+          "other": 58
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "projection",
+        "samples": 308,
+        "exclusive_mechanisms": {
+          "provider_ledger_completion": 57,
+          "mutation_publication": 75,
+          "read_binding": 14,
+          "budget_storage": 42,
+          "metadata": 26,
+          "adapter_manager": 48,
+          "epoch": 8,
+          "physical_heap": 27,
+          "retirement": 3,
+          "other": 7,
+          "pixel_brush": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 93,
+          "prepareFreshReplica": 58,
+          "fillWithPixel": 39,
+          "sealImpl": 42,
+          "commitLocked": 31,
+          "setupProjection": 82,
+          "compositeWithProjection": 226,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "reclamation_dispatch",
+        "samples": 34,
+        "exclusive_mechanisms": {
+          "retirement": 16,
+          "physical_heap": 10,
+          "budget_storage": 6,
+          "metadata": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "retirement",
+        "samples": 22,
+        "exclusive_mechanisms": {
+          "budget_storage": 7,
+          "retirement": 5,
+          "provider_ledger_completion": 6,
+          "physical_heap": 4
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Stroke",
+        "actor": "stroke",
+        "samples": 619,
+        "exclusive_mechanisms": {
+          "other": 34,
+          "physical_heap": 76,
+          "pixel_brush": 235,
+          "provider_ledger_completion": 56,
+          "mutation_publication": 48,
+          "adapter_manager": 132,
+          "budget_storage": 19,
+          "metadata": 18,
+          "retirement": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 113,
+          "prepareFreshReplica": 66,
+          "fillWithPixel": 46,
+          "sealImpl": 17,
+          "commitLocked": 11,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 306
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "history_collector",
+        "samples": 2,
+        "exclusive_mechanisms": {
+          "retirement": 1,
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "other_worker",
+        "samples": 5,
+        "exclusive_mechanisms": {
+          "mutation_publication": 2,
+          "provider_ledger_completion": 1,
+          "other": 1,
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "projection",
+        "samples": 16,
+        "exclusive_mechanisms": {
+          "adapter_manager": 2,
+          "mutation_publication": 7,
+          "metadata": 3,
+          "physical_heap": 2,
+          "provider_ledger_completion": 1,
+          "budget_storage": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 1,
+          "commitLocked": 10,
+          "setupProjection": 16,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "reclamation_dispatch",
+        "samples": 5,
+        "exclusive_mechanisms": {
+          "budget_storage": 2,
+          "retirement": 2,
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Undo",
+        "actor": "retirement",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "history_collector",
+        "samples": 1,
+        "exclusive_mechanisms": {
+          "retirement": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "other_worker",
+        "samples": 11,
+        "exclusive_mechanisms": {
+          "mutation_publication": 2,
+          "provider_ledger_completion": 3,
+          "metadata": 3,
+          "physical_heap": 2,
+          "adapter_manager": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "projection",
+        "samples": 67,
+        "exclusive_mechanisms": {
+          "metadata": 6,
+          "physical_heap": 5,
+          "provider_ledger_completion": 34,
+          "adapter_manager": 6,
+          "budget_storage": 6,
+          "pixel_brush": 2,
+          "mutation_publication": 7,
+          "epoch": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 43,
+          "prepareFreshReplica": 35,
+          "fillWithPixel": 32,
+          "sealImpl": 5,
+          "commitLocked": 8,
+          "setupProjection": 0,
+          "compositeWithProjection": 67,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Redo",
+        "actor": "reclamation_dispatch",
+        "samples": 3,
+        "exclusive_mechanisms": {
+          "metadata": 1,
+          "retirement": 1,
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "history_collector",
+        "samples": 6,
+        "exclusive_mechanisms": {
+          "retirement": 3,
+          "read_binding": 1,
+          "physical_heap": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "main",
+        "samples": 22,
+        "exclusive_mechanisms": {
+          "read_binding": 2,
+          "physical_heap": 9,
+          "other": 6,
+          "budget_storage": 1,
+          "provider_ledger_completion": 2,
+          "adapter_manager": 2
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "other_worker",
+        "samples": 5,
+        "exclusive_mechanisms": {
+          "other": 4,
+          "physical_heap": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "reclamation_dispatch",
+        "samples": 17,
+        "exclusive_mechanisms": {
+          "physical_heap": 8,
+          "budget_storage": 4,
+          "read_binding": 1,
+          "metadata": 1,
+          "retirement": 2,
+          "provider_ledger_completion": 1
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      },
+      {
+        "phase": "Teardown",
+        "actor": "retirement",
+        "samples": 11,
+        "exclusive_mechanisms": {
+          "budget_storage": 3,
+          "physical_heap": 3,
+          "provider_ledger_completion": 5
+        },
+        "overlapping_contexts": {
+          "prepareWrites": 0,
+          "prepareFreshReplica": 0,
+          "fillWithPixel": 0,
+          "sealImpl": 0,
+          "commitLocked": 0,
+          "setupProjection": 0,
+          "compositeWithProjection": 0,
+          "bltFixedImpl": 0
+        }
+      }
+    ]
+  }
+]

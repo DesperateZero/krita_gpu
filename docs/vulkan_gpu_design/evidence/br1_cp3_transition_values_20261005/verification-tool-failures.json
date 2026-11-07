@@ -1,0 +1,24 @@
+{
+  "failed_attempts": [
+    {
+      "script": "verify_controls_final.py",
+      "exit_code": 1,
+      "reason": "missing CMake key DESIGNER_PLUGIN",
+      "corrected": "BUILD_KRITA_QT_DESIGNER_PLUGINS"
+    },
+    {
+      "script": "verify_controls_final.py",
+      "exit_code": 1,
+      "reason": "missing CMake key DESIGNERPLUGIN",
+      "corrected": "BUILD_KRITA_QT_DESIGNER_PLUGINS"
+    },
+    {
+      "script": "verify_controls_final.py",
+      "exit_code": 1,
+      "reason": "missing CMake key KRITA_ENABLE_VULKAN_FOUNDATION",
+      "corrected": "BUILD_VULKAN_FOUNDATION/BUILD_VULKAN_UI_ADAPTER"
+    }
+  ],
+  "final_actual_exit_code": 0,
+  "scope": "Evidence checker cache key names, no product source change"
+}

@@ -1,0 +1,675 @@
+{
+  "records": [
+    {
+      "index": 0,
+      "side": "current",
+      "total": 1084,
+      "partition": {
+        "pixel": 347,
+        "management": 507,
+        "heap": 144,
+        "other": 86
+      },
+      "corrected_mechanisms": {
+        "pixel_brush": 347,
+        "provider_ledger_completion": 108,
+        "mutation_publication": 132,
+        "adapter_manager": 82,
+        "other": 86,
+        "retirement": 41,
+        "physical_heap": 144,
+        "budget_storage": 83,
+        "read_binding": 15,
+        "metadata": 42,
+        "epoch": 4
+      },
+      "reclassifications": {
+        "adapter_manager -> pixel_brush": 117
+      },
+      "actors": {
+        "stroke": {
+          "pixel_brush": 343,
+          "provider_ledger_completion": 45,
+          "mutation_publication": 57,
+          "adapter_manager": 39,
+          "budget_storage": 27,
+          "other": 34,
+          "physical_heap": 74,
+          "metadata": 7
+        },
+        "other_worker": {
+          "other": 47,
+          "physical_heap": 15
+        },
+        "projection": {
+          "retirement": 4,
+          "provider_ledger_completion": 51,
+          "pixel_brush": 4,
+          "read_binding": 15,
+          "physical_heap": 34,
+          "budget_storage": 38,
+          "metadata": 28,
+          "mutation_publication": 75,
+          "adapter_manager": 43,
+          "other": 4,
+          "epoch": 3
+        },
+        "retirement": {
+          "provider_ledger_completion": 7,
+          "physical_heap": 7,
+          "retirement": 4,
+          "budget_storage": 5
+        },
+        "reclamation_dispatch": {
+          "retirement": 17,
+          "physical_heap": 7,
+          "budget_storage": 8,
+          "metadata": 2
+        },
+        "history_collector": {
+          "provider_ledger_completion": 5,
+          "physical_heap": 7,
+          "metadata": 5,
+          "budget_storage": 5,
+          "retirement": 16,
+          "epoch": 1
+        },
+        "main": {
+          "other": 1
+        }
+      },
+      "management_leaf_partition": {
+        "other_protocol_leaf": 281,
+        "synchronization_primitive_leaf": 150,
+        "copy_fill_leaf": 76
+      },
+      "management_top_leaves": [
+        [
+          "_platform_memmove",
+          48
+        ],
+        [
+          "__ulock_wait2",
+          44
+        ],
+        [
+          "__ulock_wake",
+          43
+        ],
+        [
+          "DYLD-STUB$$memcpy",
+          19
+        ],
+        [
+          "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)",
+          19
+        ],
+        [
+          "__psynch_cvsignal",
+          10
+        ],
+        [
+          "__psynch_cvwait",
+          10
+        ],
+        [
+          "KisTileData::fillWithPixel(unsigned char const*)",
+          7
+        ],
+        [
+          "std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::less<unsigned long long>, true>, KisMutationStorageAllocator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, true>>::__lower_bound<unsigned long long>(unsigned long long const&, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)",
+          6
+        ],
+        [
+          "__psynch_mutexdrop",
+          6
+        ],
+        [
+          "std::__1::less<unsigned long long>::operator()[abi:ne200100](unsigned long long const&, unsigned long long const&) const",
+          5
+        ],
+        [
+          "mach_continuous_time",
+          5
+        ]
+      ],
+      "projection_update_distribution": {
+        "19": 63,
+        "18": 1
+      },
+      "original_semantic_replays": 64,
+      "examples": [
+        {
+          "old": "adapter_manager",
+          "new": "pixel_brush",
+          "frames": [
+            "QPoint::x() const",
+            "KisPainter::Private::applyDevice(QRect const&, KisRenderedDab const&, KisPixelWriteCursor*, KoColorSpace const*, KoCompositeOp const*, KoCompositeOp::ParameterInfo&, bool, QRect const&)",
+            "KisPainter::bltFixedImpl(QList<QRect> const&, QList<KisRenderedDab> const&, KisTransaction*)::$_0::operator()(KisPixelWriteCursor*) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation<KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1>(KisPageSnapshotArray<KisLogicalPageId> const&, bool, bool, KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1&&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)",
+            "KisTiledDataManager::writePageStoreOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QString*, KisSharedPtr<KisMemento> const&)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperationImpl(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QRect const&, KisTransaction*)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, KisTransaction*)"
+          ]
+        },
+        {
+          "old": "adapter_manager",
+          "new": "pixel_brush",
+          "frames": [
+            "void KoStreamedMath<xsimd::neon64>::genericComposite<false, false, OverCompositor32<unsigned char, unsigned int, false, true>, 4>(KoCompositeOp::ParameterInfo const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "KisPainter::Private::applyDevice(QRect const&, KisRenderedDab const&, KisPixelWriteCursor*, KoColorSpace const*, KoCompositeOp const*, KoCompositeOp::ParameterInfo&, bool, QRect const&)",
+            "KisPainter::bltFixedImpl(QList<QRect> const&, QList<KisRenderedDab> const&, KisTransaction*)::$_0::operator()(KisPixelWriteCursor*) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation<KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1>(KisPageSnapshotArray<KisLogicalPageId> const&, bool, bool, KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1&&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)",
+            "KisTiledDataManager::writePageStoreOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QString*, KisSharedPtr<KisMemento> const&)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperationImpl(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QRect const&, KisTransaction*)"
+          ]
+        },
+        {
+          "old": "adapter_manager",
+          "new": "pixel_brush",
+          "frames": [
+            "bool xsimd::kernel::all<xsimd::neon64, float, 0>(xsimd::batch_bool<float, xsimd::neon64> const&, xsimd::neon64 const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "void KisPainter::bitBltImpl<false>(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int, KisTransaction*)::'lambda'(KisPixelWriteCursor*)::operator()(KisPixelWriteCursor*) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation<KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1>(KisPageSnapshotArray<KisLogicalPageId> const&, bool, bool, KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1&&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)",
+            "KisTiledDataManager::writePageStoreOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QString*, KisSharedPtr<KisMemento> const&)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperationImpl(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QRect const&, KisTransaction*)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, KisTransaction*)"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "side": "upstream",
+      "total": 468,
+      "partition": {
+        "pixel": 277,
+        "management": 10,
+        "heap": 77,
+        "other": 104
+      },
+      "corrected_mechanisms": {
+        "pixel_brush": 277,
+        "physical_heap": 77,
+        "other": 104,
+        "provider_ledger_completion": 1,
+        "adapter_manager": 9
+      },
+      "reclassifications": {
+        "other -> pixel_brush": 5,
+        "provider_ledger_completion -> pixel_brush": 1
+      },
+      "actors": {
+        "stroke": {
+          "pixel_brush": 272,
+          "physical_heap": 59,
+          "other": 29,
+          "adapter_manager": 3
+        },
+        "other_worker": {
+          "other": 66,
+          "physical_heap": 14
+        },
+        "projection": {
+          "pixel_brush": 5,
+          "other": 9,
+          "physical_heap": 4,
+          "provider_ledger_completion": 1,
+          "adapter_manager": 6
+        }
+      },
+      "management_leaf_partition": {
+        "other_protocol_leaf": 5,
+        "synchronization_primitive_leaf": 3,
+        "copy_fill_leaf": 2
+      },
+      "management_top_leaves": [
+        [
+          "_platform_memset",
+          2
+        ],
+        [
+          "0x107eab65d",
+          1
+        ],
+        [
+          "0x107eab681",
+          1
+        ],
+        [
+          "0x107eac86d",
+          1
+        ],
+        [
+          "KisTileHashTableTraits2<KisTile>::getReadOnlyTileLazy(int, int, bool&)",
+          1
+        ],
+        [
+          "QReadWriteLock::tryLockForRead(QDeadlineTimer)",
+          1
+        ],
+        [
+          "QReadWriteLock::unlock()",
+          1
+        ],
+        [
+          "__ulock_wake",
+          1
+        ],
+        [
+          "KisLocklessStack<QSBR::Action>::freeList(KisLocklessStack<QSBR::Action>::Node*)",
+          1
+        ]
+      ],
+      "projection_update_distribution": {
+        "19": 64
+      },
+      "original_semantic_replays": 64,
+      "examples": [
+        {
+          "old": "other",
+          "new": "pixel_brush",
+          "frames": [
+            "bool xsimd::kernel::all<xsimd::neon64, float, 0>(xsimd::batch_bool<float, xsimd::neon64> const&, xsimd::neon64 const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "void KisPainter::bitBltImpl<false>(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisPainter::bitBlt(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisLayerProjectionPlane::applyImpl(KisPainter*, QRect const&, KritaUtils::ThresholdMode)",
+            "KisAsyncMerger::compositeWithProjection(QSharedPointer<KisProjectionLeaf>, QRect const&)",
+            "KisAsyncMerger::startMerge(KisBaseRectsWalker&, bool)",
+            "KisUpdateJobItem::runMergeJob()",
+            "QThreadPoolThread::run()"
+          ]
+        },
+        {
+          "old": "provider_ledger_completion",
+          "new": "pixel_brush",
+          "frames": [
+            "0x107eab595",
+            "ConcurrentMap<int, KisTileData*, DefaultKeyTraits<int>, DefaultValueTraits<KisTileData*>>::Mutator::Mutator(ConcurrentMap<int, KisTileData*, DefaultKeyTraits<int>, DefaultValueTraits<KisTileData*>>&, int)",
+            "ConcurrentMap<int, KisTileData*, DefaultKeyTraits<int>, DefaultValueTraits<KisTileData*>>::Mutator::Mutator(ConcurrentMap<int, KisTileData*, DefaultKeyTraits<int>, DefaultValueTraits<KisTileData*>>&, int)",
+            "KisTileDataStore::duplicateTileData(KisTileData*)",
+            "KisTileData::clone()",
+            "KisRandomAccessor2::lockTile(KisSharedPtr<KisTile>&)",
+            "KisRandomAccessor2::moveTo(int, int)",
+            "KisPainter::Private::applyDevice(QRect const&, KisRenderedDab const&, KisSharedPtr<KisRandomAccessorNG>, KoColorSpace const*, KoCompositeOp::ParameterInfo&)",
+            "KisPainter::bltFixed(QRect const&, QList<KisRenderedDab>)"
+          ]
+        },
+        {
+          "old": "other",
+          "new": "pixel_brush",
+          "frames": [
+            "bool xsimd::kernel::all<xsimd::neon64, float, 0>(xsimd::batch_bool<float, xsimd::neon64> const&, xsimd::neon64 const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "void KisPainter::bitBltImpl<false>(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisPainter::bitBlt(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisLayerProjectionPlane::applyImpl(KisPainter*, QRect const&, KritaUtils::ThresholdMode)",
+            "KisAsyncMerger::compositeWithProjection(QSharedPointer<KisProjectionLeaf>, QRect const&)",
+            "KisAsyncMerger::startMerge(KisBaseRectsWalker&, bool)",
+            "KisUpdateJobItem::runMergeJob()",
+            "QThreadPoolThread::run()"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "side": "upstream",
+      "total": 512,
+      "partition": {
+        "pixel": 303,
+        "management": 11,
+        "heap": 77,
+        "other": 121
+      },
+      "corrected_mechanisms": {
+        "pixel_brush": 303,
+        "other": 121,
+        "physical_heap": 77,
+        "adapter_manager": 7,
+        "provider_ledger_completion": 4
+      },
+      "reclassifications": {
+        "other -> pixel_brush": 4,
+        "provider_ledger_completion -> pixel_brush": 1
+      },
+      "actors": {
+        "stroke": {
+          "pixel_brush": 295,
+          "other": 29,
+          "physical_heap": 57,
+          "adapter_manager": 1
+        },
+        "other_worker": {
+          "other": 69,
+          "physical_heap": 14
+        },
+        "projection": {
+          "other": 22,
+          "pixel_brush": 8,
+          "adapter_manager": 6,
+          "physical_heap": 6,
+          "provider_ledger_completion": 4
+        },
+        "main": {
+          "other": 1
+        }
+      },
+      "management_leaf_partition": {
+        "synchronization_primitive_leaf": 1,
+        "other_protocol_leaf": 6,
+        "copy_fill_leaf": 4
+      },
+      "management_top_leaves": [
+        [
+          "_platform_memmove",
+          3
+        ],
+        [
+          "DYLD-STUB$$QReadWriteLock::tryLockForRead(QDeadlineTimer)",
+          1
+        ],
+        [
+          "KisTileHashTableTraits2<KisTile>::getTileLazy(int, int, bool&)",
+          1
+        ],
+        [
+          "0x103168571",
+          1
+        ],
+        [
+          "KisSharedPtr<KisMementoItem>::attach(KisMementoItem*)",
+          1
+        ],
+        [
+          "0x10316855d",
+          1
+        ],
+        [
+          "QSBR::update()",
+          1
+        ],
+        [
+          "KisTileDataStore::duplicateTileData(KisTileData*)",
+          1
+        ],
+        [
+          "_platform_memset",
+          1
+        ]
+      ],
+      "projection_update_distribution": {
+        "19": 64
+      },
+      "original_semantic_replays": 64,
+      "examples": [
+        {
+          "old": "other",
+          "new": "pixel_brush",
+          "frames": [
+            "bool xsimd::kernel::all<xsimd::neon64, float, 0>(xsimd::batch_bool<float, xsimd::neon64> const&, xsimd::neon64 const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "void KisPainter::bitBltImpl<false>(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisPainter::bitBlt(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisLayerProjectionPlane::applyImpl(KisPainter*, QRect const&, KritaUtils::ThresholdMode)",
+            "KisAsyncMerger::compositeWithProjection(QSharedPointer<KisProjectionLeaf>, QRect const&)",
+            "KisAsyncMerger::startMerge(KisBaseRectsWalker&, bool)",
+            "KisUpdateJobItem::runMergeJob()",
+            "QThreadPoolThread::run()"
+          ]
+        },
+        {
+          "old": "other",
+          "new": "pixel_brush",
+          "frames": [
+            "bool xsimd::kernel::all<xsimd::neon64, float, 0>(xsimd::batch_bool<float, xsimd::neon64> const&, xsimd::neon64 const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "void KisPainter::bitBltImpl<false>(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisPainter::bitBlt(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisLayerProjectionPlane::applyImpl(KisPainter*, QRect const&, KritaUtils::ThresholdMode)",
+            "KisAsyncMerger::compositeWithProjection(QSharedPointer<KisProjectionLeaf>, QRect const&)",
+            "KisAsyncMerger::startMerge(KisBaseRectsWalker&, bool)",
+            "KisUpdateJobItem::runMergeJob()",
+            "QThreadPoolThread::run()"
+          ]
+        },
+        {
+          "old": "other",
+          "new": "pixel_brush",
+          "frames": [
+            "bool xsimd::kernel::all<xsimd::neon64, float, 0>(xsimd::batch_bool<float, xsimd::neon64> const&, xsimd::neon64 const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "void KisPainter::bitBltImpl<false>(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisPainter::bitBlt(int, int, KisSharedPtr<KisPaintDevice>, int, int, int, int)",
+            "KisLayerProjectionPlane::applyImpl(KisPainter*, QRect const&, KritaUtils::ThresholdMode)",
+            "KisAsyncMerger::compositeWithProjection(QSharedPointer<KisProjectionLeaf>, QRect const&)",
+            "KisAsyncMerger::startMerge(KisBaseRectsWalker&, bool)",
+            "KisUpdateJobItem::runMergeJob()",
+            "QThreadPoolThread::run()"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "side": "current",
+      "total": 1097,
+      "partition": {
+        "pixel": 342,
+        "management": 524,
+        "heap": 131,
+        "other": 100
+      },
+      "corrected_mechanisms": {
+        "other": 100,
+        "physical_heap": 131,
+        "provider_ledger_completion": 124,
+        "pixel_brush": 342,
+        "mutation_publication": 123,
+        "budget_storage": 78,
+        "read_binding": 14,
+        "retirement": 52,
+        "adapter_manager": 74,
+        "metadata": 51,
+        "epoch": 8
+      },
+      "reclassifications": {
+        "adapter_manager -> pixel_brush": 106
+      },
+      "actors": {
+        "stroke": {
+          "other": 34,
+          "physical_heap": 76,
+          "pixel_brush": 336,
+          "provider_ledger_completion": 56,
+          "mutation_publication": 48,
+          "adapter_manager": 31,
+          "budget_storage": 19,
+          "metadata": 18,
+          "retirement": 1
+        },
+        "projection": {
+          "provider_ledger_completion": 57,
+          "mutation_publication": 75,
+          "read_binding": 14,
+          "budget_storage": 42,
+          "metadata": 26,
+          "adapter_manager": 43,
+          "epoch": 8,
+          "physical_heap": 27,
+          "pixel_brush": 6,
+          "retirement": 3,
+          "other": 7
+        },
+        "retirement": {
+          "budget_storage": 7,
+          "retirement": 5,
+          "provider_ledger_completion": 6,
+          "physical_heap": 4
+        },
+        "other_worker": {
+          "physical_heap": 11,
+          "other": 58
+        },
+        "reclamation_dispatch": {
+          "retirement": 16,
+          "physical_heap": 10,
+          "budget_storage": 6,
+          "metadata": 2
+        },
+        "history_collector": {
+          "retirement": 27,
+          "provider_ledger_completion": 5,
+          "metadata": 5,
+          "budget_storage": 4,
+          "physical_heap": 3
+        },
+        "main": {
+          "other": 1
+        }
+      },
+      "management_leaf_partition": {
+        "copy_fill_leaf": 92,
+        "other_protocol_leaf": 271,
+        "synchronization_primitive_leaf": 161
+      },
+      "management_top_leaves": [
+        [
+          "_platform_memmove",
+          65
+        ],
+        [
+          "__ulock_wake",
+          50
+        ],
+        [
+          "__ulock_wait2",
+          28
+        ],
+        [
+          "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)",
+          26
+        ],
+        [
+          "DYLD-STUB$$memcpy",
+          20
+        ],
+        [
+          "__psynch_cvwait",
+          13
+        ],
+        [
+          "__psynch_cvsignal",
+          9
+        ],
+        [
+          "QBasicMutex::lockInternal()",
+          8
+        ],
+        [
+          "std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::less<unsigned long long>, true>, KisMutationStorageAllocator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, true>>::__lower_bound<unsigned long long>(unsigned long long const&, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)",
+          7
+        ],
+        [
+          "KisMutationStorageOwner::deref()",
+          7
+        ],
+        [
+          "__psynch_mutexwait",
+          7
+        ],
+        [
+          "std::__1::less<unsigned long long>::operator()[abi:ne200100](unsigned long long const&, unsigned long long const&) const",
+          7
+        ]
+      ],
+      "projection_update_distribution": {
+        "19": 64
+      },
+      "original_semantic_replays": 64,
+      "examples": [
+        {
+          "old": "adapter_manager",
+          "new": "pixel_brush",
+          "frames": [
+            "bool xsimd::kernel::all<xsimd::neon64, float, 0>(xsimd::batch_bool<float, xsimd::neon64> const&, xsimd::neon64 const&)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "KisPainter::Private::applyDevice(QRect const&, KisRenderedDab const&, KisPixelWriteCursor*, KoColorSpace const*, KoCompositeOp const*, KoCompositeOp::ParameterInfo&, bool, QRect const&)",
+            "KisPainter::bltFixedImpl(QList<QRect> const&, QList<KisRenderedDab> const&, KisTransaction*)::$_0::operator()(KisPixelWriteCursor*) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation<KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1>(KisPageSnapshotArray<KisLogicalPageId> const&, bool, bool, KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1&&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)",
+            "KisTiledDataManager::writePageStoreOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QString*, KisSharedPtr<KisMemento> const&)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperationImpl(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QRect const&, KisTransaction*)"
+          ]
+        },
+        {
+          "old": "adapter_manager",
+          "new": "pixel_brush",
+          "frames": [
+            "xsimd::kernel::wrap::vceqq_f32(__simd128_float32_t, __simd128_float32_t)",
+            "void KoStreamedMath<xsimd::neon64>::genericComposite32<false, false, OverCompositor32<unsigned char, unsigned int, false, true>>(KoCompositeOp::ParameterInfo const&)",
+            "KisPainter::Private::applyDevice(QRect const&, KisRenderedDab const&, KisPixelWriteCursor*, KoColorSpace const*, KoCompositeOp const*, KoCompositeOp::ParameterInfo&, bool, QRect const&)",
+            "KisPainter::bltFixedImpl(QList<QRect> const&, QList<KisRenderedDab> const&, KisTransaction*)::$_0::operator()(KisPixelWriteCursor*) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation<KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1>(KisPageSnapshotArray<KisLogicalPageId> const&, bool, bool, KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1&&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)",
+            "KisTiledDataManager::writePageStoreOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QString*, KisSharedPtr<KisMemento> const&)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperationImpl(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QRect const&, KisTransaction*)"
+          ]
+        },
+        {
+          "old": "adapter_manager",
+          "new": "pixel_brush",
+          "frames": [
+            "KisPainter::Private::applyDevice(QRect const&, KisRenderedDab const&, KisPixelWriteCursor*, KoColorSpace const*, KoCompositeOp const*, KoCompositeOp::ParameterInfo&, bool, QRect const&)",
+            "KisPainter::bltFixedImpl(QList<QRect> const&, QList<KisRenderedDab> const&, KisTransaction*)::$_0::operator()(KisPixelWriteCursor*) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "std::__1::__function::__value_func<bool (KisPixelWriteCursor*)>::operator()[abi:ne200100](KisPixelWriteCursor*&&) const",
+            "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation<KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1>(KisPageSnapshotArray<KisLogicalPageId> const&, bool, bool, KisTiledDataManagerPageStoreBackend::writeOperation(QList<KisLogicalPageId> const&, bool, std::__1::function<bool (KisPixelWriteCursor*)> const&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)::$_1&&, QList<KisLogicalPageId>*, QString*, KisSharedPtr<KisMemento> const&, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)",
+            "KisTiledDataManager::writePageStoreOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QString*, KisSharedPtr<KisMemento> const&)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperationImpl(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, QRect const&, KisTransaction*)",
+            "KisPaintDevice::Private::KisPaintDeviceStrategy::applyPixelOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, KisTransaction*)",
+            "KisPaintDevice::applyPixelOperation(QList<QRect> const&, std::__1::function<bool (KisPixelWriteCursor*)> const&, KisTransaction*)"
+          ]
+        }
+      ]
+    }
+  ],
+  "means": {
+    "current": {
+      "pixel": 344.5,
+      "management": 515.5,
+      "heap": 137.5,
+      "other": 93
+    },
+    "upstream": {
+      "pixel": 290,
+      "management": 10.5,
+      "heap": 77,
+      "other": 112.5
+    }
+  },
+  "sample_difference": {
+    "pixel": 54.5,
+    "management": 505.0,
+    "heap": 60.5,
+    "other": -19.5
+  },
+  "total_sample_difference": 600.5,
+  "descriptive_management_share_of_sample_difference": 0.8409658617818485,
+  "interpretation": "Exclusive Running sample contexts over equal64 replay counts. Management protocol contexts include inner copy/fill and synchronization primitives; they are not pure control overhead. The additional leaf partition is descriptive, not a CPU/wait accounting. No conversion to wall, causal/removable percent, strict bound or CI. Current profile source predates 2f22452e2d. One current replay has18 updates; others19. No samples excluded.",
+  "previous_classification_correction": "117/106 current samples were actual inner pixel kernels masked by the outer adapter symbol; upstream6/5 samples also corrected symmetrically. Actor totals and original timing intervals unchanged.",
+  "new_benchmark_processes": 0,
+  "new_production_changes": 0,
+  "new_formal_m6_passes": 0
+}

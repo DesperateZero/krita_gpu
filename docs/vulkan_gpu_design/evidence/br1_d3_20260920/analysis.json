@@ -1,0 +1,1654 @@
+{
+  "qualification": "Paired within-branch slice diagnostic, not upstream M NI, isolated K/E or tail gates",
+  "ci_limit": "six pairs; exploratory paired median bootstrap, not preregistered NI margin or full environment-drift control",
+  "disabled": {
+    "status": "MeasuredDiagnostic",
+    "labels": [
+      "original",
+      "before"
+    ],
+    "cases": {
+      "alias-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 68.721542,
+            "after_ms": 68.612291,
+            "ratio": 0.9984102364874176,
+            "loops": 4096
+          },
+          {
+            "pair": 1,
+            "before_ms": 71.998417,
+            "after_ms": 69.323125,
+            "ratio": 0.9628423497144388,
+            "loops": 4096
+          },
+          {
+            "pair": 2,
+            "before_ms": 69.9365,
+            "after_ms": 71.009041,
+            "ratio": 1.0153359261615895,
+            "loops": 4096
+          },
+          {
+            "pair": 3,
+            "before_ms": 70.915416,
+            "after_ms": 69.663042,
+            "ratio": 0.9823398906663681,
+            "loops": 4096
+          },
+          {
+            "pair": 4,
+            "before_ms": 69.962875,
+            "after_ms": 70.865542,
+            "ratio": 1.012902085570383,
+            "loops": 4096
+          },
+          {
+            "pair": 5,
+            "before_ms": 71.312875,
+            "after_ms": 70.299458,
+            "ratio": 0.9857891439659388,
+            "loops": 4096
+          }
+        ],
+        "paired_median_ratio": 0.9920996902266781,
+        "paired_median_ratio_bootstrap95": [
+          0.9725911201904034,
+          1.0141190058659864
+        ],
+        "before_us": 17.197057006835937,
+        "after_us": 17.08526611328125,
+        "sampled_phases": {}
+      },
+      "real-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 85.007417,
+            "after_ms": 79.419667,
+            "ratio": 0.934267500446461,
+            "loops": 4096
+          },
+          {
+            "pair": 1,
+            "before_ms": 85.914791,
+            "after_ms": 79.548166,
+            "ratio": 0.9258960543825335,
+            "loops": 4096
+          },
+          {
+            "pair": 2,
+            "before_ms": 86.77525,
+            "after_ms": 85.531625,
+            "ratio": 0.9856684365645735,
+            "loops": 4096
+          },
+          {
+            "pair": 3,
+            "before_ms": 83.057625,
+            "after_ms": 80.20525,
+            "ratio": 0.9656578790929792,
+            "loops": 4096
+          },
+          {
+            "pair": 4,
+            "before_ms": 85.888542,
+            "after_ms": 81.544291,
+            "ratio": 0.9494199005031427,
+            "loops": 4096
+          },
+          {
+            "pair": 5,
+            "before_ms": 86.48275,
+            "after_ms": 78.76025,
+            "ratio": 0.9107047359155439,
+            "loops": 4096
+          }
+        ],
+        "paired_median_ratio": 0.9418437004748019,
+        "paired_median_ratio_bootstrap95": [
+          0.9183003951490387,
+          0.9756631578287763
+        ],
+        "before_us": 20.97208654785156,
+        "after_us": 19.5011494140625,
+        "sampled_phases": {}
+      }
+    }
+  },
+  "sampled": {
+    "status": "MeasuredDiagnostic",
+    "labels": [
+      "plain",
+      "sampled"
+    ],
+    "cases": {
+      "alias-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 278.722334,
+            "after_ms": 272.512083,
+            "ratio": 0.9777188612377221,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 277.866125,
+            "after_ms": 278.27175,
+            "ratio": 1.0014597857151533,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 279.868416,
+            "after_ms": 285.122958,
+            "ratio": 1.018775044626686,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 280.254792,
+            "after_ms": 284.175917,
+            "ratio": 1.0139912861864642,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 280.815833,
+            "after_ms": 281.458667,
+            "ratio": 1.0022891657964315,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 285.9295,
+            "after_ms": 282.849209,
+            "ratio": 0.9892270961897949,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 1.0018744757557925,
+        "paired_median_ratio_bootstrap95": [
+          0.9834729787137585,
+          1.0163831654065751
+        ],
+        "before_us": 17.093603759765628,
+        "after_us": 17.22130969238281,
+        "sampled_phases": {
+          "commit_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.012255,
+            "cpu_ms": 0.104454,
+            "wall_us_per_sampled_operation": 0.015833333333333335
+          },
+          "commit_proof_validation": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.45842000000000005,
+            "cpu_ms": 0.547947,
+            "wall_us_per_sampled_operation": 0.5922739018087856
+          },
+          "commit_default_removal_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.125469,
+            "cpu_ms": 0.213747,
+            "wall_us_per_sampled_operation": 0.16210465116279069
+          },
+          "commit_transition_preflight": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.41757800000000006,
+            "cpu_ms": 0.50704,
+            "wall_us_per_sampled_operation": 0.5395064599483206
+          },
+          "commit_epoch_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.560864,
+            "cpu_ms": 0.650162,
+            "wall_us_per_sampled_operation": 0.7246304909560723
+          },
+          "commit_completion": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.061801999999999996,
+            "cpu_ms": 0.150164,
+            "wall_us_per_sampled_operation": 0.07984754521963823
+          },
+          "commit_root": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.49538499999999996,
+            "cpu_ms": 0.585392,
+            "wall_us_per_sampled_operation": 0.640032299741602
+          },
+          "commit_metadata_apply": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.156333,
+            "cpu_ms": 0.24592000000000003,
+            "wall_us_per_sampled_operation": 0.20198062015503876
+          },
+          "commit_root_publication": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.152036,
+            "cpu_ms": 0.241234,
+            "wall_us_per_sampled_operation": 0.19642894056847546
+          },
+          "commit_cleanup": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 1.183437,
+            "cpu_ms": 1.271877,
+            "wall_us_per_sampled_operation": 1.5289883720930235
+          },
+          "commit_history_collect": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.11440000000000002,
+            "cpu_ms": 0.203342,
+            "wall_us_per_sampled_operation": 0.14780361757105945
+          },
+          "commit_provider_retire": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.783298,
+            "cpu_ms": 0.873501,
+            "wall_us_per_sampled_operation": 1.0120129198966408
+          },
+          "adoption_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.014119999999999999,
+            "cpu_ms": 0.11225300000000002,
+            "wall_us_per_sampled_operation": 0.018242894056847543
+          },
+          "adoption_validation": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.316908,
+            "cpu_ms": 0.40754499999999994,
+            "wall_us_per_sampled_operation": 0.4094418604651163
+          },
+          "adoption_provider": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.10575799999999999,
+            "cpu_ms": 0.19429599999999997,
+            "wall_us_per_sampled_operation": 0.13663824289405685
+          },
+          "adoption_metadata": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.224294,
+            "cpu_ms": 0.314504,
+            "wall_us_per_sampled_operation": 0.28978552971576227
+          },
+          "adoption_proof_seal": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.305792,
+            "cpu_ms": 0.3965910000000001,
+            "wall_us_per_sampled_operation": 0.39508010335917315
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.10515,
+            "cpu_ms": 0.195578,
+            "wall_us_per_sampled_operation": 0.13585271317829456
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.012617,
+            "cpu_ms": 0.129669,
+            "wall_us_per_sampled_operation": 0.016301033591731264
+          },
+          "transaction_begin": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.026871000000000003,
+            "cpu_ms": 0.11685000000000001,
+            "wall_us_per_sampled_operation": 0.034717054263565895
+          }
+        }
+      },
+      "alias-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 291.737625,
+            "after_ms": 291.418542,
+            "ratio": 0.9989062672324148,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 295.116667,
+            "after_ms": 294.534292,
+            "ratio": 0.9980266278895051,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 287.378125,
+            "after_ms": 292.312083,
+            "ratio": 1.0171688711519011,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 295.72225,
+            "after_ms": 299.196667,
+            "ratio": 1.0117489198056624,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 297.390459,
+            "after_ms": 290.082292,
+            "ratio": 0.975425684386196,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 299.8295,
+            "after_ms": 298.986583,
+            "ratio": 0.9971886788991744,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 0.9984664475609599,
+        "paired_median_ratio_bootstrap95": [
+          0.9863071816426852,
+          1.0144588954787817
+        ],
+        "before_us": 18.03097280883789,
+        "after_us": 17.909130096435547,
+        "sampled_phases": {
+          "commit_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.012612000000000002,
+            "cpu_ms": 0.10529300000000001,
+            "wall_us_per_sampled_operation": 0.016294573643410856
+          },
+          "commit_proof_validation": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.455073,
+            "cpu_ms": 0.5453370000000001,
+            "wall_us_per_sampled_operation": 0.5879496124031007
+          },
+          "commit_default_removal_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.122447,
+            "cpu_ms": 0.21265099999999998,
+            "wall_us_per_sampled_operation": 0.1582002583979328
+          },
+          "commit_transition_preflight": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.337711,
+            "cpu_ms": 0.427712,
+            "wall_us_per_sampled_operation": 0.4363191214470284
+          },
+          "commit_epoch_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.546416,
+            "cpu_ms": 0.6364310000000001,
+            "wall_us_per_sampled_operation": 0.7059638242894057
+          },
+          "commit_completion": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.0628,
+            "cpu_ms": 0.153231,
+            "wall_us_per_sampled_operation": 0.08113695090439275
+          },
+          "commit_root": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.498393,
+            "cpu_ms": 0.587996,
+            "wall_us_per_sampled_operation": 0.6439186046511628
+          },
+          "commit_metadata_apply": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.09595,
+            "cpu_ms": 0.186272,
+            "wall_us_per_sampled_operation": 0.12396640826873384
+          },
+          "commit_root_publication": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.15309999999999999,
+            "cpu_ms": 0.241916,
+            "wall_us_per_sampled_operation": 0.19780361757105944
+          },
+          "commit_cleanup": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 1.2497610000000001,
+            "cpu_ms": 1.3385520000000002,
+            "wall_us_per_sampled_operation": 1.6146782945736438
+          },
+          "commit_history_collect": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.9946839999999999,
+            "cpu_ms": 1.085196,
+            "wall_us_per_sampled_operation": 1.2851214470284236
+          },
+          "commit_provider_retire": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.773002,
+            "cpu_ms": 0.864466,
+            "wall_us_per_sampled_operation": 0.9987105943152454
+          },
+          "adoption_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.014161999999999998,
+            "cpu_ms": 0.112372,
+            "wall_us_per_sampled_operation": 0.018297157622739015
+          },
+          "adoption_validation": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.321872,
+            "cpu_ms": 0.411459,
+            "wall_us_per_sampled_operation": 0.41585529715762276
+          },
+          "adoption_provider": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.101624,
+            "cpu_ms": 0.190511,
+            "wall_us_per_sampled_operation": 0.13129715762273902
+          },
+          "adoption_metadata": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.257415,
+            "cpu_ms": 0.34800099999999995,
+            "wall_us_per_sampled_operation": 0.332577519379845
+          },
+          "adoption_proof_seal": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.314366,
+            "cpu_ms": 0.405402,
+            "wall_us_per_sampled_operation": 0.40615762273901806
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.099212,
+            "cpu_ms": 0.188409,
+            "wall_us_per_sampled_operation": 0.12818087855297156
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.013756999999999998,
+            "cpu_ms": 0.11562399999999999,
+            "wall_us_per_sampled_operation": 0.017773901808785526
+          },
+          "transaction_begin": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.027835,
+            "cpu_ms": 0.121303,
+            "wall_us_per_sampled_operation": 0.0359625322997416
+          }
+        }
+      },
+      "alias-N4096-K16-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 348.008041,
+            "after_ms": 347.522209,
+            "ratio": 0.9986039632917562,
+            "loops": 4096
+          },
+          {
+            "pair": 1,
+            "before_ms": 350.589625,
+            "after_ms": 347.41775,
+            "ratio": 0.9909527413995779,
+            "loops": 4096
+          },
+          {
+            "pair": 2,
+            "before_ms": 354.298791,
+            "after_ms": 352.791416,
+            "ratio": 0.9957454695350627,
+            "loops": 4096
+          },
+          {
+            "pair": 3,
+            "before_ms": 346.858125,
+            "after_ms": 355.563417,
+            "ratio": 1.0250975582595911,
+            "loops": 4096
+          },
+          {
+            "pair": 4,
+            "before_ms": 352.794625,
+            "after_ms": 353.582542,
+            "ratio": 1.0022333588557366,
+            "loops": 4096
+          },
+          {
+            "pair": 5,
+            "before_ms": 353.850542,
+            "after_ms": 353.753542,
+            "ratio": 0.9997258729647501,
+            "loops": 4096
+          }
+        ],
+        "paired_median_ratio": 0.9991649181282531,
+        "paired_median_ratio_bootstrap95": [
+          0.9933491054673202,
+          1.0136654585576639
+        ],
+        "before_us": 85.86233520507812,
+        "after_us": 86.22728979492189,
+        "sampled_phases": {
+          "commit_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.0032440000000000004,
+            "cpu_ms": 0.026915999999999995,
+            "wall_us_per_sampled_operation": 0.016808290155440414
+          },
+          "commit_proof_validation": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.086456,
+            "cpu_ms": 1.110627,
+            "wall_us_per_sampled_operation": 5.629305699481866
+          },
+          "commit_default_removal_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.036292,
+            "cpu_ms": 0.058754,
+            "wall_us_per_sampled_operation": 0.18804145077720205
+          },
+          "commit_transition_preflight": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.6567879999999999,
+            "cpu_ms": 0.6802090000000001,
+            "wall_us_per_sampled_operation": 3.4030466321243518
+          },
+          "commit_epoch_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.38707600000000003,
+            "cpu_ms": 0.410126,
+            "wall_us_per_sampled_operation": 2.005575129533679
+          },
+          "commit_completion": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.020832,
+            "cpu_ms": 0.043824999999999996,
+            "wall_us_per_sampled_operation": 0.1079378238341969
+          },
+          "commit_root": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.4922549999999999,
+            "cpu_ms": 1.514826,
+            "wall_us_per_sampled_operation": 7.731891191709844
+          },
+          "commit_metadata_apply": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.20649399999999996,
+            "cpu_ms": 0.22890900000000003,
+            "wall_us_per_sampled_operation": 1.0699170984455955
+          },
+          "commit_root_publication": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.041589,
+            "cpu_ms": 0.06392600000000001,
+            "wall_us_per_sampled_operation": 0.21548704663212434
+          },
+          "commit_cleanup": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.282423,
+            "cpu_ms": 1.304903,
+            "wall_us_per_sampled_operation": 6.644678756476684
+          },
+          "commit_history_collect": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 2.477661,
+            "cpu_ms": 2.502964,
+            "wall_us_per_sampled_operation": 12.837621761658031
+          },
+          "commit_provider_retire": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.670763,
+            "cpu_ms": 1.693126,
+            "wall_us_per_sampled_operation": 8.65680310880829
+          },
+          "adoption_owner_wait": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.05629300000000001,
+            "cpu_ms": 0.418357,
+            "wall_us_per_sampled_operation": 0.29167357512953374
+          },
+          "adoption_validation": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.362517,
+            "cpu_ms": 1.7205620000000001,
+            "wall_us_per_sampled_operation": 7.059673575129534
+          },
+          "adoption_provider": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.380928,
+            "cpu_ms": 0.7390050000000001,
+            "wall_us_per_sampled_operation": 1.973720207253886
+          },
+          "adoption_metadata": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.1699840000000001,
+            "cpu_ms": 1.528246,
+            "wall_us_per_sampled_operation": 6.0620932642487055
+          },
+          "adoption_proof_seal": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.060301,
+            "cpu_ms": 1.42715,
+            "wall_us_per_sampled_operation": 5.493787564766839
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.31656700000000004,
+            "cpu_ms": 0.67845,
+            "wall_us_per_sampled_operation": 1.6402435233160626
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.0035390000000000005,
+            "cpu_ms": 0.042335000000000005,
+            "wall_us_per_sampled_operation": 0.01833678756476684
+          },
+          "transaction_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.00841,
+            "cpu_ms": 0.031407000000000004,
+            "wall_us_per_sampled_operation": 0.04357512953367876
+          }
+        }
+      },
+      "real-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 316.077292,
+            "after_ms": 323.465292,
+            "ratio": 1.0233740296661362,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 321.633542,
+            "after_ms": 319.512792,
+            "ratio": 0.9934063158126711,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 323.579042,
+            "after_ms": 328.567,
+            "ratio": 1.0154149600331654,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 334.473792,
+            "after_ms": 326.524375,
+            "ratio": 0.9762330646222949,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 329.539667,
+            "after_ms": 321.688291,
+            "ratio": 0.9761747164719929,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 322.446834,
+            "after_ms": 324.755208,
+            "ratio": 1.0071589290282812,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 1.0002826224204762,
+        "paired_median_ratio_bootstrap95": [
+          0.976203890547144,
+          1.0193944948496507
+        ],
+        "before_us": 19.715145141601564,
+        "after_us": 19.782119750976562,
+        "sampled_phases": {
+          "commit_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.013049000000000002,
+            "cpu_ms": 0.10491400000000001,
+            "wall_us_per_sampled_operation": 0.016859173126614987
+          },
+          "commit_proof_validation": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.46375099999999997,
+            "cpu_ms": 0.553788,
+            "wall_us_per_sampled_operation": 0.5991614987080103
+          },
+          "commit_default_removal_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.12166,
+            "cpu_ms": 0.209966,
+            "wall_us_per_sampled_operation": 0.15718346253229976
+          },
+          "commit_transition_preflight": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.432134,
+            "cpu_ms": 0.521838,
+            "wall_us_per_sampled_operation": 0.5583126614987081
+          },
+          "commit_epoch_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.569218,
+            "cpu_ms": 0.659474,
+            "wall_us_per_sampled_operation": 0.7354237726098191
+          },
+          "commit_completion": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.06344999999999999,
+            "cpu_ms": 0.153317,
+            "wall_us_per_sampled_operation": 0.0819767441860465
+          },
+          "commit_root": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.500107,
+            "cpu_ms": 0.589917,
+            "wall_us_per_sampled_operation": 0.6461330749354005
+          },
+          "commit_metadata_apply": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.160572,
+            "cpu_ms": 0.25023100000000004,
+            "wall_us_per_sampled_operation": 0.20745736434108528
+          },
+          "commit_root_publication": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.15337,
+            "cpu_ms": 0.24299900000000002,
+            "wall_us_per_sampled_operation": 0.19815245478036175
+          },
+          "commit_cleanup": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 1.220087,
+            "cpu_ms": 1.310036,
+            "wall_us_per_sampled_operation": 1.5763397932816536
+          },
+          "commit_history_collect": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.11582400000000001,
+            "cpu_ms": 0.205463,
+            "wall_us_per_sampled_operation": 0.14964341085271318
+          },
+          "commit_provider_retire": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.8506099999999999,
+            "cpu_ms": 0.940174,
+            "wall_us_per_sampled_operation": 1.0989793281653746
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.012964000000000002,
+            "cpu_ms": 0.101373,
+            "wall_us_per_sampled_operation": 0.01674935400516796
+          },
+          "transaction_begin": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.025922000000000004,
+            "cpu_ms": 0.11521200000000001,
+            "wall_us_per_sampled_operation": 0.033490956072351426
+          },
+          "write_bytes_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.013125000000000001,
+            "cpu_ms": 0.128016,
+            "wall_us_per_sampled_operation": 0.016957364341085274
+          },
+          "write_bytes_batch_begin": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.4200490000000001,
+            "cpu_ms": 0.50812,
+            "wall_us_per_sampled_operation": 0.5426989664082689
+          },
+          "write_bytes_body": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 10.152557,
+            "cpu_ms": 10.242462,
+            "wall_us_per_sampled_operation": 13.116998708010337
+          },
+          "write_bytes_batch_finish": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 7.818377999999999,
+            "cpu_ms": 7.909466,
+            "wall_us_per_sampled_operation": 10.101263565891472
+          },
+          "write_acquire": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 8.164832,
+            "cpu_ms": 8.259231999999999,
+            "wall_us_per_sampled_operation": 10.548878552971576
+          },
+          "write_resolve": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.293207,
+            "cpu_ms": 0.38454800000000006,
+            "wall_us_per_sampled_operation": 0.3788204134366925
+          },
+          "write_publish_host": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.92983,
+            "cpu_ms": 1.022352,
+            "wall_us_per_sampled_operation": 1.2013307493540053
+          }
+        }
+      },
+      "real-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 341.456291,
+            "after_ms": 332.244125,
+            "ratio": 0.9730209510182959,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 340.307792,
+            "after_ms": 338.313,
+            "ratio": 0.9941382711566005,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 338.304375,
+            "after_ms": 341.163083,
+            "ratio": 1.0084501065054212,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 340.150541,
+            "after_ms": 342.725167,
+            "ratio": 1.0075690780688777,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 336.497208,
+            "after_ms": 345.014042,
+            "ratio": 1.0253102664673521,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 344.7735,
+            "after_ms": 345.5115,
+            "ratio": 1.0021405357430313,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 1.0048548069059544,
+        "paired_median_ratio_bootstrap95": [
+          0.9835796110874482,
+          1.0168801864863868
+        ],
+        "before_us": 20.765940338134765,
+        "after_us": 20.87061309814453,
+        "sampled_phases": {
+          "commit_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.012492,
+            "cpu_ms": 0.106085,
+            "wall_us_per_sampled_operation": 0.01613953488372093
+          },
+          "commit_proof_validation": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.460622,
+            "cpu_ms": 0.551182,
+            "wall_us_per_sampled_operation": 0.5951188630490956
+          },
+          "commit_default_removal_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.12288000000000002,
+            "cpu_ms": 0.21137899999999998,
+            "wall_us_per_sampled_operation": 0.15875968992248066
+          },
+          "commit_transition_preflight": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.349756,
+            "cpu_ms": 0.44094999999999995,
+            "wall_us_per_sampled_operation": 0.4518811369509044
+          },
+          "commit_epoch_prepare": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.8831249999999999,
+            "cpu_ms": 0.9718310000000001,
+            "wall_us_per_sampled_operation": 1.1409883720930232
+          },
+          "commit_completion": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.065749,
+            "cpu_ms": 0.15614499999999998,
+            "wall_us_per_sampled_operation": 0.08494702842377261
+          },
+          "commit_root": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.510608,
+            "cpu_ms": 0.601435,
+            "wall_us_per_sampled_operation": 0.6597002583979328
+          },
+          "commit_metadata_apply": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.10375,
+            "cpu_ms": 0.193013,
+            "wall_us_per_sampled_operation": 0.1340439276485788
+          },
+          "commit_root_publication": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.157253,
+            "cpu_ms": 0.247536,
+            "wall_us_per_sampled_operation": 0.20316925064599486
+          },
+          "commit_cleanup": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 1.1930079999999998,
+            "cpu_ms": 1.282505,
+            "wall_us_per_sampled_operation": 1.5413540051679584
+          },
+          "commit_history_collect": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.979586,
+            "cpu_ms": 1.070754,
+            "wall_us_per_sampled_operation": 1.2656149870801034
+          },
+          "commit_provider_retire": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.843115,
+            "cpu_ms": 0.9349230000000001,
+            "wall_us_per_sampled_operation": 1.089295865633075
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.012666999999999998,
+            "cpu_ms": 0.10383799999999999,
+            "wall_us_per_sampled_operation": 0.0163656330749354
+          },
+          "transaction_begin": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.025505,
+            "cpu_ms": 0.11550299999999998,
+            "wall_us_per_sampled_operation": 0.03295219638242894
+          },
+          "write_bytes_owner_wait": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.013591999999999998,
+            "cpu_ms": 0.12021599999999999,
+            "wall_us_per_sampled_operation": 0.017560723514211885
+          },
+          "write_bytes_batch_begin": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.42159599999999997,
+            "cpu_ms": 0.5116860000000001,
+            "wall_us_per_sampled_operation": 0.5446976744186046
+          },
+          "write_bytes_body": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 10.262993,
+            "cpu_ms": 10.353534,
+            "wall_us_per_sampled_operation": 13.259680878552972
+          },
+          "write_bytes_batch_finish": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 8.857661,
+            "cpu_ms": 8.948951,
+            "wall_us_per_sampled_operation": 11.444006459948321
+          },
+          "write_acquire": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 8.234128,
+            "cpu_ms": 8.329353000000001,
+            "wall_us_per_sampled_operation": 10.638408268733851
+          },
+          "write_resolve": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.29046,
+            "cpu_ms": 0.38240399999999997,
+            "wall_us_per_sampled_operation": 0.37527131782945733
+          },
+          "write_publish_host": {
+            "samples": 774,
+            "intervals": 774,
+            "wall_ms": 0.970505,
+            "cpu_ms": 1.0632460000000001,
+            "wall_us_per_sampled_operation": 1.2538824289405686
+          }
+        }
+      },
+      "real-N4096-K16-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 1012.468291,
+            "after_ms": 1000.812584,
+            "ratio": 0.9884878300845473,
+            "loops": 4096
+          },
+          {
+            "pair": 1,
+            "before_ms": 999.3115,
+            "after_ms": 1004.361583,
+            "ratio": 1.005053562377697,
+            "loops": 4096
+          },
+          {
+            "pair": 2,
+            "before_ms": 1010.432125,
+            "after_ms": 1002.372125,
+            "ratio": 0.9920232148200948,
+            "loops": 4096
+          },
+          {
+            "pair": 3,
+            "before_ms": 1001.744458,
+            "after_ms": 1010.70875,
+            "ratio": 1.0089486814011404,
+            "loops": 4096
+          },
+          {
+            "pair": 4,
+            "before_ms": 1004.326458,
+            "after_ms": 1008.028333,
+            "ratio": 1.0036859279873716,
+            "loops": 4096
+          },
+          {
+            "pair": 5,
+            "before_ms": 1023.512833,
+            "after_ms": 1006.287959,
+            "ratio": 0.9831708275220034,
+            "loops": 4096
+          }
+        ],
+        "paired_median_ratio": 0.9978545714037332,
+        "paired_median_ratio_bootstrap95": [
+          0.9858293288032753,
+          1.0070011218894188
+        ],
+        "before_us": 245.9422098388672,
+        "after_us": 245.44061791992186,
+        "sampled_phases": {
+          "commit_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003587,
+            "cpu_ms": 0.026544,
+            "wall_us_per_sampled_operation": 0.018585492227979273
+          },
+          "commit_proof_validation": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.130584,
+            "cpu_ms": 1.154323,
+            "wall_us_per_sampled_operation": 5.857948186528498
+          },
+          "commit_default_removal_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.04205,
+            "cpu_ms": 0.064373,
+            "wall_us_per_sampled_operation": 0.21787564766839376
+          },
+          "commit_transition_preflight": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.8932450000000001,
+            "cpu_ms": 0.916248,
+            "wall_us_per_sampled_operation": 4.628212435233161
+          },
+          "commit_epoch_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.39128599999999997,
+            "cpu_ms": 0.413795,
+            "wall_us_per_sampled_operation": 2.027388601036269
+          },
+          "commit_completion": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.024166,
+            "cpu_ms": 0.046129,
+            "wall_us_per_sampled_operation": 0.1252124352331606
+          },
+          "commit_root": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.5107109999999997,
+            "cpu_ms": 1.5330860000000002,
+            "wall_us_per_sampled_operation": 7.8275181347150244
+          },
+          "commit_metadata_apply": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.451579,
+            "cpu_ms": 0.474787,
+            "wall_us_per_sampled_operation": 2.3397875647668394
+          },
+          "commit_root_publication": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.041247,
+            "cpu_ms": 0.06303600000000001,
+            "wall_us_per_sampled_operation": 0.21371502590673574
+          },
+          "commit_cleanup": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.3102099999999999,
+            "cpu_ms": 1.332582,
+            "wall_us_per_sampled_operation": 6.788652849740932
+          },
+          "commit_history_collect": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.029375000000000002,
+            "cpu_ms": 0.052082,
+            "wall_us_per_sampled_operation": 0.15220207253886012
+          },
+          "commit_provider_retire": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 2.164418,
+            "cpu_ms": 2.188167,
+            "wall_us_per_sampled_operation": 11.21460103626943
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003455,
+            "cpu_ms": 0.02575,
+            "wall_us_per_sampled_operation": 0.01790155440414508
+          },
+          "transaction_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.007123000000000001,
+            "cpu_ms": 0.029708,
+            "wall_us_per_sampled_operation": 0.03690673575129534
+          },
+          "write_bytes_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.0034130000000000002,
+            "cpu_ms": 0.048002,
+            "wall_us_per_sampled_operation": 0.0176839378238342
+          },
+          "write_bytes_batch_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.109736,
+            "cpu_ms": 0.13253399999999999,
+            "wall_us_per_sampled_operation": 0.568580310880829
+          },
+          "write_bytes_body": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 40.910118,
+            "cpu_ms": 40.932076,
+            "wall_us_per_sampled_operation": 211.96952331606215
+          },
+          "write_bytes_batch_finish": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 9.05454,
+            "cpu_ms": 9.076999,
+            "wall_us_per_sampled_operation": 46.91471502590673
+          },
+          "write_acquire": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 33.093731,
+            "cpu_ms": 33.473669,
+            "wall_us_per_sampled_operation": 171.47010880829015
+          },
+          "write_resolve": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.124658,
+            "cpu_ms": 1.4919909999999998,
+            "wall_us_per_sampled_operation": 5.827243523316062
+          },
+          "write_publish_host": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 3.677023,
+            "cpu_ms": 4.042676,
+            "wall_us_per_sampled_operation": 19.051932642487046
+          }
+        }
+      }
+    }
+  },
+  "paired": {
+    "status": "MeasuredDiagnostic",
+    "labels": [
+      "before",
+      "after"
+    ],
+    "cases": {
+      "alias-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 275.4715,
+            "after_ms": 282.991084,
+            "ratio": 1.0272971396315045,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 281.297,
+            "after_ms": 281.488917,
+            "ratio": 1.0006822575427394,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 284.120334,
+            "after_ms": 283.601292,
+            "ratio": 0.9981731613760527,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 280.447167,
+            "after_ms": 297.092542,
+            "ratio": 1.0593529796647938,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 278.318375,
+            "after_ms": 282.906,
+            "ratio": 1.0164833708877468,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 285.116208,
+            "after_ms": 279.344625,
+            "ratio": 0.9797570855740338,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 1.008582814215243,
+        "paired_median_ratio_bootstrap95": [
+          0.9889651234750433,
+          1.0433250596481491
+        ],
+        "before_us": 17.143071502685544,
+        "after_us": 17.26980847167969,
+        "sampled_phases": {}
+      },
+      "alias-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 298.065333,
+            "after_ms": 292.6395,
+            "ratio": 0.9817964976155076,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 295.525958,
+            "after_ms": 298.005292,
+            "ratio": 1.0083895642087726,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 303.007291,
+            "after_ms": 298.86625,
+            "ratio": 0.9863335268721305,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 295.64125,
+            "after_ms": 294.148667,
+            "ratio": 0.9949513709605814,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 303.38875,
+            "after_ms": 310.038375,
+            "ratio": 1.0219178364392218,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 293.824167,
+            "after_ms": 300.837833,
+            "ratio": 1.0238702829369375,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 1.001670467584677,
+        "paired_median_ratio_bootstrap95": [
+          0.984065012243819,
+          1.0228940596880798
+        ],
+        "before_us": 18.118487030029296,
+        "after_us": 18.21507391357422,
+        "sampled_phases": {}
+      },
+      "alias-N4096-K16-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 353.228916,
+            "after_ms": 358.257,
+            "ratio": 1.0142346330445948,
+            "loops": 4096
+          },
+          {
+            "pair": 1,
+            "before_ms": 353.09,
+            "after_ms": 354.523625,
+            "ratio": 1.0040602254382736,
+            "loops": 4096
+          },
+          {
+            "pair": 2,
+            "before_ms": 358.140833,
+            "after_ms": 351.29275,
+            "ratio": 0.9808787985926196,
+            "loops": 4096
+          },
+          {
+            "pair": 3,
+            "before_ms": 355.428916,
+            "after_ms": 358.576333,
+            "ratio": 1.0088552643252018,
+            "loops": 4096
+          },
+          {
+            "pair": 4,
+            "before_ms": 351.909333,
+            "after_ms": 359.32375,
+            "ratio": 1.0210691115714172,
+            "loops": 4096
+          },
+          {
+            "pair": 5,
+            "before_ms": 350.98475,
+            "after_ms": 355.418667,
+            "ratio": 1.012632791025821,
+            "loops": 4096
+          }
+        ],
+        "paired_median_ratio": 1.0107440276755115,
+        "paired_median_ratio_bootstrap95": [
+          0.9924695120154465,
+          1.0176518723080061
+        ],
+        "before_us": 86.22057080078125,
+        "after_us": 87.11861169433594,
+        "sampled_phases": {}
+      },
+      "real-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 323.94525,
+            "after_ms": 323.080709,
+            "ratio": 0.9973312126045991,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 319.528541,
+            "after_ms": 328.163083,
+            "ratio": 1.0270227566306822,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 325.784792,
+            "after_ms": 321.647,
+            "ratio": 0.987299001974285,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 333.396959,
+            "after_ms": 321.180208,
+            "ratio": 0.9633567413552804,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 333.948334,
+            "after_ms": 323.754917,
+            "ratio": 0.9694760657197948,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 331.045792,
+            "after_ms": 324.290208,
+            "ratio": 0.9795932038308465,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 0.9834461029025657,
+        "paired_median_ratio_bootstrap95": [
+          0.9664164035375375,
+          1.0121769846176407
+        ],
+        "before_us": 20.044878662109376,
+        "after_us": 19.73985675048828,
+        "sampled_phases": {}
+      },
+      "real-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 339.894458,
+            "after_ms": 340.677417,
+            "ratio": 1.0023035356463506,
+            "loops": 16384
+          },
+          {
+            "pair": 1,
+            "before_ms": 339.757125,
+            "after_ms": 337.552875,
+            "ratio": 0.9935122773363473,
+            "loops": 16384
+          },
+          {
+            "pair": 2,
+            "before_ms": 337.52875,
+            "after_ms": 347.745208,
+            "ratio": 1.0302684082467048,
+            "loops": 16384
+          },
+          {
+            "pair": 3,
+            "before_ms": 341.751666,
+            "after_ms": 337.777708,
+            "ratio": 0.9883717962621432,
+            "loops": 16384
+          },
+          {
+            "pair": 4,
+            "before_ms": 343.34375,
+            "after_ms": 347.687375,
+            "ratio": 1.0126509511240556,
+            "loops": 16384
+          },
+          {
+            "pair": 5,
+            "before_ms": 340.110791,
+            "after_ms": 347.435166,
+            "ratio": 1.0215352620199574,
+            "loops": 16384
+          }
+        ],
+        "paired_median_ratio": 1.007477243385203,
+        "paired_median_ratio_bootstrap95": [
+          0.9909420367992452,
+          1.025901835133331
+        ],
+        "before_us": 20.75211331176758,
+        "after_us": 20.999529510498046,
+        "sampled_phases": {}
+      },
+      "real-N4096-K16-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_ms": 1022.93725,
+            "after_ms": 990.275167,
+            "ratio": 0.9680702965895513,
+            "loops": 4096
+          },
+          {
+            "pair": 1,
+            "before_ms": 997.543166,
+            "after_ms": 1000.990375,
+            "ratio": 1.003455699078991,
+            "loops": 4096
+          },
+          {
+            "pair": 2,
+            "before_ms": 1011.058667,
+            "after_ms": 1012.868166,
+            "ratio": 1.0017897072237847,
+            "loops": 4096
+          },
+          {
+            "pair": 3,
+            "before_ms": 1009.56425,
+            "after_ms": 1021.388459,
+            "ratio": 1.0117121906802862,
+            "loops": 4096
+          },
+          {
+            "pair": 4,
+            "before_ms": 1011.6855,
+            "after_ms": 1004.996833,
+            "ratio": 0.9933885906242602,
+            "loops": 4096
+          },
+          {
+            "pair": 5,
+            "before_ms": 1012.809083,
+            "after_ms": 1016.902416,
+            "ratio": 1.0040415642678433,
+            "loops": 4096
+          }
+        ],
+        "paired_median_ratio": 1.002622703151388,
+        "paired_median_ratio_bootstrap95": [
+          0.9807294436069058,
+          1.0078768774740647
+        ],
+        "before_us": 246.91701257324218,
+        "after_us": 246.32141101074217,
+        "sampled_phases": {}
+      }
+    }
+  }
+}

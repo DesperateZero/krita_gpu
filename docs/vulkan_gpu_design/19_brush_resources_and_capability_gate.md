@@ -11,7 +11,8 @@
 - “能解析 preset”不等于“GPU 支持”。
 - “shader 有字段”不等于运行时已经消费完整语义。
 - “资源上传成功”不等于像素结果与 CPU 一致。
-- capability gate 必须在 begin stroke 前给出整笔决定。
+- semantic capability gate 与 CPU-relative performance qualification 必须在 begin stroke、首次写入前共同给出整笔决定；
+  correctness `Supported` 不等于产品 `AutoPreferred`。
 - brush program/resource 在 epoch 内不可变。
 - tip、texture、mask 与 canvas/snapshot/derived page 竞争统一预算。
 - 首个 dab 不做同步 resource upload/pipeline build。
@@ -164,12 +165,13 @@ pipeline cache miss 不允许阻塞首个 dab。若 begin 时 program 未 Ready�
 
 ## 7. Begin Stroke Policy
 
-begin stroke 检查 program：
+begin stroke 先检查 program 的 correctness 状态，再查询与 brush/format/page-count/device-state 匹配的 performance profile：
 
-1. `Ready + Supported`：选择 GPU。
-2. `Preparing`：产品策略可以短暂排队整笔，或立即选择同一 PageStore 上的 CPU execution path。
-3. `Failed/Unsupported`：整笔 CPU fallback。
-4. `BackendUnavailable`：整笔选择成熟非 GPU backend。
+1. `Ready + Supported + AutoPreferred`：选择 GPU。
+2. `Ready + Supported + ForcedDiagnosticOnly/StaleOrUnknown`：产品整笔选择 CPU；forced GPU 只用于显式诊断。
+3. `Preparing`：产品策略可以短暂排队整笔，或立即选择同一 PageStore 上的 CPU execution path。
+4. `Failed/Unsupported`：整笔 CPU fallback。
+5. `BackendUnavailable`：整笔选择成熟非 GPU backend。
 
 策略必须：
 
@@ -178,6 +180,15 @@ begin stroke 检查 program：
 - 不在 epoch 中切换；
 - fallback 仍写同一 canonical pixel store；
 - 不因 GPU 不支持而输出近似结果。
+
+performance profile 必须以同机启用实际 SIMD/线程优化的 CPU product path 为基线，并包含编译、驻留/COW、queue、
+kernel、cache maintenance 和 commit/visibility 的完整 accelerator ETA。设备可用、资源 Ready、零拷贝或 GPU timestamp
+都不能单独取得产品 route；量化门禁服从
+[39_virtual_texture_performance_gates.md](39_virtual_texture_performance_gates.md)。
+
+性能 profile 按 39 的 M/K/X/E 区分管理、驻留算子、跨域及产品成本；条件 route 必须携带 initial exact valid replica set、
+executor/backing/access path、read/write/RMW 和 required endpoint。GPU→CPU fallback 的必要读回不能漏计；输出继续供 GPU
+使用时不强制读回。局部 route 对照从相同状态出发，产品资格仍由相同外部任务的完整 CPU-only/forced/Auto replay 决定。
 
 Auto Round/Normal 不依赖外部 bitmap resource，应作为首个总是可准备、可重放的 GPU golden program。
 
@@ -335,6 +346,7 @@ begin stroke 前稳定路由 CPU。
 ## 13. 验收门槛
 
 - begin stroke 前确定 GPU/CPU backend，epoch 中不切换。
+- correctness support 与 performance qualification 分离；GPU 劣势 profile 下不满足 39 的 bucket 在首写前整笔 CPU route。
 - 首个 dab 不同步上传 resource 或构建 pipeline。
 - PaintOp/worker 不持有跨线程 backend 裸指针。
 - resource 使用统一 Residency 和 ticket。

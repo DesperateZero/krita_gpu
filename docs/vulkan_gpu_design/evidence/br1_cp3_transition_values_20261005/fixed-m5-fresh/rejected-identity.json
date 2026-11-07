@@ -1,0 +1,11 @@
+{
+  "qualification": "Rejected; experiment stopped at first current-side SIGSEGV; only M5 first process completed",
+  "reason": "Current original fixture was not rebuilt from current public object headers before invoking fixed-M5 comparison. Ninja subsequently recompiled its cpp and relinked. Bad access occurs copying extent memory_resource from non-pointer MUTZ allocation-header magic. New public harnesses had been compiled from current/M5 headers and all16 capability runs passed.",
+  "current_pid": 10492,
+  "actual_exit": -11,
+  "reaped": true,
+  "original_runner_saved": "runner-source.py",
+  "crash_report_saved": "current-crash.ips",
+  "product_changed_to_fix": false,
+  "new_sample_batch": "fixed-m5-fresh-02, same40-pair/count/confidence/stopping rules, new freshly built current fixture identity"
+}

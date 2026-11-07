@@ -1,0 +1,13 @@
+{
+  "purpose": "D6 completion registry layout slice, not full CPU path or upstream qualification",
+  "pairs": 8,
+  "patterns": ["success", "pending-gap", "sparse-failure", "alternating"],
+  "loops": 8388608,
+  "tile_cases": ["guard-n1024-k16-b4", "alias-n1024-k16-b4", "write-n4096-k1-b4", "write-n1024-k16-b4", "write-n64-k1-b16"],
+  "tile_rate_ms": 200,
+  "minimum_window_ns": 100000000,
+  "bootstrap_seed": 606137,
+  "bootstrap_resamples": 20000,
+  "timing": "registry fixed work allocate-complete-status; tiles independent completed-throughput; no per-event latency or profiler",
+  "limits": "registry destruction/statistics outside timer; record count not bytes; pending-gap and adversarial alternating statuses mandatory; no M NI margin; no GPU/UMA/drain/product qualification"
+}

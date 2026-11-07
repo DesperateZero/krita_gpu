@@ -1,0 +1,152 @@
+{
+  "results": [
+    {
+      "arch": "arm64",
+      "actual_exit_code": 0,
+      "reaped": true,
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 24440ms"
+      ],
+      "unclassified_sites": 350,
+      "caller_groups": 67,
+      "top_callers": [
+        {
+          "owner": "_ZN11KisTileData12allocateDataEi",
+          "allocations": 5957,
+          "live_usable": 0,
+          "cumulative_usable": 42401792
+        },
+        {
+          "owner": "_ZN5boost4poolINS_33default_user_allocator_new_deleteEE18malloc_need_resizeEv",
+          "allocations": 4,
+          "live_usable": 25264128,
+          "cumulative_usable": 25264128
+        },
+        {
+          "owner": "_ZN15KisMemoryWindow12adjustWindowERK12KisChunkDataPNS_13MappingWindowES4_",
+          "allocations": 3,
+          "live_usable": 0,
+          "cumulative_usable": 4194400
+        },
+        {
+          "owner": "_ZN16KisTileDataStore13allocTileDataEiPKh",
+          "allocations": 12264,
+          "live_usable": 0,
+          "cumulative_usable": 1177344
+        },
+        {
+          "owner": "_ZN16KisTileDataStore23duplicatePinnedTileDataEP11KisTileDataPb",
+          "allocations": 11938,
+          "live_usable": 0,
+          "cumulative_usable": 1146048
+        },
+        {
+          "owner": "_ZN8LeapfrogI13ConcurrentMapIiP11KisTileData16DefaultKeyTraitsIiE18DefaultValueTraitsIS2_ELb0EEE5Table6createEy",
+          "allocations": 1668,
+          "live_usable": 0,
+          "cumulative_usable": 966320
+        },
+        {
+          "owner": "_ZN11SimpleCache4pushEiRPh",
+          "allocations": 18524,
+          "live_usable": 0,
+          "cumulative_usable": 296384
+        },
+        {
+          "owner": "_ZN23KisMutationStorageOwner8allocateEmm",
+          "allocations": 1811,
+          "live_usable": 16,
+          "cumulative_usable": 260528
+        },
+        {
+          "owner": "_ZN8LeapfrogI13ConcurrentMapIiP11KisTileData16DefaultKeyTraitsIiE18DefaultValueTraitsIS2_ELb0EEE25beginTableMigrationToSizeERS7_PNS8_5TableEy",
+          "allocations": 828,
+          "live_usable": 0,
+          "cumulative_usable": 119232
+        },
+        {
+          "owner": "_ZNK14KisImageConfig29safelyGetWritableTempLocationERK7QStringS2_b",
+          "allocations": 230,
+          "live_usable": 3296,
+          "cumulative_usable": 103504
+        }
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "actual_exit_code": 0,
+      "reaped": true,
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 22277ms"
+      ],
+      "unclassified_sites": 349,
+      "caller_groups": 67,
+      "top_callers": [
+        {
+          "owner": "_ZN11KisTileData12allocateDataEi",
+          "allocations": 5957,
+          "live_usable": 0,
+          "cumulative_usable": 42401792
+        },
+        {
+          "owner": "_ZN5boost4poolINS_33default_user_allocator_new_deleteEE18malloc_need_resizeEv",
+          "allocations": 4,
+          "live_usable": 25264128,
+          "cumulative_usable": 25264128
+        },
+        {
+          "owner": "_ZN15KisMemoryWindow12adjustWindowERK12KisChunkDataPNS_13MappingWindowES4_",
+          "allocations": 3,
+          "live_usable": 0,
+          "cumulative_usable": 4194400
+        },
+        {
+          "owner": "_ZN16KisTileDataStore13allocTileDataEiPKh",
+          "allocations": 12264,
+          "live_usable": 0,
+          "cumulative_usable": 1177344
+        },
+        {
+          "owner": "_ZN16KisTileDataStore23duplicatePinnedTileDataEP11KisTileDataPb",
+          "allocations": 11938,
+          "live_usable": 0,
+          "cumulative_usable": 1146048
+        },
+        {
+          "owner": "_ZN8LeapfrogI13ConcurrentMapIiP11KisTileData16DefaultKeyTraitsIiE18DefaultValueTraitsIS2_ELb0EEE5Table6createEy",
+          "allocations": 1670,
+          "live_usable": 0,
+          "cumulative_usable": 966496
+        },
+        {
+          "owner": "_ZN11SimpleCache4pushEiRPh",
+          "allocations": 18525,
+          "live_usable": 0,
+          "cumulative_usable": 296400
+        },
+        {
+          "owner": "_ZN23KisMutationStorageOwner8allocateEmm",
+          "allocations": 1821,
+          "live_usable": 16,
+          "cumulative_usable": 261968
+        },
+        {
+          "owner": "_ZN8LeapfrogI13ConcurrentMapIiP11KisTileData16DefaultKeyTraitsIiE18DefaultValueTraitsIS2_ELb0EEE25beginTableMigrationToSizeERS7_PNS8_5TableEy",
+          "allocations": 829,
+          "live_usable": 0,
+          "cumulative_usable": 119376
+        },
+        {
+          "owner": "_ZNK14KisImageConfig29safelyGetWritableTempLocationERK7QStringS2_b",
+          "allocations": 184,
+          "live_usable": 2304,
+          "cumulative_usable": 82096
+        }
+      ]
+    }
+  ],
+  "source_file": "physical-release-source-freeze.json",
+  "observer": "heap-vm-observer-05.cpp",
+  "paid_observed_request_usable_excess_peak": 0,
+  "full_CP1": false
+}

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "arch",
+    "-arm64",
+    "/usr/bin/env",
+    "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/build/br1-cp3-budget-limits-parent:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+    "DYLD_PRINT_LIBRARIES=1",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+    "-nocrashhandler"
+  ],
+  "pid": 30061,
+  "exit_code": 4,
+  "reaped": true,
+  "timed_out": false,
+  "totals": [
+    "Totals: 15 passed, 4 failed, 0 skipped, 0 blacklisted, 2377ms"
+  ],
+  "failing_cases": [
+    "testAutoBrushStrokeLod()",
+    "testAutoTextured17()",
+    "testMixDullCompositing()",
+    "testPredefinedBrushStrokeLod()"
+  ],
+  "selected_image_loaded": true
+}

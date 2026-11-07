@@ -1,0 +1,46 @@
+{
+  "scope": "Prepared publication, restoration, detach and recoverable-write callers; archive excluded",
+  "checks": {
+    "prepared_effects_getter_deleted": true,
+    "prepared_effects_storage_deleted": true,
+    "install_effect_output_deleted": true,
+    "publication_effect_storage_and_transfer_deleted": true,
+    "publication_empty_packet_deleted": true,
+    "detach_prepare_uses_original_record": true,
+    "detach_revalidation_and_install_share_original_check": true,
+    "detach_snapshot_copies_deleted": true,
+    "oracle_requires_no_publication_effects": true,
+    "real_abort_effect_consumer_preserved": true,
+    "real_history_collect_and_queue_pump_preserved": true,
+    "real_immediate_effect_producers_preserved": true
+  },
+  "all_passed": true,
+  "remaining_protocols": [
+    {
+      "protocol": "capture/read release progress facts",
+      "consumers": "finishCapturedReleaseLocked / finishReleasedReadLocked / finishHistoryReadLocked",
+      "reason": "Original publication claims can refuse protection removal; history-key/epoch acceptance and last-use are distinct steps. Original records prevent replay.",
+      "delete_when": "All relevant preparation/acceptance guarantees cover release, ack, cancel, close and late handles."
+    },
+    {
+      "protocol": "retirement Pending/subscription/Delay/Debt",
+      "consumers": "retireRecord / prepareWait / enqueuePendingLocked / cancelCloseAndSchedule",
+      "reason": "Physical pins/last-use, true Pending completion and subscription/Debt capacity can still refuse.",
+      "delete_when": "Readiness and admission guarantees remove those actual failure sources across the original callers."
+    },
+    {
+      "protocol": "generic effects and external completion rejection",
+      "consumers": "abort / cancel / discard / history GC; public complete; generic Pending binding",
+      "reason": "These producers retire real replicas; public invalid/foreign/duplicate tickets and explicit Pending operations remain legitimate inputs.",
+      "delete_when": "Actual consumers migrate to equivalent ownership, scheduling and identity contracts."
+    },
+    {
+      "protocol": "proof/generic metadata/overlay preparation failure and Failed/cancel",
+      "consumers": "sealPreparedPage / finishWrite / applyProjectedSequence / preparePublication / original scheduler jobs",
+      "reason": "Paid proof preparation and remaining Qt capacity are still fallible; the scheduler has no ownership-safe continuation.",
+      "delete_when": "CP1 actual capacity and CP5 ownership transfer close together with real consumers."
+    }
+  ],
+  "new_business_guarantees": false,
+  "full_cp1_complete": false
+}

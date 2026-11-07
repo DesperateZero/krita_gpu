@@ -1,0 +1,24 @@
+{
+  "command": [
+    "arch",
+    "-arm64",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+    "storeRootStorageRefusal",
+    "storeRootStorageRetained",
+    "domainAdmissionStorageRetained",
+    "domainReservationControlRetained",
+    "domainClaimPreparationRejectsBeforePhysicalMove",
+    "domainJournalCommitsAtCapacity",
+    "domainJournalSynchronizationRejectsAtCapacity",
+    "backingDomainRejectsStaleSnapshot",
+    "-nocrashhandler"
+  ],
+  "pid": 44492,
+  "exit_code": 0,
+  "totals": [
+    "Totals: 14 passed, 0 failed, 0 skipped, 0 blacklisted, 6ms"
+  ],
+  "failures": [],
+  "normal_exit": true,
+  "passed": true
+}

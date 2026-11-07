@@ -1,0 +1,21 @@
+[
+  {
+    "scope": "old D4 analysis",
+    "exception": "AttributeError: module 'statistics' has no attribute 'covariance'",
+    "source_preserved": "decompose_previous-before-compatibility.py",
+    "resolution": "Equivalent sample covariance explicitly computed; analyzed same frozen768 processes, no rerecording."
+  },
+  {
+    "scope": "P1 K1 profile fixture",
+    "actual_exit": 3,
+    "reason": "fixed safety bound reached; planned5s operation window requires more than100000 K1 operations",
+    "evidence": "profile-k1-native-pin/result.json and fixture.log; profile-run.log",
+    "resolution": "Failure retained, no K1 replacement. Continued only registered unattempted K16 via separately recorded continuation; failed K1 trace hardware labels only, never cost qualification."
+  },
+  {
+    "scope": "P1 attribution analyzer",
+    "reason": "Source-only optimized sample inline PCs classify too broadly; K1 had1879 ambiguous source-only Running samples",
+    "source_preserved": "analyze_profile-before-source-filter.py",
+    "resolution": "Count source-only as ambiguous/outside, require explicit operation API ancestor. Same two traces reanalyzed; K1 remains invalid, K16 has493 valid API-context samples. No stage time/CPU microsecond conversion."
+  }
+]

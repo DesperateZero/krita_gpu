@@ -1,0 +1,86 @@
+{
+  "product": "c19c6d83016423f4cdd7c8894e0ee7305caa6ebe",
+  "parent": "65e7d60aba9d4da5312764736157571a6b1648c5",
+  "scope": [
+    "implicit default page provider request storage failure cleanup and retry"
+  ],
+  "builds": [
+    {
+      "directory": "krita/_build-br0-cpu",
+      "architecture": "arm64;x86_64",
+      "targets": [
+        "KisPageStoreReferenceTest"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "krita/_build-br1-tsan",
+      "architecture": "arm64",
+      "targets": [
+        "KisPageStoreReferenceTest"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "runs": [
+    {
+      "file": "parent-red-arm64.txt",
+      "expected_exit_code": 1,
+      "sha256": "3ae8222c222df3abdf049506eff4811a9cd56ea5acbc04c509b42015f5834b3d",
+      "totals": {
+        "passed": 2,
+        "failed": 1,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 2
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "reference-arm64.txt",
+      "expected_exit_code": 0,
+      "sha256": "1032dbe62feafc5c465ad1d9b8583f7dc274206b5dae4b960129b40aeafa66e9",
+      "totals": {
+        "passed": 790,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 7568
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "reference-x86_64.txt",
+      "expected_exit_code": 0,
+      "sha256": "a4fd13615bf2ae5ac0ba5f288b83a5097b848954d145259450798b327df3a64a",
+      "totals": {
+        "passed": 790,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 8087
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "reference-tsan-arm64.txt",
+      "expected_exit_code": 0,
+      "sha256": "2100f62a9265bbc63a554b355dd43c45920caedf8d9a7974ff80e79d9418dd4d",
+      "totals": {
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 20
+      },
+      "thread_sanitizer_reports": 0
+    }
+  ],
+  "source_sha256": {
+    "libs/image/pagestore/KisPageStore.cpp": "dc351d05caf8eb82a0d3c330c47d43a89042011c6d05111c4d8d04afc45a889e",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp": "742c3107d079c7140520ee569eb05c08dcf3b2122ba4372b5a877ef8564009fa"
+  },
+  "diff_stat": "2 files changed, 29 insertions(+), 7 deletions(-)",
+  "pressure_rerun": false,
+  "architecture_checkpoint_counted_as_pass": false
+}

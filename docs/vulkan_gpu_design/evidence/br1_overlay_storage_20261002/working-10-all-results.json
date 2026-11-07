@@ -1,0 +1,254 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.422,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 366ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 3,
+    "duration_seconds": 53.174,
+    "totals": [
+      "Totals: 1301 passed, 3 failed, 0 skipped, 0 blacklisted, 53115ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(candidate-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(surface-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(prepared-install-and-history) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.073,
+    "totals": [
+      "Totals: 680 passed, 0 failed, 0 skipped, 0 blacklisted, 2333ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.088,
+    "totals": [
+      "Totals: 381 passed, 0 failed, 0 skipped, 0 blacklisted, 19ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.191,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 100ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.043,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 3ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 11.249,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 75ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.7,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 585ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 3,
+    "duration_seconds": 53.664,
+    "totals": [
+      "Totals: 1301 passed, 3 failed, 0 skipped, 0 blacklisted, 53560ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(candidate-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(surface-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(prepared-install-and-history) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.559,
+    "totals": [
+      "Totals: 680 passed, 0 failed, 0 skipped, 0 blacklisted, 2740ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.135,
+    "totals": [
+      "Totals: 381 passed, 0 failed, 0 skipped, 0 blacklisted, 31ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.256,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 156ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.145,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 8ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 14.426,
+    "totals": [
+      "Totals: 3 passed, 1 failed, 0 skipped, 0 blacklisted, 122ms"
+    ],
+    "failures": [
+      "FAIL!  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() Compared values are not the same"
+    ],
+    "passed": false
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "verified": "2026-09-20T11:36:49.050Z",
+  "paired_runs": 240,
+  "loader_checks": 6,
+  "analyses_byte_identical": [
+    {
+      "phase": "component",
+      "sha256": "7bfe7572b86525c6ce60350797f29f884d1f133f9ab74c74b9c9c7c548c654d5"
+    },
+    {
+      "phase": "integration",
+      "sha256": "0f59b2035400ec0d3413773f157aa67d2716545ac4c5e795ecaa0ee52e0d89a3"
+    },
+    {
+      "phase": "native",
+      "sha256": "66a6493ec29880005cdff3525037dd10d8bfa9ef13faa7f67d917a9e10c62d52"
+    }
+  ],
+  "identity_files": 203,
+  "regression": {
+    "reference-final.log": 59,
+    "read-baseline-final.log": 9,
+    "foundation-final.log": 24,
+    "tiled-final.log": 88,
+    "native-baseline-final.log": 34,
+    "vulkan-final.log": 13
+  },
+  "previous_d6_artifacts_unchanged": 460,
+  "documents": 64,
+  "local_links": 431,
+  "anchor_links": 15,
+  "vulkan_hashes": {
+    "library": "d57a02bb00004d41edb635fdbd99fd8785c02a46ef7d898ce0f8fbdbb35635bc",
+    "test": "75e4f10d38d489aebfe5ec1a85890151b2abb3f2b517e43eec24fc91c2e6c294"
+  },
+  "qualification": "D7 diagnostic/correctness only; generic read regression and native write offset unresolved; BR1-PERF active"
+}

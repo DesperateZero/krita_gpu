@@ -1,0 +1,270 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_matrix.py",
+      "--arch",
+      "arm64",
+      "--round",
+      "final-qualified-matrix-arm64"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 112.708852542,
+    "log": "final-safety-command-0.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_selected.py",
+      "--arch",
+      "arm64",
+      "--round",
+      "final-qualified-business-selected-arm64",
+      "--target",
+      "FreehandStrokeTest",
+      "--build",
+      "_build-br0-cpu",
+      "--cases",
+      "testPersistentAutoBrushStroke",
+      "testPersistentAutoBrushStrokeCancelled",
+      "testPersistentAutoBrushStrokeFailure",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 12.316361083000004,
+    "log": "final-safety-command-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_selected.py",
+      "--arch",
+      "arm64",
+      "--round",
+      "final-qualified-read-arm64",
+      "--target",
+      "KisPageStoreReadBaselineTest",
+      "--build",
+      "_build-br0-cpu",
+      "--cases"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.2141372500000074,
+    "log": "final-safety-command-2.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_selected.py",
+      "--arch",
+      "arm64",
+      "--round",
+      "final-qualified-foundation-vulkan-arm64",
+      "--target",
+      "KisVulkanFoundationContractsTest",
+      "--build",
+      "_build",
+      "--cases"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 3.7683633749999927,
+    "log": "final-safety-command-3.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_probe.py",
+      "--arch",
+      "arm64",
+      "--binary",
+      "final-install-arm64",
+      "--round",
+      "final-qualified-install-arm64-run",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 2.8065987500000062,
+    "log": "final-safety-command-4.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_probe.py",
+      "--arch",
+      "arm64",
+      "--binary",
+      "final-publication-arm64",
+      "--round",
+      "final-qualified-publication-arm64-run",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.21970216699998,
+    "log": "final-safety-command-5.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_probe.py",
+      "--arch",
+      "arm64",
+      "--binary",
+      "final-storage-arm64",
+      "--round",
+      "final-qualified-storage-arm64-run",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.2563311250000027,
+    "log": "final-safety-command-6.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_matrix.py",
+      "--arch",
+      "x86_64",
+      "--round",
+      "final-qualified-matrix-x86_64"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 143.18402562499998,
+    "log": "final-safety-command-7.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_selected.py",
+      "--arch",
+      "x86_64",
+      "--round",
+      "final-qualified-business-selected-x86_64",
+      "--target",
+      "FreehandStrokeTest",
+      "--build",
+      "_build-br0-cpu",
+      "--cases",
+      "testPersistentAutoBrushStroke",
+      "testPersistentAutoBrushStrokeCancelled",
+      "testPersistentAutoBrushStrokeFailure",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 15.862683584000024,
+    "log": "final-safety-command-8.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_selected.py",
+      "--arch",
+      "x86_64",
+      "--round",
+      "final-qualified-read-x86_64",
+      "--target",
+      "KisPageStoreReadBaselineTest",
+      "--build",
+      "_build-br0-cpu",
+      "--cases"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.5428065000000402,
+    "log": "final-safety-command-9.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_selected.py",
+      "--arch",
+      "x86_64",
+      "--round",
+      "final-qualified-foundation-vulkan-x86_64",
+      "--target",
+      "KisVulkanFoundationContractsTest",
+      "--build",
+      "_build",
+      "--cases"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.7695937080000022,
+    "log": "final-safety-command-10.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_probe.py",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "final-install-x86_64",
+      "--round",
+      "final-qualified-install-x86_64-run",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 4.2377800829999615,
+    "log": "final-safety-command-11.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_probe.py",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "final-publication-x86_64",
+      "--round",
+      "final-qualified-publication-x86_64-run",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.534194709000019,
+    "log": "final-safety-command-12.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_probe.py",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "final-storage-x86_64",
+      "--round",
+      "final-qualified-storage-x86_64-run",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.4854980000000069,
+    "log": "final-safety-command-13.log"
+  }
+]

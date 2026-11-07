@@ -136,7 +136,8 @@ GPU PaintOp adapter 应位于 paintop plugin 或独立 GPU paint plugin，而不
 - 从 `KisPaintExecutionContext` 获取当前 document session handle；
 - analyzer/dynamics 生成 backend-neutral `ResolvedDab`；
 - 调用 session stroke protocol；
-- capability 不足时在 begin stroke 前选择成熟 CPU paintop；
+- semantic capability 不足，或 CPU-relative performance profile 不具备 `AutoPreferred` 时，在 begin stroke 首次写入前选择
+  成熟 CPU paintop；
 - 不 include canvas/router/UI；
 - 不调用 Vulkan API。
 

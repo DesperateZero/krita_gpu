@@ -1,0 +1,22 @@
+{
+  "authority": "92 section 6.1; measured subset and remaining requirements, not complete CP0 census",
+  "product": "79e1c8d1ef",
+  "requirements": [
+    {"id": "known_blocker_preparation", "status": "mechanism_complete", "buckets": 20, "evidence": "summary.json mechanism"},
+    {"id": "original_product_parent_increment", "status": "all_12_blocker_buckets_confirmed_improvement", "other_8_control_buckets": "intervals_include_one_not_equivalence", "evidence": "summary.json families.parent_comparison"},
+    {"id": "hit", "status": "4_of_4_same_image_pass_subject_to_per_bucket_calibration", "evidence": "summary.json families.hit"},
+    {"id": "miss", "status": "6_pass_10_inconclusive_0_clear_over_2pct_regression", "evidence": "summary.json families.miss"},
+    {"id": "calibration", "status": "4_of_20_equivalent_16_inconclusive", "evidence": "summary.json families.calibration"},
+    {"id": "protected_fresh", "status": "4_of_4_pass_current_product", "evidence": "fixed-m5-fresh-summary.json"},
+    {"id": "protected_history", "status": "4_of_4_pass_current_product", "evidence": "fixed-m5-history-summary.json"},
+    {"id": "current_safety_and_resources", "status": "38_QTest_processes_11116_pass_0_fail_0_skip_and_6_resource_probes", "evidence": "verification.json", "limit": "Not new TSAN/platform/full CP0 qualification"},
+    {"id": "current_structure", "status": "pass_87_TUs_2211_APIs_28968_edges_27_callbacks_and_6_tool_tests", "limit": "No ratchet relaxation"},
+    {"id": "capacity_exit_generation", "status": "scoped_preflight_and_all_sample_work_checks_pass", "evidence": "raw-evidence.tar.xz preflight/runs.json", "limit": "Store metadata retained until destruction; no process-RAM or natural brush trace claim"},
+    {"id": "metadata_common_record_25pct", "status": "open_comparable_pre_reconstruction_residency_denominator_missing"},
+    {"id": "CP0_full_required_and_applicable_builds", "status": "open"},
+    {"id": "natural_producer_and_business_distribution", "status": "prior_census_no_natural_positive_trace_established"},
+    {"id": "GPU_M7_M8_business_default", "status": "not_qualified"}
+  ],
+  "M6_complete": false,
+  "persistent_default_enabled": false
+}

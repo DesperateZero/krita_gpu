@@ -1,0 +1,267 @@
+{
+  "schema": 1,
+  "batch": "br1_convergence_c6_20260923",
+  "recorded-at-utc": "2026-09-23T10:40:59.970172+00:00",
+  "scope": "Final batch-6 source and evidence; not BR1-PERF qualification",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 4170,
+      "sha256": "a615ecaf6afa9edba8ce3c94576abcbbd0aa6313679549218c3082d967dca0b9"
+    },
+    {
+      "path": "architecture.log",
+      "bytes": 186,
+      "sha256": "99a5c80339e822316c919a437e375aab0c9d44968e127aea31a078a42b09a3fa"
+    },
+    {
+      "path": "before-source.tar.gz",
+      "bytes": 872211,
+      "sha256": "d68f041737f4046a0fbb4a8a3a3b8ceec406783cb9856cc8ab6560c2356eccc5"
+    },
+    {
+      "path": "build-final-state.log",
+      "bytes": 5028,
+      "sha256": "0943aecbf511e6502dd5e2bc060db74ece1d87babfdf40d4159c9bf77dff2b98"
+    },
+    {
+      "path": "build-up-to-date.log",
+      "bytes": 65,
+      "sha256": "b9be490d53ee648b98268af7200d4d25ae79048ba40da8ecbc15c9a26b233263"
+    },
+    {
+      "path": "callgraph-final.log",
+      "bytes": 266,
+      "sha256": "b8ae518a80e232205f055612256f90e7770a77c38c18696bdbe4f39919972802"
+    },
+    {
+      "path": "checkpoint.log",
+      "bytes": 345,
+      "sha256": "5ad7cee0b699e97cb600a3f3a4a4c59f1ee667e7cd2b7212722adf936a8a189e"
+    },
+    {
+      "path": "core-verified.log",
+      "bytes": 127004,
+      "sha256": "05c8e7972d81b2fc5dfa5d7b865cd58ee6bfacf458dce2b8165e575a511a21ec"
+    },
+    {
+      "path": "intermediate-alias-test.log",
+      "bytes": 127686,
+      "sha256": "3357fe45347c2f7ba1187bd9b3dd22f10aa4a358b332f69d20049fcddf2e3edf"
+    },
+    {
+      "path": "layout-final.log",
+      "bytes": 1614,
+      "sha256": "fcb72b4c4795e34ae76abe336620233c0d08236f919c2b1e95d52dc0f26c28c5"
+    },
+    {
+      "path": "negative-gate.log",
+      "bytes": 304,
+      "sha256": "9c04229f3b482bf00af3a6cb982e47360e2b795636569adeaae6a980a71fce6c"
+    },
+    {
+      "path": "painter-verified.log",
+      "bytes": 20273,
+      "sha256": "bd2f11c8f0c5c3256ddcf4b06d4651da269181ad67ef73db3ee904e8058a5077"
+    },
+    {
+      "path": "reachability-tests.log",
+      "bytes": 562,
+      "sha256": "4816733f36e1882c8ee67184fbb878e21ac8db1153e08b36b4575775883145f8"
+    },
+    {
+      "path": "stale-graph.log",
+      "bytes": 941,
+      "sha256": "f4447766434558187932ce93401490d47393b2e7e7523ce32e7752bc6a7754af"
+    },
+    {
+      "path": "state-dispositions.json",
+      "bytes": 23269,
+      "sha256": "8c0988d4036476f57a5c2ea04ebdeb461fbbd854548071cef9e83b53d5ec8841"
+    },
+    {
+      "path": "tiles3-verified.log",
+      "bytes": 30529,
+      "sha256": "b29809fce8cd1b975d9d20163704947b4ef76d43cf1a2c244453e4ff3a3e347f"
+    }
+  ],
+  "source-and-audit": [
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "bytes": 177688,
+      "sha256": "0b6f32602d27f816a11e2cfb4a3352a93abda51ec265a10b6766e794ddf0867a"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "bytes": 50907,
+      "sha256": "12bcc1ea05386296b2fe2b7378401f8bd9a0bb92baedc1469881ce77137dde2d"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "bytes": 17151,
+      "sha256": "a287b7dceb9034f2644837e94e1656ffceb53e8ef0b93b9ffb30e7b8bad63ea1"
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "bytes": 385786,
+      "sha256": "bd2bf540e139b907473338aab397e8c74b72e381d12b6e70d0c8fbac1782e66e"
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "bytes": 221354,
+      "sha256": "57b75d8315034ff7d4eff18152efe39839148f750a771c22d80acd915ce480bc"
+    },
+    {
+      "path": "build-tools/ci-scripts/check-pagestore-architecture.py",
+      "bytes": 72416,
+      "sha256": "12e258010d812fbb5928d195f590b6fb49e8f1ae6c98249532e5c18a87161c0d"
+    },
+    {
+      "path": "build-tools/ci-scripts/generate-pagestore-callgraph.py",
+      "bytes": 45532,
+      "sha256": "07b9a95b77a3b2c2c66ee7a1d9a1fd5889f083deef308dda4197c94a944f28da"
+    },
+    {
+      "path": "build-tools/ci-scripts/tests/test_pagestore_reachability.py",
+      "bytes": 3053,
+      "sha256": "7718418fe57f11c62f5328ce72bf704c25b5c5a090b2bbb2ea27f6fd4b0bb803"
+    },
+    {
+      "path": "_build-br0-cpu/compile_commands.json",
+      "bytes": 23956305,
+      "sha256": "c4adf202073ffb8c9fa24c011d029c860f4f21718e1fa3b670914974992a2114"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+      "bytes": 24448,
+      "sha256": "20a684504f2b18b477b211b788f958dd44e726b96ac12ddc7e389577e0d3e62b"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/state-ownership.json",
+      "bytes": 15269,
+      "sha256": "b21db0004b02f51fc13ca630ea190b60ce7d9079a7c08cd4869685ebc4f8859d"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/runtime-census.json",
+      "bytes": 25028,
+      "sha256": "c1cd2b9a8f4d8af5f57ffc6da8f7ef33d5e956a94094431c01b4de4bc8e84f83"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+      "bytes": 118326,
+      "sha256": "6ac7935afd6697bdf15ac0fca942f944f013dddd3c6970a1198ff8f64792ddcb"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/convergence-start-source.json",
+      "bytes": 121828,
+      "sha256": "7313b87dd3775b600fc45abaeb59738330b5daebb0b33714b223cb96f32dfef2"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "bytes": 7453430,
+      "sha256": "d5009d21db2137688cc506f0a21cee8d9be89ebf465f085d8b480207eebc578f"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "bytes": 655880,
+      "sha256": "ef87088927f1d4d8df8fbfc5f7711f0e336b2affdb6d09894ff1c93f12b7d177"
+    },
+    {
+      "path": "_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "bytes": 279928,
+      "sha256": "53727641b17228892dfa3c6f4b27810ecd9affcd063f66c33f0b40bd3ddf4d49"
+    },
+    {
+      "path": "_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "bytes": 2224392,
+      "sha256": "8ed38aa90e5acd93031ac4005b493ccf0fb10c6490948b8f871de824b2911c53"
+    },
+    {
+      "path": "_build-br0-cpu/bin/KisPageStoreReadBaselineTest",
+      "bytes": 322144,
+      "sha256": "1b7ca39394d240ea21e04ad28a88cec96463bc01c8846a1223d725358ab1a505"
+    },
+    {
+      "path": "_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "bytes": 442896,
+      "sha256": "38b6a47aa563c392c8216d0d44b60d14d240900a1bcaca3affdf51b0e12ce434"
+    },
+    {
+      "path": "_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "bytes": 1482008,
+      "sha256": "1caf36a9f55d51d2b7a7b09d2541ac463a6c69372c478eadeb7227835218e568"
+    },
+    {
+      "path": "_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "bytes": 343440,
+      "sha256": "9eeddd561f958a23ece0d3dbaa0bbc8b7d0de9ac06f169ef20d105f2c842a35f"
+    },
+    {
+      "path": "_build-br0-cpu/bin/kis_painter_test",
+      "bytes": 655488,
+      "sha256": "1c7317ae2b248df95a8473472ee70a4512c88207634fd6816f4b8dbbc4caa793"
+    },
+    {
+      "path": "_build-br0-cpu/bin/kis_tiled_data_manager_test",
+      "bytes": 1142552,
+      "sha256": "52c87f4a3e04dbf6df85a194b93eaa7cbbdd2b9f3b20c3f81856955d3997ca28"
+    },
+    {
+      "path": "_build-br0-cpu/bin/libkritaimage.21.0.0.dylib",
+      "bytes": 24944584,
+      "sha256": "bf4dc660c9f5444c9c77c6c83c2f089b819485420ede199b2afed7879c05b366"
+    }
+  ],
+  "design-documents": [
+    {
+      "path": "docs/vulkan_gpu_design/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md",
+      "bytes": 89358,
+      "sha256": "c7a6b0e9e4ea9f7bc79025f539dc8ddcbb7e1e2d73714738ab3e7f62d3eb1001"
+    },
+    {
+      "path": "docs/vulkan_gpu_design/69_br1_pagestore_decomposition_and_intrusion_audit_20260921.md",
+      "bytes": 28697,
+      "sha256": "26c0e67c8fcce6878cab5d76caa5ff9158d44d07aadaa05e580cbe6cf49cc0e6"
+    },
+    {
+      "path": "docs/vulkan_gpu_design/84_br1_full_optimization_convergence_and_cleanup_20260923.md",
+      "bytes": 30182,
+      "sha256": "8972e6f4fb02089656bb1592a7e3fb9c888d1843a20b53e26e14dc2c732461ab"
+    }
+  ],
+  "diff-against-batch-start": {
+    "production": {
+      "added": 152,
+      "deleted": 247,
+      "net": -95
+    },
+    "tests": {
+      "added": 58,
+      "deleted": 9,
+      "net": 49
+    },
+    "checker": {
+      "added": 13,
+      "deleted": 4,
+      "net": 9
+    },
+    "cumulative-production-net": -2300,
+    "pagestore-header-source-lines": 31249
+  },
+  "final-tests": {
+    "core-qt-cases": 932,
+    "core-ctest-suites": 7,
+    "painter": 99,
+    "tiles3": 334,
+    "reachability-fixtures": 6,
+    "runtime-arch": "arm64",
+    "build-arches": [
+      "arm64",
+      "x86_64"
+    ],
+    "failures": 0,
+    "performance-qualification": false
+  }
+}

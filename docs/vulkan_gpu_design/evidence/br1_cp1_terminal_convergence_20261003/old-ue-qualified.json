@@ -1,0 +1,88 @@
+{
+  "requested_pids": [
+    32658,
+    43034,
+    48549,
+    59123,
+    70089,
+    83020,
+    87052,
+    87095,
+    88291,
+    91827
+  ],
+  "observed": [
+    {
+      "pid": 32658,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "09:16:51",
+      "command": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest -nocrashhandler"
+    },
+    {
+      "pid": 43034,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "01-10:32:58",
+      "command": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest ledgerBackingNodesRefusedBeforePhysicalResult ledgerBackingRegistrationExcludesDomainMovement retirementRecordTransfersAtCapacity retirementRecordRefusedBeforePhysicalResult domainJournalCommitsAtCapacity lastUseAtMetadataCapacity"
+    },
+    {
+      "pid": 48549,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "08:45:28",
+      "command": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest -nocrashhandler"
+    },
+    {
+      "pid": 59123,
+      "ppid": 66413,
+      "state": "UEs",
+      "elapsed": "19:34:03",
+      "command": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/FreehandStrokeTest testMatchedCpuBaseline -nocrashhandler"
+    },
+    {
+      "pid": 70089,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "19:11:23",
+      "command": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test -nocrashhandler"
+    },
+    {
+      "pid": 83020,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "18:40:58",
+      "command": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test testPageStoreChangedStorage:B1-K257-owner1-outcome0 -nocrashhandler"
+    },
+    {
+      "pid": 87052,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "07:19:56",
+      "command": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-01/control race"
+    },
+    {
+      "pid": 87095,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "02-01:03:13",
+      "command": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest synchronousProviderResultsAtCapacity writeTransferRejectsMismatchedOperation retirementResultBindsAtCapacity retirementRecordTransfersAtCapacity"
+    },
+    {
+      "pid": 88291,
+      "ppid": 1,
+      "state": "UE",
+      "elapsed": "03:55:06",
+      "command": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test -nocrashhandler"
+    },
+    {
+      "pid": 91827,
+      "ppid": 66413,
+      "state": "UEs",
+      "elapsed": "01-01:18:49",
+      "command": "krita/_build-br0-cpu/bin/FreehandStrokeTest testPersistentAutoBrushStrokePressure testPersistentAutoBrushStrokePressureCancelled -nocrashhandler"
+    }
+  ],
+  "count": 10,
+  "note": "Select numeric PID, exclude the ps/rg wrapper present in raw final capture; read only, no signal sent."
+}

@@ -1,0 +1,11 @@
+# 安全反例后的事前修订
+
+候选v0 image 5d157894在ARM完整Mutation的overlayStorageAtCapacity挂起。sample明确显示collectPassLocked → visitPageKeys（持shard锁）→ requestKeyLocked → historySlice等待同一非递归锁。人工SIGTERM结束PID25449，驱动回收并报告失败；没有运行产品确认。原candidate、safety-arm64、日志和sample完整保留。不能将此记录写成通过或环境噪声。
+
+原H07 caller清单虽然列入rescan，但漏审了visitPageKeys回调的锁上下文。这是方案/审查失误；不是history准入思想本身不合法，也不能让安全测试通过数掩盖它。
+
+修订：原requestKeyLocked增加内部inspectHistory参数，普通consumer默认为true；仅collectPassLocked的metadata.visitPageKeys回调显式false，避免进入metadata。false时保留原Work分配/拒绝/rescan语义；不引入借用页记录、解锁迭代、额外缓存或owner。压力恢复路径允许空Work成本，不能声称所有环境都完全删除空任务。已有Work照旧不查询。
+
+H01/H02/H05/H07索引补KisPageHistoryCollector_p.h签名及callback锁上下文。两种上下文都保持PageStore owner，visit额外持metadata shard。原容量拒绝测试就是本反例的回归测试，不增加镜像mock。H06仍检验空历史→后续真历史→最后读者释放。
+
+主fixture无该refusal路径，事前0.2–1.0ms/δ0.1ms预测保持；探索原型只支持普通路径，完整修订后的产品是否兑现由独立确认判断。candidate-r1重新冻结源码/库，safety-r1两架构8组重跑；全部通过后才运行原定64个确认过程和Fresh/H4。原样本数、统计和退出规则不变。若再出现合同反例，继续保留证据并修复；不扩性能样本。

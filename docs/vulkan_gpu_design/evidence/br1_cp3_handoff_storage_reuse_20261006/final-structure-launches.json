@@ -1,0 +1,46 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/generate-pagestore-callgraph.py",
+      "--compile-commands",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/compile_commands.json",
+      "--jobs",
+      "6"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 52.037498708,
+    "log": "final-structure-command-0.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/check-pagestore-architecture.py",
+      "--write-baseline"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 4.059683457999995,
+    "log": "final-structure-command-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/tests",
+      "-p",
+      "test_pagestore*.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.07739008299999739,
+    "log": "final-structure-command-2.log"
+  }
+]

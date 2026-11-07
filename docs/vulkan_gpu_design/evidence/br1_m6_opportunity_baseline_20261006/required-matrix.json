@@ -1,0 +1,80 @@
+{
+  "authority": "92 section 6.1; this is the measured subset plus explicit remaining requirements, not a complete CP0 census",
+  "product": "f0c40a5d195f1c20a0f915faaef18b1f3ee5b575",
+  "requirements": [
+    {
+      "id": "hit",
+      "status": "4_of_4_same_image_pass_production_qualification_pending_calibration",
+      "evidence": "summary.json families.hit"
+    },
+    {
+      "id": "miss",
+      "status": "fail",
+      "passed": 3,
+      "buckets": 16,
+      "clear_regressions": 12,
+      "inconclusive": 1,
+      "evidence": "summary.json families.miss"
+    },
+    {
+      "id": "calibration",
+      "status": "equivalence_not_established",
+      "passed": 1,
+      "buckets": 8,
+      "evidence": "summary.json families.calibration"
+    },
+    {
+      "id": "protected_fresh",
+      "status": "pass_current_unmodified_product",
+      "buckets": 4,
+      "evidence": "fixed-m5-fresh-summary.json"
+    },
+    {
+      "id": "protected_history",
+      "status": "pass_current_unmodified_product",
+      "buckets": 4,
+      "evidence": "fixed-m5-history-summary.json"
+    },
+    {
+      "id": "targeted_safety",
+      "status": "1832_pass_0_fail_0_skip",
+      "evidence": "preflight/runs.json; original and selection images, both architectures",
+      "limit": "Not a new full QTest/TSAN/platform/configuration matrix"
+    },
+    {
+      "id": "capacity_and_exit",
+      "status": "pass_scoped_provider_payload_controls",
+      "evidence": "summary.json preflight.capacity",
+      "limit": "Provider payload zero after close, Store metadata retained until destruction; not a total process RAM claim"
+    },
+    {
+      "id": "generation_consumption",
+      "status": "confirmed_scoped_four_round_fixture",
+      "evidence": "summary.json preflight.generations",
+      "limit": "on hits [16,0,0,0]; no real brush trace"
+    },
+    {
+      "id": "same_product_safety_and_structure",
+      "status": "inherited_exact_source_and_runtime_hashes",
+      "evidence": "prior-identity.json",
+      "limit": "Prior scope only; no new full required qualification"
+    },
+    {
+      "id": "metadata_common_record_25pct",
+      "status": "open_pre_reconstruction_comparable_denominator_missing"
+    },
+    {
+      "id": "CP0_full_required_and_applicable_builds",
+      "status": "open"
+    },
+    {
+      "id": "natural_producer_and_business_distribution",
+      "status": "source_census_done_natural_positive_trace_not_established"
+    },
+    {
+      "id": "GPU_M7_M8_business_default",
+      "status": "not_qualified"
+    }
+  ],
+  "M6_complete": false
+}

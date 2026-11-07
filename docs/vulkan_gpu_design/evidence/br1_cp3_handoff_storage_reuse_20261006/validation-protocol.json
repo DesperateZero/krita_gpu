@@ -1,0 +1,160 @@
+{
+  "scope": "Original prepared handoff slot storage reuse",
+  "parent": "0a00bd3fe3fe71e44c04b987f9558bcd37f00dc6",
+  "source_migration": [
+    "H1 original changes buffer transfer",
+    "H2 detached target node rekey/reinsert",
+    "H3 rollback/cancel/generic/last release"
+  ],
+  "safety": "Original 38 QTest processes and 6 allocation/install/storage probes on both architectures; directed warm reuse, simultaneous claims and cancelled retries",
+  "quantity": {
+    "product": "0a00bd3fe3fe71e44c04b987f9558bcd37f00dc6",
+    "question": "Test removal of two repeated handoff-only allocations per reused slot; retain actual physical capacity and final free",
+    "arch": "arm64",
+    "public_rows": [
+      [
+        64,
+        1,
+        4,
+        1
+      ],
+      [
+        1024,
+        16,
+        4,
+        1
+      ],
+      [
+        64,
+        16,
+        4,
+        1
+      ]
+    ],
+    "native_rows": [
+      [
+        "fresh",
+        1
+      ],
+      [
+        "handoff",
+        1
+      ],
+      [
+        "fresh",
+        16
+      ],
+      [
+        "handoff",
+        16
+      ]
+    ],
+    "blocks": 2,
+    "order": [
+      [
+        "control",
+        "trace"
+      ],
+      [
+        "trace",
+        "control"
+      ]
+    ],
+    "total_processes": 28,
+    "public_endpoint": "Original public scanline write, original N-page setup/warm read. Trace first write; disable for 64 warm writes; trace one later write, original pixel/extent validation and manager destruction. Work counters verify both captured writes independently.",
+    "native_endpoint": "Original native selector fixture, one exact validation view, N=K/H0/B4, complete transaction/beginWrite/seal/canonical commit, validation and close. One operation per process; Fresh and handoff retain original copy/reuse/physical delta/old/new checks.",
+    "trace": "One mechanically instrumented copy of budget TU; original 374 other image objects reused. Fixed preallocated global event array, no per-entry clocks. Capture all threads, separate measured main thread and phases. Each entry retains stack and object address/capacity where available. All trace timings excluded from performance conclusions.",
+    "limits": "Trace changes concurrency and allocation lifetime timing. First and later single-operation counts are not the prior 250 ms steady averages. All-thread phase is a temporal window, not ownership. Address matching uses event order and rejects ambiguous reuse. Same-thread unmatched allocations are not automatically escapes; pair all observed frees and keep unclosed tails explicit. Deref count is not allocation/free count. No claim of safe removability from call count alone.",
+    "stopping": "Exactly 28 sequential processes after build; no concurrent build, benchmark or profiler. Stop and retain any wrong loaded image, correctness/exit/identity failure or trace overflow. Do not adapt sample size or change performance gates. Any repaired failed batch is separate and explicitly documented.",
+    "analysis": "Counts and actual allocation/free/capacity/lifetime preserved; full scans vs metadata checks vs cache refresh/bucket work distinguished. No instrumented timing qualification.",
+    "source_identity": "0a00bd3fe3fe71e44c04b987f9558bcd37f00dc6 plus reviewed diff"
+  },
+  "performance": {
+    "parent_comparison": {
+      "buckets": [
+        [
+          "arm64",
+          1
+        ],
+        [
+          "arm64",
+          16
+        ],
+        [
+          "x86_64",
+          1
+        ],
+        [
+          "x86_64",
+          16
+        ]
+      ],
+      "pairs": 40,
+      "rate_ms": 250,
+      "statistic": "20 predeclared order-balanced two-pair blocks, median paired log ratios,50000 bootstrap blocks seed260926; throughput and threadCPU/op separately; descriptive two-sided95% intervals per bucket, no family qualification",
+      "frozen_parent_image": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/parent-runtime/libkritaimage.21.0.0.dylib"
+    },
+    "fixed_m5_fresh": "unchanged40 pairs/four buckets, one-sided98.75% lower>=0.98",
+    "fixed_m5_history": "unchanged40 pairs/four buckets, one-sided98.75% lower>=0.98",
+    "native_handoff": "unchanged40 pairs/four buckets, one-sided98.75% reduction lower K1>=20%, K16>=30%",
+    "sequential_only": true,
+    "no_optional_extension": true,
+    "errors": "retain all failures; stop scope on process/correctness/identity failure; repair in separately named batch",
+    "native_parent_comparison": {
+      "buckets": [
+        [
+          "arm64",
+          1,
+          "fresh"
+        ],
+        [
+          "arm64",
+          1,
+          "handoff"
+        ],
+        [
+          "arm64",
+          16,
+          "fresh"
+        ],
+        [
+          "arm64",
+          16,
+          "handoff"
+        ],
+        [
+          "x86_64",
+          1,
+          "fresh"
+        ],
+        [
+          "x86_64",
+          1,
+          "handoff"
+        ],
+        [
+          "x86_64",
+          16,
+          "fresh"
+        ],
+        [
+          "x86_64",
+          16,
+          "handoff"
+        ]
+      ],
+      "pairs": 40,
+      "warmup": 8,
+      "measured": 64,
+      "statistic": "20 balanced two-pair blocks, two-sided95% bootstrap CI of paired latency reduction, 50000 resamples seed260926; descriptive not family qualification",
+      "secondary_contrast": "Per arch/K, paired handoff saving minus paired Fresh saving and difference of their log parent/current ratios, aggregated in the same20 order blocks; two-sided95%50000 bootstrap blocks seed260926 after primary rows. Descriptive patch-specific contrast, not stage qualification."
+    }
+  },
+  "prediction": {
+    "necessary": "K ownership/class/identity decisions, reservations, physical claims and handoff/install outcomes unchanged. Storage capacity remains charged until physical free.",
+    "native_K16": "32 change-vector/target-node requests to 2, removing30 physical allocations and30 eventual frees;60 parent/local metadata preparations and60 settlements removed. K1 unchanged. Original slot count/size unchanged.",
+    "time": "No calibrated per-request native CPU price. No positive lower bound or claim of closing22.49/33.50us gap. Test handoff-specific incremental latency, Fresh matched control and original gates; do not start further container changes inside this package.",
+    "exit": "All intended slot consumers migrated, quantity model explained, original safety + fixed comparisons finished. Stop regardless of stage gate result.",
+    "capacity_boundary": "Reuse only original one-element changes capacity; preserve cold shrinkage for larger previous generic batches. No changes to measured endpoints/sample count; refinement occurred before any performance sample."
+  }
+}

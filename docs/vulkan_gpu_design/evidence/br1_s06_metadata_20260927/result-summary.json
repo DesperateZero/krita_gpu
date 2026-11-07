@@ -1,0 +1,39 @@
+{
+  "scope": "S06 recoverable write logical transition and prepared metadata installation; cumulative CPU correctness, not production physical handoff/stage/performance qualification",
+  "final_run": "checks-01",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "4f48f935f83ba1fde99e764eb6626c65ad25d6ed2d6b3a75a36bb5f705a6bd62",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      1976,
+      0,
+      0
+    ],
+    "x86_64": [
+      1976,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    3952,
+    0,
+    0
+  ],
+  "new_reference_cases_per_architecture": 229,
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 21,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1481,
+    "call_edges": 14126,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "allocator_summary": "allocator-summary.json",
+  "production_physical_handoff": false,
+  "stage_or_performance_qualification": false
+}

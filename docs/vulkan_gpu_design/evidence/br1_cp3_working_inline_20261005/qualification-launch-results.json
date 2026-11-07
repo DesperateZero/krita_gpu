@@ -1,0 +1,74 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/run_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 128.98687091600002
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/fixed-m5-fresh-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.42834004100001266
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/run_fixed_m5_history.py",
+      "--round",
+      "fixed-m5-history"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 129.209402167
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-history",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/fixed-m5-history-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.4379614590000074
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/run_latency.py",
+      "--round",
+      "latency-paired"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 45.249879667000016
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/analyze_latency.py",
+      "--round",
+      "latency-paired",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_working_inline_20261005/latency-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.3079691249999996
+  }
+]

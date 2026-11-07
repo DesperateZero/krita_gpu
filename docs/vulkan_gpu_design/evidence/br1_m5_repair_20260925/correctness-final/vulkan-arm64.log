@@ -1,0 +1,18 @@
+********* Start testing of KisVulkanFoundationContractsTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisVulkanFoundationContractsTest::initTestCase()
+PASS   : KisVulkanFoundationContractsTest::completionRegistryRejectsConflictingTerminalState()
+PASS   : KisVulkanFoundationContractsTest::surfaceRegistryAllocatesStableIdentity()
+PASS   : KisVulkanFoundationContractsTest::codecRegistryRejectsAmbiguousClaims()
+PASS   : KisVulkanFoundationContractsTest::backendRegistryRevokesExactGeneration()
+PASS   : KisVulkanFoundationContractsTest::deviceServiceRequiresCompleteFoundationEvidence()
+PASS   : KisVulkanFoundationContractsTest::shaderCatalogSealsOnlyCompleteAssets()
+PASS   : KisVulkanFoundationContractsTest::memoryLedgerEnforcesHardBudget()
+PASS   : KisVulkanFoundationContractsTest::pipelineRepositoryEnforcesStateOrder()
+PASS   : KisVulkanFoundationContractsTest::pageBindingTableRejectsForeignProviderEpoch()
+PASS   : KisVulkanFoundationContractsTest::pageProviderFailsClosedBeforeBr3()
+PASS   : KisVulkanFoundationContractsTest::coordinatorAndWsiValidateGenerations()
+PASS   : KisVulkanFoundationContractsTest::retirementQueueRequiresOneGpuTimelineDomain()
+PASS   : KisVulkanFoundationContractsTest::cleanupTestCase()
+Totals: 14 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms
+********* Finished testing of KisVulkanFoundationContractsTest *********

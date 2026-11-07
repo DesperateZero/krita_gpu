@@ -1,0 +1,18 @@
+{
+  "status": "Finite read-only whole-owner review; no provider replacement selected or implemented",
+  "source_head": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "remaining_gates": "Fresh K16 current/M5 ratios0.906407/0.978972, lower0.863452/0.964833 below0.98; native handoff K16 reductions12.60%/13.48%, lower11.37%/12.56% below30%; K1 below20%. H4 and Fresh K1 pass.",
+  "current_evidence": "Original public N1024/K16/H0/B4 one-scanline writeBytes steady loop, real init marker, unchanged6s run/3s sample, actual write frames and13 exact provider-allocation/adoption/mutation context rows. All-thread exclusive127 fitsLocked,29 storage-owner deref and other fee/free frames only localize consumers; no causal fractions.",
+  "original_responsibility": "Original Tiles3 provider cold PreparedAdoption through physical payload tracking, TileDataStore residency registration, stable CPU binding/handle adoption and eventual physical retirement/free",
+  "source_boundaries": [
+    "KisTiles3PageReplicaProvider::Private::allocate/prepareAdoption serve synchronous Fresh copies, full payloads, source adoption and initial/external adoption",
+    "PreparedAdoption owns the original AllocationMap node, ResidencyObserver::PreparedPayload and original prepared TileDataStore registration; stable binding/shared control is prepared before physical pixels",
+    "ResidencyObserver PayloadMap/SlotMap and the original resident list retain physical identities and domain admissions. Actual tile/physical lifetime differs from logical handles and aliases; do not merge cardinalities or delete an index without all readers/retire/free consumers",
+    "Tiles3Allocation's original shared binding can outlive a provider-map entry; exact readers, physical retag, lease release and provider teardown must retain that original lifetime",
+    "Original budget admission, failed allocation/adoption rollback and CP1 physical fee/retirement contracts remain required"
+  ],
+  "finite_next_endpoint": "Audit all original allocation/adoption/registration/binding/retire consumers and real charged capacity. Choose an equivalent responsibility shape only after proving needed identity relations, stable addresses, pin/last-use protection, rejection and cold physical free. Seek reduced repeated preparation work on the actual failing public write loop, without adding an owner, wrapper, bypass flag or speculative cache.",
+  "coupled_denominators": "A Fresh-only improvement may reduce handoff's relative advantage. Preserve and rerun both original protected Fresh and native handoff gates after an actual implementation; absolute improvements do not replace either threshold.",
+  "not_reopened": "This delivered candidate packet, accepted metadata scratch deletion, source claim ownership, authority/backing batches, paid working-value transfer, sparse root and CP1/CP2 policy closures. No scalar limiter tuning, new recovery domain, long/OFF/TSAN rerun or new probe framework.",
+  "not_claimed": "No selected provider design, formal M6/M7/M8 or BR1-PERF pass. Common metadata pre-refactor used/reserved/slack25% denominator and CP0 full required scenes/formal samples remain open. Requests, sampled frames and cross-round ratios do not deduct effort estimates or predict real brush FPS."
+}

@@ -1,0 +1,14 @@
+{
+  "scope": "Fine management attribution of the actual public Fresh K16 loop; diagnostic only",
+  "product": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "m5": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "fixture": "Original kis_tiles3_cpu_baseline_test:testSharedBaseline:write-n1024-k16-b4",
+  "arch": "arm64",
+  "duration_ms": 6000,
+  "blocks": 2,
+  "order": [["m5","current"],["current","m5"]],
+  "profiler": "xctrace Time Profiler CPU sampling, attach after actual init marker +500ms; 2s recording; no concurrent build or benchmark",
+  "stopping": "Exactly two blocks if profiler works; process/identity/correctness failure stops and is retained. Unavailable profiler is recorded and triggers a targeted diagnostic fallback, never a qualification claim.",
+  "attribution": "Filter actual write loop by stack and thread. Main thread running CPU samples only for CPU shares; separate background. Exclusive group each sample once; inclusive caller context separate. Retain unsymbolicated samples and report coverage.",
+  "limits": "CPU sampling is not wall or lock-wait timing, no formal confidence pass or substitution into the frozen 40-pair estimator. Counts or samples alone do not prove causal removable work."
+}

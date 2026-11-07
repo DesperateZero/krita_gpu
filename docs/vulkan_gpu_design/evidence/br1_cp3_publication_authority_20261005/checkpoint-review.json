@@ -1,0 +1,24 @@
+{
+  "responsibility": "Original publication candidate owns exact authority snapshot construction, immutable lookup and final paid free",
+  "authority": "Original projected working versions, Data arrays and shard revision/activity/slot reservations",
+  "equivalent_changes": [
+    "Replace per-version charged hash nodes and bucket allocation with one Data-owned paid vector",
+    "Reserve actual first-page authority count; preserve standard vector growth for subsequent pages",
+    "One final identity sort, binary point queries; recoverable base/target still derived from installRecords"
+  ],
+  "removed": [
+    "Data VersionHash type",
+    "unordered_map field and constructor",
+    "insert_or_assign over already-unique candidate pages/versions",
+    "Unused unordered_map include"
+  ],
+  "preserved": [
+    "Every authority formerly copied by the map, including unrelated projected versions",
+    "Full version equality includes surface, signed row/column, generation and default revision",
+    "Original cancel/move/retry/install/cleanup and actual capacity payment; no deferred installation growth"
+  ],
+  "uniqueness": "preparePublicationImpl rejects repeated page keys before storing an entry; include()/shared state policy preserves unique version identities within each page; distinct pages cannot share version identity",
+  "growth_justification": "Net+6 production lines replace independent hash node/bucket lifetimes with a single contiguous owner. The array is dynamically allocated only for real authority contents; no unused inline capacity or persistent per-page field is added.",
+  "new_guarantees": [],
+  "exit": "All prepare kinds and the public authority getter use the same representation. Full M6 still depends on unchanged statistical, residency and CP0 gates."
+}

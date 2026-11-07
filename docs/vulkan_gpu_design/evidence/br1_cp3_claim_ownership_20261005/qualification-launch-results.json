@@ -1,0 +1,74 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/run_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 125.300262042
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/fixed-m5-fresh-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.42014674999998647
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/run_fixed_m5_history.py",
+      "--round",
+      "fixed-m5-history"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 125.22132620899998
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-history",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/fixed-m5-history-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.4370593339999971
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/run_latency.py",
+      "--round",
+      "latency-paired"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 47.86767312500001
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/analyze_latency.py",
+      "--round",
+      "latency-paired",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_claim_ownership_20261005/latency-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.3236768750000465
+  }
+]

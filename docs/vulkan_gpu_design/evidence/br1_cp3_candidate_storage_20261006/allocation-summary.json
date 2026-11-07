@@ -1,0 +1,184 @@
+{
+  "processes": 16,
+  "samples": 128,
+  "all_original_semantic_payload_before_new_and_close_checks": true,
+  "observations": [
+    {
+      "architecture": "arm64",
+      "variant": "fresh",
+      "pages": 1,
+      "parent": {
+        "allocations": 55,
+        "allocation_bytes": 15720,
+        "free_counts_observed": [
+          28,
+          29
+        ]
+      },
+      "current": {
+        "allocations": 52,
+        "allocation_bytes": 15864,
+        "free_counts_observed": [
+          25,
+          26
+        ]
+      },
+      "requests_removed": 3,
+      "bytes_delta": 144
+    },
+    {
+      "architecture": "arm64",
+      "variant": "fresh",
+      "pages": 16,
+      "parent": {
+        "allocations": 495,
+        "allocation_bytes": 194768,
+        "free_counts_observed": [
+          175,
+          191
+        ]
+      },
+      "current": {
+        "allocations": 490,
+        "allocation_bytes": 192928,
+        "free_counts_observed": [
+          173,
+          189
+        ]
+      },
+      "requests_removed": 5,
+      "bytes_delta": -1840
+    },
+    {
+      "architecture": "arm64",
+      "variant": "handoff",
+      "pages": 1,
+      "parent": {
+        "allocations": 50,
+        "allocation_bytes": 16912,
+        "free_counts_observed": [
+          35
+        ]
+      },
+      "current": {
+        "allocations": 44,
+        "allocation_bytes": 17200,
+        "free_counts_observed": [
+          29
+        ]
+      },
+      "requests_removed": 6,
+      "bytes_delta": 288
+    },
+    {
+      "architecture": "arm64",
+      "variant": "handoff",
+      "pages": 16,
+      "parent": {
+        "allocations": 371,
+        "allocation_bytes": 222336,
+        "free_counts_observed": [
+          258
+        ]
+      },
+      "current": {
+        "allocations": 318,
+        "allocation_bytes": 222800,
+        "free_counts_observed": [
+          208
+        ]
+      },
+      "requests_removed": 53,
+      "bytes_delta": 464
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "fresh",
+      "pages": 1,
+      "parent": {
+        "allocations": 55,
+        "allocation_bytes": 15720,
+        "free_counts_observed": [
+          28,
+          29
+        ]
+      },
+      "current": {
+        "allocations": 52,
+        "allocation_bytes": 15864,
+        "free_counts_observed": [
+          25,
+          26
+        ]
+      },
+      "requests_removed": 3,
+      "bytes_delta": 144
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "fresh",
+      "pages": 16,
+      "parent": {
+        "allocations": 495,
+        "allocation_bytes": 194768,
+        "free_counts_observed": [
+          175,
+          191
+        ]
+      },
+      "current": {
+        "allocations": 490,
+        "allocation_bytes": 192928,
+        "free_counts_observed": [
+          173,
+          189
+        ]
+      },
+      "requests_removed": 5,
+      "bytes_delta": -1840
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "handoff",
+      "pages": 1,
+      "parent": {
+        "allocations": 50,
+        "allocation_bytes": 16912,
+        "free_counts_observed": [
+          35
+        ]
+      },
+      "current": {
+        "allocations": 44,
+        "allocation_bytes": 17200,
+        "free_counts_observed": [
+          29
+        ]
+      },
+      "requests_removed": 6,
+      "bytes_delta": 288
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "handoff",
+      "pages": 16,
+      "parent": {
+        "allocations": 371,
+        "allocation_bytes": 222336,
+        "free_counts_observed": [
+          258
+        ]
+      },
+      "current": {
+        "allocations": 318,
+        "allocation_bytes": 222800,
+        "free_counts_observed": [
+          208
+        ]
+      },
+      "requests_removed": 53,
+      "bytes_delta": 464
+    }
+  ],
+  "qualification": "Whole first-operation malloc-family request diagnostics with frozen same-ABI parent. Cumulative requests/bytes are not common used/reserved/slack resident memory or causal timing gains."
+}

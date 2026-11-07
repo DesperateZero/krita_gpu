@@ -1,0 +1,87 @@
+from pathlib import Path
+import json,re,hashlib,difflib,importlib.util
+R=Path('/Users/apple/krita_gpu');D=R/'docs/vulkan_gpu_design';G=D/'br1_modification_guide';E=D/'evidence/br1_s09_write_admission_20260928';SRC=R/'krita'
+assert not (E/'result-summary.json').exists(), 'finish is a one-time source-anchor remap'
+m=json.loads((E/'checks-01/manifest.json').read_text());q=[x for x in m if 'totals' in x]
+assert len(q)==34 and all(x['passed'] for x in m) and all(x['totals'][1:]==[0,0] for x in q)
+total=sum(x['totals'][0] for x in q);assert total==6264,total
+identity=json.loads((E/'checks-01/identity.json').read_text())
+spec=importlib.util.spec_from_file_location('checks',E/'run_checks.py');checks=importlib.util.module_from_spec(spec);spec.loader.exec_module(checks)
+head,diff=checks.source();assert head==identity['source_head'] and hashlib.sha256(diff).hexdigest()==identity['source_diff_sha256']
+image=next(v for k,v in identity['files'].items() if k.endswith('libkritaimage.21.0.0.dylib'))
+for p,h in identity['files'].items():assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==h
+probes=[]
+for arch in ['arm64','x86_64']:
+ rows=json.loads((E/f'probes-{arch}.json').read_text());assert len(rows)==18 and all(x['returncode']==0 for x in rows)
+ for row in rows:
+  tag=row['tag'];i=json.loads((E/f'install-{arch}-{tag}-identity.json').read_text());log=(E/f'install-{arch}-{tag}.log').read_text()
+  assert next(v for k,v in i['hashes'].items() if k.endswith('libkritaimage.21.0.0.dylib'))==image
+  assert 'all_checks_passed=1' in log
+  expected={'write-request-final':'write_request_intervals=4 injected_failures=2','write-resolve-final':'write_resolve_intervals=9 injected_failures=7','write-post-pin-final':'post_pin_intervals=2'}
+  if tag in expected:assert expected[tag] in log
+  if tag=='write-post-pin-final':assert log.count('post_pin_calls=0 injected=0 threw=0 lease_valid=1')==2
+  probes.append(row)
+(E/'probes-manifest.json').write_text(json.dumps(probes,indent=2)+'\n')
+graph=json.loads((SRC/'build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json').read_text());counts={k:graph[k] for k in ['api-count','call-edge-count','callback-registration-count']}
+before=json.loads((E/'before-code.json').read_text());files=[];patch=''
+for path,old in before.items():
+ p=Path(path);new=p.read_text();part=list(difflib.unified_diff(old.splitlines(True),new.splitlines(True),fromfile='before/'+str(p.relative_to(SRC)),tofile='after/'+str(p.relative_to(SRC))));patch+=''.join(part)
+ files.append({'path':str(p.relative_to(SRC)),'before_sha256':hashlib.sha256(old.encode()).hexdigest(),'after_sha256':hashlib.sha256(new.encode()).hexdigest(),'added':sum(x.startswith('+') and not x.startswith('+++') for x in part),'removed':sum(x.startswith('-') and not x.startswith('---') for x in part)})
+(E/'incremental-review.patch').write_text(patch);(E/'incremental-review.json').write_text(json.dumps({'files':files,'scope':'4 manually edited files; generated graph and baseline identities are in cumulative source.patch'},indent=2)+'\n')
+# Remap only active guidance; evidence snapshots remain bound to their own source.
+for p in [D/'README.md',D/'92_br1_m6_m8_execution_baseline.md',*G.glob('*.md')]:
+ s=p.read_text()
+ def remap(match):
+  path,num=match[1],int(match[2]);old=before.get(path)
+  if old is None:return match[0]
+  a=old.splitlines();b=Path(path).read_text().splitlines();idx=num-1
+  for tag,i,j,k,l in difflib.SequenceMatcher(None,a,b,autojunk=False).get_opcodes():
+   if i<=idx<j:
+    if tag=='equal':mapped=k+idx-i
+    else:
+     symbol=re.search(r'\b(Kis\w+::\w+)\s*\(',a[idx]);hits=[n for n,line in enumerate(b) if symbol and symbol[1]+'(' in line]
+     mapped=hits[0] if len(hits)==1 else min(k+idx-i,max(k,l-1))
+    return path+':'+str(mapped+1)
+  return match[0]
+ p.write_text(re.sub(r'(/Users/apple/krita_gpu/krita/[^):\s]+):(\d+)',remap,s))
+L='[04c：通用写准入 GW1–GW7](/Users/apple/krita_gpu/docs/vulkan_gpu_design/br1_modification_guide/04c_generic_write_admission.md)'
+def link(label,name,symbol):
+ hits=[i+1 for i,x in enumerate((SRC/name).read_text().splitlines()) if symbol in x];assert len(hits)==1,(name,symbol,hits)
+ return f'[{label}]({SRC/name}:{hits[0]})'
+def pg(label,file,symbol):return link(label,'libs/image/pagestore/'+file,symbol)
+def replace(p,old,new):
+ s=p.read_text();assert s.count(old)==1,(p,old[:70],s.count(old));p.write_text(s.replace(old,new))
+p=G/'04c_generic_write_admission.md'
+replace(p,'**下述 GW1–GW7 均为待实施修改单，不是新增通过结论。**','**GW1–GW7 表示完整修改责任；本批已接线的节点/异常/终结边界与仍待实施的预算、内部故障范围见 §6。**')
+replace(p,'当前 [write resolve]','修复前 [write resolve]')
+replace(p,'这是源码可确认的失败窗口，通用写路径的真实故障注入结果仍需按 §5 建立，不能引用读侧反例冒充写侧运行证据。','本批已有写侧独立真实 allocator 反例：首分配拒绝后 threw=1、pending=1、active lease=0。修复后必要节点前移，并按 §5 建立同源码双架构证据；结果与剩余边界见 §6。')
+replace(p,'`writeRequests.insert` 至 `prepareWritePlanLocked`','`writeRequests.emplace` 至 `prepareWritePlanLocked`')
+replace(p,'以 `std::map<quint64, ...>` + node handle 为首选实现；','本批已使用 `std::map<quint64, ...>` + node handle；')
+replace(p,'先建立写侧旧行为反例并保留旧源码/库身份，再实施 GW1–GW3；每次容器变更同时完成 GW5 的全部消费者适配。随后补 GW4 的各准备边界、GW6 的实际收费与 GW7 的完整验证。GW1–GW3 可形成独立的受测安全批次，但不能以其通过关闭 GW4/GW6、S09/S10 或 M6–M8。','本批已保留写侧旧行为反例、实施 GW1–GW3 并同步适配 GW5，补充 GW4 的共同计划/Fresh 准备/初始化调用边界。后续继续 GW4 各内部存储与 producer 异常责任、GW6 实际收费和 GW7 完整压力/性能资格；节点前移的局部证据不关闭这些剩余项或 M6–M8。')
+s=p.read_text()+'''\n<a id="write-admission-implementation"></a>\n\n## 6. 本批实现、验证与剩余代码责任\n\n证据见 [S09 第九批](/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s09_write_admission_20260928/README.md)。下表描述实际完成的调用边界；上文 GW 表仍是完整契约。\n\n| 子项 | 已落地源码 | 已验证边界 / 尚需实施 |\n|---|---|---|\n'''
+s+='| GW1 | '+pg('acquireWrite','KisPageStore.cpp','KisWriteRequest KisPageStore::acquireWrite(')+' | std::map 实际 request node 在共同计划之前准备；真实节点拒绝不遗留 claim/request，已有 0/257 requests 保持。更早的 activity/admission 及 metadata 内部存储故障仍须独立闭合。 |\n'
+s+='| GW2–GW3 | '+pg('resolve(write)','KisPageStore.cpp','KisWriteLease KisPageStore::resolve(')+'、'+pg('ActiveWriteRecord','KisPageStore.cpp','struct ActiveWriteRecord {')+' | 控制块与 active node 先于 pin，optional 原地接入 access；bad_alloc 后重新入 gate 并保留 Pending。完整 request 身份以及返回 access 的 mode/replica/lease/operation 均复验，不匹配的有效 pin 锁外归还。 |\n'
+s+='| GW4 | '+pg('prepareWritePlanLocked','KisPageWriteCoordinator.cpp','KisPageWritePlanKind KisPageWriteCoordinator::prepareWritePlanLocked(')+'、'+pg('acquireWrite','KisPageStore.cpp','KisWriteRequest KisPageStore::acquireWrite(')+' | 共同计划清理先检查 locker.isLocked，锁外析构后恢复 gate；generic 捕获三类准备调用的 bad_alloc。已经取得私有 writer 的初始化失败沿原 cancel，拒绝则保留 request 供 abort。provider 自身部分分配、metadata/descriptor/ledger 内部与整个 finishWrite 的故障资格仍开放。 |\n'
+s+='| GW5 | '+pg('finishWrite','KisPageStore.cpp','KisCompletionTicket KisPageStore::finishWrite(')+'、'+pg('preparePublicationAbort','KisPageStore.cpp','    static bool preparePublicationAbort(')+' | 原 activity/admission 与 consumed-record 重试责任保持；close 继续拒绝存活 capability/债务。预算阻塞与恢复通过真实原 reservation/retirement 路径验证。 |\n'
+s+='| GW6 | '+pg('reserveBacking','KisPageWriteCoordinator.cpp','KisBackingBudgetReservation KisPageWriteCoordinator::reserveBacking(')+'、[W1–W8](/Users/apple/krita_gpu/docs/vulkan_gpu_design/br1_modification_guide/04b_budget_waiter_implementation_map.md)+' | provider 已有登记复用；本批没有为原 request/control block/map node 接全局/metadata 硬预算。必要通知/派发/retry/pass 存储与实际容量收费继续。 |\n'
+for label,sym,desc in [
+ ('准备拒绝、同请求重试/取消/abort','genericResolveStorageFailure','24 项：四 BPP × Fresh/recoverable × 三种终点'),
+ ('锁外并发增长','genericResolveConcurrentIndexGrowth','8 项：四 BPP × Fresh/recoverable，257 个其他 request/lease 在 pin 已取得时增长'),
+ ('准备调用异常','genericPreparationStorageFailure','12 项：共同计划、Fresh provider 准备和初始化调用边界'),
+ ('初始化失败与退休预算阻塞','genericInitializationFailureRetainsAbortDebt','4 项：原 fallback reservation、取消拒绝、无请求 capability 下的 abort 责任'),
+ ('返回能力失配','genericResolveRejectsMismatchedAccess','16 项：mode、replica、lease id、operation 失配的真实有效 pin 归还'),
+ ('请求身份一致性','genericResolveValidatesRequestIdentity','4 项：每项检查七个篡改字段，合法原请求随后仍能 resolve')]:
+ s+='| GW7 | '+link(label,'libs/image/tests/KisPageStoreCpuMutationTest.cpp','void KisPageStoreCpuMutationTest::'+sym+'()')+' | '+desc+'。 |\n'
+s+=f'''\n每架构新增 68 项用例；17 目标双架构 **{total:,} passed，零失败/跳过**。每架构新 write request / resolve allocator 探针分别 4/9 区间、2/7 次实际拒绝；post-pin 两区间分配尝试为零。其余 15 组探针按原边界重跑，36 次 final 与矩阵 image 相同。冷 generic 索引为 O(log L)，真实 stroke 与 Fresh 回退性能未新增资格。\n\n**继续实施：** GW4 的内部故障/producer 部分资源责任、GW6 必要容量准入及全局/metadata 收费、S09 通知与拒绝后自动接续、T4 整轮预算仍未闭合。M6 全资格、M7/M8、S02–S05、undo/context 和正式 BR1-PERF 继续。\n'''
+p.write_text(s)
+p=G/'04a_retirement_wakeup_implementation_map.md';replace(p,'通用写路径的 pin 后控制块/索引须沿其原 owner 单独迁移，逐段改法、异常边界和验证入口见 '+L+'；不能把共用 provider 改动当成整个 write resolve 已闭合。','通用写路径的原请求/lease 节点前移、能力复验和准备调用异常已按 '+L+' 单独接线；内部故障、通知/派发和全局/metadata 收费仍须继续，不能由节点前移推定整个准入链完成。')
+p=G/'NEXT_EDITS.md';old='通用写路径按 '+L+' 单独迁移：GW1 定位 `acquireWrite` 的原请求节点，GW2–GW3 定位 `resolve` 的 pin 前准备及异常恢复，GW4 审查 Fresh/共同计划的准备失败，GW5 联动 `finishWrite/abort/close`，GW6–GW7 接计账和真实故障验证。不能由 provider 接线推定完成。';new='通用写路径的 GW1–GW3、GW5 及 GW4 准备调用边界已按 '+L+' 接线；下一段继续 activity/admission、metadata/descriptor/ledger 与 producer 内部故障，GW6 的实际存储收费，以及 GW7 的完整压力/性能资格。不能由原节点前移推定整个准入链完成。';replace(p,old,new)
+p=G/'README.md';replace(p,'将仍待修改的通用写路径展开到','将通用写路径展开到');replace(p,'读侧和共用 provider 的已有接线不代表写侧整链完成。','§6 将本批节点前移、异常/身份验证与原终结接线映射到实际函数；内部故障与必要硬预算仍按 GW4/GW6/GW7 继续。')
+p=G/'CHANGE_MAP.md';replace(p,'S09/T6 的通用写修改按 '+L+' 继续：','S09/T6 的通用写节点/异常接线与剩余修改见 '+L+'：')
+p=G/'STAGE_MAP.md';replace(p,'GW1–GW3 的记录前移需同时适配 GW5 的终结消费者，GW4 的全部准备异常与 GW6 的实际硬预算独立验收。','GW1–GW3 的记录前移与 GW5 的终结消费者已同步接线，GW4 的三个准备调用边界已补异常恢复；内部故障与 GW6 实际硬预算继续独立验收。')
+p=D/'92_br1_m6_m8_execution_baseline.md';replace(p,'最新双架构 CPU/业务矩阵 6,128 passed，零失败/跳过。','通用写请求/lease 的实际节点现先于计划/pin 准备，generic 准备异常恢复 gate 并保留原终结责任。最新双架构 CPU/业务矩阵 6,264 passed，零失败/跳过。')
+s=p.read_text()+f'''\n\n**S09 第九批：通用写节点准入、准备异常与原终结责任。** 旧 image 的真实 post-pin 分配拒绝命中 ActiveWriteRecord 控制块，留下 Resolving request 且无 lease。现原请求节点在共同写计划前准备，ActiveWriteRecord/control block 与可转移 active node 在 provider pin 前准备；成功后 noexcept 接入能力、转入原 map 节点。准备拒绝保留 Pending，provider bad_alloc 先恢复 gate 再恢复原请求。resolve/cancel 的请求身份一致，返回能力的 mode/replica/lease/operation 不匹配时锁外归还实际 pin。\n\n共同 recoverable 准备清理改为条件 unlock，避免锁外异常引发重复解锁；generic 的共同计划/Fresh provider/初始化调用边界分别恢复原责任。初始化已有 private writer 后失败，取消拒绝时仍由原 request/transaction abort 承担；已消费 lease 的失败仍留原 active record。没有新增 selector、write set 或终结 ledger，native resident pending 不进入 generic 索引。\n\n新增每架构 68 项用例：Fresh/recoverable 四 BPP 下重试/取消/abort、257 个锁外并发 request/lease 增长、准备异常、真实预算阻塞恢复、请求身份及 provider 能力失配。最终 **17 目标 × 两架构，{total:,} passed，零失败/跳过**；调用图 {counts['api-count']:,} APIs / {counts['call-edge-count']:,} edges / {counts['callback-registration-count']} callbacks，21 manifest / 24 ownership / 16 census / 19 intrusion 和 6 项工具自测通过，ratchet 未改。\n\n每架构新 write request / resolve allocator 探针分别 4/9 区间、2/7 次实际拒绝；原请求、其他 0/257 条 capability、取消与 close 均保持。post-pin 两区间无分配尝试，具有修复前同路径反例；十五组既有探针继续通过，36 次 final 与矩阵 image 一致。所有编译和夹具失败记录保留，最终资格仅绑定 checks-01 与 final。\n\n函数、已接线与剩余修改见 {L}；[write admission 证据](evidence/br1_s09_write_admission_20260928/README.md)保留完整身份和失败。本批没有闭合更早 activity/admission、metadata/descriptor/ledger/provider 内部全部存储故障，必要终态/notification/dispatch/retry/pass 准入及收费、自动接续、整轮 T4/T5/T6/S10 或完整压力资格。冷 generic 索引 O(log L) 尚需性能实测。S02–S05、完整 M6、M7/M8、undo/context、Fresh 2% 和 BR1-PERF 继续，未新增真实 stroke、Vulkan 或 TSAN 资格。\n''';p.write_text(s)
+summary={'source_head':head,'source_diff_sha256':identity['source_diff_sha256'],'image_sha256':image,'tests':{'targets_per_arch':17,'architectures':['arm64','x86_64'],'passed':total,'failed':0,'skipped':0,'new_cases_per_arch':68},'architecture':counts,'probes':{'final_runs':36,'write_request_intervals_per_arch':4,'write_request_rejections_per_arch':2,'write_resolve_intervals_per_arch':9,'write_resolve_rejections_per_arch':7,'write_post_pin_intervals_per_arch':2,'write_post_pin_allocation_attempts':0,'image_identity_matches':True},'qualification':'generic write record admission and bounded preparation exception recovery; not full T6/S10/M6/M7/M8 or performance'}
+(E/'result-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
+(E/'README.md').write_text(f'''# S09 第九批：通用写准入与失败终结\n\n设计与代码映射见 {L}；阶段权威仍为 [92](../../92_br1_m6_m8_execution_baseline.md)。\n\n## 改动与边界\n\n原 write request node 先于共同写计划；原 ActiveWriteRecord/control block 与 detached active node 先于 provider pin。拒绝保持 Pending，成功后转入实际节点不分配。resolve 校验全部 request 身份及返回 access 的 mode/replica/lease/operation，失配的有效能力锁外归还。没有新增 canonical owner，native resident pending 不进入 generic map。\n\n共同计划 cleanup 检查锁状态，锁外异常时不重复 unlock；generic 在共同计划、Fresh provider 准备和初始化调用边界捕获 bad_alloc。已有 private writer 的初始化拒绝走原取消；取消被拒绝时 request/claim 留给 abort。finishWrite 的已消费记录、事务 activity、retirement 与 close 沿原责任链。\n\n这些是已验证的调用边界，不是 provider 部分分配、所有 metadata/ledger/descriptor 内部或应用级 OOM 恢复资格。索引使用 std::map，cold generic lookup 为 O(log L)；尚未证明通用写或真实 stroke 的性能收益。\n\n## 同源码验证\n\n17 目标 × arm64/x86_64：**{total:,} passed，零失败/跳过**，每架构新增 68 项。完整命令、seed、源码与 binary 在 [manifest](checks-01/manifest.json) / [identity](checks-01/identity.json)。\n\n调用图 {counts['api-count']:,} APIs / {counts['call-edge-count']:,} edges / {counts['callback-registration-count']} callbacks；21 manifest / 24 ownership / 16 census / 19 intrusion，6 项工具自测通过，ratchet 未改。\n\n| 新增探针 / 每架构 | 区间 / 真实拒绝 | 覆盖 |\n|---|---|---|\n| write-request-final | 4 / 2 | 实际 PendingWriteRequestRecord node 的调用栈筛选；0/257 个已有请求保持。本次无悬挂 claim，重试、取消与 close 成功；不覆盖更早 activity/admission 或 metadata 内部分配。 |\n| write-resolve-final | 9 / 7 | 控制块、active node 与 provider 登记按真实分配顺序拒绝；同请求重试/取消，其他 0/257 个 lease 的字节保持，最终物理 bytes 归零。 |\n| write-post-pin-final | 2 / 0 | provider 返回真实 pin 后启用首分配拒绝；0/257 个已有 lease 两区间均没有分配尝试，合法能力交付。并发索引增长由生产 fixture 另行覆盖。 |\n\n十五组既有预算/root/安装/暖读/共同 handoff/清理/completion/read/provider 探针按原边界继续通过。共 36 次 final 的 image 哈希与完整矩阵相同，见 [probe manifest](probes-manifest.json)。零分配声明没有扩展到冷通知/派发或整个写调用。\n\n源码 HEAD：{head}。累计 patch SHA-256：{identity['source_diff_sha256']}。image SHA-256：{image}。四个手改文件的增量在 [review](incremental-review.patch)，生成图与基线另在完整 source.patch；[改前身份](before-source.json)和 [改前源码](before-source.patch)保留。\n\n## 失败与中间验证记录\n\nbefore-01 使用改前 image，真实 post-pin malloc 拒绝命中 ActiveWriteRecord make_shared：threw=1、lease_valid=0、pending_requests=1、active_leases=0；探针退出码 10，原始栈与身份保留。\n\nbuild-01 为新测试误用 Host 枚举的编译失败，修正为既有 HostLogical。focused-arm64-01 至 -04 保留夹具失败：提前禁用同步 copy 阻止 native setup；过早占满退休预算被前置 admission 正确拒绝；初始化期间仍有真实 fallback reservation，单页额度不足以创建竞争债务；测试直接创建未登记 provider allocation 触发原 journal/owner 准入拒绝。夹具改用两个实际退休额度、先后填充竞争债务和已由 PageStore 准入的另一写请求，不绕过原 budget/owner。没有修改生产预算条件来满足夹具。\n\nfocused-arm64-05 为 75 passed；其中 68 项新增、5 项既有终结回归与 init/cleanup。随后重新生成调用图并运行 checks-01/final；早期 after-01 探针只作调试，不作为最终源码资格。\n\n## 剩余实施\n\n更早 activity/admission、metadata/descriptor/ledger/provider 内部存储故障、GW6 全局/metadata 实际容量收费、必要 notification/dispatch/retry/pass 准入及自动接续、T4 整轮预算继续。完整 M6、M7/M8、stroke scope/可见性/短发布、undo/context 与正式 BR1-PERF 未完成；未新增真实 stroke、Fresh 2%、Vulkan 或 TSAN 资格。\n''')
+print(json.dumps(summary,ensure_ascii=False,indent=2))

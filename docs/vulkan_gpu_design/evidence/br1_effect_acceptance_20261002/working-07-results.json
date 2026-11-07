@@ -1,0 +1,248 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.539,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 448ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 7.148,
+    "totals": [
+      "Totals: 1300 passed, 1 failed, 0 skipped, 0 blacklisted, 6031ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::partialPreparationRollbackPumpsForegroundRetirement() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.504,
+    "totals": [
+      "Totals: 680 passed, 0 failed, 0 skipped, 0 blacklisted, 2754ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.081,
+    "totals": [
+      "Totals: 381 passed, 0 failed, 0 skipped, 0 blacklisted, 40ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.253,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 144ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.043,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 4ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 15.907,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 138ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.937,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 785ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 7.582,
+    "totals": [
+      "Totals: 1300 passed, 1 failed, 0 skipped, 0 blacklisted, 7044ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::partialPreparationRollbackPumpsForegroundRetirement() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 4.151,
+    "totals": [
+      "Totals: 680 passed, 0 failed, 0 skipped, 0 blacklisted, 3316ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.252,
+    "totals": [
+      "Totals: 381 passed, 0 failed, 0 skipped, 0 blacklisted, 53ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.477,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 311ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.188,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 11ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 21.272,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 457ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

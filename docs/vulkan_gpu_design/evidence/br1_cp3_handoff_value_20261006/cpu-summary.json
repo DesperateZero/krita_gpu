@@ -1,0 +1,1901 @@
+{
+  "method": "3s Running CPU samples within noinline exact operation; shares scaled by whole15s operation CPU/op. Descriptive localization, no lower bound or causal per-function price. Background/setup/validation/drain excluded from operation and counted separately.",
+  "records": [
+    {
+      "record": "cpu-0-fresh",
+      "variant": "fresh",
+      "block": 0,
+      "cpu_us": 117.57334575760115,
+      "wall_us": 118.72049300611441,
+      "totals": {
+        "all_samples": 3859,
+        "all_weight": 3859000000,
+        "main_weight": 3481000000,
+        "outside_operation_weight": 2912000000,
+        "operation_weight": 569000000,
+        "operation_samples": 569,
+        "background_weight": 378000000,
+        "unsymbolicated_leaf_weight": 24000000
+      },
+      "exclusive_mechanisms": {
+        "write_protocol": {
+          "weight_ns": 145000000,
+          "share": 0.2548330404217926,
+          "approx_cpu_us": 29.961573171972173
+        },
+        "metadata_working_policy": {
+          "weight_ns": 120000000,
+          "share": 0.210896309314587,
+          "approx_cpu_us": 24.795784694045935
+        },
+        "physical_heap": {
+          "weight_ns": 117000000,
+          "share": 0.2056239015817223,
+          "approx_cpu_us": 24.175890076694788
+        },
+        "storage_owner_charge": {
+          "weight_ns": 43000000,
+          "share": 0.07557117750439367,
+          "approx_cpu_us": 8.885156182033127
+        },
+        "provider_payload_lifecycle": {
+          "weight_ns": 39000000,
+          "share": 0.06854130052724078,
+          "approx_cpu_us": 8.058630025564929
+        },
+        "owner_backing_ledger": {
+          "weight_ns": 29000000,
+          "share": 0.050966608084358524,
+          "approx_cpu_us": 5.992314634394434
+        },
+        "budget_policy": {
+          "weight_ns": 21000000,
+          "share": 0.03690685413005272,
+          "approx_cpu_us": 4.339262321458039
+        },
+        "pixel_before_copy": {
+          "weight_ns": 18000000,
+          "share": 0.03163444639718805,
+          "approx_cpu_us": 3.71936770410689
+        },
+        "fixture_final_pixels": {
+          "weight_ns": 12000000,
+          "share": 0.0210896309314587,
+          "approx_cpu_us": 2.4795784694045935
+        },
+        "other_memory_copy": {
+          "weight_ns": 11000000,
+          "share": 0.019332161687170474,
+          "approx_cpu_us": 2.272946930287544
+        },
+        "epoch_root_transaction": {
+          "weight_ns": 6000000,
+          "share": 0.01054481546572935,
+          "approx_cpu_us": 1.2397892347022967
+        },
+        "retirement": {
+          "weight_ns": 6000000,
+          "share": 0.01054481546572935,
+          "approx_cpu_us": 1.2397892347022967
+        },
+        "fixture_clock_unclassified": {
+          "weight_ns": 2000000,
+          "share": 0.0035149384885764497,
+          "approx_cpu_us": 0.4132630782340989
+        }
+      },
+      "exclusive_phases": {
+        "begin_write": {
+          "weight_ns": 285000000,
+          "share": 0.5008787346221442,
+          "approx_cpu_us": 58.88998864835909
+        },
+        "commit": {
+          "weight_ns": 139000000,
+          "share": 0.24428822495606328,
+          "approx_cpu_us": 28.721783937269876
+        },
+        "seal": {
+          "weight_ns": 127000000,
+          "share": 0.22319859402460457,
+          "approx_cpu_us": 26.242205467865283
+        },
+        "begin_pixels_guard_other": {
+          "weight_ns": 18000000,
+          "share": 0.03163444639718805,
+          "approx_cpu_us": 3.71936770410689
+        }
+      },
+      "inclusive_contexts_do_not_sum": {
+        "fresh_replica": {
+          "weight_ns": 87000000,
+          "share": 0.15289982425307558,
+          "approx_cpu_us": 17.976943903183304
+        },
+        "private_write": {
+          "weight_ns": 62000000,
+          "share": 0.10896309314586995,
+          "approx_cpu_us": 12.811155425257066
+        },
+        "private_publish": {
+          "weight_ns": 59000000,
+          "share": 0.10369068541300527,
+          "approx_cpu_us": 12.191260807905918
+        },
+        "provider_duplicate": {
+          "weight_ns": 29000000,
+          "share": 0.050966608084358524,
+          "approx_cpu_us": 5.992314634394434
+        },
+        "budget": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        }
+      },
+      "top_leaves": {
+        "_platform_memmove": {
+          "weight_ns": 28000000,
+          "share": 0.0492091388400703,
+          "approx_cpu_us": 5.785683095277385
+        },
+        "tiny_malloc_from_free_list": {
+          "weight_ns": 24000000,
+          "share": 0.0421792618629174,
+          "approx_cpu_us": 4.959156938809187
+        },
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": {
+          "weight_ns": 20000000,
+          "share": 0.0351493848857645,
+          "approx_cpu_us": 4.132630782340989
+        },
+        "_platform_memset": {
+          "weight_ns": 17000000,
+          "share": 0.029876977152899824,
+          "approx_cpu_us": 3.5127361649898408
+        },
+        "tiny_size": {
+          "weight_ns": 11000000,
+          "share": 0.019332161687170474,
+          "approx_cpu_us": 2.272946930287544
+        },
+        "QRect::contains(QRect const&, bool) const": {
+          "weight_ns": 11000000,
+          "share": 0.019332161687170474,
+          "approx_cpu_us": 2.272946930287544
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, int const&, int const&>, std::__1::tuple<unsigned long long const&, int const&, int const&>>(std::__1::tuple<unsigned long long const&, int const&, int const&> const&, std::__1::tuple<unsigned long long const&, int const&, int const&> const&)": {
+          "weight_ns": 10000000,
+          "share": 0.01757469244288225,
+          "approx_cpu_us": 2.0663153911704946
+        },
+        "(anonymous namespace)::fitsBudgetBucket(KisPageDomainBytes const&, KisPageDomainBytes const&, KisPageDomainByteDelta const&, std::__1::array<unsigned long long, 4ul> const&, unsigned long long, unsigned long long, unsigned long long)": {
+          "weight_ns": 9000000,
+          "share": 0.015817223198594025,
+          "approx_cpu_us": 1.859683852053445
+        },
+        "kisStablePageKeyHash(KisPageKey const&)::'lambda'(unsigned long long)::operator()(unsigned long long) const": {
+          "weight_ns": 9000000,
+          "share": 0.015817223198594025,
+          "approx_cpu_us": 1.859683852053445
+        },
+        "kisPageStorageAllocationBytes(unsigned long, unsigned long)": {
+          "weight_ns": 9000000,
+          "share": 0.015817223198594025,
+          "approx_cpu_us": 1.859683852053445
+        },
+        "KisGenerationalSlotId<KisReplicaSlotTag>::isValid() const": {
+          "weight_ns": 9000000,
+          "share": 0.015817223198594025,
+          "approx_cpu_us": 1.859683852053445
+        },
+        "tiny_free_no_lock": {
+          "weight_ns": 8000000,
+          "share": 0.014059753954305799,
+          "approx_cpu_us": 1.6530523129363957
+        },
+        "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_0::operator()(KisBackingBudgetController*, unsigned long long) const": {
+          "weight_ns": 7000000,
+          "share": 0.012302284710017574,
+          "approx_cpu_us": 1.4464207738193462
+        },
+        "QHashPrivate::hash(unsigned long, unsigned long)": {
+          "weight_ns": 7000000,
+          "share": 0.012302284710017574,
+          "approx_cpu_us": 1.4464207738193462
+        },
+        "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)": {
+          "weight_ns": 5000000,
+          "share": 0.008787346221441126,
+          "approx_cpu_us": 1.0331576955852473
+        },
+        "QMutexPrivate* std::__1::__cxx_atomic_load[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*> const*, std::__1::memory_order)": {
+          "weight_ns": 5000000,
+          "share": 0.008787346221441126,
+          "approx_cpu_us": 1.0331576955852473
+        },
+        "KisPageWorkingReplica::KisPageWorkingReplica(KisPageWorkingReplica&&)": {
+          "weight_ns": 5000000,
+          "share": 0.008787346221441126,
+          "approx_cpu_us": 1.0331576955852473
+        },
+        "KisMutationStorageOwner::deref()": {
+          "weight_ns": 5000000,
+          "share": 0.008787346221441126,
+          "approx_cpu_us": 1.0331576955852473
+        },
+        "szone_good_size": {
+          "weight_ns": 5000000,
+          "share": 0.008787346221441126,
+          "approx_cpu_us": 1.0331576955852473
+        },
+        "void std::__1::__tree_balance_after_insert[abi:ne200100]<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "(anonymous namespace)::processStorageSnapshot()": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "free_tiny": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "KisPageMetadataCoordinator::applyProjectedSequence(KisPageKey const&, KisPageTransition const*, long long)": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "__psynch_cvsignal": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "std::__1::vector<KisCompletionTicket, KisMutationStorageAllocator<KisCompletionTicket, false>>::vector[abi:ne200100](std::__1::vector<KisCompletionTicket, KisMutationStorageAllocator<KisCompletionTicket, false>>&&)": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "tiny_free_list_remove_ptr": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "void (anonymous namespace)::ShardRecordStore::assign<KisPageWorkingVersion>(KisVersionRecord*, KisPageWorkingVersion const&, (anonymous namespace)::MetadataArenaReservations*)": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "tiny_free_list_add_ptr": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "_tiny_check_and_zero_inline_meta_from_freelist": {
+          "weight_ns": 4000000,
+          "share": 0.007029876977152899,
+          "approx_cpu_us": 0.8265261564681978
+        },
+        "bool std::__1::__tuple_less<2ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 3000000,
+          "share": 0.005272407732864675,
+          "approx_cpu_us": 0.6198946173511484
+        },
+        "tiny_malloc_should_clear": {
+          "weight_ns": 3000000,
+          "share": 0.005272407732864675,
+          "approx_cpu_us": 0.6198946173511484
+        },
+        "std::__1::vector<KisPageLeaseId, KisMutationStorageAllocator<KisPageLeaseId, false>>::vector[abi:ne200100](std::__1::vector<KisPageLeaseId, KisMutationStorageAllocator<KisPageLeaseId, false>>&&)": {
+          "weight_ns": 3000000,
+          "share": 0.005272407732864675,
+          "approx_cpu_us": 0.6198946173511484
+        },
+        "small_malloc_from_free_list": {
+          "weight_ns": 3000000,
+          "share": 0.005272407732864675,
+          "approx_cpu_us": 0.6198946173511484
+        }
+      },
+      "unclassified_stacks": {
+        "0x106baf271 <- KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 2000000
+      },
+      "xml_sha256": "ba279918f364038408730539a8d21f56afd8a9a1a846576a590dcd5b91598590"
+    },
+    {
+      "record": "cpu-0-handoff",
+      "variant": "handoff",
+      "block": 0,
+      "cpu_us": 101.6403882112757,
+      "wall_us": 102.08896832958173,
+      "totals": {
+        "all_samples": 3688,
+        "all_weight": 3688000000,
+        "main_weight": 3382000000,
+        "outside_operation_weight": 2974000000,
+        "background_weight": 306000000,
+        "operation_weight": 408000000,
+        "operation_samples": 408,
+        "unsymbolicated_leaf_weight": 5000000
+      },
+      "exclusive_mechanisms": {
+        "metadata_working_policy": {
+          "weight_ns": 108000000,
+          "share": 0.2647058823529412,
+          "approx_cpu_us": 26.904808644161218
+        },
+        "write_protocol": {
+          "weight_ns": 101000000,
+          "share": 0.24754901960784315,
+          "approx_cpu_us": 25.16097845426188
+        },
+        "physical_heap": {
+          "weight_ns": 72000000,
+          "share": 0.17647058823529413,
+          "approx_cpu_us": 17.936539096107477
+        },
+        "owner_backing_ledger": {
+          "weight_ns": 32000000,
+          "share": 0.0784313725490196,
+          "approx_cpu_us": 7.971795153825545
+        },
+        "storage_owner_charge": {
+          "weight_ns": 25000000,
+          "share": 0.061274509803921566,
+          "approx_cpu_us": 6.227964963926207
+        },
+        "budget_policy": {
+          "weight_ns": 24000000,
+          "share": 0.058823529411764705,
+          "approx_cpu_us": 5.978846365369159
+        },
+        "other_memory_copy": {
+          "weight_ns": 11000000,
+          "share": 0.02696078431372549,
+          "approx_cpu_us": 2.7403045841275313
+        },
+        "fixture_final_pixels": {
+          "weight_ns": 10000000,
+          "share": 0.024509803921568627,
+          "approx_cpu_us": 2.491185985570483
+        },
+        "retirement": {
+          "weight_ns": 8000000,
+          "share": 0.0196078431372549,
+          "approx_cpu_us": 1.9929487884563863
+        },
+        "epoch_root_transaction": {
+          "weight_ns": 7000000,
+          "share": 0.01715686274509804,
+          "approx_cpu_us": 1.743830189899338
+        },
+        "fixture_clock_unclassified": {
+          "weight_ns": 5000000,
+          "share": 0.012254901960784314,
+          "approx_cpu_us": 1.2455929927852416
+        },
+        "provider_payload_lifecycle": {
+          "weight_ns": 5000000,
+          "share": 0.012254901960784314,
+          "approx_cpu_us": 1.2455929927852416
+        }
+      },
+      "exclusive_phases": {
+        "begin_write": {
+          "weight_ns": 187000000,
+          "share": 0.4583333333333333,
+          "approx_cpu_us": 46.58517793016803
+        },
+        "commit": {
+          "weight_ns": 101000000,
+          "share": 0.24754901960784315,
+          "approx_cpu_us": 25.16097845426188
+        },
+        "seal": {
+          "weight_ns": 96000000,
+          "share": 0.23529411764705882,
+          "approx_cpu_us": 23.915385461476635
+        },
+        "begin_pixels_guard_other": {
+          "weight_ns": 24000000,
+          "share": 0.058823529411764705,
+          "approx_cpu_us": 5.978846365369159
+        }
+      },
+      "inclusive_contexts_do_not_sum": {
+        "handoff_plan": {
+          "weight_ns": 140000000,
+          "share": 0.3431372549019608,
+          "approx_cpu_us": 34.87660379798676
+        },
+        "handoff_metadata_prepare": {
+          "weight_ns": 57000000,
+          "share": 0.13970588235294118,
+          "approx_cpu_us": 14.199760117751753
+        },
+        "private_publish": {
+          "weight_ns": 39000000,
+          "share": 0.09558823529411764,
+          "approx_cpu_us": 9.715625343724884
+        },
+        "handoff_accounting": {
+          "weight_ns": 24000000,
+          "share": 0.058823529411764705,
+          "approx_cpu_us": 5.978846365369159
+        },
+        "budget": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        }
+      },
+      "top_leaves": {
+        "_platform_memset": {
+          "weight_ns": 13000000,
+          "share": 0.031862745098039214,
+          "approx_cpu_us": 3.238541781241628
+        },
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": {
+          "weight_ns": 10000000,
+          "share": 0.024509803921568627,
+          "approx_cpu_us": 2.491185985570483
+        },
+        "tiny_malloc_from_free_list": {
+          "weight_ns": 10000000,
+          "share": 0.024509803921568627,
+          "approx_cpu_us": 2.491185985570483
+        },
+        "_platform_memmove": {
+          "weight_ns": 10000000,
+          "share": 0.024509803921568627,
+          "approx_cpu_us": 2.491185985570483
+        },
+        "tiny_size": {
+          "weight_ns": 9000000,
+          "share": 0.022058823529411766,
+          "approx_cpu_us": 2.2420673870134347
+        },
+        "tiny_free_no_lock": {
+          "weight_ns": 8000000,
+          "share": 0.0196078431372549,
+          "approx_cpu_us": 1.9929487884563863
+        },
+        "QRect::contains(QRect const&, bool) const": {
+          "weight_ns": 8000000,
+          "share": 0.0196078431372549,
+          "approx_cpu_us": 1.9929487884563863
+        },
+        "__psynch_cvsignal": {
+          "weight_ns": 8000000,
+          "share": 0.0196078431372549,
+          "approx_cpu_us": 1.9929487884563863
+        },
+        "szone_size": {
+          "weight_ns": 6000000,
+          "share": 0.014705882352941176,
+          "approx_cpu_us": 1.4947115913422897
+        },
+        "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)": {
+          "weight_ns": 6000000,
+          "share": 0.014705882352941176,
+          "approx_cpu_us": 1.4947115913422897
+        },
+        "free_tiny": {
+          "weight_ns": 5000000,
+          "share": 0.012254901960784314,
+          "approx_cpu_us": 1.2455929927852416
+        },
+        "bool std::__1::__tuple_less<2ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 5000000,
+          "share": 0.012254901960784314,
+          "approx_cpu_us": 1.2455929927852416
+        },
+        "_free": {
+          "weight_ns": 5000000,
+          "share": 0.012254901960784314,
+          "approx_cpu_us": 1.2455929927852416
+        },
+        "(anonymous namespace)::fitsBudgetBucket(KisPageDomainBytes const&, KisPageDomainBytes const&, KisPageDomainByteDelta const&, std::__1::array<unsigned long long, 4ul> const&, unsigned long long, unsigned long long, unsigned long long)": {
+          "weight_ns": 5000000,
+          "share": 0.012254901960784314,
+          "approx_cpu_us": 1.2455929927852416
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, int const&, int const&>, std::__1::tuple<unsigned long long const&, int const&, int const&>>(std::__1::tuple<unsigned long long const&, int const&, int const&> const&, std::__1::tuple<unsigned long long const&, int const&, int const&> const&)": {
+          "weight_ns": 5000000,
+          "share": 0.012254901960784314,
+          "approx_cpu_us": 1.2455929927852416
+        },
+        "boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void, false>, void>::small_vector_allocator(boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void, false>, void> const&)": {
+          "weight_ns": 4000000,
+          "share": 0.00980392156862745,
+          "approx_cpu_us": 0.9964743942281932
+        },
+        "KisGenerationalSlotId<KisReplicaSlotTag>::isValid() const": {
+          "weight_ns": 4000000,
+          "share": 0.00980392156862745,
+          "approx_cpu_us": 0.9964743942281932
+        },
+        "std::__1::less<unsigned long long>::operator()[abi:ne200100](unsigned long long const&, unsigned long long const&) const": {
+          "weight_ns": 4000000,
+          "share": 0.00980392156862745,
+          "approx_cpu_us": 0.9964743942281932
+        },
+        "QHashPrivate::hash(unsigned long, unsigned long)": {
+          "weight_ns": 4000000,
+          "share": 0.00980392156862745,
+          "approx_cpu_us": 0.9964743942281932
+        },
+        "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "std::__1::unique_ptr<KisMutationStorage<KisMutationPageEntry, 8ul, unsigned long long>::Block, KisMutationStorage<KisMutationPageEntry, 8ul, unsigned long long>::DeleteBlock>::operator bool[abi:ne200100]() const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "KisShardSlotArena<KisVersionRecord, 16384ll>::resolve(KisGenerationalSlotId<KisVersionSlotTag>) const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "KisGenerationalSlotId<KisVersionSlotTag>::isValid() const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::less<unsigned long long>, true>, KisMutationStorageAllocator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, true>>::find<unsigned long long>(unsigned long long const&)": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "bool std::__1::__tuple_less<2ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, int const&, int const&>, std::__1::tuple<unsigned long long const&, int const&, int const&>>(std::__1::tuple<unsigned long long const&, int const&, int const&> const&, std::__1::tuple<unsigned long long const&, int const&, int const&> const&)": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "void std::__1::__tree_balance_after_insert[abi:ne200100]<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "KisBackingBudgetController::ReservationSlot::ReservationSlot()": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "comparesEqual(QRect const&, QRect const&)": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "void (anonymous namespace)::applyPolicy<KisPageWorkingResult, KisPageStateMachine::applyKnownValid(KisPageWorkingResult&, KisPageTransition const&) const::$_0>(KisPageWorkingResult&, KisPageTransition const&, bool, KisPageStateMachine::applyKnownValid(KisPageWorkingResult&, KisPageTransition const&) const::$_0)": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "(anonymous namespace)::processStorage()": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "kisStablePageKeyHash(KisPageKey const&)::'lambda'(unsigned long long)::operator()(unsigned long long) const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "QScopeGuard<kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_2>::QScopeGuard(kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_2&&)": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "QSize::isValid() const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        },
+        "KisReplicaHandle::allocationIdentity() const": {
+          "weight_ns": 3000000,
+          "share": 0.007352941176470588,
+          "approx_cpu_us": 0.7473557956711449
+        }
+      },
+      "unclassified_stacks": {
+        "std::__1::shared_ptr<KisPageMutationSession::Private>::~shared_ptr[abi:ne200100]() <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000,
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000,
+        "QReadWriteLock::unlock() <- KisCpuResidentBinding::unpinReservedWrite() <- KisCpuWriteGuard::reset() <- KisCpuWriteGuard::~KisCpuWriteGuard() <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const": 1000000,
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order) <- 0x105f52327 <- std::__1::vector<KisPagePublicationCoordinator::OverlayChange, KisMutationStorageAllocator<KisPagePublicationCoordinator::OverlayChange, true>>::operator=[abi:ne200100](std::__1::vector<KisPagePublicationCoordinator::OverlayChange, KisMutationStorageAllocator<KisPagePublicationCoordinator::OverlayChange, true>>&&) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)": 1000000,
+        "std::__1::vector<KisMutationStorage<KisPageMutationSession::Private::Page, 2ul, unsigned long long>::DirectoryEntry, KisMutationStorageAllocator<KisMutationStorage<KisPageMutationSession::Private::Page, 2ul, unsigned long long>::DirectoryEntry, true>>::size[abi:ne200100]() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000
+      },
+      "xml_sha256": "a4a64958d70a51b6ce95005094710f167e44586bf4764ce52176179686081101"
+    },
+    {
+      "record": "cpu-0-matched",
+      "variant": "matched",
+      "block": 0,
+      "cpu_us": 126.06737999889069,
+      "wall_us": 126.5039707693161,
+      "totals": {
+        "all_samples": 3644,
+        "all_weight": 3644000000,
+        "main_weight": 3391000000,
+        "operation_weight": 537000000,
+        "operation_samples": 537,
+        "outside_operation_weight": 2854000000,
+        "background_weight": 253000000,
+        "unsymbolicated_leaf_weight": 14000000
+      },
+      "exclusive_mechanisms": {
+        "write_protocol": {
+          "weight_ns": 139000000,
+          "share": 0.25884543761638734,
+          "approx_cpu_us": 32.63196614496426
+        },
+        "physical_heap": {
+          "weight_ns": 119000000,
+          "share": 0.22160148975791433,
+          "approx_cpu_us": 27.93671921763127
+        },
+        "metadata_working_policy": {
+          "weight_ns": 109000000,
+          "share": 0.20297951582867785,
+          "approx_cpu_us": 25.589095753964777
+        },
+        "provider_payload_lifecycle": {
+          "weight_ns": 39000000,
+          "share": 0.07262569832402235,
+          "approx_cpu_us": 9.155731508299324
+        },
+        "owner_backing_ledger": {
+          "weight_ns": 34000000,
+          "share": 0.0633147113594041,
+          "approx_cpu_us": 7.981919776466078
+        },
+        "budget_policy": {
+          "weight_ns": 30000000,
+          "share": 0.055865921787709494,
+          "approx_cpu_us": 7.04287039099948
+        },
+        "pixel_before_copy": {
+          "weight_ns": 19000000,
+          "share": 0.035381750465549346,
+          "approx_cpu_us": 4.460484580966337
+        },
+        "storage_owner_charge": {
+          "weight_ns": 19000000,
+          "share": 0.035381750465549346,
+          "approx_cpu_us": 4.460484580966337
+        },
+        "other_memory_copy": {
+          "weight_ns": 9000000,
+          "share": 0.01675977653631285,
+          "approx_cpu_us": 2.112861117299844
+        },
+        "retirement": {
+          "weight_ns": 9000000,
+          "share": 0.01675977653631285,
+          "approx_cpu_us": 2.112861117299844
+        },
+        "epoch_root_transaction": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "fixture_final_pixels": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "fixture_clock_unclassified": {
+          "weight_ns": 2000000,
+          "share": 0.0037243947858473,
+          "approx_cpu_us": 0.46952469273329867
+        }
+      },
+      "exclusive_phases": {
+        "begin_write": {
+          "weight_ns": 257000000,
+          "share": 0.478584729981378,
+          "approx_cpu_us": 60.33392301622888
+        },
+        "seal": {
+          "weight_ns": 142000000,
+          "share": 0.2644320297951583,
+          "approx_cpu_us": 33.336253184064205
+        },
+        "commit": {
+          "weight_ns": 126000000,
+          "share": 0.2346368715083799,
+          "approx_cpu_us": 29.580055642197816
+        },
+        "begin_pixels_guard_other": {
+          "weight_ns": 12000000,
+          "share": 0.0223463687150838,
+          "approx_cpu_us": 2.817148156399792
+        }
+      },
+      "inclusive_contexts_do_not_sum": {
+        "fresh_replica": {
+          "weight_ns": 83000000,
+          "share": 0.15456238361266295,
+          "approx_cpu_us": 19.485274748431895
+        },
+        "private_publish": {
+          "weight_ns": 66000000,
+          "share": 0.12290502793296089,
+          "approx_cpu_us": 15.494314860198855
+        },
+        "private_write": {
+          "weight_ns": 50000000,
+          "share": 0.0931098696461825,
+          "approx_cpu_us": 11.738117318332467
+        },
+        "provider_duplicate": {
+          "weight_ns": 27000000,
+          "share": 0.05027932960893855,
+          "approx_cpu_us": 6.338583351899532
+        },
+        "budget": {
+          "weight_ns": 12000000,
+          "share": 0.0223463687150838,
+          "approx_cpu_us": 2.817148156399792
+        }
+      },
+      "top_leaves": {
+        "_platform_memmove": {
+          "weight_ns": 27000000,
+          "share": 0.05027932960893855,
+          "approx_cpu_us": 6.338583351899532
+        },
+        "tiny_malloc_from_free_list": {
+          "weight_ns": 23000000,
+          "share": 0.04283054003724395,
+          "approx_cpu_us": 5.3995339664329345
+        },
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": {
+          "weight_ns": 12000000,
+          "share": 0.0223463687150838,
+          "approx_cpu_us": 2.817148156399792
+        },
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": {
+          "weight_ns": 10000000,
+          "share": 0.0186219739292365,
+          "approx_cpu_us": 2.347623463666493
+        },
+        "tiny_size": {
+          "weight_ns": 9000000,
+          "share": 0.01675977653631285,
+          "approx_cpu_us": 2.112861117299844
+        },
+        "QHashPrivate::hash(unsigned long, unsigned long)": {
+          "weight_ns": 9000000,
+          "share": 0.01675977653631285,
+          "approx_cpu_us": 2.112861117299844
+        },
+        "tiny_free_list_add_ptr": {
+          "weight_ns": 9000000,
+          "share": 0.01675977653631285,
+          "approx_cpu_us": 2.112861117299844
+        },
+        "kisPageStorageAllocationBytes(unsigned long, unsigned long)": {
+          "weight_ns": 8000000,
+          "share": 0.0148975791433892,
+          "approx_cpu_us": 1.8780987709331947
+        },
+        "_platform_memset": {
+          "weight_ns": 8000000,
+          "share": 0.0148975791433892,
+          "approx_cpu_us": 1.8780987709331947
+        },
+        "kisStablePageKeyHash(KisPageKey const&)::'lambda'(unsigned long long)::operator()(unsigned long long) const": {
+          "weight_ns": 8000000,
+          "share": 0.0148975791433892,
+          "approx_cpu_us": 1.8780987709331947
+        },
+        "QRect::contains(QRect const&, bool) const": {
+          "weight_ns": 8000000,
+          "share": 0.0148975791433892,
+          "approx_cpu_us": 1.8780987709331947
+        },
+        "tiny_free_no_lock": {
+          "weight_ns": 8000000,
+          "share": 0.0148975791433892,
+          "approx_cpu_us": 1.8780987709331947
+        },
+        "free_tiny": {
+          "weight_ns": 6000000,
+          "share": 0.0111731843575419,
+          "approx_cpu_us": 1.408574078199896
+        },
+        "KisShardSlotArena<KisReplicaRecord, 32768ll>::resolve(KisGenerationalSlotId<KisReplicaSlotTag>) const": {
+          "weight_ns": 6000000,
+          "share": 0.0111731843575419,
+          "approx_cpu_us": 1.408574078199896
+        },
+        "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const": {
+          "weight_ns": 6000000,
+          "share": 0.0111731843575419,
+          "approx_cpu_us": 1.408574078199896
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "(anonymous namespace)::processStorageSnapshot()": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "KisReplicaHandle::allocationIdentity() const": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "tiny_malloc_should_clear": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_0::operator()(KisBackingBudgetController*, unsigned long long) const": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "szone_size": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, int const&, int const&>, std::__1::tuple<unsigned long long const&, int const&, int const&>>(std::__1::tuple<unsigned long long const&, int const&, int const&> const&, std::__1::tuple<unsigned long long const&, int const&, int const&> const&)": {
+          "weight_ns": 5000000,
+          "share": 0.00931098696461825,
+          "approx_cpu_us": 1.1738117318332466
+        },
+        "std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::less<unsigned long long>, true>, KisMutationStorageAllocator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, true>>::__lower_bound<unsigned long long>(unsigned long long const&, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void, false>, void>::small_vector_allocator(boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void, false>, void> const&)": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "operator==(KisPageKey const&, KisPageKey const&)": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "szone_malloc_should_clear": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "void std::__1::__tree_balance_after_insert[abi:ne200100]<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "QSize::isValid() const": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "__psynch_cvsignal": {
+          "weight_ns": 4000000,
+          "share": 0.0074487895716946,
+          "approx_cpu_us": 0.9390493854665973
+        },
+        "KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)": {
+          "weight_ns": 3000000,
+          "share": 0.00558659217877095,
+          "approx_cpu_us": 0.704287039099948
+        },
+        "tiny_free_list_remove_ptr": {
+          "weight_ns": 3000000,
+          "share": 0.00558659217877095,
+          "approx_cpu_us": 0.704287039099948
+        },
+        "KisBackingBudgetController::reserve(KisBackingBudgetDelta const&, QString*)": {
+          "weight_ns": 3000000,
+          "share": 0.00558659217877095,
+          "approx_cpu_us": 0.704287039099948
+        },
+        "boost::intrusive::default_rbtree_node_traits_impl<void*>::get_left(boost::intrusive::rbtree_node<void*>*)": {
+          "weight_ns": 3000000,
+          "share": 0.00558659217877095,
+          "approx_cpu_us": 0.704287039099948
+        }
+      },
+      "unclassified_stacks": {
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000,
+        "QString::operator=(QString const&) <- KisPageStoreDetail::setError(QString*, QString const&) <- KisPageStore::beginMutation(KisPageTransaction const&, QString*) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)": 1000000
+      },
+      "xml_sha256": "28b1dc7e14303b205201c0e2ad6d00ecfba9abf5b10705d84936c1c5b830a84d"
+    },
+    {
+      "record": "cpu-1-fresh",
+      "variant": "fresh",
+      "block": 1,
+      "cpu_us": 118.65954829725281,
+      "wall_us": 119.24293189011267,
+      "totals": {
+        "all_samples": 3719,
+        "all_weight": 3719000000,
+        "main_weight": 3354000000,
+        "outside_operation_weight": 2717000000,
+        "operation_weight": 637000000,
+        "operation_samples": 637,
+        "background_weight": 365000000,
+        "unsymbolicated_leaf_weight": 17000000
+      },
+      "exclusive_mechanisms": {
+        "write_protocol": {
+          "weight_ns": 146000000,
+          "share": 0.22919937205651492,
+          "approx_cpu_us": 27.19669395824005
+        },
+        "metadata_working_policy": {
+          "weight_ns": 127000000,
+          "share": 0.19937205651491366,
+          "approx_cpu_us": 23.657398169154014
+        },
+        "physical_heap": {
+          "weight_ns": 123000000,
+          "share": 0.19309262166405022,
+          "approx_cpu_us": 22.912283266188535
+        },
+        "provider_payload_lifecycle": {
+          "weight_ns": 57000000,
+          "share": 0.08948194662480377,
+          "approx_cpu_us": 10.617887367258101
+        },
+        "storage_owner_charge": {
+          "weight_ns": 50000000,
+          "share": 0.07849293563579278,
+          "approx_cpu_us": 9.31393628706851
+        },
+        "budget_policy": {
+          "weight_ns": 38000000,
+          "share": 0.059654631083202514,
+          "approx_cpu_us": 7.078591578172068
+        },
+        "owner_backing_ledger": {
+          "weight_ns": 37000000,
+          "share": 0.058084772370486655,
+          "approx_cpu_us": 6.892312852430697
+        },
+        "pixel_before_copy": {
+          "weight_ns": 13000000,
+          "share": 0.02040816326530612,
+          "approx_cpu_us": 2.4216234346378127
+        },
+        "other_memory_copy": {
+          "weight_ns": 12000000,
+          "share": 0.018838304552590265,
+          "approx_cpu_us": 2.2353447088964424
+        },
+        "epoch_root_transaction": {
+          "weight_ns": 12000000,
+          "share": 0.018838304552590265,
+          "approx_cpu_us": 2.2353447088964424
+        },
+        "fixture_final_pixels": {
+          "weight_ns": 10000000,
+          "share": 0.015698587127158554,
+          "approx_cpu_us": 1.8627872574137019
+        },
+        "retirement": {
+          "weight_ns": 8000000,
+          "share": 0.012558869701726845,
+          "approx_cpu_us": 1.4902298059309615
+        },
+        "fixture_clock_unclassified": {
+          "weight_ns": 4000000,
+          "share": 0.006279434850863423,
+          "approx_cpu_us": 0.7451149029654808
+        }
+      },
+      "exclusive_phases": {
+        "begin_write": {
+          "weight_ns": 331000000,
+          "share": 0.5196232339089482,
+          "approx_cpu_us": 61.658258220393535
+        },
+        "seal": {
+          "weight_ns": 144000000,
+          "share": 0.2260596546310832,
+          "approx_cpu_us": 26.82413650675731
+        },
+        "commit": {
+          "weight_ns": 143000000,
+          "share": 0.22448979591836735,
+          "approx_cpu_us": 26.63785778101594
+        },
+        "begin_pixels_guard_other": {
+          "weight_ns": 19000000,
+          "share": 0.029827315541601257,
+          "approx_cpu_us": 3.539295789086034
+        }
+      },
+      "inclusive_contexts_do_not_sum": {
+        "fresh_replica": {
+          "weight_ns": 107000000,
+          "share": 0.16797488226059654,
+          "approx_cpu_us": 19.93182365432661
+        },
+        "private_write": {
+          "weight_ns": 65000000,
+          "share": 0.10204081632653061,
+          "approx_cpu_us": 12.108117173189063
+        },
+        "private_publish": {
+          "weight_ns": 59000000,
+          "share": 0.09262166405023547,
+          "approx_cpu_us": 10.990444818740842
+        },
+        "provider_duplicate": {
+          "weight_ns": 23000000,
+          "share": 0.03610675039246468,
+          "approx_cpu_us": 4.284410692051514
+        },
+        "budget": {
+          "weight_ns": 14000000,
+          "share": 0.02197802197802198,
+          "approx_cpu_us": 2.607902160379183
+        }
+      },
+      "top_leaves": {
+        "tiny_malloc_from_free_list": {
+          "weight_ns": 24000000,
+          "share": 0.03767660910518053,
+          "approx_cpu_us": 4.470689417792885
+        },
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": {
+          "weight_ns": 23000000,
+          "share": 0.03610675039246468,
+          "approx_cpu_us": 4.284410692051514
+        },
+        "_platform_memmove": {
+          "weight_ns": 23000000,
+          "share": 0.03610675039246468,
+          "approx_cpu_us": 4.284410692051514
+        },
+        "_platform_memset": {
+          "weight_ns": 15000000,
+          "share": 0.023547880690737835,
+          "approx_cpu_us": 2.794180886120553
+        },
+        "tiny_size": {
+          "weight_ns": 14000000,
+          "share": 0.02197802197802198,
+          "approx_cpu_us": 2.607902160379183
+        },
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": {
+          "weight_ns": 14000000,
+          "share": 0.02197802197802198,
+          "approx_cpu_us": 2.607902160379183
+        },
+        "QRect::contains(QRect const&, bool) const": {
+          "weight_ns": 12000000,
+          "share": 0.018838304552590265,
+          "approx_cpu_us": 2.2353447088964424
+        },
+        "(anonymous namespace)::fitsBudgetBucket(KisPageDomainBytes const&, KisPageDomainBytes const&, KisPageDomainByteDelta const&, std::__1::array<unsigned long long, 4ul> const&, unsigned long long, unsigned long long, unsigned long long)": {
+          "weight_ns": 10000000,
+          "share": 0.015698587127158554,
+          "approx_cpu_us": 1.8627872574137019
+        },
+        "KisMutationStorageOwner::deref()": {
+          "weight_ns": 10000000,
+          "share": 0.015698587127158554,
+          "approx_cpu_us": 1.8627872574137019
+        },
+        "QHashPrivate::hash(unsigned long, unsigned long)": {
+          "weight_ns": 9000000,
+          "share": 0.0141287284144427,
+          "approx_cpu_us": 1.6765085316723318
+        },
+        "std::__1::vector<KisPageLeaseId, KisMutationStorageAllocator<KisPageLeaseId, false>>::vector[abi:ne200100](std::__1::vector<KisPageLeaseId, KisMutationStorageAllocator<KisPageLeaseId, false>>&&)": {
+          "weight_ns": 7000000,
+          "share": 0.01098901098901099,
+          "approx_cpu_us": 1.3039510801895915
+        },
+        "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const": {
+          "weight_ns": 7000000,
+          "share": 0.01098901098901099,
+          "approx_cpu_us": 1.3039510801895915
+        },
+        "QMutexPrivate* std::__1::__cxx_atomic_load[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*> const*, std::__1::memory_order)": {
+          "weight_ns": 7000000,
+          "share": 0.01098901098901099,
+          "approx_cpu_us": 1.3039510801895915
+        },
+        "std::__1::less<unsigned long long>::operator()[abi:ne200100](unsigned long long const&, unsigned long long const&) const": {
+          "weight_ns": 7000000,
+          "share": 0.01098901098901099,
+          "approx_cpu_us": 1.3039510801895915
+        },
+        "malloc_size": {
+          "weight_ns": 7000000,
+          "share": 0.01098901098901099,
+          "approx_cpu_us": 1.3039510801895915
+        },
+        "kisStablePageKeyHash(KisPageKey const&)::'lambda'(unsigned long long)::operator()(unsigned long long) const": {
+          "weight_ns": 6000000,
+          "share": 0.009419152276295133,
+          "approx_cpu_us": 1.1176723544482212
+        },
+        "KisMutationStorage<KisMutationPageEntry, 8ul, unsigned long long>::slotAt(unsigned long) const": {
+          "weight_ns": 6000000,
+          "share": 0.009419152276295133,
+          "approx_cpu_us": 1.1176723544482212
+        },
+        "tiny_free_list_add_ptr": {
+          "weight_ns": 6000000,
+          "share": 0.009419152276295133,
+          "approx_cpu_us": 1.1176723544482212
+        },
+        "tiny_malloc_should_clear": {
+          "weight_ns": 6000000,
+          "share": 0.009419152276295133,
+          "approx_cpu_us": 1.1176723544482212
+        },
+        "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)": {
+          "weight_ns": 6000000,
+          "share": 0.009419152276295133,
+          "approx_cpu_us": 1.1176723544482212
+        },
+        "kisPageStorageAllocationBytes(unsigned long, unsigned long)": {
+          "weight_ns": 6000000,
+          "share": 0.009419152276295133,
+          "approx_cpu_us": 1.1176723544482212
+        },
+        "DYLD-STUB$$malloc_size": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "free_tiny": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, int const&, int const&>, std::__1::tuple<unsigned long long const&, int const&, int const&>>(std::__1::tuple<unsigned long long const&, int const&, int const&> const&, std::__1::tuple<unsigned long long const&, int const&, int const&> const&)": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "KisReplicaHandle::allocationIdentity() const": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "std::__1::vector<KisCompletionTicket, KisMutationStorageAllocator<KisCompletionTicket, false>>::vector[abi:ne200100](std::__1::vector<KisCompletionTicket, KisMutationStorageAllocator<KisCompletionTicket, false>>&&)": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "std::__1::unique_ptr<KisMutationStorage<KisMutationPageEntry, 8ul, unsigned long long>::Block, KisMutationStorage<KisMutationPageEntry, 8ul, unsigned long long>::DeleteBlock>::operator bool[abi:ne200100]() const": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "KisShardSlotArena<KisReplicaRecord, 32768ll>::resolve(KisGenerationalSlotId<KisReplicaSlotTag>) const": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "KisSurfaceFormat::isValid() const": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "tiny_free_no_lock": {
+          "weight_ns": 5000000,
+          "share": 0.007849293563579277,
+          "approx_cpu_us": 0.9313936287068509
+        },
+        "__psynch_cvsignal": {
+          "weight_ns": 4000000,
+          "share": 0.006279434850863423,
+          "approx_cpu_us": 0.7451149029654808
+        },
+        "KisPageMetadataCoordinator::applyProjectedSequence(KisPageKey const&, KisPageTransition const*, long long)": {
+          "weight_ns": 4000000,
+          "share": 0.006279434850863423,
+          "approx_cpu_us": 0.7451149029654808
+        },
+        "_tiny_check_and_zero_inline_meta_from_freelist": {
+          "weight_ns": 4000000,
+          "share": 0.006279434850863423,
+          "approx_cpu_us": 0.7451149029654808
+        },
+        "std::__1::vector<KisPageLeaseId, KisMutationStorageAllocator<KisPageLeaseId, false>>::__destroy_vector::operator()[abi:ne200100]()": {
+          "weight_ns": 4000000,
+          "share": 0.006279434850863423,
+          "approx_cpu_us": 0.7451149029654808
+        },
+        "std::__1::pair<boost::intrusive::rbtree_node<void*>*, bool> boost::intrusive::bstree_algorithms<boost::intrusive::rbtree_node_traits<void*, false>>::insert_unique_check<CompletionInterval, boost::intrusive::detail::key_nodeptr_comp<IntervalLess, boost::intrusive::bhtraits<CompletionInterval, boost::intrusive::rbtree_node_traits<void*, false>, (boost::intrusive::link_mode_type)1, boost::intrusive::dft_tag, 3u>, boost::move_detail::identity<CompletionInterval>>>(boost::intrusive::rbtree_node<void*> const*, CompletionInterval const&, boost::intrusive::detail::key_nodeptr_comp<IntervalLess, boost::intrusive::bhtraits<CompletionInterval, boost::intrusive::rbtree_node_traits<void*, false>, (boost::intrusive::link_mode_type)1, boost::intrusive::dft_tag, 3u>, boost::move_detail::identity<CompletionInterval>>, boost::intrusive::insert_commit_data_t<boost::intrusive::rbtree_node<void*>*>&, unsigned long*)": {
+          "weight_ns": 4000000,
+          "share": 0.006279434850863423,
+          "approx_cpu_us": 0.7451149029654808
+        }
+      },
+      "unclassified_stacks": {
+        "KisPageStoreDiagnosticTimer::next(KisPageStoreDiagnosticPhase, unsigned long long) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000,
+        "KisPageStoreDiagnosticTimer::finish() <- KisPageStore::beginCurrentTransaction() <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 1000000,
+        "QScopedPointer<KisPageStore::Private, KisPageStore::PrivateReleaser>::operator->() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000,
+        "QMutexLocker<QMutex>::relock() <- KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 1000000
+      },
+      "xml_sha256": "75e68402c060b4ea0fe1b92bdd04568b2a7cdc1dc631bfc813b4652665cf13e6"
+    },
+    {
+      "record": "cpu-1-handoff",
+      "variant": "handoff",
+      "block": 1,
+      "cpu_us": 104.8239500902623,
+      "wall_us": 105.3417380269725,
+      "totals": {
+        "all_samples": 3712,
+        "all_weight": 3712000000,
+        "main_weight": 3429000000,
+        "outside_operation_weight": 2982000000,
+        "operation_weight": 447000000,
+        "operation_samples": 447,
+        "background_weight": 283000000,
+        "unsymbolicated_leaf_weight": 12000000
+      },
+      "exclusive_mechanisms": {
+        "metadata_working_policy": {
+          "weight_ns": 123000000,
+          "share": 0.2751677852348993,
+          "approx_cpu_us": 28.844174185911104
+        },
+        "write_protocol": {
+          "weight_ns": 115000000,
+          "share": 0.25727069351230425,
+          "approx_cpu_us": 26.96813033642095
+        },
+        "physical_heap": {
+          "weight_ns": 77000000,
+          "share": 0.17225950782997762,
+          "approx_cpu_us": 18.056922051342724
+        },
+        "owner_backing_ledger": {
+          "weight_ns": 44000000,
+          "share": 0.09843400447427293,
+          "approx_cpu_us": 10.318241172195842
+        },
+        "storage_owner_charge": {
+          "weight_ns": 22000000,
+          "share": 0.049217002237136466,
+          "approx_cpu_us": 5.159120586097921
+        },
+        "budget_policy": {
+          "weight_ns": 20000000,
+          "share": 0.0447427293064877,
+          "approx_cpu_us": 4.690109623725383
+        },
+        "fixture_final_pixels": {
+          "weight_ns": 14000000,
+          "share": 0.03131991051454139,
+          "approx_cpu_us": 3.283076736607768
+        },
+        "other_memory_copy": {
+          "weight_ns": 9000000,
+          "share": 0.020134228187919462,
+          "approx_cpu_us": 2.110549330676422
+        },
+        "retirement": {
+          "weight_ns": 8000000,
+          "share": 0.017897091722595078,
+          "approx_cpu_us": 1.876043849490153
+        },
+        "epoch_root_transaction": {
+          "weight_ns": 7000000,
+          "share": 0.015659955257270694,
+          "approx_cpu_us": 1.641538368303884
+        },
+        "fixture_clock_unclassified": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "provider_payload_lifecycle": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        }
+      },
+      "exclusive_phases": {
+        "begin_write": {
+          "weight_ns": 173000000,
+          "share": 0.3870246085011186,
+          "approx_cpu_us": 40.56944824522456
+        },
+        "commit": {
+          "weight_ns": 129000000,
+          "share": 0.28859060402684567,
+          "approx_cpu_us": 30.251207073028716
+        },
+        "seal": {
+          "weight_ns": 123000000,
+          "share": 0.2751677852348993,
+          "approx_cpu_us": 28.844174185911104
+        },
+        "begin_pixels_guard_other": {
+          "weight_ns": 22000000,
+          "share": 0.049217002237136466,
+          "approx_cpu_us": 5.159120586097921
+        }
+      },
+      "inclusive_contexts_do_not_sum": {
+        "handoff_plan": {
+          "weight_ns": 117000000,
+          "share": 0.26174496644295303,
+          "approx_cpu_us": 27.437141298793488
+        },
+        "private_publish": {
+          "weight_ns": 52000000,
+          "share": 0.116331096196868,
+          "approx_cpu_us": 12.194285021685994
+        },
+        "handoff_metadata_prepare": {
+          "weight_ns": 42000000,
+          "share": 0.09395973154362416,
+          "approx_cpu_us": 9.849230209823304
+        },
+        "handoff_accounting": {
+          "weight_ns": 22000000,
+          "share": 0.049217002237136466,
+          "approx_cpu_us": 5.159120586097921
+        },
+        "budget": {
+          "weight_ns": 5000000,
+          "share": 0.011185682326621925,
+          "approx_cpu_us": 1.1725274059313457
+        }
+      },
+      "top_leaves": {
+        "_platform_memset": {
+          "weight_ns": 18000000,
+          "share": 0.040268456375838924,
+          "approx_cpu_us": 4.221098661352844
+        },
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": {
+          "weight_ns": 13000000,
+          "share": 0.029082774049217,
+          "approx_cpu_us": 3.0485712554214985
+        },
+        "QRect::contains(QRect const&, bool) const": {
+          "weight_ns": 9000000,
+          "share": 0.020134228187919462,
+          "approx_cpu_us": 2.110549330676422
+        },
+        "kisPageStorageAllocationBytes(unsigned long, unsigned long)": {
+          "weight_ns": 8000000,
+          "share": 0.017897091722595078,
+          "approx_cpu_us": 1.876043849490153
+        },
+        "malloc_size": {
+          "weight_ns": 8000000,
+          "share": 0.017897091722595078,
+          "approx_cpu_us": 1.876043849490153
+        },
+        "_platform_memmove": {
+          "weight_ns": 8000000,
+          "share": 0.017897091722595078,
+          "approx_cpu_us": 1.876043849490153
+        },
+        "tiny_malloc_from_free_list": {
+          "weight_ns": 8000000,
+          "share": 0.017897091722595078,
+          "approx_cpu_us": 1.876043849490153
+        },
+        "__psynch_cvsignal": {
+          "weight_ns": 8000000,
+          "share": 0.017897091722595078,
+          "approx_cpu_us": 1.876043849490153
+        },
+        "KisReplicaLayout::isValid() const": {
+          "weight_ns": 7000000,
+          "share": 0.015659955257270694,
+          "approx_cpu_us": 1.641538368303884
+        },
+        "tiny_free_list_add_ptr": {
+          "weight_ns": 6000000,
+          "share": 0.013422818791946308,
+          "approx_cpu_us": 1.4070328871176148
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 6000000,
+          "share": 0.013422818791946308,
+          "approx_cpu_us": 1.4070328871176148
+        },
+        "std::__1::vector<KisCompletionTicket, KisMutationStorageAllocator<KisCompletionTicket, false>>::vector[abi:ne200100](std::__1::vector<KisCompletionTicket, KisMutationStorageAllocator<KisCompletionTicket, false>>&&)": {
+          "weight_ns": 6000000,
+          "share": 0.013422818791946308,
+          "approx_cpu_us": 1.4070328871176148
+        },
+        "tiny_size": {
+          "weight_ns": 6000000,
+          "share": 0.013422818791946308,
+          "approx_cpu_us": 1.4070328871176148
+        },
+        "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const": {
+          "weight_ns": 5000000,
+          "share": 0.011185682326621925,
+          "approx_cpu_us": 1.1725274059313457
+        },
+        "(anonymous namespace)::fitsBudgetBucket(KisPageDomainBytes const&, KisPageDomainBytes const&, KisPageDomainByteDelta const&, std::__1::array<unsigned long long, 4ul> const&, unsigned long long, unsigned long long, unsigned long long)": {
+          "weight_ns": 5000000,
+          "share": 0.011185682326621925,
+          "approx_cpu_us": 1.1725274059313457
+        },
+        "tiny_free_no_lock": {
+          "weight_ns": 5000000,
+          "share": 0.011185682326621925,
+          "approx_cpu_us": 1.1725274059313457
+        },
+        "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)": {
+          "weight_ns": 5000000,
+          "share": 0.011185682326621925,
+          "approx_cpu_us": 1.1725274059313457
+        },
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": {
+          "weight_ns": 5000000,
+          "share": 0.011185682326621925,
+          "approx_cpu_us": 1.1725274059313457
+        },
+        "KisPageWorkingVersion (anonymous namespace)::ShardRecordStore::project<KisPageWorkingVersion>(KisVersionRecord const&, KisPageWorkingVersion) const": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "KisShardSlotIndex<KisPageVersion, KisGenerationalSlotId<KisVersionSlotTag>>::findBucket(KisPageVersion const&) const": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "QHashPrivate::hash(unsigned long, unsigned long)": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "free_tiny": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "bool std::__1::__tuple_less<2ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "KisMutationAdmissionTable<KisPageKey, KisPageWriteAdmission::ActiveClaim>::bucket(KisMutationAdmissionTable<KisPageKey, KisPageWriteAdmission::ActiveClaim>::Entry const*, unsigned long, KisPageKey const&, unsigned long)": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "KisShardSlotArena<KisVersionRecord, 16384ll>::resolve(KisGenerationalSlotId<KisVersionSlotTag>) const": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "operator==(KisPageVersion const&, KisPageVersion const&)": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "bool std::__1::__tuple_less<2ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 4000000,
+          "share": 0.008948545861297539,
+          "approx_cpu_us": 0.9380219247450765
+        },
+        "tiny_malloc_should_clear": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        },
+        "DYLD-STUB$$free": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        },
+        "KisPageMetadataCoordinator::queryMutationBase(KisPageVersion const&, KisPageVersion const&, bool, KisPageMetadataCoordinator::MutationBaseInfo*) const": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        },
+        "KisSurfaceId::isValid() const": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        },
+        "KisPageOwnerLedger::Private::buildPhysicalBackingDelta(std::__1::vector<KisBackingClassChange, KisMutationStorageAllocator<KisBackingClassChange, true>> const&, KisBackingBudgetDelta*, std::__1::vector<(anonymous namespace)::PreparedRetirementCredit, KisMutationStorageAllocator<(anonymous namespace)::PreparedRetirementCredit, true>>*, QString*)": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        },
+        "szone_size": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        },
+        "void (anonymous namespace)::applyPolicy<KisPageWorkingResult, KisPageStateMachine::applyKnownValid(KisPageWorkingResult&, KisPageTransition const&) const::$_0>(KisPageWorkingResult&, KisPageTransition const&, bool, KisPageStateMachine::applyKnownValid(KisPageWorkingResult&, KisPageTransition const&) const::$_0)": {
+          "weight_ns": 3000000,
+          "share": 0.006711409395973154,
+          "approx_cpu_us": 0.7035164435588074
+        }
+      },
+      "unclassified_stacks": {
+        "KisMutationSlotHandle::isValid() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000,
+        "KisPageStoreDiagnosticTimer::next(KisPageStoreDiagnosticPhase, unsigned long long) <- KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 1000000,
+        "0x1048c325d <- KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 1000000,
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order) <- KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 1000000
+      },
+      "xml_sha256": "5fc3c6056071b8daf72383877647800f86e3d2afbb24eddc53806a3afa58da8c"
+    },
+    {
+      "record": "cpu-1-matched",
+      "variant": "matched",
+      "block": 1,
+      "cpu_us": 126.85701641981473,
+      "wall_us": 127.43506961779552,
+      "totals": {
+        "all_samples": 3623,
+        "all_weight": 3623000000,
+        "main_weight": 3352000000,
+        "outside_operation_weight": 2823000000,
+        "operation_weight": 529000000,
+        "operation_samples": 529,
+        "background_weight": 271000000,
+        "unsymbolicated_leaf_weight": 18000000
+      },
+      "exclusive_mechanisms": {
+        "write_protocol": {
+          "weight_ns": 131000000,
+          "share": 0.24763705103969755,
+          "approx_cpu_us": 31.414497449897407
+        },
+        "physical_heap": {
+          "weight_ns": 108000000,
+          "share": 0.20415879017013233,
+          "approx_cpu_us": 25.898974996861984
+        },
+        "metadata_working_policy": {
+          "weight_ns": 92000000,
+          "share": 0.17391304347826086,
+          "approx_cpu_us": 22.06208981214169
+        },
+        "storage_owner_charge": {
+          "weight_ns": 50000000,
+          "share": 0.0945179584120983,
+          "approx_cpu_us": 11.990266202250918
+        },
+        "provider_payload_lifecycle": {
+          "weight_ns": 37000000,
+          "share": 0.06994328922495274,
+          "approx_cpu_us": 8.87279698966568
+        },
+        "owner_backing_ledger": {
+          "weight_ns": 34000000,
+          "share": 0.06427221172022685,
+          "approx_cpu_us": 8.153381017530625
+        },
+        "budget_policy": {
+          "weight_ns": 23000000,
+          "share": 0.043478260869565216,
+          "approx_cpu_us": 5.515522453035422
+        },
+        "pixel_before_copy": {
+          "weight_ns": 17000000,
+          "share": 0.03213610586011342,
+          "approx_cpu_us": 4.076690508765313
+        },
+        "fixture_final_pixels": {
+          "weight_ns": 11000000,
+          "share": 0.020793950850661626,
+          "approx_cpu_us": 2.637858564495202
+        },
+        "retirement": {
+          "weight_ns": 9000000,
+          "share": 0.017013232514177693,
+          "approx_cpu_us": 2.1582479164051653
+        },
+        "fixture_clock_unclassified": {
+          "weight_ns": 6000000,
+          "share": 0.011342155009451797,
+          "approx_cpu_us": 1.4388319442701103
+        },
+        "epoch_root_transaction": {
+          "weight_ns": 6000000,
+          "share": 0.011342155009451797,
+          "approx_cpu_us": 1.4388319442701103
+        },
+        "other_memory_copy": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        }
+      },
+      "exclusive_phases": {
+        "begin_write": {
+          "weight_ns": 255000000,
+          "share": 0.4820415879017013,
+          "approx_cpu_us": 61.150357631479686
+        },
+        "commit": {
+          "weight_ns": 129000000,
+          "share": 0.2438563327032136,
+          "approx_cpu_us": 30.93488680180737
+        },
+        "seal": {
+          "weight_ns": 124000000,
+          "share": 0.23440453686200377,
+          "approx_cpu_us": 29.73586018158228
+        },
+        "begin_pixels_guard_other": {
+          "weight_ns": 21000000,
+          "share": 0.03969754253308128,
+          "approx_cpu_us": 5.035911804945386
+        }
+      },
+      "inclusive_contexts_do_not_sum": {
+        "fresh_replica": {
+          "weight_ns": 83000000,
+          "share": 0.15689981096408318,
+          "approx_cpu_us": 19.903841895736527
+        },
+        "private_publish": {
+          "weight_ns": 60000000,
+          "share": 0.11342155009451796,
+          "approx_cpu_us": 14.388319442701103
+        },
+        "private_write": {
+          "weight_ns": 50000000,
+          "share": 0.0945179584120983,
+          "approx_cpu_us": 11.990266202250918
+        },
+        "provider_duplicate": {
+          "weight_ns": 27000000,
+          "share": 0.05103969754253308,
+          "approx_cpu_us": 6.474743749215496
+        },
+        "budget": {
+          "weight_ns": 13000000,
+          "share": 0.024574669187145556,
+          "approx_cpu_us": 3.117469212585239
+        },
+        "handoff_plan": {
+          "weight_ns": 1000000,
+          "share": 0.001890359168241966,
+          "approx_cpu_us": 0.23980532404501836
+        }
+      },
+      "top_leaves": {
+        "_platform_memmove": {
+          "weight_ns": 21000000,
+          "share": 0.03969754253308128,
+          "approx_cpu_us": 5.035911804945386
+        },
+        "tiny_malloc_from_free_list": {
+          "weight_ns": 19000000,
+          "share": 0.035916824196597356,
+          "approx_cpu_us": 4.5563011568553495
+        },
+        "_platform_memset": {
+          "weight_ns": 16000000,
+          "share": 0.030245746691871456,
+          "approx_cpu_us": 3.836885184720294
+        },
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": {
+          "weight_ns": 15000000,
+          "share": 0.02835538752362949,
+          "approx_cpu_us": 3.597079860675276
+        },
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": {
+          "weight_ns": 13000000,
+          "share": 0.024574669187145556,
+          "approx_cpu_us": 3.117469212585239
+        },
+        "QRect::contains(QRect const&, bool) const": {
+          "weight_ns": 12000000,
+          "share": 0.022684310018903593,
+          "approx_cpu_us": 2.8776638885402206
+        },
+        "kisPageStorageAllocationBytes(unsigned long, unsigned long)": {
+          "weight_ns": 10000000,
+          "share": 0.01890359168241966,
+          "approx_cpu_us": 2.3980532404501838
+        },
+        "free_tiny": {
+          "weight_ns": 8000000,
+          "share": 0.015122873345935728,
+          "approx_cpu_us": 1.918442592360147
+        },
+        "tiny_free_list_add_ptr": {
+          "weight_ns": 8000000,
+          "share": 0.015122873345935728,
+          "approx_cpu_us": 1.918442592360147
+        },
+        "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_0::operator()(KisBackingBudgetController*, unsigned long long) const": {
+          "weight_ns": 8000000,
+          "share": 0.015122873345935728,
+          "approx_cpu_us": 1.918442592360147
+        },
+        "__psynch_cvsignal": {
+          "weight_ns": 7000000,
+          "share": 0.013232514177693762,
+          "approx_cpu_us": 1.6786372683151287
+        },
+        "tiny_size": {
+          "weight_ns": 7000000,
+          "share": 0.013232514177693762,
+          "approx_cpu_us": 1.6786372683151287
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, int const&, int const&>, std::__1::tuple<unsigned long long const&, int const&, int const&>>(std::__1::tuple<unsigned long long const&, int const&, int const&> const&, std::__1::tuple<unsigned long long const&, int const&, int const&> const&)": {
+          "weight_ns": 6000000,
+          "share": 0.011342155009451797,
+          "approx_cpu_us": 1.4388319442701103
+        },
+        "tiny_free_no_lock": {
+          "weight_ns": 6000000,
+          "share": 0.011342155009451797,
+          "approx_cpu_us": 1.4388319442701103
+        },
+        "KisMutationStorageOwner::deref()": {
+          "weight_ns": 6000000,
+          "share": 0.011342155009451797,
+          "approx_cpu_us": 1.4388319442701103
+        },
+        "bool std::__1::__tuple_less<2ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 6000000,
+          "share": 0.011342155009451797,
+          "approx_cpu_us": 1.4388319442701103
+        },
+        "szone_malloc_should_clear": {
+          "weight_ns": 6000000,
+          "share": 0.011342155009451797,
+          "approx_cpu_us": 1.4388319442701103
+        },
+        "(anonymous namespace)::fitsBudgetBucket(KisPageDomainBytes const&, KisPageDomainBytes const&, KisPageDomainByteDelta const&, std::__1::array<unsigned long long, 4ul> const&, unsigned long long, unsigned long long, unsigned long long)": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        },
+        "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        },
+        "operator==(KisPageVersion const&, KisPageVersion const&)": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        },
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        },
+        "void std::__1::__tree_balance_after_insert[abi:ne200100]<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        },
+        "kisStablePageKeyHash(KisPageKey const&)::'lambda'(unsigned long long)::operator()(unsigned long long) const": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        },
+        "KisGenerationalSlotId<KisReplicaSlotTag>::isValid() const": {
+          "weight_ns": 5000000,
+          "share": 0.00945179584120983,
+          "approx_cpu_us": 1.1990266202250919
+        },
+        "szone_size": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "KisGenerationalSlotId<KisVersionSlotTag>::isValid() const": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "QHashPrivate::hash(unsigned long, unsigned long)": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "std::__1::less<unsigned long long>::operator()[abi:ne200100](unsigned long long const&, unsigned long long const&) const": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "QMutexPrivate* std::__1::__cxx_atomic_load[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*> const*, std::__1::memory_order)": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "QRect::isEmpty() const": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "tiny_free_list_remove_ptr": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "kisStablePageKeyHash(KisPageKey const&)": {
+          "weight_ns": 4000000,
+          "share": 0.007561436672967864,
+          "approx_cpu_us": 0.9592212961800735
+        },
+        "std::__1::shared_ptr<std::__1::vector<KisPageTransition, KisMutationStorageAllocator<KisPageTransition, true>>>::get[abi:ne200100]() const": {
+          "weight_ns": 3000000,
+          "share": 0.005671077504725898,
+          "approx_cpu_us": 0.7194159721350551
+        },
+        "rack_get_thread_index": {
+          "weight_ns": 3000000,
+          "share": 0.005671077504725898,
+          "approx_cpu_us": 0.7194159721350551
+        }
+      },
+      "unclassified_stacks": {
+        "DYLD-STUB$$KisCpuWriteGuard::~KisCpuWriteGuard() <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000,
+        "__ulock_wake <- QBasicMutex::unlockInternal() <- QBasicMutex::unlock() <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)": 1000000,
+        "0x103f9b2a9 <- KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 1000000,
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order) <- KisCpuWriteGuard::~KisCpuWriteGuard() <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main": 1000000,
+        "0x103f1f03d <- std::__1::map<unsigned long long, EpochTransactionRecord, std::__1::less<unsigned long long>, KisMutationStorageAllocator<std::__1::pair<unsigned long long const, EpochTransactionRecord>, true>>::insert[abi:ne200100](std::__1::__basic_node_handle<std::__1::__tree_node<std::__1::__value_type<unsigned long long, EpochTransactionRecord>, void*>, KisMutationStorageAllocator<std::__1::pair<unsigned long long const, EpochTransactionRecord>, true>, std::__1::__map_node_handle_specifics>&&) <- KisPageStore::beginCurrentTransaction() <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)": 1000000,
+        "KisPageStoreDiagnosticTimer::next(KisPageStoreDiagnosticPhase, unsigned long long) <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool)::$_0::operator()() const <- sample(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, int, bool) <- main <- start": 1000000
+      },
+      "xml_sha256": "1b2da29cc9fa3e2b48e7171a5281ef4f0b1482da092ddf8a00da4ee77e1c483e"
+    }
+  ],
+  "analysis_sha256": "44224051ded65cfb0e5da69b58d6abff7326b2f93ddaf8de9e2f1792ebaa1c87"
+}

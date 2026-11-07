@@ -1,0 +1,9 @@
+{
+  "product_changes": false,
+  "build_failures": 0,
+  "process_failures": 0,
+  "analysis_issues": [
+    {"issue":"atos inline delimiter separates addresses, not individual frames; initial parser expected one line per address", "evidence":"analysis.log", "resolution":"Parse delimiter groups and retain all inline frames; analyze same 28 processes, no new sampling"},
+    {"issue":"Initial summary asserted every event could be assigned to a semantic responsibility", "resolution":"Preserve unclassified fits/prepare/settle/raw-free events explicitly; require full attribution only for control requests/successes and deref used by directional claims", "scope":"No runtime failure or product change; no ambiguous address reuse observed"}
+  ]
+}

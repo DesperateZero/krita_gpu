@@ -1,0 +1,17 @@
+Warning: truncated output (original token count: 2766)
+Total output lines: 37
+
+[1m/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_m6_calibration_resolution_20261006/baseline.cpp:262:27: [0m[0;1;31merror: [0m[1mno matching function for call to 'pthread_get_qos_class_np'[0m
+  262 |     [0;34mconst[0m [0;34mauto[0m priorQos = pthread_get_qos_class_np(pthread_self(), [0;32mnullptr[0m);[0m
+      | [0;1;32m                          ^~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/pthread/qos.h:186:1: [0m[0;1;36mnote: [0mcandidate function not viable: requires 3 arguments, but 2 were provided[0m
+  186 | pthread_get_qos_class_np(pthread_t __pthread,[0m
+      | [0;1;32m^                        ~~~~~~~~~~~~~~~~~~~~
+[0m  187 |                 qos_class_t * [0;34m_Nullable[0m __restrict __qos_class,[0m
+      | [0;1;32m                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m  188 |                 [0;34mint[0m * [0;34m_Nullable[0m __restrict __relative_priority);[0m
+      | [0;1;32m                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_m6_calibration_resolution_20261006/baseline.cpp:266:13: [0m[0;1;31merror: [0m[1mno matching function for call to 'pthread_get_qos_class_np'[0m
+  266 |         [0;34mif[0m (pthread_get_qos_class_np(pthread_self(), [0;32mnullptr[0m) != QOS_CLASS_USER_INITIATED) [0;34mreturn[0m [0;32m12[0m;[0m
+      | [0;1;32m            ^~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/Applications/Xcode.app/Contents/Developer/Platf…1966 tokens truncated…framework/Headers', '-isystem', '/Users/apple/krita_gpu/krita/_install/include/KF6/KCoreAddons', '-isystem', '/Users/apple/krita_gpu/krita/_install/include/freetype2', '-isystem', '/Users/apple/krita_gpu/krita/_install/include/harfbuzz', '-isystem', '/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Headers', '-isystem', '/Users/apple/krita_gpu/krita/_install/include/KF6/KGuiAddons', '-isystem', '/Users/apple/krita_gpu/krita/_install/include/KF6/KCompletion', '-isystem', '/Users/apple/krita_gpu/krita/_install/include/eigen3', '-isystem', '/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers', '-fno-operator-names', '-Wno-gnu-zero-variadic-macro-arguments', '-Wall', '-Wextra', '-Wcast-align', '-Wchar-subscripts', '-Wformat-security', '-Wno-long-long', '-Wpointer-arith', '-Wundef', '-Wnon-virtual-dtor', '-Woverloaded-virtual', '-Werror=return-type', '-Werror=init-self', '-Wvla', '-Wdate-time', '-fdiagnostics-color=always', '-fexceptions', '-O2', '-g', '-DNDEBUG', '-std=gnu++17', '-isysroot', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk', '-mmacosx-version-min=12', '-fPIE', '-fvisibility=hidden', '-fvisibility-inlines-hidden', '-mmacosx-version-min=12', '-Wno-macro-redefined', '-Wno-deprecated-register', '-arch', 'x86_64', '-c', '/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_m6_calibration_resolution_20261006/baseline.cpp', '-o', '/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_m6_calibration_resolution_20261006/probe-x86_64/probe.o']' returned non-zero exit status 1.

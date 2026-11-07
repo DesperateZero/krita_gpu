@@ -1,0 +1,27 @@
+{
+  "product_commit": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "product_parent": "864627f95737c62fe79da87677c8f4b0ab44c55a",
+  "product_paths": [
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp",
+    "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json"
+  ],
+  "production_insertions": 110,
+  "production_deletions": 17,
+  "test_insertions": 31,
+  "test_deletions": 21,
+  "numstat": [
+    "9\t5\tbuild-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "8480\t6966\tbuild-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "110\t17\tlibs/image/pagestore/KisPageMetadataCoordinator.cpp",
+    "31\t21\tlibs/image/tests/KisPageStoreReferenceTest.cpp"
+  ],
+  "patch_sha256": "aae3d24fb468340849a4a31f41076fea978cf1388a7bd081602454c56126b636",
+  "qualification": "Original candidate storage/lifetime safety closed. Statistical performance, common same-semantic residency and CP0 remain separately required; complete M6/M7/M8 unqualified.",
+  "scopes": {
+    "fixed_m5_fresh": "K1 both pass; K16 both fail",
+    "fixed_m5_history": "Four buckets and scoped family pass",
+    "current_handoff": "All four original thresholds fail"
+  }
+}

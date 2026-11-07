@@ -1,0 +1,26 @@
+{
+  "command": [
+    "arch",
+    "-arm64",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+    "storeRootStorageRefusal",
+    "storeRootStorageRetained",
+    "domainAdmissionStorageRetained",
+    "domainClaimPreparationRejectsBeforePhysicalMove",
+    "domainJournalCommitsAtCapacity",
+    "domainJournalSynchronizationRejectsAtCapacity",
+    "backingDomainRejectsStaleSnapshot",
+    "-nocrashhandler"
+  ],
+  "pid": 36607,
+  "exit_code": 2,
+  "totals": [
+    "Totals: 11 passed, 2 failed, 0 skipped, 0 blacklisted, 5ms"
+  ],
+  "failures": [
+    "FAIL!  : KisPageStoreCpuMutationTest::domainAdmissionStorageRetained(last-strong-admission) 'store->registerReplicaProvider(provider)' returned FALSE. ()",
+    "FAIL!  : KisPageStoreCpuMutationTest::domainAdmissionStorageRetained(late-reservation) 'store->registerReplicaProvider(provider)' returned FALSE. ()"
+  ],
+  "normal_exit": true,
+  "passed": false
+}

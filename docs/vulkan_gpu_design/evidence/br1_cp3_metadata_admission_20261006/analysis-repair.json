@@ -1,0 +1,35 @@
+{
+  "reason": "Original analyzer incorrectly required every main sample to include the inner loop. Exactly three outer testSharedBaseline leaves are retained outside product attribution.",
+  "same_four_raw_profiles": true,
+  "no_resampling": true,
+  "raw": {
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/cpu-1-parent/time-profile.xml": "9b58b79849f08b3c0a2a5021fcbec25d738cab0e07f8663f09f2c7d86ccc361c",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/cpu-0-current/time-profile.xml": "fc476b94b05bfb0126b223908f075d4f027113f79c708ea2cc9cc9db62d4b495",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/cpu-1-current/time-profile.xml": "fa7fb6cdc9a509b3ea857359eb839add69ce3f61d453b98aa0b139a555749ea9",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/cpu-0-parent/time-profile.xml": "67329f480edc5c6cc149432b6a84ec14c354084bd744a1d21a8498c633c51bcb"
+  },
+  "runs": [
+    {
+      "command": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.15/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/analyze_cpu.py"
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.6235301659908146,
+      "log": "analysis-repair-0.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.15/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/compare_cpu.py"
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.039802375016734004,
+      "log": "analysis-repair-1.log"
+    }
+  ]
+}

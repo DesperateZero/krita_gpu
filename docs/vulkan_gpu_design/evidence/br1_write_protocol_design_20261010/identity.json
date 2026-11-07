@@ -1,0 +1,30 @@
+{
+  "active_product": "8198c36ed722030edae715b7423554036bf1bcf7",
+  "candidate": "20fd6d9897f5f0ef3f89d215df0cfb2e6a1b63b9",
+  "outer_parent": "b8d29c7159c268a8a02f08c8fd96befd859b7239",
+  "scope": "Static algorithm and convergence design review; no product edits or new performance samples.",
+  "active_files": {
+    "libs/image/pagestore/KisPageStore.cpp": "447715516129afa0e0ac749bab607f83d08ebf737bc594ed56c433a2b50398c0",
+    "libs/image/pagestore/KisPageStore.h": "77430cea61f9fbc840b8e40719e58cf73b3c41451cdd401736b4b4776e22a685",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "6a6b9159d4a242cb944ced6f40eb24a013821c09be69d44e370c1d05f27a448b",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "17ef9529545e4ea0b355e325a10d983147f36c66a72e87da7dcd9008c99742fa",
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp": "5c03cd8c48ba8c9191367579ce82c0b9fbcf535e30e99c227d91dc27322c38b9",
+    "libs/image/pagestore/KisPageStateMachine.cpp": "6d446c55a22cd029771b4b8608c6244aacaee2378f45287b760e41216d5f1105",
+    "libs/image/pagestore/KisPageOwnerLedger.cpp": "78845089bb8013b9d57818e09a9631206c8e331d1f27eb9228b14a0136a158e7",
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp": "6a2b52d5780609e28f76a5dde6570a5dd8629de84bf70a8a0fa6447ea4903c74",
+    "libs/image/pagestore/KisPagePublicationCoordinator_p.h": "1675c4451fb7e37cebb242755df6c9e96e3693c94161d56082eb657a182a9c30",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "d682a1c8b87b533baa91fb4d7830465943825791ab9098adc7aa8c5181ee388f",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "bbf5b77ebaf12724208708cb2c3024a275fe27bc4ce69eeaf9e4fdaae574dccb",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "3c4b51d952547c01833435af5baf5b24b5e4ed082e879fec5aeb9638d66ad0f4",
+    "libs/image/tiles3/kis_tile_hash_table_p.h": "ea3b62cb126697736aedb5d3b2df10fa7c1eb5f7bf1629148b2b10a050aa3b46",
+    "libs/image/tiles3/kis_tile_hash_table2.h": "7736ea4b57e55549be0a635431415914fc33ae9589603a1afcca016245b903b7"
+  },
+  "candidate_diff_sha256": "88d57a3ca6399f4426ad25dd66617919a15beeaab6e8b20c762248b8826faad8",
+  "findings": {
+    "preflight_guard": "KisPageMutationExecution::prepareWrites calls beginWriteImpl(preparationOnly=true) then resets the public guard; reset unpins and records Exposed -> Prepared.",
+    "input_capability": "InputBytesReady does not promise no further mutation; inputKind is currently MutableGuard or Semantic.",
+    "phase_identity": "Entry Prepared and metadata Prepared have distinct meanings; alias and candidate final path infer phase from writable reservation absence.",
+    "late_failure": "Fresh independent pixels remain discardable; live-backing first mutation has a stricter irreversibility boundary.",
+    "business_causality": "Previous freehand CPU regression does not identify ordinary guard/wrapper/layout causality; actual F/P/A by stage remains unmeasured."
+  }
+}

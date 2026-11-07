@@ -1,0 +1,28 @@
+{
+  "command": [
+    "arch",
+    "-arm64",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+    "metadataArenaDirectoryGrowthAtCapacity",
+    "metadataConfigurationStorageRefusal",
+    "metadataConfigurationLateCandidate",
+    "metadataSlotArenaGenerationAndRelease",
+    "preparedMetadataPublicationIsBoundAndOneShot",
+    "preparedMetadataClaimsDoNotLoseConcurrentReaders",
+    "preparedPublicationStorageIsBound",
+    "-nocrashhandler"
+  ],
+  "pid": 67721,
+  "exit_code": 4,
+  "totals": [
+    "Totals: 31 passed, 4 failed, 0 skipped, 0 blacklisted, 18ms"
+  ],
+  "failures": [
+    "FAIL!  : KisPageStoreReferenceTest::metadataConfigurationLateCandidate(shards1-install0-mutation0) 'metadata->footprint().versionArena.directoryEntries > directoryEntries' returned FALSE. ()",
+    "FAIL!  : KisPageStoreReferenceTest::metadataConfigurationLateCandidate(shards1-install1-mutation0) 'metadata->footprint().versionArena.directoryEntries > directoryEntries' returned FALSE. ()",
+    "FAIL!  : KisPageStoreReferenceTest::metadataConfigurationLateCandidate(shards64-install0-mutation0) 'metadata->footprint().versionArena.directoryEntries > directoryEntries' returned FALSE. ()",
+    "FAIL!  : KisPageStoreReferenceTest::metadataConfigurationLateCandidate(shards64-install1-mutation0) 'metadata->footprint().versionArena.directoryEntries > directoryEntries' returned FALSE. ()"
+  ],
+  "normal_exit": true,
+  "passed": false
+}

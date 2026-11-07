@@ -1,0 +1,53 @@
+{
+  "product": "16a4ff59eb01e87dc435afb81a305413d32223bb",
+  "verified": true,
+  "reports": {
+    "net-price": {
+      "batch": "net-price-r1",
+      "processes": 51,
+      "timing_processes": 48,
+      "archive_members": 183,
+      "identity_verified": true,
+      "primary": {
+        "point": 11.696409218282936,
+        "ci95": [
+          4.77803713033163,
+          20.32680625552417
+        ]
+      },
+      "bootstrap_independently_verified": true,
+      "summary_sha256": "558b8c6c6aebfe4c1052270297ea58afcfc82d96920a000832dfd71a056300a5",
+      "archive_sha256": "f7c990c1b50e5ffc11ce3cb8d542609eab295754a91cd69315216d9bb2f3b7e3"
+    },
+    "net-business": {
+      "batch": "net-business-r0",
+      "processes": 51,
+      "timing_processes": 48,
+      "archive_members": 172,
+      "identity_verified": true,
+      "primary": {
+        "point": -4.500031927700373,
+        "ci95": [
+          -6.184423241512676,
+          -3.0736327528261533
+        ]
+      },
+      "bootstrap_independently_verified": true,
+      "summary_sha256": "76b095ea281d842cd84f291b33f42e20f6396b5699d381d0c516c21241e616bd",
+      "archive_sha256": "9425e8d50a0b08b219dcc4cfd6c15bd747ccf1d832e07c1ee816823a2a4bb8af"
+    }
+  },
+  "product_code_changes": 0,
+  "product_tests_changes": 0,
+  "prior_safety_library_unchanged": true,
+  "scripts": {
+    "run_net_price.py": "798eaf66bf1a75c4a50c7ba23970820852888d30d5f418a844e0627e5d70d4ab",
+    "analyze_net_price.py": "51ebea59f3897e7d178eabf7838852c4b9bd8bf88966be60b68bf740de78e829",
+    "audit_net_price.py": "8221776a42f19a8e28c4495e2fa0db621d770288ed0f5fb3c907d7414f82bfbd"
+  },
+  "known_failed_attempt": "net-price-r0 stopped on a main-executable/shared-dependency classification error; no samples reused",
+  "analysis_correction": "r0 relative ratios on near-zero other-thread residuals removed; original analysis retained, samples unchanged",
+  "outcome": "Storage primary improves; business Stroke CPU regresses. Whole refactor performance acceptance remains open.",
+  "qualified": false,
+  "limits": "Pointwise diagnostic intervals only; live exact-view conflict, ordinary controls, full tails and formal M6 remain open."
+}

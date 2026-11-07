@@ -1,0 +1,87 @@
+{
+  "scope": "Compatibility probes: independent single-page successful uncontended installation/cancellation intervals. Preparation/deferred destruction and cold read discovery excluded. Not production M6/M7 or performance.",
+  "matrix_source_patch_sha256": "1a110cfd892c50c982e8365f196e9a3a248ad7d0123392996233c77671a1520e",
+  "same_matrix_library": true,
+  "probe_results": [
+    {
+      "architecture": "arm64",
+      "kind": "ledger",
+      "identity": "install-arm64-ledger-final-identity.json",
+      "log": "install-arm64-ledger-final.log",
+      "positive_control_allocations": 3,
+      "measured_intervals": 96,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    },
+    {
+      "architecture": "arm64",
+      "kind": "physical",
+      "identity": "install-arm64-physical-final-identity.json",
+      "log": "install-arm64-physical-final.log",
+      "positive_control_allocations": 3,
+      "measured_intervals": 48,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    },
+    {
+      "architecture": "arm64",
+      "kind": "metadata",
+      "identity": "install-arm64-metadata-final-identity.json",
+      "log": "install-arm64-metadata-final.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 32,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    },
+    {
+      "architecture": "arm64",
+      "kind": "legacy",
+      "identity": "install-arm64-legacy-final-identity.json",
+      "log": "install-arm64-legacy-final.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 28,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    },
+    {
+      "architecture": "x86_64",
+      "kind": "ledger",
+      "identity": "install-x86_64-ledger-final-identity.json",
+      "log": "install-x86_64-ledger-final.log",
+      "positive_control_allocations": 3,
+      "measured_intervals": 96,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    },
+    {
+      "architecture": "x86_64",
+      "kind": "physical",
+      "identity": "install-x86_64-physical-final-identity.json",
+      "log": "install-x86_64-physical-final.log",
+      "positive_control_allocations": 3,
+      "measured_intervals": 48,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    },
+    {
+      "architecture": "x86_64",
+      "kind": "metadata",
+      "identity": "install-x86_64-metadata-final-identity.json",
+      "log": "install-x86_64-metadata-final.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 32,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    },
+    {
+      "architecture": "x86_64",
+      "kind": "legacy",
+      "identity": "install-x86_64-legacy-final-identity.json",
+      "log": "install-x86_64-legacy-final.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 28,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "fb3814b657943d357bfbd13e280ca30b0cc12c0b53c07bb0972602f8052505d7"
+    }
+  ]
+}

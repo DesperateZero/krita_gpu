@@ -1,0 +1,88 @@
+{
+  "scope": "92 \u00a717 CP3 current containment/install and semantic freeze; complete stage still pending",
+  "product_commit": "500fd0702cfa07ba447d538fb9aad2b086e3160f",
+  "cp1_complete": true,
+  "cp2_complete": true,
+  "cp3_complete": false,
+  "m6_m7_m8_qualified": [
+    false,
+    false,
+    false
+  ],
+  "persistent_default_enabled": false,
+  "requirements": [
+    {
+      "id": "successful-install-allocator",
+      "status": "proved_in_current_participant_scope",
+      "before": "actual exit3, allocations0/frees2, tracked releasePreparedClaims stack",
+      "after": "two architectures each31080 install intervals allocations0/frees0, positive control4 actual allocations",
+      "evidence": "install-results.json",
+      "limits": "five current resident CPU routes; not future commit-only/GPU"
+    },
+    {
+      "id": "containment-caller-ownership",
+      "status": "proved",
+      "evidence": [
+        "checkpoint-review.json",
+        "architecture-final.log",
+        "tool-selftests.log",
+        "convergence.json"
+      ],
+      "details": "34 old-checkpoint diff files reviewed; old ratchets restored before source checkpoint refresh;21manifest/25ownership/16census,2186APIs/28191edges/27callbacks/19intrusion. No new authority/queue/public API."
+    },
+    {
+      "id": "oracle-production-orders-rejection-lifecycle",
+      "status": "proved_in_current_registered_scope",
+      "evidence": [
+        "matrix-03-arm64/results.json",
+        "matrix-03-x86_64/results.json",
+        "read-baseline-arm64/results.json",
+        "read-baseline-x86_64/results.json",
+        "business-arm64/result.json",
+        "business-x86_64/result.json"
+      ],
+      "details": "current oracle/core production and physical/resident/legacy, native/generic and consumer-first/install-first; real prepare/cancel/abort/commit/close,24MiB success8MiB cancel preserved",
+      "limits": "LIMIT_LONG_TESTS registration; future modes/CP5 continuation/full alternate hash/OFF configuration remain outside this qualification"
+    },
+    {
+      "id": "source-runtime-foundation-compatibility",
+      "status": "proved",
+      "evidence": [
+        "final-verification.json",
+        "vulkan-arm64/result.json",
+        "vulkan-x86_64/result.json"
+      ],
+      "details": "2311source hashes match committed Git blobs;192runtime/harness inputs match final SHA;38test processes10810/0/0 actual0/reaped; Vulkan foundation separately rebuilt currentsource,14perarch",
+      "limits": "two build configurations independently identified; no active GPU/TSAN qualifier"
+    },
+    {
+      "id": "handoff-controlled-latency",
+      "status": "failed_measured_candidate",
+      "evidence": [
+        "latency-paired/protocol.json",
+        "latency-paired/analysis.json",
+        "latency-paired/runs.json"
+      ],
+      "details": "40order-balanced independent process pairs eachbucket; all320actual0. Current controlled scenario latency reduction arm64 -6.59%/-5.18%, x86_64 -6.49%/-4.75%; required20%/30% unmet",
+      "limits": "H0 retained history with one common exact validation capture;N=K/B4. No fixedM5/history/upstream/stroke/tail qualification"
+    },
+    {
+      "id": "frozen-fresh-history-nonregression",
+      "status": "not_run_current_candidate",
+      "required": "fixed5173 same-dependency \u22642% throughput regression controls; define required cases underCP0; old performance cannot be migrated"
+    },
+    {
+      "id": "common-record-residency",
+      "status": "not_qualified",
+      "required": "\u226525% against pre-refactor same-semantic baseline, includeused/reserved/slack; static128/128/64 ceilings alone do not satisfy"
+    },
+    {
+      "id": "cp0-required-final-stage-verdict",
+      "status": "pending",
+      "required": "complete required bucket/scope and formal samples; grantM6 only after all \u00a73/\u00a76/39 gates, then startCP4/M7"
+    }
+  ],
+  "next_finite_responsibility": "shared prepareWritePlanLocked -> prepareBackingHandoff / metadata preparePublicationImpl; review duplicate candidate/storage/work without relaxing revision/claim/refusal. Extra phase data localizes cold preparation only, no proven allocation-specific cause.",
+  "no_reopening": "CP1/CP2 closed scopes, defaultabort/long-pressure repeats or ungrounded fault framework expansion",
+  "excluded": "M7consumer/commit-only/fence,CP5scheduler continuation/fairness and fullM8mode/undo/context/performance;TSAN remainsInconclusive"
+}

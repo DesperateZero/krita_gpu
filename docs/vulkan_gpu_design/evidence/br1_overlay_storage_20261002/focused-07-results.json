@@ -1,0 +1,44 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "overlayStorageAtCapacity",
+      "conditionalRemovalRejectsChangedOverlay",
+      "capturedOverlayConcurrentSegments",
+      "supersededOverlayUsesHistoricalLifetime",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.094,
+    "totals": [
+      "Totals: 91 passed, 0 failed, 0 skipped, 0 blacklisted, 30ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "overlayStorageAtCapacity",
+      "conditionalRemovalRejectsChangedOverlay",
+      "capturedOverlayConcurrentSegments",
+      "supersededOverlayUsesHistoricalLifetime",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.459,
+    "totals": [
+      "Totals: 91 passed, 0 failed, 0 skipped, 0 blacklisted, 41ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

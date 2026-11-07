@@ -1,0 +1,722 @@
+{
+  "protocol_sha256": "62f3011063bc64e5e22727f9cfb06453bb19ad840fbe1d40d4f1131af33f64eb",
+  "analysis_sha256": "e280d59b9d11cb2cccb987157ccf6504e1a84e9e76f808422d25fb79f550e8ea",
+  "processes": 384,
+  "rows": [
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0049552409074063,
+      "diagnostic_95pct_interval": [
+        0.9297982321253194,
+        1.0881751297712954
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.09491141504059686,
+      "paired_log_median_latency_sd": 0.03270918075803451,
+      "median_latency_ratio": 1.0068724916176053,
+      "median_top1pct_fraction": 0.020119142584453745,
+      "maximum_operation_ns": 1497541,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        68944697082171084,
+        79406513109238038,
+        166126747001572858,
+        760608722397535320,
+        918790102084351292,
+        1337070131168942645,
+        3134890935380512017,
+        3314236916971170487,
+        3423943734978367799,
+        3648806498562616770,
+        3726421335837652834,
+        3909823566057864465,
+        5955363602245814206,
+        6662548295244948643,
+        7805360708598913191,
+        7934742936837531753,
+        8828711167737777247,
+        9107271982946450165,
+        9734985760228283165,
+        10793119145937989274,
+        11561150065868076451,
+        13221958284883883411,
+        13610158639028145615,
+        15196865574651131366
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9929958912443447,
+      "diagnostic_95pct_interval": [
+        0.9798562091603997,
+        1.0132657369015439
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.11890737046545305,
+      "paired_log_median_latency_sd": 0.024040452770053355,
+      "median_latency_ratio": 0.9974727920522808,
+      "median_top1pct_fraction": 0.019997218116159225,
+      "maximum_operation_ns": 4108125,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        136056563253779477,
+        320668282065314688,
+        1015182791177194619,
+        1978535440627985410,
+        2570196281616726364,
+        2681605971969920367,
+        4106698511401480347,
+        6374107999853814746,
+        6488977293564189374,
+        6538230626387384966,
+        6951762965256824307,
+        7275297098969811538,
+        7417437150666305094,
+        7998803176997210928,
+        8343384724862676079,
+        9361315260811348403,
+        12445435092036790036,
+        12469566060315565361,
+        13661752639314377229,
+        15198247433610659415,
+        16423762641425018815,
+        16853647862241409262,
+        17058038517828012567,
+        17211769815597627679
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9817405582775938,
+      "diagnostic_95pct_interval": [
+        0.9391490230688901,
+        1.0105243577447636
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.056053705527474844,
+      "paired_log_median_latency_sd": 0.014989827479822396,
+      "median_latency_ratio": 0.9956759334338345,
+      "median_top1pct_fraction": 0.01747655485119197,
+      "maximum_operation_ns": 1434167,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.99026741668885,
+      "diagnostic_95pct_interval": [
+        0.9630590704498918,
+        1.0373620024063188
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.047448663361170706,
+      "paired_log_median_latency_sd": 0.015720080677792337,
+      "median_latency_ratio": 0.9993708712809174,
+      "median_top1pct_fraction": 0.017147950213212755,
+      "maximum_operation_ns": 1038000,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0142577002253161,
+      "diagnostic_95pct_interval": [
+        0.9708450253921563,
+        1.047158197680006
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.039962480079429756,
+      "paired_log_median_latency_sd": 0.023122032674451138,
+      "median_latency_ratio": 0.9982235742856581,
+      "median_top1pct_fraction": 0.018475548068275758,
+      "maximum_operation_ns": 896042,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        526550806825508876,
+        1210206105302907023,
+        1317796012046806967,
+        1717301637306196810,
+        2139178049175703937,
+        2465928919253778516,
+        2938337985200811928,
+        3810275439912565643,
+        6629074124620189362,
+        8170521945148091381,
+        8222845810520526062,
+        10084342254731080806,
+        10143497981975195487,
+        11950896287511404284,
+        12224064592973984788,
+        12405599700040251054,
+        13787567231544149504,
+        13861803374819943322,
+        14577267788757723043,
+        15982915086928844601,
+        16934820674739869890,
+        17154884549290922937,
+        17441743223265169956,
+        18144846409612943630
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9966014258994857,
+      "diagnostic_95pct_interval": [
+        0.9292752735154262,
+        1.0852422147670142
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.0933519734640751,
+      "paired_log_median_latency_sd": 0.04046697463790192,
+      "median_latency_ratio": 0.9942284640525609,
+      "median_top1pct_fraction": 0.01642828404085086,
+      "maximum_operation_ns": 758875,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        511315570264073973,
+        1540840145392885722,
+        1554164127001428506,
+        2171457278940375012,
+        2487706181106106286,
+        2829258034937147104,
+        3368605115146516652,
+        4970821060138586602,
+        5989941973863985887,
+        6266288167781433321,
+        6345580126565772316,
+        7340593622206084698,
+        7935171251544928479,
+        10041985872145320920,
+        12641921482699036994,
+        13342433245465268964,
+        14054606144080524989,
+        14167671495506712421,
+        15535190789098884773,
+        16035376549124227034,
+        16438011869160112404,
+        16735375946544556274,
+        17250440740007009192,
+        18066890665874055108
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0106028538306917,
+      "diagnostic_95pct_interval": [
+        0.9406765182378397,
+        1.1301963958245527
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.16355691364753291,
+      "paired_log_median_latency_sd": 0.04525037987881711,
+      "median_latency_ratio": 0.9944603102934555,
+      "median_top1pct_fraction": 0.015588737097420006,
+      "maximum_operation_ns": 1090666,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0354088812928124,
+      "diagnostic_95pct_interval": [
+        0.96442821085952,
+        1.1273447095344362
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.1224037119427278,
+      "paired_log_median_latency_sd": 0.038290473239901215,
+      "median_latency_ratio": 1.0016618426233597,
+      "median_top1pct_fraction": 0.016512046807362523,
+      "maximum_operation_ns": 1165542,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9875592299830543,
+      "diagnostic_95pct_interval": [
+        0.9463615998969106,
+        1.0259746385088553
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.05881716529191564,
+      "paired_log_median_latency_sd": 0.02441541990854959,
+      "median_latency_ratio": 0.995853649457416,
+      "median_top1pct_fraction": 0.01718903218909018,
+      "maximum_operation_ns": 863959,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        192675959012527318,
+        396156661159932911,
+        1161044953362106391,
+        1451908068842605145,
+        1465639041399454478,
+        1676359359102881145,
+        1822609012123743671,
+        2638085870896493496,
+        3783749971410418517,
+        4343013987417906841,
+        5247206323161635792,
+        6641676254150635330,
+        6856026320562153625,
+        7217602014876976077,
+        8657007855787504961,
+        9176214647543833258,
+        11660098525241971915,
+        12570099105933024940,
+        12859763097339771966,
+        13148676978170447323,
+        14398302558502728663,
+        15657474370229028415,
+        15836546675583358257,
+        16799157934185209258
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9870143321812691,
+      "diagnostic_95pct_interval": [
+        0.9708591489703139,
+        1.0025059413130275
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.049145987077475965,
+      "paired_log_median_latency_sd": 0.031520892598169425,
+      "median_latency_ratio": 0.9883581465838974,
+      "median_top1pct_fraction": 0.017186278596549635,
+      "maximum_operation_ns": 1680958,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        988939688444560334,
+        1708836123186782553,
+        3227972357188176433,
+        4192862018470954147,
+        5410838256634770948,
+        5698739538895531657,
+        6701865629300581395,
+        7282470841762258757,
+        8309959244508574300,
+        8366799010839102869,
+        9859986020130031701,
+        10811077534682462117,
+        11337500297810208035,
+        11793934690890752923,
+        11924581998959783350,
+        12122221591375980284,
+        12515267145353569828,
+        13218992986988442776,
+        13875244598928800658,
+        14925943014998693277,
+        15548565158091889145,
+        16527511656071333091,
+        17588394824492387894,
+        18127423242229485582
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0041562098875878,
+      "diagnostic_95pct_interval": [
+        0.9741337304689448,
+        1.033680537774907
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03046316006196912,
+      "paired_log_median_latency_sd": 0.023639686078292074,
+      "median_latency_ratio": 0.9942357731155992,
+      "median_top1pct_fraction": 0.015465421196366732,
+      "maximum_operation_ns": 861417,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9962085832637414,
+      "diagnostic_95pct_interval": [
+        0.9826124636417795,
+        1.0069494483896768
+      ],
+      "descriptively_inside_2pct": true,
+      "paired_log_throughput_sd": 0.020022641908021752,
+      "paired_log_median_latency_sd": 0.01169845841416265,
+      "median_latency_ratio": 1.0005814169823326,
+      "median_top1pct_fraction": 0.014873619627712182,
+      "maximum_operation_ns": 2110291,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0414390040805332,
+      "diagnostic_95pct_interval": [
+        1.0095846135720066,
+        1.0759124626378902
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.0792018469861921,
+      "paired_log_median_latency_sd": 0.02511736620098975,
+      "median_latency_ratio": 1.009897975564358,
+      "median_top1pct_fraction": 0.016635079032187555,
+      "maximum_operation_ns": 3830125,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        745652662717796369,
+        3600566263428549161,
+        3792446450805577515,
+        5106205881243807598,
+        5178068034418840301,
+        6775019731757471943,
+        6854480561601937724,
+        7831024563646315669,
+        8300717597982675335,
+        8374046862100050106,
+        8395738557365553073,
+        10129319930212174704,
+        10184185801262057377,
+        11989087028608608800,
+        12900944385179812334,
+        14302846355074877943,
+        14374552501399252420,
+        14595016372190720617,
+        15528172698818201009,
+        15818504764680412268,
+        16801563429033298800,
+        16936371084067225274,
+        17813743144831427364,
+        17953588131180113593
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-random",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9896187587873382,
+      "diagnostic_95pct_interval": [
+        0.961169508642043,
+        1.0387389443124697
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.0696689683786521,
+      "paired_log_median_latency_sd": 0.022279301646265678,
+      "median_latency_ratio": 1.003615248425863,
+      "median_top1pct_fraction": 0.020753577736432445,
+      "maximum_operation_ns": 3029750,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        2715765344483790477,
+        3464570039330660058,
+        3850218914057613698,
+        4985247629130087099,
+        5300126967587771513,
+        6173524308436092506,
+        8661946679036432724,
+        9206689544487287672,
+        10147865033235500700,
+        10540718010623450778,
+        11811268314786318864,
+        12084474273115819506,
+        12164825029753436045,
+        12651813648411122723,
+        12885114781373141067,
+        14079509375251349781,
+        14840656550206838106,
+        14953563639727981442,
+        15974248940687941844,
+        16606531945727166357,
+        17170699225107001605,
+        17306937718428377661,
+        17636796079827148437,
+        18017241514195890547
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9814280411934365,
+      "diagnostic_95pct_interval": [
+        0.9545688190467613,
+        1.0488642257657521
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.06278654520679618,
+      "paired_log_median_latency_sd": 0.03728432561153351,
+      "median_latency_ratio": 0.990542284550917,
+      "median_top1pct_fraction": 0.01717281339437038,
+      "maximum_operation_ns": 1285875,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-zero",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.030099452724687,
+      "diagnostic_95pct_interval": [
+        0.945389318106739,
+        1.0883813182638435
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.09910263384075006,
+      "paired_log_median_latency_sd": 0.021916024477804656,
+      "median_latency_ratio": 1.0125097323182157,
+      "median_top1pct_fraction": 0.01717586343233461,
+      "maximum_operation_ns": 11224333,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        0
+      ],
+      "hash_zero_processes": 24
+    }
+  ],
+  "qualification": "Descriptive fixed D3 diagnosis only; unadjusted95pct intervals, not formal family qualification. No tail removed or normalization",
+  "product_modified": false,
+  "previous_qualification_changed": false
+}

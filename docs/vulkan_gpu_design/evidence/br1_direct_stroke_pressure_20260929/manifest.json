@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "captured_at_utc": "2026-09-29T06:19:12Z",
+  "head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "origin_master": "cdf0a1c4a37ca3a928c37d44465e7e52b4b9bae9",
+  "scope": "Test-only BC9 resource subrange for bounded direct Freehand work, retained reads, process budget accounting, cancellation, and close",
+  "production_changes": false,
+  "production_intrusion": {
+    "files": 0,
+    "insertions": 0,
+    "deletions": 0,
+    "new_functions": 0,
+    "new_fields": 0,
+    "new_includes": 0,
+    "new_friends": 0,
+    "new_locks": 0,
+    "new_tls": 0
+  },
+  "source_files": {
+    "libs/ui/tests/freehand_stroke_test.cpp": "f32bfff294adb187d9984f061f08084018d266609a5e4c709f2f62b9c118bd33",
+    "libs/ui/tests/freehand_stroke_test.h": "c107cf090803cc4ff0b0826e2295b97adc90979d45344ed37912ec3ce0e4ecbe",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp": "3f249bf10131d30e37d40bbfe487c403367cef6728cb76f5649f1c921be4e905"
+  },
+  "binaries": {
+    "FreehandStrokeTest": "3250dc9a4ea62493d24df8dbaec36bfce801f3f5276ee11a0eddc60b1c6d4af8",
+    "KisPageStoreReferenceTest": "affc21d42a15070e396ccb359a522b8d0189225d58470c98ff1596817e23dff0",
+    "libkritaimage": "c3c543df89cf88a8dddcc0a7beb4010bd7acb32f4d17adf9f271f6ce183e7e58",
+    "libkritaui": "74244ba4a7febcd1dc0a6e1387560324016c795f72ec6c502db9758c49a6b9e8"
+  },
+  "logs": {
+    "freehand-arm64.log": "6aee2afa312fc4ab60c14fb7704643c70529d3283939301aba401f61e3b87230",
+    "freehand-x86_64.log": "c99a08452a06cc5480c986534ce631cd69a242e9d1aab8f9d84b14cb86e2a8dc",
+    "pagestore-arm64.log": "d1d80f8a6d28795f82429703727b3bcfb7dbb749911d3d8cdb56681ec6500a58",
+    "pagestore-x86_64.log": "400b0a0429b7c7b2987e23b3eb965505dbd2acd7ee1319131527ddf65202d825",
+    "failure-arm64-8mib.log": "7dde69fe912d5a89bac943bddcc8a1df29e9a3134e63139b1f0f003e5778b9cb"
+  },
+  "tests": [
+    {
+      "target": "FreehandStrokeTest",
+      "cases": [
+        "testPersistentAutoBrushStrokePressure",
+        "testPersistentAutoBrushStrokePressureCancelled"
+      ],
+      "arm64": {"passed": 4, "failed": 0, "skipped": 0},
+      "x86_64": {"passed": 4, "failed": 0, "skipped": 0}
+    },
+    {
+      "target": "KisPageStoreReferenceTest",
+      "cases": ["tiles3BackendsShareProcessResidentLimit"],
+      "arm64": {"passed": 3, "failed": 0, "skipped": 0},
+      "x86_64": {"passed": 3, "failed": 0, "skipped": 0}
+    }
+  ],
+  "assertions": {
+    "freehand_hard_limit_bytes": 25165824,
+    "freehand_peak_at_least_half_limit": true,
+    "slow_reader_old_value_stable": true,
+    "recursive_successor_steps": 3,
+    "single_strategy_undo_redo": true,
+    "resident_zero_after_fixture": true,
+    "pagestore_process_limit_bytes": 8388608,
+    "pagestore_first_current_bytes": 6291456,
+    "retained_history_charged_and_released": true,
+    "reserved_zero_after_failure_and_close": true,
+    "second_store_over_limit_is_atomic": true,
+    "production_api_added": false,
+    "pagestore_types_added_to_ui": false
+  },
+  "open_scope": [
+    "structured permanent/waitable/cancel result",
+    "pre-first-byte scheduler continuation",
+    "automatic recovery after resource release",
+    "multi-store and multi-document fairness",
+    "complete resource charging",
+    "default enablement"
+  ]
+}

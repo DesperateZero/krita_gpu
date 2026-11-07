@@ -1,0 +1,91 @@
+{
+  "base": "3f2826d4647b75a49488ad88b8f499d214af62f3",
+  "commit": "4dc89bada34d746364a5eb3ed04c40f962d1c274",
+  "source_diff_sha256": "57a329270b558d6c23d7c118aaf2c0c10cc4f77c54a0a954fbdde20c099016d7",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    }
+  },
+  "identities": {
+    "arm64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "96611ec11c748e528de8a8c6372563302f3e7645bd24ae9ecb3c3d6ef3a03fd8",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "9ca9934c6c9761fc48e516068ec44fea32fe4f143bd97cece5ef7f212f352898",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "1a01d97c576b2cbfd11f3816e49ec06655ed1b7213122827349187be043ec791",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "e7c44ff93dc0984057758cece512235c503190cd13d9956aef9bdae8bbf65220"
+      }
+    },
+    "x86_64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "96611ec11c748e528de8a8c6372563302f3e7645bd24ae9ecb3c3d6ef3a03fd8",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "9ca9934c6c9761fc48e516068ec44fea32fe4f143bd97cece5ef7f212f352898",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "e7c44ff93dc0984057758cece512235c503190cd13d9956aef9bdae8bbf65220",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "1a01d97c576b2cbfd11f3816e49ec06655ed1b7213122827349187be043ec791"
+      }
+    }
+  },
+  "passed_total": 7270,
+  "old_symbols_absent": true,
+  "numstat": [
+    "39\t26\tlibs/image/pagestore/KisPagePublicationCoordinator.cpp",
+    "9\t5\tlibs/image/pagestore/KisPagePublicationCoordinator_p.h",
+    "8\t20\tlibs/image/pagestore/KisPageStore.cpp",
+    "35\t12\tlibs/image/tests/KisPageStoreCpuMutationTest.cpp"
+  ],
+  "source_hashes": {
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp": "2f50a9337bada69e240363c065de6c1cac880bcefa61b2088cb9ba7c17a9a284",
+    "libs/image/pagestore/KisPagePublicationCoordinator_p.h": "e7b8f1c63830f09f7a90c17e7687e4298121a9c592d09ccf829c2d7da8ebb14f",
+    "libs/image/pagestore/KisPageStore.cpp": "3c9ca7af107bbe90c66db059f711d97f64930acbdb6ae133abc30a690b5106bc",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "627e4f6534df6f396f97624a3dde18c7da690c5e1764ed71a758168ad324de6b"
+  },
+  "limits": "Safety and deletion only. Generic/removal now dispose metadata before collection; time unpriced."
+}

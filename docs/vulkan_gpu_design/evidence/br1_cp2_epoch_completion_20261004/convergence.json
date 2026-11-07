@@ -1,0 +1,133 @@
+{
+  "cp2_product_baseline": "b51a7602c82bbee6bf2a0df79400dd943d6df5b6",
+  "product_commit": "25ae0dbf8149e8c6620fc5a42d3b15b957bc37b3",
+  "scope": "完整CP2相对首包父提交的实际Git差集；不把逐批增删机械相加",
+  "summary": {
+    "production": {
+      "files": 12,
+      "added": 229,
+      "deleted": 187,
+      "net": 42
+    },
+    "tests": {
+      "files": 4,
+      "added": 1063,
+      "deleted": 31,
+      "net": 1032
+    }
+  },
+  "files": {
+    "production": [
+      {
+        "path": "libs/image/pagestore/KisPageStore.cpp",
+        "added": 23,
+        "deleted": 4
+      },
+      {
+        "path": "libs/image/pagestore/KisPageStore.h",
+        "added": 2,
+        "deleted": 0
+      },
+      {
+        "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "added": 58,
+        "deleted": 49
+      },
+      {
+        "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+        "added": 1,
+        "deleted": 1
+      },
+      {
+        "path": "libs/image/tiles3/KisTilePageStoreBridge.h",
+        "added": 2,
+        "deleted": 1
+      },
+      {
+        "path": "libs/image/tiles3/kis_tile.cc",
+        "added": 32,
+        "deleted": 10
+      },
+      {
+        "path": "libs/image/tiles3/kis_tile.h",
+        "added": 8,
+        "deleted": 8
+      },
+      {
+        "path": "libs/image/tiles3/kis_tile_hash_table_p.h",
+        "added": 4,
+        "deleted": 22
+      },
+      {
+        "path": "libs/image/tiles3/kis_tiled_data_manager.cc",
+        "added": 81,
+        "deleted": 81
+      },
+      {
+        "path": "libs/image/tiles3/kis_tiled_data_manager.h",
+        "added": 0,
+        "deleted": 1
+      },
+      {
+        "path": "libs/image/tiles3/swap/kis_legacy_tile_compressor.cpp",
+        "added": 9,
+        "deleted": 7
+      },
+      {
+        "path": "libs/image/tiles3/swap/kis_tile_compressor_2.cpp",
+        "added": 9,
+        "deleted": 3
+      }
+    ],
+    "tests": [
+      {
+        "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "added": 376,
+        "deleted": 20
+      },
+      {
+        "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "added": 7,
+        "deleted": 8
+      },
+      {
+        "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+        "added": 662,
+        "deleted": 3
+      },
+      {
+        "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.h",
+        "added": 18,
+        "deleted": 0
+      }
+    ]
+  },
+  "responsibility_and_deletion": [
+    {
+      "old": "raw四入口各自忽略/重复写准入与copy/purge散布解锁",
+      "final_owner": "原markPageStoreWriteDirty准入与原局部解锁scope",
+      "deleted": "重复ensure及散布手工解锁；codec消费原空结果"
+    },
+    {
+      "old": "parked batch读取重新走ordinary binding或nested写重复授予",
+      "final_owner": "原batch/session expected与已有guard借用、原finish/cancel",
+      "deleted": "旧writable bool接口及旧overload，全部caller迁移；未迁移raw保留排斥"
+    },
+    {
+      "old": "oldData选择布尔、attach桥、current复制再刷新G0",
+      "final_owner": "原G0 capture/read后交接只读COW存储",
+      "deleted": "旧oldData参数/分支、attach helper、current复制/presence二查与临时cache"
+    },
+    {
+      "old": "canonical clone拒绝后构造空backend，chained复制重复初始化/局部链清理",
+      "final_owner": "原构造std::bad_alloc、RAII候选及hash link/count/析构",
+      "deleted": "两个空backend fallback、重复初始化及局部未安装链"
+    },
+    {
+      "old": "native共同plan分配拒绝脱离原失败责任",
+      "final_owner": "原beginWriteImpl fail/discardUnprepared/cancel/abort；common cleanup恢复gate",
+      "deleted": "无等价删除收益；净+6承担真实拒绝保证，execution其他冷准备catch仍有consumer"
+    }
+  ],
+  "interpretation": "净+42生产行承担拒绝、身份和寿命保证；不代表功能密度或性能的量化收益。CP6–CP9仅保留真实业务/ABI/配置消费者的条件删除。"
+}

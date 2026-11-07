@@ -1,0 +1,1529 @@
+{
+  "scope": "Same finite single-operation main-thread windows; real allocations and all later lifetimes retained",
+  "theoretical_model": "chain53+E with design target<=100, total approximately<=1690; physical frees not deleted",
+  "public_k16_target_met": true,
+  "public_k16_observed_extra_E": [
+    1,
+    1
+  ],
+  "rows": [
+    {
+      "block": 0,
+      "workload": "public",
+      "row": [
+        64,
+        1,
+        4,
+        1
+      ],
+      "before": {
+        "counts": {
+          "control_request": 74,
+          "fits": 137,
+          "parent_prepare": 60,
+          "local_prepare": 60,
+          "control_success": 60,
+          "local_settle": 60,
+          "parent_settle": 60,
+          "deref": 555,
+          "retained_request": 47,
+          "raw_free": 25,
+          "retained_free": 15
+        },
+        "deref_roles": {
+          "epoch_root": 65,
+          "store_adapter": 8,
+          "read_link": 5,
+          "publication_descriptor": 99,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 81,
+          "working_values": 165,
+          "read_view": 1,
+          "metadata_publication": 58
+        },
+        "chain_deref": 304,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 15872,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "epoch_root": 1856,
+          "read_link": 304,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 256,
+          "metadata_publication": 3632
+        }
+      },
+      "after": {
+        "counts": {
+          "control_request": 74,
+          "fits": 137,
+          "parent_prepare": 60,
+          "local_prepare": 60,
+          "control_success": 60,
+          "local_settle": 60,
+          "parent_settle": 60,
+          "deref": 264,
+          "retained_request": 47,
+          "raw_free": 25,
+          "retained_free": 16
+        },
+        "deref_roles": {
+          "epoch_root": 65,
+          "store_adapter": 8,
+          "read_link": 5,
+          "publication_descriptor": 102,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 3,
+          "read_view": 1,
+          "metadata_publication": 7
+        },
+        "chain_deref": 10,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 15872,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "epoch_root": 1856,
+          "read_link": 304,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 256,
+          "metadata_publication": 3632
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -291,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 1
+      },
+      "chain_reduction": 0.9671052631578947,
+      "total_deref_reduction": 0.5243243243243243,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 0,
+      "workload": "public",
+      "row": [
+        1024,
+        16,
+        4,
+        1
+      ],
+      "before": {
+        "counts": {
+          "control_request": 524,
+          "fits": 988,
+          "raw_free": 138,
+          "parent_prepare": 446,
+          "local_prepare": 446,
+          "control_success": 446,
+          "local_settle": 446,
+          "parent_settle": 446,
+          "deref": 6157,
+          "retained_request": 339,
+          "retained_free": 48
+        },
+        "deref_roles": {
+          "epoch_root": 125,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 1296,
+          "working_values": 2640,
+          "read_view": 1,
+          "metadata_publication": 633
+        },
+        "chain_deref": 4569,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 193344,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 5216,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "after": {
+        "counts": {
+          "control_request": 524,
+          "fits": 988,
+          "raw_free": 138,
+          "parent_prepare": 446,
+          "local_prepare": 446,
+          "control_success": 446,
+          "local_settle": 446,
+          "parent_settle": 446,
+          "deref": 1645,
+          "retained_request": 339,
+          "retained_free": 49
+        },
+        "deref_roles": {
+          "epoch_root": 125,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 269,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 48,
+          "read_view": 1,
+          "metadata_publication": 6
+        },
+        "chain_deref": 54,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 193344,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 5216,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -4512,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 1
+      },
+      "chain_reduction": 0.9881812212738017,
+      "total_deref_reduction": 0.732824427480916,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 0,
+      "workload": "public",
+      "row": [
+        64,
+        16,
+        4,
+        1
+      ],
+      "before": {
+        "counts": {
+          "control_request": 609,
+          "fits": 1158,
+          "raw_free": 138,
+          "parent_prepare": 531,
+          "local_prepare": 531,
+          "control_success": 531,
+          "local_settle": 531,
+          "parent_settle": 531,
+          "deref": 6328,
+          "retained_request": 424,
+          "retained_free": 49
+        },
+        "deref_roles": {
+          "epoch_root": 296,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 1296,
+          "working_values": 2640,
+          "read_view": 1,
+          "metadata_publication": 633
+        },
+        "chain_deref": 4569,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 203968,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 15840,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "after": {
+        "counts": {
+          "control_request": 609,
+          "fits": 1158,
+          "raw_free": 138,
+          "parent_prepare": 531,
+          "local_prepare": 531,
+          "control_success": 531,
+          "local_settle": 531,
+          "parent_settle": 531,
+          "deref": 1813,
+          "retained_request": 424,
+          "retained_free": 49
+        },
+        "deref_roles": {
+          "epoch_root": 296,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 48,
+          "read_view": 1,
+          "metadata_publication": 6
+        },
+        "chain_deref": 54,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 203968,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 15840,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -4515,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9881812212738017,
+      "total_deref_reduction": 0.713495575221239,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "fresh",
+        1
+      ],
+      "before": {
+        "counts": {
+          "deref": 507,
+          "retained_request": 32,
+          "control_request": 51,
+          "parent_prepare": 45,
+          "fits": 98,
+          "local_prepare": 45,
+          "control_success": 45,
+          "local_settle": 45,
+          "parent_settle": 45,
+          "raw_free": 11,
+          "retained_free": 14
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "publication_descriptor": 99,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 81,
+          "working_values": 165,
+          "metadata_publication": 58
+        },
+        "chain_deref": 304,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 13632,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 640,
+          "metadata_publication": 3632
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 213,
+          "retained_request": 32,
+          "control_request": 51,
+          "parent_prepare": 45,
+          "fits": 98,
+          "local_prepare": 45,
+          "control_success": 45,
+          "local_settle": 45,
+          "parent_settle": 45,
+          "raw_free": 11,
+          "retained_free": 14
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "publication_descriptor": 99,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 3,
+          "metadata_publication": 7
+        },
+        "chain_deref": 10,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 13632,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 640,
+          "metadata_publication": 3632
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -294,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9671052631578947,
+      "total_deref_reduction": 0.5798816568047338,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "handoff",
+        1
+      ],
+      "before": {
+        "counts": {
+          "deref": 473,
+          "retained_request": 24,
+          "control_request": 43,
+          "parent_prepare": 39,
+          "fits": 87,
+          "local_prepare": 39,
+          "control_success": 39,
+          "local_settle": 39,
+          "parent_settle": 39,
+          "retained_free": 16,
+          "raw_free": 12
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "metadata_publication": 123,
+          "working_values": 172,
+          "publication_descriptor": 99,
+          "write_protocol": 2,
+          "owner_ledger": 7,
+          "metadata_other": 1,
+          "working_projection": 38
+        },
+        "chain_deref": 333,
+        "chain_physical_frees": 7,
+        "controlled_capacity_bytes": 15376,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "owner_ledger": 880,
+          "metadata_publication": 6848,
+          "working_values": 464,
+          "publication_descriptor": 4656,
+          "write_protocol": 208
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 154,
+          "retained_request": 24,
+          "control_request": 43,
+          "parent_prepare": 39,
+          "fits": 87,
+          "local_prepare": 39,
+          "control_success": 39,
+          "local_settle": 39,
+          "parent_settle": 39,
+          "retained_free": 16,
+          "raw_free": 12
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "metadata_publication": 12,
+          "publication_descriptor": 99,
+          "write_protocol": 2,
+          "owner_ledger": 7,
+          "metadata_other": 1,
+          "working_projection": 2
+        },
+        "chain_deref": 14,
+        "chain_physical_frees": 7,
+        "controlled_capacity_bytes": 15376,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "owner_ledger": 880,
+          "metadata_publication": 6848,
+          "working_values": 464,
+          "publication_descriptor": 4656,
+          "write_protocol": 208
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -319,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9579579579579579,
+      "total_deref_reduction": 0.6744186046511628,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "fresh",
+        16
+      ],
+      "before": {
+        "counts": {
+          "deref": 5830,
+          "retained_request": 294,
+          "control_request": 471,
+          "parent_prepare": 405,
+          "fits": 893,
+          "local_prepare": 405,
+          "control_success": 405,
+          "local_settle": 405,
+          "parent_settle": 405,
+          "raw_free": 123,
+          "retained_free": 47
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 1296,
+          "working_values": 2640,
+          "metadata_publication": 429
+        },
+        "chain_deref": 4365,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 157280,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "publication_descriptor": 45696,
+          "write_protocol": 29408,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 5200,
+          "metadata_publication": 45248
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 1519,
+          "retained_request": 294,
+          "control_request": 471,
+          "parent_prepare": 405,
+          "fits": 893,
+          "local_prepare": 405,
+          "control_success": 405,
+          "local_settle": 405,
+          "parent_settle": 405,
+          "raw_free": 123,
+          "retained_free": 47
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 48,
+          "metadata_publication": 6
+        },
+        "chain_deref": 54,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 157280,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "publication_descriptor": 45696,
+          "write_protocol": 29408,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 5200,
+          "metadata_publication": 45248
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -4311,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9876288659793815,
+      "total_deref_reduction": 0.739451114922813,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "handoff",
+        16
+      ],
+      "before": {
+        "counts": {
+          "deref": 5286,
+          "retained_request": 166,
+          "control_request": 313,
+          "parent_prepare": 279,
+          "fits": 624,
+          "local_prepare": 279,
+          "control_success": 279,
+          "local_settle": 279,
+          "parent_settle": 279,
+          "retained_free": 79,
+          "raw_free": 124
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "metadata_publication": 1469,
+          "working_values": 2752,
+          "publication_descriptor": 266,
+          "write_protocol": 32,
+          "owner_ledger": 52,
+          "metadata_other": 16,
+          "working_projection": 608
+        },
+        "chain_deref": 4829,
+        "chain_physical_frees": 52,
+        "controlled_capacity_bytes": 184464,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "owner_ledger": 8320,
+          "metadata_publication": 96704,
+          "working_values": 7424,
+          "publication_descriptor": 45696,
+          "write_protocol": 19680
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 575,
+          "retained_request": 166,
+          "control_request": 313,
+          "parent_prepare": 279,
+          "fits": 624,
+          "local_prepare": 279,
+          "control_success": 279,
+          "local_settle": 279,
+          "parent_settle": 279,
+          "retained_free": 79,
+          "raw_free": 124
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "metadata_publication": 86,
+          "publication_descriptor": 266,
+          "write_protocol": 32,
+          "owner_ledger": 52,
+          "metadata_other": 16,
+          "working_projection": 32
+        },
+        "chain_deref": 118,
+        "chain_physical_frees": 52,
+        "controlled_capacity_bytes": 184464,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "owner_ledger": 8320,
+          "metadata_publication": 96704,
+          "working_values": 7424,
+          "publication_descriptor": 45696,
+          "write_protocol": 19680
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -4711,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9755642990267136,
+      "total_deref_reduction": 0.8912220961029134,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "handoff",
+        16
+      ],
+      "before": {
+        "counts": {
+          "deref": 5286,
+          "retained_request": 166,
+          "control_request": 313,
+          "parent_prepare": 279,
+          "fits": 624,
+          "local_prepare": 279,
+          "control_success": 279,
+          "local_settle": 279,
+          "parent_settle": 279,
+          "retained_free": 79,
+          "raw_free": 124
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "metadata_publication": 1469,
+          "working_values": 2752,
+          "publication_descriptor": 266,
+          "write_protocol": 32,
+          "owner_ledger": 52,
+          "metadata_other": 16,
+          "working_projection": 608
+        },
+        "chain_deref": 4829,
+        "chain_physical_frees": 52,
+        "controlled_capacity_bytes": 184464,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "owner_ledger": 8320,
+          "metadata_publication": 96704,
+          "working_values": 7424,
+          "publication_descriptor": 45696,
+          "write_protocol": 19680
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 575,
+          "retained_request": 166,
+          "control_request": 313,
+          "parent_prepare": 279,
+          "fits": 624,
+          "local_prepare": 279,
+          "control_success": 279,
+          "local_settle": 279,
+          "parent_settle": 279,
+          "retained_free": 79,
+          "raw_free": 124
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "metadata_publication": 86,
+          "publication_descriptor": 266,
+          "write_protocol": 32,
+          "owner_ledger": 52,
+          "metadata_other": 16,
+          "working_projection": 32
+        },
+        "chain_deref": 118,
+        "chain_physical_frees": 52,
+        "controlled_capacity_bytes": 184464,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "owner_ledger": 8320,
+          "metadata_publication": 96704,
+          "working_values": 7424,
+          "publication_descriptor": 45696,
+          "write_protocol": 19680
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -4711,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9755642990267136,
+      "total_deref_reduction": 0.8912220961029134,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "fresh",
+        16
+      ],
+      "before": {
+        "counts": {
+          "deref": 5830,
+          "retained_request": 294,
+          "control_request": 471,
+          "parent_prepare": 405,
+          "fits": 893,
+          "local_prepare": 405,
+          "control_success": 405,
+          "local_settle": 405,
+          "parent_settle": 405,
+          "raw_free": 123,
+          "retained_free": 47
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 1296,
+          "working_values": 2640,
+          "metadata_publication": 429
+        },
+        "chain_deref": 4365,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 157280,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "publication_descriptor": 45696,
+          "write_protocol": 29408,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 5200,
+          "metadata_publication": 45248
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 1519,
+          "retained_request": 294,
+          "control_request": 471,
+          "parent_prepare": 405,
+          "fits": 893,
+          "local_prepare": 405,
+          "control_success": 405,
+          "local_settle": 405,
+          "parent_settle": 405,
+          "raw_free": 123,
+          "retained_free": 47
+        },
+        "deref_roles": {
+          "epoch_root": 91,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 48,
+          "metadata_publication": 6
+        },
+        "chain_deref": 54,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 157280,
+        "controlled_capacity_roles": {
+          "epoch_root": 5040,
+          "store_adapter": 1600,
+          "publication_descriptor": 45696,
+          "write_protocol": 29408,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 5200,
+          "metadata_publication": 45248
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -4311,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9876288659793815,
+      "total_deref_reduction": 0.739451114922813,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "handoff",
+        1
+      ],
+      "before": {
+        "counts": {
+          "deref": 473,
+          "retained_request": 24,
+          "control_request": 43,
+          "parent_prepare": 39,
+          "fits": 87,
+          "local_prepare": 39,
+          "control_success": 39,
+          "local_settle": 39,
+          "parent_settle": 39,
+          "retained_free": 16,
+          "raw_free": 12
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "metadata_publication": 123,
+          "working_values": 172,
+          "publication_descriptor": 99,
+          "write_protocol": 2,
+          "owner_ledger": 7,
+          "metadata_other": 1,
+          "working_projection": 38
+        },
+        "chain_deref": 333,
+        "chain_physical_frees": 7,
+        "controlled_capacity_bytes": 15376,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "owner_ledger": 880,
+          "metadata_publication": 6848,
+          "working_values": 464,
+          "publication_descriptor": 4656,
+          "write_protocol": 208
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 154,
+          "retained_request": 24,
+          "control_request": 43,
+          "parent_prepare": 39,
+          "fits": 87,
+          "local_prepare": 39,
+          "control_success": 39,
+          "local_settle": 39,
+          "parent_settle": 39,
+          "retained_free": 16,
+          "raw_free": 12
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "metadata_publication": 12,
+          "publication_descriptor": 99,
+          "write_protocol": 2,
+          "owner_ledger": 7,
+          "metadata_other": 1,
+          "working_projection": 2
+        },
+        "chain_deref": 14,
+        "chain_physical_frees": 7,
+        "controlled_capacity_bytes": 15376,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "owner_ledger": 880,
+          "metadata_publication": 6848,
+          "working_values": 464,
+          "publication_descriptor": 4656,
+          "write_protocol": 208
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -319,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9579579579579579,
+      "total_deref_reduction": 0.6744186046511628,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "fresh",
+        1
+      ],
+      "before": {
+        "counts": {
+          "deref": 507,
+          "retained_request": 32,
+          "control_request": 51,
+          "parent_prepare": 45,
+          "fits": 98,
+          "local_prepare": 45,
+          "control_success": 45,
+          "local_settle": 45,
+          "parent_settle": 45,
+          "raw_free": 11,
+          "retained_free": 14
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "publication_descriptor": 99,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 81,
+          "working_values": 165,
+          "metadata_publication": 58
+        },
+        "chain_deref": 304,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 13632,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 640,
+          "metadata_publication": 3632
+        }
+      },
+      "after": {
+        "counts": {
+          "deref": 213,
+          "retained_request": 32,
+          "control_request": 51,
+          "parent_prepare": 45,
+          "fits": 98,
+          "local_prepare": 45,
+          "control_success": 45,
+          "local_settle": 45,
+          "parent_settle": 45,
+          "raw_free": 11,
+          "retained_free": 14
+        },
+        "deref_roles": {
+          "epoch_root": 31,
+          "publication_descriptor": 99,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 3,
+          "metadata_publication": 7
+        },
+        "chain_deref": 10,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 13632,
+        "controlled_capacity_roles": {
+          "epoch_root": 720,
+          "store_adapter": 1600,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 640,
+          "metadata_publication": 3632
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -294,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9671052631578947,
+      "total_deref_reduction": 0.5798816568047338,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 1,
+      "workload": "public",
+      "row": [
+        64,
+        16,
+        4,
+        1
+      ],
+      "before": {
+        "counts": {
+          "control_request": 601,
+          "fits": 1142,
+          "raw_free": 138,
+          "parent_prepare": 523,
+          "local_prepare": 523,
+          "control_success": 523,
+          "local_settle": 523,
+          "parent_settle": 523,
+          "deref": 6328,
+          "retained_request": 416,
+          "retained_free": 49
+        },
+        "deref_roles": {
+          "epoch_root": 296,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 1296,
+          "working_values": 2640,
+          "read_view": 1,
+          "metadata_publication": 633
+        },
+        "chain_deref": 4569,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 202816,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 15840,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 1152,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "after": {
+        "counts": {
+          "control_request": 609,
+          "fits": 1158,
+          "raw_free": 138,
+          "parent_prepare": 531,
+          "local_prepare": 531,
+          "control_success": 531,
+          "local_settle": 531,
+          "parent_settle": 531,
+          "deref": 1816,
+          "retained_request": 424,
+          "retained_free": 50
+        },
+        "deref_roles": {
+          "epoch_root": 296,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 269,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 48,
+          "read_view": 1,
+          "metadata_publication": 6
+        },
+        "chain_deref": 54,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 203968,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 15840,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "count_deltas": {
+        "retained_request": 8,
+        "deref": -4512,
+        "fits": 16,
+        "local_prepare": 8,
+        "raw_free": 0,
+        "control_success": 8,
+        "parent_prepare": 8,
+        "control_request": 8,
+        "local_settle": 8,
+        "parent_settle": 8,
+        "retained_free": 1
+      },
+      "chain_reduction": 0.9881812212738017,
+      "total_deref_reduction": 0.7130214917825537,
+      "controlled_capacity_delta": 1152
+    },
+    {
+      "block": 1,
+      "workload": "public",
+      "row": [
+        1024,
+        16,
+        4,
+        1
+      ],
+      "before": {
+        "counts": {
+          "control_request": 524,
+          "fits": 988,
+          "raw_free": 138,
+          "parent_prepare": 446,
+          "local_prepare": 446,
+          "control_success": 446,
+          "local_settle": 446,
+          "parent_settle": 446,
+          "deref": 6157,
+          "retained_request": 339,
+          "retained_free": 48
+        },
+        "deref_roles": {
+          "epoch_root": 125,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 1296,
+          "working_values": 2640,
+          "read_view": 1,
+          "metadata_publication": 633
+        },
+        "chain_deref": 4569,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 193344,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 5216,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "after": {
+        "counts": {
+          "control_request": 524,
+          "fits": 988,
+          "raw_free": 138,
+          "parent_prepare": 446,
+          "local_prepare": 446,
+          "control_success": 446,
+          "local_settle": 446,
+          "parent_settle": 446,
+          "deref": 1642,
+          "retained_request": 339,
+          "retained_free": 48
+        },
+        "deref_roles": {
+          "epoch_root": 125,
+          "store_adapter": 8,
+          "read_link": 80,
+          "publication_descriptor": 266,
+          "write_protocol": 64,
+          "retirement": 384,
+          "completion": 64,
+          "provider_native": 464,
+          "owner_ledger": 132,
+          "working_projection": 48,
+          "read_view": 1,
+          "metadata_publication": 6
+        },
+        "chain_deref": 54,
+        "chain_physical_frees": 20,
+        "controlled_capacity_bytes": 193344,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "write_protocol": 26048,
+          "epoch_root": 5216,
+          "read_link": 4864,
+          "publication_descriptor": 45696,
+          "retirement": 9984,
+          "completion": 2560,
+          "provider_native": 10240,
+          "working_projection": 2304,
+          "owner_ledger": 4096,
+          "metadata_publication": 79552
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -4515,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9881812212738017,
+      "total_deref_reduction": 0.7333116777651454,
+      "controlled_capacity_delta": 0
+    },
+    {
+      "block": 1,
+      "workload": "public",
+      "row": [
+        64,
+        1,
+        4,
+        1
+      ],
+      "before": {
+        "counts": {
+          "control_request": 74,
+          "fits": 137,
+          "parent_prepare": 60,
+          "local_prepare": 60,
+          "control_success": 60,
+          "local_settle": 60,
+          "parent_settle": 60,
+          "deref": 558,
+          "retained_request": 47,
+          "raw_free": 25,
+          "retained_free": 16
+        },
+        "deref_roles": {
+          "epoch_root": 65,
+          "store_adapter": 8,
+          "read_link": 5,
+          "publication_descriptor": 102,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 81,
+          "working_values": 165,
+          "read_view": 1,
+          "metadata_publication": 58
+        },
+        "chain_deref": 304,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 15872,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "epoch_root": 1856,
+          "read_link": 304,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 256,
+          "metadata_publication": 3632
+        }
+      },
+      "after": {
+        "counts": {
+          "control_request": 74,
+          "fits": 137,
+          "parent_prepare": 60,
+          "local_prepare": 60,
+          "control_success": 60,
+          "local_settle": 60,
+          "parent_settle": 60,
+          "deref": 264,
+          "retained_request": 47,
+          "raw_free": 25,
+          "retained_free": 16
+        },
+        "deref_roles": {
+          "epoch_root": 65,
+          "store_adapter": 8,
+          "read_link": 5,
+          "publication_descriptor": 102,
+          "write_protocol": 4,
+          "retirement": 24,
+          "completion": 4,
+          "provider_native": 29,
+          "owner_ledger": 12,
+          "working_projection": 3,
+          "read_view": 1,
+          "metadata_publication": 7
+        },
+        "chain_deref": 10,
+        "chain_physical_frees": 5,
+        "controlled_capacity_bytes": 15872,
+        "controlled_capacity_roles": {
+          "store_adapter": 2784,
+          "epoch_root": 1856,
+          "read_link": 304,
+          "publication_descriptor": 4656,
+          "write_protocol": 816,
+          "retirement": 624,
+          "completion": 160,
+          "provider_native": 640,
+          "working_projection": 144,
+          "owner_ledger": 256,
+          "metadata_publication": 3632
+        }
+      },
+      "count_deltas": {
+        "retained_request": 0,
+        "deref": -294,
+        "fits": 0,
+        "local_prepare": 0,
+        "raw_free": 0,
+        "control_success": 0,
+        "parent_prepare": 0,
+        "control_request": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0
+      },
+      "chain_reduction": 0.9671052631578947,
+      "total_deref_reduction": 0.5268817204301075,
+      "controlled_capacity_delta": 0
+    }
+  ]
+}

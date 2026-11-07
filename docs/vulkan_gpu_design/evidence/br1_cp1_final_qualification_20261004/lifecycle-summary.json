@@ -1,0 +1,102 @@
+{
+  "processes": 515,
+  "actual_exit_zero": 515,
+  "controls": 18,
+  "faults": 497,
+  "families": {
+    "arm64:checkpoint": {
+      "processes": 54,
+      "faults": 53,
+      "failures": 0
+    },
+    "arm64:capture": {
+      "processes": 8,
+      "faults": 7,
+      "failures": 0
+    },
+    "arm64:read": {
+      "processes": 1,
+      "faults": 0,
+      "failures": 0
+    },
+    "arm64:default-read": {
+      "processes": 5,
+      "faults": 4,
+      "failures": 0
+    },
+    "arm64:commit": {
+      "processes": 142,
+      "faults": 141,
+      "failures": 0
+    },
+    "arm64:rollback": {
+      "processes": 43,
+      "faults": 42,
+      "failures": 0
+    },
+    "arm64:purge": {
+      "processes": 1,
+      "faults": 0,
+      "failures": 0
+    },
+    "arm64:release": {
+      "processes": 4,
+      "faults": 3,
+      "failures": 0
+    },
+    "arm64:close": {
+      "processes": 1,
+      "faults": 0,
+      "failures": 0
+    },
+    "x86_64:checkpoint": {
+      "processes": 53,
+      "faults": 52,
+      "failures": 0
+    },
+    "x86_64:capture": {
+      "processes": 8,
+      "faults": 7,
+      "failures": 0
+    },
+    "x86_64:read": {
+      "processes": 1,
+      "faults": 0,
+      "failures": 0
+    },
+    "x86_64:default-read": {
+      "processes": 5,
+      "faults": 4,
+      "failures": 0
+    },
+    "x86_64:commit": {
+      "processes": 141,
+      "faults": 140,
+      "failures": 0
+    },
+    "x86_64:rollback": {
+      "processes": 43,
+      "faults": 42,
+      "failures": 0
+    },
+    "x86_64:purge": {
+      "processes": 1,
+      "faults": 0,
+      "failures": 0
+    },
+    "x86_64:release": {
+      "processes": 3,
+      "faults": 2,
+      "failures": 0
+    },
+    "x86_64:close": {
+      "processes": 1,
+      "faults": 0,
+      "failures": 0
+    }
+  },
+  "identity_verified": true,
+  "results_sha256": "999a061dbb6f2e4628cbf1fa4ede631abe16059bf1e631925c271814a4edc8b4",
+  "default_failure_exit_qualified": false,
+  "coverage": "same original nine bounded families, discovered first/last actual paid site refusals; not complete joint fault/caller/fence qualification"
+}

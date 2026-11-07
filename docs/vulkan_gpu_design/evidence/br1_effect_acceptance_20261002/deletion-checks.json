@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "metadata_qt_effect_output_deleted": true,
+    "metadata_result_has_only_acceptance_and_reason": true,
+    "store_effect_aggregates_and_append_deleted": true,
+    "publication_effect_aggregate_and_callback_output_deleted": true,
+    "history_caller_packet_and_second_handoff_deleted": true,
+    "old_retire_effects_batch_entry_deleted": true,
+    "generic_and_history_commit_receive_paid_span": true,
+    "generic_effect_receiver_required_before_record_install": true,
+    "original_debt_cookie_cancel_on_preinstall_failure_preserved": true,
+    "original_owner_commits_then_transfers_record": true,
+    "commit_receiver_calls_no_provider_or_packet_allocation": true,
+    "original_ready_list_owns_foreground_first_attempts": true,
+    "worker_selection_respects_original_background_permission": true,
+    "manual_budget_bounds_foreground_selection": true,
+    "foreground_worker_and_manual_attempt_policy_shared": true,
+    "original_worker_limit_preserved": true,
+    "close_takes_all_original_record_partitions": true,
+    "partial_operation_rollback_uses_same_exit_pump": true,
+    "real_hard_capacity_and_exact_original_node_verified": true,
+    "foreground_zero_and_one_budget_and_missing_receiver_verified": true,
+    "real_partial_rollback_foreground_first_attempt_verified": true,
+    "public_qt_oracle_effects_kept_for_actual_consumers": true,
+    "prior_read_allocation_failure_residue_stays_deleted": true
+  },
+  "all_passed": true,
+  "new_acceptance_guarantee": true,
+  "new_persistent_stage_or_queue": false,
+  "full_cp1_complete": false,
+  "remaining_protocols": [
+    {
+      "protocol": "Paid metadata/Debt/arena/index/activity/claim/physical/proof/overlay preparation and original Failed/cancel",
+      "reason": "Actual storage or identity refusals still precede acceptance; direct effect transfer removes the downstream packet failure only.",
+      "delete_when": "A complete acceptance contract removes each actual preparation refusal and CP5 migrates original scheduler job ownership."
+    },
+    {
+      "protocol": "Public Qt StateMachine oracle and Ledger prepareBackingChanges effects input",
+      "reason": "Full invariant/diagnostic and explicit reference consumers still use their distinct output/input contract.",
+      "delete_when": "Migrate or explicitly fund those actual external consumers; do not delete reference effects with the production output."
+    },
+    {
+      "protocol": "Pending/readiness/subscription/Delay/Debt and history/epoch/close handoff",
+      "reason": "They retain real physical safety, readiness, accepted operation and ownership facts. Permanent pressure, global allocation and complete tail exits remain unqualified.",
+      "delete_when": "Equivalent end-to-end guarantees remove their real failure or lifetime dependency."
+    }
+  ]
+}

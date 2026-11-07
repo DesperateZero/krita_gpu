@@ -1,0 +1,93 @@
+{
+  "kind": "design_index_and_bounded_semantic_model",
+  "index": {
+    "source_commit": "0fd96f2fa3f24e70c1652ea17b8cc87192acf6d2",
+    "responsibilities": 16,
+    "original_mw_covered": 12,
+    "source_anchors": 59,
+    "unique_source_files": 44,
+    "cpu_delivery_unchanged": true,
+    "implementation_or_gpu_qualification_granted": false
+  },
+  "document_cut_model": {
+    "interleavings": 420,
+    "violations": 0,
+    "outcomes": {
+      "Committed": 90,
+      "ReadyRetry": 330
+    },
+    "negative_controls": {
+      "omit_retention_revision": {
+        "counterexamples": 196,
+        "first": {
+          "order": [
+            "P",
+            "A",
+            "B",
+            "C1",
+            "U",
+            "R1",
+            "C2",
+            "R2"
+          ],
+          "at": "R1",
+          "reader": "1",
+          "captured_epoch": 0,
+          "actual": null,
+          "expected": [
+            0,
+            0
+          ]
+        }
+      },
+      "omit_surface_guards": {
+        "counterexamples": 278,
+        "first": {
+          "order": [
+            "P",
+            "A",
+            "B",
+            "C1",
+            "R1",
+            "U",
+            "C2",
+            "R2"
+          ],
+          "at": "R1",
+          "reader": "1",
+          "captured_epoch": 0,
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "covered": [
+      "two-surface staged changes",
+      "two late captures",
+      "blocked exact reads",
+      "all-or-nothing root cut",
+      "Ready retained after revision mismatch"
+    ],
+    "not_covered": [
+      "C++ atomics or locking",
+      "budget settlement",
+      "physical services",
+      "root GC/default/enumeration",
+      "concurrent writers",
+      "release interleavings",
+      "hardware failure",
+      "performance"
+    ]
+  },
+  "production_code_changed": false,
+  "performance_processes": 0,
+  "gpu_or_uma_execution": false,
+  "machine_upper_bound_proven": false,
+  "status": "passed_with_explicit_model_scope"
+}

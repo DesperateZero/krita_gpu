@@ -1,0 +1,81 @@
+{
+  "protocol": {
+    "schema": 1,
+    "purpose": "M5 selector forced-COW matched-control throughput gate",
+    "source_revision": "fe5da2706acfe01ca958ca44ce8bf8d806ca79b9",
+    "architecture": "arm64",
+    "candidate": "Unmodified production selector and runtime from the frozen source revision.",
+    "control": "The same source, compiler, build configuration, fixture and runtime with only selector-control.patch applied. MutableGuard is forced directly to FreshCow; Semantic selection remains unchanged so setup and semantic behavior stay valid.",
+    "required_buckets": [
+      "write-n64-k1-b4",
+      "write-n1024-k16-b4"
+    ],
+    "bucket_scope": "Resident CPU/CpuRam partial writes, H=0, one thread, one in-flight operation, diagnostics disabled. Current M5 has no handoff and therefore selects FreshCow for these PreserveContents MutableGuard writes.",
+    "pairs": 20,
+    "rate_ms": 500,
+    "metric": "Direct completed-operation throughput reported by the fixture as completed_operations / wall_ns. This is not inferred by inverting sampled latency.",
+    "comparison": "Per-pair candidate/control throughput ratio. The control changes only the selector result computation for the measured forced-COW intent; allocation, copy, publication, drain and fixture code are identical.",
+    "tolerance": "Candidate throughput regression must not exceed 2% in either required bucket: candidate/control >= 0.98.",
+    "confidence": "For two required buckets, each bucket uses a one-sided 97.5% paired-bootstrap lower bound, giving at least 95% familywise confidence by Bonferroni. The statistic is the median paired throughput ratio.",
+    "bootstrap_seed": 250925,
+    "bootstrap_resamples": 50000,
+    "run_order": "Rotate bucket order by pair. Alternate control/candidate order on successive pairs. Preserve all samples.",
+    "stop_rule": "Exactly 20 independent process pairs per bucket; no optional stopping, sample deletion or rerun replacement.",
+    "environment": "No build, TSAN, profiler or other benchmark runs concurrently. QT_QPA_PLATFORM=offscreen; KIS_CPU_BASELINE_LOOPS=4; KIS_CPU_BASELINE_RATE_MS=500; KIS_BR1_STAGE_PROFILE=0.",
+    "secondary_evidence": "Preserve process wall time, setup, manager destruction, correctness and loader identity. These are reported but do not replace the selector throughput gate.",
+    "limits": "This gate closes the M5 selector regression requirement only. It is not the full upstream CPU BR1-PERF, M/K/X/E matrix, tail-latency qualification or M6/M7 handoff performance."
+  },
+  "protocol_sha256": "77bd7f5d500c2b4acffd2f9086d5fd0e622114767d28ada9f6a6c5b52135ceb9",
+  "identity_sha256": "7191b77c28bf91a90050af6e0ac4954a8861b75d975498dd813f57a5d81e45e0",
+  "started": "2026-09-25T02:40:10.806860+00:00",
+  "runs": [
+    {
+      "variant": "control",
+      "bucket": "write-n64-k1-b4",
+      "pair": null,
+      "file": "loader-control.log",
+      "command": [
+        "arch",
+        "-arm64",
+        "/tmp/br1-m5-selector-candidate-20260925/kis_tiles3_cpu_baseline_test",
+        "testSharedBaseline:write-n64-k1-b4"
+      ],
+      "library": "/tmp/br1-m5-selector-control-20260925",
+      "started": "2026-09-25T02:40:10.807116+00:00",
+      "ended": "2026-09-25T02:40:12.231752+00:00",
+      "process_wall_ns": 1424342125,
+      "returncode": 0,
+      "result": {
+        "access_path": "native-CpuRam",
+        "background_drain": "NotMeasured",
+        "completed_operations": 4,
+        "correctness": "Pass",
+        "endpoint": "CpuReadable",
+        "evidence_class": "E",
+        "executor": "CPU",
+        "fixture": "write-n64-k1-b4",
+        "in_flight": 1,
+        "initial_allocated_pages_expected": 64,
+        "logical_work_bytes_per_operation": 256,
+        "manager_destroy_ns": 176041,
+        "measurement": "fixed-work-amortized-time",
+        "metric_scope": "endpoint",
+        "mode": "write",
+        "per_event_tail": "NotMeasured",
+        "pixel_bytes": 4,
+        "pointer_witness": "0",
+        "process_cpu_ns": 266000,
+        "process_peak_rss_bytes": 38371328,
+        "rate_check_interval": 0,
+        "retained_history_roots": 0,
+        "schema": 1,
+        "setup_ns": 3226625,
+        "thread_cpu_ns": 160292,
+        "threads": 1,
+        "total_pages": 64,
+        "wall_ns": 196291,
+        "work_pages": 1
+      }
+    }
+  ]
+}

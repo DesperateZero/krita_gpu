@@ -1,0 +1,74 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/run_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 129.031715041
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/fixed-m5-fresh-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.42676525000001675
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/run_fixed_m5_history.py",
+      "--round",
+      "fixed-m5-history"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 129.004160542
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-history",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/fixed-m5-history-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.43728049999998575
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/run_latency.py",
+      "--round",
+      "latency-paired"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 46.03980412499999
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/analyze_latency.py",
+      "--round",
+      "latency-paired",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_candidate_storage_20261006/latency-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 0.32676766599996654
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "block": 1,
+  "workload": "native",
+  "row": [
+    "fresh",
+    16
+  ],
+  "mode": "control",
+  "command": [
+    "arch",
+    "-arm64",
+    "/usr/bin/env",
+    "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+    "DYLD_PRINT_LIBRARIES=1",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/native-arm64/probe",
+    "fresh",
+    "16",
+    "1"
+  ],
+  "pid": 7621,
+  "exit_code": 0,
+  "reaped": true,
+  "timed_out": false,
+  "image_loaded": true,
+  "checks_passed": true,
+  "data": [
+    {
+      "variant": "fresh",
+      "N": 16,
+      "K": 16,
+      "H": 0,
+      "B": 4,
+      "cuts": 0,
+      "before_copy_bytes": 262144,
+      "foreground_copy_bytes": 262144,
+      "preclone_hits": 0,
+      "begin_ns": 0,
+      "acquire_ns": 0,
+      "payload_ns": 0,
+      "page_other_ns": 0,
+      "seal_ns": 0,
+      "root_commit_ns": 0,
+      "physical_delta": 262144,
+      "setup_ns": 1832167,
+      "commit_ns": 195583,
+      "validation_close_ns": 107709
+    }
+  ]
+}

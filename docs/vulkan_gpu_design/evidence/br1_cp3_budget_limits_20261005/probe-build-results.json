@@ -1,0 +1,140 @@
+[
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "install",
+      "--source",
+      "joint-install-allocation-probe.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 2.8357982500000003
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "publication",
+      "--source",
+      "publication-install.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 3.259265084
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "storage",
+      "--source",
+      "storage-lifecycle.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.8029256670000002
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "latency-final",
+      "--source",
+      "handoff-latency.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 2.6984617500000008
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "install",
+      "--source",
+      "joint-install-allocation-probe.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 2.7817763749999997
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "publication",
+      "--source",
+      "publication-install.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 3.339758208000001
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "storage",
+      "--source",
+      "storage-lifecycle.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.7255844170000003
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "latency-final",
+      "--source",
+      "handoff-latency.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 2.4565212080000016
+  }
+]

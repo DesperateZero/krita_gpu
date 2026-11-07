@@ -1,0 +1,46 @@
+[
+  {
+    "test": "testPageStoreNativeIteratorEntryPoints",
+    "migration": "Same H/V/random pixel/oldData and undo/redo assertions; accepted epoch/original active results replace absent generic request/seal bookkeeping."
+  },
+  {
+    "test": "testPageStoreResidentReadReusesNativeGuard",
+    "migration": "4096 real pin returns, stable native state and actual final swap replace obsolete generic request counters."
+  },
+  {
+    "test": "testPageStoreFreshReadWarmPath",
+    "migration": "1000 fresh/implicit reads, identity reuse and unchanged native authority/capacity; no removed generic reader counters."
+  },
+  {
+    "test": "testPageStoreFreshReadDefaultRevision",
+    "migration": "Held old pointer, explicit presence and repeated current default changes unchanged; native slots/resources remain stable."
+  },
+  {
+    "test": "testPageStoreFreshReadFailure",
+    "migration": "Close must reject all new public selections while held detached storage remains readable."
+  },
+  {
+    "test": "testPageStoreFreshReadDefaultPressure",
+    "migration": "Unified default metadata/adapter cut plus held old pointer. Already accepted default can require first RAM materialization for a raw pointer; saturation legitimately refuses and retry succeeds after pressure release. Scalar snapshot read is separately allocation-independent."
+  },
+  {
+    "test": "testPageStoreFreshReadSelection",
+    "migration": "Real native prepared/selection-installed/adapter-installed phases preserve late-reader visibility, held old bytes, adapter gate blocking and zero presence reprojection across all 80 cases."
+  },
+  {
+    "test": "testPageStoreClonePublishedBounds",
+    "migration": "All rough/packed/warm/offset and before/after cut combinations observe actual native acceptance boundary; original pixel and fixed-old checks retained."
+  },
+  {
+    "test": "testPageStoreCopyBoundsSelection",
+    "migration": "Independent ExternalProtocol oracle retained. Actual original source snapshot/selected row work bounded to source+destination real extents when defaults match; source mutation after selection must not enlarge/corrupt copy."
+  },
+  {
+    "test": "testPageStorePlanarWriteMutation",
+    "migration": "All channel/partial/history pixels and immutable old view retained. Native acceptance is one cut; obsolete session/generation/pin counters removed, real streaming pin responsibility covered separately."
+  },
+  {
+    "test": "testPageStorePlanarWriteCoordinateLimits",
+    "migration": "Real format/index coordinate boundaries and rejected no-work paths preserved through public readback and native original-state checks."
+  }
+]

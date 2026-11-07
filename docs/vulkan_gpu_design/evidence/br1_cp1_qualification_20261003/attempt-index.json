@@ -1,0 +1,217 @@
+{
+  "attempts": [
+    {
+      "attempt": "matrix-01",
+      "current_candidate": false,
+      "records": [
+        "matrix-01/identity.json",
+        "matrix-01/results.json"
+      ]
+    },
+    {
+      "attempt": "matrix-02",
+      "current_candidate": false,
+      "records": [
+        "matrix-02/frozen.json",
+        "matrix-02/identity.json",
+        "matrix-02/results.json"
+      ]
+    },
+    {
+      "attempt": "matrix-03",
+      "current_candidate": true,
+      "records": [
+        "matrix-03/frozen.json",
+        "matrix-03/identity.json",
+        "matrix-03/results.json"
+      ]
+    },
+    {
+      "attempt": "matrix-pressure-01",
+      "current_candidate": true,
+      "records": [
+        "matrix-pressure-01/frozen.json",
+        "matrix-pressure-01/identity.json",
+        "matrix-pressure-01/results.json"
+      ]
+    },
+    {
+      "attempt": "probe-01-arm64",
+      "current_candidate": false,
+      "records": [
+        "probe-01-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-02-arm64",
+      "current_candidate": false,
+      "records": [
+        "probe-02-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-03-arm64",
+      "current_candidate": false,
+      "records": [
+        "probe-03-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-04-arm64",
+      "current_candidate": false,
+      "records": [
+        "probe-04-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-05-arm64",
+      "current_candidate": false,
+      "records": [
+        "probe-05-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-06-arm64",
+      "current_candidate": false,
+      "records": [
+        "probe-06-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-07-arm64",
+      "current_candidate": true,
+      "records": [
+        "probe-07-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-07-x86_64",
+      "current_candidate": true,
+      "records": [
+        "probe-07-x86_64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-cold-01-arm64",
+      "current_candidate": false,
+      "records": [
+        "probe-cold-01-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-cold-02-arm64",
+      "current_candidate": true,
+      "records": [
+        "probe-cold-02-arm64/identity.json"
+      ]
+    },
+    {
+      "attempt": "probe-cold-02-x86_64",
+      "current_candidate": true,
+      "records": [
+        "probe-cold-02-x86_64/identity.json"
+      ]
+    },
+    {
+      "attempt": "tsan-01",
+      "current_candidate": false,
+      "records": [
+        "tsan-01/runs.json"
+      ]
+    },
+    {
+      "attempt": "tsan-02",
+      "current_candidate": false,
+      "records": [
+        "tsan-02/identity.json",
+        "tsan-02/runs.json"
+      ]
+    },
+    {
+      "attempt": "tsan-03",
+      "current_candidate": false,
+      "records": [
+        "tsan-03/identity.json",
+        "tsan-03/runs.json"
+      ]
+    },
+    {
+      "attempt": "tsan-04",
+      "current_candidate": true,
+      "records": [
+        "tsan-04/identity.json",
+        "tsan-04/runs.json"
+      ]
+    },
+    {
+      "attempt": "tsan-05",
+      "current_candidate": true,
+      "records": [
+        "tsan-05/identity.json",
+        "tsan-05/runs.json"
+      ]
+    }
+  ],
+  "other_raw_logs": [
+    "architecture-before-refresh.log",
+    "architecture-final.log",
+    "architecture-refresh-01.log",
+    "callgraph-01.log",
+    "callgraph-02.log",
+    "callgraph-03.log",
+    "cancel-8mib-01-arm64.log",
+    "cancel-8mib-02-arm64.log",
+    "cold-arm64-runner.log",
+    "cpu-build-01.log",
+    "cpu-build-02.log",
+    "cpu-build-03.log",
+    "cpu-build-04.log",
+    "cpu-build-05.log",
+    "cpu-build-06.log",
+    "cpu-build-07.log",
+    "failed-process-runner.log",
+    "final-freeze.log",
+    "matrix-runner-01.log",
+    "matrix-runner-02.log",
+    "matrix-runner-03.log",
+    "pressure-runner-01.log",
+    "probe-01-runner.log",
+    "probe-02-runner.log",
+    "probe-03-runner.log",
+    "probe-04-runner.log",
+    "probe-05-arm64-runner.log",
+    "probe-06-arm64-runner.log",
+    "probe-runner-07-arm64.log",
+    "probe-runner-07-x86_64.log",
+    "probe-runner-cold-02-arm64.log",
+    "probe-runner-cold-02-x86_64.log",
+    "refusal-target-01.log",
+    "reportcrash-restart.log",
+    "sample-87052.log",
+    "tool-self-tests-final.log",
+    "tool-self-tests.log",
+    "tsan-build-01.log",
+    "tsan-build-02.log",
+    "tsan-build-03.log",
+    "tsan-build-04.log",
+    "tsan-build-05.log",
+    "tsan-qt-control-build.log",
+    "tsan-qt-control.log",
+    "tsan-runner-01.log",
+    "tsan-runner-02.log",
+    "tsan-runner-03.log",
+    "tsan-runner-04.log",
+    "tsan-runner-05.log"
+  ],
+  "superseded_is_not_success": true,
+  "unreaped_original_pids": [
+    32658,
+    48549,
+    43034,
+    87095,
+    59123,
+    70089,
+    83020
+  ],
+  "unreaped_tsan_control_pid": 87052
+}

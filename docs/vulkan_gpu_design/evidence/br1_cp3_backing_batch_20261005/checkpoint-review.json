@@ -1,0 +1,25 @@
+{
+  "responsibility": "Logical classification merge and physical alias projection through prepared claims",
+  "authority": "Original Ledger mutex, backing/physical indexes, unchanged reservation/slot owner",
+  "equivalent_changes": [
+    "Merge caller retirement effects via sorted paid numeric indices; preserve append order and first initial target",
+    "Project accepted changes via one paid pointer array and physical-group stack record",
+    "Sort and deduplicate original prepared physical claim vector"
+  ],
+  "removed": [
+    "ChargedMap alias and unused unordered_map include",
+    "targetClasses/projected/availableCredits hash maps",
+    "classified temporary hash set",
+    "Per-backing linear scan of all prepared physicals"
+  ],
+  "preserved": [
+    "Original handle equality, allocator affinity and retirement record validation",
+    "Physical class priority, reference counts, exclusive domain/class claims and first per-physical retirement credit",
+    "Checked signed budgets and fallible-before-install rollback",
+    "Same paid retained slot capacity, handoff claim node transfer/free policy"
+  ],
+  "growth_justification": "One local pointer-pair projection and local numeric index scratch replace four node/bucket storage lifetimes. No persistent state or new retry policy. Numeric indices allow growing the caller-owned paid changes vector without invalidating scratch; per-physical input order preserves original projection rejection/credit semantics.",
+  "validation": "Eight shuffled 24-logical/8-physical batches use an independent flat charging model; original full participants and actual install/free/failure probes; frozen same-ABI parent allocation differential and original forty-pair scopes",
+  "new_guarantees": [],
+  "exit": "All old temporary hash storage and quadratic claim deduplication removed; all original entry points use this preparation. Complete M6 remains dependent on statistical, residency and CP0 required gates."
+}

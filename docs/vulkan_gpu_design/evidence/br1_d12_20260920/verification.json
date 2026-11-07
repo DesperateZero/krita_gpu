@@ -1,0 +1,45 @@
+{
+  "verified": "2026-09-20T15:02:57.853Z",
+  "mode": "live-source-and-archive",
+  "identity_files_checked": 424,
+  "live_source_files_skipped": 0,
+  "timed_runs": 352,
+  "loader_checks": 4,
+  "analyses_byte_identical": [
+    {
+      "phase": "native",
+      "sha256": "935734968ddf2818466c484b85e0dc3575df248e2a3d784d834a7f45f1d2d460"
+    },
+    {
+      "phase": "native_reference",
+      "sha256": "fa2ea41c3a317db555b2fb5dd6df701950a566e3d87791aa9411d4850cd0d33a"
+    }
+  ],
+  "regressions": {
+    "KisPageStorePhysicalClaimTest": 16,
+    "KisPageStoreCpuMutationTest": 17,
+    "KisPageStoreResidentReadTest": 28,
+    "KisPageStoreReferenceTest": 59,
+    "KisPageStoreFoundationTest": 24,
+    "KisPageStoreReadBaselineTest": 41,
+    "kis_tiled_data_manager_test": 88,
+    "kis_tiles3_cpu_baseline_test": 34,
+    "kis_tile_data_pooler_test": 3,
+    "kis_tile_data_store_test": 5
+  },
+  "supplemental_regressions": [
+    {
+      "name": "kis_low_memory_tests",
+      "totals": "Totals: 4 passed, 0 failed, 0 skipped"
+    },
+    {
+      "name": "kis_swapped_data_store_test",
+      "totals": "Totals: 4 passed, 0 failed, 0 skipped"
+    }
+  ],
+  "previous_d11_artifacts_unchanged": 539,
+  "sealed_artifacts_verified": 0,
+  "documents": 69,
+  "local_links": 508,
+  "qualification": "Physical claim prerequisite only. No production owner permit, no COW reduction, no formal NI, event tails, full drain, sanitizer or GPU/UMA qualification."
+}

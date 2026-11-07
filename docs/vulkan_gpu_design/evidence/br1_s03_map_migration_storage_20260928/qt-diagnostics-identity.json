@@ -1,0 +1,105 @@
+{
+  "scope": "Diagnostic only. All three independent QtCore stress programs passed; this does not close or waive the full-matrix extent timeout.",
+  "qt_uuid": "UUID: C807CFA3-EC63-3018-AECB-C05F1D639F10 (x86_64) /Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore\nUUID: AF24D5C1-A845-3467-9A8A-D1B75D1BE521 (arm64) /Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore\n",
+  "records": [
+    {
+      "source": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lock-only-probe.cpp",
+      "compile_command": [
+        "clang++",
+        "-O2",
+        "-g",
+        "-std=c++17",
+        "-arch",
+        "arm64",
+        "-Fkrita/_install/lib",
+        "-framework",
+        "QtCore",
+        "-Wl,-rpath,/Users/apple/krita_gpu/krita/_install/lib",
+        "docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lock-only-probe.cpp",
+        "-o",
+        "/tmp/codex-br1-qt-lock-only-arm64"
+      ],
+      "run": [
+        "arch",
+        "-arm64",
+        "/tmp/codex-br1-qt-lock-only-arm64"
+      ],
+      "log": "qt-lock-only-arm64-02.log",
+      "completed_rounds": 40,
+      "returncode": 0,
+      "linked_libraries": "/tmp/codex-br1-qt-lock-only-arm64:\n\t@rpath/QtCore.framework/Versions/A/QtCore (compatibility version 6.0.0, current version 6.8.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n",
+      "hashes": {
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lock-only-probe.cpp": "05d31fff086669444f3fcfbf59a450e5f937734bdc577fd9ed9e01d7c70d793c",
+        "/tmp/codex-br1-qt-lock-only-arm64": "ea9cbd116ee356cd13e3badc1c0624cb52e3f4e7317c1c1ff17e8b1feb51533e",
+        "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore": "bb833c978a108733cca3375aa14a5b618be62dd195bcbf95e60b3f75ca38aee6",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lock-only-arm64-02.log": "3d5aab469959a93514d35b3e080c7376e83e4567795ff674ca0d774cf7099721"
+      }
+    },
+    {
+      "source": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-counter-lock-probe.cpp",
+      "compile_command": [
+        "clang++",
+        "-O2",
+        "-g",
+        "-std=c++17",
+        "-arch",
+        "arm64",
+        "-Fkrita/_install/lib",
+        "-framework",
+        "QtCore",
+        "-Wl,-rpath,/Users/apple/krita_gpu/krita/_install/lib",
+        "docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-counter-lock-probe.cpp",
+        "-o",
+        "/tmp/codex-br1-qt-counter-lock-arm64"
+      ],
+      "run": [
+        "arch",
+        "-arm64",
+        "/tmp/codex-br1-qt-counter-lock-arm64"
+      ],
+      "log": "qt-counter-lock-arm64-01.log",
+      "completed_rounds": 200,
+      "returncode": 0,
+      "linked_libraries": "/tmp/codex-br1-qt-counter-lock-arm64:\n\t@rpath/QtCore.framework/Versions/A/QtCore (compatibility version 6.0.0, current version 6.8.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n",
+      "hashes": {
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-counter-lock-probe.cpp": "ee2c623bd1fa6be224a9492aedb467670f5abc987d4d2e1328495e55fdfeda65",
+        "/tmp/codex-br1-qt-counter-lock-arm64": "cae22da75dffac2af0a75b29e53df30f04f4e9063110523486607605f441cbde",
+        "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore": "bb833c978a108733cca3375aa14a5b618be62dd195bcbf95e60b3f75ca38aee6",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-counter-lock-arm64-01.log": "6cc9d703937fe81df126633b26160ef4c96bbd5fe1d010fffe83d78406daac6a"
+      }
+    },
+    {
+      "source": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lifetime-lock-probe.cpp",
+      "compile_command": [
+        "clang++",
+        "-O2",
+        "-g",
+        "-std=c++17",
+        "-arch",
+        "arm64",
+        "-Fkrita/_install/lib",
+        "-framework",
+        "QtCore",
+        "-Wl,-rpath,/Users/apple/krita_gpu/krita/_install/lib",
+        "docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lifetime-lock-probe.cpp",
+        "-o",
+        "/tmp/codex-br1-qt-lifetime-lock-arm64"
+      ],
+      "run": [
+        "arch",
+        "-arm64",
+        "/tmp/codex-br1-qt-lifetime-lock-arm64"
+      ],
+      "log": "qt-lifetime-lock-arm64-02.log",
+      "completed_rounds": 10,
+      "returncode": 0,
+      "linked_libraries": "/tmp/codex-br1-qt-lifetime-lock-arm64:\n\t@rpath/QtCore.framework/Versions/A/QtCore (compatibility version 6.0.0, current version 6.8.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n",
+      "hashes": {
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lifetime-lock-probe.cpp": "5286b3633592fdd317f5d9bb3f0813b5c6f4a394c231448921ac9da9f86624d8",
+        "/tmp/codex-br1-qt-lifetime-lock-arm64": "1451399edbf1b36c1bb556ae85ab277d85a086ff6a21097bb473bdd15481b51b",
+        "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore": "bb833c978a108733cca3375aa14a5b618be62dd195bcbf95e60b3f75ca38aee6",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/qt-lifetime-lock-arm64-02.log": "a44253e1d1af441b90e4d7fd99923043c6b9c9771fa3bbbf8395401705e720f5"
+      }
+    }
+  ]
+}

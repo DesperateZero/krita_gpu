@@ -1,0 +1,21 @@
+{
+  "builder": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_orphan_progress_20261003/build_probe.py",
+  "builder_sha256": "b719cd00793daa0c35609c4866f325719e9846bfef1864639d82410d6fb3ff9c",
+  "destination": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_owned_qualification_20261003",
+  "argv": [
+    "docs/vulkan_gpu_design/evidence/br1_cp1_owned_qualification_20261003/reuse_probe.py",
+    "--arch",
+    "arm64",
+    "--round",
+    "native-fault-final",
+    "--source",
+    "native-fault-probe.cpp",
+    "--interposer",
+    "heap-interposer-owned.cpp"
+  ],
+  "changes": [
+    "evidence destination",
+    "prior 123 final source inputs",
+    "owned classifier"
+  ]
+}

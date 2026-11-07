@@ -1,0 +1,3692 @@
+[
+  {
+    "index": 0,
+    "side": "legacy",
+    "stages": {
+      "Setup": {
+        "cpu_ns": 363329000,
+        "covered_cpu_ns": 45667,
+        "residual_cpu_ns": 363283333,
+        "names": {
+          "tile_fill_pixel_loop": {
+            "calls": 6,
+            "inclusive_cpu_ns": 45667,
+            "exclusive_cpu_ns": 45667
+          }
+        }
+      },
+      "Stroke": {
+        "cpu_ns": 20398000,
+        "covered_cpu_ns": 18355378,
+        "residual_cpu_ns": 2042622,
+        "names": {
+          "job_gate_wait": {
+            "calls": 956,
+            "inclusive_cpu_ns": 157835,
+            "exclusive_cpu_ns": 157835
+          },
+          "job_stroke": {
+            "calls": 937,
+            "inclusive_cpu_ns": 12104379,
+            "exclusive_cpu_ns": 6523011
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 12,
+            "inclusive_cpu_ns": 2083,
+            "exclusive_cpu_ns": 2083
+          },
+          "transaction_begin": {
+            "calls": 12,
+            "inclusive_cpu_ns": 10250,
+            "exclusive_cpu_ns": 10250
+          },
+          "pixel_operation_preflight": {
+            "calls": 46,
+            "inclusive_cpu_ns": 11083,
+            "exclusive_cpu_ns": 11083
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9251,
+            "exclusive_cpu_ns": 9251
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 205958,
+            "exclusive_cpu_ns": 205958
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 46,
+            "inclusive_cpu_ns": 385501,
+            "exclusive_cpu_ns": 379168
+          },
+          "mutation_adapter_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 59751,
+            "exclusive_cpu_ns": 59751
+          },
+          "cold_owner_wait": {
+            "calls": 208,
+            "inclusive_cpu_ns": 85043,
+            "exclusive_cpu_ns": 85043
+          },
+          "cold_claim_and_base": {
+            "calls": 208,
+            "inclusive_cpu_ns": 487377,
+            "exclusive_cpu_ns": 487377
+          },
+          "cold_storage_and_plan": {
+            "calls": 208,
+            "inclusive_cpu_ns": 86872,
+            "exclusive_cpu_ns": 86872
+          },
+          "cold_descriptor": {
+            "calls": 208,
+            "inclusive_cpu_ns": 101753,
+            "exclusive_cpu_ns": 101753
+          },
+          "cold_backing_reserve": {
+            "calls": 208,
+            "inclusive_cpu_ns": 356263,
+            "exclusive_cpu_ns": 356263
+          },
+          "provider_identity_setup": {
+            "calls": 208,
+            "inclusive_cpu_ns": 365749,
+            "exclusive_cpu_ns": 365749
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 116,
+            "inclusive_cpu_ns": 1102755,
+            "exclusive_cpu_ns": 1102755
+          },
+          "provider_initialize_payload": {
+            "calls": 116,
+            "inclusive_cpu_ns": 1171460,
+            "exclusive_cpu_ns": 68705
+          },
+          "provider_allocate": {
+            "calls": 208,
+            "inclusive_cpu_ns": 1855745,
+            "exclusive_cpu_ns": 207574
+          },
+          "write_provider_prepare": {
+            "calls": 208,
+            "inclusive_cpu_ns": 2048464,
+            "exclusive_cpu_ns": 192719
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 208,
+            "inclusive_cpu_ns": 996412,
+            "exclusive_cpu_ns": 996412
+          },
+          "cold_generation": {
+            "calls": 208,
+            "inclusive_cpu_ns": 4619171,
+            "exclusive_cpu_ns": 456987
+          },
+          "execution_prepare_writes": {
+            "calls": 46,
+            "inclusive_cpu_ns": 4248712,
+            "exclusive_cpu_ns": 116539
+          },
+          "mutation_adapter_prepared": {
+            "calls": 46,
+            "inclusive_cpu_ns": 4262793,
+            "exclusive_cpu_ns": 14081
+          },
+          "pixel_operation_body": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2468331,
+            "exclusive_cpu_ns": 2468331
+          },
+          "pixel_operation_changed_export": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9750,
+            "exclusive_cpu_ns": 9750
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 236,
+            "inclusive_cpu_ns": 125002,
+            "exclusive_cpu_ns": 125002
+          },
+          "mutation_seal_inputs": {
+            "calls": 177,
+            "inclusive_cpu_ns": 88878,
+            "exclusive_cpu_ns": 88878
+          },
+          "mutation_seal_private_publish": {
+            "calls": 59,
+            "inclusive_cpu_ns": 354163,
+            "exclusive_cpu_ns": 354163
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 138623,
+            "exclusive_cpu_ns": 138623
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 159920,
+            "exclusive_cpu_ns": 159920
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 29667,
+            "exclusive_cpu_ns": 29667
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 59,
+            "inclusive_cpu_ns": 17251,
+            "exclusive_cpu_ns": 17251
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 23749,
+            "exclusive_cpu_ns": 23749
+          },
+          "mutation_seal_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 61748,
+            "exclusive_cpu_ns": 61748
+          },
+          "mutation_seal_cleanup": {
+            "calls": 59,
+            "inclusive_cpu_ns": 95086,
+            "exclusive_cpu_ns": 95086
+          },
+          "mutation_adapter_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 66749,
+            "exclusive_cpu_ns": 66749
+          },
+          "mutation_adapter_installed": {
+            "calls": 59,
+            "inclusive_cpu_ns": 9458,
+            "exclusive_cpu_ns": 9458
+          },
+          "pixel_operation_finish": {
+            "calls": 46,
+            "inclusive_cpu_ns": 1670080,
+            "exclusive_cpu_ns": 247456
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 46,
+            "inclusive_cpu_ns": 7166,
+            "exclusive_cpu_ns": 7166
+          },
+          "pixel_operation_cleanup": {
+            "calls": 46,
+            "inclusive_cpu_ns": 8494,
+            "exclusive_cpu_ns": 8494
+          },
+          "commit_owner_wait": {
+            "calls": 12,
+            "inclusive_cpu_ns": 1959,
+            "exclusive_cpu_ns": 1959
+          },
+          "commit_proof_validation": {
+            "calls": 12,
+            "inclusive_cpu_ns": 22915,
+            "exclusive_cpu_ns": 22915
+          },
+          "commit_provider_validation": {
+            "calls": 12,
+            "inclusive_cpu_ns": 51334,
+            "exclusive_cpu_ns": 51334
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 12,
+            "inclusive_cpu_ns": 19290,
+            "exclusive_cpu_ns": 19290
+          },
+          "commit_input_owner_wait": {
+            "calls": 12,
+            "inclusive_cpu_ns": 1916,
+            "exclusive_cpu_ns": 1916
+          },
+          "commit_default_removal_prepare": {
+            "calls": 12,
+            "inclusive_cpu_ns": 8791,
+            "exclusive_cpu_ns": 8791
+          },
+          "commit_transition_inputs": {
+            "calls": 12,
+            "inclusive_cpu_ns": 4625,
+            "exclusive_cpu_ns": 4625
+          },
+          "commit_transition_preflight": {
+            "calls": 12,
+            "inclusive_cpu_ns": 183708,
+            "exclusive_cpu_ns": 183708
+          },
+          "commit_epoch_prepare": {
+            "calls": 12,
+            "inclusive_cpu_ns": 84585,
+            "exclusive_cpu_ns": 84585
+          },
+          "commit_publish_owner_wait": {
+            "calls": 12,
+            "inclusive_cpu_ns": 1917,
+            "exclusive_cpu_ns": 1917
+          },
+          "commit_publication_revalidate": {
+            "calls": 12,
+            "inclusive_cpu_ns": 2292,
+            "exclusive_cpu_ns": 2292
+          },
+          "commit_completion": {
+            "calls": 12,
+            "inclusive_cpu_ns": 85251,
+            "exclusive_cpu_ns": 85251
+          },
+          "commit_root": {
+            "calls": 12,
+            "inclusive_cpu_ns": 1791,
+            "exclusive_cpu_ns": 1791
+          },
+          "commit_metadata_apply": {
+            "calls": 12,
+            "inclusive_cpu_ns": 63417,
+            "exclusive_cpu_ns": 63417
+          },
+          "commit_root_publication": {
+            "calls": 12,
+            "inclusive_cpu_ns": 2624,
+            "exclusive_cpu_ns": 2624
+          },
+          "commit_cleanup": {
+            "calls": 12,
+            "inclusive_cpu_ns": 129667,
+            "exclusive_cpu_ns": 129667
+          },
+          "commit_history_collect": {
+            "calls": 12,
+            "inclusive_cpu_ns": 2039,
+            "exclusive_cpu_ns": 2039
+          },
+          "commit_provider_retire": {
+            "calls": 12,
+            "inclusive_cpu_ns": 53667,
+            "exclusive_cpu_ns": 53667
+          },
+          "job_merge": {
+            "calls": 19,
+            "inclusive_cpu_ns": 6223419,
+            "exclusive_cpu_ns": 1565509
+          },
+          "tile_payload_memcpy": {
+            "calls": 92,
+            "inclusive_cpu_ns": 61837,
+            "exclusive_cpu_ns": 61837
+          },
+          "provider_copy_payload": {
+            "calls": 92,
+            "inclusive_cpu_ns": 110962,
+            "exclusive_cpu_ns": 49125
+          },
+          "mutation_presence_preflight": {
+            "calls": 26,
+            "inclusive_cpu_ns": 4666,
+            "exclusive_cpu_ns": 4666
+          },
+          "mutation_presence_prepare": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2375,
+            "exclusive_cpu_ns": 2375
+          },
+          "mutation_presence_prepared": {
+            "calls": 13,
+            "inclusive_cpu_ns": 4207,
+            "exclusive_cpu_ns": 4207
+          },
+          "mutation_presence_resolve": {
+            "calls": 13,
+            "inclusive_cpu_ns": 7457,
+            "exclusive_cpu_ns": 7457
+          },
+          "mutation_presence_resolved": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2124,
+            "exclusive_cpu_ns": 2124
+          },
+          "tile_release_memory": {
+            "calls": 96,
+            "inclusive_cpu_ns": 27580,
+            "exclusive_cpu_ns": 27580
+          }
+        }
+      },
+      "Undo": {
+        "cpu_ns": 681000,
+        "covered_cpu_ns": 486044,
+        "residual_cpu_ns": 194956,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 750,
+            "exclusive_cpu_ns": 750
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 583,
+            "exclusive_cpu_ns": 583
+          },
+          "mutation_presence_preflight": {
+            "calls": 2,
+            "inclusive_cpu_ns": 292,
+            "exclusive_cpu_ns": 292
+          },
+          "mutation_presence_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_presence_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 793,
+            "exclusive_cpu_ns": 793
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 4042,
+            "exclusive_cpu_ns": 4042
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 792,
+            "exclusive_cpu_ns": 792
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1125,
+            "exclusive_cpu_ns": 1125
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10708,
+            "exclusive_cpu_ns": 10708
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2541,
+            "exclusive_cpu_ns": 2541
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4666,
+            "exclusive_cpu_ns": 4666
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 875,
+            "exclusive_cpu_ns": 875
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 250,
+            "exclusive_cpu_ns": 250
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3042,
+            "exclusive_cpu_ns": 3042
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 292,
+            "exclusive_cpu_ns": 292
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5500,
+            "exclusive_cpu_ns": 5500
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 19208,
+            "exclusive_cpu_ns": 19208
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 7209,
+            "exclusive_cpu_ns": 7209
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 49667,
+            "exclusive_cpu_ns": 49667
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3916,
+            "exclusive_cpu_ns": 3916
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 16250,
+            "exclusive_cpu_ns": 16250
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 18375,
+            "exclusive_cpu_ns": 18375
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 12500,
+            "exclusive_cpu_ns": 12500
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 18042,
+            "exclusive_cpu_ns": 18042
+          },
+          "mutation_presence_resolve": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1666,
+            "exclusive_cpu_ns": 1666
+          },
+          "mutation_presence_resolved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 13292,
+            "exclusive_cpu_ns": 13292
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 313125,
+            "exclusive_cpu_ns": 115457
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 170083,
+            "exclusive_cpu_ns": 74958
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 57250,
+            "exclusive_cpu_ns": 57250
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 37209,
+            "exclusive_cpu_ns": 37209
+          },
+          "tile_release_memory": {
+            "calls": 16,
+            "inclusive_cpu_ns": 2836,
+            "exclusive_cpu_ns": 2836
+          }
+        }
+      },
+      "Redo": {
+        "cpu_ns": 1492000,
+        "covered_cpu_ns": 1335042,
+        "residual_cpu_ns": 156958,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 708,
+            "exclusive_cpu_ns": 708
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 116834,
+            "exclusive_cpu_ns": 49875
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 39625,
+            "exclusive_cpu_ns": 39625
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 26625,
+            "exclusive_cpu_ns": 26625
+          },
+          "pixel_operation_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 209,
+            "exclusive_cpu_ns": 209
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10584,
+            "exclusive_cpu_ns": 10584
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 334,
+            "exclusive_cpu_ns": 334
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14833,
+            "exclusive_cpu_ns": 14374
+          },
+          "mutation_adapter_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6834,
+            "exclusive_cpu_ns": 6834
+          },
+          "cold_owner_wait": {
+            "calls": 56,
+            "inclusive_cpu_ns": 7000,
+            "exclusive_cpu_ns": 7000
+          },
+          "cold_claim_and_base": {
+            "calls": 56,
+            "inclusive_cpu_ns": 18002,
+            "exclusive_cpu_ns": 18002
+          },
+          "cold_storage_and_plan": {
+            "calls": 56,
+            "inclusive_cpu_ns": 14660,
+            "exclusive_cpu_ns": 14660
+          },
+          "cold_descriptor": {
+            "calls": 56,
+            "inclusive_cpu_ns": 13876,
+            "exclusive_cpu_ns": 13876
+          },
+          "cold_backing_reserve": {
+            "calls": 56,
+            "inclusive_cpu_ns": 29497,
+            "exclusive_cpu_ns": 29497
+          },
+          "provider_identity_setup": {
+            "calls": 56,
+            "inclusive_cpu_ns": 38668,
+            "exclusive_cpu_ns": 38668
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 56,
+            "inclusive_cpu_ns": 426376,
+            "exclusive_cpu_ns": 426376
+          },
+          "provider_initialize_payload": {
+            "calls": 56,
+            "inclusive_cpu_ns": 444422,
+            "exclusive_cpu_ns": 18046
+          },
+          "provider_allocate": {
+            "calls": 56,
+            "inclusive_cpu_ns": 515171,
+            "exclusive_cpu_ns": 32081
+          },
+          "write_provider_prepare": {
+            "calls": 56,
+            "inclusive_cpu_ns": 528463,
+            "exclusive_cpu_ns": 13292
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 56,
+            "inclusive_cpu_ns": 88754,
+            "exclusive_cpu_ns": 88754
+          },
+          "cold_generation": {
+            "calls": 56,
+            "inclusive_cpu_ns": 762082,
+            "exclusive_cpu_ns": 61830
+          },
+          "execution_prepare_writes": {
+            "calls": 1,
+            "inclusive_cpu_ns": 777083,
+            "exclusive_cpu_ns": 15001
+          },
+          "mutation_adapter_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 777291,
+            "exclusive_cpu_ns": 208
+          },
+          "pixel_operation_body": {
+            "calls": 1,
+            "inclusive_cpu_ns": 94334,
+            "exclusive_cpu_ns": 94334
+          },
+          "pixel_operation_changed_export": {
+            "calls": 1,
+            "inclusive_cpu_ns": 375,
+            "exclusive_cpu_ns": 375
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 750,
+            "exclusive_cpu_ns": 750
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 5625,
+            "exclusive_cpu_ns": 5625
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 47959,
+            "exclusive_cpu_ns": 47959
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 16666,
+            "exclusive_cpu_ns": 16666
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10334,
+            "exclusive_cpu_ns": 10334
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1125,
+            "exclusive_cpu_ns": 1125
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 7666,
+            "exclusive_cpu_ns": 7666
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3250,
+            "exclusive_cpu_ns": 3250
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 250,
+            "exclusive_cpu_ns": 250
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6334,
+            "exclusive_cpu_ns": 6334
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 11375,
+            "exclusive_cpu_ns": 11375
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4666,
+            "exclusive_cpu_ns": 4666
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 500,
+            "exclusive_cpu_ns": 500
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1084,
+            "exclusive_cpu_ns": 1084
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 52458,
+            "exclusive_cpu_ns": 52458
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 12417,
+            "exclusive_cpu_ns": 12417
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 15667,
+            "exclusive_cpu_ns": 15667
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 12000,
+            "exclusive_cpu_ns": 12000
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 40792,
+            "exclusive_cpu_ns": 40792
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1458,
+            "exclusive_cpu_ns": 1458
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5667,
+            "exclusive_cpu_ns": 5667
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "pixel_operation_finish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 269334,
+            "exclusive_cpu_ns": 10041
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "pixel_operation_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 292,
+            "exclusive_cpu_ns": 292
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1218208,
+            "exclusive_cpu_ns": 43623
+          }
+        }
+      },
+      "Teardown": {
+        "cpu_ns": 884000,
+        "covered_cpu_ns": 25667,
+        "residual_cpu_ns": 858333,
+        "names": {
+          "tile_release_memory": {
+            "calls": 118,
+            "inclusive_cpu_ns": 25667,
+            "exclusive_cpu_ns": 25667
+          }
+        }
+      }
+    },
+    "boundary_exceptions": [],
+    "projection_updates": 19
+  },
+  {
+    "index": 1,
+    "side": "block",
+    "stages": {
+      "Setup": {
+        "cpu_ns": 367183000,
+        "covered_cpu_ns": 6165,
+        "residual_cpu_ns": 367176835,
+        "names": {
+          "tile_fill_pixel_loop": {
+            "calls": 6,
+            "inclusive_cpu_ns": 6165,
+            "exclusive_cpu_ns": 6165
+          }
+        }
+      },
+      "Stroke": {
+        "cpu_ns": 19277000,
+        "covered_cpu_ns": 17460193,
+        "residual_cpu_ns": 1816807,
+        "names": {
+          "job_gate_wait": {
+            "calls": 956,
+            "inclusive_cpu_ns": 154339,
+            "exclusive_cpu_ns": 154339
+          },
+          "job_stroke": {
+            "calls": 937,
+            "inclusive_cpu_ns": 11772362,
+            "exclusive_cpu_ns": 6522386
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2499,
+            "exclusive_cpu_ns": 2499
+          },
+          "transaction_begin": {
+            "calls": 13,
+            "inclusive_cpu_ns": 9918,
+            "exclusive_cpu_ns": 9918
+          },
+          "pixel_operation_preflight": {
+            "calls": 46,
+            "inclusive_cpu_ns": 10544,
+            "exclusive_cpu_ns": 10544
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9380,
+            "exclusive_cpu_ns": 9380
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 235498,
+            "exclusive_cpu_ns": 235498
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 46,
+            "inclusive_cpu_ns": 551000,
+            "exclusive_cpu_ns": 545999
+          },
+          "mutation_adapter_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 57835,
+            "exclusive_cpu_ns": 57835
+          },
+          "cold_owner_wait": {
+            "calls": 208,
+            "inclusive_cpu_ns": 81293,
+            "exclusive_cpu_ns": 81293
+          },
+          "cold_claim_and_base": {
+            "calls": 208,
+            "inclusive_cpu_ns": 418909,
+            "exclusive_cpu_ns": 418909
+          },
+          "cold_storage_and_plan": {
+            "calls": 208,
+            "inclusive_cpu_ns": 69419,
+            "exclusive_cpu_ns": 69419
+          },
+          "cold_descriptor": {
+            "calls": 208,
+            "inclusive_cpu_ns": 85337,
+            "exclusive_cpu_ns": 85337
+          },
+          "cold_backing_reserve": {
+            "calls": 208,
+            "inclusive_cpu_ns": 360332,
+            "exclusive_cpu_ns": 360332
+          },
+          "provider_identity_setup": {
+            "calls": 208,
+            "inclusive_cpu_ns": 342948,
+            "exclusive_cpu_ns": 342948
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 116,
+            "inclusive_cpu_ns": 82079,
+            "exclusive_cpu_ns": 82079
+          },
+          "provider_initialize_payload": {
+            "calls": 116,
+            "inclusive_cpu_ns": 144374,
+            "exclusive_cpu_ns": 62295
+          },
+          "provider_allocate": {
+            "calls": 208,
+            "inclusive_cpu_ns": 790088,
+            "exclusive_cpu_ns": 185102
+          },
+          "write_provider_prepare": {
+            "calls": 208,
+            "inclusive_cpu_ns": 913079,
+            "exclusive_cpu_ns": 122991
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 208,
+            "inclusive_cpu_ns": 952750,
+            "exclusive_cpu_ns": 952750
+          },
+          "cold_generation": {
+            "calls": 208,
+            "inclusive_cpu_ns": 3337449,
+            "exclusive_cpu_ns": 456330
+          },
+          "execution_prepare_writes": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2951919,
+            "exclusive_cpu_ns": 123383
+          },
+          "mutation_adapter_prepared": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2965877,
+            "exclusive_cpu_ns": 13958
+          },
+          "pixel_operation_body": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2464166,
+            "exclusive_cpu_ns": 2464166
+          },
+          "pixel_operation_changed_export": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9749,
+            "exclusive_cpu_ns": 9749
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 236,
+            "inclusive_cpu_ns": 161922,
+            "exclusive_cpu_ns": 161922
+          },
+          "mutation_seal_inputs": {
+            "calls": 177,
+            "inclusive_cpu_ns": 86663,
+            "exclusive_cpu_ns": 86663
+          },
+          "mutation_seal_private_publish": {
+            "calls": 59,
+            "inclusive_cpu_ns": 367039,
+            "exclusive_cpu_ns": 367039
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 133623,
+            "exclusive_cpu_ns": 133623
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 147876,
+            "exclusive_cpu_ns": 147876
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 21754,
+            "exclusive_cpu_ns": 21754
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 59,
+            "inclusive_cpu_ns": 9251,
+            "exclusive_cpu_ns": 9251
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 23540,
+            "exclusive_cpu_ns": 23540
+          },
+          "mutation_seal_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 62834,
+            "exclusive_cpu_ns": 62834
+          },
+          "mutation_seal_cleanup": {
+            "calls": 59,
+            "inclusive_cpu_ns": 79708,
+            "exclusive_cpu_ns": 79708
+          },
+          "mutation_adapter_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 89790,
+            "exclusive_cpu_ns": 89790
+          },
+          "mutation_adapter_installed": {
+            "calls": 59,
+            "inclusive_cpu_ns": 9372,
+            "exclusive_cpu_ns": 9372
+          },
+          "pixel_operation_finish": {
+            "calls": 46,
+            "inclusive_cpu_ns": 1660541,
+            "exclusive_cpu_ns": 276043
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 46,
+            "inclusive_cpu_ns": 7332,
+            "exclusive_cpu_ns": 7332
+          },
+          "pixel_operation_cleanup": {
+            "calls": 46,
+            "inclusive_cpu_ns": 8543,
+            "exclusive_cpu_ns": 8543
+          },
+          "job_merge": {
+            "calls": 19,
+            "inclusive_cpu_ns": 5666874,
+            "exclusive_cpu_ns": 1707476
+          },
+          "tile_payload_memcpy": {
+            "calls": 92,
+            "inclusive_cpu_ns": 66666,
+            "exclusive_cpu_ns": 66666
+          },
+          "provider_copy_payload": {
+            "calls": 92,
+            "inclusive_cpu_ns": 117664,
+            "exclusive_cpu_ns": 50998
+          },
+          "mutation_presence_preflight": {
+            "calls": 26,
+            "inclusive_cpu_ns": 4415,
+            "exclusive_cpu_ns": 4415
+          },
+          "mutation_presence_prepare": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2165,
+            "exclusive_cpu_ns": 2165
+          },
+          "mutation_presence_prepared": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2333,
+            "exclusive_cpu_ns": 2333
+          },
+          "mutation_presence_resolve": {
+            "calls": 13,
+            "inclusive_cpu_ns": 12456,
+            "exclusive_cpu_ns": 12456
+          },
+          "mutation_presence_resolved": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2290,
+            "exclusive_cpu_ns": 2290
+          },
+          "commit_owner_wait": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2543,
+            "exclusive_cpu_ns": 2543
+          },
+          "commit_proof_validation": {
+            "calls": 13,
+            "inclusive_cpu_ns": 24708,
+            "exclusive_cpu_ns": 24708
+          },
+          "commit_provider_validation": {
+            "calls": 13,
+            "inclusive_cpu_ns": 51876,
+            "exclusive_cpu_ns": 51876
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 13,
+            "inclusive_cpu_ns": 21834,
+            "exclusive_cpu_ns": 21834
+          },
+          "commit_input_owner_wait": {
+            "calls": 13,
+            "inclusive_cpu_ns": 1999,
+            "exclusive_cpu_ns": 1999
+          },
+          "commit_default_removal_prepare": {
+            "calls": 13,
+            "inclusive_cpu_ns": 9081,
+            "exclusive_cpu_ns": 9081
+          },
+          "commit_transition_inputs": {
+            "calls": 13,
+            "inclusive_cpu_ns": 5503,
+            "exclusive_cpu_ns": 5503
+          },
+          "commit_transition_preflight": {
+            "calls": 13,
+            "inclusive_cpu_ns": 201456,
+            "exclusive_cpu_ns": 201456
+          },
+          "commit_epoch_prepare": {
+            "calls": 13,
+            "inclusive_cpu_ns": 82875,
+            "exclusive_cpu_ns": 82875
+          },
+          "commit_publish_owner_wait": {
+            "calls": 13,
+            "inclusive_cpu_ns": 1959,
+            "exclusive_cpu_ns": 1959
+          },
+          "commit_publication_revalidate": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2334,
+            "exclusive_cpu_ns": 2334
+          },
+          "commit_completion": {
+            "calls": 13,
+            "inclusive_cpu_ns": 98751,
+            "exclusive_cpu_ns": 98751
+          },
+          "commit_root": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2122,
+            "exclusive_cpu_ns": 2122
+          },
+          "commit_metadata_apply": {
+            "calls": 13,
+            "inclusive_cpu_ns": 69958,
+            "exclusive_cpu_ns": 69958
+          },
+          "commit_root_publication": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2251,
+            "exclusive_cpu_ns": 2251
+          },
+          "commit_cleanup": {
+            "calls": 13,
+            "inclusive_cpu_ns": 123541,
+            "exclusive_cpu_ns": 123541
+          },
+          "commit_history_collect": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2083,
+            "exclusive_cpu_ns": 2083
+          },
+          "commit_provider_retire": {
+            "calls": 13,
+            "inclusive_cpu_ns": 20834,
+            "exclusive_cpu_ns": 20834
+          },
+          "tile_release_memory": {
+            "calls": 96,
+            "inclusive_cpu_ns": 20957,
+            "exclusive_cpu_ns": 20957
+          }
+        }
+      },
+      "Undo": {
+        "cpu_ns": 611000,
+        "covered_cpu_ns": 417460,
+        "residual_cpu_ns": 193540,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 708,
+            "exclusive_cpu_ns": 708
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 122375,
+            "exclusive_cpu_ns": 49501
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 41041,
+            "exclusive_cpu_ns": 41041
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 31125,
+            "exclusive_cpu_ns": 31125
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 208,
+            "exclusive_cpu_ns": 208
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 417,
+            "exclusive_cpu_ns": 417
+          },
+          "mutation_presence_preflight": {
+            "calls": 2,
+            "inclusive_cpu_ns": 375,
+            "exclusive_cpu_ns": 375
+          },
+          "mutation_presence_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_presence_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 624,
+            "exclusive_cpu_ns": 624
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 3459,
+            "exclusive_cpu_ns": 3459
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 625,
+            "exclusive_cpu_ns": 625
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1167,
+            "exclusive_cpu_ns": 1167
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 9375,
+            "exclusive_cpu_ns": 9375
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2250,
+            "exclusive_cpu_ns": 2250
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4542,
+            "exclusive_cpu_ns": 4542
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 875,
+            "exclusive_cpu_ns": 875
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2083,
+            "exclusive_cpu_ns": 2083
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4250,
+            "exclusive_cpu_ns": 4250
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10208,
+            "exclusive_cpu_ns": 10208
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 7292,
+            "exclusive_cpu_ns": 7292
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 44125,
+            "exclusive_cpu_ns": 44125
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3459,
+            "exclusive_cpu_ns": 3459
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14792,
+            "exclusive_cpu_ns": 14792
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 17708,
+            "exclusive_cpu_ns": 17708
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 13875,
+            "exclusive_cpu_ns": 13875
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 23875,
+            "exclusive_cpu_ns": 23875
+          },
+          "mutation_presence_resolve": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1917,
+            "exclusive_cpu_ns": 1917
+          },
+          "mutation_presence_resolved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 11167,
+            "exclusive_cpu_ns": 11167
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 208,
+            "exclusive_cpu_ns": 208
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 291792,
+            "exclusive_cpu_ns": 110873
+          },
+          "tile_release_memory": {
+            "calls": 16,
+            "inclusive_cpu_ns": 3293,
+            "exclusive_cpu_ns": 3293
+          }
+        }
+      },
+      "Redo": {
+        "cpu_ns": 1171000,
+        "covered_cpu_ns": 995500,
+        "residual_cpu_ns": 175500,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 1376,
+            "exclusive_cpu_ns": 1376
+          },
+          "pixel_operation_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 209,
+            "exclusive_cpu_ns": 209
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 292,
+            "exclusive_cpu_ns": 292
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14584,
+            "exclusive_cpu_ns": 14584
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 625,
+            "exclusive_cpu_ns": 625
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 16917,
+            "exclusive_cpu_ns": 16126
+          },
+          "mutation_adapter_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 7958,
+            "exclusive_cpu_ns": 7958
+          },
+          "cold_owner_wait": {
+            "calls": 56,
+            "inclusive_cpu_ns": 7334,
+            "exclusive_cpu_ns": 7334
+          },
+          "cold_claim_and_base": {
+            "calls": 56,
+            "inclusive_cpu_ns": 22918,
+            "exclusive_cpu_ns": 22918
+          },
+          "cold_storage_and_plan": {
+            "calls": 56,
+            "inclusive_cpu_ns": 13169,
+            "exclusive_cpu_ns": 13169
+          },
+          "cold_descriptor": {
+            "calls": 56,
+            "inclusive_cpu_ns": 14545,
+            "exclusive_cpu_ns": 14545
+          },
+          "cold_backing_reserve": {
+            "calls": 56,
+            "inclusive_cpu_ns": 32294,
+            "exclusive_cpu_ns": 32294
+          },
+          "provider_identity_setup": {
+            "calls": 56,
+            "inclusive_cpu_ns": 40374,
+            "exclusive_cpu_ns": 40374
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 56,
+            "inclusive_cpu_ns": 38917,
+            "exclusive_cpu_ns": 38917
+          },
+          "provider_initialize_payload": {
+            "calls": 56,
+            "inclusive_cpu_ns": 59794,
+            "exclusive_cpu_ns": 20877
+          },
+          "provider_allocate": {
+            "calls": 56,
+            "inclusive_cpu_ns": 132916,
+            "exclusive_cpu_ns": 32748
+          },
+          "write_provider_prepare": {
+            "calls": 56,
+            "inclusive_cpu_ns": 146624,
+            "exclusive_cpu_ns": 13708
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 56,
+            "inclusive_cpu_ns": 90253,
+            "exclusive_cpu_ns": 90253
+          },
+          "cold_generation": {
+            "calls": 56,
+            "inclusive_cpu_ns": 392044,
+            "exclusive_cpu_ns": 64907
+          },
+          "execution_prepare_writes": {
+            "calls": 1,
+            "inclusive_cpu_ns": 404834,
+            "exclusive_cpu_ns": 12790
+          },
+          "mutation_adapter_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 405167,
+            "exclusive_cpu_ns": 333
+          },
+          "pixel_operation_body": {
+            "calls": 1,
+            "inclusive_cpu_ns": 92333,
+            "exclusive_cpu_ns": 92333
+          },
+          "pixel_operation_changed_export": {
+            "calls": 1,
+            "inclusive_cpu_ns": 333,
+            "exclusive_cpu_ns": 333
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 709,
+            "exclusive_cpu_ns": 709
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 5750,
+            "exclusive_cpu_ns": 5750
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 47209,
+            "exclusive_cpu_ns": 47209
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 16083,
+            "exclusive_cpu_ns": 16083
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 16458,
+            "exclusive_cpu_ns": 16458
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 958,
+            "exclusive_cpu_ns": 958
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6042,
+            "exclusive_cpu_ns": 6042
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2333,
+            "exclusive_cpu_ns": 2333
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 208,
+            "exclusive_cpu_ns": 208
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4833,
+            "exclusive_cpu_ns": 4833
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10542,
+            "exclusive_cpu_ns": 10542
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3750,
+            "exclusive_cpu_ns": 3750
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 667,
+            "exclusive_cpu_ns": 667
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 583,
+            "exclusive_cpu_ns": 583
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 39625,
+            "exclusive_cpu_ns": 39625
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 9250,
+            "exclusive_cpu_ns": 9250
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 16125,
+            "exclusive_cpu_ns": 16125
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 12916,
+            "exclusive_cpu_ns": 12916
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 42916,
+            "exclusive_cpu_ns": 42916
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1625,
+            "exclusive_cpu_ns": 1625
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5792,
+            "exclusive_cpu_ns": 5792
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "pixel_operation_finish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 255458,
+            "exclusive_cpu_ns": 9876
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "pixel_operation_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 291,
+            "exclusive_cpu_ns": 291
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 837875,
+            "exclusive_cpu_ns": 43458
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 157625,
+            "exclusive_cpu_ns": 72249
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 50125,
+            "exclusive_cpu_ns": 50125
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 34459,
+            "exclusive_cpu_ns": 34459
+          }
+        }
+      },
+      "Teardown": {
+        "cpu_ns": 830000,
+        "covered_cpu_ns": 21500,
+        "residual_cpu_ns": 808500,
+        "names": {
+          "tile_release_memory": {
+            "calls": 118,
+            "inclusive_cpu_ns": 21500,
+            "exclusive_cpu_ns": 21500
+          }
+        }
+      }
+    },
+    "boundary_exceptions": [],
+    "projection_updates": 19
+  },
+  {
+    "index": 2,
+    "side": "block",
+    "stages": {
+      "Setup": {
+        "cpu_ns": 368420000,
+        "covered_cpu_ns": 4584,
+        "residual_cpu_ns": 368415416,
+        "names": {
+          "tile_fill_pixel_loop": {
+            "calls": 6,
+            "inclusive_cpu_ns": 4584,
+            "exclusive_cpu_ns": 4584
+          }
+        }
+      },
+      "Stroke": {
+        "cpu_ns": 18821000,
+        "covered_cpu_ns": 17014044,
+        "residual_cpu_ns": 1806956,
+        "names": {
+          "job_gate_wait": {
+            "calls": 956,
+            "inclusive_cpu_ns": 159718,
+            "exclusive_cpu_ns": 159718
+          },
+          "job_stroke": {
+            "calls": 937,
+            "inclusive_cpu_ns": 11614251,
+            "exclusive_cpu_ns": 6443730
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 15,
+            "inclusive_cpu_ns": 2420,
+            "exclusive_cpu_ns": 2420
+          },
+          "transaction_begin": {
+            "calls": 15,
+            "inclusive_cpu_ns": 15374,
+            "exclusive_cpu_ns": 15374
+          },
+          "pixel_operation_preflight": {
+            "calls": 46,
+            "inclusive_cpu_ns": 11584,
+            "exclusive_cpu_ns": 11584
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9381,
+            "exclusive_cpu_ns": 9381
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 246998,
+            "exclusive_cpu_ns": 246998
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 46,
+            "inclusive_cpu_ns": 403335,
+            "exclusive_cpu_ns": 393751
+          },
+          "mutation_adapter_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 56544,
+            "exclusive_cpu_ns": 56544
+          },
+          "cold_owner_wait": {
+            "calls": 208,
+            "inclusive_cpu_ns": 79042,
+            "exclusive_cpu_ns": 79042
+          },
+          "cold_claim_and_base": {
+            "calls": 208,
+            "inclusive_cpu_ns": 426335,
+            "exclusive_cpu_ns": 426335
+          },
+          "cold_storage_and_plan": {
+            "calls": 208,
+            "inclusive_cpu_ns": 69413,
+            "exclusive_cpu_ns": 69413
+          },
+          "cold_descriptor": {
+            "calls": 208,
+            "inclusive_cpu_ns": 77741,
+            "exclusive_cpu_ns": 77741
+          },
+          "cold_backing_reserve": {
+            "calls": 208,
+            "inclusive_cpu_ns": 322508,
+            "exclusive_cpu_ns": 322508
+          },
+          "provider_identity_setup": {
+            "calls": 208,
+            "inclusive_cpu_ns": 289044,
+            "exclusive_cpu_ns": 289044
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 116,
+            "inclusive_cpu_ns": 85084,
+            "exclusive_cpu_ns": 85084
+          },
+          "provider_initialize_payload": {
+            "calls": 116,
+            "inclusive_cpu_ns": 150500,
+            "exclusive_cpu_ns": 65416
+          },
+          "provider_allocate": {
+            "calls": 208,
+            "inclusive_cpu_ns": 744212,
+            "exclusive_cpu_ns": 197742
+          },
+          "write_provider_prepare": {
+            "calls": 208,
+            "inclusive_cpu_ns": 865587,
+            "exclusive_cpu_ns": 121375
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 208,
+            "inclusive_cpu_ns": 1007542,
+            "exclusive_cpu_ns": 1007542
+          },
+          "cold_generation": {
+            "calls": 208,
+            "inclusive_cpu_ns": 3294577,
+            "exclusive_cpu_ns": 446409
+          },
+          "execution_prepare_writes": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2928999,
+            "exclusive_cpu_ns": 107753
+          },
+          "mutation_adapter_prepared": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2943210,
+            "exclusive_cpu_ns": 14211
+          },
+          "pixel_operation_body": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2385250,
+            "exclusive_cpu_ns": 2385250
+          },
+          "pixel_operation_changed_export": {
+            "calls": 46,
+            "inclusive_cpu_ns": 10251,
+            "exclusive_cpu_ns": 10251
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 236,
+            "inclusive_cpu_ns": 126166,
+            "exclusive_cpu_ns": 126166
+          },
+          "mutation_seal_inputs": {
+            "calls": 177,
+            "inclusive_cpu_ns": 86626,
+            "exclusive_cpu_ns": 86626
+          },
+          "mutation_seal_private_publish": {
+            "calls": 59,
+            "inclusive_cpu_ns": 352832,
+            "exclusive_cpu_ns": 352832
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 125334,
+            "exclusive_cpu_ns": 125334
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 151915,
+            "exclusive_cpu_ns": 151915
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 21334,
+            "exclusive_cpu_ns": 21334
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 59,
+            "inclusive_cpu_ns": 11587,
+            "exclusive_cpu_ns": 11587
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 23826,
+            "exclusive_cpu_ns": 23826
+          },
+          "mutation_seal_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 61625,
+            "exclusive_cpu_ns": 61625
+          },
+          "mutation_seal_cleanup": {
+            "calls": 59,
+            "inclusive_cpu_ns": 86708,
+            "exclusive_cpu_ns": 86708
+          },
+          "mutation_adapter_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 71585,
+            "exclusive_cpu_ns": 71585
+          },
+          "mutation_adapter_installed": {
+            "calls": 59,
+            "inclusive_cpu_ns": 9456,
+            "exclusive_cpu_ns": 9456
+          },
+          "pixel_operation_finish": {
+            "calls": 46,
+            "inclusive_cpu_ns": 1625501,
+            "exclusive_cpu_ns": 281343
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 46,
+            "inclusive_cpu_ns": 7624,
+            "exclusive_cpu_ns": 7624
+          },
+          "pixel_operation_cleanup": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9080,
+            "exclusive_cpu_ns": 9080
+          },
+          "job_merge": {
+            "calls": 19,
+            "inclusive_cpu_ns": 5376166,
+            "exclusive_cpu_ns": 1619881
+          },
+          "mutation_presence_preflight": {
+            "calls": 26,
+            "inclusive_cpu_ns": 4457,
+            "exclusive_cpu_ns": 4457
+          },
+          "mutation_presence_prepare": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2167,
+            "exclusive_cpu_ns": 2167
+          },
+          "mutation_presence_prepared": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2294,
+            "exclusive_cpu_ns": 2294
+          },
+          "tile_payload_memcpy": {
+            "calls": 92,
+            "inclusive_cpu_ns": 55328,
+            "exclusive_cpu_ns": 55328
+          },
+          "provider_copy_payload": {
+            "calls": 92,
+            "inclusive_cpu_ns": 106926,
+            "exclusive_cpu_ns": 51598
+          },
+          "mutation_presence_resolve": {
+            "calls": 13,
+            "inclusive_cpu_ns": 13957,
+            "exclusive_cpu_ns": 13957
+          },
+          "mutation_presence_resolved": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2333,
+            "exclusive_cpu_ns": 2333
+          },
+          "commit_owner_wait": {
+            "calls": 15,
+            "inclusive_cpu_ns": 2708,
+            "exclusive_cpu_ns": 2708
+          },
+          "commit_proof_validation": {
+            "calls": 15,
+            "inclusive_cpu_ns": 24500,
+            "exclusive_cpu_ns": 24500
+          },
+          "commit_provider_validation": {
+            "calls": 15,
+            "inclusive_cpu_ns": 49748,
+            "exclusive_cpu_ns": 49748
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 15,
+            "inclusive_cpu_ns": 25875,
+            "exclusive_cpu_ns": 25875
+          },
+          "commit_input_owner_wait": {
+            "calls": 15,
+            "inclusive_cpu_ns": 4040,
+            "exclusive_cpu_ns": 4040
+          },
+          "commit_default_removal_prepare": {
+            "calls": 15,
+            "inclusive_cpu_ns": 10294,
+            "exclusive_cpu_ns": 10294
+          },
+          "commit_transition_inputs": {
+            "calls": 15,
+            "inclusive_cpu_ns": 6041,
+            "exclusive_cpu_ns": 6041
+          },
+          "commit_transition_preflight": {
+            "calls": 15,
+            "inclusive_cpu_ns": 221125,
+            "exclusive_cpu_ns": 221125
+          },
+          "commit_epoch_prepare": {
+            "calls": 15,
+            "inclusive_cpu_ns": 81293,
+            "exclusive_cpu_ns": 81293
+          },
+          "commit_publish_owner_wait": {
+            "calls": 15,
+            "inclusive_cpu_ns": 2373,
+            "exclusive_cpu_ns": 2373
+          },
+          "commit_publication_revalidate": {
+            "calls": 15,
+            "inclusive_cpu_ns": 2708,
+            "exclusive_cpu_ns": 2708
+          },
+          "commit_completion": {
+            "calls": 15,
+            "inclusive_cpu_ns": 91919,
+            "exclusive_cpu_ns": 91919
+          },
+          "commit_root": {
+            "calls": 15,
+            "inclusive_cpu_ns": 2164,
+            "exclusive_cpu_ns": 2164
+          },
+          "commit_metadata_apply": {
+            "calls": 15,
+            "inclusive_cpu_ns": 74502,
+            "exclusive_cpu_ns": 74502
+          },
+          "commit_root_publication": {
+            "calls": 15,
+            "inclusive_cpu_ns": 2418,
+            "exclusive_cpu_ns": 2418
+          },
+          "commit_cleanup": {
+            "calls": 15,
+            "inclusive_cpu_ns": 135956,
+            "exclusive_cpu_ns": 135956
+          },
+          "commit_history_collect": {
+            "calls": 15,
+            "inclusive_cpu_ns": 2498,
+            "exclusive_cpu_ns": 2498
+          },
+          "commit_provider_retire": {
+            "calls": 15,
+            "inclusive_cpu_ns": 26583,
+            "exclusive_cpu_ns": 26583
+          },
+          "tile_release_memory": {
+            "calls": 96,
+            "inclusive_cpu_ns": 23627,
+            "exclusive_cpu_ns": 23627
+          }
+        }
+      },
+      "Undo": {
+        "cpu_ns": 704000,
+        "covered_cpu_ns": 500085,
+        "residual_cpu_ns": 203915,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 749,
+            "exclusive_cpu_ns": 749
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 177458,
+            "exclusive_cpu_ns": 85918
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 52041,
+            "exclusive_cpu_ns": 52041
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 38875,
+            "exclusive_cpu_ns": 38875
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 208,
+            "exclusive_cpu_ns": 208
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 875,
+            "exclusive_cpu_ns": 875
+          },
+          "mutation_presence_preflight": {
+            "calls": 2,
+            "inclusive_cpu_ns": 333,
+            "exclusive_cpu_ns": 333
+          },
+          "mutation_presence_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "mutation_presence_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 833,
+            "exclusive_cpu_ns": 833
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 3416,
+            "exclusive_cpu_ns": 3416
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 667,
+            "exclusive_cpu_ns": 667
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1166,
+            "exclusive_cpu_ns": 1166
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10375,
+            "exclusive_cpu_ns": 10375
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3208,
+            "exclusive_cpu_ns": 3208
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6500,
+            "exclusive_cpu_ns": 6500
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1333,
+            "exclusive_cpu_ns": 1333
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 250,
+            "exclusive_cpu_ns": 250
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2834,
+            "exclusive_cpu_ns": 2834
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 291,
+            "exclusive_cpu_ns": 291
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5625,
+            "exclusive_cpu_ns": 5625
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 20041,
+            "exclusive_cpu_ns": 20041
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 7750,
+            "exclusive_cpu_ns": 7750
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 47750,
+            "exclusive_cpu_ns": 47750
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4042,
+            "exclusive_cpu_ns": 4042
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 209,
+            "exclusive_cpu_ns": 209
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 17875,
+            "exclusive_cpu_ns": 17875
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 20208,
+            "exclusive_cpu_ns": 20208
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14458,
+            "exclusive_cpu_ns": 14458
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5292,
+            "exclusive_cpu_ns": 5292
+          },
+          "mutation_presence_resolve": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4500,
+            "exclusive_cpu_ns": 4500
+          },
+          "mutation_presence_resolved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 208,
+            "exclusive_cpu_ns": 208
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 13334,
+            "exclusive_cpu_ns": 13334
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 319375,
+            "exclusive_cpu_ns": 124127
+          },
+          "tile_release_memory": {
+            "calls": 15,
+            "inclusive_cpu_ns": 3252,
+            "exclusive_cpu_ns": 3252
+          }
+        }
+      },
+      "Redo": {
+        "cpu_ns": 1195000,
+        "covered_cpu_ns": 1023334,
+        "residual_cpu_ns": 171666,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 750,
+            "exclusive_cpu_ns": 750
+          },
+          "pixel_operation_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 250,
+            "exclusive_cpu_ns": 250
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 250,
+            "exclusive_cpu_ns": 250
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14750,
+            "exclusive_cpu_ns": 14750
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 709,
+            "exclusive_cpu_ns": 709
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 18750,
+            "exclusive_cpu_ns": 17874
+          },
+          "mutation_adapter_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6500,
+            "exclusive_cpu_ns": 6500
+          },
+          "cold_owner_wait": {
+            "calls": 56,
+            "inclusive_cpu_ns": 7292,
+            "exclusive_cpu_ns": 7292
+          },
+          "cold_claim_and_base": {
+            "calls": 56,
+            "inclusive_cpu_ns": 22836,
+            "exclusive_cpu_ns": 22836
+          },
+          "cold_storage_and_plan": {
+            "calls": 56,
+            "inclusive_cpu_ns": 14125,
+            "exclusive_cpu_ns": 14125
+          },
+          "cold_descriptor": {
+            "calls": 56,
+            "inclusive_cpu_ns": 14460,
+            "exclusive_cpu_ns": 14460
+          },
+          "cold_backing_reserve": {
+            "calls": 56,
+            "inclusive_cpu_ns": 32169,
+            "exclusive_cpu_ns": 32169
+          },
+          "provider_identity_setup": {
+            "calls": 56,
+            "inclusive_cpu_ns": 40791,
+            "exclusive_cpu_ns": 40791
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 56,
+            "inclusive_cpu_ns": 40831,
+            "exclusive_cpu_ns": 40831
+          },
+          "provider_initialize_payload": {
+            "calls": 56,
+            "inclusive_cpu_ns": 62045,
+            "exclusive_cpu_ns": 21214
+          },
+          "provider_allocate": {
+            "calls": 56,
+            "inclusive_cpu_ns": 134500,
+            "exclusive_cpu_ns": 31664
+          },
+          "write_provider_prepare": {
+            "calls": 56,
+            "inclusive_cpu_ns": 147918,
+            "exclusive_cpu_ns": 13418
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 56,
+            "inclusive_cpu_ns": 87622,
+            "exclusive_cpu_ns": 87622
+          },
+          "cold_generation": {
+            "calls": 56,
+            "inclusive_cpu_ns": 390665,
+            "exclusive_cpu_ns": 64243
+          },
+          "execution_prepare_writes": {
+            "calls": 1,
+            "inclusive_cpu_ns": 404250,
+            "exclusive_cpu_ns": 13585
+          },
+          "mutation_adapter_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 404500,
+            "exclusive_cpu_ns": 250
+          },
+          "pixel_operation_body": {
+            "calls": 1,
+            "inclusive_cpu_ns": 91667,
+            "exclusive_cpu_ns": 91667
+          },
+          "pixel_operation_changed_export": {
+            "calls": 1,
+            "inclusive_cpu_ns": 542,
+            "exclusive_cpu_ns": 542
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 750,
+            "exclusive_cpu_ns": 750
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 5458,
+            "exclusive_cpu_ns": 5458
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 47625,
+            "exclusive_cpu_ns": 47625
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 19625,
+            "exclusive_cpu_ns": 19625
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10791,
+            "exclusive_cpu_ns": 10791
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 833,
+            "exclusive_cpu_ns": 833
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6375,
+            "exclusive_cpu_ns": 6375
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2375,
+            "exclusive_cpu_ns": 2375
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4667,
+            "exclusive_cpu_ns": 4667
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 9791,
+            "exclusive_cpu_ns": 9791
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3584,
+            "exclusive_cpu_ns": 3584
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 625,
+            "exclusive_cpu_ns": 625
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 458,
+            "exclusive_cpu_ns": 458
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 70666,
+            "exclusive_cpu_ns": 70666
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 9959,
+            "exclusive_cpu_ns": 9959
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 208,
+            "exclusive_cpu_ns": 208
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14792,
+            "exclusive_cpu_ns": 14792
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 12291,
+            "exclusive_cpu_ns": 12291
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 40875,
+            "exclusive_cpu_ns": 40875
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1750,
+            "exclusive_cpu_ns": 1750
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6083,
+            "exclusive_cpu_ns": 6083
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "pixel_operation_finish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 280958,
+            "exclusive_cpu_ns": 10169
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "pixel_operation_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 291,
+            "exclusive_cpu_ns": 291
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 862375,
+            "exclusive_cpu_ns": 43542
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 160959,
+            "exclusive_cpu_ns": 79291
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 47959,
+            "exclusive_cpu_ns": 47959
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 33000,
+            "exclusive_cpu_ns": 33000
+          }
+        }
+      },
+      "Teardown": {
+        "cpu_ns": 861000,
+        "covered_cpu_ns": 21664,
+        "residual_cpu_ns": 839336,
+        "names": {
+          "tile_release_memory": {
+            "calls": 118,
+            "inclusive_cpu_ns": 21664,
+            "exclusive_cpu_ns": 21664
+          }
+        }
+      }
+    },
+    "boundary_exceptions": [
+      {
+        "stage": "Undo",
+        "event": {
+          "thread": 115710838,
+          "id": 25769803887,
+          "parent": 0,
+          "name": "tile_release_memory",
+          "owner": 5654236128,
+          "stage": 3,
+          "end_stage": 3,
+          "start_ns": 1301189500176000,
+          "end_ns": 1301189500176000,
+          "cpu_ns": 292,
+          "self_wall_ns": 0,
+          "self_cpu_ns": 292
+        }
+      }
+    ],
+    "projection_updates": 19
+  },
+  {
+    "index": 3,
+    "side": "legacy",
+    "stages": {
+      "Setup": {
+        "cpu_ns": 369358000,
+        "covered_cpu_ns": 46290,
+        "residual_cpu_ns": 369311710,
+        "names": {
+          "tile_fill_pixel_loop": {
+            "calls": 6,
+            "inclusive_cpu_ns": 46290,
+            "exclusive_cpu_ns": 46290
+          }
+        }
+      },
+      "Stroke": {
+        "cpu_ns": 22542000,
+        "covered_cpu_ns": 20442877,
+        "residual_cpu_ns": 2099123,
+        "names": {
+          "job_gate_wait": {
+            "calls": 956,
+            "inclusive_cpu_ns": 167481,
+            "exclusive_cpu_ns": 167481
+          },
+          "job_stroke": {
+            "calls": 937,
+            "inclusive_cpu_ns": 13721665,
+            "exclusive_cpu_ns": 7800022
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 14,
+            "inclusive_cpu_ns": 2541,
+            "exclusive_cpu_ns": 2541
+          },
+          "transaction_begin": {
+            "calls": 14,
+            "inclusive_cpu_ns": 13292,
+            "exclusive_cpu_ns": 13292
+          },
+          "pixel_operation_preflight": {
+            "calls": 46,
+            "inclusive_cpu_ns": 12540,
+            "exclusive_cpu_ns": 12540
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9874,
+            "exclusive_cpu_ns": 9874
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 262079,
+            "exclusive_cpu_ns": 262079
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 46,
+            "inclusive_cpu_ns": 503625,
+            "exclusive_cpu_ns": 494665
+          },
+          "mutation_adapter_prepare": {
+            "calls": 46,
+            "inclusive_cpu_ns": 58042,
+            "exclusive_cpu_ns": 58042
+          },
+          "cold_owner_wait": {
+            "calls": 208,
+            "inclusive_cpu_ns": 80970,
+            "exclusive_cpu_ns": 80970
+          },
+          "cold_claim_and_base": {
+            "calls": 208,
+            "inclusive_cpu_ns": 494507,
+            "exclusive_cpu_ns": 494507
+          },
+          "cold_storage_and_plan": {
+            "calls": 208,
+            "inclusive_cpu_ns": 99620,
+            "exclusive_cpu_ns": 99620
+          },
+          "cold_descriptor": {
+            "calls": 208,
+            "inclusive_cpu_ns": 89622,
+            "exclusive_cpu_ns": 89622
+          },
+          "cold_backing_reserve": {
+            "calls": 208,
+            "inclusive_cpu_ns": 334254,
+            "exclusive_cpu_ns": 334254
+          },
+          "provider_identity_setup": {
+            "calls": 208,
+            "inclusive_cpu_ns": 317760,
+            "exclusive_cpu_ns": 317760
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 116,
+            "inclusive_cpu_ns": 1118462,
+            "exclusive_cpu_ns": 1118462
+          },
+          "provider_initialize_payload": {
+            "calls": 116,
+            "inclusive_cpu_ns": 1192750,
+            "exclusive_cpu_ns": 74288
+          },
+          "provider_allocate": {
+            "calls": 208,
+            "inclusive_cpu_ns": 1841591,
+            "exclusive_cpu_ns": 211910
+          },
+          "write_provider_prepare": {
+            "calls": 208,
+            "inclusive_cpu_ns": 2043377,
+            "exclusive_cpu_ns": 201786
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 208,
+            "inclusive_cpu_ns": 1119032,
+            "exclusive_cpu_ns": 1119032
+          },
+          "cold_generation": {
+            "calls": 208,
+            "inclusive_cpu_ns": 4697677,
+            "exclusive_cpu_ns": 436295
+          },
+          "execution_prepare_writes": {
+            "calls": 46,
+            "inclusive_cpu_ns": 4280043,
+            "exclusive_cpu_ns": 154743
+          },
+          "mutation_adapter_prepared": {
+            "calls": 46,
+            "inclusive_cpu_ns": 4295831,
+            "exclusive_cpu_ns": 15788
+          },
+          "pixel_operation_body": {
+            "calls": 46,
+            "inclusive_cpu_ns": 2508958,
+            "exclusive_cpu_ns": 2508958
+          },
+          "pixel_operation_changed_export": {
+            "calls": 46,
+            "inclusive_cpu_ns": 10706,
+            "exclusive_cpu_ns": 10706
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 236,
+            "inclusive_cpu_ns": 125671,
+            "exclusive_cpu_ns": 125671
+          },
+          "mutation_seal_inputs": {
+            "calls": 177,
+            "inclusive_cpu_ns": 93668,
+            "exclusive_cpu_ns": 93668
+          },
+          "mutation_seal_private_publish": {
+            "calls": 59,
+            "inclusive_cpu_ns": 398371,
+            "exclusive_cpu_ns": 398371
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 163206,
+            "exclusive_cpu_ns": 163206
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 176247,
+            "exclusive_cpu_ns": 176247
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 23961,
+            "exclusive_cpu_ns": 23961
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 59,
+            "inclusive_cpu_ns": 15206,
+            "exclusive_cpu_ns": 15206
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 59,
+            "inclusive_cpu_ns": 27706,
+            "exclusive_cpu_ns": 27706
+          },
+          "mutation_seal_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 72625,
+            "exclusive_cpu_ns": 72625
+          },
+          "mutation_seal_cleanup": {
+            "calls": 59,
+            "inclusive_cpu_ns": 88208,
+            "exclusive_cpu_ns": 88208
+          },
+          "mutation_adapter_install": {
+            "calls": 59,
+            "inclusive_cpu_ns": 75247,
+            "exclusive_cpu_ns": 75247
+          },
+          "mutation_adapter_installed": {
+            "calls": 59,
+            "inclusive_cpu_ns": 9711,
+            "exclusive_cpu_ns": 9711
+          },
+          "pixel_operation_finish": {
+            "calls": 46,
+            "inclusive_cpu_ns": 1723333,
+            "exclusive_cpu_ns": 264039
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 46,
+            "inclusive_cpu_ns": 7461,
+            "exclusive_cpu_ns": 7461
+          },
+          "pixel_operation_cleanup": {
+            "calls": 46,
+            "inclusive_cpu_ns": 9498,
+            "exclusive_cpu_ns": 9498
+          },
+          "job_merge": {
+            "calls": 19,
+            "inclusive_cpu_ns": 6700124,
+            "exclusive_cpu_ns": 1803139
+          },
+          "tile_payload_memcpy": {
+            "calls": 92,
+            "inclusive_cpu_ns": 65455,
+            "exclusive_cpu_ns": 65455
+          },
+          "provider_copy_payload": {
+            "calls": 92,
+            "inclusive_cpu_ns": 119171,
+            "exclusive_cpu_ns": 53716
+          },
+          "mutation_presence_preflight": {
+            "calls": 26,
+            "inclusive_cpu_ns": 4837,
+            "exclusive_cpu_ns": 4837
+          },
+          "mutation_presence_prepare": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2290,
+            "exclusive_cpu_ns": 2290
+          },
+          "mutation_presence_prepared": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2289,
+            "exclusive_cpu_ns": 2289
+          },
+          "mutation_presence_resolve": {
+            "calls": 13,
+            "inclusive_cpu_ns": 7084,
+            "exclusive_cpu_ns": 7084
+          },
+          "mutation_presence_resolved": {
+            "calls": 13,
+            "inclusive_cpu_ns": 2208,
+            "exclusive_cpu_ns": 2208
+          },
+          "commit_owner_wait": {
+            "calls": 14,
+            "inclusive_cpu_ns": 2709,
+            "exclusive_cpu_ns": 2709
+          },
+          "commit_proof_validation": {
+            "calls": 14,
+            "inclusive_cpu_ns": 25666,
+            "exclusive_cpu_ns": 25666
+          },
+          "commit_provider_validation": {
+            "calls": 14,
+            "inclusive_cpu_ns": 50126,
+            "exclusive_cpu_ns": 50126
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 14,
+            "inclusive_cpu_ns": 25209,
+            "exclusive_cpu_ns": 25209
+          },
+          "commit_input_owner_wait": {
+            "calls": 14,
+            "inclusive_cpu_ns": 6082,
+            "exclusive_cpu_ns": 6082
+          },
+          "commit_default_removal_prepare": {
+            "calls": 14,
+            "inclusive_cpu_ns": 26624,
+            "exclusive_cpu_ns": 26624
+          },
+          "commit_transition_inputs": {
+            "calls": 14,
+            "inclusive_cpu_ns": 7958,
+            "exclusive_cpu_ns": 7958
+          },
+          "commit_transition_preflight": {
+            "calls": 14,
+            "inclusive_cpu_ns": 280958,
+            "exclusive_cpu_ns": 280958
+          },
+          "commit_epoch_prepare": {
+            "calls": 14,
+            "inclusive_cpu_ns": 79667,
+            "exclusive_cpu_ns": 79667
+          },
+          "commit_publish_owner_wait": {
+            "calls": 14,
+            "inclusive_cpu_ns": 2042,
+            "exclusive_cpu_ns": 2042
+          },
+          "commit_publication_revalidate": {
+            "calls": 14,
+            "inclusive_cpu_ns": 2208,
+            "exclusive_cpu_ns": 2208
+          },
+          "commit_completion": {
+            "calls": 14,
+            "inclusive_cpu_ns": 96835,
+            "exclusive_cpu_ns": 96835
+          },
+          "commit_root": {
+            "calls": 14,
+            "inclusive_cpu_ns": 2292,
+            "exclusive_cpu_ns": 2292
+          },
+          "commit_metadata_apply": {
+            "calls": 14,
+            "inclusive_cpu_ns": 71583,
+            "exclusive_cpu_ns": 71583
+          },
+          "commit_root_publication": {
+            "calls": 14,
+            "inclusive_cpu_ns": 2127,
+            "exclusive_cpu_ns": 2127
+          },
+          "commit_cleanup": {
+            "calls": 14,
+            "inclusive_cpu_ns": 128749,
+            "exclusive_cpu_ns": 128749
+          },
+          "commit_history_collect": {
+            "calls": 14,
+            "inclusive_cpu_ns": 2375,
+            "exclusive_cpu_ns": 2375
+          },
+          "commit_provider_retire": {
+            "calls": 14,
+            "inclusive_cpu_ns": 27499,
+            "exclusive_cpu_ns": 27499
+          },
+          "tile_release_memory": {
+            "calls": 96,
+            "inclusive_cpu_ns": 21088,
+            "exclusive_cpu_ns": 21088
+          }
+        }
+      },
+      "Undo": {
+        "cpu_ns": 640000,
+        "covered_cpu_ns": 443124,
+        "residual_cpu_ns": 196876,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 832,
+            "exclusive_cpu_ns": 832
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 121042,
+            "exclusive_cpu_ns": 52126
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 37750,
+            "exclusive_cpu_ns": 37750
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 30459,
+            "exclusive_cpu_ns": 30459
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 708,
+            "exclusive_cpu_ns": 708
+          },
+          "mutation_presence_preflight": {
+            "calls": 2,
+            "inclusive_cpu_ns": 375,
+            "exclusive_cpu_ns": 375
+          },
+          "mutation_presence_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_presence_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 792,
+            "exclusive_cpu_ns": 792
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 3792,
+            "exclusive_cpu_ns": 3792
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 708,
+            "exclusive_cpu_ns": 708
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1333,
+            "exclusive_cpu_ns": 1333
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10583,
+            "exclusive_cpu_ns": 10583
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5459,
+            "exclusive_cpu_ns": 5459
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6875,
+            "exclusive_cpu_ns": 6875
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1167,
+            "exclusive_cpu_ns": 1167
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2167,
+            "exclusive_cpu_ns": 2167
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4708,
+            "exclusive_cpu_ns": 4708
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 208,
+            "exclusive_cpu_ns": 208
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14625,
+            "exclusive_cpu_ns": 14625
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 10125,
+            "exclusive_cpu_ns": 10125
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 40917,
+            "exclusive_cpu_ns": 40917
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 3417,
+            "exclusive_cpu_ns": 3417
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 16917,
+            "exclusive_cpu_ns": 16917
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 18791,
+            "exclusive_cpu_ns": 18791
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 15709,
+            "exclusive_cpu_ns": 15709
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 19375,
+            "exclusive_cpu_ns": 19375
+          },
+          "mutation_presence_resolve": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2000,
+            "exclusive_cpu_ns": 2000
+          },
+          "mutation_presence_resolved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 18458,
+            "exclusive_cpu_ns": 18458
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 318416,
+            "exclusive_cpu_ns": 116790
+          },
+          "tile_release_memory": {
+            "calls": 16,
+            "inclusive_cpu_ns": 3666,
+            "exclusive_cpu_ns": 3666
+          }
+        }
+      },
+      "Redo": {
+        "cpu_ns": 1634000,
+        "covered_cpu_ns": 1442126,
+        "residual_cpu_ns": 191874,
+        "names": {
+          "job_gate_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 792,
+            "exclusive_cpu_ns": 792
+          },
+          "job_stroke": {
+            "calls": 3,
+            "inclusive_cpu_ns": 192418,
+            "exclusive_cpu_ns": 94542
+          },
+          "restore_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 58500,
+            "exclusive_cpu_ns": 58500
+          },
+          "restore_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "restore_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 38667,
+            "exclusive_cpu_ns": 38667
+          },
+          "pixel_operation_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 292,
+            "exclusive_cpu_ns": 292
+          },
+          "pixel_operation_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 250,
+            "exclusive_cpu_ns": 250
+          },
+          "pixel_operation_range_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 14916,
+            "exclusive_cpu_ns": 14916
+          },
+          "transaction_begin_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "transaction_begin": {
+            "calls": 1,
+            "inclusive_cpu_ns": 542,
+            "exclusive_cpu_ns": 542
+          },
+          "pixel_operation_range_reserved": {
+            "calls": 1,
+            "inclusive_cpu_ns": 17417,
+            "exclusive_cpu_ns": 16709
+          },
+          "mutation_adapter_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 7459,
+            "exclusive_cpu_ns": 7459
+          },
+          "cold_owner_wait": {
+            "calls": 56,
+            "inclusive_cpu_ns": 7418,
+            "exclusive_cpu_ns": 7418
+          },
+          "cold_claim_and_base": {
+            "calls": 56,
+            "inclusive_cpu_ns": 24040,
+            "exclusive_cpu_ns": 24040
+          },
+          "cold_storage_and_plan": {
+            "calls": 56,
+            "inclusive_cpu_ns": 13334,
+            "exclusive_cpu_ns": 13334
+          },
+          "cold_descriptor": {
+            "calls": 56,
+            "inclusive_cpu_ns": 14918,
+            "exclusive_cpu_ns": 14918
+          },
+          "cold_backing_reserve": {
+            "calls": 56,
+            "inclusive_cpu_ns": 31878,
+            "exclusive_cpu_ns": 31878
+          },
+          "provider_identity_setup": {
+            "calls": 56,
+            "inclusive_cpu_ns": 41707,
+            "exclusive_cpu_ns": 41707
+          },
+          "tile_fill_pixel_loop": {
+            "calls": 56,
+            "inclusive_cpu_ns": 435209,
+            "exclusive_cpu_ns": 435209
+          },
+          "provider_initialize_payload": {
+            "calls": 56,
+            "inclusive_cpu_ns": 456332,
+            "exclusive_cpu_ns": 21123
+          },
+          "provider_allocate": {
+            "calls": 56,
+            "inclusive_cpu_ns": 530791,
+            "exclusive_cpu_ns": 32752
+          },
+          "write_provider_prepare": {
+            "calls": 56,
+            "inclusive_cpu_ns": 544708,
+            "exclusive_cpu_ns": 13917
+          },
+          "cold_register_pin_validate_install": {
+            "calls": 56,
+            "inclusive_cpu_ns": 89875,
+            "exclusive_cpu_ns": 89875
+          },
+          "cold_generation": {
+            "calls": 56,
+            "inclusive_cpu_ns": 791385,
+            "exclusive_cpu_ns": 65214
+          },
+          "execution_prepare_writes": {
+            "calls": 1,
+            "inclusive_cpu_ns": 804541,
+            "exclusive_cpu_ns": 13156
+          },
+          "mutation_adapter_prepared": {
+            "calls": 1,
+            "inclusive_cpu_ns": 804791,
+            "exclusive_cpu_ns": 250
+          },
+          "pixel_operation_body": {
+            "calls": 1,
+            "inclusive_cpu_ns": 104709,
+            "exclusive_cpu_ns": 104709
+          },
+          "pixel_operation_changed_export": {
+            "calls": 1,
+            "inclusive_cpu_ns": 541,
+            "exclusive_cpu_ns": 541
+          },
+          "mutation_seal_owner_wait": {
+            "calls": 4,
+            "inclusive_cpu_ns": 917,
+            "exclusive_cpu_ns": 917
+          },
+          "mutation_seal_inputs": {
+            "calls": 3,
+            "inclusive_cpu_ns": 5625,
+            "exclusive_cpu_ns": 5625
+          },
+          "mutation_seal_private_publish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 48667,
+            "exclusive_cpu_ns": 48667
+          },
+          "mutation_seal_proof_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 15000,
+            "exclusive_cpu_ns": 15000
+          },
+          "mutation_seal_storage_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 11959,
+            "exclusive_cpu_ns": 11959
+          },
+          "mutation_seal_metadata_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "mutation_seal_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "mutation_seal_surface_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1083,
+            "exclusive_cpu_ns": 1083
+          },
+          "mutation_seal_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 6166,
+            "exclusive_cpu_ns": 6166
+          },
+          "mutation_seal_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 2500,
+            "exclusive_cpu_ns": 2500
+          },
+          "commit_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "commit_proof_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5834,
+            "exclusive_cpu_ns": 5834
+          },
+          "commit_provider_validation": {
+            "calls": 1,
+            "inclusive_cpu_ns": 12875,
+            "exclusive_cpu_ns": 12875
+          },
+          "commit_epoch_delta_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 4583,
+            "exclusive_cpu_ns": 4583
+          },
+          "commit_input_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "commit_default_removal_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 875,
+            "exclusive_cpu_ns": 875
+          },
+          "commit_transition_inputs": {
+            "calls": 1,
+            "inclusive_cpu_ns": 917,
+            "exclusive_cpu_ns": 917
+          },
+          "commit_transition_preflight": {
+            "calls": 1,
+            "inclusive_cpu_ns": 39458,
+            "exclusive_cpu_ns": 39458
+          },
+          "commit_epoch_prepare": {
+            "calls": 1,
+            "inclusive_cpu_ns": 9875,
+            "exclusive_cpu_ns": 9875
+          },
+          "commit_publish_owner_wait": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_publication_revalidate": {
+            "calls": 1,
+            "inclusive_cpu_ns": 209,
+            "exclusive_cpu_ns": 209
+          },
+          "commit_completion": {
+            "calls": 1,
+            "inclusive_cpu_ns": 15541,
+            "exclusive_cpu_ns": 15541
+          },
+          "commit_root": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_metadata_apply": {
+            "calls": 1,
+            "inclusive_cpu_ns": 12083,
+            "exclusive_cpu_ns": 12083
+          },
+          "commit_root_publication": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 36458,
+            "exclusive_cpu_ns": 36458
+          },
+          "commit_history_collect": {
+            "calls": 1,
+            "inclusive_cpu_ns": 125,
+            "exclusive_cpu_ns": 125
+          },
+          "commit_provider_retire": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1333,
+            "exclusive_cpu_ns": 1333
+          },
+          "mutation_adapter_install": {
+            "calls": 1,
+            "inclusive_cpu_ns": 5958,
+            "exclusive_cpu_ns": 5958
+          },
+          "mutation_adapter_installed": {
+            "calls": 1,
+            "inclusive_cpu_ns": 166,
+            "exclusive_cpu_ns": 166
+          },
+          "pixel_operation_finish": {
+            "calls": 1,
+            "inclusive_cpu_ns": 249042,
+            "exclusive_cpu_ns": 9836
+          },
+          "pixel_operation_changed_deliver": {
+            "calls": 1,
+            "inclusive_cpu_ns": 167,
+            "exclusive_cpu_ns": 167
+          },
+          "pixel_operation_cleanup": {
+            "calls": 1,
+            "inclusive_cpu_ns": 292,
+            "exclusive_cpu_ns": 292
+          },
+          "job_merge": {
+            "calls": 1,
+            "inclusive_cpu_ns": 1249708,
+            "exclusive_cpu_ns": 49624
+          }
+        }
+      },
+      "Teardown": {
+        "cpu_ns": 840000,
+        "covered_cpu_ns": 23334,
+        "residual_cpu_ns": 816666,
+        "names": {
+          "tile_release_memory": {
+            "calls": 118,
+            "inclusive_cpu_ns": 23334,
+            "exclusive_cpu_ns": 23334
+          }
+        }
+      }
+    },
+    "boundary_exceptions": [],
+    "projection_updates": 19
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "captured_at_utc": "2026-09-29T05:41:01Z",
+  "head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "origin_master": "cdf0a1c4a37ca3a928c37d44465e7e52b4b9bae9",
+  "scope": "Test-only BC10 joint direct persistent Freehand fixture for multi-update, undo/redo, recursive drain, and structured failure endpoints",
+  "production_changes": false,
+  "production_intrusion": {
+    "files": 0,
+    "insertions": 0,
+    "deletions": 0,
+    "new_functions": 0,
+    "new_fields": 0,
+    "new_includes": 0,
+    "new_friends": 0,
+    "new_locks": 0,
+    "new_tls": 0
+  },
+  "source_files": {
+    "libs/ui/tests/freehand_stroke_test.cpp": "cdee5a11c5e72a41cbd91d3bae17bf105cbaf249882051d14711852c92bfb100",
+    "libs/ui/tests/freehand_stroke_test.h": "108e1643d8a28fdb1f5b0d882e381a6d214173044b098eebb2e11627749b137d"
+  },
+  "binaries": {
+    "FreehandStrokeTest": "fba585be93d0ddebf2a3fdef8c801151c0cc6d5e33e43921f2a1b9ff083e8318",
+    "libkritaimage": "4db51bc00cc1541b66481a044f63666599d904ecb561886b35a392fe6c002e51",
+    "libkritaui": "74244ba4a7febcd1dc0a6e1387560324016c795f72ec6c502db9758c49a6b9e8"
+  },
+  "logs": {
+    "freehand-arm64.log": "59a257788192e035d27274bcdbbfa50a49a861a70c725c05c45b4b7f263fdc61",
+    "freehand-x86_64.log": "7000d8421d841292e2eaccf7f0bc77d5710b886e7e20a067b70572e7122183c5"
+  },
+  "tests": [
+    {
+      "target": "FreehandStrokeTest",
+      "cases": [
+        "testPersistentAutoBrushStroke",
+        "testPersistentAutoBrushStrokeCancelled",
+        "testPersistentAutoBrushStrokeFailure"
+      ],
+      "arm64": {"passed": 8, "failed": 0, "skipped": 0},
+      "x86_64": {"passed": 8, "failed": 0, "skipped": 0}
+    }
+  ],
+  "assertions": {
+    "actual_brush_writes": 2,
+    "forced_updates": 2,
+    "visible_pixel_checks": 2,
+    "recursive_successor_steps": 3,
+    "finish_observed_drained_producer": true,
+    "single_strategy_undo_clears_both_writes": true,
+    "single_strategy_redo_restores_exact_image": true,
+    "direct_incremental_eligibility_asserted": true,
+    "structured_failure_points": ["admission", "pixel-signal", "checkpoint", "finish"],
+    "each_failure_has_single_cancel": true,
+    "each_failure_has_no_successful_undo": true,
+    "each_failure_releases_memento": true,
+    "raw_owner_identity_getter_added": false,
+    "pagestore_internal_include_added": false
+  }
+}

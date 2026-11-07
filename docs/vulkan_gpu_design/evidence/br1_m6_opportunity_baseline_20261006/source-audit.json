@@ -1,0 +1,102 @@
+{
+  "product": "f0c40a5d195f1c20a0f915faaef18b1f3ee5b575",
+  "production_changes": 0,
+  "source_hashes": {
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "c440d7b938a6e3a5757fa1a814eefe113b8b5f8dc4de094d44cd45ee2db4bfe8",
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp": "7fb28566b57f503a5362242f4dcfa72c9ee3ff6174f44ff76af1bbf17cc57515",
+    "libs/image/pagestore/KisPageStateMachine.cpp": "a677e9baec027808324a051ae3480c9b61f31f96a47f7772818e7ce80e8f55f2",
+    "libs/image/pagestore/KisCpuResidentBinding.cpp": "165bd2b44ba853d6d9a1ae4ba2b2f4a7d99f17fa2f47f254e6828794e907d1b7",
+    "libs/image/pagestore/KisPageStore.cpp": "b6aa0d668e37637331a66d4a5dcfbafc7ff3831d51fac2fc250c1fd2268395ea",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "1e4b1634033a33d0ee1c7dcd2db309533ba8aafc37824e7f18bd02c0758510dd",
+    "libs/vulkanbackend/KisVulkanPageReplicaProvider.cpp": "02740f726b2e36a5d22330bdf109b5f158147fedda911db95387b5797cbdfd26"
+  },
+  "commands": [
+    {
+      "argv": [
+        "rg",
+        "-n",
+        "adoptInitialPage\\(|readyAlternates",
+        "libs",
+        "-g",
+        "*.cpp",
+        "-g",
+        "*.h",
+        "-g",
+        "!**/tests/**"
+      ],
+      "exit_code": 0,
+      "stdout": "libs/image/pagestore/KisPageStore.cpp:3442:bool KisPageStore::adoptInitialPage(const KisPageVersion &version,\nlibs/image/pagestore/KisPageStore.cpp:3447:    return adoptInitialPage(version, descriptor, authority, QVector<KisReplicaHandle>{}, error);\nlibs/image/pagestore/KisPageStore.cpp:3450:bool KisPageStore::adoptInitialPage(const KisPageVersion &version,\nlibs/image/pagestore/KisPageStore.cpp:3453:                                    const QVector<KisReplicaHandle> &readyAlternates,\nlibs/image/pagestore/KisPageStore.cpp:3473:    replicas.reserve(size_t(readyAlternates.size()) + 1);\nlibs/image/pagestore/KisPageStore.cpp:3474:    providers.reserve(size_t(readyAlternates.size()) + 1);\nlibs/image/pagestore/KisPageStore.cpp:3476:    for (const auto &replica : readyAlternates) {\nlibs/image/pagestore/KisPageStore.cpp:3698:        adopted = adoptInitialPage(version, descriptor, allocation.replica, &failure);\nlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:871:            d->store->adoptInitialPage(version, descriptor, authority,\nlibs/image/pagestore/KisPageStore.h:457:    bool adoptInitialPage(const KisPageVersion &version,\nlibs/image/pagestore/KisPageStore.h:465:    bool adoptInitialPage(const KisPageVersion &version,\nlibs/image/pagestore/KisPageStore.h:468:                          const QVector<KisReplicaHandle> &readyAlternates,\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "rg",
+        "-n",
+        "not implemented|not yet|unavailable|BR3",
+        "libs/vulkanbackend/KisVulkanPageReplicaProvider.cpp"
+      ],
+      "exit_code": 0,
+      "stdout": "110:        QStringLiteral(\"Native Vulkan page allocation/materialization is not implemented before BR3\"));\n135:        QStringLiteral(\"Native Vulkan write allocation is not implemented before BR3\"));\n157:        QStringLiteral(\"Native Vulkan replica transfer is not implemented before BR3\"));\n172:    // BR3 resolves an operation-scoped binding only after PageStore has\n183:    // BR3 forwards GPU last use to the shared retirement path.\n216:    // BR3 connects replica allocations to the shared resource-retirement queue\n220:        QStringLiteral(\"Native Vulkan replica retirement is not implemented before BR3\"));\n",
+      "stderr": ""
+    }
+  ],
+  "cause_scope": "Source order establishes avoidable preparation candidates, not an exclusive timing attribution or a guaranteed removable duration.",
+  "findings": [
+    {
+      "endpoint": "KisPageMetadataCoordinator::queryMutationBase",
+      "fact": "Discovers an independent Valid CpuRam exact alternate without first excluding the old authority pin/readLeases/pendingLastUses facts.",
+      "reject_endpoint": "KisPageStateMachine::apply AcquireRecoverableWrite rejects those authority facts during prepared working-state construction.",
+      "next_change": "Consider rejecting already ineligible candidates using existing shard-owned facts in this query, with no new cached ownership or bypass of final install revision checks."
+    },
+    {
+      "endpoint": "KisCpuResidentBinding::prepareHandoff / tryClaimHandoff",
+      "fact": "prepareHandoff holds the existing mutex and checks identity/layout/generation, but readers/write state are first rejected by tryClaimHandoff.",
+      "caller_order": "prepareWritePlanLocked pins independent before, prepares physical/accounting/metadata/descriptor storage, then attempts the physical claim.",
+      "next_change": "Consider an advisory early rejection under the existing binding mutex. Keep the final nonblocking physical claim and exact identity/provider epoch/revision revalidation."
+    },
+    {
+      "endpoint": "KisPageStore::adoptInitialPage and tiles3 backend import",
+      "fact": "Audited production import/clone callers use the single-authority overload; no production caller passing a nonempty readyAlternates collection was found by this census.",
+      "limit": "Not a proof about all future/external producers. Real stroke hit probability and total policy value remain unmeasured."
+    }
+  ],
+  "implementation_matrix": [
+    {
+      "id": "M1",
+      "state": "planned",
+      "owner": "existing metadata shard/queryMutationBase",
+      "result": "Early exclusion of known authority blockers without materializing a recoverable candidate; single and eligible paths retain their semantics."
+    },
+    {
+      "id": "M2",
+      "state": "planned",
+      "owner": "existing CPU binding/prepareHandoff",
+      "result": "Early exclusion of known native readers or non-Idle writer; final claim still rechecks races."
+    },
+    {
+      "id": "M3",
+      "state": "audit_then_change_only_if_needed",
+      "owner": "prepareWritePlanLocked and existing rejection cleanup",
+      "result": "Both early failures take original Fresh; keep before pin, accounting/metadata cleanup, lock order, exact install and all fallible preparation before claim."
+    },
+    {
+      "id": "V1",
+      "state": "planned",
+      "owner": "existing productionHandoff tests",
+      "result": "Real blockers and released blockers, late arriving readers, both concurrent orders, cancellation, epoch/ABA and zero-copy/allocator/close controls."
+    },
+    {
+      "id": "V2",
+      "state": "planned_separate_protocol",
+      "owner": "evidence fixture and calibration",
+      "result": "Pre-register more stable fixed-work measurement and calibration coverage, retain all current failures, compare parent/child with original hit/miss/protected semantics; no optional extension of this batch."
+    }
+  ],
+  "constraints": [
+    "No safety relaxation or waiting to force a hit",
+    "No speculative alternate creation",
+    "No second owner/exclusive cache",
+    "No provider/container rewrite from malloc counts",
+    "The entire observed on/off excess is not asserted to be removable"
+  ]
+}

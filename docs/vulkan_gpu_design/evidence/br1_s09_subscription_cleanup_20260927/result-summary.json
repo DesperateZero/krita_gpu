@@ -1,0 +1,154 @@
+{
+  "qualification": "S09 last-subscription cleanup in original completion registry and actual CPU close consumer; not full notification hard budget, S09/S10/M6/M7/M8 or stroke performance",
+  "architectures": {
+    "arm64": {
+      "targets": 17,
+      "passed": 2857,
+      "failed": 0,
+      "skipped": 0,
+      "probes": {
+        "budget-01": {
+          "intervals": 96,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "waiters_per_interval": 16,
+          "reservation_release": 32,
+          "partial_commit": 32,
+          "live_release": 32
+        },
+        "root-01": {
+          "intervals": 72,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "commit_intervals": 24,
+          "restore_intervals": 24,
+          "cursor_intervals": 24
+        },
+        "legacy-01": {
+          "intervals": 28,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true
+        },
+        "warm-01": {
+          "intervals": 96,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "outer_reads": 98304,
+          "including_nested_read_locks": 196608
+        },
+        "joint-01": {
+          "intervals": 31080,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "by_conflict": {
+            "0": 10360,
+            "1": 10360,
+            "2": 10360
+          }
+        }
+      }
+    },
+    "x86_64": {
+      "targets": 17,
+      "passed": 2857,
+      "failed": 0,
+      "skipped": 0,
+      "probes": {
+        "budget-01": {
+          "intervals": 96,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "waiters_per_interval": 16,
+          "reservation_release": 32,
+          "partial_commit": 32,
+          "live_release": 32
+        },
+        "root-01": {
+          "intervals": 72,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "commit_intervals": 24,
+          "restore_intervals": 24,
+          "cursor_intervals": 24
+        },
+        "legacy-01": {
+          "intervals": 28,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true
+        },
+        "warm-01": {
+          "intervals": 96,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "outer_reads": 98304,
+          "including_nested_read_locks": 196608
+        },
+        "joint-01": {
+          "intervals": 31080,
+          "allocations": 0,
+          "allocated_bytes": 0,
+          "frees": 0,
+          "positive_control_allocations": 4,
+          "same_image_as_matrix": true,
+          "by_conflict": {
+            "0": 10360,
+            "1": 10360,
+            "2": 10360
+          }
+        }
+      }
+    }
+  },
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "c560df68149c4adce83e27571a9569ef1c58447e278a9018f3708fbcb4c7309c",
+  "image_sha256": "ef5c496eeeba8af375932144855888115f8378f192b2f92389d9cfbdfd8e8a4d",
+  "ui_sha256": "f20fe2f83feab2784405119e7a2650d5c2fc2bc9c16765905c182f596e5d33bc",
+  "ratchet_unchanged": true,
+  "indexed_apis": 1619,
+  "reverse_call_edges": 15914,
+  "callback_registrations": 15,
+  "ownership_facts": 24,
+  "self_tests": 6,
+  "before_counterexample": {
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "failure": "last cancellation left one readiness storage record for a still-Pending ticket",
+    "expected_records": 0,
+    "actual_records": 1
+  },
+  "remaining": [
+    "upstream last-use acknowledge",
+    "actual notification metadata hard byte budget and cold allocation-failure qualification",
+    "shared global quota, foreground continuation and full pressure/exit",
+    "full M6/M7/M8 and BR1-PERF"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "product_commit": "84b5d5aad9f4c0c890ea2fc6dd5fb92548111524",
+  "product_parent": "5086aa6ef92e81575eca58e6862d411a593cfb7c",
+  "product_paths": [
+    "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "libs/image/pagestore/KisPageOwnerLedger.cpp",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp"
+  ],
+  "production_insertions": 139,
+  "production_deletions": 133,
+  "test_insertions": 80,
+  "test_deletions": 0,
+  "numstat": [
+    "6\t6\tbuild-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "6736\t6031\tbuild-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "139\t133\tlibs/image/pagestore/KisPageOwnerLedger.cpp",
+    "80\t0\tlibs/image/tests/KisPageStoreReferenceTest.cpp"
+  ],
+  "patch_sha256": "0bd8321fa5666b2d82c9b4bedb396429b9cca02d38ebe337c26450c1f9b14605",
+  "qualification": "Ownership/safety and actual scoped statistical outcomes only; complete CP3/M6/M7/M8 and BR1-PERF unqualified",
+  "scopes": {
+    "fixed_m5_fresh": "K1 both pass; K16 both fail",
+    "fixed_m5_history": "Four buckets and scoped family pass",
+    "current_handoff": "All four thresholds fail"
+  }
+}

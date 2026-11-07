@@ -1,0 +1,372 @@
+{
+  "scope": "Current BR1 producer -> Ledger -> metadata -> read/capture/history -> retirement/close, plus actual publication/adapter callers. Archive excluded.",
+  "api_count": 1941,
+  "call_edges": 21625,
+  "callbacks": 20,
+  "zero_incoming_non_special_candidates": [
+    {
+      "name": "Growth::hasStorage",
+      "definition": {
+        "column": 14,
+        "line": 163,
+        "path": "libs/image/pagestore/KisMutationStorage_p.h"
+      },
+      "decision": "retain",
+      "reason": "Concrete template/ADL consumer exists in current source; graph zero-incoming alone is not a deletion proof."
+    },
+    {
+      "name": "KisAccelerationCapabilities::isValid",
+      "definition": {
+        "column": 10,
+        "line": 88,
+        "path": "libs/image/pagestore/KisDocumentGpuSession.h"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisAccelerationCapabilities::supportsFormat",
+      "definition": {
+        "column": 10,
+        "line": 105,
+        "path": "libs/image/pagestore/KisDocumentGpuSession.h"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisBackendServiceRegistry::acceptValidatedService",
+      "definition": {
+        "column": 49,
+        "line": 33,
+        "path": "libs/image/pagestore/KisBackendServiceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisBackendServiceRegistry::isCurrent",
+      "definition": {
+        "column": 33,
+        "line": 78,
+        "path": "libs/image/pagestore/KisBackendServiceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisBackendServiceRegistry::revocationReason",
+      "definition": {
+        "column": 36,
+        "line": 112,
+        "path": "libs/image/pagestore/KisBackendServiceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisBackendServiceRegistry::revokeService",
+      "definition": {
+        "column": 33,
+        "line": 92,
+        "path": "libs/image/pagestore/KisBackendServiceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisCompletionTicket::isOrderedWith",
+      "definition": {
+        "column": 10,
+        "line": 726,
+        "path": "libs/image/pagestore/KisPageStoreTypes.h"
+      },
+      "decision": "retain",
+      "reason": "Actual VulkanCommandArena/ResourceRetirementQueue consumers outside the BR1 graph roots; Vulkan tests also use it."
+    },
+    {
+      "name": "KisCoverageCertificate::isValid",
+      "definition": {
+        "column": 10,
+        "line": 59,
+        "path": "libs/image/pagestore/KisDerivedSurfaceCache.h"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisCpuResidentBinding::matchesHandle",
+      "definition": {
+        "column": 29,
+        "line": 18,
+        "path": "libs/image/pagestore/KisCpuResidentBinding.cpp"
+      },
+      "decision": "retain",
+      "reason": "Concrete template/ADL consumer exists in current source; graph zero-incoming alone is not a deletion proof."
+    },
+    {
+      "name": "KisDerivedSurfaceCache::coverageFor",
+      "definition": {
+        "column": 63,
+        "line": 36,
+        "path": "libs/image/pagestore/KisDerivedSurfaceCache.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisDerivedSurfaceCache::invalidateEvaluationEpoch",
+      "definition": {
+        "column": 30,
+        "line": 44,
+        "path": "libs/image/pagestore/KisDerivedSurfaceCache.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisDerivedSurfaceCacheKey::isValid",
+      "definition": {
+        "column": 10,
+        "line": 30,
+        "path": "libs/image/pagestore/KisDerivedSurfaceCache.h"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisPageStateSnapshot::publishedVersion",
+      "definition": {
+        "column": 40,
+        "line": 160,
+        "path": "libs/image/pagestore/KisPageStateMachine.h"
+      },
+      "decision": "retain",
+      "reason": "Pure value/capability accessor with no replaced recovery phase or lifecycle owner; no obsolete-protocol deletion premise established. Broad unused-accessor API pruning is outside this cleanup."
+    },
+    {
+      "name": "KisResidencyController::consumeSemanticEvents",
+      "definition": {
+        "column": 30,
+        "line": 12,
+        "path": "libs/image/pagestore/KisResidencyController.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisResidencyController::plan",
+      "definition": {
+        "column": 56,
+        "line": 18,
+        "path": "libs/image/pagestore/KisResidencyController.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisSurfaceCodecRegistry::codecFor",
+      "definition": {
+        "column": 64,
+        "line": 45,
+        "path": "libs/image/pagestore/KisSurfaceCodecRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisSurfaceCodecRegistry::registerCodec",
+      "definition": {
+        "column": 31,
+        "line": 29,
+        "path": "libs/image/pagestore/KisSurfaceCodecRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisSurfaceRegistry::contains",
+      "definition": {
+        "column": 26,
+        "line": 67,
+        "path": "libs/image/pagestore/KisSurfaceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisSurfaceRegistry::descriptor",
+      "definition": {
+        "column": 57,
+        "line": 53,
+        "path": "libs/image/pagestore/KisSurfaceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisSurfaceRegistry::registerSurface",
+      "definition": {
+        "column": 34,
+        "line": 28,
+        "path": "libs/image/pagestore/KisSurfaceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisSurfaceRegistry::unregisterSurface",
+      "definition": {
+        "column": 26,
+        "line": 41,
+        "path": "libs/image/pagestore/KisSurfaceRegistry.cpp"
+      },
+      "decision": "retain",
+      "reason": "Current Foundation interface or fail-closed BR2/BR4 skeleton, not a superseded BR1 protocol; removing it would change the project foundation scope (40/41 and current source)."
+    },
+    {
+      "name": "KisWriteLease::layout",
+      "definition": {
+        "column": 22,
+        "line": 912,
+        "path": "libs/image/pagestore/KisPageStoreTypes.h"
+      },
+      "decision": "retain",
+      "reason": "Pure value/capability accessor with no replaced recovery phase or lifecycle owner; no obsolete-protocol deletion premise established. Broad unused-accessor API pruning is outside this cleanup."
+    },
+    {
+      "name": "Slot::value",
+      "definition": {
+        "column": 12,
+        "line": 98,
+        "path": "libs/image/pagestore/KisPageMetadataArena_p.h"
+      },
+      "decision": "retain",
+      "reason": "Concrete template/ADL consumer exists in current source; graph zero-incoming alone is not a deletion proof."
+    },
+    {
+      "name": "Slot::value",
+      "definition": {
+        "column": 18,
+        "line": 103,
+        "path": "libs/image/pagestore/KisPageMetadataArena_p.h"
+      },
+      "decision": "retain",
+      "reason": "Concrete template/ADL consumer exists in current source; graph zero-incoming alone is not a deletion proof."
+    },
+    {
+      "name": "get",
+      "definition": {
+        "column": 14,
+        "line": 442,
+        "path": "libs/image/pagestore/KisPageMetadataArena_p.h"
+      },
+      "decision": "retain",
+      "reason": "Concrete template/ADL consumer exists in current source; graph zero-incoming alone is not a deletion proof."
+    },
+    {
+      "name": "intrusive_ptr_add_ref",
+      "definition": {
+        "column": 13,
+        "line": 55,
+        "path": "libs/image/pagestore/KisMutationStorage_p.h"
+      },
+      "decision": "retain",
+      "reason": "Concrete template/ADL consumer exists in current source; graph zero-incoming alone is not a deletion proof."
+    },
+    {
+      "name": "intrusive_ptr_release",
+      "definition": {
+        "column": 13,
+        "line": 56,
+        "path": "libs/image/pagestore/KisMutationStorage_p.h"
+      },
+      "decision": "retain",
+      "reason": "Concrete template/ADL consumer exists in current source; graph zero-incoming alone is not a deletion proof."
+    },
+    {
+      "name": "shutdownReclamation",
+      "definition": {
+        "column": 6,
+        "line": 353,
+        "path": "libs/image/pagestore/KisPageStoreReclamation.cpp"
+      },
+      "decision": "retain",
+      "reason": "qAddPostRoutine/qRemovePostRoutine callback in KisPageStoreReclamation.cpp; retains process shutdown responsibility."
+    }
+  ],
+  "remaining_protocols": [
+    {
+      "protocol": "read/captured release stage facts",
+      "consumers": [
+        "KisPageReadCoordinator::finishReleasedReadLocked",
+        "finishHistoryReadLocked",
+        "finishCapturedReleaseLocked",
+        "retryCancelledRequestsLocked",
+        "retryReleasedReadsLocked"
+      ],
+      "reason": "Provider access release, metadata/last-use protection removal, epoch release and history-key acceptance are distinct irreversible steps. Metadata/key preparation still may refuse; original nodes remember the last accepted step.",
+      "delete_when": "Original release and history notification acceptance become guaranteed at preparation, across release/ack/cancel/close and late callbacks."
+    },
+    {
+      "protocol": "retirement Pending/subscription/Delay/Debt stages",
+      "consumers": [
+        "KisPageRetirementQueue::retireRecord",
+        "prepareWait",
+        "enqueuePendingLocked",
+        "cancelCloseAndSchedule"
+      ],
+      "reason": "Provider pin or last-use may refuse retire; Pending completion is real; subscription allocation can refuse under hard capacity; owned/orphan debt capacity may be unavailable. Readiness incarnation/rechecked bit and original result preserve progress without replay.",
+      "delete_when": "Relevant physical readiness or completion/subscription admission guarantees replace the actual refusal source; no such new guarantee exists now."
+    },
+    {
+      "protocol": "generic metadata effects batch",
+      "consumers": [
+        "KisPageStore::Private::retireEffectsLocked",
+        "KisPageMutationSession::Private::cancel",
+        "KisPageMutationSession::sealImpl",
+        "KisPagePublicationCoordinator::commitLocked",
+        "abortLocked"
+      ],
+      "reason": "Cancel/abort can detach several real replicas and publication produces real effects. Batch and foreground scheduling remain live. Obsolete missing-Debt/missing-record fallback has been deleted and shared acceptance consumes the original record.",
+      "delete_when": "Every actual effect-producing caller migrates to an equivalent acceptance/scheduling contract; deleting the batch now would remove existing responsibility."
+    },
+    {
+      "protocol": "public bool completion/generic Pending binding",
+      "consumers": [
+        "KisCompletionRegistry::complete",
+        "KisPageOwnerLedger::bindProviderOperation",
+        "KisPageStoreReferenceTest::ownerLedgerSeparatesDetachedRetirement"
+      ],
+      "reason": "Invalid, foreign and repeated public tickets are legal rejection inputs; generic explicit Pending operations coexist with retirement and still have allocation/identity rejection. Producer prepared terminal policy and retirement result-time fallback were separately removed.",
+      "delete_when": "Explicit external input/Pending API and its actual consumers are replaced; internal preparation does not provide that guarantee."
+    },
+    {
+      "protocol": "provider/proof and remaining Qt preparation failures",
+      "consumers": [
+        "KisPageOwnerLedger::registerProvider",
+        "sealPreparedPage",
+        "validatePreparedPage",
+        "KisPageMetadataCoordinator::applyProjectedSequence",
+        "KisTiledDataManagerPageStoreBackend"
+      ],
+      "reason": "Provider/pending registry, snapshot/route cut, sealedProofs and generic metadata/adapter Qt capacity are not fully prepaid. Identity/footprint, ticket, physical pin, source, actual budget/storage and transition refusals remain real.",
+      "delete_when": "CP1 capacity and admission/seal/revoke contracts are implemented and validated with actual callers; then propagate guarantees and delete superseded recovery in that same package."
+    },
+    {
+      "protocol": "legacy/raw/Failed and original job cancellation",
+      "consumers": [
+        "KisTiledDataManagerPageStoreBackend::runCpuMutationOperation",
+        "captureIteratorReadScope",
+        "KisPageMutationSession::Private",
+        "kis_tiled_data_manager"
+      ],
+      "reason": "Unmigrated source/iterator/complex modes and current scheduler destroy returned jobs. Legacy raw restoration and Failed/cancel still protect actual consumers; CP5 ownership transfer/CP6–CP7 mode migration has not occurred.",
+      "delete_when": "Real ownership transfer, typed result consumer, read/adapter/undo and supported-mode tests close together; no speculative continuation API."
+    }
+  ],
+  "no_unresolved_deletable_superseded_protocol_in_audited_scope": true,
+  "full_cp1_complete": false,
+  "formal_m6_m7_m8_qualified": 0,
+  "default_enabled": false
+}

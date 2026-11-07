@@ -1,0 +1,23 @@
+{
+  "round": "final-03-manager-x86_64",
+  "provenance": "Actual runner stdout observed before the ENOSPC artifact-writing failure; retained from the conversation tool result, not inferred from Qt totals.",
+  "runner_result": {
+    "pid": 94629,
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 122.75644691602793,
+    "totals": [
+      "Totals: 1311 passed, 0 failed, 0 skipped, 0 blacklisted, 111779ms"
+    ],
+    "failures": [],
+    "selected_image_loaded": true,
+    "inputs_verified": true
+  },
+  "artifact_writer": {
+    "exit_code": 1,
+    "errno": 28,
+    "failed_file": "final-03-manager-x86_64/identity.json",
+    "product_exit_and_input_verification_preceded_failure": true
+  }
+}

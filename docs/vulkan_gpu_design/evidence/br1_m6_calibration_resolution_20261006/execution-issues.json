@@ -1,0 +1,20 @@
+{
+  "scope": "Pre-sampling evidence fixture compilation only; production unchanged",
+  "initial_build_failures": [
+    {
+      "arch": "arm64",
+      "exit_code": 1,
+      "reason": "QoS query was called with2 arguments; actual SDK declaration requires3",
+      "console": "Recorded in tool history; initial source and exact commands retained in probe-arm64"
+    },
+    {
+      "arch": "x86_64",
+      "exit_code": 1,
+      "reason": "Same incorrect QoS query signature",
+      "console": "build-x86_64-initial-failure.log retains truncated terminal output; exact commands retained in probe-x86_64"
+    }
+  ],
+  "repair": "Read actual MacOSX26.2 SDK pthread/qos.h; use output qos_class_t parameter and checked return code; separate probe-01 output directories",
+  "invalid_performance_samples": 0,
+  "old_performance_samples_replaced": false
+}

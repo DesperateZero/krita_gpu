@@ -1,0 +1,13 @@
+Intermediate assertion-edit failure summary
+Date: 2026-10-04
+Command: KisPageStoreCpuMutationTest -nocrashhandler (normal arm64 full target)
+Exit status: 3
+Totals: 1384 passed, 3 failed, 0 skipped, 0 blacklisted, 10423ms
+
+Observed failures:
+- lastUseDefersBackgroundHistory: an unrelated existing expected value was accidentally changed from 16384 to 32768 (reported at line 2117; actual 32768, expected 16384 in the edited source state).
+- rejectedAllocationRetirementIsNotLost, terminal data row: an unrelated existing expected value was accidentally changed from 32768 to 16384 (reported at line 4167; actual 16384, expected 32768 in the edited source state).
+- rejectedAllocationRetirementIsNotLost, pending-operation data row: the same accidental edit produced the second data-row failure (reported at line 4167; actual 16384, expected 32768 in the edited source state).
+
+Disposition:
+The two unrelated assertion edits were restored. No production change was made in response. The final source was rebuilt and the complete normal arm64, normal x86_64, and TSAN arm64 targets passed 1387/0/0. This file is a faithful summary recovered from the captured command output; the overwritten raw intermediate log is unavailable and this summary is not counted as a passing result.

@@ -1,0 +1,68 @@
+{
+  "product": "caaafcf58d21f5d5470dc28fa80ef146fbdb59f2",
+  "parent": "a7f0d7c537ddfbed4809136e3530ada00fd4d406",
+  "scope": [
+    "KisPageStore::adoptInitialPageBytes provider request and write-access allocation failure",
+    "KisPageStore::archiveRead archive storage allocation failure"
+  ],
+  "builds": [
+    {
+      "directory": "krita/_build-br0-cpu",
+      "architecture": "arm64;x86_64",
+      "targets": ["KisPageStoreCpuMutationTest", "KisPageStoreReferenceTest"],
+      "exit_code": 0
+    },
+    {
+      "directory": "krita/_build-br1-tsan",
+      "architecture": "arm64",
+      "targets": ["KisPageStoreCpuMutationTest", "KisPageStoreReferenceTest"],
+      "exit_code": 0
+    }
+  ],
+  "runs": [
+    {
+      "file": "cp1-caller-cpu-arm64.txt",
+      "sha256": "bb6535fe96cd98aa0b1ead268d6515901eacf2dd3467a158b7c7ce22fd9e0995",
+      "totals": {"passed": 1392, "failed": 0, "skipped": 0, "blacklisted": 0, "milliseconds": 9377},
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "cp1-caller-cpu-x86_64.txt",
+      "sha256": "4003fc5ac94ffc45ae611c2546ef50f224f0e4e85b3275bf68707817a85a9085",
+      "totals": {"passed": 1392, "failed": 0, "skipped": 0, "blacklisted": 0, "milliseconds": 11285},
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "cp1-caller-reference-arm64.txt",
+      "sha256": "0f3a8568496b1065b30b2a3666a55f735eebfdcb9e50f9db8e4077b78c292c88",
+      "totals": {"passed": 790, "failed": 0, "skipped": 0, "blacklisted": 0, "milliseconds": 7538},
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "cp1-caller-reference-x86_64.txt",
+      "sha256": "47bf83e365996df1890d41cc7c87653e99e3883bf3ccbc5e1d201bb7f1138222",
+      "totals": {"passed": 790, "failed": 0, "skipped": 0, "blacklisted": 0, "milliseconds": 8320},
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "cp1-caller-cpu-tsan-arm64.txt",
+      "sha256": "8f6f3fbff1d0e39dd6d05930b2d8c27a990be3964102916ab953139499365937",
+      "totals": {"passed": 3, "failed": 0, "skipped": 0, "blacklisted": 0, "milliseconds": 8},
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "cp1-caller-reference-tsan-arm64.txt",
+      "sha256": "42e4a56c02b55c2f40b1201c127374900d451f995875ef6903e3b3eb0d647c75",
+      "totals": {"passed": 3, "failed": 0, "skipped": 0, "blacklisted": 0, "milliseconds": 16},
+      "thread_sanitizer_reports": 0
+    }
+  ],
+  "source_sha256": {
+    "libs/image/pagestore/KisPageStore.cpp": "21dfb72d991c14f9d50e4a923543437f679e42848152e5cdfe3650dee1b646a4",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "6d382612382e66efdb7d8809b4f18c6dcb0621396fd92fc7607d9d3215ef02d7",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp": "5b12be663ed80a01834f5e4391fec363fb29911be3da4bbb1f36573b968eb265"
+  },
+  "diff_stat": "3 files changed, 127 insertions(+), 13 deletions(-)",
+  "pressure_rerun": false,
+  "architecture_checkpoint_counted_as_pass": false
+}

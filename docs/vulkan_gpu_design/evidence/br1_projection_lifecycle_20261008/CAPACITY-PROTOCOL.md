@@ -1,0 +1,5 @@
+# 数量以外的容量核对
+
+此观察补足03d要求的新增字段/峰值容量账，不用于时间收益、正式metadata25%门或再次增加性能样本。最终时间批全部退出后才构建和运行。父与最终候选各一能力样本，然后固定parent/candidate/candidate/parent四过程；真实matched workload、像素/析构、命令/退出及实际库哈希均记录。
+
+外部派生库在preparePayload真实节点分配前后读取该observer的MetadataArena live；整个fixture无swap并发，单位差值核对新hook替代旧slot节点的实际收费量。阶段外（Stroke end）瞬时取得原process budget、读取累计MetadataArena peak/live后立即归还，不持有跨阶段强引用；Teardown end只读取原process storage bytes原子值，不创建budget。累计peak含Setup，不能称纯Stroke峰值，不是RSS/常驻working set，不相加多个owner的独立峰值。无生产插桩或新持久采样状态。

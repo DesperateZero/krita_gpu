@@ -1,0 +1,57 @@
+{
+  "product_head": "38834c4e2612c819f9d088dfd59c59889f295a49",
+  "production_files_changed": 0,
+  "production_api_owner_fields_added": 0,
+  "candidate_inputs_verified": 2504,
+  "retrospective_processes": 1600,
+  "unchanged_complete_sample_body_sha256": "a3a4bd92d4291da5269d824987e80fbd3f4e8187c48032ffc5957935cf41f651",
+  "retrospective_inputs_verified": 1602,
+  "scopes": {
+    "diagnostic": {
+      "processes": 768,
+      "completed_operations": 1970025,
+      "operation_wall_ns": 49184979215,
+      "maximum_operation_ns": 8903458,
+      "median_top1pct_wall_fraction": 0.01697362596379941,
+      "all_work_exit_vectors_and_frozen_inputs_verified": true,
+      "frozen_files": 11
+    },
+    "seed-diagnostic": {
+      "processes": 384,
+      "completed_operations": 175597,
+      "operation_wall_ns": 24603961194,
+      "maximum_operation_ns": 11224333,
+      "median_top1pct_wall_fraction": 0.016986461061406825,
+      "all_work_exit_vectors_and_frozen_inputs_verified": true,
+      "frozen_files": 12
+    },
+    "window-diagnostic": {
+      "processes": 768,
+      "completed_operations": 8836604,
+      "operation_wall_ns": 221216035876,
+      "maximum_operation_ns": 11926208,
+      "median_top1pct_wall_fraction": 0.018112724923631966,
+      "all_work_exit_vectors_and_frozen_inputs_verified": true,
+      "frozen_files": 9
+    },
+    "preflight": {
+      "processes": 48,
+      "all_processes_passed": true
+    },
+    "seed-preflight": {
+      "processes": 24,
+      "all_processes_passed": true
+    }
+  },
+  "new_diagnostic_processes": 1920,
+  "new_preflight_processes": 72,
+  "new_completed_operation_samples": 10982226,
+  "no_optional_extension_tail_removal_or_previous_requalification": true,
+  "current_safety_resources_structure": "Inherited unchanged product evidence11180/0/0,6 resource probes and architecture/tool checks; no new full safety run",
+  "closed_budget_scope": "Snapshot taken after close while Store is alive; MetadataArena live retained until Store destruction. Destruction/drain occurs before sample return; no invented post-destruction snapshot.",
+  "formal_calibration_equivalent": 2,
+  "formal_calibration_required": 20,
+  "M6_complete": false,
+  "persistent_default_enabled": false,
+  "verification_script_sha256": "97ae9779f58b0668b11ccb15a3366eb28c20b72b3248dbcaa73d9cc6f1cda7d7"
+}

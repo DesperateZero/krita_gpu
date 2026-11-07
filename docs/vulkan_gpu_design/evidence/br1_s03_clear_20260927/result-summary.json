@@ -1,0 +1,41 @@
+{
+  "scope": "S03/S04 legacy iterator clear barrier and cumulative CPU correctness; not stage/performance qualification",
+  "final_run": "checks-03",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "c3fbe408e5fcb1af8898b54a265c6ee84dc4e2970c77d39d1ccb6af4dda6b013",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      1687,
+      0,
+      0
+    ],
+    "x86_64": [
+      1687,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    3374,
+    0,
+    0
+  ],
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 21,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1479,
+    "call_edges": 13883,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "stage_or_performance_qualification": false,
+  "retained_nonfinal_runs": {
+    "checks-01": "3374 passed on blocking-retention-pin variant; superseded by final nonblocking pin source",
+    "checks-02": "architecture rejected ownership description with two current writers; stopped before Qt matrix",
+    "source-checkpoint-refresh-03": "stale state-ownership input required callgraph regeneration"
+  }
+}

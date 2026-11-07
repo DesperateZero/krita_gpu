@@ -1,0 +1,37 @@
+{
+  "command": [
+    "arch",
+    "-arm64",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest",
+    "-nocrashhandler"
+  ],
+  "pid": 45450,
+  "exit_code": 0,
+  "totals": [
+    "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 496ms"
+  ],
+  "failures": [],
+  "normal_exit": true,
+  "passed": true,
+  "workload_record": {
+    "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+    "canvas_visible_endpoint": false,
+    "image_destroyed": true,
+    "owner_teardown_ns": 989833,
+    "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+    "pen_up_to_projection_ready_ns": 20898791,
+    "projection_updates": 18,
+    "redo_drain_ns": 2233709,
+    "schema": 1,
+    "segment_callbacks": 8,
+    "setup_ns": 424593625,
+    "strategy": "ordinary-cpu-default",
+    "strategy_destroyed": true,
+    "stroke_to_projection_ready_ns": 20994041,
+    "total_fixture_ns": 493427458,
+    "undo_drain_ns": 1924750,
+    "update_callbacks": 4,
+    "workers": 4,
+    "workload": "rgba8-buildup-over-512-8-lines-v1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "records": [
+    {
+      "index": 1,
+      "scopes": 19,
+      "declared_page_visits": 96,
+      "row_order_incompatible_with_column_order": 11
+    },
+    {
+      "index": 2,
+      "scopes": 19,
+      "declared_page_visits": 96,
+      "row_order_incompatible_with_column_order": 11
+    }
+  ],
+  "interpretation": "11/19 observed root composite ranges differ from borrowExecution column-major input. Code also uses non-const range iteration over a shared array, triggering detach even for a canonical nonempty input. These are examples of representation churn, not priced root causes or justification for isolated patches."
+}

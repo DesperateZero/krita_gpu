@@ -1,0 +1,911 @@
+{
+  "qualification": "Finite quantity/lifetime evidence; no measured optimization speedup or new performance gate",
+  "processes": 28,
+  "trace_processes": 14,
+  "events": 277699,
+  "all_exit_library_work_identity_checks": true,
+  "measured_main_symbolic_coverage": "All control requests/successes and deref assigned; other unclassified events explicitly retained per row",
+  "prepare_settle_success_equality": true,
+  "ambiguous_address_reuses": 0,
+  "public_k16_working_chain_deref": {
+    "count": 54,
+    "total": 1645,
+    "fraction": 0.03282674772036474
+  },
+  "public_k16_total_deref_by_block": [
+    1645,
+    1642
+  ],
+  "public_k16_observed_lifetimes_by_block": [
+    [
+      194,
+      207,
+      45
+    ],
+    [
+      144,
+      257,
+      45
+    ]
+  ],
+  "native_k16_reductions": {
+    "control_request": {
+      "fresh": 471,
+      "handoff": 313,
+      "reduction_fraction": 0.33545647558386416
+    },
+    "fits": {
+      "fresh": 893,
+      "handoff": 624,
+      "reduction_fraction": 0.3012318029115342
+    },
+    "deref": {
+      "fresh": 1519,
+      "handoff": 575,
+      "reduction_fraction": 0.6214614878209348
+    },
+    "local_prepare": {
+      "fresh": 405,
+      "handoff": 279,
+      "reduction_fraction": 0.3111111111111111
+    }
+  },
+  "native_common_seal_commit": {
+    "deref_each": 279,
+    "fresh_fits": 315,
+    "handoff_fits": 314,
+    "handoff_deref_fraction": 0.4852173913043478,
+    "handoff_fits_fraction": 0.5032051282051282
+  },
+  "public_k16_observed_controlled_lifetimes": {
+    "successes": 446,
+    "free_within_operation": 194,
+    "free_later_validation_or_destruction": 207,
+    "unclosed_at_capture_end": 45,
+    "limitation": "Only controller-backed success events; process storage excluded. Unclosed tails are not a leak verdict or a full-drain measurement."
+  },
+  "rows": [
+    {
+      "run": "run-01-public-trace",
+      "block": 0,
+      "workload": "public",
+      "row": [
+        64,
+        1,
+        4,
+        1
+      ],
+      "measured_main_counts": {
+        "control_request": 74,
+        "fits": 137,
+        "parent_prepare": 60,
+        "local_prepare": 60,
+        "control_success": 60,
+        "local_settle": 60,
+        "parent_settle": 60,
+        "deref": 264,
+        "retained_request": 47,
+        "raw_free": 25,
+        "retained_free": 16
+      },
+      "deref_roles": {
+        "epoch_root": 65,
+        "store_adapter": 8,
+        "read_link": 5,
+        "publication_descriptor": 102,
+        "write_protocol": 4,
+        "retirement": 24,
+        "completion": 4,
+        "provider_native": 29,
+        "owner_ledger": 12,
+        "working_projection": 3,
+        "read_view": 1,
+        "metadata_publication": 7
+      },
+      "controlled_allocation_roles": {
+        "store_adapter": 6,
+        "epoch_root": 19,
+        "read_link": 2,
+        "publication_descriptor": 13,
+        "write_protocol": 2,
+        "retirement": 3,
+        "completion": 2,
+        "provider_native": 6,
+        "working_projection": 1,
+        "owner_ledger": 2,
+        "metadata_publication": 4
+      },
+      "process_storage_routes": 14,
+      "unclassified_main_events": {
+        "control_request": 0,
+        "fits": 0,
+        "parent_prepare": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "deref": 0,
+        "retained_request": 0,
+        "raw_free": 0,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-03-public-trace",
+      "block": 0,
+      "workload": "public",
+      "row": [
+        1024,
+        16,
+        4,
+        1
+      ],
+      "measured_main_counts": {
+        "control_request": 524,
+        "fits": 988,
+        "raw_free": 138,
+        "parent_prepare": 446,
+        "local_prepare": 446,
+        "control_success": 446,
+        "local_settle": 446,
+        "parent_settle": 446,
+        "deref": 1645,
+        "retained_request": 339,
+        "retained_free": 49
+      },
+      "deref_roles": {
+        "epoch_root": 125,
+        "store_adapter": 8,
+        "read_link": 80,
+        "publication_descriptor": 269,
+        "write_protocol": 64,
+        "retirement": 384,
+        "completion": 64,
+        "provider_native": 464,
+        "owner_ledger": 132,
+        "working_projection": 48,
+        "read_view": 1,
+        "metadata_publication": 6
+      },
+      "controlled_allocation_roles": {
+        "store_adapter": 6,
+        "write_protocol": 51,
+        "epoch_root": 49,
+        "read_link": 32,
+        "publication_descriptor": 61,
+        "retirement": 48,
+        "completion": 32,
+        "provider_native": 96,
+        "working_projection": 16,
+        "owner_ledger": 17,
+        "metadata_publication": 38
+      },
+      "process_storage_routes": 78,
+      "unclassified_main_events": {
+        "control_request": 0,
+        "fits": 36,
+        "raw_free": 0,
+        "parent_prepare": 2,
+        "local_prepare": 2,
+        "control_success": 0,
+        "local_settle": 2,
+        "parent_settle": 2,
+        "deref": 0,
+        "retained_request": 0,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-05-public-trace",
+      "block": 0,
+      "workload": "public",
+      "row": [
+        64,
+        16,
+        4,
+        1
+      ],
+      "measured_main_counts": {
+        "control_request": 609,
+        "fits": 1158,
+        "raw_free": 138,
+        "parent_prepare": 531,
+        "local_prepare": 531,
+        "control_success": 531,
+        "local_settle": 531,
+        "parent_settle": 531,
+        "deref": 1813,
+        "retained_request": 424,
+        "retained_free": 49
+      },
+      "deref_roles": {
+        "epoch_root": 296,
+        "store_adapter": 8,
+        "read_link": 80,
+        "publication_descriptor": 266,
+        "write_protocol": 64,
+        "retirement": 384,
+        "completion": 64,
+        "provider_native": 464,
+        "owner_ledger": 132,
+        "working_projection": 48,
+        "read_view": 1,
+        "metadata_publication": 6
+      },
+      "controlled_allocation_roles": {
+        "store_adapter": 6,
+        "write_protocol": 51,
+        "epoch_root": 134,
+        "read_link": 32,
+        "publication_descriptor": 61,
+        "retirement": 48,
+        "completion": 32,
+        "provider_native": 96,
+        "working_projection": 16,
+        "owner_ledger": 17,
+        "metadata_publication": 38
+      },
+      "process_storage_routes": 78,
+      "unclassified_main_events": {
+        "control_request": 0,
+        "fits": 0,
+        "raw_free": 0,
+        "parent_prepare": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "deref": 0,
+        "retained_request": 0,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-07-native-trace",
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "fresh",
+        1
+      ],
+      "measured_main_counts": {
+        "deref": 213,
+        "retained_request": 32,
+        "control_request": 51,
+        "parent_prepare": 45,
+        "fits": 98,
+        "local_prepare": 45,
+        "control_success": 45,
+        "local_settle": 45,
+        "parent_settle": 45,
+        "raw_free": 11,
+        "retained_free": 14
+      },
+      "deref_roles": {
+        "epoch_root": 31,
+        "publication_descriptor": 99,
+        "write_protocol": 4,
+        "retirement": 24,
+        "completion": 4,
+        "provider_native": 29,
+        "owner_ledger": 12,
+        "working_projection": 3,
+        "metadata_publication": 7
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 7,
+        "store_adapter": 2,
+        "publication_descriptor": 13,
+        "write_protocol": 2,
+        "retirement": 3,
+        "completion": 2,
+        "provider_native": 6,
+        "working_projection": 1,
+        "owner_ledger": 5,
+        "metadata_publication": 4
+      },
+      "process_storage_routes": 6,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "raw_free": 2,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-09-native-trace",
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "handoff",
+        1
+      ],
+      "measured_main_counts": {
+        "deref": 154,
+        "retained_request": 24,
+        "control_request": 43,
+        "parent_prepare": 39,
+        "fits": 87,
+        "local_prepare": 39,
+        "control_success": 39,
+        "local_settle": 39,
+        "parent_settle": 39,
+        "retained_free": 16,
+        "raw_free": 12
+      },
+      "deref_roles": {
+        "epoch_root": 31,
+        "metadata_publication": 12,
+        "publication_descriptor": 99,
+        "write_protocol": 2,
+        "owner_ledger": 7,
+        "metadata_other": 1,
+        "working_projection": 2
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 7,
+        "store_adapter": 2,
+        "owner_ledger": 9,
+        "metadata_publication": 6,
+        "working_values": 1,
+        "publication_descriptor": 13,
+        "write_protocol": 1
+      },
+      "process_storage_routes": 4,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0,
+        "raw_free": 2
+      }
+    },
+    {
+      "run": "run-11-native-trace",
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "fresh",
+        16
+      ],
+      "measured_main_counts": {
+        "deref": 1519,
+        "retained_request": 294,
+        "control_request": 471,
+        "parent_prepare": 405,
+        "fits": 893,
+        "local_prepare": 405,
+        "control_success": 405,
+        "local_settle": 405,
+        "parent_settle": 405,
+        "raw_free": 123,
+        "retained_free": 47
+      },
+      "deref_roles": {
+        "epoch_root": 91,
+        "publication_descriptor": 266,
+        "write_protocol": 64,
+        "retirement": 384,
+        "completion": 64,
+        "provider_native": 464,
+        "owner_ledger": 132,
+        "working_projection": 48,
+        "metadata_publication": 6
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 37,
+        "store_adapter": 2,
+        "publication_descriptor": 61,
+        "write_protocol": 55,
+        "retirement": 48,
+        "completion": 32,
+        "provider_native": 96,
+        "working_projection": 16,
+        "owner_ledger": 20,
+        "metadata_publication": 38
+      },
+      "process_storage_routes": 66,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "raw_free": 2,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-13-native-trace",
+      "block": 0,
+      "workload": "native",
+      "row": [
+        "handoff",
+        16
+      ],
+      "measured_main_counts": {
+        "deref": 575,
+        "retained_request": 166,
+        "control_request": 313,
+        "parent_prepare": 279,
+        "fits": 624,
+        "local_prepare": 279,
+        "control_success": 279,
+        "local_settle": 279,
+        "parent_settle": 279,
+        "retained_free": 79,
+        "raw_free": 124
+      },
+      "deref_roles": {
+        "epoch_root": 91,
+        "metadata_publication": 86,
+        "publication_descriptor": 266,
+        "write_protocol": 32,
+        "owner_ledger": 52,
+        "metadata_other": 16,
+        "working_projection": 32
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 37,
+        "store_adapter": 2,
+        "owner_ledger": 54,
+        "metadata_publication": 70,
+        "working_values": 16,
+        "publication_descriptor": 61,
+        "write_protocol": 39
+      },
+      "process_storage_routes": 34,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0,
+        "raw_free": 2
+      }
+    },
+    {
+      "run": "run-14-native-trace",
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "handoff",
+        16
+      ],
+      "measured_main_counts": {
+        "deref": 575,
+        "retained_request": 166,
+        "control_request": 313,
+        "parent_prepare": 279,
+        "fits": 624,
+        "local_prepare": 279,
+        "control_success": 279,
+        "local_settle": 279,
+        "parent_settle": 279,
+        "retained_free": 79,
+        "raw_free": 124
+      },
+      "deref_roles": {
+        "epoch_root": 91,
+        "metadata_publication": 86,
+        "publication_descriptor": 266,
+        "write_protocol": 32,
+        "owner_ledger": 52,
+        "metadata_other": 16,
+        "working_projection": 32
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 37,
+        "store_adapter": 2,
+        "owner_ledger": 54,
+        "metadata_publication": 70,
+        "working_values": 16,
+        "publication_descriptor": 61,
+        "write_protocol": 39
+      },
+      "process_storage_routes": 34,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0,
+        "raw_free": 2
+      }
+    },
+    {
+      "run": "run-16-native-trace",
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "fresh",
+        16
+      ],
+      "measured_main_counts": {
+        "deref": 1519,
+        "retained_request": 294,
+        "control_request": 471,
+        "parent_prepare": 405,
+        "fits": 893,
+        "local_prepare": 405,
+        "control_success": 405,
+        "local_settle": 405,
+        "parent_settle": 405,
+        "raw_free": 123,
+        "retained_free": 47
+      },
+      "deref_roles": {
+        "epoch_root": 91,
+        "publication_descriptor": 266,
+        "write_protocol": 64,
+        "retirement": 384,
+        "completion": 64,
+        "provider_native": 464,
+        "owner_ledger": 132,
+        "working_projection": 48,
+        "metadata_publication": 6
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 37,
+        "store_adapter": 2,
+        "publication_descriptor": 61,
+        "write_protocol": 55,
+        "retirement": 48,
+        "completion": 32,
+        "provider_native": 96,
+        "working_projection": 16,
+        "owner_ledger": 20,
+        "metadata_publication": 38
+      },
+      "process_storage_routes": 66,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "raw_free": 2,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-18-native-trace",
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "handoff",
+        1
+      ],
+      "measured_main_counts": {
+        "deref": 154,
+        "retained_request": 24,
+        "control_request": 43,
+        "parent_prepare": 39,
+        "fits": 87,
+        "local_prepare": 39,
+        "control_success": 39,
+        "local_settle": 39,
+        "parent_settle": 39,
+        "retained_free": 16,
+        "raw_free": 12
+      },
+      "deref_roles": {
+        "epoch_root": 31,
+        "metadata_publication": 12,
+        "publication_descriptor": 99,
+        "write_protocol": 2,
+        "owner_ledger": 7,
+        "metadata_other": 1,
+        "working_projection": 2
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 7,
+        "store_adapter": 2,
+        "owner_ledger": 9,
+        "metadata_publication": 6,
+        "working_values": 1,
+        "publication_descriptor": 13,
+        "write_protocol": 1
+      },
+      "process_storage_routes": 4,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "retained_free": 0,
+        "raw_free": 2
+      }
+    },
+    {
+      "run": "run-20-native-trace",
+      "block": 1,
+      "workload": "native",
+      "row": [
+        "fresh",
+        1
+      ],
+      "measured_main_counts": {
+        "deref": 213,
+        "retained_request": 32,
+        "control_request": 51,
+        "parent_prepare": 45,
+        "fits": 98,
+        "local_prepare": 45,
+        "control_success": 45,
+        "local_settle": 45,
+        "parent_settle": 45,
+        "raw_free": 11,
+        "retained_free": 14
+      },
+      "deref_roles": {
+        "epoch_root": 31,
+        "publication_descriptor": 99,
+        "write_protocol": 4,
+        "retirement": 24,
+        "completion": 4,
+        "provider_native": 29,
+        "owner_ledger": 12,
+        "working_projection": 3,
+        "metadata_publication": 7
+      },
+      "controlled_allocation_roles": {
+        "epoch_root": 7,
+        "store_adapter": 2,
+        "publication_descriptor": 13,
+        "write_protocol": 2,
+        "retirement": 3,
+        "completion": 2,
+        "provider_native": 6,
+        "working_projection": 1,
+        "owner_ledger": 5,
+        "metadata_publication": 4
+      },
+      "process_storage_routes": 6,
+      "unclassified_main_events": {
+        "deref": 0,
+        "retained_request": 0,
+        "control_request": 0,
+        "parent_prepare": 0,
+        "fits": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "raw_free": 2,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-22-public-trace",
+      "block": 1,
+      "workload": "public",
+      "row": [
+        64,
+        16,
+        4,
+        1
+      ],
+      "measured_main_counts": {
+        "control_request": 609,
+        "fits": 1158,
+        "raw_free": 138,
+        "parent_prepare": 531,
+        "local_prepare": 531,
+        "control_success": 531,
+        "local_settle": 531,
+        "parent_settle": 531,
+        "deref": 1816,
+        "retained_request": 424,
+        "retained_free": 50
+      },
+      "deref_roles": {
+        "epoch_root": 296,
+        "store_adapter": 8,
+        "read_link": 80,
+        "publication_descriptor": 269,
+        "write_protocol": 64,
+        "retirement": 384,
+        "completion": 64,
+        "provider_native": 464,
+        "owner_ledger": 132,
+        "working_projection": 48,
+        "read_view": 1,
+        "metadata_publication": 6
+      },
+      "controlled_allocation_roles": {
+        "store_adapter": 6,
+        "write_protocol": 51,
+        "epoch_root": 134,
+        "read_link": 32,
+        "publication_descriptor": 61,
+        "retirement": 48,
+        "completion": 32,
+        "provider_native": 96,
+        "working_projection": 16,
+        "owner_ledger": 17,
+        "metadata_publication": 38
+      },
+      "process_storage_routes": 78,
+      "unclassified_main_events": {
+        "control_request": 0,
+        "fits": 0,
+        "raw_free": 0,
+        "parent_prepare": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "deref": 0,
+        "retained_request": 0,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-24-public-trace",
+      "block": 1,
+      "workload": "public",
+      "row": [
+        1024,
+        16,
+        4,
+        1
+      ],
+      "measured_main_counts": {
+        "control_request": 524,
+        "fits": 988,
+        "raw_free": 138,
+        "parent_prepare": 446,
+        "local_prepare": 446,
+        "control_success": 446,
+        "local_settle": 446,
+        "parent_settle": 446,
+        "deref": 1642,
+        "retained_request": 339,
+        "retained_free": 48
+      },
+      "deref_roles": {
+        "epoch_root": 125,
+        "store_adapter": 8,
+        "read_link": 80,
+        "publication_descriptor": 266,
+        "write_protocol": 64,
+        "retirement": 384,
+        "completion": 64,
+        "provider_native": 464,
+        "owner_ledger": 132,
+        "working_projection": 48,
+        "read_view": 1,
+        "metadata_publication": 6
+      },
+      "controlled_allocation_roles": {
+        "store_adapter": 6,
+        "write_protocol": 51,
+        "epoch_root": 49,
+        "read_link": 32,
+        "publication_descriptor": 61,
+        "retirement": 48,
+        "completion": 32,
+        "provider_native": 96,
+        "working_projection": 16,
+        "owner_ledger": 17,
+        "metadata_publication": 38
+      },
+      "process_storage_routes": 78,
+      "unclassified_main_events": {
+        "control_request": 0,
+        "fits": 36,
+        "raw_free": 0,
+        "parent_prepare": 2,
+        "local_prepare": 2,
+        "control_success": 0,
+        "local_settle": 2,
+        "parent_settle": 2,
+        "deref": 0,
+        "retained_request": 0,
+        "retained_free": 0
+      }
+    },
+    {
+      "run": "run-26-public-trace",
+      "block": 1,
+      "workload": "public",
+      "row": [
+        64,
+        1,
+        4,
+        1
+      ],
+      "measured_main_counts": {
+        "control_request": 74,
+        "fits": 137,
+        "parent_prepare": 60,
+        "local_prepare": 60,
+        "control_success": 60,
+        "local_settle": 60,
+        "parent_settle": 60,
+        "deref": 264,
+        "retained_request": 47,
+        "raw_free": 25,
+        "retained_free": 16
+      },
+      "deref_roles": {
+        "epoch_root": 65,
+        "store_adapter": 8,
+        "read_link": 5,
+        "publication_descriptor": 102,
+        "write_protocol": 4,
+        "retirement": 24,
+        "completion": 4,
+        "provider_native": 29,
+        "owner_ledger": 12,
+        "working_projection": 3,
+        "read_view": 1,
+        "metadata_publication": 7
+      },
+      "controlled_allocation_roles": {
+        "store_adapter": 6,
+        "epoch_root": 19,
+        "read_link": 2,
+        "publication_descriptor": 13,
+        "write_protocol": 2,
+        "retirement": 3,
+        "completion": 2,
+        "provider_native": 6,
+        "working_projection": 1,
+        "owner_ledger": 2,
+        "metadata_publication": 4
+      },
+      "process_storage_routes": 14,
+      "unclassified_main_events": {
+        "control_request": 0,
+        "fits": 0,
+        "parent_prepare": 0,
+        "local_prepare": 0,
+        "control_success": 0,
+        "local_settle": 0,
+        "parent_settle": 0,
+        "deref": 0,
+        "retained_request": 0,
+        "raw_free": 0,
+        "retained_free": 0
+      }
+    }
+  ]
+}

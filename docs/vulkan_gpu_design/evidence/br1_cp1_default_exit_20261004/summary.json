@@ -1,0 +1,26 @@
+{
+  "scope": "dual native release failure and default host exit",
+  "product_commit": "1177fa5ecab8318fe044b071342eb0ab51654e27",
+  "product_changes": 0,
+  "default_attempt": {
+    "architecture": "arm64",
+    "outer_pid": 5900,
+    "outer_actual_exit_code": -9,
+    "outer_timed_out": true,
+    "outer_reaped": true,
+    "child_pid": 5915,
+    "child_state": "UE",
+    "observed_stack": "kisFreePageProcessStorage -> std::terminate -> abort -> pthread_kill",
+    "qualification": false
+  },
+  "guarded_actual_path": {
+    "arm64": "munmap=1, mach_vm=1, abort=1, child_exit=134, parent actual0/reaped",
+    "x86_64": "munmap=1, mach_vm=1, abort=1, child_exit=134, parent actual0/reaped",
+    "selected_product_image_loaded": true,
+    "interposer_loaded": true,
+    "qualification": "dual native release failure reaches fail-fast under a diagnostic SIGABRT guard"
+  },
+  "host_unexpected_exits": 29,
+  "remaining_host_exit": "default macOS abort reaping qualification",
+  "cp1_complete": false
+}

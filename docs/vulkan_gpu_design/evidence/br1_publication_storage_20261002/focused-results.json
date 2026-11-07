@@ -1,0 +1,122 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "publicationStorageRefusalAndLateCleanup",
+      "preparedPublicationStorageIsBound",
+      "deferredPublicationCleanupOwnsCandidate",
+      "preparedRecoverableWriteLifecycle",
+      "recoverableWritePreparationHonorsBudget",
+      "preparedMutationPreservesLateProtection",
+      "capturedProtectionAndExactQueryAtCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 15,
+    "duration_seconds": 2.41,
+    "totals": [
+      "Totals: 167 passed, 15 failed, 0 skipped, 0 blacklisted, 24ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome1) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome1) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind3-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind3-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind3-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::recoverableWritePreparationHonorsBudget() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "capturedCutStorageRefusalAndLifetime",
+      "capturedReleaseKeepsOriginalFacts",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.169,
+    "totals": [
+      "Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 770ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "publicationStorageRefusalAndLateCleanup",
+      "preparedPublicationStorageIsBound",
+      "deferredPublicationCleanupOwnsCandidate",
+      "preparedRecoverableWriteLifecycle",
+      "recoverableWritePreparationHonorsBudget",
+      "preparedMutationPreservesLateProtection",
+      "capturedProtectionAndExactQueryAtCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 15,
+    "duration_seconds": 1.378,
+    "totals": [
+      "Totals: 167 passed, 15 failed, 0 skipped, 0 blacklisted, 40ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome1) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome1) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind3-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind3-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind3-outcome3) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::recoverableWritePreparationHonorsBudget() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "capturedCutStorageRefusalAndLifetime",
+      "capturedReleaseKeepsOriginalFacts",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.149,
+    "totals": [
+      "Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 775ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

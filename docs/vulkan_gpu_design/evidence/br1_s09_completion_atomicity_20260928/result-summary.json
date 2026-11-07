@@ -1,0 +1,38 @@
+{
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "11d8366ad8a91fa2d274802364d6d3d57266797ffa718840fbe2a20432979dd3",
+  "image_sha256": "ac434aa9a0576e8a9b2b06151906f86d66f5eec1daa10c4871c21d5918b74063",
+  "tests": {
+    "targets_per_arch": 17,
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "passed": 6072,
+    "failed": 0,
+    "skipped": 0,
+    "new_cases_per_arch": 54
+  },
+  "architecture": {
+    "apis": 1655,
+    "call_edges": 16389,
+    "callbacks": 15,
+    "manifest": 21,
+    "ownership": 24,
+    "census": 16,
+    "intrusion": 19,
+    "self_tests": 6
+  },
+  "probes": {
+    "final_runs": 22,
+    "terminal_intervals_per_arch": 46,
+    "terminal_injected_failures_per_arch": 28,
+    "readiness_intervals_per_arch": 26,
+    "readiness_injected_failures_per_arch": 20,
+    "ordered_completion_intervals_per_arch": 1024,
+    "ordered_allocations_bytes_frees": 0,
+    "eight_existing_probes_pass": true,
+    "image_identity_matches": true
+  },
+  "qualification": "CPU completion failure atomicity and notification storage correctness; not full S09/S10/M6/M7/M8 or performance qualification"
+}

@@ -1,0 +1,47 @@
+{
+  "scope": "M1-M3/C1/V1 finite responsibility closure; current checked-out production, excluding archive",
+  "production_files": 4,
+  "production_insertions": 30,
+  "production_deletions": 15,
+  "test_files": 3,
+  "test_insertions": 48,
+  "test_deletions": 1,
+  "derived_files": ["baseline-source.json", "reverse-callgraph.json"],
+  "new_public_api": false,
+  "new_persistent_field_or_owner": false,
+  "closures": [
+    {
+      "id": "M1",
+      "owner": "KisPageMetadataCoordinator::queryMutationBase",
+      "consumers": ["KisPageWriteCoordinator::prepareWriteBaseLocked (ordinary and refreshed retry)", "original indexedMutationBaseLookup test"],
+      "representation": "KisVersionRecord::capturedReadViews is separate; only ReadLease/PendingLastUse are appended to KisReplicaRecord::overflow when storing the compact representation",
+      "change": "Existing shard cut rejects writer or protected authority before alternate scan; selected/base/sealed/nextGeneration remain intact",
+      "remaining_authority": "StateMachine and installRecoverableWrite still revalidate exact identity and revision",
+      "status": "complete"
+    },
+    {
+      "id": "M2",
+      "owner": "KisCpuResidentBinding::prepareHandoff",
+      "consumers": ["KisCpuBackingHandoff::prepare", "KisPageWriteCoordinator::prepareWritePlanLocked", "physical/reference/production tests"],
+      "change": "Advisory reader/write-state refusal under existing mutex; tryClaimHandoff still excludes late arrivals and storage aliases",
+      "retry": "tileReadCacheLifetime now prepares again after initial busy rejection; prepared-before-reader guards retain their final-claim assertions",
+      "status": "complete"
+    },
+    {
+      "id": "M3",
+      "owner": "KisPageWriteCoordinator::prepareWritePlanLocked",
+      "consumers": ["native CPU mutation", "generic acquireWrite"],
+      "change": "Source physical observation precedes before binding/read pin and fallible accounting/metadata/descriptor storage",
+      "lifetime": "Original ledger retains beforeProvider in original order; qScopeGuard resets physical/before pin/prepared resources outside owner gate and restores gate on every exit",
+      "remaining_authority": "All fallible storage still precedes nonblocking physical claim and logical install",
+      "status": "complete"
+    }
+  ],
+  "remaining_costs": [
+    "Native-pin refusal still needs existing source eligibility/provider lookup, beforeProvider retain and original unlock/cleanup/relock",
+    "Late-arriving readers may still invalidate prepared candidates; this is required concurrent validation",
+    "Fresh semantic work, old-view preservation, seal/commit and resource retirement remain necessary",
+    "No time fraction or allocator-request reduction is inferred solely from phase counts"
+  ],
+  "independent_open_qualification": ["metadata comparable residency denominator", "CP0 full required", "business natural producer/distribution", "M7/M8", "GPU production"]
+}

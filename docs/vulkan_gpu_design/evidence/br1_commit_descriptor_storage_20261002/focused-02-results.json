@@ -1,0 +1,46 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "publicationDescriptorStorageAtCapacity",
+      "defaultPublicationRevalidatesDescriptorStorage",
+      "restorationRevalidatesNewlyRegisteredPage",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.97,
+    "totals": [
+      "Totals: 4 passed, 1 failed, 0 skipped, 0 blacklisted, 5ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::publicationDescriptorStorageAtCapacity() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "publicationDescriptorStorageAtCapacity",
+      "defaultPublicationRevalidatesDescriptorStorage",
+      "restorationRevalidatesNewlyRegisteredPage",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.33,
+    "totals": [
+      "Totals: 4 passed, 1 failed, 0 skipped, 0 blacklisted, 8ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::publicationDescriptorStorageAtCapacity() Compared values are not the same"
+    ],
+    "passed": false
+  }
+]

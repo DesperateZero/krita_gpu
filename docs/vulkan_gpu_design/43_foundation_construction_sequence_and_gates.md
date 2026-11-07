@@ -1,5 +1,10 @@
 # Vulkan Foundation 施工顺序、构建门禁与 BR0 修订
 
+> 状态更新：本文记录 BR0 Foundation 施工边界；51 记录了 2026-09-19 的 BR1 功能/正确性 cutover，2026-09-20
+> resident CPU 性能审计后 BR1 以 `BR1-PERF` 重开，见
+> [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)。文中的
+> “current skeleton/BR1–BR6”判断按历史时点理解；当前 production 执行阶段仍是 BR1-PERF。
+
 > `F*` 是 BR0 内部的基础结构工作包，不是新的全局阶段编号。全局仍只有 BR0–BR6。`F*` 可以准备 isolated
 > code/test，但不得绕过相应 BR 出口接入 production document、PaintOp 或 canvas。
 

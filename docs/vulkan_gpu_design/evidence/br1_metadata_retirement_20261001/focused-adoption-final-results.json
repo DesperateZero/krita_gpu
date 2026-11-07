@@ -1,0 +1,86 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "historyPreparationRevalidatesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.754,
+    "totals": [
+      "Totals: 33 passed, 0 failed, 0 skipped, 0 blacklisted, 728ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.187,
+    "totals": [
+      "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 99ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "historyPreparationRevalidatesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.197,
+    "totals": [
+      "Totals: 33 passed, 0 failed, 0 skipped, 0 blacklisted, 835ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.243,
+    "totals": [
+      "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 118ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "status": "Finite read-only whole-owner/protocol review; no next replacement implemented or qualified",
+  "source_head": "864627f95737c62fe79da87677c8f4b0ab44c55a",
+  "observed_failure": "Fresh K16 lower0.887279/0.962515 still below0.98. Native handoff relative K16 advantage8.14%/8.64%, lower7.12%/7.71%, below30%; K1 below20% too. H4 remains passed.",
+  "measured_asymmetry": "Same-ABI first-operation allocation requests fall6 per Fresh page and3 per handoff page after redundant local metadata scratch deletion. Whole-operation same-parent allocation differential is exact; cross-round normalized timing ratios and samples do not prove a causal timing fraction.",
+  "original_responsibility": "One recoverable single-page candidate from original physical/source pin and backing reservation through original metadata Data, strict revision/canonical ownership revalidation, descriptor/physical claim, install, cancellation and cold/deferred free",
+  "consumers": [
+    "KisPageWriteCoordinator::prepareWritePlanLocked is the original native/generic recoverable selector consumer; its invocation-local Prepared owns the existing before pin, physical/accounting/metadata candidate and descriptor additions",
+    "KisPageMetadataCoordinator::prepareRecoverableWrite/installRecoverableWrite use original preparePublicationImpl/installPublicationImpl and PreparedPublication::Data",
+    "The same Data also serves ordinary publication, restoration and detachment. entries/publications and per-shard arenaGrowth have different real cardinalities and terminal requirements; do not blindly inline/merge them or duplicate the policy",
+    "Original cancellation/clearBatch/Data disposal retains actual fees until physical free; activity reservation, old-reader release, stale retry and install deferred cleanup remain required"
+  ],
+  "actual_stack_evidence": [
+    "public-fresh-steady-profile waits real init marker; original public N1024/K16 write-loop remains in budget fits, allocation/fee/free and metadata/ledger work",
+    "native-handoff-profile-02 uses original unchanged native N=K16/H0/B4 harness within its4096 repetition bound, samples2s after actual completed-operation marker, confirms prepareWritePlanLocked and preparePublicationImpl frames",
+    "Native harness setup/validation/cleanup are present; all-thread exclusive frames and exact contextual preparation rows only localize actual consumers, never percentages or timing gains"
+  ],
+  "finite_next_endpoint": "Review the complete original single-page recoverable candidate storage and parallel input/preparation hand-offs against actual cardinality, all failure/retry/claim/install/free consumers; choose an equivalent representation only after proving the full responsibility. Seek a handoff-specific preparation reduction while continuing protected Fresh comparisons.",
+  "preserve": [
+    "Exact Ready alternate-before, source read pin, provider/allocation identity, physical claim and original selector fallback",
+    "Strict page revision and physical ownership recheck after every unlocked growth/preparation; no same-allocation permission bypass",
+    "Actual paid candidate capacity, original hard limits, complete cancel/late cleanup and zero-allocation/free installation",
+    "Original40-pair stopping/confidence rules and every failure sample; common metadata25% same-semantic residency and CP0 required remain separate"
+  ],
+  "not_reopened": "Delivered accepted metadata scratch deletion, source claim ownership, authority/backing batch, working-value transfer, sparse root and CP1/CP2",
+  "not_claimed": "No new owner, queue, persistent snapshot/claim authority, public API, guard relaxation or new recovery domain. Full CP3/M6/M7/M8 remains unqualified; no effort estimate deducted from request counts, line counts or scoped speeds."
+}

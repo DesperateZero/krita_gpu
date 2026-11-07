@@ -1,0 +1,74 @@
+{
+  "captured_at": "2026-09-25T07:16:42.464895+00:00",
+  "production_revision": "095193d11a1041c31ba92f218ccaea4a8d4f396f",
+  "review_source_revision": "095193d11a1041c31ba92f218ccaea4a8d4f396f",
+  "production_changes_during_review": false,
+  "documentation_only_tracked_changes": [
+    "build-tools/ci-scripts/pagestore-audit/README.md"
+  ],
+  "prior_artifact_hash_count": 416,
+  "prior_artifact_hash_mismatches": [],
+  "prior_build_identity_mismatches": [],
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "build-tools/ci-scripts/check-pagestore-architecture.py",
+        "--build-dir",
+        "_build-br0-cpu"
+      ],
+      "returncode": 0,
+      "log": "architecture.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "build-tools/ci-scripts/tests",
+        "-p",
+        "test_pagestore_reachability.py"
+      ],
+      "returncode": 0,
+      "log": "reachability-self-tests.log"
+    },
+    {
+      "command": [
+        "/Users/apple/krita_gpu/.venv/bin/ninja",
+        "-C",
+        "_build-br0-cpu",
+        "-n",
+        "KisPageStoreReferenceTest",
+        "kis_tiled_data_manager_test"
+      ],
+      "returncode": 0,
+      "log": "build-dry-run.log"
+    }
+  ],
+  "archived_documents": 35,
+  "archive_body_hash_mismatches": [],
+  "broken_links_in_reviewed_documents": [],
+  "new_probes": {
+    "default_update": "reproduced old manager default vs new canonical read",
+    "saturated_constructor_clone": "SIGSEGV, corroborated by LLDB",
+    "reserved_index_insert": "2 allocations, 5120 bytes, capacity unchanged"
+  },
+  "prior_test_totals": {
+    "cpu_passed": 2952,
+    "vulkan_foundation_passed": 28,
+    "rerun_this_review": false
+  },
+  "verdict": "M5 reopened; M4 allocation guarantee and two manager budget-failure contracts block M6-ready.",
+  "documentation_commit": "875c3854d6036fcccba4e54bdf62e2fb225777df",
+  "documentation_commit_delta": [
+    "build-tools/ci-scripts/pagestore-audit/README.md"
+  ],
+  "link_validation_scope": "path existence; historical source line numbers and external URLs are not reinterpreted",
+  "actual_image_library_loader_lines": [
+    "dyld[27077]: <A03A562C-B8A3-3D0F-9B9A-F75456B9E175> /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib"
+  ],
+  "loader_probe_returncode": 0,
+  "final_verification_at": "2026-09-25T07:18:51.631772+00:00"
+}

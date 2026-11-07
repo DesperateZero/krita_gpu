@@ -1,0 +1,125 @@
+Analysis of sampling control (pid 87052) every 1 millisecond
+Process:         control [87052]
+Path:            /Users/USER/*/control
+Load Address:    0x102358000
+Identifier:      control
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  launchd [1]
+Target Type:     live task
+
+Date/Time:       2026-10-03 16:53:54.243 +0800
+Launch Time:     2026-10-03 16:09:34.322 +0800
+OS Version:      macOS 15.7.3 (24G419)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         28.0M
+Physical footprint (peak):  28.1M
+Idle exit:                  untracked
+----
+
+Call graph:
+    874 Thread_81806368   DispatchQueue_1: com.apple.main-thread  (serial)
+    + 874 start  (in dyld) + 6076  [0x19d87eb98]
+    +   874 main  (in control) + 224  [0x102358748]  tsan-control.cpp:18
+    +     874 std::thread::join()  (in libc++.1.dylib) + 36  [0x19db51e54]
+    +       874 wrap_pthread_join  (in libclang_rt.tsan_osx_dynamic.dylib) + 216  [0x102b3ba44]
+    +         874 _pthread_join  (in libsystem_pthread.dylib) + 608  [0x19dc2206c]
+    +           874 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x19dbdf9b8]
+    874 Thread_81806373
+    + 874 thread_start  (in libsystem_pthread.dylib) + 8  [0x19dc1ab80]
+    +   874 _pthread_start  (in libsystem_pthread.dylib) + 136  [0x19dc1fbc8]
+    +     874 __tsan::BackgroundThread(void*)  (in libclang_rt.tsan_osx_dynamic.dylib) + 200  [0x102b76c30]
+    +       874 usleep  (in libsystem_c.dylib) + 68  [0x19dabd60c]
+    +         874 nanosleep  (in libsystem_c.dylib) + 220  [0x19dabd6f4]
+    +           874 __semwait_signal  (in libsystem_kernel.dylib) + 8  [0x19dbe11c8]
+    874 Thread_81806374
+    + 874 thread_start  (in libsystem_pthread.dylib) + 8  [0x19dc1ab80]
+    +   874 _pthread_start  (in libsystem_pthread.dylib) + 136  [0x19dc1fbc8]
+    +     874 __tsan_thread_start_func  (in libclang_rt.tsan_osx_dynamic.dylib) + 144  [0x102b3b67c]
+    +       874 std::__thread_proxy[abi:ne200100]<std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>>(void*)  (in control) + 108  [0x102358cf4]  thread.h:214
+    +         874 std::__thread_execute[abi:ne200100]<std::unique_ptr<std::__thread_struct>, main::$_0>(std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>&, std::__tuple_indices<>)  (in control) + 52  [0x102359394]  thread.h:205
+    +           874 decltype(std::declval<main::$_0>()()) std::__invoke[abi:ne200100]<main::$_0>(main::$_0&&)  (in control) + 48  [0x102359468]  invoke.h:179
+    +             874 main::$_0::operator()() const  (in control) + 204  [0x102359590]  tsan-control.cpp:12
+    +               874 __tsan::ReportRace(__tsan::ThreadState*, __tsan::RawShadow*, __tsan::Shadow, __tsan::Shadow, unsigned long)  (in libclang_rt.tsan_osx_dynamic.dylib) + 2964  [0x102b83988]
+    +                 874 __tsan::OutputReport(__tsan::ThreadState*, __tsan::ScopedReport const&)  (in libclang_rt.tsan_osx_dynamic.dylib) + 964  [0x102b82ba0]
+    +                   874 __sanitizer::Die()  (in libclang_rt.tsan_osx_dynamic.dylib) + 108  [0x102b23774]
+    +                     874 __sanitizer::Abort()  (in libclang_rt.tsan_osx_dynamic.dylib) + 84  [0x102b24054]
+    +                       874 abort  (in libsystem_c.dylib) + 124  [0x19db289e4]
+    +                         874 wrap_pthread_kill  (in libclang_rt.tsan_osx_dynamic.dylib) + 356  [0x102b41aa4]
+    +                           874 pthread_kill  (in libsystem_pthread.dylib) + 296  [0x19dc1f848]
+    +                             874 __pthread_kill  (in libsystem_kernel.dylib) + 8  [0x19dbe6388]
+    874 Thread_81806375
+      874 thread_start  (in libsystem_pthread.dylib) + 8  [0x19dc1ab80]
+        874 _pthread_start  (in libsystem_pthread.dylib) + 136  [0x19dc1fbc8]
+          874 __tsan_thread_start_func  (in libclang_rt.tsan_osx_dynamic.dylib) + 144  [0x102b3b67c]
+            874 std::__thread_proxy[abi:ne200100]<std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>>(void*)  (in control) + 120  [0x102358d00]  thread.h:216
+              874 std::unique_ptr<std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>>::~unique_ptr[abi:ne200100]()  (in control) + 52  [0x102358e30]  unique_ptr.h:269
+                874 std::unique_ptr<std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>>::~unique_ptr[abi:ne200100]()  (in control) + 56  [0x1023598f8]  unique_ptr.h:269
+                  874 std::unique_ptr<std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>>::reset[abi:ne200100](std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>*)  (in control) + 124  [0x102359988]  unique_ptr.h:300
+                    874 std::default_delete<std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>>::operator()[abi:ne200100](std::tuple<std::unique_ptr<std::__thread_struct>, main::$_0>*) const  (in control) + 84  [0x1023599f0]  unique_ptr.h:78
+                      874 operator delete(void*)  (in libclang_rt.tsan_osx_dynamic.dylib) + 176  [0x102b92f14]
+                        874 __tsan::user_free(__tsan::ThreadState*, unsigned long, void*, bool)  (in libclang_rt.tsan_osx_dynamic.dylib) + 332  [0x102b6f3b4]
+                          874 __tsan::OnUserFree(__tsan::ThreadState*, unsigned long, unsigned long, bool)  (in libclang_rt.tsan_osx_dynamic.dylib) + 56  [0x102b6f4e0]
+                            874 __tsan::SlotLock(__tsan::ThreadState*)  (in libclang_rt.tsan_osx_dynamic.dylib) + 140  [0x102b74414]
+                              874 __sanitizer::Semaphore::Wait()  (in libclang_rt.tsan_osx_dynamic.dylib) + 40  [0x102b1b1f0]
+                                874 cthread_yield  (in libsystem_pthread.dylib) + 36  [0x19dc1cb98]
+                                  874 swtch_pri  (in libsystem_kernel.dylib) + 8  [0x19dbddc88]
+
+Total number in stack (recursive counted multiple, when >=5):
+
+Sort by top of stack, same collapsed (when >= 5):
+        __pthread_kill  (in libsystem_kernel.dylib)        874
+        __semwait_signal  (in libsystem_kernel.dylib)        874
+        __ulock_wait  (in libsystem_kernel.dylib)        874
+        swtch_pri  (in libsystem_kernel.dylib)        874
+
+Binary Images:
+       0x102358000 -        0x10235ad47 +control (0) <8414A6CE-F478-3B07-9F86-DDC75C87437F> /Users/*/control
+       0x102b0c000 -        0x102bb0fb7 +libclang_rt.tsan_osx_dynamic.dylib (1700.6.4.2) <A4E36384-ACE9-3FFE-B4E0-2AD60ABBF3C2> /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.tsan_osx_dynamic.dylib
+       0x19d824000 -        0x19d877893  libobjc.A.dylib (940.4) <E6F30EB4-FACF-3381-AE46-10E556F1FC39> /usr/lib/libobjc.A.dylib
+       0x19d878000 -        0x19d91357b  dyld (1.0.0 - 1286.10) <E4E5CD37-5339-3136-B2C5-0C80F0720C26> /usr/lib/dyld
+       0x19d914000 -        0x19d917168  libsystem_blocks.dylib (96) <EFADF6A6-C85B-37E9-9514-8E7A1EBAC882> /usr/lib/system/libsystem_blocks.dylib
+       0x19d918000 -        0x19d9628ff  libxpc.dylib (2894.140.12.700.1) <B7303BD5-2EAD-3A97-8419-5A1454C5E513> /usr/lib/system/libxpc.dylib
+       0x19d963000 -        0x19d97e7ff  libsystem_trace.dylib (1643.120.5) <9DBBEE92-6C08-39F7-A05E-5054A79D28F6> /usr/lib/system/libsystem_trace.dylib
+       0x19d97f000 -        0x19da1d3b7  libcorecrypto.dylib (1736.140.2) <00D81A3B-8152-35CF-B1AE-7364B4832072> /usr/lib/system/libcorecrypto.dylib
+       0x19da1e000 -        0x19da6506f  libsystem_malloc.dylib (715.140.5) <3CE1E59C-91C8-3259-93D8-7DED66842979> /usr/lib/system/libsystem_malloc.dylib
+       0x19da66000 -        0x19daac75f  libdispatch.dylib (1521.140.2) <63A54CE1-2AB6-3673-82E4-D8489D811475> /usr/lib/system/libdispatch.dylib
+       0x19daad000 -        0x19daafd1b  libsystem_featureflags.dylib (97) <9AF1C2C7-1C15-3F0E-9C0F-4524BD4EB4CF> /usr/lib/system/libsystem_featureflags.dylib
+       0x19dab0000 -        0x19db311f7  libsystem_c.dylib (1698.140.3.700.2) <E098CB59-2C56-395C-ADE1-6EF590E61199> /usr/lib/system/libsystem_c.dylib
+       0x19db32000 -        0x19dbbeff7  libc++.1.dylib (1900.181) <EB94C9FE-91DA-3E9F-9C45-7B476FEAAEAE> /usr/lib/libc++.1.dylib
+       0x19dbbf000 -        0x19dbdcfff  libc++abi.dylib (1900.181) <BC670272-BF32-38AC-AE3F-F06EDA80BE30> /usr/lib/libc++abi.dylib
+       0x19dbdd000 -        0x19dc18663  libsystem_kernel.dylib (11417.140.69.705.2) <1D4FFD44-8926-3746-924E-DEEF5B777588> /usr/lib/system/libsystem_kernel.dylib
+       0x19dc19000 -        0x19dc25a77  libsystem_pthread.dylib (536.0.0.701.1) <022DC315-CF35-38DA-939E-03800B5BEFF2> /usr/lib/system/libsystem_pthread.dylib
+       0x19dc26000 -        0x19dc55ba3  libdyld.dylib (1286.10) <E4FE35C9-8AEE-3728-89B9-89A64239ED74> /usr/lib/system/libdyld.dylib
+       0x19dc56000 -        0x19dc5de0b  libsystem_platform.dylib (349.140.6) <C26E58A4-34A1-3F9C-BDBC-EBC34426633A> /usr/lib/system/libsystem_platform.dylib
+       0x19dc5e000 -        0x19dc8dd83  libsystem_info.dylib (597.0.0.701.2) <3B2CAC89-F7B9-3111-9EB6-84A87EEBBAD7> /usr/lib/system/libsystem_info.dylib
+       0x1a1720000 -        0x1a172a397  libsystem_darwin.dylib (1698.140.3.700.2) <62C85958-8310-3625-ADF0-DCD58D08BEB9> /usr/lib/system/libsystem_darwin.dylib
+       0x1a1b82000 -        0x1a1b93feb  libsystem_notify.dylib (342) <CA2AAD14-C438-30E8-9699-5A947E2DF021> /usr/lib/system/libsystem_notify.dylib
+       0x1a3b85000 -        0x1a3b9fe8f  libsystem_networkextension.dylib (2063.140.6) <5C0C1505-266B-3544-B970-BE347DAF2AAF> /usr/lib/system/libsystem_networkextension.dylib
+       0x1a3c1c000 -        0x1a3c33fdb  libsystem_asl.dylib (402) <0574F75C-FB20-3114-8C16-E17D821FFCBD> /usr/lib/system/libsystem_asl.dylib
+       0x1a5779000 -        0x1a57813a7  libsystem_symptoms.dylib (2022.140.4) <FDBF294D-E745-3E89-B474-DADA17135BEE> /usr/lib/system/libsystem_symptoms.dylib
+       0x1a8fc8000 -        0x1a8ff847b  libsystem_containermanager.dylib (689.100.6.700.1) <33FB585C-7D34-3F5D-97A0-501C5FAC3F11> /usr/lib/system/libsystem_containermanager.dylib
+       0x1aa232000 -        0x1aa2365df  libsystem_configuration.dylib (1351.140.5.700.1) <17DACC61-AB01-3605-B2C8-618E4781B649> /usr/lib/system/libsystem_configuration.dylib
+       0x1aa237000 -        0x1aa23d4ef  libsystem_sandbox.dylib (2401.140.15.700.3) <CDEA0D5C-056D-308C-8544-C36BA2B389B1> /usr/lib/system/libsystem_sandbox.dylib
+       0x1ab242000 -        0x1ab244fe3  libquarantine.dylib (181.120.2) <B274436C-379E-3E0F-B8E2-A7AA69E46E73> /usr/lib/system/libquarantine.dylib
+       0x1ab958000 -        0x1ab95eee7  libsystem_coreservices.dylib (178.6.6) <985B59F1-7321-37D0-8182-27B82BD7D1B1> /usr/lib/system/libsystem_coreservices.dylib
+       0x1abdd6000 -        0x1abe132b7  libsystem_m.dylib (3291.100.4) <5F5F2F2E-557D-3441-8566-8B2009538753> /usr/lib/system/libsystem_m.dylib
+       0x1abe15000 -        0x1abe184e7  libmacho.dylib (1024.3) <CD255FF9-4E35-347A-B7E9-304517D3A871> /usr/lib/system/libmacho.dylib
+       0x1abe32000 -        0x1abe3f5ef  libcommonCrypto.dylib (600035) <65A3AFCF-9611-35C1-9697-8CF5409F0C83> /usr/lib/system/libcommonCrypto.dylib
+       0x1abe40000 -        0x1abe49ad7  libunwind.dylib (1900.125) <FA046DDB-1518-353B-A9B6-CD622328B746> /usr/lib/system/libunwind.dylib
+       0x1abe52000 -        0x1abe5c69f  libcopyfile.dylib (224) <459F7A49-1FEF-329E-8FC0-0A5FF6FBD902> /usr/lib/system/libcopyfile.dylib
+       0x1abe5d000 -        0x1abe6098f  libcompiler_rt.dylib (103.3) <7720A496-7B7A-33C1-B7F3-9E8B7DEA0622> /usr/lib/system/libcompiler_rt.dylib
+       0x1abe61000 -        0x1abe65a1b  libsystem_collections.dylib (1698.140.3.700.2) <04F3AE1A-0F6D-3F68-84E0-EAFFBC0CE0A5> /usr/lib/system/libsystem_collections.dylib
+       0x1abe66000 -        0x1abe692c7  libsystem_secinit.dylib (153.140.2) <63965812-869C-3C3C-A950-FA563CE8EB1E> /usr/lib/system/libsystem_secinit.dylib
+       0x1abe6a000 -        0x1abe6cb6f  libremovefile.dylib (81) <E34EF2FA-1C55-3222-B1A2-CEEEC4B02F3D> /usr/lib/system/libremovefile.dylib
+       0x1abe6d000 -        0x1abe6df27  libkeymgr.dylib (31) <EE1B8708-02B1-385D-B648-E87B4D25391B> /usr/lib/system/libkeymgr.dylib
+       0x1abe6e000 -        0x1abe76d57  libsystem_dnssd.dylib (2600.140.3) <EE79FBDA-E408-3D4C-A0EE-C56BE107CC06> /usr/lib/system/libsystem_dnssd.dylib
+       0x1abe77000 -        0x1abe7c0b3  libcache.dylib (95) <4242CCFB-F060-3493-B555-C26217B4F080> /usr/lib/system/libcache.dylib
+       0x1abe7d000 -        0x1abe7eca3  libSystem.B.dylib (1351) <068263F7-CF15-3E1C-A305-5DF8F9C51AD5> /usr/lib/libSystem.B.dylib
+       0x28527e000 -        0x285285109  libRosetta.dylib (349) <CD13AF03-27E5-387A-8DF1-7016C957167A> /usr/lib/libRosetta.dylib
+       0x2866a9000 -        0x2866acdeb  libsystem_darwindirectory.dylib (122) <8627B2A8-CE68-3F9A-B3E8-2F4E4E35CF66> /usr/lib/system/libsystem_darwindirectory.dylib
+       0x2866ad000 -        0x2866b4523  libsystem_eligibility.dylib (181.140.5) <B76C1C04-8001-3113-BE6E-FDDEA1118104> /usr/lib/system/libsystem_eligibility.dylib
+       0x2866b5000 -        0x2866ba6c5  libsystem_sanitizers.dylib (19) <6143DE0A-A328-3649-AF7D-8FC8781B86E7> /usr/lib/system/libsystem_sanitizers.dylib

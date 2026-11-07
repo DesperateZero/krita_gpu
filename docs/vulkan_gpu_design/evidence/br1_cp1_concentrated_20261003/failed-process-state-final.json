@@ -1,0 +1,20 @@
+{
+  "query": [
+    "ps",
+    "-p",
+    "32658,48549,43034,87095,59123,70089,83020",
+    "-o",
+    "pid=,stat=,comm="
+  ],
+  "exit_code": 0,
+  "processes": [
+    "32658 UE   /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+    "43034 UE   /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+    "48549 UE   /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+    "59123 UEs  /Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/FreehandStrokeTest",
+    "70089 UE   /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+    "83020 UE   /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+    "87095 UE   /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+  ],
+  "scope": "32658 and 48549 belong to earlier failed candidates in this batch; the others predate this batch. Kill was attempted for the two current-batch failed processes; neither has reaped. Current final matrix and pressure processes all exited zero."
+}

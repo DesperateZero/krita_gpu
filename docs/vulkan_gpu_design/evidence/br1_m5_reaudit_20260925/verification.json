@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-09-25T05:40:07.382467+00:00",
+  "source_revision": "a0400cf0f7484004dd520e5c03dbc71cbe6827b4",
+  "tracked_status": "",
+  "tests": [
+    {
+      "name": "KisPageStoreCpuMutationTest",
+      "architecture": "arm64",
+      "totals": [
+        "577",
+        "0",
+        "0"
+      ],
+      "log": "cpu-mutation-arm64.log",
+      "binary_sha256": "f3c09665d5a54d77b84f1140a0afae2e2a39a1b85b5e3f0b9b8129fe4dd66432"
+    },
+    {
+      "name": "KisPageStoreReferenceTest",
+      "architecture": "arm64",
+      "totals": [
+        "297",
+        "0",
+        "0"
+      ],
+      "log": "reference-arm64.log",
+      "binary_sha256": "08e5cbf39e8ca1fc7b1386a4d4f479937116c998e5ca6e340d70f477c0c684ca"
+    }
+  ],
+  "architecture_gate": "pass: see architecture.log",
+  "reachability_self_tests": "6 passed: see reachability-self-tests.log",
+  "coverage": "Local audit probes + current arm64 CPU Mutation and Reference suites. Prior final dual-architecture matrix is historical evidence at the same source revision; not rerun by this audit. No production edits."
+}

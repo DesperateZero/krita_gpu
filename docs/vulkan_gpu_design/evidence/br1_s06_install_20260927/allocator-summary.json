@@ -1,0 +1,33 @@
+{
+  "scope": "Real CPU native/generic prepareWritePlanLocked installation: after descriptor preparation, before physical claim through metadata/retag/ledger/descriptor install. Rejections end at unlocked cleanup entry, before deferred cleanup. Preparation, pixel writes, adapter return, publication, retirement and whole-operation performance excluded.",
+  "matrix_source_patch_sha256": "e75930341f74f86a4433c3bbca2520a94cca5da803e5a0dfab7417bd55ffd185",
+  "same_matrix_library": true,
+  "production_install_interval_qualified": true,
+  "stage_or_performance_qualification": false,
+  "probe_results": [
+    {
+      "architecture": "arm64",
+      "identity": "install-arm64-joint-03-identity.json",
+      "log": "install-arm64-joint-03.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 31080,
+      "successful_installs": 10360,
+      "physical_claim_rejections": 10360,
+      "metadata_revision_rejections": 10360,
+      "all_intervals_zero_allocations_bytes_frees": true,
+      "library_sha256": "dabf503f24426fb599e68ae86a66c633f21c0e9d3d24e8805267ee697376502a"
+    },
+    {
+      "architecture": "x86_64",
+      "identity": "install-x86_64-joint-final-identity.json",
+      "log": "install-x86_64-joint-final.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 31080,
+      "successful_installs": 10360,
+      "physical_claim_rejections": 10360,
+      "metadata_revision_rejections": 10360,
+      "all_intervals_zero_allocations_bytes_frees": true,
+      "library_sha256": "dabf503f24426fb599e68ae86a66c633f21c0e9d3d24e8805267ee697376502a"
+    }
+  ]
+}

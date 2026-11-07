@@ -1,0 +1,9 @@
+[
+  {
+    "stage": "fixture compile before all samples",
+    "exit_code": 1,
+    "error": "no member named isValid in KisPageMutationSession",
+    "source_snapshot": "failed-build-arm64-01/baseline.cpp",
+    "repair": "Use the existing beginWrite guard validity, as original value fixture does; no product/protocol change; no samples collected"
+  }
+]

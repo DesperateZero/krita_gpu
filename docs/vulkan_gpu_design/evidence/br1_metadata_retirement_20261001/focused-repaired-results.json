@@ -1,0 +1,90 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "historyPreparationRevalidatesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.829,
+    "totals": [
+      "Totals: 32 passed, 1 failed, 0 skipped, 0 blacklisted, 766ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity() 'f.owner.prepareRetirementDebt(effects.data(), 2, &cookie, &f.error)' returned FALSE. (backing reservation exceeds its hard budget)"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.27,
+    "totals": [
+      "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 113ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "historyPreparationRevalidatesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.151,
+    "totals": [
+      "Totals: 32 passed, 1 failed, 0 skipped, 0 blacklisted, 773ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity() 'f.owner.prepareRetirementDebt(effects.data(), 2, &cookie, &f.error)' returned FALSE. (backing reservation exceeds its hard budget)"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.24,
+    "totals": [
+      "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 117ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

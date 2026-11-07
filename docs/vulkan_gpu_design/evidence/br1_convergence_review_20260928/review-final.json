@@ -1,0 +1,160 @@
+{
+  "captured_at": "2026-09-28T13:09:28.924799+00:00",
+  "scope": "Static convergence and source/evidence audit, not a new runtime qualification",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "c1c6f145e69d6e841fb15c5873ea23db49da681f31ddc66f33b6530fd1ae3c2d",
+  "upstream": "9a24ae0d8c070884fb013594191002e1a1b39a19",
+  "matches_last_batch": true,
+  "last_batch_evidence": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928",
+  "last_batch_matrix_totals": [
+    9154,
+    0,
+    0
+  ],
+  "matrix_records": 44,
+  "matrix_all_passed": true,
+  "last_batch_probe_count": 66,
+  "identity_files_checked": 28,
+  "identity_mismatches": [],
+  "observed_binary_hashes": {
+    "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/CMakeCache.txt": "1c23915f07a750a7e1bb61e63a7d57dcdd103aadeeb05efa8b863182787a38ac",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/compile_commands.json": "1c13e7672c3955662be0079f35aac2c48b877018e3d48a5de699a92bae29ec3a",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "2c6a27bf1e564954b9f39bfc26478f1fb7e83617112ff195004430dbba3c6b73",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaui.21.0.0.dylib": "4e28e1fe0ff28c97c1aa0a9f75c28fe8456bf542117bd9eefa86ebcb18d70296",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapigment.21.0.0.dylib": "516520112a47787ab33014867e373eb8c4f8004178d885e02f2e38704a254e3d",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritadefaultpaintops.so": "0afb7032b89a777aec6059f3b594c931edfa2fa406daf8c62d7dd31e2f0e7ec0",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/lib/libkritadefaultpaintops_static.a": "33591d4cbd04a81aa22d70b9da6969cfeba38fcd06a73a58c7d1f680c8f094b2",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest": "2c94d7ce4353ea762c8a554a8b1ff4644045e00ef8690ee040f70acc9b45da0a",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest": "b22f13e1dc8e8de2ac9aae596aa74cee815e89c0da35133ad2a202aa24fc9c1c",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "8b45fb0d223da031713ddae3331e93e7b90eb150a60d74e8f1a8ad3b7095641f",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "f610d3a29224ec919e2dcbb81536b4e2c5118c8b549f0c00be1793de2f3721e8",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "b9dc31d82a26b759aa7b68fc06fe49709b28f3a7e733fcf7c8142517c477d0b0",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "25b49bdfdbfe4d0e9fed3f40d78d83c60dae3a2f46d1b8a8b7fba2d2cfc2689f",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReadBaselineTest": "ed1d568bcd5005f1bec9bf64d4cb483c74023dbd61c20c5a401e8cc54dbc2650",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_painter_test": "f8cb32b48218957a95eefe43d7e9c8cbe56da8f99cff0d15f5abf8ba87234169",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tile_data_store_test": "8da76acfbbdfe626a729f5d5994d1ea1c83c48112921caa2352f39fef2f757ba",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "7961369d8564f14fc872c6181bab7c9f71a5450247562e1663739d5e828c0727",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_transaction_test": "d59d56fa43943968c5b9b62a5bf0359a731b552d67725b76b36d2551c37ffdea",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_stroke_test": "063e5c401d9e50dbffe23aaf2494ce38b14692309bb61441acbacbd27daa6bfd",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_strokes_queue_test": "0407b54545a1eea2372de278fa6b61c8454d62d5250fb62bb9515211b2127883",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_simple_stroke_strategy_test": "2326d01e9ec2cc311777f737169e73bab162c3044467f2a31d3c784ee67ee3e3",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_update_scheduler_test": "e087ef994f96589e0518ba3778fa5c3ef23db425d9b9ad82c89a160d11d2694b",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_lockless_stack_test": "e62400144a7f5bb80e9e8df49bbd58735e07e86b2b63f11c155a7722e60dec67",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPainterStrokeCompletionTest": "db28af931dbfbd3fb1be395e1565b1619b18c791618f74f37e58570dc6cd4565",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_iterators_ng_test": "e6c1f0d10f2859c0fb9157624d0e74114d83b185808b74455b65df53084290d5",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisDabRenderingQueueTest": "c3ccf98f8ec14d96860baf1e385836b104bf00d03e28502a6feeab21cfded99c",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KoRgbU8ColorSpaceTester": "32e908b2407e40c7e8f8fd1a8f27f59e47ace160667246222560224a6179a012"
+  },
+  "source_locations": {
+    "default_owner": {
+      "path": "plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 184,
+      "symbol": "bltFixed(clips, state->dabsQueue, nullptr)",
+      "sha256": "9c1bbe9dde8ff6e0a980f4a58a9287fe3b0c07c4f6239b1a0df2953091eed4eb"
+    },
+    "history_owner": {
+      "path": "libs/image/kis_transaction_data.cpp",
+      "line": 187,
+      "symbol": "bool KisTransactionData::beginStrokeMutation",
+      "sha256": "488ec356664c6e1e65b378f3f3276528ccebb23f240c757e496701f4267ce7cf"
+    },
+    "publication_gate": {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 929,
+      "symbol": "bool KisTiledDataManagerPageStoreBackend::finishOwnedTransaction",
+      "sha256": "103b14f142e5fb724378699344c20fb58bff00619f006d97b960c66147d3f374"
+    },
+    "session_seal": {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "line": 2105,
+      "symbol": "bool KisPageMutationSession::sealImpl",
+      "sha256": "b3abe2032008630f8d4e6c2a721d5d20443d38a9642e490d35fcb5f1d4b86f26"
+    },
+    "prepared_key_gate": {
+      "path": "libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 56,
+      "symbol": "while (m_gate.test_and_set",
+      "sha256": "e1e11ade7b22be0c0ba8af1cbd8895548a54f604c4416dd9209fa6ae3f6cf224"
+    },
+    "prepared_key_close": {
+      "path": "libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 216,
+      "symbol": "void closePreparedKeys()",
+      "sha256": "e1e11ade7b22be0c0ba8af1cbd8895548a54f604c4416dd9209fa6ae3f6cf224"
+    },
+    "freehand_test_registration": {
+      "path": "libs/ui/tests/CMakeLists.txt",
+      "line": 137,
+      "symbol": "krita_add_broken_unit_test( freehand_stroke_test.cpp",
+      "sha256": "a00912f820f1f53e0e2537d033846dfc265b511ebd7af1a9bc085e02dba678a6"
+    },
+    "freehand_benchmark_registration": {
+      "path": "libs/ui/tests/CMakeLists.txt",
+      "line": 142,
+      "symbol": "krita_add_broken_unit_test( FreehandStrokeBenchmark.cpp",
+      "sha256": "a00912f820f1f53e0e2537d033846dfc265b511ebd7af1a9bc085e02dba678a6"
+    }
+  },
+  "metrics_method": "Physical line diff vs HEAD, including untracked C/C++ source under libs/plugins; tests by path, generated audit separated",
+  "recent_diff": {
+    "other": {
+      "files": 3,
+      "added": 22,
+      "removed": 3,
+      "net": 19
+    },
+    "generated_audit": {
+      "files": 6,
+      "added": 105750,
+      "removed": 41326,
+      "net": 64424
+    },
+    "production_source": {
+      "files": 90,
+      "added": 9954,
+      "removed": 2145,
+      "net": 7809
+    },
+    "test_source": {
+      "files": 25,
+      "added": 11153,
+      "removed": 152,
+      "net": 11001
+    }
+  },
+  "upstream_file_comparison": {
+    "libs/image/kis_transaction_data.cpp": {
+      "upstream_lines": 358,
+      "current_lines": 532,
+      "upstream_blob": "b8efcd391bbe445d0f4f38c22312b8630558fa37"
+    },
+    "libs/image/tiles3/kis_tile.cc": {
+      "upstream_lines": 334,
+      "current_lines": 644,
+      "upstream_blob": "40db51dac95d1adf604ee3d0d5c9f75eab83548d"
+    },
+    "libs/image/tiles3/kis_tiled_data_manager.cc": {
+      "upstream_lines": 782,
+      "current_lines": 1871,
+      "upstream_blob": "64a37ccf91bb4b72ad9b9cd84f1edc311bac7aea"
+    },
+    "libs/image/kis_painter_blt_multi_fixed.cpp": {
+      "upstream_lines": 194,
+      "current_lines": 229,
+      "upstream_blob": "75a40583f313dc1b73edbe1d9a749acfcb2d19af"
+    },
+    "libs/image/3rdparty/lock_free_map/concurrent_map.h": {
+      "upstream_lines": 366,
+      "current_lines": 722,
+      "upstream_blob": "a7d5f8fa650d9cc545e1a38005c0b1d7ecc453eb"
+    },
+    "plugins/paintops/defaultpaintops/brush/kis_brushop.cpp": {
+      "upstream_lines": 407,
+      "current_lines": 434,
+      "upstream_blob": "cc8cf73ae9e33b5b19f425f9756385ac80f042bb"
+    }
+  },
+  "product_benchmarks_rerun": false,
+  "new_stage_or_performance_qualification": false
+}

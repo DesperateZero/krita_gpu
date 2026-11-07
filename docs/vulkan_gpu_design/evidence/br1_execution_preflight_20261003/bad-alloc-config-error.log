@@ -1,0 +1,7 @@
+(lldb) target create "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test"
+Current executable set to '/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test' (arm64).
+(lldb) command source -s 0 'docs/vulkan_gpu_design/evidence/br1_execution_preflight_20261003/bad-alloc-backtrace.lldb'
+Executing commands in '/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_execution_preflight_20261003/bad-alloc-backtrace.lldb'.
+(lldb) settings set target.env-vars QT_QPA_PLATFORM=offscreen KIS_BR1_SEED=12345 KIS_TEST_PREFIX_PATH=/Users/apple/krita_gpu/krita/_install KIS_TEST_PLUGIN_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin
+(lldb) settings set target.process.working-dir /Users/apple/krita_gpu/krita
+error: invalid value path 'target.process.working-dir'

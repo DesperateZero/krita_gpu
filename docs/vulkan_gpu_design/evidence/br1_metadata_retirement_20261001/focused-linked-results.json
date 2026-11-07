@@ -1,0 +1,88 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 2.73,
+    "totals": [
+      "Totals: 31 passed, 1 failed, 0 skipped, 0 blacklisted, 686ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.42,
+    "totals": [
+      "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 86ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.135,
+    "totals": [
+      "Totals: 31 passed, 1 failed, 0 skipped, 0 blacklisted, 800ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.485,
+    "totals": [
+      "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 118ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

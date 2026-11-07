@@ -1,0 +1,449 @@
+{
+  "window_changes": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "kind": "same-image",
+      "sd64ms": 0.026613832347133177,
+      "sd512ms": 0.019779029230565546,
+      "relative_sd_reduction": 0.2568139389855242
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "kind": "cross-image",
+      "sd64ms": 0.03842891565520313,
+      "sd512ms": 0.02029342633928422,
+      "relative_sd_reduction": 0.47192300398576126
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "kind": "same-image",
+      "sd64ms": 0.028964580558765433,
+      "sd512ms": 0.023288342346863482,
+      "relative_sd_reduction": 0.19597170414346543
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "kind": "cross-image",
+      "sd64ms": 0.03560556731271066,
+      "sd512ms": 0.013418024614046072,
+      "relative_sd_reduction": 0.6231481302853434
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "kind": "same-image",
+      "sd64ms": 0.030383896293086635,
+      "sd512ms": 0.0135828401889689,
+      "relative_sd_reduction": 0.5529592367632108
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "kind": "cross-image",
+      "sd64ms": 0.10004832659076193,
+      "sd512ms": 0.026620914463889655,
+      "relative_sd_reduction": 0.7339194430229707
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "kind": "same-image",
+      "sd64ms": 0.05129970564857796,
+      "sd512ms": 0.020504119805172045,
+      "relative_sd_reduction": 0.6003072620799643
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "kind": "cross-image",
+      "sd64ms": 0.07865861781135315,
+      "sd512ms": 0.014902526998929997,
+      "relative_sd_reduction": 0.8105417128651979
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "kind": "same-image",
+      "sd64ms": 0.061635285593542886,
+      "sd512ms": 0.015645762101788082,
+      "relative_sd_reduction": 0.7461557620586869
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "kind": "cross-image",
+      "sd64ms": 0.02368338393593056,
+      "sd512ms": 0.015605266416922468,
+      "relative_sd_reduction": 0.34108797715991124
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "kind": "same-image",
+      "sd64ms": 0.054778032286590964,
+      "sd512ms": 0.031964757899209606,
+      "relative_sd_reduction": 0.4164675771489109
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "kind": "cross-image",
+      "sd64ms": 0.022568017667944872,
+      "sd512ms": 0.019371165559855325,
+      "relative_sd_reduction": 0.14165409452999
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "kind": "same-image",
+      "sd64ms": 0.022160318806727117,
+      "sd512ms": 0.017767666695888574,
+      "relative_sd_reduction": 0.1982215215019869
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "kind": "cross-image",
+      "sd64ms": 0.028622432860254853,
+      "sd512ms": 0.023693494916416806,
+      "relative_sd_reduction": 0.172205415518063
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "kind": "same-image",
+      "sd64ms": 0.04128047123154552,
+      "sd512ms": 0.02084309717028963,
+      "relative_sd_reduction": 0.4950857742543925
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "kind": "cross-image",
+      "sd64ms": 0.12045795322727067,
+      "sd512ms": 0.016473071660528037,
+      "relative_sd_reduction": 0.8632462928417194
+    }
+  ],
+  "descriptive_counts": {
+    "cross-image-512ms": 6,
+    "same-image-512ms": 6,
+    "cross-image-64ms": 2,
+    "same-image-64ms": 2
+  },
+  "residual512ms": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same-image-512ms",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9920346690287463,
+      "diagnostic_95pct_interval": [
+        0.9672203961526671,
+        0.996882591661704
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.023288342346863482,
+      "paired_log_median_latency_sd": 0.015245308839506297,
+      "median_latency_ratio": 0.9834745171866162,
+      "median_top1pct_fraction": 0.020714788895480066,
+      "maximum_operation_ns": 5145916,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        485534728163331163,
+        1305598583820085541,
+        2563770175145834513,
+        3899378788485909448,
+        5393897007272004033,
+        6383205516875056495,
+        6417700486872474412,
+        6626339525956350228,
+        6659739589837143132,
+        9224091039685454327,
+        9750772401141036723,
+        9755284530650082391,
+        10090933517761620502,
+        10992466377372190238,
+        11895326293525614759,
+        12153724877448035189,
+        12298382681292992215,
+        13256073573566855987,
+        13838940456013867533,
+        13871591190091536462,
+        14862701186396002148,
+        16699992016220608886,
+        17130376057721787870,
+        18356054563578792571
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-512ms",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0071320565877233,
+      "diagnostic_95pct_interval": [
+        0.9805130145501666,
+        1.0281189297452134
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.026620914463889655,
+      "paired_log_median_latency_sd": 0.006105199105001203,
+      "median_latency_ratio": 1.0042478917890842,
+      "median_top1pct_fraction": 0.01790594419631969,
+      "maximum_operation_ns": 2840375,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        319227876035750189,
+        1100408555018991649,
+        3619210019788730069,
+        3753249137047546315,
+        4773896164958487751,
+        5634135791477350106,
+        5794083665770076265,
+        6505887764528663545,
+        7185268403019987376,
+        7359822364578683733,
+        7587795279809904946,
+        8884381309474299336,
+        9141003228404526129,
+        9335617958822196596,
+        9416881979176948396,
+        10668810193945754290,
+        11145408407081199747,
+        11463277598644760253,
+        11826877397211250498,
+        13044849575569947766,
+        13258688548916512287,
+        14946966597279499215,
+        14994983103733704968,
+        15958774786911482964
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same-image-512ms",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9994187362517287,
+      "diagnostic_95pct_interval": [
+        0.9845656196005854,
+        1.0360222134026178
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.031964757899209606,
+      "paired_log_median_latency_sd": 0.012331746591881144,
+      "median_latency_ratio": 0.9977817771444877,
+      "median_top1pct_fraction": 0.02062540135057049,
+      "maximum_operation_ns": 11926208,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        978042203832731344,
+        4354883181952658089,
+        4455538272393372056,
+        4828487063751572803,
+        5013238467991674703,
+        5529006955804060636,
+        5647956026344325077,
+        6480249012960412340,
+        7500389134193471041,
+        7611812892693427047,
+        7985795766715451538,
+        9302246232905811585,
+        10312353749586593255,
+        10459938227431267081,
+        10637806626971985217,
+        11092800255325644259,
+        12956507800167894613,
+        14278742085120583276,
+        14376590816950608821,
+        15051829989468143316,
+        15276586291165044686,
+        15654387277929836168,
+        15672549731374592443,
+        16904668679700661142
+      ],
+      "hash_zero_processes": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross-image-512ms",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9912328779310086,
+      "diagnostic_95pct_interval": [
+        0.9799000712377789,
+        1.0100221316667226
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.019371165559855325,
+      "paired_log_median_latency_sd": 0.007344493137446945,
+      "median_latency_ratio": 0.9923076816382495,
+      "median_top1pct_fraction": 0.019009648878785215,
+      "maximum_operation_ns": 8293875,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ],
+      "hash_seeds": [
+        973093460459852374,
+        2196546285382684027,
+        3175562496784263183,
+        3685180729109156179,
+        4225871776022383016,
+        7432475066336657863,
+        7461687152787693425,
+        7684780327718296403,
+        8184384719749501970,
+        9662398006441885917,
+        9886206728061501234,
+        10545418887164608039,
+        10617090673910631987,
+        10720593440977747404,
+        10826452014873965996,
+        11221982130356132346,
+        11704107409525191588,
+        12901105670115325514,
+        13504205274308471530,
+        15492868696538334987,
+        15744964254769732500,
+        16086618131731262496,
+        16226165401161779196,
+        18152780471408617237
+      ],
+      "hash_zero_processes": 0
+    }
+  ],
+  "relative_sd_reduction_range": [
+    0.14165409452999,
+    0.8632462928417194
+  ],
+  "median_relative_sd_reduction": 0.48350438912007687,
+  "interpretation": "Accumulation-window improvement observed consistently in16/16 diagnosis combinations. Not a production time gain or formal family confidence claim. QoS and seed interventions do not consistently resolve variation.",
+  "finite_diagnosis_complete": true,
+  "measurement_resolution_fully_fixed": false,
+  "new_formal_matrix_started": false,
+  "old_qualification_changed": false,
+  "verification": {
+    "product_head": "38834c4e2612c819f9d088dfd59c59889f295a49",
+    "production_files_changed": 0,
+    "production_api_owner_fields_added": 0,
+    "candidate_inputs_verified": 2504,
+    "retrospective_processes": 1600,
+    "unchanged_complete_sample_body_sha256": "a3a4bd92d4291da5269d824987e80fbd3f4e8187c48032ffc5957935cf41f651",
+    "retrospective_inputs_verified": 1602,
+    "scopes": {
+      "diagnostic": {
+        "processes": 768,
+        "completed_operations": 1970025,
+        "operation_wall_ns": 49184979215,
+        "maximum_operation_ns": 8903458,
+        "median_top1pct_wall_fraction": 0.01697362596379941,
+        "all_work_exit_vectors_and_frozen_inputs_verified": true,
+        "frozen_files": 11
+      },
+      "seed-diagnostic": {
+        "processes": 384,
+        "completed_operations": 175597,
+        "operation_wall_ns": 24603961194,
+        "maximum_operation_ns": 11224333,
+        "median_top1pct_wall_fraction": 0.016986461061406825,
+        "all_work_exit_vectors_and_frozen_inputs_verified": true,
+        "frozen_files": 12
+      },
+      "window-diagnostic": {
+        "processes": 768,
+        "completed_operations": 8836604,
+        "operation_wall_ns": 221216035876,
+        "maximum_operation_ns": 11926208,
+        "median_top1pct_wall_fraction": 0.018112724923631966,
+        "all_work_exit_vectors_and_frozen_inputs_verified": true,
+        "frozen_files": 9
+      },
+      "preflight": {
+        "processes": 48,
+        "all_processes_passed": true
+      },
+      "seed-preflight": {
+        "processes": 24,
+        "all_processes_passed": true
+      }
+    },
+    "new_diagnostic_processes": 1920,
+    "new_preflight_processes": 72,
+    "new_completed_operation_samples": 10982226,
+    "no_optional_extension_tail_removal_or_previous_requalification": true,
+    "current_safety_resources_structure": "Inherited unchanged product evidence11180/0/0,6 resource probes and architecture/tool checks; no new full safety run",
+    "closed_budget_scope": "Snapshot taken after close while Store is alive; MetadataArena live retained until Store destruction. Destruction/drain occurs before sample return; no invented post-destruction snapshot.",
+    "formal_calibration_equivalent": 2,
+    "formal_calibration_required": 20,
+    "M6_complete": false,
+    "persistent_default_enabled": false,
+    "verification_script_sha256": "97ae9779f58b0668b11ccb15a3366eb28c20b72b3248dbcaa73d9cc6f1cda7d7"
+  },
+  "M6_complete": false,
+  "persistent_default_enabled": false
+}

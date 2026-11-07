@@ -1,0 +1,45 @@
+{
+  "scope": "M6 cold-state deferral and same-provider borrow; independent resolution protocol after the previous frozen batch",
+  "parent": "79e1c8d1eff509e683c120df25861eb21512fb5f",
+  "document_base": "2614383c1",
+  "architectures": ["arm64", "x86_64"],
+  "architecture_limit": "arm64 native; x86_64 Rosetta",
+  "K": [1,16],
+  "cases": ["hit","single","native-pin","generic-lease","last-use"],
+  "work": "N=K/H0 history roots plus one exact old View; independent 64x64 B4 replicas; Preserve complete new input; begin transaction through mutation/full memset/seal/canonical commit",
+  "sample_lifecycle": "Every sample independently initializes its required one or two exact replicas, validates all old/current bytes and actual copy/payload/budget work, releases blockers, closes the Store, destroys its metadata and drains reclamation. No artificial alternate is added between generations of a live sample",
+  "outside_timer": "Setup, before creation, byte/work/budget verification, completion, close/Store destruction and drain; summarized separately. All measured operation durations retained, first/last budgets and observed class peaks reported",
+  "window": {"minimum_operation_ns_per_arm":64000000,"minimum_completed_operations":128,"warmup_per_arm":8,"safety_max_samples_per_arm":100000,"stopping":"Predetermined cumulative operation wall budget AND minimum work count; never extend after looking at statistics"},
+  "parent_comparison": {
+    "cases":["hit","native-pin"],"buckets":8,"pairs":40,
+    "metric":"actual current/parent completed-operation throughput; median of20 predeclared balanced two-pair log blocks",
+    "bootstrap":50000,"seed":261008,"two_sided_confidence":0.99375,
+    "gate":"lower>1 confirms improvement; hit is an affected control, not required to show significant positive increment",
+    "order":"Separate original product images, reverse order each pair and rotate all eight buckets; each process meets the same predetermined timing window"
+  },
+  "calibration": {
+    "buckets":20,"pairs":40,"metric":"normal-on selection/original current completed-operation throughput; median20 balanced two-pair log blocks",
+    "bootstrap":50000,"seed":261008,"two_sided_confidence":0.9975,"equivalence":[0.98,1.02],
+    "order":"Separate processes, original product vs selection image with normal handoff; reverse order each pair, rotate20 buckets",
+    "meaning":"20-bucket family nominal95% equivalence; same-source switch/library effects remain a separate qualification. No subtraction or borrowed per-bucket calibration"
+  },
+  "hit": {
+    "buckets":4,"pairs":40,"metric":"median40 independent process-pair log(off/on median operation latency)",
+    "bootstrap":20000,"seed":261008,"one_sided_confidence":0.9875,"gate":"latency reduction lower>0",
+    "order":"Each independent process runs both separately initialized arms; alternate off/on order for every sample pair and starting order for every process pair"
+  },
+  "miss": {
+    "cases":["single","native-pin","generic-lease","last-use"],"buckets":16,"pairs":40,
+    "metric":"on/off actual completed-operation throughput in one independent paired process; median20 predeclared balanced two-process log blocks",
+    "bootstrap":50000,"seed":261008,"one_sided_confidence":0.996875,"gate":"throughput lower>=0.98",
+    "order":"Alternate sample arm order within each independent process, same complete lifecycle and equal completed counts; rotate16 buckets and reverse initial arm order across processes",
+    "independent_unit":"Process containing both arms, then predeclared adjacent order blocks; individual inner samples never treated as independent repeats"
+  },
+  "protected":"Original fixed-M5 same-dependency public Fresh/H4 fixtures,40 pairs/four buckets per family,250ms completed-rate/20 order blocks,50000 bootstrap seed260926,one-sided98.75% lower>=0.98; new samples, no fixture change",
+  "preflight":"Same finite90 two-sample semantic/capacity/generation fixture processes plus2 selection-image targeted QTest processes; add12 fixed/paired 1ms window protocol smoke processes covering both architectures and switches; diagnostic times excluded",
+  "mechanism":"40 two-sample diagnostic image processes, parent/current×two architectures×K1/K16×five shapes; copied one-TU call-site counters only. Expect [before ledger lookup,cold Prepared construction]: hit parent[K,K] current[0,K], native pin parent[K,K] current[0,0], other shapes[0,0]. Original phase observer also checks unchanged success/fallback responsibilities. No diagnostic image used for time qualification",
+  "images":"Original parent dylib copied before changes; current product unmodified measurement image; selection copy changes only TLS discovery switch; separate mechanism parent/current copies add only private counters in the one coordinator TU. Actual image paths and all input hashes checked",
+  "stopping":"Exactly40 process pairs/bucket; no trimming, replacement, optional sampling or threshold changes. Wrong bytes/work/image, timeout, abnormal exit or input change stops the affected scope and retains all data; statistics never stops or extends scopes",
+  "execution":"All performance processes sequential, no build/test/profiler/analysis overlap. No stage clocks or enabled mechanism recorder; bounded output per process and final scope consolidation",
+  "qualification":"Each family independent, nominal95% at prescribed corrections. Parent/current production increment independent of selection calibration. Same-image results need applicable calibration for product qualification. Metadata comparable residency>=25%, CP0 full required, natural business producer/distribution, M7/M8/GPU and default strategy stay separate"
+}

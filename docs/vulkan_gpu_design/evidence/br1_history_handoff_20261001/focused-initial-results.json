@@ -1,0 +1,90 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordRefusedBeforePhysicalResult",
+      "retirementRecordTransfersAtCapacity",
+      "capturedReleaseKeepsOriginalFacts",
+      "captureStorageRefusalPrecedesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "oldTransactionBaseReleaseReclaimsDeferredHistory",
+      "historyReachabilityIgnoresRetiredRootBacklog",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "closePollsDetachedRetirement",
+      "publicationWhileCapturedReadersChange"
+    ],
+    "exit_code": 13,
+    "duration_seconds": 3.363,
+    "totals": [
+      "Totals: 44 passed, 13 failed, 0 skipped, 0 blacklisted, 677ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(work-storage) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(detach-debt) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(automatic) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(close) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::captureStorageRefusalPrecedesProtection() 'f.store->configureBackingLimits(limits)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp1-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp1-history257) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp4-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp4-history257) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp8-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp8-history257) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp16-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp16-history257) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordRefusedBeforePhysicalResult",
+      "retirementRecordTransfersAtCapacity",
+      "capturedReleaseKeepsOriginalFacts",
+      "captureStorageRefusalPrecedesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "oldTransactionBaseReleaseReclaimsDeferredHistory",
+      "historyReachabilityIgnoresRetiredRootBacklog",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "closePollsDetachedRetirement",
+      "publicationWhileCapturedReadersChange"
+    ],
+    "exit_code": 13,
+    "duration_seconds": 2.15,
+    "totals": [
+      "Totals: 44 passed, 13 failed, 0 skipped, 0 blacklisted, 742ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(work-storage) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(detach-debt) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(automatic) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(close) 'f.init(nullptr, true)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::captureStorageRefusalPrecedesProtection() 'f.store->configureBackingLimits(limits)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp1-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp1-history257) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp4-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp4-history257) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp8-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp8-history257) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp16-history65) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp16-history257) Compared values are not the same"
+    ],
+    "passed": false
+  }
+]

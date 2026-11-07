@@ -1,0 +1,31 @@
+{
+  "old": false,
+  "arch": "x86_64",
+  "mode": "clone-payload",
+  "inject": false,
+  "diagnostic": false,
+  "command": [
+    "arch",
+    "-x86_64",
+    "/usr/bin/env",
+    "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+    "DYLD_INSERT_LIBRARIES=/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/native-fault.dylib",
+    "DYLD_PRINT_LIBRARIES=1",
+    "/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/tile-lifetime-probe",
+    "clone-payload",
+    "0",
+    "0"
+  ],
+  "pid": 66429,
+  "actual_exit_code": 0,
+  "reaped": true,
+  "timed_out": false,
+  "seconds": 0.1324425000930205,
+  "image_loaded": true,
+  "observer_loaded": true,
+  "observations": [
+    "RESULT mode=clone-payload inject=0 diagnostic=0 hits=0 caught=0 loaded=0 claim=1 clone_live=0 unchanged=1 tiles=1",
+    "CLEANUP tiles=0 resident=0"
+  ],
+  "log_sha256": "5056d3580d6165bf01ce33f7b9a7f9bf2b905ef10d074811a489a31769694421"
+}

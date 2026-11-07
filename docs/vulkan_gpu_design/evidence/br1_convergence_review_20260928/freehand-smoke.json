@@ -1,0 +1,50 @@
+{
+  "scope": "Existing FreehandStrokeTest smoke only; no persistent owner or performance qualification",
+  "environment": {
+    "QT_QPA_PLATFORM": "offscreen",
+    "KIS_BR1_SEED": "12345",
+    "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+    "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+  },
+  "records": [
+    {
+      "architecture": "arm64",
+      "command": [
+        "arch",
+        "-arm64",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+        "testAutoBrushStroke"
+      ],
+      "started": "2026-09-28T12:55:30.221901+00:00",
+      "returncode": 0,
+      "totals": [
+        "3",
+        "0",
+        "0"
+      ],
+      "log": "freehand-arm64.log",
+      "passed": true
+    },
+    {
+      "architecture": "x86_64",
+      "command": [
+        "arch",
+        "-x86_64",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+        "testAutoBrushStroke"
+      ],
+      "started": "2026-09-28T12:55:42.489814+00:00",
+      "returncode": 0,
+      "totals": [
+        "3",
+        "0",
+        "0"
+      ],
+      "log": "freehand-x86_64.log",
+      "passed": true
+    }
+  ],
+  "binary_sha256": "03046d9e25638ff7f72a469227e768c544664866d074bf9d19d3df3a9716d463",
+  "benchmark_binary_sha256": "99fc4b82be574248de2341884f9fdad55ce687ea86b49966662f87f450e2da7c",
+  "product_performance_measured": false
+}

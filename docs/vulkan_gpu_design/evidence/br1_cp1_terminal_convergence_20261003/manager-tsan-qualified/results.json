@@ -1,0 +1,18 @@
+[
+  {
+    "label": "kis_tiled_data_manager_test-arm64-00",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/kis_tiled_data_manager_test",
+      "-nocrashhandler"
+    ],
+    "pid": 4489,
+    "exit_code": 66,
+    "totals": [],
+    "failures": [
+      "WARNING: ThreadSanitizer: data race (pid=4489)",
+      "SUMMARY: ThreadSanitizer: data race KisTiledExtentManager.cpp:63 in KisTiledExtentManager::Data::add(int)"
+    ]
+  }
+]

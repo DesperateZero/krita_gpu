@@ -1,0 +1,34 @@
+{
+  "processes": 88,
+  "qtest_passed": 264,
+  "qtest_failed": 0,
+  "observation_selftests": 2,
+  "all_loading_pixels_callbacks_exit_checks": true,
+  "projection_update_variations": [
+    [
+      "fill",
+      38,
+      "fill",
+      18
+    ]
+  ],
+  "other_projection_updates": 19,
+  "fill_primary_keeps_all_samples": true,
+  "sensitivity_is_post_hoc_complete_block_exclusion": true,
+  "max_process_cpu_vs_rusage_difference_ns": 6000,
+  "all_analysis_parent_child_and_boundary_checks": true,
+  "production_tree_unchanged": true,
+  "formal_m6_new_passes": 0,
+  "experiment_not_promoted": true,
+  "limitations": [
+    "ARM native only",
+    "diagnostic clock and fixed event capacity perturbation",
+    "no complete lock/critical-path dependency graph",
+    "fill-only experiment has undo regression and one coalesced projection update; no full product qualification"
+  ],
+  "non_runtime_failures": [
+    "upstream moc relative include assertion, v0 preserved",
+    "objdump first omitted disassemble; second used unsupported equals-form dis-symname; final separate-argument command succeeded",
+    "freeze v0 asserted all88 updates19, rejected one fill18; raw retained and post-hoc sensitivity added without resampling"
+  ]
+}

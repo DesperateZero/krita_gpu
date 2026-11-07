@@ -1,0 +1,17 @@
+{
+  "scope": "D2 independent prospective causal diagnosis; not formal M6 qualification",
+  "product": "38834c4e2612c819f9d088dfd59c59889f295a49",
+  "architectures": ["arm64", "x86_64"],
+  "K": [1,16],
+  "cases": ["hit", "native-pin"],
+  "pairs": 12,
+  "cells": ["same-image-unchanged", "cross-image-unchanged", "same-image-user-initiated", "cross-image-user-initiated"],
+  "images": "Existing original current product and frozen prior normal-on selection image; all inherited 2504 inputs verified before/after",
+  "window": {"minimum_operation_ns":64000000,"minimum_operations":128,"warmup":8,"safety_max_samples":100000},
+  "work": "Same complete original fixture; independent Store/exact replicas/old view; full Preserve input and begin-through-seal/canonical commit wall; all byte/copy/hand-off/budget/close/destruction/drain checks retained",
+  "intervention": "Evidence main thread only: record inherited QoS/nice; either leave QoS unchanged or request user-initiated before warmup. No system-wide scheduling change. Record getrusage deltas outside operation timer; no per-operation clock/counter addition",
+  "order": "Rotate 32 bucket/cell combinations across12 pairs; reverse left/right process order each pair; same-image cells load exact same current image for both processes, cross-image right uses normal-on selection image",
+  "statistics": "12 independent process pairs, descriptive two-sided95pct bootstrap of6 predetermined adjacent balanced two-pair log completed-throughput blocks; 20000 resamples seed261009. Mean/median/tails reported independently. No family qualification; no trimming or normalization",
+  "hypotheses": ["A/A variability comparable to cross-image variability supports environment/protocol resolution problem", "Only cross-image stable offset with narrow A/A supports image perturbation", "QoS can be a cause only if observed setting changes and paired variability/offset improves; if inherited setting already matches report no intervention"],
+  "stopping": "Exactly768 runtime processes; bad bytes/work/image/window, timeout or abnormal exit stops scope and retains all data; no optional extension. New formal protocol only after independent diagnosis, never reclassify previous qualification"
+}

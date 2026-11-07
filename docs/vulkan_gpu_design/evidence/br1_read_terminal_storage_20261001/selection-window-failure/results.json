@@ -1,0 +1,155 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 5.228,
+    "totals": [
+      "Totals: 659 passed, 0 failed, 0 skipped, 0 blacklisted, 2421ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 10,
+    "duration_seconds": 6.491,
+    "totals": [
+      "Totals: 1252 passed, 10 failed, 0 skipped, 0 blacklisted, 4395ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::genericRemovalRemainsAbsentUntilSeal(lease-cancel) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-0) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-1) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-0) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-1) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-0) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-1) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(stop-pending-retry) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(request-before-protection) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(lease-before-physical-pin) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.134,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 35ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 18.576,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 378ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 4.97,
+    "totals": [
+      "Totals: 659 passed, 0 failed, 0 skipped, 0 blacklisted, 2860ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 9,
+    "duration_seconds": 6.683,
+    "totals": [
+      "Totals: 1253 passed, 9 failed, 0 skipped, 0 blacklisted, 5245ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-0) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-1) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-0) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-1) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-0) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-1) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(stop-pending-retry) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(request-before-protection) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(lease-before-physical-pin) 'f.init()' returned FALSE. (initial page state is invalid: published cache does not match the published version)"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.511,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 47ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 22.439,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 413ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

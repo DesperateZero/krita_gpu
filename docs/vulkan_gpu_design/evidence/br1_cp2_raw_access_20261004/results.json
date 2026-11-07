@@ -1,0 +1,232 @@
+{
+  "product": "4b108d316c360b2d752d788799a9fffbe07ea863",
+  "product_parent": "b51a7602c82bbee6bf2a0df79400dd943d6df5b6",
+  "documentation_parent": "c1d7447effff26fa120ba02955eaecee8b9fbb14",
+  "production": {
+    "files": 5,
+    "added": 70,
+    "removed": 71,
+    "net": -1
+  },
+  "tests": {
+    "files": 2,
+    "added": 180,
+    "removed": 0
+  },
+  "final_regression_passed": 4186,
+  "target_only_passed_not_added_to_final": 82,
+  "runs": [
+    {
+      "round": "parent-arm64",
+      "pid": 19128,
+      "exit_code": 48,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 3.4180430830456316,
+      "totals": [
+        "Totals: 18 passed, 48 failed, 0 skipped, 0 blacklisted, 187ms"
+      ],
+      "failures": [
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-data-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-data-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-data-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-data-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-tileData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-tileData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-tileData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-tileData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-setData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-setData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-setData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp1-setData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-data-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-data-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-data-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-data-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-tileData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-tileData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-tileData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-tileData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-setData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-setData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-setData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp4-setData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-data-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-data-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-data-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-data-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-tileData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-tileData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-tileData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-tileData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-setData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-setData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-setData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp8-setData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-data-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-data-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-data-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-data-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-tileData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-tileData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-tileData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-tileData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-setData-batch0-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-setData-batch0-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-setData-batch1-pressure0) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)",
+        "FAIL!  : KisTiledDataManagerTest::testTileRawAccessRejectedWrite(bpp16-setData-batch1-pressure1) 'rejected' returned FALSE. (Rejected canonical write exposed or modified its before-image)"
+      ],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-target-arm64",
+      "pid": 20837,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 3.178577874903567,
+      "totals": [
+        "Totals: 82 passed, 0 failed, 0 skipped, 0 blacklisted, 289ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-manager-arm64",
+      "pid": 20999,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 102.56751399999484,
+      "totals": [
+        "Totals: 1185 passed, 0 failed, 0 skipped, 0 blacklisted, 101940ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-manager-x86_64",
+      "pid": 22169,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 127.37763954198454,
+      "totals": [
+        "Totals: 1185 passed, 0 failed, 0 skipped, 0 blacklisted, 116200ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-physical-arm64",
+      "pid": 20838,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 2.477105166995898,
+      "totals": [
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 27ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-physical-x86_64",
+      "pid": 22190,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 9.231893999967724,
+      "totals": [
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 38ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-resident-arm64",
+      "pid": 20839,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 2.589819874963723,
+      "totals": [
+        "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 143ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-resident-x86_64",
+      "pid": 22408,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.4360938749741763,
+      "totals": [
+        "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 204ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-cpu-arm64",
+      "pid": 20840,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 2.530770541052334,
+      "totals": [
+        "Totals: 290 passed, 0 failed, 0 skipped, 0 blacklisted, 60ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    },
+    {
+      "round": "candidate-cpu-x86_64",
+      "pid": 22498,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.5093592080520466,
+      "totals": [
+        "Totals: 290 passed, 0 failed, 0 skipped, 0 blacklisted, 72ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "identity": "verified against Git blobs or saved parent test source"
+    }
+  ],
+  "callgraph": {
+    "translation_units": 87,
+    "apis": 2175,
+    "call_edges": 27663,
+    "callbacks": 27,
+    "unresolved_edges": 0
+  },
+  "architecture": {
+    "passed": false,
+    "log": "architecture-02.log",
+    "remaining": [
+      "stale source checkpoint",
+      "pre-existing kis_memento_manager.cc direct_includes ratchet difference"
+    ]
+  },
+  "CP1": "closed by 92 section 16.108",
+  "CP2": "raw-refusal unit closed; full package open",
+  "M6_M7_M8": "0/3; persistent default disabled",
+  "sha256": {
+    "candidate.patch": "a0dfb85dab784b9d0ff1b29cdf1149166099df2fecdbd0bee3cb76296fd5f9e7",
+    "reverse-callgraph.json": "6f21f554e9e1de7b650eeda6b5ce233becfbd79c066a72db93f20f1b738ded07",
+    "build-identity.json": "99333afda2daf8715ff13568bce096c39e2e8e3787488db555ed2cfb28ccf2a8"
+  }
+}

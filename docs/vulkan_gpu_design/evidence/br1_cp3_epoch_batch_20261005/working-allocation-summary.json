@@ -1,0 +1,248 @@
+{
+  "processes": 16,
+  "samples": 128,
+  "all_exits_normal_reaped": true,
+  "rows": [
+    {
+      "architecture": "arm64",
+      "variant": "fresh",
+      "K": 1,
+      "allocations": {
+        "parent": [
+          88
+        ],
+        "current": [
+          74
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          19448
+        ],
+        "current": [
+          16888
+        ]
+      },
+      "frees": {
+        "parent": [
+          60,
+          61
+        ],
+        "current": [
+          46,
+          47
+        ]
+      }
+    },
+    {
+      "architecture": "arm64",
+      "variant": "fresh",
+      "K": 16,
+      "allocations": {
+        "parent": [
+          982
+        ],
+        "current": [
+          758
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          253968
+        ],
+        "current": [
+          208400
+        ]
+      },
+      "frees": {
+        "parent": [
+          629,
+          645
+        ],
+        "current": [
+          405,
+          421
+        ]
+      }
+    },
+    {
+      "architecture": "arm64",
+      "variant": "handoff",
+      "K": 1,
+      "allocations": {
+        "parent": [
+          79
+        ],
+        "current": [
+          68
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          18880
+        ],
+        "current": [
+          18128
+        ]
+      },
+      "frees": {
+        "parent": [
+          64
+        ],
+        "current": [
+          53
+        ]
+      }
+    },
+    {
+      "architecture": "arm64",
+      "variant": "handoff",
+      "K": 16,
+      "allocations": {
+        "parent": [
+          798
+        ],
+        "current": [
+          622
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          253728
+        ],
+        "current": [
+          237088
+        ]
+      },
+      "frees": {
+        "parent": [
+          653
+        ],
+        "current": [
+          477
+        ]
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "fresh",
+      "K": 1,
+      "allocations": {
+        "parent": [
+          88
+        ],
+        "current": [
+          74
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          19448
+        ],
+        "current": [
+          16888
+        ]
+      },
+      "frees": {
+        "parent": [
+          60,
+          61
+        ],
+        "current": [
+          46,
+          47
+        ]
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "fresh",
+      "K": 16,
+      "allocations": {
+        "parent": [
+          982
+        ],
+        "current": [
+          758
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          253968
+        ],
+        "current": [
+          208400
+        ]
+      },
+      "frees": {
+        "parent": [
+          629,
+          645
+        ],
+        "current": [
+          405,
+          421
+        ]
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "handoff",
+      "K": 1,
+      "allocations": {
+        "parent": [
+          79
+        ],
+        "current": [
+          68
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          18880
+        ],
+        "current": [
+          18128
+        ]
+      },
+      "frees": {
+        "parent": [
+          64
+        ],
+        "current": [
+          53
+        ]
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "handoff",
+      "K": 16,
+      "allocations": {
+        "parent": [
+          798
+        ],
+        "current": [
+          622
+        ]
+      },
+      "allocation_bytes": {
+        "parent": [
+          253728
+        ],
+        "current": [
+          237088
+        ]
+      },
+      "frees": {
+        "parent": [
+          653
+        ],
+        "current": [
+          477
+        ]
+      }
+    }
+  ],
+  "qualification": "Diagnostic requested allocation only; N=K uses the original dense tree path, so this does not isolate sparse batch cost or qualify residency/performance"
+}

@@ -1,0 +1,36 @@
+{
+  "command": [
+    "clang++",
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-arch",
+    "arm64",
+    "-fsanitize=thread",
+    "-fno-omit-frame-pointer",
+    "-I/Users/apple/krita_gpu/build/br1-cp1-owned-20261003/qt-tsan-core/include",
+    "-I/Users/apple/krita_gpu/build/br1-cp1-owned-20261003/qt-tsan-core/include/QtCore",
+    "-F/Users/apple/krita_gpu/build/br1-cp1-owned-20261003/qt-tsan-core/lib",
+    "-framework",
+    "QtCore",
+    "-Wl,-rpath,/Users/apple/krita_gpu/build/br1-cp1-owned-20261003/qt-tsan-core/lib",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_owned_qualification_20261003/qt-observability-control.cpp",
+    "-o",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_owned_qualification_20261003/qt-observability-control"
+  ],
+  "source_sha256": "6a2714760e5d9b1d57f11466d6d4e17c42caaac8f8e60cfba53d01c6e898751d",
+  "build_exit": 0,
+  "runs": [
+    {
+      "mode": "clean",
+      "pid": 22061,
+      "exit": 0
+    },
+    {
+      "mode": "race",
+      "pid": 22104,
+      "exit": 66
+    }
+  ],
+  "binary_sha256": "c032741cff544af4e1e7d3d6d948caf518cfc38e2f75b07314096ebe345c0a1d"
+}

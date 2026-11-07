@@ -1,0 +1,784 @@
+{
+  "scope": "Development correctness regression after source-built QtCore acquire fix; unchanged HX6/HX8 product source/binaries. Cross-job installation capacity, M6-M8 and BR1-PERF remain open.",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "e809ed039190e4bbc0a6b653653b67325d2761de666bb580a2dbd3e347b73830",
+  "source_and_product_binaries_unchanged_from_failed_matrix": true,
+  "runtime_changed": true,
+  "original_QtCore_sha256": "bb833c978a108733cca3375aa14a5b618be62dd195bcbf95e60b3f75ca38aee6",
+  "current_QtCore_sha256": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434",
+  "matrix_records": 44,
+  "qt_records": 40,
+  "matrix_totals": [
+    8896,
+    0,
+    0
+  ],
+  "matrix_passed": true,
+  "probe_records": [
+    {
+      "arch": "arm64",
+      "tag": "address-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-address-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "address-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/stable-address-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "write-set-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-write-set-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "write-set-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/write-set-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/completion-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/storage-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "native-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-native-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "native-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/native-storage-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/mutation-storage-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "address-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-address-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "address-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/stable-address-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "write-set-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-write-set-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "write-set-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/write-set-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/completion-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/storage-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "native-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-native-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "native-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/native-storage-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/mutation-storage-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "reuse-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-reuse-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "reuse-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/slot-reuse-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "outer-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-outer-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "outer-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "warm-read-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-warm-read-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "warm-read-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/warm-tile-read-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "reuse-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-reuse-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "reuse-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/slot-reuse-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "admission-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-admission-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "admission-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "legacy-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-legacy-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "legacy-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/legacy-install-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "legacy-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-legacy-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "legacy-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/legacy-install-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "warm-read-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-warm-read-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "warm-read-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/warm-tile-read-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "admission-gate-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-admission-gate-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "admission-gate-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "outer-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-outer-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "outer-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "mutation-cleanup-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-mutation-cleanup-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "mutation-cleanup-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "admission-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-admission-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "admission-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "admission-gate-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-admission-gate-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "admission-gate-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "execution-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-execution-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "execution-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "mutation-cleanup-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-mutation-cleanup-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "mutation-cleanup-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "execution-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-execution-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "execution-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "execution-cancel-progress-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-execution-cancel-progress-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "execution-cancel-progress-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_local_execution_20260928/execution-cancel-progress-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "checkpoint-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-checkpoint-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "checkpoint-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_checkpoint_20260928/checkpoint-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "execution-cancel-progress-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-execution-cancel-progress-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "execution-cancel-progress-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_local_execution_20260928/execution-cancel-progress-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "metadata-refresh-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-metadata-refresh-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "metadata-refresh-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/metadata-refresh-terminal-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "checkpoint-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-checkpoint-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "checkpoint-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_checkpoint_20260928/checkpoint-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "metadata-refresh-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-metadata-refresh-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "metadata-refresh-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/metadata-refresh-terminal-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "operation-storage-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-operation-storage-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "operation-storage-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_operation_storage_20260928/operation-storage-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "execution-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-execution-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "execution-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/mutation-storage-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "admission-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-admission-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "admission-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/mutation-storage-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "presence-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-presence-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "presence-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/presence-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "joint-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-joint-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "joint-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/joint-install-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "presence-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-presence-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "presence-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/presence-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/presence-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "admission-revalidation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-admission-revalidation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "admission-revalidation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/admission-revalidation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/admission-revalidation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "admission-revalidation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-admission-revalidation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "admission-revalidation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/admission-revalidation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/admission-revalidation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "execution-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-execution-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "execution-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/mutation-storage-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "operation-storage-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-operation-storage-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "operation-storage-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_operation_storage_20260928/operation-storage-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "presence-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-presence-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "presence-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/presence-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/presence-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "presence-allocation-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-presence-allocation-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "presence-allocation-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_presence_storage_20260928/presence-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "gc-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-gc-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "gc-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_gc_preparation_20260928/gc-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_gc_preparation_20260928/gc-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "joint-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-joint-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "joint-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/joint-install-allocation-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/allocation-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "admission-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-admission-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "admission-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/mutation-storage-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "extent-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-extent-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "extent-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_extent_storage_20260928/extent-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_extent_storage_20260928/extent-storage-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "gc-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-gc-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "gc-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_gc_preparation_20260928/gc-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_gc_preparation_20260928/gc-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "store-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-store-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "store-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/store-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "map-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-map-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "map-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "map-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-map-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "map-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "store-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-store-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "store-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/store-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "extent-storage-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-extent-storage-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "extent-storage-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_extent_storage_20260928/extent-storage-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_extent_storage_20260928/extent-storage-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "tag": "operation-storage-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-arm64-operation-storage-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "arm64",
+        "operation-storage-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_operation_storage_20260928/operation-storage-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_operation_storage_20260928/preparation-failure-interposer.cpp"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "tag": "operation-storage-failure-qt-fixed-01",
+      "returncode": 0,
+      "driver_log": "driver-x86_64-operation-storage-failure-qt-fixed-01.log",
+      "command": [
+        "python3",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_extent_lock_audit_20260928/run_install_probe.py",
+        "x86_64",
+        "operation-storage-failure-qt-fixed-01",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_operation_storage_20260928/operation-storage-failure-probe.cpp",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_operation_storage_20260928/preparation-failure-interposer.cpp"
+      ]
+    }
+  ],
+  "qt_upstream_tests_per_arch": 24,
+  "real_extent_repetitions": {
+    "arm64": 1000,
+    "x86_64": 1000
+  },
+  "failure_closed_by": "Independent QtCore reproduction of negative reader count, original-source reproduction, acquire-only source comparison, retained Krita Core extensions/configuration, final-runtime full matrix and probes.",
+  "original_failed_matrix_retained": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/checks-02/manifest.json",
+  "new_stage_or_performance_qualification": false,
+  "performance_comparison_requires_same_runtime_for_control_and_change": true
+}

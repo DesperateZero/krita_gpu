@@ -1,0 +1,23 @@
+{
+  "purpose": "D8 vs frozen D7 diagnostic completed-throughput; not upstream NI, latency quantiles, isolated management self or UMA/GPU qualification",
+  "pairs": 8,
+  "rate_ms": 200,
+  "bootstrap_seed": 839127,
+  "bootstrap_resamples": 10000,
+  "integration_cases": [
+    "session-n16-k1-h0", "session-n256-k1-h0", "session-n256-k16-h0", "session-n256-k1-h1",
+    "accessor-n256-k16-h0", "rect-n256-k16-h0",
+    "session-n256-k1-h0-cpu-b4", "rect-n256-k16-h0-cpu-b4",
+    "session-n256-k1-h0-cpu-b8", "rect-n256-k16-h0-cpu-b8",
+    "session-n256-k1-h0-cpu-b16", "rect-n256-k16-h0-cpu-b16",
+    "session-n256-k1-h0-tiles3-b4", "rect-n256-k16-h0-tiles3-b4",
+    "session-n256-k1-h0-tiles3-b8", "rect-n256-k16-h0-tiles3-b8",
+    "session-n256-k1-h0-tiles3-b16", "rect-n256-k16-h0-tiles3-b16"
+  ],
+  "native_cases": ["guard-n64-k1-b4", "read-n1024-k16-b4", "write-n64-k1-b4", "write-n64-k1-b16", "write-n4096-k1-b4"],
+  "integration_pair": "Same common executable using D6/D7 API/ABI only, loaded with D7/D8 libraries. Expected generic requests per page frozen at before=1/after=0. Stable head during timing; both preserve captured read semantics.",
+  "native_pair": "Unchanged native tiles3 fixture, D7/D8 libraries. Cached guard/read and true write controls detect indirect record/gate overhead; no fresh upstream comparison.",
+  "sampling": "Eight independent process pairs per bucket. Rotate bucket order, alternate variant order. No profiler, no concurrent build or test workload. Warm payload and binding; scope capture/release included in integration. Read session/accessor touches one byte per page, rect copies the full rectangle.",
+  "limitations": "Single thread/in-flight, H=0/1. No pre-frozen NI margin. Cold binding self, lock wait/hold, per-operation latency, high-H/concurrent performance and full background drain remain NotMeasured. History release/close measured separately. Different rate completion counts are not equal-work memory-efficiency evidence.",
+  "stopping": "Stop on failed test, loader or source identity mismatch, wrong structural counter or window under 200ms. Preserve partial output. No changing the frozen protocol to pass; analyze only the complete matrix."
+}

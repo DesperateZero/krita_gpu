@@ -216,15 +216,19 @@ begin stroke 前检查：
 - canonical PageStore 与目标 replica/execution capability 是否可用；
 - queue isolation 和必要 shader feature 是否满足；
 - recovery policy 是否可满足。
+- 与 brush/format/page-count/device-state 匹配的 performance profile 是否新鲜且为 `AutoPreferred`；其 CPU 基线必须是
+  同机成熟产品路径，accelerator ETA 必须包含编译、驻留、queue、kernel、cache maintenance 和 commit/visibility。
 
 结果只能是：
 
-1. `GPU`：整笔 journal 交给 GPU executor。
+1. `GPU`：semantic capability `Supported` 且 performance profile `AutoPreferred`，整笔 journal 交给 GPU executor。
 2. `CPU_EXECUTION`：整笔 journal 或原 CPU paintop 写同一 canonical PageStore surface。
 3. `REJECTED`：无法保证语义时不开始该 backend，并由上层选择成熟路径。
 
 禁止：GPU 画到一半因资源 miss 切换 CPU，或 CPU 画到一半把剩余 dab 接到 GPU。跨 backend 切换必须关闭
 旧 epoch，并以已完成 canonical generation 作为新 epoch 基准。
+`Supported` 但 profile 缺失/过期/无收益余量时属于 `CPU_EXECUTION`，不是 correctness `REJECTED`。设备可用、零拷贝或
+GPU timestamp 都不能绕过 [39_virtual_texture_performance_gates.md](39_virtual_texture_performance_gates.md) 的 route 门禁。
 
 ## 7. 容量、Backpressure 与零丢失
 

@@ -1,0 +1,126 @@
+{
+  "base": "ee8a165fc701eee34de5f1254669a2eea151c1f5",
+  "commit": "e03742b0ef30667d88ed955dad525cd6d6616eb1",
+  "source_diff_sha256": "e176fb0e5516f1564be5a317c5e248a79ea1b0232be72215d86961624780cd9b",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "KisPageStoreReferenceTest": [
+        1019,
+        0,
+        0
+      ],
+      "KisPageStoreCpuMutationTest": [
+        1721,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1457,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ],
+      "kis_lockless_stack_test": [
+        31,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "KisPageStoreReferenceTest": [
+        1019,
+        0,
+        0
+      ],
+      "KisPageStoreCpuMutationTest": [
+        1721,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1457,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ],
+      "kis_lockless_stack_test": [
+        31,
+        0,
+        0
+      ]
+    }
+  },
+  "identities": {
+    "arm64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "b51f309704446ba37962e9af73141cc8d25be48e0e132fe1fdbfa4920ef07aa2",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "80eb0358218e00dfa5bfa29e93dc649754954b779aac71e58ab0b05524ac7ac4",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "eedb277f4c9eaf25c2e8888530b00b9dff7635240cd20b6db13135188757ef3e",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "874d12c8ce1fa437f56b36b0c15f79ce9059239e4132c7489d39871d56907548",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_lockless_stack_test": "2e44ea8907dd5a2b12134963e43c989d24dc7c05bf203dee04fbe15a9a5a6df1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "d565ee6967fc3a5ae4a362698f32ba14b13ab609925b50f171ca5a98bab1a687"
+      }
+    },
+    "x86_64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "d565ee6967fc3a5ae4a362698f32ba14b13ab609925b50f171ca5a98bab1a687",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "eedb277f4c9eaf25c2e8888530b00b9dff7635240cd20b6db13135188757ef3e",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_lockless_stack_test": "2e44ea8907dd5a2b12134963e43c989d24dc7c05bf203dee04fbe15a9a5a6df1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "b51f309704446ba37962e9af73141cc8d25be48e0e132fe1fdbfa4920ef07aa2",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "80eb0358218e00dfa5bfa29e93dc649754954b779aac71e58ab0b05524ac7ac4",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "874d12c8ce1fa437f56b36b0c15f79ce9059239e4132c7489d39871d56907548"
+      }
+    }
+  },
+  "passed_total": 9694,
+  "old_symbols_absent": "rebuildPageStoreIndex",
+  "numstat": [
+    "23\t21\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+    "8\t0\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+    "107\t58\tlibs/image/tiles3/kis_tiled_data_manager.cc",
+    "0\t1\tlibs/image/tiles3/kis_tiled_data_manager.h",
+    "81\t1\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+    "3\t0\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.h"
+  ],
+  "source_hashes": {
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "f83df9e54210e46e54a10e16b4d232fe50c1f3e1f093ea9e4e2c18bf8cbb74ee",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "4606a4a9c5bc2af2a188b65ed035742461a343a5fbf026aad131932d1e2f8d00",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "6b75fb279480426f7361831e28a446d8c8db0bdffc4b94349945c91f5d92d09c",
+    "libs/image/tiles3/kis_tiled_data_manager.h": "3237f077b78d1b976afefef609b17945766ff22582b22f910cd65ef35f0d4281",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "33cd9575fce5f05580dd722a885240d6256545076a98b965381fdd9c7070346b",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.h": "d151b2e278e8f72b8d9cfa8b41ab9001d8fe05a70dfa9ec2a429732e1bc9a34b"
+  },
+  "audit_arguments": {
+    "package": "trim",
+    "base": "ee8a165fc701eee34de5f1254669a2eea151c1f5",
+    "commit": "e03742b0ef30667d88ed955dad525cd6d6616eb1",
+    "batch": "trim-full-r1",
+    "absent": "rebuildPageStoreIndex"
+  },
+  "limits": "Safety and source audit only; no time benefit claim."
+}

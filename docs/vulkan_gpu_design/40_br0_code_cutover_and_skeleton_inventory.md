@@ -9,6 +9,10 @@
 > 不可用。部分 internal 类已取消 export，最终 installed ABI 仍需随阶段冻结。修订方案见
 > [41_vulkan_foundation_build_architecture.md](41_vulkan_foundation_build_architecture.md) 与
 > [43_foundation_construction_sequence_and_gates.md](43_foundation_construction_sequence_and_gates.md)。
+>
+> 2026-09-20 状态更新：本文的 BR0 inventory 仍用于追溯 foundation 落位；PageStore/tiles3 的功能 cutover 以 51
+> 为历史证据，resident CPU production path 和布局以
+> [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md) 为当前状态。
 
 ## 1. 归档与删除
 
@@ -31,11 +35,14 @@
 
 | 骨架 | 固定责任 | 当前方法体状态 | 首次实现阶段 |
 |---|---|---|---|
-| `KisPageStoreTypes` | Surface/Page/Generation、format、request、lease、transaction、epoch、opaque ticket | 只有值类型和 invalid 默认值 | BR1 |
+| `KisPageStoreTypes` | Surface/Page/Generation、format、request、lease、transaction、epoch、opaque ticket | 通用 request/lease 功能已接线；resident CPU guard/mutation session API 仍按 52 调整 | BR1（功能完成；PERF 进行中） |
 | `KisSurfaceRegistry` | 文档内 canonical/derived surface identity | 已实现线程安全 identity/register/query/remove；外部引用门禁仍由 PageStore 承担 | Foundation/BR1 |
-| `KisPageStateMachine` | 唯一 production/reference transition 与不变量 | transition 全部拒绝 | BR1 |
-| `KisPageStore` | read/write request、lease、publish/cancel、epoch commit | 全部返回 unsupported/invalid | BR1 |
-| `KisPageReplicaProvider` | backend-neutral replica 契约 | 纯接口 | BR1/BR3 |
+| `KisPageStateMachine` | 唯一 production/reference transition 与不变量 | transition/invariant 功能已实现；production fast guard 必须复用语义但退出 reference 容器/调用粒度 | BR1（功能完成；PERF 进行中） |
+| `KisImageEpochReferenceModel` | immutable 多页 committed view、transaction overlay、conflict/rebase | persistent root/delta 已落地；owner/cursor 未冻结，transaction start/删除 extent/allocatedPages 仍导出 owning snapshot（53） | BR1（P4 部分完成） |
+| `KisPageMetadataCoordinator` | stable shard、page-state owner、completion queue、materialization dedup | correctness/dedup、virgin default read、trusted transition 已实现；D1 virtual default 状态/回收定向通过（54），generic 消费仍可能物化，正式 guard/page-local pin 与 K/N 门禁未关闭 | BR1（功能完成；PERF 进行中） |
+| `KisPageStore` | read/write request、lease、publish/cancel、epoch commit | canonical authority、同步 host adoption、exclusive fused commit/history retirement、history delta restore/release 已接通；通用 mutable CPU 写仍经过完整协议 | BR1（功能完成；PERF 进行中） |
+| `KisPageReplicaProvider` | backend-neutral replica 契约 | 已要求 provider id/epoch、PageStore operation id、lease-scoped resolve/release access 及 exact-materialize/write-init transfer kind；production CPU provider 已接通，SSD/Vulkan 仍非 canonical provider | BR1/BR3 |
+| `KisTiledDataManagerPageStoreBackend` / `Shadow` | tiles3 到 Surface/Page/generation 的 authority bridge 与迁移对照 | native read、batch/adoption/no-op 已接通；history adapter 全量 index rebuild、删除 extent 扫描及 mutation/permit 均待落实（53） | BR1（功能完成；PERF 进行中） |
 | `KisCompletionRegistry` | GPU timeline、CPU job、I/O 的统一 opaque ticket bridge | 已实现线程安全 source、单调 ticket、终态冲突拒绝 | Foundation；native bridge 在 BR2 |
 | `KisSurfaceCodecRegistry` | exact `SurfaceFormat` codec 选择 | 已实现 codec identity/version 注册、重复拒绝、ambiguous claim fail-closed | Foundation/BR1 |
 | `KisBackendServiceRegistry` | 不可变 device service 证据与唯一 ready-token 构造边界 | 已验证完整 report、精确 generation、revoke；当前无真实 report producer | Foundation/BR2 |
@@ -119,8 +126,10 @@ UI 只在拿到真实 ready token、matching document session、display surface 
 [45_br0_build_and_regression_evidence_20260918.md](45_br0_build_and_regression_evidence_20260918.md)，仍不构成像素端到端或性能结论。
 
 `libs/vulkanbackend/tests/KisVulkanFoundationContractsTest.cpp` 已加入 registry、shader catalog、memory budget、
-pipeline state、coordinator/WSI generation 的 contract tests，当前运行结果为 11/11 通过。另有 backend-neutral
-PageStore/Evaluation Graph foundation test（9/9）与真实 Vulkan/VMA compute offscreen smoke，均已运行通过。
+pipeline state、binding provider epoch、coordinator/WSI generation 的 contract tests；BR1 复验结果为 13/13
+通过（BR0 冻结证据为 11/11）。backend-neutral Foundation 为 21/21，PageStore production/reference、CPU access、
+history/GC/fault/stress 与 tiles3 产品回归的最终矩阵见 51。真实 Vulkan/VMA compute offscreen smoke 继续通过；这些结果
+构成 BR1 边界复验，但不构成 BR2 submission、BR3 Vulkan replica 或产品 Vulkan 入口完成声明。
 
 ## 7. BR0 关闭状态
 
@@ -128,5 +137,5 @@ PageStore/Evaluation Graph foundation test（9/9）与真实 Vulkan/VMA compute 
    回归 5/5 通过。
 2. BR0 净变更已重放到该基线，并重新通过 CPU-only、Vulkan foundation、shader ABI/offscreen、PageStore、
    architecture guard 和 CPU/OpenGL 6/6 对照套件；产品入口、target DAG 与 public/private 边界未回退。
-3. BR0 已正式关闭。后续只能按 BR1–BR6 的阶段门禁补 production 实现，不得把 foundation smoke 扩写为
-   后续阶段完成证据。
+3. BR0 已正式关闭。51 只关闭 BR1 功能/正确性 cutover；BR1-PERF 仍按 52 推进，结清前不得进入 BR2 production
+   接线。不得把 foundation smoke 或 BR1 功能证据扩写为性能或后续阶段完成证据。

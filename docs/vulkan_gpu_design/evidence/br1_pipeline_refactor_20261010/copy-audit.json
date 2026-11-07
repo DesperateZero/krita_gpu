@@ -1,0 +1,102 @@
+{
+  "base": "ccbf0bcb0db6f13bab5c87ca03936439f25ee04d",
+  "commit": "081afa7072adeb6035c80dcfa211ca0d8603e097",
+  "source_diff_sha256": "6b9e1159b88e3ccddf740c790148d746c457117f25f1dc2af529b5740d063e19",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "kis_tiled_data_manager_test": [
+        1369,
+        0,
+        0
+      ],
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "kis_tiled_data_manager_test": [
+        1369,
+        0,
+        0
+      ],
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    }
+  },
+  "identities": {
+    "arm64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "9cf30939c5a23639c90b08ad78df9631c49246a94ce7b277c2535e7a6fa45d27",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "45f0c22929d13b5a0dc23593fdcfbc91af7d598fda30f7fef178b30358c1a222",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "390ea24f376c81177aaeb2a94718c337be9260b814197d6ed9877e0462baecfa",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "f66b947ade97e9b6b0fbf2a761175d5baca918e150535b049a2d629e00f9f687"
+      }
+    },
+    "x86_64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "9cf30939c5a23639c90b08ad78df9631c49246a94ce7b277c2535e7a6fa45d27",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "45f0c22929d13b5a0dc23593fdcfbc91af7d598fda30f7fef178b30358c1a222",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "390ea24f376c81177aaeb2a94718c337be9260b814197d6ed9877e0462baecfa",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "f66b947ade97e9b6b0fbf2a761175d5baca918e150535b049a2d629e00f9f687",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72"
+      }
+    }
+  },
+  "passed_total": 7364,
+  "old_symbols_absent": "pageStoreRefreshCapacity",
+  "numstat": [
+    "72\t12\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+    "14\t4\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+    "27\t30\tlibs/image/tiles3/kis_tiled_data_manager.cc",
+    "0\t2\tlibs/image/tiles3/kis_tiled_data_manager.h",
+    "136\t44\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+    "2\t0\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.h"
+  ],
+  "source_hashes": {
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "a7961980ce0acad8af0360e59f13507aab764e0b43da6ec31de0a66bf59b8381",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "4fa0889d21ff4e673f46b4575c24e27b15bdcc1577fa7e5b6c13b10da66ab81c",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "fd5a074aff0caa8972177aa1b63969656ffa9f0be2d6cce8a7b096af6993a575",
+    "libs/image/tiles3/kis_tiled_data_manager.h": "f136c694fd726702ff54bdf66ea9b3e75dfb4cbdd98824e3c6a9b72190a75740",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "66f87bb786a7e45809dcc8bf026826e5256c607c1e33caf11627acf73968a19d",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.h": "12afb364d2ff4abbceae5a5120fce3a493efd2c517f8e736c03e54f8e577bac9"
+  },
+  "audit_arguments": {
+    "package": "copy",
+    "base": "ccbf0bcb0db6f13bab5c87ca03936439f25ee04d",
+    "commit": "081afa7072adeb6035c80dcfa211ca0d8603e097",
+    "batch": "copy-full-r2",
+    "absent": "pageStoreRefreshCapacity"
+  },
+  "limits": "Safety and source audit only; no time benefit claim."
+}

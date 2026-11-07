@@ -1,0 +1,40 @@
+{
+  "scope": "S06 physical handoff primitive and stable provider binding identity; cumulative CPU correctness, not production selector/M6/stage/performance qualification",
+  "final_run": "checks-01",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "a7d889f0ed057ec4bd9c48c01ac4b78f6eddbf479a01a8211b4b211cf8345c4b",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      2098,
+      0,
+      0
+    ],
+    "x86_64": [
+      2098,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    4196,
+    0,
+    0
+  ],
+  "new_physical_claim_cases_per_architecture": 122,
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 21,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1505,
+    "call_edges": 14285,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "allocator_summary": "allocator-summary.json",
+  "physical_handoff_primitive": true,
+  "production_selector_handoff": false,
+  "stage_or_performance_qualification": false
+}

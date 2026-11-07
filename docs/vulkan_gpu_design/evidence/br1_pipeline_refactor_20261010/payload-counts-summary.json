@@ -1,0 +1,447 @@
+{
+  "cases": {
+    "0": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 3,
+            "rows": 8,
+            "fresh_accepted": 8,
+            "provider_retire": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 9
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 0.75
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 8,
+            "fresh_accepted": 8,
+            "payload_cache_hit": 12,
+            "provider_retire": 8,
+            "free": 12,
+            "payload_return_cache": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 3,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 9
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 0.75
+        }
+      ]
+    },
+    "1": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 30,
+            "rows": 128,
+            "fresh_accepted": 128,
+            "provider_retire": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 102
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 0.7727272727272727
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 128,
+            "fresh_accepted": 128,
+            "payload_cache_hit": 132,
+            "provider_retire": 128,
+            "free": 132,
+            "payload_return_cache": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 30,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 102
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 0.7727272727272727
+        }
+      ]
+    },
+    "2": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 68,
+            "fresh_accepted": 68,
+            "provider_retire": 68,
+            "free": 72,
+            "payload_return_cache": 72,
+            "payload_cache_hit": 72
+          },
+          "allocation_requests": 72,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 68,
+            "fresh_accepted": 68,
+            "payload_cache_hit": 72,
+            "provider_retire": 68,
+            "free": 72,
+            "payload_return_cache": 72
+          },
+          "allocation_requests": 72,
+          "cache_hit_fraction": 1.0
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        }
+      ]
+    },
+    "3": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 1088,
+            "fresh_accepted": 1088,
+            "provider_retire": 1088,
+            "free": 1092,
+            "payload_return_cache": 1092,
+            "payload_cache_hit": 1092
+          },
+          "allocation_requests": 1092,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 223,
+            "rows": 1088,
+            "fresh_accepted": 1088,
+            "payload_cache_hit": 869,
+            "provider_retire": 1088,
+            "free": 1092,
+            "payload_return_cache": 1092
+          },
+          "allocation_requests": 1092,
+          "cache_hit_fraction": 0.7957875457875457
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        }
+      ]
+    },
+    "4": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 8,
+            "fresh_accepted": 8,
+            "provider_retire": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 8,
+            "fresh_accepted": 8,
+            "payload_cache_hit": 12,
+            "provider_retire": 8,
+            "free": 12,
+            "payload_return_cache": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        }
+      ]
+    },
+    "5": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 128,
+            "fresh_accepted": 128,
+            "provider_retire": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 128,
+            "fresh_accepted": 128,
+            "payload_cache_hit": 132,
+            "provider_retire": 128,
+            "free": 132,
+            "payload_return_cache": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        }
+      ]
+    },
+    "6": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 68,
+            "fresh_accepted": 68,
+            "provider_retire": 68,
+            "free": 72,
+            "payload_return_cache": 72,
+            "payload_cache_hit": 72
+          },
+          "allocation_requests": 72,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "rows": 68,
+            "fresh_accepted": 68,
+            "payload_cache_hit": 72,
+            "provider_retire": 68,
+            "free": 72,
+            "payload_return_cache": 72
+          },
+          "allocation_requests": 72,
+          "cache_hit_fraction": 1.0
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 8,
+            "free": 12,
+            "payload_return_cache": 12,
+            "payload_cache_hit": 12
+          },
+          "allocation_requests": 12,
+          "cache_hit_fraction": 1.0
+        }
+      ]
+    },
+    "7": {
+      "current": [
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 16,
+            "rows": 1088,
+            "fresh_accepted": 1088,
+            "provider_retire": 1088,
+            "free": 1092,
+            "payload_return_cache": 1092,
+            "payload_cache_hit": 1076
+          },
+          "allocation_requests": 1092,
+          "cache_hit_fraction": 0.9853479853479854
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 50,
+            "rows": 1088,
+            "fresh_accepted": 1088,
+            "payload_cache_hit": 1042,
+            "provider_retire": 1088,
+            "free": 1092,
+            "payload_return_cache": 1092
+          },
+          "allocation_requests": 1092,
+          "cache_hit_fraction": 0.9542124542124543
+        }
+      ],
+      "upstream": [
+        {
+          "counts": {
+            "alloc": 4,
+            "payload_cache_miss": 33,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 99
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 0.75
+        },
+        {
+          "counts": {
+            "alloc": 4,
+            "duplicate": 128,
+            "free": 132,
+            "payload_return_cache": 132,
+            "payload_cache_hit": 132
+          },
+          "allocation_requests": 132,
+          "cache_hit_fraction": 1.0
+        }
+      ]
+    }
+  },
+  "processes": 4,
+  "scope_clocks": false,
+  "system_malloc_count": null
+}

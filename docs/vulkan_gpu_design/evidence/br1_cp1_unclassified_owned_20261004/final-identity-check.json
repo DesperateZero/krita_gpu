@@ -1,0 +1,47 @@
+{
+  "rounds": [
+    {
+      "round": "cpu-all-05-arm64",
+      "source_inputs_verified": 123,
+      "candidate_compiled_inputs_verified": 0,
+      "runtime_snapshot_inputs_verified": 94,
+      "exit_code": 0,
+      "reaped": true
+    },
+    {
+      "round": "cpu-all-06-x86_64",
+      "source_inputs_verified": 123,
+      "candidate_compiled_inputs_verified": 0,
+      "runtime_snapshot_inputs_verified": 94,
+      "exit_code": 0,
+      "reaped": true
+    },
+    {
+      "round": "candidate-cpu-all-01-arm64",
+      "source_inputs_verified": 123,
+      "candidate_compiled_inputs_verified": 120,
+      "runtime_snapshot_inputs_verified": 97,
+      "exit_code": 0,
+      "reaped": true
+    },
+    {
+      "round": "candidate-cpu-all-02-x86_64",
+      "source_inputs_verified": 123,
+      "candidate_compiled_inputs_verified": 120,
+      "runtime_snapshot_inputs_verified": 97,
+      "exit_code": 0,
+      "reaped": true
+    },
+    {
+      "round": "candidate-tsan-handoff-01",
+      "source_inputs_verified": 123,
+      "candidate_compiled_inputs_verified": 120,
+      "runtime_snapshot_inputs_verified": 70,
+      "exit_code": 0,
+      "reaped": true
+    }
+  ],
+  "primary_commit": "7804582f93bb1eb841b7520728169f0e228b046c",
+  "candidate_commit": "38451ac4f16272c64a13c26770ebc384b0abacdd",
+  "scope": "Exact invocation inputs and committed candidate C++ sources; no candidate graph/architecture or whole CP1 qualification."
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "Original recoverable/Fresh preparation and visibility/terminal ownership; review only, no second preparation framework",
+  "boundaries": [
+    {
+      "endpoint": "KisPageStore native cold Fresh at2191",
+      "behavior": "Already calls preparePrivateWrite(acquire,true), consuming AcquireWrite plus PrepareWrite in one original sequence after actual Ready allocation/binding/terminal completion verification",
+      "consequence": "Cannot obtain a native performance fix by collapsing a pair that is already combined"
+    },
+    {
+      "endpoint": "KisPageStore generic at4144, initialization4169, PrepareWrite4190",
+      "behavior": "Acquires private writer before real initializeFreshReplica/possibly asynchronous readiness; subsequent refusal retains original cancel/transaction abort owner",
+      "consequence": "Two boundaries have different acceptance/readiness/failed-cleanup consumers. Cannot copy native true across async generic path or erase failure owner"
+    },
+    {
+      "endpoint": "KisPageWriteCoordinator prepareWritePlanLocked2706",
+      "behavior": "Retains Ready independent before pin, prepares physical target/accounting/metadata cold, prepares descriptors after original owner relock, then original metadata/retag/ledger/descriptor joint install",
+      "consequence": "Handoff removes payload allocation but still requires cold state/storage and strict revision revalidation; ordinary array/metadata cost remains real"
+    },
+    {
+      "endpoint": "Metadata prepareRecoverableWrite2252 and preparePublicationImpl2269; native publishPrivateWrite2687; canonical commit",
+      "behavior": "Recoverable uses exact base and target values, private seal publication and canonical root each have independently observable accepted state/capture/cancel boundaries",
+      "consequence": "Existing private working-value transfer is already implemented. Do not merge private Prepared/overlay with canonical root acceptance merely to remove one preparation."
+    }
+  ],
+  "next_unit": "Remaining small first-write metadata/ledger working storage and actual per-page allocations; enumerate retained values/actual consumers/transfer/failure/free before choosing storage representation, including all generic/semantic/reference callers",
+  "constraints": [
+    "No skipping domain/class checks",
+    "No folded async readiness or private/canonical visibility",
+    "No new equivalent selector, persistent cache, budget bypass or second terminal owner",
+    "No new probes or helper churn without demonstrated per-page work removed",
+    "No CP4/M7 qualification before complete M6"
+  ],
+  "qualification": "Static original responsibility review only; current empirical gates decide remaining work"
+}

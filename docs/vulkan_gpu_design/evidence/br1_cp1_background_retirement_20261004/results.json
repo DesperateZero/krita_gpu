@@ -1,0 +1,75 @@
+{
+  "product_commit": "ee67754c0297e596f9a5b1d1cbe21166488df1e1",
+  "product_parent": "1177fa5ecab8318fe044b071342eb0ab51654e27",
+  "outer_parent": "19627459f6a830b28e32fb6368046e00ea800c10",
+  "product_tracked_clean": true,
+  "scope": "Background retirement provider bad_alloc after late captured-view release; original record retry through close",
+  "production_diff": {
+    "files": 1,
+    "insertions": 10,
+    "deletions": 2
+  },
+  "test_diff": {
+    "files": 1,
+    "insertions": 34,
+    "deletions": 0
+  },
+  "sources": {
+    "libs/image/pagestore/KisPageRetirementQueue.cpp": "91083e783e8c2daebe93ff28d87c6fdc588bddabed60c0024f6539cf45f447a4",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "a092b3f994be779e94f7770e6416fc030b263867652e63383c2f1cd00052e9df"
+  },
+  "binaries": {
+    "_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "5499f378082b04952a6816574bdfe2c50f87a1576fb215e7d18458bd8a7004ca",
+    "_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "f037650fe9919ce551fbe9ce90e04fc8cce924ae2e92bc3826a41ca8be72730e",
+    "_build-br1-tsan/bin/KisPageStoreCpuMutationTest": "2cf6ad48c1e663bcee8e8f8b7b9c65e8fa2e2114af067e3a6f859c16ba711970",
+    "_build-br1-tsan/bin/libkritaimage.21.0.0.dylib": "bffa86d4ecd7887292a6dff6b13eea6b2273da8228fcd72239ccfff76ddf66d5"
+  },
+  "logs": {
+    "full-normal-arm64.log": {
+      "sha256": "d55a26f076ec78aac0d436d384e22e95bffa50050895249a1c3c8dc60a949704",
+      "totals": "Totals: 1387 passed, 0 failed, 0 skipped, 0 blacklisted, 10431ms",
+      "tsan_reports": 0
+    },
+    "full-normal-x86_64.log": {
+      "sha256": "0e00e816f1db8e54586ed53bbb653d21d3c0090e45b63827297aa94f4adbb229",
+      "totals": "Totals: 1387 passed, 0 failed, 0 skipped, 0 blacklisted, 11316ms",
+      "tsan_reports": 0
+    },
+    "full-tsan-arm64.log": {
+      "sha256": "01986099ab1b71369f97abd9cde966ce17088d8cce0cad4b153577151dba0f7a",
+      "totals": "Totals: 1387 passed, 0 failed, 0 skipped, 0 blacklisted, 220423ms",
+      "tsan_reports": 0
+    },
+    "targeted-normal-arm64.log": {
+      "sha256": "7e534f5f97f4e19fed323817d6f27d64247738abc488b5f42c803ec91a8d743c",
+      "totals": "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 54ms",
+      "tsan_reports": 0
+    },
+    "targeted-normal-x86_64.log": {
+      "sha256": "f794e98d65b9c2affae2ddd81029899cf170a49deb1e69761414f8a16f1d4d7f",
+      "totals": "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 56ms",
+      "tsan_reports": 0
+    },
+    "targeted-tsan-arm64.log": {
+      "sha256": "c64ccccc6da73c4785eb1f5bd57cc6628dee055ad12dc5d22e47ce5f2e00b73e",
+      "totals": "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 67ms",
+      "tsan_reports": 0
+    }
+  },
+  "commands": {
+    "build_normal": "../../.venv/bin/ninja -j4 bin/KisPageStoreCpuMutationTest (cwd krita/_build-br0-cpu)",
+    "build_tsan": "../../.venv/bin/ninja -j4 bin/KisPageStoreCpuMutationTest (cwd krita/_build-br1-tsan)",
+    "targeted": "KisPageStoreCpuMutationTest backgroundRetirementAllocationFailureRetries -nocrashhandler",
+    "full": "KisPageStoreCpuMutationTest -nocrashhandler"
+  },
+  "limitations": [
+    "Provider-contract bad_alloc injection is not an allocator-interposition census of every background-thread allocation site.",
+    "This run does not repeat the completed long manager or pressure workloads.",
+    "It does not qualify non-Darwin capacity/free or host default-abort recovery."
+  ],
+  "intermediate_failure": {
+    "file": "intermediate-assertion-edit-failure-summary.txt",
+    "sha256": "738a99b37a147edb3dc7373a5472b0decc4f4b3c9fcc20f0dee15c3040b299dc",
+    "classification": "Recovered summary of an overwritten intermediate failing log; excluded from passing totals."
+  }
+}

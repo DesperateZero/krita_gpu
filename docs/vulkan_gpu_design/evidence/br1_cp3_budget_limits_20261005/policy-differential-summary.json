@@ -1,0 +1,90 @@
+{
+  "parent_commit": "9c707902d68130a17de4cbd6d64a761215387be0",
+  "processes": 4,
+  "checks_per_process": 800000,
+  "exact_outcomes_equal": true,
+  "parent_library_bound_to_previous_final_verification": true,
+  "rows": [
+    {
+      "arch": "arm64",
+      "variant": "parent",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/build/br1-cp3-budget-limits-parent:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/policy-final-arm64/probe"
+      ],
+      "pid": 28452,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "selected_image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/policy-final-arm64/probe"
+      ],
+      "pid": 28475,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "selected_image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "variant": "parent",
+      "command": [
+        "arch",
+        "-x86_64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/build/br1-cp3-budget-limits-parent:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/policy-final-x86_64/probe"
+      ],
+      "pid": 28477,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "selected_image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-x86_64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/policy-final-x86_64/probe"
+      ],
+      "pid": 28513,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "selected_image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    }
+  ],
+  "limits": "Actual isolated admission member over arbitrary and boundary states; no production concurrency or M6 qualification"
+}

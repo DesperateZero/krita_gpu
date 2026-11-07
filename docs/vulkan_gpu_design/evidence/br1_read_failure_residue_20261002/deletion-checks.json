@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "cancel_metadata_allocation_catch_deleted": true,
+    "release_outer_allocation_catch_deleted": true,
+    "ack_outer_allocation_catch_deleted": true,
+    "worker_outer_catch_and_failure_flag_deleted": true,
+    "same_gate_pre_subscription_checks_not_duplicated": true,
+    "post_subscription_revalidation_preserved": true,
+    "real_subscription_refusal_still_uses_original_retry": true,
+    "cancel_does_not_replay_completed_release": true,
+    "real_history_refusal_retains_cancel_record": true,
+    "read_protection_reuses_or_erases_original_slots": true,
+    "cleanup_transfer_is_nonallocating": true,
+    "ack_respects_prior_exact_ack_and_committed_progress": true,
+    "registry_subscription_cleanup_only_unlinks_existing_record": true,
+    "real_hard_full_and_cancel_close_tests_remain": true,
+    "previous_provider_completion_policy_remains_unified": true,
+    "previous_empty_publication_protocol_stays_deleted": true
+  },
+  "all_passed": true,
+  "remaining_protocols": [
+    {
+      "protocol": "read/capture completed-progress facts and retry lists",
+      "reason": "Publication claims can still refuse protection removal; history key and epoch handoffs remain separate, fallible steps.",
+      "delete_when": "The real release/ack/cancel/close and late-handle consumers obtain guarantees for those handoffs."
+    },
+    {
+      "protocol": "subscription/history preparation catches and original task/Delay",
+      "reason": "Readiness subscriber and history key storage still require real capacity; existing records retain responsibility.",
+      "delete_when": "Their actual preparation guarantees remove those failures across all original consumers."
+    },
+    {
+      "protocol": "retirementResult/Pending/Debt and public identity refusal",
+      "reason": "True Pending, physical pins, debt limits and provider-result identity validation remain real; prepaid operation nodes only remove allocation at binding.",
+      "delete_when": "Equivalent readiness, admission and external provider-result contracts close for the actual consumers."
+    },
+    {
+      "protocol": "generic StateMachine/overlay/proof preparation and Failed/cancel",
+      "reason": "Paid proof and remaining generic working/overlay capacities can still refuse; safe scheduler continuation is still open.",
+      "delete_when": "CP1 capacity and CP5 original job ownership close together."
+    }
+  ],
+  "new_business_guarantees": false,
+  "new_state_or_queue": false,
+  "full_cp1_complete": false
+}

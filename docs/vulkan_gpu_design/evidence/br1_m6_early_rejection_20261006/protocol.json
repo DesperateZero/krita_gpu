@@ -1,0 +1,45 @@
+{
+  "scope": "Known-ineligible handoff early rejection: original parent/current increment and current M6 opportunity gate",
+  "parent": "f0c40a5d195f1c20a0f915faaef18b1f3ee5b575",
+  "document_base": "b86bde1cda8de014e3d9d431803f80a7efdac5b5",
+  "architectures": ["arm64", "x86_64"],
+  "architecture_limit": "arm64 native; x86_64 under Rosetta, not native Intel",
+  "K": [1,16],
+  "cases": ["hit","single","native-pin","generic-lease","last-use"],
+  "work": "Original same-state fixture: 64x64 B4, N=K/H0 history roots and one exact old View, Preserve full write; transaction begin through mutation/seal/canonical commit; full old/new bytes/work/close/drain checks",
+  "state": "Independent dual exact replicas for hit and three blockers on both arms; one replica for single. No artificial alternate generation between timed operations; each sample independently initialized",
+  "outside_timer": "Setup, before creation, pixel/work verification, blocker release/completion, provider close, Store destruction and reclamation drain; retained as separate raw durations and budget observations",
+  "control": "Copied coordinator TU disables discoverBefore before queryMutationBase. Same compiler/link inputs except explicit TLS control. No phase recorder during time samples; optional original recorder only in separate mechanism scope",
+  "parent_comparison": {
+    "buckets":20, "pairs":40, "warmup":8, "measured":64,
+    "metric":"actual completed-operation throughput current/parent; median 20 balanced two-pair log blocks",
+    "bootstrap":50000, "seed":261007, "two_sided_confidence":0.9975,
+    "meaning":"20-bucket family nominal 95% intervals. Improvement only when lower>1; hit/single controls reported, absence of significance is not equivalence"
+  },
+  "calibration": {
+    "buckets":20, "pairs":40, "warmup":8, "measured":128,
+    "metric":"normal-on selection image/original current product completed-operation throughput; median 20 balanced two-pair log blocks",
+    "bootstrap":50000, "seed":261007, "two_sided_confidence":0.9975,
+    "equivalence":[0.98,1.02],
+    "meaning":"Covers hit, single and all three blockers before product qualification. Twice the prior measured samples per process, fixed before data; no additive correction or optional extension"
+  },
+  "hit": {
+    "buckets":4, "pairs":40, "warmup":8, "measured":128,
+    "metric":"median 40 paired log(off/on process median completed-operation latency)",
+    "bootstrap":20000, "seed":261007, "one_sided_confidence":0.9875,
+    "gate":"latency reduction lower bound >0"
+  },
+  "miss": {
+    "cases":["single","native-pin","generic-lease","last-use"],
+    "buckets":16, "pairs":40, "warmup":8, "measured":128,
+    "metric":"actual completed operations/sum measured operation wall intervals, on/off ratio; median 20 balanced two-pair log blocks",
+    "bootstrap":50000, "seed":261007, "one_sided_confidence":0.996875,
+    "gate":"throughput ratio lower bound >=0.98"
+  },
+  "protected":"Fresh and H4 retain original fixed-M5 public fixtures, 40 pairs/four buckets per family, 250 ms completed-rate/20 order blocks, 50000 bootstrap seed260926, one-sided98.75% lower>=0.98. Fresh new samples, original controls unchanged",
+  "preflight":"90 two-sample fixture processes plus two selection-image targeted QTest processes, after full current-source safety. All images/states, tight single-Fresh/dual-Fresh/dual-handoff and four-generation controls",
+  "mechanism":"40 processes: both architectures, K1/K16, all five cases, original parent and current images, two samples each, original diagnostic phase observer enabled. Expect current native-pin Prepared/Install=0, current generic lease/last-use all recoverable phases=0; hit/single mechanism unchanged. Timings excluded from performance claims",
+  "order":"Strictly sequential processes, rotate buckets each pair, reverse comparison order every pair. Adjacent even/odd pairs are predeclared blocks for rate families. No concurrent build, test, profiler or benchmark. Save one bounded result JSON per process and consolidate once per scope, avoiding repeated whole-history rewrites outside the timer",
+  "stopping":"Exactly planned pairs; no slow-sample trimming, resampling or threshold change. Stop affected scope on wrong work/bytes/image, source/runtime change, timeout or abnormal exit; retain failures and repair into separately named scope",
+  "qualification":"Independent families; no pooled confidence claim. Parent/current original-library increment remains interpretable even if switch calibration is inconclusive. Same-image gate results do not grant product qualification without calibration. Metadata residency denominator, CP0 required and business/GPU/M7/M8 remain separate"
+}

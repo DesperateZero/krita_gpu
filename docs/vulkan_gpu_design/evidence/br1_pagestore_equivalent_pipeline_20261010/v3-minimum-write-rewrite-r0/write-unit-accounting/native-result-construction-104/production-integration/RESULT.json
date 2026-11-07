@@ -1,0 +1,58 @@
+{
+  "state": "cpu_production_integrated_and_baseline_switched",
+  "source": "0fd96f2fa3f24e70c1652ea17b8cc87192acf6d2",
+  "actual_product_start": "48c89b04f88ea98ffa315e62afa43dfa99244222",
+  "prototype": "d10d8caf4268e19310900e6970c862375d1160c3",
+  "performance_processes": 316,
+  "qt_checks": 13636,
+  "native_dual_arch": true,
+  "install_audit_dual_arch": true,
+  "tsan_scope": "63 actual TUs (native/shared PageStore/Tiles3/test providers); native contract, manager concurrency subset and full resident-read; installed QtCore uninstrumented, real RW locks annotated preserving read/read concurrency.",
+  "retired_protocol_complete": true,
+  "original_consumer_methods_migrated": 152,
+  "new_management_layer": false,
+  "source_split_units": 6,
+  "warm_summary": {
+    "3": {
+      "P": 28385132.375,
+      "U": 8795387.083333334,
+      "N": 9504959.333333334,
+      "per_page": 9282.186848958334,
+      "added_contract": 709572.25,
+      "retained_net": 18880173.041666664,
+      "net_percent": 66.51430330582231,
+      "prior_saving_retained_percent": 96.37783830552485,
+      "forecast_error_percent": 0.060534864885419815
+    },
+    "7": {
+      "P": 21526594.875,
+      "U": 9774742.833333334,
+      "N": 10447099.666666666,
+      "per_page": 10202.245768229166,
+      "added_contract": 672356.8333333321,
+      "retained_net": 11079495.208333334,
+      "net_percent": 51.46887035627057,
+      "prior_saving_retained_percent": 94.2787159764311,
+      "forecast_error_percent": 0.03882408406366
+    }
+  },
+  "protected_fresh_passed": true,
+  "baseline_switch": {
+    "from": "48c89b04f88ea98ffa315e62afa43dfa99244222",
+    "to": "0fd96f2fa3f24e70c1652ea17b8cc87192acf6d2",
+    "branch": "codex/br1-minimum-write-rewrite",
+    "scope": "User-authorized CPU production source and measured baseline integration; Vulkan remains default-off; no formal M6/GPU award",
+    "gate_sha256": "aa37535e94d5a4008387ba36741cb742ac59bbd5ea7ad068d00e5f7cfdbe4740",
+    "prices_sha256": "0884d75783780131b3be91208c4d92fc2e9189fba7b9536b8a6b14ae9e72cb02",
+    "protected_controls_sha256": "11583df9a092066f1e8d22aebfd443936e38bd6b11b2567d3a8523cf81029f87",
+    "actual_head_after": "0fd96f2fa3f24e70c1652ea17b8cc87192acf6d2",
+    "completed": true
+  },
+  "limits": [
+    "CPU case arm64 performance, arm64/x86_64 correctness; not GPU execution or Rosetta performance qualification",
+    "P->N full-case CPU benefit proven; U->N CPU difference and noninferiority not proven",
+    "H0 whole-child CPU including process startup interval crosses zero; H1 whole-child CPU benefit proven",
+    "Finite capability/test coverage; not mathematical proof of all interleavings or strict worst-case algorithm upper bound",
+    "No new same-semantics upstream comparison, formal M6/M7/M8 qualification or global Vulkan enablement"
+  ]
+}

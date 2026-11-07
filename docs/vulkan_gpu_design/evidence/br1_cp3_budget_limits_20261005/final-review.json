@@ -1,0 +1,26 @@
+{
+  "before_generated_baseline_write": true,
+  "reviewed_paths": [
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp"
+  ],
+  "reviewed_patch_sha256": "9dc4168fb8437af8ab81a3a89b76e89410ccf60cfe9e3cc16527ec39bf9afebc",
+  "production_insertions": 22,
+  "production_deletions": 30,
+  "production_net_lines": -8,
+  "test_source_changes": 0,
+  "policy": "All seven by four and aggregate/durable checks unchanged; same process snapshot; unchanged signed delta preparation and original terminal/fee/wake lifecycle",
+  "table_order": "Current,RetainedHistory,ActivePending,InFlight,RetirementDebt,OptionalCache,MetadataArena matches enum and both original loop consumers; Count has no aggregate caller",
+  "no_new_owner_field_queue_public_api": true,
+  "ratchets_not_raised": true,
+  "private_access": "Evidence-only explicit template friend access, no production friend or test hook",
+  "post_generation_diff_numstat": [
+    "3\t3\tbuild-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "864\t864\tbuild-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "22\t30\tlibs/image/pagestore/KisPageWriteCoordinator.cpp"
+  ],
+  "all_original_checks_retained": true,
+  "current_architecture_passed": true,
+  "tool_tests_passed": true,
+  "actual_parent_differential": true,
+  "tests_unmodified": true
+}

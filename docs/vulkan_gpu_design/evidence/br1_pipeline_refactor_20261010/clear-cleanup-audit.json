@@ -1,0 +1,62 @@
+{
+  "base": "73a9fde6b3dfe7a76724d6797b1470233b7de4a1",
+  "commit": "75dc8fca5f006b546f5774d5b2aa4a3b99318e46",
+  "source_diff_sha256": "3441741e14aae2c5ea86472f32c35962da71f441e2fabbe29c4e39ca6ba72763",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "kis_tiled_data_manager_test": [
+        1503,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "kis_tiled_data_manager_test": [
+        1503,
+        0,
+        0
+      ]
+    }
+  },
+  "identities": {
+    "arm64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "aa6227278cdc1c43bd2a3617ebf2d727fedaa4b569ae48673d2a70c176e12ba9",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "910c9cd8285bd9ba43457c8ec9a45c875f5dc2a12ac3de0ab731b9a7fea23ca4"
+      }
+    },
+    "x86_64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "aa6227278cdc1c43bd2a3617ebf2d727fedaa4b569ae48673d2a70c176e12ba9",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "910c9cd8285bd9ba43457c8ec9a45c875f5dc2a12ac3de0ab731b9a7fea23ca4"
+      }
+    }
+  },
+  "passed_total": 3006,
+  "old_symbols_absent": "",
+  "numstat": [
+    "6\t12\tlibs/image/tiles3/kis_tiled_data_manager.cc",
+    "3\t4\tlibs/image/tiles3/kis_tiled_data_manager.h",
+    "25\t0\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+    "1\t0\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.h"
+  ],
+  "source_hashes": {
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "3fc848ae6504819051bdf80368c5d610607c9bb987a0e05c2997359279f4c815",
+    "libs/image/tiles3/kis_tiled_data_manager.h": "514c230298a49d5314504abcd959c9a6647cc3c2adca386671d7b28bc2fe80fa",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "014ea81e738b22d340b2ff39ce8624dfa4d8131fa5ff223bb04aff648feeb6e1",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.h": "45c6eb9e17fd5a15161ebf00f03078c2c8777629e5bc23275845982be73bdae6"
+  },
+  "audit_arguments": {
+    "package": "clear-cleanup",
+    "base": "73a9fde6b3dfe7a76724d6797b1470233b7de4a1",
+    "commit": "75dc8fca5f006b546f5774d5b2aa4a3b99318e46",
+    "batch": "clear-cleanup-full-r1",
+    "absent": ""
+  },
+  "limits": "Safety and source audit only; no time benefit claim."
+}

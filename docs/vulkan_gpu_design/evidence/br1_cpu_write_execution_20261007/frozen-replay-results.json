@@ -1,0 +1,42 @@
+[
+  {
+    "side": "parent",
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/parent-bin:/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/candidate-runtime/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/fixture/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "pid": 79364,
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "node_pins": 2420,
+    "qualification": "Frozen-library replay capability only; excluded from all performance sample counts and estimators"
+  },
+  {
+    "side": "candidate",
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/candidate-runtime/bin:/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/candidate-runtime/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/fixture/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "pid": 79491,
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "node_pins": 152,
+    "qualification": "Frozen-library replay capability only; excluded from all performance sample counts and estimators"
+  }
+]

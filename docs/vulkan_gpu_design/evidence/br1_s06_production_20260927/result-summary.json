@@ -1,0 +1,41 @@
+{
+  "scope": "S06 production native/generic recoverable first-write selection with imported Ready CPU before, unified prepared installation and owner-registration exclusion; cumulative CPU correctness, not complete M6/M7/M8 or performance qualification",
+  "final_run": "checks-01",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "223665aa6c4d516bcf27c8e99d67fc182131a06bdca452ceb7db1386191807f1",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      2569,
+      0,
+      0
+    ],
+    "x86_64": [
+      2569,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    5138,
+    0,
+    0
+  ],
+  "new_cpu_mutation_cases_per_architecture": 164,
+  "new_physical_cases_per_architecture": 2,
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 22,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1522,
+    "call_edges": 14985,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "allocator_summary": "allocator-summary.json",
+  "production_selector_handoff": "resident CPU exact alternate subset",
+  "whole_production_install_qualified": false,
+  "stage_or_performance_qualification": false
+}

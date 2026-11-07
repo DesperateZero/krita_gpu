@@ -1,0 +1,403 @@
+{
+  "raw_sample_sha256": "53399aa7bdc5d4839fb1ba5e3638ec20d9c1b99256dc584a5037559a63fc9f2c",
+  "actual_write_loop": true,
+  "scope": "All-thread collapsed exclusive samples>=5; contextual main write frames separate. No causal timing fractions or summed inclusive frames.",
+  "product_frames": [
+    {
+      "function": "KisBackingBudgetController::fitsLocked(KisBackingBudgetDelta const&, std::array<unsigned long long, 7ul> const&, unsigned long long, bool, unsigned long long) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 127
+    },
+    {
+      "function": "<deduplicated_symbol>",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 47
+    },
+    {
+      "function": "KisMutationStorageOwner::deref()",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 29
+    },
+    {
+      "function": "KisBackingBudgetController::releaseSharedNonPayloadLive(unsigned long long, KisPageAccessDomain, unsigned long long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 21
+    },
+    {
+      "function": "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_0::operator()(KisBackingBudgetController*, unsigned long long) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 17
+    },
+    {
+      "function": "(anonymous namespace)::ShardRecordStore::snapshot<KisPageWorkingVersion>(KisPageVersion const&, KisPageWorkingVersion*) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 16
+    },
+    {
+      "function": "KisTiles3PageReplicaProvider::retire(KisPageOperationId, KisReplicaHandle const&, KisCompletionTicket const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 16
+    },
+    {
+      "function": "KisPageMetadataCoordinator::applyProjectedSequence(KisPageKey const&, KisPageTransition const*, long long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 13
+    },
+    {
+      "function": "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 13
+    },
+    {
+      "function": "KisTiles3PageReplicaProvider::validate(KisReplicaHandle const&, KisPageAllocationDescriptor const&) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 11
+    },
+    {
+      "function": "std::__tree_remove[abi:ne200100]<std::__tree_node_base<void*>*>(std::__tree_node_base<void*>*, std::__tree_node_base<void*>*)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 11
+    },
+    {
+      "function": "KisPageOwnerLedger::releaseRetiredBacking(KisReplicaHandle const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 10
+    },
+    {
+      "function": "operator==(KisReplicaHandle const&, KisReplicaHandle const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 9
+    },
+    {
+      "function": "CompletionSourceState::complete(unsigned long long, KisCompletionStatus, CompletionInterval*&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 8
+    },
+    {
+      "function": "CompletionSourceState::status(unsigned long long) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 8
+    },
+    {
+      "function": "KisPageOwnerLedger::Private::applyBackingChange(KisBackingClassChange const&, KisBackingBudgetDelta*)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 8
+    },
+    {
+      "function": "KisPageOwnerLedger::Private::storePreparedChange(std::vector<KisBackingClassChange, KisMutationStorageAllocator<KisBackingClassChange>>, KisBackingBudgetReservation, KisReplicaHandle const&, std::vector<(anonymous namespace)::PreparedRetirementCredit, KisMutationStorageAllocator<(anonymous namespace)::PreparedRetirementCredit>>)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 8
+    },
+    {
+      "function": "KisBackingBudgetController::releaseLive(KisBackingBudgetClass, KisPageAccessDomain, unsigned long long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "KisPageOwnerLedger::Private::buildPhysicalBackingDelta(std::vector<KisBackingClassChange, KisMutationStorageAllocator<KisBackingClassChange>> const&, KisBackingBudgetDelta*, std::vector<(anonymous namespace)::PreparedRetirementCredit, KisMutationStorageAllocator<(anonymous namespace)::PreparedRetirementCredit>>*, QString*)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "KisPageOwnerLedger::prepareBackingChangesImpl(std::vector<KisBackingClassChange, KisMutationStorageAllocator<KisBackingClassChange>>, KisPageTransitionEffect const*, long long, QString*)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "boost::container::copy_assign_range_alloc_n<boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void>, void>, boost::move_iterator<KisPageWorkingReplica*>, KisPageWorkingReplica*>(boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void>, void>&, boost::move_iterator<KisPageWorkingReplica*>, unsigned long, KisPageWorkingReplica*, unsigned long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisCpuResidentAllocationIndex<Tiles3Allocation>::binding(KisReplicaHandle const&, KisCpuResidentReadStatus*)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisPageMetadataCoordinator::applyProjectedSequence(KisPageKey const&, KisPageTransition const*, long long)::$_1::operator()(KisPageVersion const&) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisPageWorkingState::KisPageWorkingState(KisMutationStorageAllocator<char>)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisReplicaHandle::isValid() const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisShardSlotIndex<KisPageVersion, KisGenerationalSlotId<KisVersionSlotTag>>::hash(KisPageVersion const&) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisTiles3PageReplicaProvider::Private::retainPhysical(KisTileData*, unsigned long long, KisTiles3PageReplicaProvider::Private::ResidencyObserver::PreparedPayload&, boost::intrusive_ptr<KisTileDataStore::ResidencyObservers>)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "std::__tree<std::__value_type<KisPageVersion, std::shared_ptr<KisCpuReadBindingLink>>, std::__map_value_compare<KisPageVersion, std::__value_type<KisPageVersion, std::shared_ptr<KisCpuReadBindingLink>>, (anonymous namespace)::MetadataKeyLess, true>, (anonymous namespace)::MetadataMapAllocator<std::__value_type<KisPageVersion, std::shared_ptr<KisCpuReadBindingLink>>>>::find<KisPageVersion>(KisPageVersion const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisCompletionRegistry::allocatePending(unsigned long long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "KisShardSlotIndex<KisReplicaPhysicalSlotIdentity, KisGenerationalSlotId<KisReplicaSlotTag>>::findBucket(KisReplicaPhysicalSlotIdentity const&) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "KisSurfaceFormat::isValid() const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "KisTiles3PageReplicaProvider::prepareSynchronousWriteCopy(KisPageOperationId, KisReplicaHandle const&, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPagePriority)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "boost::container::vector<KisPageWorkingReplica, boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void>, void>, void>::assign<boost::move_iterator<KisPageWorkingReplica*>>(boost::move_iterator<KisPageWorkingReplica*>, boost::move_iterator<KisPageWorkingReplica*>, boost::move_detail::disable_if_or<void, boost::move_detail::is_same<boost::move_detail::integral_constant<unsigned int, 1u>, boost::move_detail::integral_constant<unsigned int, 0u>>, boost::move_detail::is_convertible<boost::move_iterator<KisPageWorkingReplica*>, unsigned long>, boost::container::dtl::is_input_iterator<boost::move_iterator<KisPageWorkingReplica*>, has_iterator_category<boost::move_iterator<KisPageWorkingReplica*>>::value>, boost::move_detail::bool_<false>>::type*)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    }
+  ],
+  "system_frames": [
+    {
+      "function": "__psynch_cvwait",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 2345
+    },
+    {
+      "function": "__workq_kernreturn",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 1904
+    },
+    {
+      "function": "__ulock_wait2",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 1290
+    },
+    {
+      "function": "__ulock_wake",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 95
+    },
+    {
+      "function": "tiny_free_no_lock",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 31
+    },
+    {
+      "function": "_platform_memmove",
+      "image": "libsystem_platform.dylib",
+      "exclusive_samples": 30
+    },
+    {
+      "function": "tiny_malloc_from_free_list",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 29
+    },
+    {
+      "function": "free_tiny",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 23
+    },
+    {
+      "function": "tiny_free_list_add_ptr",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 19
+    },
+    {
+      "function": "QRect::contains(QRect const&, bool) const",
+      "image": "QtCore",
+      "exclusive_samples": 14
+    },
+    {
+      "function": "tiny_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 13
+    },
+    {
+      "function": "mach_continuous_time",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 11
+    },
+    {
+      "function": "_platform_memset",
+      "image": "libsystem_platform.dylib",
+      "exclusive_samples": 10
+    },
+    {
+      "function": "tiny_free_list_remove_ptr",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 9
+    },
+    {
+      "function": "tiny_malloc_should_clear",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 9
+    },
+    {
+      "function": "__psynch_cvsignal",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 8
+    },
+    {
+      "function": "malloc_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "szone_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "_free",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 5
+    }
+  ],
+  "actual_context_rows": [
+    {
+      "line": 43,
+      "row": "    +                       ! : |   +   ! 35 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 868  [0x1046d2350]  KisTiles3PageReplicaProvider.cpp:800",
+      "preceding": [
+        "    +                       ! : |   184 KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::shared_ptr<KisPageMutationExecution::Private> const&, bool)  (in libkritaimage.21.0.0.dylib) + 4956  [0x10478d3c0]  KisPageStore.cpp:2156",
+        "    +                       ! : |   + 184 KisPageWriteCoordinator::prepareFreshReplica(KisPageWriteIntent const&, KisPageReplicaProvider&, KisPageTransition const&, KisPageAllocationDescriptor const&, KisPageAccessRequirement, KisPagePriority, KisCpuPagePayload const*, std::shared_ptr<KisPageReplicaSource const> const&, bool*) const  (in libkritaimage.21.0.0.dylib) + 508  [0x1047825c8]  KisPageWriteCoordinator.cpp:2945",
+        "    +                       ! : |   +   133 KisTiles3PageReplicaProvider::prepareSynchronousWriteCopy(KisPageOperationId, KisReplicaHandle const&, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPagePriority)  (in libkritaimage.21.0.0.dylib) + 492  [0x1046d2b98]  KisTiles3PageReplicaProvider.cpp:1020"
+      ]
+    },
+    {
+      "line": 89,
+      "row": "    +                       ! : |   +   ! 35 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 996  [0x1046d23d0]  KisTiles3PageReplicaProvider.cpp:813",
+      "preceding": [
+        "    +                       ! : |   +   ! : | 1 QBasicMutex::lockInternal()  (in QtCore) + 168  [0x106dd9a8c]",
+        "    +                       ! : |   +   ! : |   1 __ulock_wait2  (in libsystem_kernel.dylib) + 8  [0x19dbeba54]",
+        "    +                       ! : |   +   ! : 1 KisCompletionRegistry::allocatePending(unsigned long long)  (in libkritaimage.21.0.0.dylib) + 176  [0x1046ccd5c]  KisCompletionRegistry.cpp:254"
+      ]
+    },
+    {
+      "line": 90,
+      "row": "    +                       ! : |   +   ! : 11 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1224  [0x1046d5224]  KisTiles3PageReplicaProvider.cpp:694",
+      "preceding": [
+        "    +                       ! : |   +   ! : |   1 __ulock_wait2  (in libsystem_kernel.dylib) + 8  [0x19dbeba54]",
+        "    +                       ! : |   +   ! : 1 KisCompletionRegistry::allocatePending(unsigned long long)  (in libkritaimage.21.0.0.dylib) + 176  [0x1046ccd5c]  KisCompletionRegistry.cpp:254",
+        "    +                       ! : |   +   ! 35 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 996  [0x1046d23d0]  KisTiles3PageReplicaProvider.cpp:813"
+      ]
+    },
+    {
+      "line": 119,
+      "row": "    +                       ! : |   +   ! : 11 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1512  [0x1046d5344]  KisTiles3PageReplicaProvider.cpp:695",
+      "preceding": [
+        "    +                       ! : |   +   ! : | +       1 KisBackingBudgetController::fitsLocked(KisBackingBudgetDelta const&, std::array<unsigned long long, 7ul> const&, unsigned long long, bool, unsigned long long) const  (in libkritaimage.21.0.0.dylib) + 576  [0x104774ae0]  KisPageWriteCoordinator.cpp:521",
+        "    +                       ! : |   +   ! : | 1 KisTiles3PageReplicaProvider::Private::ResidencyObserver::preparePayload(unsigned long long, unsigned long long) const  (in libkritaimage.21.0.0.dylib) + 528  [0x1046d91cc]  KisTiles3PageReplicaProvider.cpp:418",
+        "    +                       ! : |   +   ! : |   1 <deduplicated_symbol>  (in libkritaimage.21.0.0.dylib) + 56  [0x1046d9420]  __tree:1965"
+      ]
+    },
+    {
+      "line": 152,
+      "row": "    +                       ! : |   +   ! : 6 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 924  [0x1046d50f8]  KisTiles3PageReplicaProvider.cpp:691",
+      "preceding": [
+        "    +                       ! : |   +   ! : |   1 kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)  (in libkritaimage.21.0.0.dylib) + 536  [0x10477b094]  KisPageWriteCoordinator.cpp:2107",
+        "    +                       ! : |   +   ! : |     1 QBasicMutex::lockInternal()  (in QtCore) + 168  [0x106dd9a8c]",
+        "    +                       ! : |   +   ! : |       1 __ulock_wait2  (in libsystem_kernel.dylib) + 8  [0x19dbeba54]"
+      ]
+    },
+    {
+      "line": 165,
+      "row": "    +                       ! : |   +   ! : 5 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1652  [0x1046d53d0]  KisTiles3PageReplicaProvider.cpp:700",
+      "preceding": [
+        "    +                       ! : |   +   ! : |   1 kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)  (in libkritaimage.21.0.0.dylib) + 208  [0x10477af4c]  KisPageWriteCoordinator.cpp:2095",
+        "    +                       ! : |   +   ! : |   1 kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)  (in libkritaimage.21.0.0.dylib) + 268  [0x10477af88]  KisPageWriteCoordinator.cpp:2104",
+        "    +                       ! : |   +   ! : |     1 kisPageStorageAllocationBytes(unsigned long, unsigned long)  (in libkritaimage.21.0.0.dylib) + 256  [0x104776318]  KisPageWriteCoordinator.cpp:1635"
+      ]
+    },
+    {
+      "line": 182,
+      "row": "    +                       ! : |   +   ! : 1 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1036  [0x1046d5168]  KisTiles3PageReplicaProvider.cpp:692",
+      "preceding": [
+        "    +                       ! : |   +   ! : |             1 tiny_malloc_from_free_list  (in libsystem_malloc.dylib) + 1372  [0x19da21a80]",
+        "    +                       ! : |   +   ! : |             ! 1 tiny_free_list_add_ptr  (in libsystem_malloc.dylib) + 156  [0x19da243d8]",
+        "    +                       ! : |   +   ! : |             1 tiny_malloc_from_free_list  (in libsystem_malloc.dylib) + 1588  [0x19da21b58]"
+      ]
+    },
+    {
+      "line": 184,
+      "row": "    +                       ! : |   +   ! : 1 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1360  [0x1046d52ac]  KisTiles3PageReplicaProvider.cpp:694",
+      "preceding": [
+        "    +                       ! : |   +   ! : |             1 tiny_malloc_from_free_list  (in libsystem_malloc.dylib) + 1588  [0x19da21b58]",
+        "    +                       ! : |   +   ! : 1 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1036  [0x1046d5168]  KisTiles3PageReplicaProvider.cpp:692",
+        "    +                       ! : |   +   ! : | 1 std::__basic_node_handle<std::__tree_node<std::__value_type<unsigned long long, Tiles3Allocation>, void*>, KisMutationStorageAllocator<std::pair<unsigned long long const, Tiles3Allocation>>, std::__map_node_handle_specifics>::operator=[abi:ne200100](std::__basic_node_handle<std::__tree_node<std::__value_type<unsigned long long, Tiles3Allocation>, void*>, KisMutationStorageAllocator<std::pair<unsigned long long const, Tiles3Allocation>>, std::__map_node_handle_specifics>&&)  (in libkritaimage.21.0.0.dylib) + 0  [0x1046d7378]  __node_handle:127"
+      ]
+    },
+    {
+      "line": 185,
+      "row": "    +                       ! : |   +   ! 31 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 1276  [0x1046d24e8]  KisTiles3PageReplicaProvider.cpp:826",
+      "preceding": [
+        "    +                       ! : |   +   ! : 1 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1036  [0x1046d5168]  KisTiles3PageReplicaProvider.cpp:692",
+        "    +                       ! : |   +   ! : | 1 std::__basic_node_handle<std::__tree_node<std::__value_type<unsigned long long, Tiles3Allocation>, void*>, KisMutationStorageAllocator<std::pair<unsigned long long const, Tiles3Allocation>>, std::__map_node_handle_specifics>::operator=[abi:ne200100](std::__basic_node_handle<std::__tree_node<std::__value_type<unsigned long long, Tiles3Allocation>, void*>, KisMutationStorageAllocator<std::pair<unsigned long long const, Tiles3Allocation>>, std::__map_node_handle_specifics>&&)  (in libkritaimage.21.0.0.dylib) + 0  [0x1046d7378]  __node_handle:127",
+        "    +                       ! : |   +   ! : 1 KisTiles3PageReplicaProvider::Private::prepareAdoption(KisPageVersion const&, KisPageAllocationDescriptor const&, KisTileData*)  (in libkritaimage.21.0.0.dylib) + 1360  [0x1046d52ac]  KisTiles3PageReplicaProvider.cpp:694"
+      ]
+    },
+    {
+      "line": 207,
+      "row": "    +                       ! : |   +   ! 20 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 1604  [0x1046d2630]  KisTiles3PageReplicaProvider.cpp:860",
+      "preceding": [
+        "    +                       ! : |   +   ! :     1 szone_malloc_should_clear  (in libsystem_malloc.dylib) + 84  [0x19da1fbe8]",
+        "    +                       ! : |   +   ! :       1 tiny_malloc_should_clear  (in libsystem_malloc.dylib) + 272  [0x19da20dc4]",
+        "    +                       ! : |   +   ! :         1 tiny_malloc_from_free_list  (in libsystem_malloc.dylib) + 1736  [0x19da21bec]"
+      ]
+    },
+    {
+      "line": 230,
+      "row": "    +                       ! : |   +   ! 7 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 920  [0x1046d2384]  KisTiles3PageReplicaProvider.cpp:806",
+      "preceding": [
+        "    +                       ! : |   +   ! : 1 KisTiles3PageReplicaProvider::Private::adopt(KisTiles3PageReplicaProvider::Private::PreparedAdoption&, KisTileData*, KisCompletionTicket const&)  (in libkritaimage.21.0.0.dylib) + 52  [0x1046d5510]  KisTiles3PageReplicaProvider.cpp:749",
+        "    +                       ! : |   +   ! :   1 KisReplicaHandle::isValid() const  (in libkritaimage.21.0.0.dylib) + 196  [0x1046d860c]  KisPageStoreTypes.h:611",
+        "    +                       ! : |   +   ! :     1 QRect::contains(QRect const&, bool) const  (in QtCore) + 0  [0x106d84420]"
+      ]
+    },
+    {
+      "line": 247,
+      "row": "    +                       ! : |   +   ! 4 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 1628  [0x1046d2648]  KisTiles3PageReplicaProvider.cpp:864",
+      "preceding": [
+        "    +                       ! : |   +   ! : |     1 kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_0::operator()(KisBackingBudgetController*, unsigned long long) const  (in libkritaimage.21.0.0.dylib) + 148  [0x10477b71c]  KisPageWriteCoordinator.cpp:2058",
+        "    +                       ! : |   +   ! : |       1 KisBackingBudgetController::fitsLocked(KisBackingBudgetDelta const&, std::array<unsigned long long, 7ul> const&, unsigned long long, bool, unsigned long long) const  (in libkritaimage.21.0.0.dylib) + 484  [0x104774a84]  KisPageWriteCoordinator.cpp:0",
+        "    +                       ! : |   +   ! : 1 KisCompletionRegistry::allocatePending(unsigned long long)  (in libkritaimage.21.0.0.dylib) + 384  [0x1046cce2c]  KisCompletionRegistry.cpp:248"
+      ]
+    },
+    {
+      "line": 256,
+      "row": "    +                       ! : |   +   ! 1 KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)  (in libkritaimage.21.0.0.dylib) + 1448  [0x1046d2594]  KisTiles3PageReplicaProvider.cpp:845",
+      "preceding": [
+        "    +                       ! : |   +   ! :   | 1 QBasicMutex::lockInternal()  (in QtCore) + 168  [0x106dd9a8c]",
+        "    +                       ! : |   +   ! :   |   1 __ulock_wait2  (in libsystem_kernel.dylib) + 8  [0x19dbeba54]",
+        "    +                       ! : |   +   ! :   1 KisCompletionRegistry::complete(KisCompletionTicket const&, KisCompletionStatus)  (in libkritaimage.21.0.0.dylib) + 240  [0x1046cd03c]  KisCompletionRegistry.cpp:270"
+      ]
+    }
+  ]
+}

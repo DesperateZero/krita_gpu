@@ -1,0 +1,279 @@
+{
+  "scope": "Matched native parent0a00bd versus original handoff slot reuse; descriptive per-bucket95% intervals, not stage family qualification",
+  "rows": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "plan": "fresh",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 12.458,
+        "current": 12.5
+      },
+      "reduction": {
+        "estimate": -0.010609174930654497,
+        "two_sided_95": [
+          -0.014355265858955635,
+          -9.874814229959838e-05
+        ]
+      },
+      "saving_us": {
+        "estimate": -0.14550000000000002,
+        "two_sided_95": [
+          -0.17725000000000002,
+          -0.00037500000000000033
+        ]
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "plan": "handoff",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 11.9375,
+        "current": 11.9795
+      },
+      "reduction": {
+        "estimate": -0.005687998113654835,
+        "two_sided_95": [
+          -0.014888383285406093,
+          0.004271401752131698
+        ]
+      },
+      "saving_us": {
+        "estimate": -0.067875,
+        "two_sided_95": [
+          -0.177,
+          0.052
+        ]
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "plan": "fresh",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 116.375,
+        "current": 117.21875
+      },
+      "reduction": {
+        "estimate": -0.001798756232650689,
+        "two_sided_95": [
+          -0.01393019840255283,
+          0.012221986969726428
+        ]
+      },
+      "saving_us": {
+        "estimate": -0.20825000000000002,
+        "two_sided_95": [
+          -1.5779999999999998,
+          1.463625
+        ]
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "plan": "handoff",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 103.104,
+        "current": 100.23975
+      },
+      "reduction": {
+        "estimate": 0.01794789625745663,
+        "two_sided_95": [
+          -0.0011651749609371542,
+          0.028748557719364132
+        ]
+      },
+      "saving_us": {
+        "estimate": 1.8800000000000003,
+        "two_sided_95": [
+          -0.14037500000000003,
+          2.963375
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "plan": "fresh",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 19.2915,
+        "current": 19.41675
+      },
+      "reduction": {
+        "estimate": -0.008761189442247241,
+        "two_sided_95": [
+          -0.022119864392080135,
+          0.0044344055598312115
+        ]
+      },
+      "saving_us": {
+        "estimate": -0.17225000000000001,
+        "two_sided_95": [
+          -0.421875,
+          0.08325
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "plan": "handoff",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 18.45825,
+        "current": 18.33325
+      },
+      "reduction": {
+        "estimate": 0.0171909738012066,
+        "two_sided_95": [
+          0.0006619339067350793,
+          0.030090831436639265
+        ]
+      },
+      "saving_us": {
+        "estimate": 0.3075,
+        "two_sided_95": [
+          0.020874999999999977,
+          0.551875
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "plan": "fresh",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 187.094,
+        "current": 186.90675
+      },
+      "reduction": {
+        "estimate": 0.0017341746497101518,
+        "two_sided_95": [
+          -0.019806819657502306,
+          0.02241248838266685
+        ]
+      },
+      "saving_us": {
+        "estimate": 0.3596250000000001,
+        "two_sided_95": [
+          -3.5365,
+          4.286625000000001
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "plan": "handoff",
+      "pairs": 40,
+      "independent_order_blocks": 20,
+      "marginal_medians_us": {
+        "parent": 164.81275,
+        "current": 160.1875
+      },
+      "reduction": {
+        "estimate": 0.019936215315232264,
+        "two_sided_95": [
+          0.014732004113228392,
+          0.030688541271148062
+        ]
+      },
+      "saving_us": {
+        "estimate": 3.286625,
+        "two_sided_95": [
+          2.396,
+          5.077999999999999
+        ]
+      }
+    }
+  ],
+  "handoff_minus_fresh_incremental_contrast": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "extra_log_gain": {
+        "estimate": 0.005646173861891477,
+        "two_sided_95": [
+          -0.014430824864831207,
+          0.015684804487582527
+        ]
+      },
+      "extra_saving_us": {
+        "estimate": 0.067625,
+        "two_sided_95": [
+          -0.177,
+          0.19775
+        ]
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "extra_log_gain": {
+        "estimate": 0.002991308211607464,
+        "two_sided_95": [
+          -0.004576847965651066,
+          0.04761292167906516
+        ]
+      },
+      "extra_saving_us": {
+        "estimate": 0.218625,
+        "two_sided_95": [
+          -0.7343749999999998,
+          5.005
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "extra_log_gain": {
+        "estimate": 0.028328708122548438,
+        "two_sided_95": [
+          -0.0016950517716829358,
+          0.0448603733923245
+        ]
+      },
+      "extra_saving_us": {
+        "estimate": 0.515625,
+        "two_sided_95": [
+          -0.021125000000000033,
+          0.8383750000000001
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "extra_log_gain": {
+        "estimate": 0.023694437655042894,
+        "two_sided_95": [
+          -0.009878584604527185,
+          0.04311976360023159
+        ]
+      },
+      "extra_saving_us": {
+        "estimate": 3.958,
+        "two_sided_95": [
+          -1.9894999999999996,
+          7.2135
+        ]
+      }
+    }
+  ]
+}

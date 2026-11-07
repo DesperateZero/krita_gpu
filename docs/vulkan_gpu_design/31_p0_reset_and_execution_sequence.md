@@ -164,22 +164,22 @@ SubmissionCoordinator fake，但不能在 canonical PageStore 未冻结时让 Vu
   offscreen、UI adapter 构建及稳定核心测试 6/6 通过。完整证据见
   [45_br0_build_and_regression_evidence_20260918.md](45_br0_build_and_regression_evidence_20260918.md)。
 
-尚未达到 BR0 出口：
+BR0 已关闭：
 
-- 尚未把当前分支重放到已确认版本的目标 Krita upstream；不能把“已有分支 HEAD”误称为“更新后的 upstream
-  干净基线”。截至证据记录时当前分支比 `origin/master` 少 944 个 upstream 提交、独有 17 个提交。
-- 重放完成后必须在新 HEAD 上复跑 CPU-only、foundation、shader/offscreen、architecture guard 和 CPU/OpenGL
-  对照套件；重放前不能关闭 BR0。
-- 核心 registry 可以产生仅供内部协调的 surface identity、completion ticket 和经完整 report 验证的 ready token；
-  isolated smoke 已有真实 foundation evidence，但该证据没有接入正常 bootstrap；document session 仍只能停在
-  Initializing，任何 Vulkan 产品运行能力仍为关闭。
+- 当前分支已重放到已确认的 `origin/master` `9a24ae0d8c`，内层 BR0 提交为 `f5fbbde618`；重放前状态保存在
+  `archive/br0-pre-upstream-replay-20260918`。
+- 新 HEAD 已复跑 CPU-only、foundation、shader/offscreen、architecture guard 和 CPU/OpenGL 对照套件；完整证据见
+  [45_br0_build_and_regression_evidence_20260918.md](45_br0_build_and_regression_evidence_20260918.md)。
+- 产品 Vulkan 能力仍按阶段要求关闭：document session 只能停在 Initializing，isolated foundation smoke 不构成
+  BR2–BR6 production ready 证据。
 
 类与文件占位清单见
 [40_br0_code_cutover_and_skeleton_inventory.md](40_br0_code_cutover_and_skeleton_inventory.md)。
 
 ## 6. BR1：Canonical PageStore
 
-权威设计见 [25_p0_canonical_pagestore_krita_tile_cow_swap.md](25_p0_canonical_pagestore_krita_tile_cow_swap.md)。
+权威设计见 [25_p0_canonical_pagestore_krita_tile_cow_swap.md](25_p0_canonical_pagestore_krita_tile_cow_swap.md)；写侧 first-write、
+backing handoff、硬预算与剩余 M6–M8 收口见 [92](92_br1_m6_m8_execution_baseline.md)。
 
 ### 6.1 工作
 
@@ -190,6 +190,9 @@ SubmissionCoordinator fake，但不能在 canonical PageStore 未冻结时让 Vu
 5. 冻结 backend-neutral request/lease/publish/cancel/ticket API。
 6. 提供 CPU access facade，使 iterator、random/sequential accessor 继续保持 Krita 行为。
 7. 建立 reference state machine、property test 和 fault injection。
+8. 实现 virtual default、resident CPU native guard、显式 mutation session、PageStore 私有 write-plan、条件 backing handoff 与必要 first-write COW。
+9. 将 production epoch root 与 reference 容器分离，使用 persistent structure 和 changed-page 增量 metadata。
+10. 建立 current/history/pending/in-flight/retiring/optional backing ledger、硬字节预算、压力状态机、背压与 tiny-budget 门禁。
 
 ### 6.2 禁止捷径
 
@@ -198,6 +201,9 @@ SubmissionCoordinator fake，但不能在 canonical PageStore 未冻结时让 Vu
 - 不能把 page generation 简化为 dirty bit；
 - 不能让 iterator 绕过 lease 直接抓可被迁移的裸地址；
 - 不能把现有 swap 留作“CPU 路径”，另建 GPU SSD store。
+- 不能让每次 resident tile lock 都走 heap request/global map/provider reverse scan；
+- 不能把 reference `QHash/QVector` manifest rebuild/sort 当作 production commit 布局；
+- 不能把 tile unlock 当成 transaction/epoch commit 边界。
 
 ### 6.3 出口
 
@@ -205,7 +211,15 @@ SubmissionCoordinator fake，但不能在 canonical PageStore 未冻结时让 Vu
 - 每个 canonical page 只有一套 identity 和 generation history；
 - lease 与 authority 不变量通过随机状态空间测试；
 - SSD 失败不能污染 published generation；
+- blank/default read 保持 O(1) backing、零 page materialization；resident CPU 与 upstream 的性能差分达到 52 门禁；
+- 同一 mutation 的同一未发布段每页至多一次 reserve、一次必要 COW、一次 seal；发布后新段重新取得 writer/permit，production commit 随 changed pages 扩展；
 - Vulkan 尚未拥有任何 canonical 像素。
+
+### 6.4 当前实施入口
+
+BR1 的唯一当前执行入口是 [92](92_br1_m6_m8_execution_baseline.md)。M5 资源失败和发布安装修复提交 `5173c807c8` 已通过本轮完整验证，可进入 M6，证据与资格边界由 92 绑定；后续顺序为 **M6 recoverable → M7 bounded commit-only → M8 业务/生命周期与清理 → 正式 BR1-PERF**。
+
+47–91 已全部退出当前执行口径，原状态与证据完整保留在 [历史索引](archive/br1_pre_m6_20260925/README.md)。本节原历史实施补记保存在该目录的 `previous-entry-snapshots.json`。BR1 尚未完成，全局 BR0–BR6 顺序、§6.3 出口和 BR2 production 禁止提前接线的约束保持不变。
 
 ## 7. BR2：SubmissionCoordinator
 
@@ -214,7 +228,7 @@ SubmissionCoordinator fake，但不能在 canonical PageStore 未冻结时让 Vu
 ### 7.1 工作
 
 1. 选择 queue topology 并由 coordinator 独占全部 `VkQueue`。
-2. 完成 timeline-backed DAG 和 backend-neutral `GpuTicket` bridge。
+2. 完成 timeline-backed DAG，并通过 typed backend-neutral `CompletionTicket` bridge 对接 GPU timeline。
 3. 为每个 queue family 实现按完成值回收的 command arena。
 4. 建立 descriptor、transient allocation、binding-table slot 和资源 retirement。
 5. 定义 transfer/sparse/compute/graphics/present request，不让业务模块调用 queue API。
@@ -230,6 +244,7 @@ SubmissionCoordinator fake，但不能在 canonical PageStore 未冻结时让 Vu
 - shutdown 按已知 timeline 收敛，不对活动 device wait-idle。
 
 BR2 不要求画笔或 canvas 可见；用 fake workload 和测试 surface 证明调度性质。
+其 production 接入前置条件是 BR1-PERF 全部门禁通过；隔离的协议/reference 工作不能被记为跨过阶段门槛。
 
 ## 8. BR3：UMA、dGPU 与 SSD replica
 
@@ -245,7 +260,8 @@ BR2 不要求画笔或 canvas 可见；用 fake workload 和测试 surface 证�
 - BDA 和 descriptor+offset 共享同一 binding ABI；
 - 明确 coherent/non-coherent cache maintenance；
 - sampled atlas/image 只作可丢弃 derived cache；
-- canvas-pixel copy counter 在稳态严格为零。
+- 同一兼容驻留 shared backing 的真实 CPU↔GPU 交接中 payload migration count/bytes 严格为零，COW/undo/derived copy
+  单列；适用条件与计数覆盖见 39 的 5.7，不把必要同步或总耗时记零。
 
 ### 8.2 dGPU
 
@@ -268,7 +284,10 @@ BR2 不要求画笔或 canvas 可见；用 fake workload 和测试 surface 证�
 
 ### 8.4 出口
 
-- UMA pointer bypass 测试通过且画布 copy=0；
+- UMA pointer bypass 测试通过，同一兼容驻留 shared backing 的真实交接符合 39 的 5.7 零 payload migration 要求；
+  COW/undo/derived copy 单列，CPU-only 未交接不构成 UMA Pass；
+- UMA shared mapped storage 的 CPU hot access 必须通过同机 native CpuRam/upstream 差分；超过 39 的门限时，只能作为
+  GPU replica，CPU authority/产品 route 回到 CpuRam，不能以 copy=0 宣称性能通过；
 - 小预算下 dGPU 强制 VRAM→RAM→SSD→RAM→VRAM 循环通过；
 - checksum、authority、valid replica 集始终一致；
 - stale ProviderEpoch/slot generation/operation completion 全部被拒绝；
@@ -320,7 +339,8 @@ GPU stroke 权威设计见 [10_gpu_stroke_foundation.md](10_gpu_stroke_foundatio
 5. page Prepared 依赖最后 producer ticket；完整 batch 通过 ImageEpoch manifest 原子 commit；失败/cancel 丢弃
    write generation。
 6. undo 保存旧 generation reference；save 获取 immutable image epoch。
-7. brush resource 和 capability 在 stroke 开始前决定 GPU 或 CPU route。
+7. brush resource、correctness capability 与 performance profile 在 stroke 首次写入前共同决定 GPU 或 CPU route；实际 CPU
+   产品路径和完整 accelerator ETA 没有足够收益余量时选择 CPU，route 在整笔期间冻结。
 8. 运行 SurfaceFormat、selection、alpha lock、wash、undo/save/reopen golden。
 
 ### 10.2 出口
@@ -330,6 +350,9 @@ GPU stroke 权威设计见 [10_gpu_stroke_foundation.md](10_gpu_stroke_foundatio
 - stroke end 只完成 journal/commit handoff，不同步下载像素；
 - 立即 undo、cancel、save、继续下一 stroke 都保持 generation isolation；
 - 不支持能力在写入前完整路由 CPU；
+- CPU-only、forced GPU/UMA 与 Auto 在 GPU 劣势、低功耗/温控、queue contention、UMA 带宽竞争 profile 中完成同质量
+  对照；Auto median/P95 不超过真实 CPU 1.10×，P99/最长停顿不超过 1.25×，未达标 bucket 取消 `AutoPreferred` 并在写入前
+  路由 CPU；
 - device loss 能按 recoverability 规则保住最近 durable generation。
 
 BR5 完成仍不意味着开放 Vulkan canvas；产品显示闭环在 BR6。
@@ -418,7 +441,9 @@ generation 语义来换取支持。
 
 ### 14.3 阶段性能未达标
 
-先用 trace 找出 policy、batch 或 kernel 问题。可以调整 policy/consumer，实现不能绕过 lease/ticket/authority。
+先用 trace/counter 判定常数项、policy 问题或接入粒度/布局问题。可以调整 policy/consumer；当抽象迫使 resident 热路径
+承担通用异步 control-plane 成本时，必须重构为等价 native guard/persistent layout，不能仅叠加缓存掩盖。实现始终
+不能绕过 generation/lease/ticket/authority；若短期无法达标，按 52 恢复 upstream CPU 产品路径并隔离 PageStore 演进。
 
 ### 14.4 新路径未完成
 
@@ -436,6 +461,8 @@ Vulkan 保持不可用，CPU/OpenGL 继续工作。不可恢复旧 Vulkan runtim
 - GPU stroke、合成、显示不拥有第二份数据真相；
 - UI/input 零阻塞定义通过运行时计数证明；
 - 所有 capability 与格式声明有对应 golden；
+- GPU/UMA 的 correctness support 与 performance qualification 分离，Auto 在劣势 profile 下满足 39 的真实 CPU 相对门禁，
+  未满足的 bucket 可观察地前置路由 CPU；
 - Vulkan 功能直到整个 MVP 通过才对用户启用。
 
 这不是“恢复一张 Vulkan 画布”的里程碑，而是以后增加笔刷、图层、滤镜、颜色格式和平台时无需再次推翻

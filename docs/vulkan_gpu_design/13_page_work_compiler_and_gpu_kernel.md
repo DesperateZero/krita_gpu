@@ -314,9 +314,10 @@ GPU golden test 比较 reference page 与 GPU readback。允许容差必须按�
 
 ### PW4：成本和大工作负载
 
-- timestamp 驱动成本模型。
+- 以同机成熟 CPU product path 和完整 accelerator end-to-end trace 驱动成本模型；GPU timestamp 只是一项输入。
 - 大 dab、多页和长 list 拆分。
 - 验证切分不改变输出。
+- 按 brush/format/page-count/device-state bucket 产生 `AutoPreferred` profile；收益余量不足时在首写前整笔 CPU route。
 
 ### PW5：资源和特殊 stage
 
@@ -328,6 +329,7 @@ GPU golden test 比较 reference page 与 GPU readback。允许容差必须按�
 
 - 任意 batch、page 和 micro-batch 切分与 CPU reference 一致。
 - 同页数千重叠半透明 dab 结果稳定，不依赖 dispatch 调度顺序。
+- 产品 Auto route 满足 39 的 CPU-relative median/P95/P99 门禁；forced GPU 较慢不能被 GPU timestamp 或零拷贝掩盖。
 - 每个目标像素只有一个 invocation writer。
 - 不存在 per-dab dispatch、descriptor allocation 或 barrier。
 - 页面边界、valid rect、镜像、wrap 和超大 dab 无接缝。

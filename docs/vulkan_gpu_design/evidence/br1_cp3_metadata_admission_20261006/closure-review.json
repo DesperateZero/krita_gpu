@@ -1,0 +1,81 @@
+{
+  "responsibility": "Original budget admission policy for positive MetadataArena CPU storage; complete dependency and consumer migration",
+  "groups": {
+    "production": {
+      "added": 81,
+      "deleted": 25,
+      "files": [
+        "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "libs/image/pagestore/KisPageWriteCoordinator_p.h"
+      ],
+      "net": 56
+    },
+    "ownership": {
+      "added": 1,
+      "deleted": 1,
+      "files": [
+        "build-tools/ci-scripts/pagestore-audit/state-ownership.json"
+      ],
+      "net": 0
+    },
+    "generated": {
+      "added": 1195,
+      "deleted": 1018,
+      "files": [
+        "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+        "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json"
+      ],
+      "net": 177
+    },
+    "tests": {
+      "added": 0,
+      "deleted": 0,
+      "files": [],
+      "net": 0
+    }
+  },
+  "removed": [
+    "Six repeated unchanged class scans per warm metadata admission",
+    "Process storage caller zero-initialized seven-class delta and aggregate temporary",
+    "Duplicated per-domain/class policy body via one shared fitsBudgetBucket"
+  ],
+  "preserved": [
+    "Logical admission count and earlier-waiter ordering",
+    "All four metadata domain overflow checks, aggregate, live process snapshot and global durable limit",
+    "Parent-local reserve, actual capacity and local-parent settle",
+    "Generic signed/empty-usage/irreducible metadata policy",
+    "Real allocation/free, failure return, controller detach and independent tails"
+  ],
+  "added_state": {
+    "owner": "Original controller, same mutex; authoritative m_usage/m_limits unchanged",
+    "bytes_per_controller": 16,
+    "fields": [
+      "m_nonMetadataFitsValid",
+      "m_nonMetadataFits",
+      "m_nonMetadataLiveSsd"
+    ]
+  },
+  "invalidation_closure": [
+    "activateReservationLocked: all new/reused/waiter/shared reservations",
+    "commitRetaining: commit/release/retainOnly and retained reservations",
+    "configureLimits: successful limit replacement",
+    "releaseLive: all nonmetadata releases including SSD",
+    "moveRetirementHeadroom: reserved-domain change even unchanged aggregate"
+  ],
+  "uncached_inputs": [
+    "Metadata live/reserved/aggregate",
+    "Process live/reserved",
+    "Global durable reserved"
+  ],
+  "consumer_closure": [
+    "kisAllocateMutationStorage: parent/local under original gates",
+    "kisReservePageProcessStorage: original process/parent gate order",
+    "prepareReservationSlot: original waiter/capacity policy"
+  ],
+  "net_new_logical_owners": 0,
+  "net_new_queues": 0,
+  "net_new_public_business_apis": 0,
+  "net_new_recovery_domains": 0,
+  "tests": "Original38 QTest processes+6 probes unchanged; eight separately compiled evidence policy processes compare actual members and real mutators. No product test flags or private accessors added.",
+  "scope_limit": "Finite dependency-cache optimization. Original stage qualification remains separately reported; no claim that every admission, fee or lock can be removed."
+}

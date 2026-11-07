@@ -1,0 +1,501 @@
+{
+  "processes": 4,
+  "repetitions_per_side": 2,
+  "scope_clocks": false,
+  "cases": {
+    "0": {
+      "pages": 1,
+      "writes": 1,
+      "history": false,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 8,
+          "fresh_accepted": 8,
+          "provider_retire": 8,
+          "free": 12
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "extra_frees": 0,
+      "extra_fresh_vs_duplicate_requests": 0
+    },
+    "1": {
+      "pages": 16,
+      "writes": 1,
+      "history": false,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 128,
+          "fresh_accepted": 128,
+          "provider_retire": 128,
+          "free": 132
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "extra_frees": 0,
+      "extra_fresh_vs_duplicate_requests": 0
+    },
+    "2": {
+      "pages": 1,
+      "writes": 16,
+      "history": false,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 68,
+          "fresh_accepted": 68,
+          "provider_retire": 68,
+          "free": 72
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "extra_frees": 60,
+      "extra_fresh_vs_duplicate_requests": 60
+    },
+    "3": {
+      "pages": 16,
+      "writes": 16,
+      "history": false,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 1088,
+          "fresh_accepted": 1088,
+          "provider_retire": 1088,
+          "free": 1092
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "extra_frees": 960,
+      "extra_fresh_vs_duplicate_requests": 960
+    },
+    "4": {
+      "pages": 1,
+      "writes": 1,
+      "history": true,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 8,
+          "fresh_accepted": 8,
+          "provider_retire": 8,
+          "free": 12
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "extra_frees": 0,
+      "extra_fresh_vs_duplicate_requests": 0
+    },
+    "5": {
+      "pages": 16,
+      "writes": 1,
+      "history": true,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 128,
+          "fresh_accepted": 128,
+          "provider_retire": 128,
+          "free": 132
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "extra_frees": 0,
+      "extra_fresh_vs_duplicate_requests": 0
+    },
+    "6": {
+      "pages": 1,
+      "writes": 16,
+      "history": true,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 68,
+          "fresh_accepted": 68,
+          "provider_retire": 68,
+          "free": 72
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "extra_frees": 60,
+      "extra_fresh_vs_duplicate_requests": 60
+    },
+    "7": {
+      "pages": 16,
+      "writes": 16,
+      "history": true,
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "rows": 1088,
+          "fresh_accepted": 1088,
+          "provider_retire": 1088,
+          "free": 1092
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "extra_frees": 960,
+      "extra_fresh_vs_duplicate_requests": 960
+    }
+  },
+  "exploratory_scaling": {
+    "2": {
+      "comparison": "2 minus 0",
+      "extra_frees": 60,
+      "extra_cpu_ms": {
+        "process": {
+          "median": 1.2475,
+          "mean": 1.1589375000000002,
+          "ci95": [
+            0.8645000000000003,
+            1.362
+          ],
+          "blocks": [
+            0.8645000000000003,
+            1.362,
+            1.5735000000000001,
+            1.242,
+            1.1605000000000003,
+            1.2530000000000001,
+            0.5585000000000004,
+            1.2575
+          ]
+        },
+        "foreground": {
+          "median": 0.8668435000000001,
+          "mean": 0.75424725,
+          "ci95": [
+            0.48939599999999994,
+            0.9449790000000002
+          ],
+          "blocks": [
+            0.48939599999999994,
+            0.9449790000000002,
+            1.0957495,
+            0.8656665000000001,
+            0.7409780000000001,
+            0.8680205,
+            0.15950049999999982,
+            0.8696879999999999
+          ]
+        },
+        "other_threads": {
+          "median": 0.39340575000000005,
+          "mean": 0.40469025,
+          "ci95": [
+            0.37633349999999993,
+            0.41952199999999995
+          ],
+          "blocks": [
+            0.375104,
+            0.417021,
+            0.4777504999999999,
+            0.37633349999999993,
+            0.41952199999999995,
+            0.38497950000000003,
+            0.39899950000000006,
+            0.38781200000000005
+          ]
+        },
+        "reclaimer": {
+          "median": 0.4005000000000001,
+          "mean": 0.408625,
+          "ci95": [
+            0.37550000000000006,
+            0.42600000000000005
+          ],
+          "blocks": [
+            0.37249999999999994,
+            0.41850000000000004,
+            0.489,
+            0.37550000000000006,
+            0.41450000000000004,
+            0.38650000000000007,
+            0.42600000000000005,
+            0.38650000000000007
+          ]
+        }
+      },
+      "limitation": "15 extra write+read cycles, not isolated Fresh/retire deletion. No causal unit price."
+    },
+    "3": {
+      "comparison": "3 minus 1",
+      "extra_frees": 960,
+      "extra_cpu_ms": {
+        "process": {
+          "median": 11.857500000000002,
+          "mean": 11.9131875,
+          "ci95": [
+            11.56,
+            12.088000000000001
+          ],
+          "blocks": [
+            11.933499999999999,
+            11.793500000000002,
+            12.088000000000001,
+            11.5855,
+            11.9215,
+            11.56,
+            12.8935,
+            11.530000000000001
+          ]
+        },
+        "foreground": {
+          "median": 7.43184425,
+          "mean": 7.5707814375,
+          "ci95": [
+            7.287292499999999,
+            7.751792
+          ],
+          "blocks": [
+            7.5105,
+            7.389188000000001,
+            7.751792,
+            7.304416,
+            7.4745004999999995,
+            7.287292499999999,
+            8.5816045,
+            7.266957999999999
+          ]
+        },
+        "other_threads": {
+          "median": 4.324051750000001,
+          "mean": 4.3424060625,
+          "ci95": [
+            4.2727075,
+            4.423
+          ],
+          "blocks": [
+            4.423,
+            4.404312,
+            4.336208000000001,
+            4.281084000000001,
+            4.446999499999999,
+            4.2727075,
+            4.311895499999999,
+            4.2630419999999996
+          ]
+        },
+        "reclaimer": {
+          "median": 4.324,
+          "mean": 4.3425,
+          "ci95": [
+            4.2735,
+            4.423
+          ],
+          "blocks": [
+            4.423,
+            4.403,
+            4.3365,
+            4.281,
+            4.448,
+            4.2735,
+            4.3115,
+            4.2635000000000005
+          ]
+        }
+      },
+      "limitation": "15 extra write+read cycles, not isolated Fresh/retire deletion. No causal unit price."
+    },
+    "6": {
+      "comparison": "6 minus 4",
+      "extra_frees": 60,
+      "extra_cpu_ms": {
+        "process": {
+          "median": 1.1725,
+          "mean": 1.19125,
+          "ci95": [
+            1.024,
+            1.3200000000000003
+          ],
+          "blocks": [
+            1.024,
+            1.1775000000000002,
+            1.145,
+            1.314,
+            1.1675,
+            1.4534999999999996,
+            0.9284999999999998,
+            1.3200000000000003
+          ]
+        },
+        "foreground": {
+          "median": 0.77785425,
+          "mean": 0.791914,
+          "ci95": [
+            0.6691455000000001,
+            0.8898539999999999
+          ],
+          "blocks": [
+            0.6691455000000001,
+            0.7984585,
+            0.756896,
+            0.8827490000000001,
+            0.75725,
+            0.9870215,
+            0.5939375,
+            0.8898539999999999
+          ]
+        },
+        "other_threads": {
+          "median": 0.3991770000000001,
+          "mean": 0.399336,
+          "ci95": [
+            0.35485449999999996,
+            0.431251
+          ],
+          "blocks": [
+            0.35485449999999996,
+            0.37904150000000003,
+            0.38810400000000006,
+            0.431251,
+            0.4102500000000001,
+            0.46647850000000013,
+            0.3345625,
+            0.4301459999999999
+          ]
+        },
+        "reclaimer": {
+          "median": 0.39949999999999997,
+          "mean": 0.3994375,
+          "ci95": [
+            0.3545,
+            0.43150000000000005
+          ],
+          "blocks": [
+            0.3545,
+            0.38049999999999995,
+            0.38749999999999996,
+            0.4295,
+            0.41150000000000003,
+            0.4665000000000001,
+            0.334,
+            0.43150000000000005
+          ]
+        }
+      },
+      "limitation": "15 extra write+read cycles, not isolated Fresh/retire deletion. No causal unit price."
+    },
+    "7": {
+      "comparison": "7 minus 5",
+      "extra_frees": 960,
+      "extra_cpu_ms": {
+        "process": {
+          "median": 9.747499999999999,
+          "mean": 10.0144375,
+          "ci95": [
+            9.4635,
+            10.787499999999998
+          ],
+          "blocks": [
+            9.4635,
+            10.787499999999998,
+            9.350999999999999,
+            10.6165,
+            9.534,
+            9.876999999999999,
+            9.618,
+            10.868
+          ]
+        },
+        "foreground": {
+          "median": 6.086896,
+          "mean": 6.350101625000001,
+          "ci95": [
+            5.919708000000001,
+            7.016478500000001
+          ],
+          "blocks": [
+            5.919708000000001,
+            7.016478500000001,
+            5.895396,
+            6.823750500000001,
+            5.954625,
+            6.2104585,
+            5.963333500000001,
+            7.017062999999999
+          ]
+        },
+        "other_threads": {
+          "median": 3.660604,
+          "mean": 3.664335875,
+          "ci95": [
+            3.5437919999999994,
+            3.7927495
+          ],
+          "blocks": [
+            3.5437919999999994,
+            3.7710215,
+            3.455604,
+            3.7927495,
+            3.5793749999999998,
+            3.6665415,
+            3.6546665000000003,
+            3.850936999999999
+          ]
+        },
+        "reclaimer": {
+          "median": 3.6614999999999998,
+          "mean": 3.6648125,
+          "ci95": [
+            3.5460000000000003,
+            3.7920000000000007
+          ],
+          "blocks": [
+            3.5460000000000003,
+            3.768,
+            3.456,
+            3.7920000000000007,
+            3.5805,
+            3.667,
+            3.6559999999999997,
+            3.8529999999999998
+          ]
+        }
+      },
+      "limitation": "15 extra write+read cycles, not isolated Fresh/retire deletion. No causal unit price."
+    }
+  },
+  "legal_deletions": null,
+  "legal_net_recoverable_ms": null,
+  "count_formula": "current Fresh/rows/retire=4*K*(W+1); upstream duplicate requests=8*K; extra frees=4*K*(W-1)",
+  "limits": [
+    "duplicate requests are not automatically allocations or preclone misses.",
+    "Exact repeated counts are deterministic fixture evidence, not a probability confidence interval.",
+    "Workload contrast includes read protection, publication, cancellation guarantees and all lifecycle work."
+  ]
+}

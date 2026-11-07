@@ -1,0 +1,24 @@
+{
+  "command": [
+    "arch",
+    "-x86_64",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+    "testAutoBrushStroke",
+    "testPersistentAutoBrushStroke",
+    "testPersistentAutoBrushStrokeCancelled",
+    "testPersistentAutoBrushStrokeFailure",
+    "testPersistentAutoBrushStrokePressure",
+    "testPersistentAutoBrushStrokePressureCancelled",
+    "-nocrashhandler"
+  ],
+  "pid": 5178,
+  "exit_code": 1,
+  "totals": [
+    "Totals: 10 passed, 1 failed, 0 skipped, 0 blacklisted, 458ms"
+  ],
+  "failures": [
+    "FAIL!  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() Compared values are not the same"
+  ],
+  "normal_exit": true,
+  "passed": false
+}

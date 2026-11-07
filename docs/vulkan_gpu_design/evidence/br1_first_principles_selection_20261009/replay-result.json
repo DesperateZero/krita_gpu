@@ -1,0 +1,423 @@
+{
+  "purpose": "retrospective arithmetic and counter audit; no prospective success claim",
+  "new_performance_processes": 0,
+  "product_head": "d182a34bd0196079bc40d2ab7d00b8e326e4a58a",
+  "lifecycle_parent": {
+    "Stroke/cpu_ns": {
+      "reduction": 0.0388287614481414,
+      "pointwise_95_interval": [
+        -0.0027855215594694283,
+        0.08816274795721102
+      ],
+      "paired_saving_median_ms": 0.2485,
+      "positive_interval": false
+    },
+    "Lifecycle/cpu_ns": {
+      "reduction": 0.00198598621599122,
+      "pointwise_95_interval": [
+        -0.008075730221712707,
+        0.012935887445361671
+      ],
+      "paired_saving_median_ms": 1.474,
+      "positive_interval": false
+    },
+    "Undo/cpu_ns": {
+      "reduction": 0.1144591625911372,
+      "pointwise_95_interval": [
+        0.05237147126516206,
+        0.1805702061396166
+      ],
+      "paired_saving_median_ms": 0.0465,
+      "positive_interval": true
+    },
+    "Redo/cpu_ns": {
+      "reduction": 0.07333662471018854,
+      "pointwise_95_interval": [
+        0.016066622955025367,
+        0.1310941988630634
+      ],
+      "paired_saving_median_ms": 0.037,
+      "positive_interval": true
+    },
+    "Teardown/cpu_ns": {
+      "reduction": 0.0907813452433689,
+      "pointwise_95_interval": [
+        0.04665379907134748,
+        0.13549732851395713
+      ],
+      "paired_saving_median_ms": 0.0875,
+      "positive_interval": true
+    },
+    "Teardown/wall_ns": {
+      "reduction": 0.029609448701323315,
+      "pointwise_95_interval": [
+        -0.021912203531103902,
+        0.08109176166328125
+      ],
+      "paired_saving_median_ms": 0.0295,
+      "positive_interval": false
+    }
+  },
+  "upstream_stroke": {
+    "reduction": -0.8558094096612212,
+    "pointwise_95_interval": [
+      -0.931605989791078,
+      -0.7885269839496698
+    ],
+    "paired_saving_median_ms": -7.6425,
+    "positive_interval": false
+  },
+  "fill": {
+    "Stroke/cpu_ns": {
+      "reduction": 0.05236603075835411,
+      "pointwise_95_interval": [
+        0.03672321801172085,
+        0.06643611741467725
+      ],
+      "paired_saving_median_ms": 1.1225,
+      "positive_interval": true
+    },
+    "Undo/wall_ns": {
+      "reduction": -0.0631295327946062,
+      "pointwise_95_interval": [
+        -0.12516341184004642,
+        -0.008490038303280212
+      ],
+      "paired_saving_median_ms": -0.043,
+      "positive_interval": false
+    }
+  },
+  "fill_workload_variation": {
+    "block": 9,
+    "process": 38,
+    "side": "fill",
+    "projection_updates": 18,
+    "other_processes_projection_updates": 19,
+    "primary_retains_all_48": true
+  },
+  "counts": {
+    "projection_stroke": {
+      "record_assign_existing": {
+        "parent": {
+          "observations": [
+            396,
+            396,
+            396,
+            396
+          ],
+          "min": 396,
+          "max": 396
+        },
+        "candidate": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        }
+      },
+      "private_retry_snapshot": {
+        "parent": {
+          "observations": [
+            132,
+            132,
+            132,
+            132
+          ],
+          "min": 132,
+          "max": 132
+        },
+        "candidate": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        }
+      },
+      "full_fact_version": {
+        "parent": {
+          "observations": [
+            664,
+            648,
+            672,
+            628
+          ],
+          "min": 628,
+          "max": 672
+        },
+        "candidate": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        }
+      },
+      "compact_fact_version": {
+        "parent": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        },
+        "candidate": {
+          "observations": [
+            640,
+            672,
+            652,
+            640
+          ],
+          "min": 640,
+          "max": 672
+        }
+      },
+      "duplicate_compare": {
+        "parent": {
+          "observations": [
+            772,
+            752,
+            848,
+            706
+          ],
+          "min": 706,
+          "max": 848
+        },
+        "candidate": {
+          "observations": [
+            119,
+            136,
+            121,
+            122
+          ],
+          "min": 119,
+          "max": 136
+        }
+      },
+      "group_sort_compare": {
+        "parent": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        },
+        "candidate": {
+          "observations": [
+            413,
+            501,
+            476,
+            420
+          ],
+          "min": 413,
+          "max": 501
+        }
+      },
+      "prepare_fact_lock": {
+        "parent": {
+          "observations": [
+            136,
+            144,
+            152,
+            132
+          ],
+          "min": 132,
+          "max": 152
+        },
+        "candidate": {
+          "observations": [
+            126,
+            148,
+            126,
+            130
+          ],
+          "min": 126,
+          "max": 148
+        }
+      },
+      "install_lock": {
+        "parent": {
+          "observations": [
+            136,
+            136,
+            136,
+            132
+          ],
+          "min": 132,
+          "max": 136
+        },
+        "candidate": {
+          "observations": [
+            126,
+            126,
+            126,
+            122
+          ],
+          "min": 122,
+          "max": 126
+        }
+      }
+    },
+    "all_observed_stages": {
+      "protection_fact": {
+        "parent": {
+          "observations": [
+            0,
+            13,
+            1,
+            8
+          ],
+          "min": 0,
+          "max": 13
+        },
+        "candidate": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        }
+      },
+      "job_notify": {
+        "parent": {
+          "observations": [
+            177,
+            192,
+            181,
+            183
+          ],
+          "min": 177,
+          "max": 192
+        },
+        "candidate": {
+          "observations": [
+            39,
+            43,
+            41,
+            44
+          ],
+          "min": 39,
+          "max": 44
+        }
+      },
+      "job_invoke": {
+        "parent": {
+          "observations": [
+            172,
+            184,
+            172,
+            175
+          ],
+          "min": 172,
+          "max": 184
+        },
+        "candidate": {
+          "observations": [
+            168,
+            184,
+            174,
+            177
+          ],
+          "min": 168,
+          "max": 184
+        }
+      },
+      "delay_arm": {
+        "parent": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        },
+        "candidate": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        }
+      },
+      "wake_notify": {
+        "parent": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        },
+        "candidate": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        }
+      },
+      "last_use_notify": {
+        "parent": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        },
+        "candidate": {
+          "observations": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "min": 0,
+          "max": 0
+        }
+      }
+    }
+  },
+  "source_hashes": {
+    "docs/vulkan_gpu_design/evidence/br1_cpu_lifecycle_implementation_20261009/parent-summary.json": "3bb88f996d5d2ef88df560493da4e6ba70421c1ffe613005b1c9d39029dc90b8",
+    "docs/vulkan_gpu_design/evidence/br1_cpu_lifecycle_implementation_20261009/upstream-summary.json": "add7d305346058085c8627a0a1a1281839905621737a3681f1b899ca60777c05",
+    "docs/vulkan_gpu_design/evidence/br1_cpu_lifecycle_implementation_20261009/quantity-summary.json": "001b24f67b30bd3dfef1f6a0556c129e7d09e5275b6e70bb025a4140ea950e1d",
+    "docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fill-summary.json": "d91b84215d9f5480c7db8835b7858ed576842dc52617276dd005871d2b46359f"
+  },
+  "installed_skill_at_trial_start": {
+    "path": "/Users/apple/.codex/skills/algorithm-cost-optimization/SKILL.md",
+    "sha256": "f63ac3e5130a8807298bff4ebe4e7613ca684d3a7aabda0d6ba14b7f13c65413",
+    "promoted_by_this_trial": false
+  }
+}

@@ -1,0 +1,752 @@
+{
+  "samples": [
+    {
+      "file": "sample-1ms.txt",
+      "workers": 8,
+      "worker_samples": 67896,
+      "occupancy": {
+        "test scheduling/lock wait": 55887,
+        "non-waiting worker stack": 8929,
+        "wait inside product API": 3080
+      },
+      "non_waiting_api": {
+        "KisTiledDataManager::clear()": 2148,
+        "KisTiledDataManager::setExtent(QRect)": 1840,
+        "KisTiledDataManager::clear(int, int, int, int, unsigned char)": 1385,
+        "KisTiledDataManager::bitBltImpl<false>(KisTiledDataManager*, QRect const&)": 1078,
+        "KisTiledDataManager::commit()": 923,
+        "KisTiledDataManager::rollforward(KisSharedPtr<KisMemento>)": 414,
+        "KisTiledDataManager::rollback(KisSharedPtr<KisMemento>)": 395,
+        "KisTiledDataManager::purgeHistory(KisSharedPtr<KisMemento>)": 367,
+        "KisTiledDataManager::readBytes(unsigned char*, int, int, int, int, int) const": 135,
+        "test/Qt/other": 100,
+        "KisTiledDataManager::writeBytes(unsigned char const*, int, int, int, int, int)": 45,
+        "KisTiledDataManager::KisTiledDataManager(unsigned int, unsigned char const*)": 41,
+        "KisTiledDataManager::setDefaultPixel(unsigned char const*)": 22,
+        "KisTiledDataManager::getTile(int, int, bool)": 17,
+        "KisTiledDataManager::~KisTiledDataManager()": 9,
+        "KisTiledDataManager::getOldTile(int, int, bool&)": 8,
+        "KisTiledDataManager::getMemento()": 2
+      },
+      "non_waiting_structure": {
+        "default-page materialization": 2490,
+        "canonical commit": 1836,
+        "synchronous whole-tile adoption": 1108,
+        "history GC / snapshot release": 1014,
+        "other non-waiting": 988,
+        "canonical history restore": 412,
+        "history default-page prune": 393,
+        "index rebuild (inclusive)": 350,
+        "generic read / native refresh": 238,
+        "derive extent": 100
+      },
+      "copy_ancestor_paths": {
+        "KisPageStore::Private::ensureDefaultPageLocked(KisPageVersion const&, KisImageEpochId, KisSurfaceEpochState const&, KisPageAccessRequirement, KisPagePriority, QMutexLocker<QMutex>*, QString*) -> KisTiles3PageReplicaProvider::requestReplica(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisPageAccessMode, KisPagePriority) -> KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 1560,
+        "KisStressJob::run() -> KisTiledDataManager::readBytes(unsigned char*, int, int, int, int, int) const -> KisTiledDataManager::readBytesBody(unsigned char*, int, int, int, int, int) const": 35,
+        "KisTiledDataManager::clear(QRect, unsigned char const*) -> KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 18,
+        "KisStressJob::run() -> KisTiledDataManager::KisTiledDataManager(unsigned int, unsigned char const*) -> KisTiledDataManager::setDefaultPixel(unsigned char const*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 16,
+        "KisTiledDataManagerPageStoreBackend::clearAll(QString*) -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageStore::Private::ensureDefaultPageLocked(KisPageVersion const&, KisImageEpochId, KisSurfaceEpochState const&, KisPageAccessRequirement, KisPagePriority, QMutexLocker<QMutex>*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 13,
+        "KisStressJob::run() -> KisTiledDataManager::setDefaultPixel(unsigned char const*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 11,
+        "KisTiledDataManagerPageStoreWriteBatch::~KisTiledDataManagerPageStoreWriteBatch() -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageOwnerLedger::validatePreparedPage(KisPageMetadataCoordinator const&, KisPreparedPageProof const&, KisPageAllocationDescriptor const&, QString*) const -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 11,
+        "KisStressJob::run() -> KisTiledDataManager::clear(int, int, int, int, unsigned char) -> KisTiledDataManager::clear(QRect, unsigned char const*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 10,
+        "KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageOwnerLedger::sealPreparedPage(KisPageMetadataCoordinator const&, KisPageVersion const&, KisPageTransactionId, KisPageAllocationDescriptor const&, KisCompletionTicket const&, KisPreparedPageProof*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 10,
+        "KisTiledDataManagerPageStoreBackend::commitHistory(unsigned char const*, unsigned int, QString*) -> KisTiledDataManagerPageStoreBackend::pruneDefaultPreparedPages(KisPageTransaction const&, QString*) -> KisPageStore::release(KisReadLease, KisCompletionTicket const&) -> KisPageStore::Private::discardSupersededPreparedVersion(KisPageVersion const&) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 10,
+        "KisTiledDataManagerPageStoreWriteBatch::~KisTiledDataManagerPageStoreWriteBatch() -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*)::$_2::operator()(KisPageTransitionKind, bool) const -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 9,
+        "KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageOwnerLedger::provider(KisReplicaProviderId, KisReplicaProviderEpoch) const -> (anonymous namespace)::providerKey(KisReplicaProviderId, KisReplicaProviderEpoch)": 9
+      },
+      "top_non_waiting_self": {
+        "_platform_memmove": 1553,
+        "DYLD-STUB$$memcpy": 406,
+        "KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 388,
+        "tiny_malloc_from_free_list": 381,
+        "<deduplicated_symbol>": 348,
+        "__ulock_wake": 311,
+        "tiny_free_no_lock": 272,
+        "free_tiny": 217,
+        "tiny_free_list_add_ptr": 209,
+        "QHashPrivate::Data<QHashPrivate::Node<KisPageKey, QHashDummyValue>>::Bucket QHashPrivate::Data<QHashPrivate::Node<KisPageKey, QHashDummyValue>>::findBucket<KisPageKey>(KisPageKey const&) const": 188,
+        "KisTiles3PageReplicaProvider::retire(KisPageOperationId, KisReplicaHandle const&, KisCompletionTicket const&)": 182,
+        "_szone_free": 156,
+        "mach_continuous_time": 155,
+        "_platform_memset": 148,
+        "KisImageEpochRootSnapshot::resolve(KisPageKey const&, KisPageVersion*) const": 104,
+        "QHashPrivate::Data<QHashPrivate::Node<unsigned long long, KisCompletionStatus>>::InsertionResult QHashPrivate::Data<QHashPrivate::Node<unsigned long long, KisCompletionStatus>>::findOrInsert<unsigned long long>(unsigned long long const&)": 95,
+        "tiny_malloc_should_clear": 91,
+        "QRect::contains(QRect const&, bool) const": 89,
+        "KisPageStateMachine::applyImpl(KisPageStateSnapshot const&, KisPageTransition const&, bool) const": 84,
+        "KisPageMetadataCoordinator::apply(KisPageKey const&, KisPageTransition const&)": 79,
+        "KisReplicaHandle::isValid() const": 78,
+        "szone_malloc_should_clear": 73,
+        "KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 60,
+        "_free": 57,
+        "KisCompletionRegistry::status(KisCompletionTicket const&) const": 51
+      }
+    },
+    {
+      "file": "sample-5ms.txt",
+      "workers": 8,
+      "worker_samples": 33392,
+      "occupancy": {
+        "test scheduling/lock wait": 27585,
+        "non-waiting worker stack": 4338,
+        "wait inside product API": 1332,
+        "worker outside stress body": 137
+      },
+      "non_waiting_api": {
+        "KisTiledDataManager::clear()": 1119,
+        "KisTiledDataManager::setExtent(QRect)": 906,
+        "KisTiledDataManager::clear(int, int, int, int, unsigned char)": 673,
+        "KisTiledDataManager::bitBltImpl<false>(KisTiledDataManager*, QRect const&)": 470,
+        "KisTiledDataManager::commit()": 449,
+        "KisTiledDataManager::rollback(KisSharedPtr<KisMemento>)": 189,
+        "KisTiledDataManager::purgeHistory(KisSharedPtr<KisMemento>)": 182,
+        "KisTiledDataManager::rollforward(KisSharedPtr<KisMemento>)": 175,
+        "KisTiledDataManager::readBytes(unsigned char*, int, int, int, int, int) const": 77,
+        "test/Qt/other": 33,
+        "KisTiledDataManager::writeBytes(unsigned char const*, int, int, int, int, int)": 23,
+        "KisTiledDataManager::~KisTiledDataManager()": 13,
+        "KisTiledDataManager::KisTiledDataManager(unsigned int, unsigned char const*)": 13,
+        "KisTiledDataManager::setDefaultPixel(unsigned char const*)": 8,
+        "KisTiledDataManager::getTile(int, int, bool)": 5,
+        "KisTiledDataManager::getOldTile(int, int, bool&)": 2,
+        "KisTiledDataManager::getMemento()": 1
+      },
+      "non_waiting_structure": {
+        "default-page materialization": 1293,
+        "canonical commit": 892,
+        "synchronous whole-tile adoption": 543,
+        "history GC / snapshot release": 495,
+        "other non-waiting": 447,
+        "history default-page prune": 179,
+        "canonical history restore": 176,
+        "index rebuild (inclusive)": 149,
+        "generic read / native refresh": 110,
+        "derive extent": 54
+      },
+      "copy_ancestor_paths": {
+        "KisPageStore::Private::ensureDefaultPageLocked(KisPageVersion const&, KisImageEpochId, KisSurfaceEpochState const&, KisPageAccessRequirement, KisPagePriority, QMutexLocker<QMutex>*, QString*) -> KisTiles3PageReplicaProvider::requestReplica(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisPageAccessMode, KisPagePriority) -> KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 789,
+        "KisStressJob::run() -> KisTiledDataManager::readBytes(unsigned char*, int, int, int, int, int) const -> KisTiledDataManager::readBytesBody(unsigned char*, int, int, int, int, int) const": 13,
+        "KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageOwnerLedger::sealPreparedPage(KisPageMetadataCoordinator const&, KisPageVersion const&, KisPageTransactionId, KisPageAllocationDescriptor const&, KisCompletionTicket const&, KisPreparedPageProof*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 9,
+        "KisTiledDataManagerPageStoreBackend::clearAll(QString*) -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageStore::Private::ensureDefaultPageLocked(KisPageVersion const&, KisImageEpochId, KisSurfaceEpochState const&, KisPageAccessRequirement, KisPagePriority, QMutexLocker<QMutex>*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 8,
+        "KisTiledDataManager::clear(QRect, unsigned char const*) -> KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 5,
+        "KisTiledDataManagerPageStoreBackend::clearAll(QString*) -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageStore::Private::collectUnreachableHistoricalVersions(QList<KisPageKey> const&, bool) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 4,
+        "KisTiledDataManagerPageStoreWriteBatch::~KisTiledDataManagerPageStoreWriteBatch() -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageOwnerLedger::validatePreparedPage(KisPageMetadataCoordinator const&, KisPreparedPageProof const&, KisPageAllocationDescriptor const&, QString*) const -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 4,
+        "KisTiledDataManager::commit() -> KisTiledDataManagerPageStoreBackend::commitHistory(unsigned char const*, unsigned int, QString*) -> KisTiledDataManagerPageStoreBackend::pruneDefaultPreparedPages(KisPageTransaction const&, QString*) -> KisPageStore::acquireRead(KisPageKey const&, KisPageReadView const&, KisPageAccessRequirement, KisPagePriority) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 4,
+        "KisTiledDataManagerPageStoreBackend::commitHistory(unsigned char const*, unsigned int, QString*) -> KisPageStoreMementoManager::commit(KisPageStoreHistoryTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageOwnerLedger::validatePreparedPage(KisPageMetadataCoordinator const&, KisPreparedPageProof const&, KisPageAllocationDescriptor const&, QString*) const -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 4,
+        "KisTiledDataManager::rollback(KisSharedPtr<KisMemento>) -> KisTiledDataManagerPageStoreBackend::rollback(KisSharedPtr<KisMemento> const&, QString*) -> KisPageStoreMementoManager::restore(KisPageStoreMemento const&, bool, QString*) -> KisPageStore::restoreRetainedEpochImpl(KisRetainedImageEpochSnapshot const&, QList<KisPageKey> const*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 4,
+        "KisTiledDataManager::bitBltImpl<false>(KisTiledDataManager*, QRect const&) -> KisTiledDataManagerPageStoreWriteBatch::~KisTiledDataManagerPageStoreWriteBatch() -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 3,
+        "KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageOwnerLedger::provider(KisReplicaProviderId, KisReplicaProviderEpoch) const -> (anonymous namespace)::providerKey(KisReplicaProviderId, KisReplicaProviderEpoch)": 3
+      },
+      "top_non_waiting_self": {
+        "_platform_memmove": 741,
+        "KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 210,
+        "DYLD-STUB$$memcpy": 205,
+        "<deduplicated_symbol>": 189,
+        "tiny_malloc_from_free_list": 164,
+        "tiny_free_no_lock": 129,
+        "free_tiny": 117,
+        "__ulock_wake": 111,
+        "tiny_free_list_add_ptr": 100,
+        "mach_continuous_time": 88,
+        "KisTiles3PageReplicaProvider::retire(KisPageOperationId, KisReplicaHandle const&, KisCompletionTicket const&)": 79,
+        "QHashPrivate::Data<QHashPrivate::Node<KisPageKey, QHashDummyValue>>::Bucket QHashPrivate::Data<QHashPrivate::Node<KisPageKey, QHashDummyValue>>::findBucket<KisPageKey>(KisPageKey const&) const": 73,
+        "tiny_malloc_should_clear": 57,
+        "QRect::contains(QRect const&, bool) const": 52,
+        "KisPageStateMachine::applyImpl(KisPageStateSnapshot const&, KisPageTransition const&, bool) const": 49,
+        "_platform_memset": 49,
+        "_szone_free": 45,
+        "KisPageMetadataCoordinator::apply(KisPageKey const&, KisPageTransition const&)": 44,
+        "KisImageEpochRootSnapshot::resolve(KisPageKey const&, KisPageVersion*) const": 42,
+        "szone_malloc_should_clear": 41,
+        "QHashPrivate::Data<QHashPrivate::Node<unsigned long long, KisCompletionStatus>>::InsertionResult QHashPrivate::Data<QHashPrivate::Node<unsigned long long, KisCompletionStatus>>::findOrInsert<unsigned long long>(unsigned long long const&)": 40,
+        "KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 34,
+        "_free": 31,
+        "KisCompletionRegistry::status(KisCompletionTicket const&) const": 29,
+        "_malloc_zone_malloc": 28
+      }
+    },
+    {
+      "file": "sample-seeded-1ms.txt",
+      "workers": 8,
+      "worker_samples": 186312,
+      "occupancy": {
+        "test scheduling/lock wait": 153538,
+        "non-waiting worker stack": 24345,
+        "wait inside product API": 7592,
+        "worker outside stress body": 837
+      },
+      "non_waiting_api": {
+        "KisTiledDataManager::clear()": 6093,
+        "KisTiledDataManager::setExtent(QRect)": 4925,
+        "KisTiledDataManager::clear(int, int, int, int, unsigned char)": 3783,
+        "KisTiledDataManager::bitBltImpl<false>(KisTiledDataManager*, QRect const&)": 2694,
+        "KisTiledDataManager::commit()": 2592,
+        "KisTiledDataManager::rollforward(KisSharedPtr<KisMemento>)": 1095,
+        "KisTiledDataManager::rollback(KisSharedPtr<KisMemento>)": 1092,
+        "KisTiledDataManager::purgeHistory(KisSharedPtr<KisMemento>)": 998,
+        "KisTiledDataManager::readBytes(unsigned char*, int, int, int, int, int) const": 454,
+        "test/Qt/other": 268,
+        "KisTiledDataManager::writeBytes(unsigned char const*, int, int, int, int, int)": 132,
+        "KisTiledDataManager::KisTiledDataManager(unsigned int, unsigned char const*)": 64,
+        "KisTiledDataManager::setDefaultPixel(unsigned char const*)": 54,
+        "KisTiledDataManager::~KisTiledDataManager()": 48,
+        "KisTiledDataManager::getTile(int, int, bool)": 38,
+        "KisTiledDataManager::getMemento()": 10,
+        "KisTiledDataManager::getOldTile(int, int, bool&)": 3,
+        "DYLD-STUB$$KisTiledDataManager::KisTiledDataManager(unsigned int, unsigned char const*)": 1,
+        "DYLD-STUB$$KisTiledDataManager::extent() const": 1
+      },
+      "non_waiting_structure": {
+        "default-page materialization": 6943,
+        "canonical commit": 5170,
+        "synchronous whole-tile adoption": 2979,
+        "other non-waiting": 2643,
+        "history GC / snapshot release": 2620,
+        "canonical history restore": 1088,
+        "history default-page prune": 1077,
+        "index rebuild (inclusive)": 898,
+        "generic read / native refresh": 644,
+        "derive extent": 283
+      },
+      "copy_ancestor_paths": {
+        "KisPageStore::Private::ensureDefaultPageLocked(KisPageVersion const&, KisImageEpochId, KisSurfaceEpochState const&, KisPageAccessRequirement, KisPagePriority, QMutexLocker<QMutex>*, QString*) -> KisTiles3PageReplicaProvider::requestReplica(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisPageAccessMode, KisPagePriority) -> KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 4343,
+        "KisStressJob::run() -> KisTiledDataManager::readBytes(unsigned char*, int, int, int, int, int) const -> KisTiledDataManager::readBytesBody(unsigned char*, int, int, int, int, int) const": 82,
+        "KisStressJob::run() -> KisTiledDataManager::clear(int, int, int, int, unsigned char) -> KisTiledDataManager::clear(QRect, unsigned char const*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 37,
+        "KisTiledDataManager::clear(QRect, unsigned char const*) -> KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 35,
+        "KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageOwnerLedger::sealPreparedPage(KisPageMetadataCoordinator const&, KisPageVersion const&, KisPageTransactionId, KisPageAllocationDescriptor const&, KisCompletionTicket const&, KisPreparedPageProof*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 30,
+        "KisTiledDataManagerPageStoreBackend::trimToRect(QRect const&, QString*) -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageStore::Private::ensureDefaultPageLocked(KisPageVersion const&, KisImageEpochId, KisSurfaceEpochState const&, KisPageAccessRequirement, KisPagePriority, QMutexLocker<QMutex>*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 28,
+        "KisStressJob::run() -> KisTiledDataManager::setDefaultPixel(unsigned char const*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 27,
+        "KisTiledDataManagerPageStoreBackend::clearAll(QString*) -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageStore::Private::ensureDefaultPageLocked(KisPageVersion const&, KisImageEpochId, KisSurfaceEpochState const&, KisPageAccessRequirement, KisPagePriority, QMutexLocker<QMutex>*, QString*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 23,
+        "KisTiledDataManager::clear() -> KisTiledDataManagerPageStoreBackend::clearAll(QString*) -> KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(KisPageTransaction const&, QString*) -> KisPageStore::commit(KisPageTransaction const&, KisPreparedPageSet const&, KisRetainedImageEpochSnapshot*) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 22,
+        "KisTiledDataManagerPageStoreBackend::purgeHistory(KisSharedPtr<KisMemento> const&, unsigned char const*, unsigned int, QString*) -> KisPageStoreMementoManager::purge(KisPageStoreMemento const&, QString*) -> KisPageStore::releaseSnapshotImpl(KisImageEpochSnapshotToken, QList<KisPageKey> const*) -> KisPageStore::Private::collectUnreachableHistoricalVersions(QList<KisPageKey> const&, bool) -> KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 21,
+        "KisStressJob::run() -> KisTiledDataManager::KisTiledDataManager(unsigned int, unsigned char const*) -> KisTiledDataManager::setDefaultPixel(unsigned char const*) -> KisTileDataStore::allocTileData(int, unsigned char const*) -> KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 21,
+        "KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(int, int, KisTileData*, bool, QString*) -> KisTiledDataManagerPageStoreBackend::replaceFullTileInTransaction(KisPageTransaction const&, int, int, KisTileData*, bool, QString*) -> KisPageStore::adoptSynchronousHostWrite(KisPageTransaction const&, KisPageKey const&, KisReplicaProviderId, KisReplicaProviderEpoch, KisPagePriority, KisReplicaHandle*, QString*) -> KisPageMetadataCoordinator::apply(KisPageKey const&, KisPageTransition const&) -> KisPageStateMachine::applyImpl(KisPageStateSnapshot const&, KisPageTransition const&, bool) const": 19
+      },
+      "top_non_waiting_self": {
+        "_platform_memmove": 4200,
+        "KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)": 1146,
+        "DYLD-STUB$$memcpy": 1128,
+        "<deduplicated_symbol>": 972,
+        "tiny_malloc_from_free_list": 919,
+        "__ulock_wake": 786,
+        "free_tiny": 664,
+        "tiny_free_no_lock": 633,
+        "QHashPrivate::Data<QHashPrivate::Node<KisPageKey, QHashDummyValue>>::Bucket QHashPrivate::Data<QHashPrivate::Node<KisPageKey, QHashDummyValue>>::findBucket<KisPageKey>(KisPageKey const&) const": 523,
+        "tiny_free_list_add_ptr": 503,
+        "mach_continuous_time": 497,
+        "KisTiles3PageReplicaProvider::retire(KisPageOperationId, KisReplicaHandle const&, KisCompletionTicket const&)": 456,
+        "_platform_memset": 376,
+        "tiny_malloc_should_clear": 318,
+        "QRect::contains(QRect const&, bool) const": 297,
+        "KisImageEpochRootSnapshot::resolve(KisPageKey const&, KisPageVersion*) const": 276,
+        "QHashPrivate::Data<QHashPrivate::Node<unsigned long long, KisCompletionStatus>>::InsertionResult QHashPrivate::Data<QHashPrivate::Node<unsigned long long, KisCompletionStatus>>::findOrInsert<unsigned long long>(unsigned long long const&)": 253,
+        "_szone_free": 248,
+        "KisPageMetadataCoordinator::apply(KisPageKey const&, KisPageTransition const&)": 213,
+        "KisPageStateMachine::applyImpl(KisPageStateSnapshot const&, KisPageTransition const&, bool) const": 206,
+        "KisReplicaHandle::isValid() const": 186,
+        "szone_malloc_should_clear": 179,
+        "KisPageMetadataCoordinator::pageSnapshot(KisPageKey const&, KisPageStateSnapshot*) const": 175,
+        "_free": 175,
+        "KisCompletionRegistry::status(KisCompletionTicket const&) const": 168
+      }
+    }
+  ],
+  "timings": [
+    {
+      "file": "timed-01.log",
+      "workers": 8,
+      "qt_elapsed_ms": 25883,
+      "counters": null,
+      "cpu_clock_available": true,
+      "operations": {
+        "history": {
+          "count": 13371,
+          "wall_ms": 8154.552900999998,
+          "cpu_ms": 8120.3475339999995,
+          "wait_ms": 15955.511767000002
+        },
+        "clear_all": {
+          "count": 6547,
+          "wall_ms": 6593.662123,
+          "cpu_ms": 6562.794387999999,
+          "wait_ms": 7678.700303
+        },
+        "bitblt_with_source": {
+          "count": 6631,
+          "wall_ms": 6587.589553,
+          "cpu_ms": 4073.966783,
+          "wait_ms": 18470.715611
+        },
+        "clear_rect": {
+          "count": 6535,
+          "wall_ms": 5634.494255,
+          "cpu_ms": 3219.437312,
+          "wait_ms": 18489.301663
+        },
+        "set_extent": {
+          "count": 6744,
+          "wall_ms": 5582.314912,
+          "cpu_ms": 5562.575462999999,
+          "wait_ms": 7930.536069999999
+        },
+        "byte_roundtrip": {
+          "count": 6754,
+          "wall_ms": 1971.818686,
+          "cpu_ms": 796.253822,
+          "wait_ms": 19391.031569
+        },
+        "default_same": {
+          "count": 6600,
+          "wall_ms": 654.276468,
+          "cpu_ms": 114.43502900000001,
+          "wait_ms": 18632.421793999998
+        },
+        "tile_locks": {
+          "count": 13300,
+          "wall_ms": 106.509914,
+          "cpu_ms": 61.82951199999999,
+          "wait_ms": 37083.067927000004
+        },
+        "extent_query": {
+          "count": 6809,
+          "wall_ms": 7.061129,
+          "cpu_ms": 4.180302,
+          "wait_ms": 18594.738386
+        },
+        "has_memento": {
+          "count": 6709,
+          "wall_ms": 1.351401,
+          "cpu_ms": 1.236541,
+          "wait_ms": 7757.788785
+        }
+      },
+      "phases": {
+        "history_commit": {
+          "count": 13371,
+          "wall_ms": 2843.9739729999997,
+          "cpu_ms": 2831.830427,
+          "wait_ms": 0
+        },
+        "history_clear": {
+          "count": 13371,
+          "wall_ms": 1657.6266149999997,
+          "cpu_ms": 1654.163845,
+          "wait_ms": 0
+        },
+        "read_bytes": {
+          "count": 6754,
+          "wall_ms": 1284.037937,
+          "cpu_ms": 625.935597,
+          "wait_ms": 0
+        },
+        "rollback": {
+          "count": 13371,
+          "wall_ms": 1243.3942419999998,
+          "cpu_ms": 1240.1744849999998,
+          "wait_ms": 0
+        },
+        "purge_history": {
+          "count": 13371,
+          "wall_ms": 1187.9468570000001,
+          "cpu_ms": 1185.7083200000002,
+          "wait_ms": 0
+        },
+        "rollforward": {
+          "count": 13371,
+          "wall_ms": 1183.8447240000003,
+          "cpu_ms": 1182.142562,
+          "wait_ms": 0
+        },
+        "write_identical_bytes": {
+          "count": 6754,
+          "wall_ms": 656.5210589999999,
+          "cpu_ms": 145.789434,
+          "wait_ms": 0
+        },
+        "history_begin": {
+          "count": 13371,
+          "wall_ms": 10.106684,
+          "cpu_ms": 12.036661,
+          "wait_ms": 0
+        }
+      }
+    },
+    {
+      "file": "timed-02.log",
+      "workers": 8,
+      "qt_elapsed_ms": 26276,
+      "counters": null,
+      "cpu_clock_available": true,
+      "operations": {
+        "history": {
+          "count": 13371,
+          "wall_ms": 8252.917729,
+          "cpu_ms": 8221.754871000001,
+          "wait_ms": 16168.245527000003
+        },
+        "clear_all": {
+          "count": 6547,
+          "wall_ms": 6852.795446,
+          "cpu_ms": 6829.966990000001,
+          "wait_ms": 7778.973701999999
+        },
+        "bitblt_with_source": {
+          "count": 6631,
+          "wall_ms": 6440.675998,
+          "cpu_ms": 3962.931119,
+          "wait_ms": 18861.976778
+        },
+        "set_extent": {
+          "count": 6744,
+          "wall_ms": 5686.722606,
+          "cpu_ms": 5667.717181,
+          "wait_ms": 7887.839366
+        },
+        "clear_rect": {
+          "count": 6535,
+          "wall_ms": 5512.180864999999,
+          "cpu_ms": 3149.944144,
+          "wait_ms": 18263.766767
+        },
+        "byte_roundtrip": {
+          "count": 6754,
+          "wall_ms": 2030.748635,
+          "cpu_ms": 807.9619319999999,
+          "wait_ms": 19523.082195
+        },
+        "default_same": {
+          "count": 6600,
+          "wall_ms": 691.9809730000001,
+          "cpu_ms": 113.94016100000002,
+          "wait_ms": 19244.065183
+        },
+        "tile_locks": {
+          "count": 13300,
+          "wall_ms": 105.93775099999998,
+          "cpu_ms": 61.74412,
+          "wait_ms": 38014.786237
+        },
+        "extent_query": {
+          "count": 6809,
+          "wall_ms": 6.858816999999999,
+          "cpu_ms": 3.9308919999999996,
+          "wait_ms": 19207.050527
+        },
+        "has_memento": {
+          "count": 6709,
+          "wall_ms": 1.3823769999999997,
+          "cpu_ms": 1.2624769999999998,
+          "wait_ms": 8001.388138
+        }
+      },
+      "phases": {
+        "history_commit": {
+          "count": 13371,
+          "wall_ms": 2892.933144,
+          "cpu_ms": 2884.8088360000006,
+          "wait_ms": 0
+        },
+        "history_clear": {
+          "count": 13371,
+          "wall_ms": 1672.397795,
+          "cpu_ms": 1668.69939,
+          "wait_ms": 0
+        },
+        "read_bytes": {
+          "count": 6754,
+          "wall_ms": 1302.661962,
+          "cpu_ms": 629.4856020000001,
+          "wait_ms": 0
+        },
+        "rollback": {
+          "count": 13371,
+          "wall_ms": 1258.484997,
+          "cpu_ms": 1256.225431,
+          "wait_ms": 0
+        },
+        "rollforward": {
+          "count": 13371,
+          "wall_ms": 1208.251342,
+          "cpu_ms": 1204.879328,
+          "wait_ms": 0
+        },
+        "purge_history": {
+          "count": 13371,
+          "wall_ms": 1182.4576350000002,
+          "cpu_ms": 1180.4616149999997,
+          "wait_ms": 0
+        },
+        "write_identical_bytes": {
+          "count": 6754,
+          "wall_ms": 693.834564,
+          "cpu_ms": 151.117604,
+          "wait_ms": 0
+        },
+        "history_begin": {
+          "count": 13371,
+          "wall_ms": 10.060165,
+          "cpu_ms": 11.990197,
+          "wait_ms": 0
+        }
+      }
+    },
+    {
+      "file": "timed-03-counters.log",
+      "workers": 8,
+      "qt_elapsed_ms": 26280,
+      "counters": {
+        "commits": 23965,
+        "default_materializations": 1260800,
+        "read_requests": 1052201,
+        "registered_pages": 512,
+        "replicas": 512,
+        "synchronous_adoptions": 1499968,
+        "threads": 8,
+        "versions": 512,
+        "write_requests": 0
+      },
+      "cpu_clock_available": true,
+      "operations": {
+        "history": {
+          "count": 13371,
+          "wall_ms": 8216.01296,
+          "cpu_ms": 8203.583239,
+          "wait_ms": 16178.802913
+        },
+        "clear_all": {
+          "count": 6547,
+          "wall_ms": 6894.803127,
+          "cpu_ms": 6877.464317,
+          "wait_ms": 8021.065821
+        },
+        "bitblt_with_source": {
+          "count": 6631,
+          "wall_ms": 6739.167541,
+          "cpu_ms": 4116.924789,
+          "wait_ms": 18077.064234
+        },
+        "clear_rect": {
+          "count": 6535,
+          "wall_ms": 5717.347869,
+          "cpu_ms": 3268.636148,
+          "wait_ms": 18807.239936
+        },
+        "set_extent": {
+          "count": 6744,
+          "wall_ms": 5532.834739,
+          "cpu_ms": 5525.407221,
+          "wait_ms": 8327.957788
+        },
+        "byte_roundtrip": {
+          "count": 6754,
+          "wall_ms": 1929.209455,
+          "cpu_ms": 791.5016899999999,
+          "wait_ms": 19791.520671000002
+        },
+        "default_same": {
+          "count": 6600,
+          "wall_ms": 704.6779050000001,
+          "cpu_ms": 114.87918,
+          "wait_ms": 18814.638041
+        },
+        "tile_locks": {
+          "count": 13300,
+          "wall_ms": 113.47510299999999,
+          "cpu_ms": 66.920816,
+          "wait_ms": 37592.507497000006
+        },
+        "extent_query": {
+          "count": 6809,
+          "wall_ms": 7.50512,
+          "cpu_ms": 4.447152,
+          "wait_ms": 18754.83908
+        },
+        "has_memento": {
+          "count": 6709,
+          "wall_ms": 1.371775,
+          "cpu_ms": 1.2268839999999996,
+          "wait_ms": 8219.14399
+        }
+      },
+      "phases": {
+        "history_commit": {
+          "count": 13371,
+          "wall_ms": 2863.961392,
+          "cpu_ms": 2861.6147379999998,
+          "wait_ms": 0
+        },
+        "history_clear": {
+          "count": 13371,
+          "wall_ms": 1686.7178599999997,
+          "cpu_ms": 1687.196287,
+          "wait_ms": 0
+        },
+        "rollback": {
+          "count": 13371,
+          "wall_ms": 1252.009921,
+          "cpu_ms": 1252.3947759999999,
+          "wait_ms": 0
+        },
+        "read_bytes": {
+          "count": 6754,
+          "wall_ms": 1244.486527,
+          "cpu_ms": 621.9900690000001,
+          "wait_ms": 0
+        },
+        "rollforward": {
+          "count": 13371,
+          "wall_ms": 1196.2354369999998,
+          "cpu_ms": 1196.9098,
+          "wait_ms": 0
+        },
+        "purge_history": {
+          "count": 13371,
+          "wall_ms": 1178.294813,
+          "cpu_ms": 1178.7108620000001,
+          "wait_ms": 0
+        },
+        "write_identical_bytes": {
+          "count": 6754,
+          "wall_ms": 655.288134,
+          "cpu_ms": 146.33862100000002,
+          "wait_ms": 0
+        },
+        "history_begin": {
+          "count": 13371,
+          "wall_ms": 10.157314000000001,
+          "cpu_ms": 12.092608999999998,
+          "wait_ms": 0
+        }
+      }
+    },
+    {
+      "file": "timed-04-single-thread.log",
+      "workers": 8,
+      "qt_elapsed_ms": 13235,
+      "counters": {
+        "commits": 23780,
+        "default_materializations": 333120,
+        "read_requests": 1298505,
+        "registered_pages": 512,
+        "replicas": 512,
+        "synchronous_adoptions": 1189440,
+        "threads": 1,
+        "versions": 512,
+        "write_requests": 0
+      },
+      "cpu_clock_available": true,
+      "operations": {
+        "history": {
+          "count": 13371,
+          "wall_ms": 6139.101002000001,
+          "cpu_ms": 6125.686545,
+          "wait_ms": 0.213534
+        },
+        "clear_all": {
+          "count": 6547,
+          "wall_ms": 3184.2292260000004,
+          "cpu_ms": 3176.258597,
+          "wait_ms": 0.105489
+        },
+        "bitblt_with_source": {
+          "count": 6631,
+          "wall_ms": 1868.3586159999998,
+          "cpu_ms": 1865.6822390000002,
+          "wait_ms": 0.109425
+        },
+        "clear_rect": {
+          "count": 6535,
+          "wall_ms": 1335.084773,
+          "cpu_ms": 1333.203178,
+          "wait_ms": 0.10781
+        },
+        "byte_roundtrip": {
+          "count": 6754,
+          "wall_ms": 602.198923,
+          "cpu_ms": 601.3671870000001,
+          "wait_ms": 0.10740600000000002
+        },
+        "default_same": {
+          "count": 6600,
+          "wall_ms": 42.445556,
+          "cpu_ms": 42.389697,
+          "wait_ms": 0.105325
+        },
+        "tile_locks": {
+          "count": 13300,
+          "wall_ms": 16.626852,
+          "cpu_ms": 16.602124000000003,
+          "wait_ms": 0.211641
+        },
+        "set_extent": {
+          "count": 6744,
+          "wall_ms": 3.360387,
+          "cpu_ms": 3.349577,
+          "wait_ms": 0.107114
+        },
+        "has_memento": {
+          "count": 6709,
+          "wall_ms": 0.888949,
+          "cpu_ms": 0.884348,
+          "wait_ms": 0.10808400000000001
+        },
+        "extent_query": {
+          "count": 6809,
+          "wall_ms": 0.873446,
+          "cpu_ms": 0.8779520000000001,
+          "wait_ms": 0.10706
+        }
+      },
+      "phases": {
+        "history_commit": {
+          "count": 13371,
+          "wall_ms": 2099.511253,
+          "cpu_ms": 2098.596093,
+          "wait_ms": 0
+        },
+        "history_clear": {
+          "count": 13371,
+          "wall_ms": 1655.16624,
+          "cpu_ms": 1654.497145,
+          "wait_ms": 0
+        },
+        "purge_history": {
+          "count": 13371,
+          "wall_ms": 836.489362,
+          "cpu_ms": 836.9458950000001,
+          "wait_ms": 0
+        },
+        "rollback": {
+          "count": 13371,
+          "wall_ms": 770.933367,
+          "cpu_ms": 771.691727,
+          "wait_ms": 0
+        },
+        "rollforward": {
+          "count": 13371,
+          "wall_ms": 746.8893350000001,
+          "cpu_ms": 744.151367,
+          "wait_ms": 0
+        },
+        "read_bytes": {
+          "count": 6754,
+          "wall_ms": 513.6913169999999,
+          "cpu_ms": 513.9773650000001,
+          "wait_ms": 0
+        },
+        "write_identical_bytes": {
+          "count": 6754,
+          "wall_ms": 81.747677,
+          "cpu_ms": 82.645511,
+          "wait_ms": 0
+        },
+        "history_begin": {
+          "count": 13371,
+          "wall_ms": 6.1777359999999994,
+          "cpu_ms": 7.750770000000001,
+          "wait_ms": 0
+        }
+      }
+    }
+  ]
+}

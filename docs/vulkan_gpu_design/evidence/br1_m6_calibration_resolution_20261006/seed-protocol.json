@@ -1,0 +1,19 @@
+{
+  "id": "D3-prospective-hash-layout-diagnosis",
+  "purpose": "Test per-process randomized hash layout as a source of cross-process variation. Descriptive diagnosis only; no qualification or retrospective data replacement.",
+  "source_evidence": "KisPageMetadataIndex_p.h, KisMutationStorage_p.h, KisPageWriteCoordinator_p.h and KisPagePublicationCoordinator_p.h capture QHashSeed::globalSeed(). Same-process paired arms share it; separate-process original/copy arms do not.",
+  "architectures": ["arm64", "x86_64"],
+  "K": [16],
+  "cases": ["hit", "native-pin"],
+  "cells": ["same-image-random", "cross-image-random", "same-image-zero", "cross-image-zero"],
+  "pairs": 12,
+  "processes": 384,
+  "window": {"minimum_operation_ns": 64000000, "minimum_operations": 128, "warmup": 8},
+  "qos": "unchanged, observed before/after; do not request a lower QoS",
+  "hash_layout": "Random arms remove inherited QT_HASH_SEED; zero arms set QT_HASH_SEED=0 at process launch and verify QHashSeed::globalSeed()==0. Seed is printed before warmup, outside operation endpoints. Both mirror comparisons use the same new harness.",
+  "order": "Rotate all16 bucket/cell groups by pair; reverse left/right process order on odd pairs. Original current image left; original current for same-image right, existing normal-on selection image for cross-image right.",
+  "statistic": "Completed operation throughput right/left. Twelve pairs yield six prospectively adjacent balanced two-pair log-ratio blocks. Median log-block estimate; descriptive two-sided95% bootstrap20k, seed261010. No family qualification.",
+  "hypotheses": ["If both zero-seed A/A and cross-image variance shrink versus their matched random controls, per-process layout is a causal noise source.", "If zero-seed cross-image retains an offset absent in zero-seed A/A, seed control alone does not calibrate the selection image.", "If zero seed does not reduce variation, do not claim it resolves calibration and do not edit production hashing to force a result."],
+  "stop": "Exactly384 processes, no extension, retry, trimming, tail removal, or throughput normalization. Invalid work/image/time/seed/hash/timeout stops and preserves all prior and failed attempts.",
+  "limits": "K16 two-case diagnosis only, not K1, other miss paths, default random-layout product performance, native Intel, GPU or M6 completion. Deterministic hash applies only to this synthetic evidence process. Existing production random hashing and old results remain unchanged. Any later formal protocol is independent and frozen before new samples."
+}

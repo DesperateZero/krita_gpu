@@ -1,0 +1,120 @@
+{
+  "scope": "scoped metadata storage ownership delivery",
+  "parent": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "source_migration": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7"
+  ],
+  "safety": "same existing dual-architecture16 participant targets, read baseline, five persistent business methods, Vulkan; original install/publication/storage interposition; new spill/move/detach/worker lifetime regression",
+  "quantity": {
+    "product": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+    "question": "After full scoped ownership migration, compare original quantity/lifetime endpoints with frozen parent; all trace timing excluded.",
+    "arch": "arm64",
+    "public_rows": [
+      [
+        64,
+        1,
+        4,
+        1
+      ],
+      [
+        1024,
+        16,
+        4,
+        1
+      ],
+      [
+        64,
+        16,
+        4,
+        1
+      ]
+    ],
+    "native_rows": [
+      [
+        "fresh",
+        1
+      ],
+      [
+        "handoff",
+        1
+      ],
+      [
+        "fresh",
+        16
+      ],
+      [
+        "handoff",
+        16
+      ]
+    ],
+    "blocks": 2,
+    "order": [
+      [
+        "control",
+        "trace"
+      ],
+      [
+        "trace",
+        "control"
+      ]
+    ],
+    "total_processes": 28,
+    "public_endpoint": "Original public scanline write, original N-page setup/warm read. Trace first write; disable for 64 warm writes; trace one later write, original pixel/extent validation and manager destruction. Work counters verify both captured writes independently.",
+    "native_endpoint": "Original native selector fixture, one exact validation view, N=K/H0/B4, complete transaction/beginWrite/seal/canonical commit, validation and close. One operation per process; Fresh and handoff retain original copy/reuse/physical delta/old/new checks.",
+    "trace": "One mechanically instrumented copy of budget TU; original 374 other image objects reused. Fixed preallocated global event array, no per-entry clocks. Capture all threads, separate measured main thread and phases. Each entry retains stack and object address/capacity where available. All trace timings excluded from performance conclusions.",
+    "limits": "Trace changes concurrency and allocation lifetime timing. First and later single-operation counts are not the prior 250 ms steady averages. All-thread phase is a temporal window, not ownership. Address matching uses event order and rejects ambiguous reuse. Same-thread unmatched allocations are not automatically escapes; pair all observed frees and keep unclosed tails explicit. Deref count is not allocation/free count. No claim of safe removability from call count alone.",
+    "stopping": "Exactly 28 sequential processes after build; no concurrent build, benchmark or profiler. Stop and retain any wrong loaded image, correctness/exit/identity failure or trace overflow. Do not adapt sample size or change performance gates. Any repaired failed batch is separate and explicitly documented.",
+    "analysis": "Report counts/capacity by source responsibility and phase; transient versus operation-surviving allocations, worker frees, and unclosed tails. Attribute deref callers with complete stack and original CPU evidence; assess candidate upper bounds against Fresh/native deficits. Product unchanged, no formal M6 qualification.",
+    "source_identity": "6ffe097 parent plus reviewed delivery diff; final blob verification required"
+  },
+  "performance": {
+    "parent_comparison": {
+      "buckets": [
+        [
+          "arm64",
+          1
+        ],
+        [
+          "arm64",
+          16
+        ],
+        [
+          "x86_64",
+          1
+        ],
+        [
+          "x86_64",
+          16
+        ]
+      ],
+      "pairs": 40,
+      "rate_ms": 250,
+      "statistic": "20 predeclared order-balanced two-pair blocks, median paired log ratios,50000 bootstrap blocks seed260926; throughput and threadCPU/op separately; descriptive two-sided95% intervals per bucket, no family qualification",
+      "frozen_parent_image": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/parent-runtime/libkritaimage.21.0.0.dylib"
+    },
+    "fixed_m5_fresh": "unchanged40 pairs/four buckets, one-sided98.75% lower>=0.98",
+    "fixed_m5_history": "unchanged40 pairs/four buckets, one-sided98.75% lower>=0.98",
+    "native_handoff": "unchanged40 pairs/four buckets, one-sided98.75% reduction lower K1>=20%, K16>=30%",
+    "sequential_only": true,
+    "no_optional_extension": true,
+    "errors": "retain all failures; stop scope on process/correctness/identity failure; repair in separately named batch"
+  },
+  "prediction": {
+    "public_k16_chain_deref_before": 4569,
+    "public_k16_total_deref_before": 6157,
+    "chain_design_target_max": 100,
+    "total_design_target_approx_max": 1690,
+    "model": "53+E; current-cycle physical frees20 retained; all later frees retain original accounting",
+    "direct_deref_cpu_space_us": [
+      5.9,
+      6.0
+    ],
+    "A_F_prediction": "not reduced:524requests/446controller successes/988fits; report capacity layout differences"
+  }
+}

@@ -1,0 +1,9 @@
+********* Start testing of KisTiles3CpuBaselineTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisTiles3CpuBaselineTest::initTestCase()
+QWARN  : KisTiles3CpuBaselineTest::testSharedBaseline(write-n64-k1-b4) WARNING: configured swap location is not writable, using a fall-back location "/Users/apple/.qttest/Library/Application Support/kis_tiles3_cpu_baseline_test/swap" -> "/private/var/folders/c9/1npx65jj2c92d11w_125xmsm0000gn/T"
+QINFO  : KisTiles3CpuBaselineTest::testSharedBaseline(write-n64-k1-b4) CPU_BASELINE {"access_path":"native-CpuRam","background_drain":"NotMeasured","completed_operations":18304,"correctness":"Pass","endpoint":"CpuReadable","evidence_class":"E","executor":"CPU","fixture":"write-n64-k1-b4","in_flight":1,"initial_allocated_pages_expected":64,"logical_work_bytes_per_operation":256,"manager_destroy_ns":349209,"measurement":"completed-throughput","metric_scope":"endpoint","mode":"write","per_event_tail":"NotMeasured","pixel_bytes":4,"pointer_witness":"0","process_cpu_ns":974385000,"process_peak_rss_bytes":38502400,"rate_check_interval":64,"retained_history_roots":0,"schema":1,"setup_ns":2623708,"thread_cpu_ns":603705500,"threads":1,"total_pages":64,"wall_ns":752261500,"work_pages":1}
+PASS   : KisTiles3CpuBaselineTest::testSharedBaseline(write-n64-k1-b4)
+PASS   : KisTiles3CpuBaselineTest::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 756ms
+********* Finished testing of KisTiles3CpuBaselineTest *********

@@ -1,0 +1,58 @@
+{
+  "kind": "correctness-only",
+  "started": "2026-09-21T00:56:21.399Z",
+  "runs": [
+    {
+      "binary": "/Users/apple/krita_gpu/.venv/bin/cmake",
+      "args": [
+        "--build",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu",
+        "--target",
+        "kis_iterator_test",
+        "kis_iterators_ng_test",
+        "KisPageStoreFoundationTest",
+        "KisPageStoreReferenceTest",
+        "KisPageStoreCpuMutationTest",
+        "KisPageStoreResidentReadTest",
+        "KisPageStorePhysicalClaimTest",
+        "KisCompletionRegistryTest",
+        "kis_tile_data_pooler_test",
+        "kis_tile_data_store_test",
+        "kis_swapped_data_store_test",
+        "kis_low_memory_tests",
+        "kis_tiled_data_manager_test",
+        "kis_painter_test",
+        "kis_paint_device_test",
+        "kritaselectiontools",
+        "-j4"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "12",
+        "CMAKE_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install"
+      },
+      "log": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_painter_write_scope_20260921/closure-build-build-br0-cpu.log",
+      "exitCode": 0,
+      "signal": null,
+      "passed": true
+    },
+    {
+      "binary": "/Users/apple/krita_gpu/.venv/bin/cmake",
+      "args": [
+        "--build",
+        "/Users/apple/krita_gpu/krita/_build",
+        "--target",
+        "KisVulkanFoundationContractsTest",
+        "-j4"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "12",
+        "CMAKE_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install"
+      },
+      "log": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_painter_write_scope_20260921/closure-build-build.log",
+      "exitCode": 0,
+      "signal": null,
+      "passed": true
+    }
+  ],
+  "finished": "2026-09-21T00:56:45.892Z"
+}

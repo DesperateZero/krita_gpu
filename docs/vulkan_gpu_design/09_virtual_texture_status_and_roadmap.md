@@ -1,5 +1,7 @@
 # 统一虚拟纹理现状、目标与施工路线
 
+> 本文的 BR1 状态和指向 47–91 的计划属于历史时点记录；当前 BR1 执行入口是 [92](92_br1_m6_m8_execution_baseline.md)。
+
 > 本文是虚拟纹理专题文档。MVP 边界和状态词服从 [00_status_and_mvp_contract.md](00_status_and_mvp_contract.md)。
 > Stroke 如何消费 lease、温度和三类 backend 见 [15_stroke_residency_and_memory_backends.md](15_stroke_residency_and_memory_backends.md)，Krita canonical store 接入见 [17_krita_pagestore_integration.md](17_krita_pagestore_integration.md)。
 > Canonical PageStore 和 replica 权威设计分别见
@@ -9,10 +11,16 @@
 > 虚拟纹理最终算法、取舍评分和细化实施方案以
 > [32_virtual_texture_architecture_decisions.md](32_virtual_texture_architecture_decisions.md) 及 33–39 专题为准；本文负责现状、
 > 总体目标和路线，不再把原则性描述视为算法已经冻结。
+>
+> 状态校正（2026-09-20）：下文第 2 节的“当前代码”专指 BR0 前已归档的旧 Vulkan 原型，不描述当前 production
+> tree。当前树已完成 BR0 删除与 BR1 canonical 功能/正确性 cutover，但 resident CPU production path 未达性能出口，
+> BR1 已以 `BR1-PERF` 重开；历史证据见 51，当前计划见
+> [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)。
 
 ## 1. 结论
 
-当前实现是 sparse image、staging buffer、transfer queue 和简单 prefetch 的实验组合，尚未达到理想原型，更没有达到第一个 MVP。
+已归档的 BR0 前原型是 sparse image、staging buffer、transfer queue 和简单 prefetch 的实验组合；这些错误运行路径
+已从当前 production tree 删除。当前 BR1 功能语义已接通但 BR1-PERF 尚未结清；完整虚拟纹理 MVP 仍需 BR2–BR6。
 
 首个 MVP 必须包含：
 
@@ -24,10 +32,11 @@
 - `MutationRootSet` 驱动的图层剪枝；
 - lower checkpoint 与安全的 upper cache/replay；
 - 强制迁移、撤销和保存正确性测试。
+- 以同机成熟 CPU 产品路径为基线的 GPU/UMA Auto route；劣势 profile 在首次写前整操作回到 CPU。
 
 这些不是后期性能优化，而是决定存储模型、shader 访问方式和图层合成方式的大代价基础能力。
 
-## 2. 当前代码的真实状态
+## 2. 已归档旧原型的真实状态
 
 ### 2.1 Sparse canvas
 
@@ -117,6 +126,8 @@ Vulkan page store。
 - dGPU 按 byte/deadline 合批并保留 authority handoff emergency reserve；
 - SSD 区分 SessionSpill 与 RecoveryCheckpoint，不做每页 fsync；
 - 温度采用 safety eligibility、semantic class、cost/CLOCK history 三层算法。
+- correctness capability 与 CPU-relative performance qualification 分离；只有完整端到端 ETA 留有收益余量的 bucket 才
+  `AutoPreferred`，route 在首次写前冻结。
 
 完整决策及评分见 [32_virtual_texture_architecture_decisions.md](32_virtual_texture_architecture_decisions.md)。
 
@@ -323,26 +334,39 @@ recent access with hysteresis
 
 ## 7. 访问 API
 
-上层只应看到冻结的 request/lease 接口：
+下列是通用异步 request/lease 接口，不是 resident CPU 的唯一访问路径。已捕获视图内的 native guard/session 边界按
+[25 的 5.4](25_p0_canonical_pagestore_krita_tile_cow_swap.md#54-resident-cpu-原语与通用异步原语的边界) 和 52 落实，
+不为暖 resident 命中强建通用请求；两条路径共享 canonical 身份与寿命约束。
 
 ```cpp
-ReadRequest  acquireRead(PageRange, AccessDomain, Priority);
-WriteRequest acquireWrite(PageRange, AccessDomain, WriteMode, Priority);
+ReadRequest  acquireRead(PageKey, ReadView, AccessRequirement, Priority);
+WriteRequest acquireWrite(PageTransaction, PageKey, AccessRequirement, WriteMode, Priority);
 
 ReadLease  resolve(ReadRequest, CompletionTicket);
 WriteLease resolve(WriteRequest, CompletionTicket);
+bool cancel(ReadRequest);
+bool cancel(WriteRequest);
+void release(ReadLease, CompletionTicket consumerLastUse = {});
 
-GpuTicket publish(WriteLease, GpuTicket producerCompletion);
+CompletionTicket publish(WriteLease, CompletionTicket producerCompletion);
 void cancel(WriteLease);
 
 PageTransaction beginTransaction(ImageEpochId base);
 ImageEpochCommitTicket commit(PageTransaction, PreparedPageSet);
-void abort(PageTransaction);
+bool abort(PageTransaction);
 ImageEpochSnapshot captureCommittedEpoch();
+RetainedImageEpochSnapshot captureRetainedEpoch();
+bool validateRetainedEpoch(RetainedImageEpochSnapshot);
+bool releaseSnapshot(ImageEpochSnapshotToken);
 ```
 
 `publish()` 先产生 transaction-private Prepared generation；多页 operation 通过 immutable ImageEpoch manifest
 原子发布完整 page set。普通 reader/save 不逐页观察半提交 generation。
+
+底层 request/lease 是单页原语；区域访问由 facade 组合多个 request。这样每个 lease 始终绑定一个 exact
+PageVersion，多页一致性不会被错误塞进一个单 version capability。
+`AccessRequirement` 把 domain 与 `CpuPointer/GpuBinding` capability 分开，UMA 上也不得靠 domain 猜测访问方式。
+provider capability 只声明实际存在的 `(domain, access kind)` 组合；SSD 是 storage domain，不直接产生 consumer view。
 
 返回 ticket/page span 可以包含 CPU pointer 或 opaque GPU binding handle，但调用者不关心页面位于 VRAM、shared
 memory、RAM 还是 SSD。
@@ -382,8 +406,9 @@ SHARED_GPU_WRITE -> SHARED_CPU_READY
 
 ## 9. 施工阶段
 
-以下 `VT*` 只是虚拟纹理专题工作包，不是全局执行顺序。BR0 删除旧 runtime；BR1 完成 canonical
-PageStore；BR2 完成 SubmissionCoordinator；只有进入 BR3 后才允许把 UMA/dGPU/SSD provider 接入 production。
+以下 `VT*` 只是虚拟纹理专题工作包，不是全局执行顺序。BR0 删除旧 runtime；BR1-PERF 完成 canonical
+PageStore 的 production CPU 快路径与布局；BR2 完成 SubmissionCoordinator；只有进入 BR3 后才允许把
+UMA/dGPU/SSD provider 接入 production。
 BR4 才接入温度和图层剪枝。任何 `VT*` 都不得绕过这些进入条件。
 
 ### VT0：可观测基线
@@ -402,6 +427,9 @@ BR4 才接入温度和图层剪枝。任何 `VT*` 都不得绕过这些进入条
 - 无 GPU 随机迁移模型测试。
 - 分片 PageStore、materialization dedup、transaction manifest 和 stale completion/ABA 测试，详见
   [33_virtual_texture_pagestore_state_machine.md](33_virtual_texture_pagestore_state_machine.md)。
+- tiles3 authority、allocator/accessor lease、default/extent 与 COW/memento 功能 cutover 证据见 51；virtual default、
+  native resident guard、mutation scope、条件 backing handoff/必要 COW、硬 backing 预算和 persistent root 仍按 52/67/68
+  在 BR1-PERF 关闭。
 
 ### VT2：UMA backend
 
@@ -461,8 +489,10 @@ BR4 才接入温度和图层剪枝。任何 `VT*` 都不得绕过这些进入条
 
 具体提交必须嵌入 [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md) 的顺序：
 
-1. BR1：冻结来自 tiles3/COW/swap 的 Surface/Page/State 与 reference tests。
-2. BR2：引入统一 ticket、GPU-side wait、queue 独占和资源退休。
+1. BR1-PERF（进行中）：在已完成的功能 cutover 上补 virtual default、native resident guard、mutation scope、
+   metadata stable-slot arena、统一 `KisPageWriteCoordinator`/内联 plan、条件 backing handoff/必要 COW、硬 backing 预算、
+   persistent root 和 upstream 差分门禁。
+2. BR2：BR1-PERF 结清后，引入统一 ticket、GPU-side wait、queue 独占和资源退休。
 3. BR3：依次接入 UMA arena、dGPU fixed-slot/binding replica、unified SSD store 和 safe authority handoff。
 4. BR4：引入 EvalGraphIR/reference lowerer/EvaluationPlanner、ResidencyController、MutationRootSet、Layer
    checkpoint 和 upper replay optimization。
@@ -487,6 +517,7 @@ BR4 才接入温度和图层剪枝。任何 `VT*` 都不得绕过这些进入条
 - brush 和 compositor 直接访问该页。
 - CPU 读取不经过 image→staging copy。
 - non-coherent 路径正确 flush/invalidate。
+- shared mapping 的 CPU hot access 对 native CpuRam/upstream 达到 39 的门限；零 copy 不单独代表性能达标。
 
 ### 绘画
 
@@ -507,7 +538,8 @@ BR4 才接入温度和图层剪枝。任何 `VT*` 都不得绕过这些进入条
 - 只有完整 BR0–BR6 和 MVP 门禁通过后，正常 Krita 入口才启用。
 - undo/redo/save/reopen 一致。
 - validation layer 无资源状态相关错误。
-- 所有性能结果记录硬件、预算、文档规模和测试脚本。
+- 所有性能结果记录硬件、预算、文档规模和测试脚本，并同时报告 CPU-only、forced accelerator 和 Auto；GPU 劣势
+  profile 下 Auto 满足 39 的 median/P95/P99 CPU-relative 门禁，未达标 bucket 取消 `AutoPreferred`。
 
 ## 12. 当前代码处理原则
 

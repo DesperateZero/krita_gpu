@@ -1,0 +1,5868 @@
+{
+  "interpretation": "fixed ARM diagnostics; coarse actor CPU differences and detailed mechanism/lineage budgets are separate batches, not removable wall or formal CIs",
+  "records": [
+    {
+      "index": 0,
+      "side": "current",
+      "mode": 0,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 8628000,
+        "cpu_ns": 19006000,
+        "user_ns": 15141000,
+        "system_ns": 3868000,
+        "start_ns": 1262054526758000,
+        "end_ns": 1262054535386000
+      },
+      "merge_jobs": 0,
+      "projection_cpu_ns": 0,
+      "projection_summed_wall_ns": 0,
+      "phases": {},
+      "mechanisms": {},
+      "phase_mechanisms": {},
+      "exclusive_names": {},
+      "unassigned_process_cpu_ns": 19006000,
+      "checks": [
+        {
+          "mode": 0,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 0,
+          "events": 0,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "side": "upstream",
+      "mode": 0,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 4048000,
+        "cpu_ns": 8502000,
+        "user_ns": 6923000,
+        "system_ns": 1579000,
+        "start_ns": 1262055588927000,
+        "end_ns": 1262055592975000
+      },
+      "merge_jobs": 0,
+      "projection_cpu_ns": 0,
+      "projection_summed_wall_ns": 0,
+      "phases": {},
+      "mechanisms": {},
+      "phase_mechanisms": {},
+      "exclusive_names": {},
+      "unassigned_process_cpu_ns": 8502000,
+      "checks": [
+        {
+          "mode": 0,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 0,
+          "events": 0,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "side": "upstream",
+      "mode": 0,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 3686000,
+        "cpu_ns": 8879000,
+        "user_ns": 7552000,
+        "system_ns": 1328000,
+        "start_ns": 1262056998098000,
+        "end_ns": 1262057001784000
+      },
+      "merge_jobs": 0,
+      "projection_cpu_ns": 0,
+      "projection_summed_wall_ns": 0,
+      "phases": {},
+      "mechanisms": {},
+      "phase_mechanisms": {},
+      "exclusive_names": {},
+      "unassigned_process_cpu_ns": 8879000,
+      "checks": [
+        {
+          "mode": 0,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 0,
+          "events": 0,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "side": "current",
+      "mode": 0,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 8383000,
+        "cpu_ns": 19643000,
+        "user_ns": 15755000,
+        "system_ns": 3890000,
+        "start_ns": 1262058374937000,
+        "end_ns": 1262058383320000
+      },
+      "merge_jobs": 0,
+      "projection_cpu_ns": 0,
+      "projection_summed_wall_ns": 0,
+      "phases": {},
+      "mechanisms": {},
+      "phase_mechanisms": {},
+      "exclusive_names": {},
+      "unassigned_process_cpu_ns": 19643000,
+      "checks": [
+        {
+          "mode": 0,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 0,
+          "events": 0,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "side": "current",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 9117000,
+        "cpu_ns": 21568000,
+        "user_ns": 17182000,
+        "system_ns": 4389000,
+        "start_ns": 1262059125823000,
+        "end_ns": 1262059134940000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 5827667,
+      "projection_summed_wall_ns": 10002000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 149750,
+          "wall_ns": 1019000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1401080,
+          "wall_ns": 2287000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 22960,
+          "wall_ns": 23000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 4161502,
+          "wall_ns": 6555000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 2961,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 89414,
+          "wall_ns": 118000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 5827667,
+          "wall_ns": 10002000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 149750,
+            "wall_ns": 1019000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 1401080,
+            "wall_ns": 2287000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 22960,
+            "wall_ns": 23000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 4161502,
+            "wall_ns": 6555000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 2961,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 89414,
+            "wall_ns": 118000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 4250,
+          "wall_ns": 1000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1401080,
+          "wall_ns": 2287000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 22960,
+          "wall_ns": 23000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 4161502,
+          "wall_ns": 6555000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 2961,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 89414,
+          "wall_ns": 118000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 145500,
+          "wall_ns": 1018000
+        }
+      },
+      "unassigned_process_cpu_ns": 2161703,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "side": "upstream",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 3991000,
+        "cpu_ns": 9790000,
+        "user_ns": 8105000,
+        "system_ns": 1688000,
+        "start_ns": 1262059845664000,
+        "end_ns": 1262059849655000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 589834,
+      "projection_summed_wall_ns": 631000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 77460,
+          "wall_ns": 106000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 51458,
+          "wall_ns": 51000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13045,
+          "wall_ns": 12000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 363751,
+          "wall_ns": 339000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3417,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 80703,
+          "wall_ns": 123000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 589834,
+          "wall_ns": 631000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 77460,
+            "wall_ns": 106000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 51458,
+            "wall_ns": 51000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 13045,
+            "wall_ns": 12000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 363751,
+            "wall_ns": 339000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3417,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 80703,
+            "wall_ns": 123000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3668,
+          "wall_ns": 1000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 51458,
+          "wall_ns": 51000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13045,
+          "wall_ns": 12000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 363751,
+          "wall_ns": 339000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3417,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 80703,
+          "wall_ns": 123000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 73792,
+          "wall_ns": 105000
+        }
+      },
+      "unassigned_process_cpu_ns": 534580,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "side": "upstream",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 4015000,
+        "cpu_ns": 9828000,
+        "user_ns": 8042000,
+        "system_ns": 1786000,
+        "start_ns": 1262061295289000,
+        "end_ns": 1262061299304000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 590837,
+      "projection_summed_wall_ns": 605000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 77670,
+          "wall_ns": 79000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 50331,
+          "wall_ns": 48000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 19504,
+          "wall_ns": 18000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 344956,
+          "wall_ns": 347000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3124,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 95252,
+          "wall_ns": 113000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 590837,
+          "wall_ns": 605000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 77670,
+            "wall_ns": 79000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 50331,
+            "wall_ns": 48000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 19504,
+            "wall_ns": 18000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 344956,
+            "wall_ns": 347000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3124,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 95252,
+            "wall_ns": 113000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3708,
+          "wall_ns": 2000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 50331,
+          "wall_ns": 48000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 19504,
+          "wall_ns": 18000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 344956,
+          "wall_ns": 347000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3124,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 95252,
+          "wall_ns": 113000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 73962,
+          "wall_ns": 77000
+        }
+      },
+      "unassigned_process_cpu_ns": 576157,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "side": "current",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 8144000,
+        "cpu_ns": 19087000,
+        "user_ns": 15535000,
+        "system_ns": 3553000,
+        "start_ns": 1262062729930000,
+        "end_ns": 1262062738074000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 5264918,
+      "projection_summed_wall_ns": 9733000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 71750,
+          "wall_ns": 1124000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1140708,
+          "wall_ns": 1956000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 17708,
+          "wall_ns": 17000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 3960538,
+          "wall_ns": 6548000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3044,
+          "wall_ns": 1000
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 71170,
+          "wall_ns": 87000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 5264918,
+          "wall_ns": 9733000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 71750,
+            "wall_ns": 1124000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 1140708,
+            "wall_ns": 1956000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 17708,
+            "wall_ns": 17000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 3960538,
+            "wall_ns": 6548000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3044,
+            "wall_ns": 1000
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 71170,
+            "wall_ns": 87000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3748,
+          "wall_ns": 0
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1140708,
+          "wall_ns": 1956000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 17708,
+          "wall_ns": 17000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 3960538,
+          "wall_ns": 6548000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3044,
+          "wall_ns": 1000
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 71170,
+          "wall_ns": 87000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 68002,
+          "wall_ns": 1124000
+        }
+      },
+      "unassigned_process_cpu_ns": 1962254,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "side": "current",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 7969000,
+        "cpu_ns": 18591000,
+        "user_ns": 15383000,
+        "system_ns": 3208000,
+        "start_ns": 1262063566685000,
+        "end_ns": 1262063574654000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 5282374,
+      "projection_summed_wall_ns": 9637000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 84915,
+          "wall_ns": 1478000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1138584,
+          "wall_ns": 1898000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 16370,
+          "wall_ns": 19000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 3971507,
+          "wall_ns": 6157000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 2956,
+          "wall_ns": 2000
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 68042,
+          "wall_ns": 83000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 5282374,
+          "wall_ns": 9637000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 84915,
+            "wall_ns": 1478000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 1138584,
+            "wall_ns": 1898000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 16370,
+            "wall_ns": 19000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 3971507,
+            "wall_ns": 6157000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 2956,
+            "wall_ns": 2000
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 68042,
+            "wall_ns": 83000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3790,
+          "wall_ns": 3000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1138584,
+          "wall_ns": 1898000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 16370,
+          "wall_ns": 19000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 3971507,
+          "wall_ns": 6157000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 2956,
+          "wall_ns": 2000
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 68042,
+          "wall_ns": 83000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 81125,
+          "wall_ns": 1475000
+        }
+      },
+      "unassigned_process_cpu_ns": 1866655,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "side": "upstream",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 3533000,
+        "cpu_ns": 8810000,
+        "user_ns": 7637000,
+        "system_ns": 1175000,
+        "start_ns": 1262064349758000,
+        "end_ns": 1262064353291000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 567793,
+      "projection_summed_wall_ns": 628000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 75334,
+          "wall_ns": 124000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 48291,
+          "wall_ns": 41000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13457,
+          "wall_ns": 19000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 337836,
+          "wall_ns": 320000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3412,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 89463,
+          "wall_ns": 124000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 567793,
+          "wall_ns": 628000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 75334,
+            "wall_ns": 124000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 48291,
+            "wall_ns": 41000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 13457,
+            "wall_ns": 19000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 337836,
+            "wall_ns": 320000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3412,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 89463,
+            "wall_ns": 124000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3543,
+          "wall_ns": 2000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 48291,
+          "wall_ns": 41000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13457,
+          "wall_ns": 19000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 337836,
+          "wall_ns": 320000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3412,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 89463,
+          "wall_ns": 124000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 71791,
+          "wall_ns": 122000
+        }
+      },
+      "unassigned_process_cpu_ns": 407501,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "side": "upstream",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 3681000,
+        "cpu_ns": 8920000,
+        "user_ns": 7737000,
+        "system_ns": 1184000,
+        "start_ns": 1262065920872000,
+        "end_ns": 1262065924553000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 583417,
+      "projection_summed_wall_ns": 653000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 68127,
+          "wall_ns": 120000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 48083,
+          "wall_ns": 44000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 15833,
+          "wall_ns": 15000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 351830,
+          "wall_ns": 348000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3290,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 96254,
+          "wall_ns": 126000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 583417,
+          "wall_ns": 653000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 68127,
+            "wall_ns": 120000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 48083,
+            "wall_ns": 44000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 15833,
+            "wall_ns": 15000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 351830,
+            "wall_ns": 348000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3290,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 96254,
+            "wall_ns": 126000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3498,
+          "wall_ns": 0
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 48083,
+          "wall_ns": 44000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 15833,
+          "wall_ns": 15000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 351830,
+          "wall_ns": 348000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3290,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 96254,
+          "wall_ns": 126000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 64629,
+          "wall_ns": 120000
+        }
+      },
+      "unassigned_process_cpu_ns": 416166,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "side": "current",
+      "mode": 2,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 7274000,
+        "cpu_ns": 17698000,
+        "user_ns": 14554000,
+        "system_ns": 3145000,
+        "start_ns": 1262067508102000,
+        "end_ns": 1262067515376000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 4913293,
+      "projection_summed_wall_ns": 8466000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 63837,
+          "wall_ns": 650000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1122836,
+          "wall_ns": 1871000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 16122,
+          "wall_ns": 15000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 3640742,
+          "wall_ns": 5849000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 2835,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 66921,
+          "wall_ns": 81000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 209,
+          "cpu_ns": 4913293,
+          "wall_ns": 8466000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 63837,
+            "wall_ns": 650000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 1122836,
+            "wall_ns": 1871000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 16122,
+            "wall_ns": 15000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 95,
+            "cpu_ns": 3640742,
+            "wall_ns": 5849000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 2835,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 66921,
+            "wall_ns": 81000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3169,
+          "wall_ns": 1000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 1122836,
+          "wall_ns": 1871000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 16122,
+          "wall_ns": 15000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 3640742,
+          "wall_ns": 5849000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 2835,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 66921,
+          "wall_ns": 81000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 60668,
+          "wall_ns": 649000
+        }
+      },
+      "unassigned_process_cpu_ns": 1840126,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 4,
+          "events": 2117,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "side": "current",
+      "mode": 3,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 9073000,
+        "cpu_ns": 21882000,
+        "user_ns": 17605000,
+        "system_ns": 4279000,
+        "start_ns": 1262068341055000,
+        "end_ns": 1262068350128000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 6486376,
+      "projection_summed_wall_ns": 11401000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 72001,
+          "wall_ns": 1030000
+        },
+        "proj_clear": {
+          "events": 917,
+          "cpu_ns": 1426958,
+          "wall_ns": 2579000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13541,
+          "wall_ns": 18000
+        },
+        "proj_composite": {
+          "events": 2000,
+          "cpu_ns": 4897334,
+          "wall_ns": 7674000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3166,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 73376,
+          "wall_ns": 100000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 231,
+          "cpu_ns": 1223462,
+          "wall_ns": 3021000
+        },
+        "operation_framing": {
+          "events": 171,
+          "cpu_ns": 340749,
+          "wall_ns": 875000
+        },
+        "batch_framing": {
+          "events": 64,
+          "cpu_ns": 234780,
+          "wall_ns": 480000
+        },
+        "adapter_presence": {
+          "events": 180,
+          "cpu_ns": 126793,
+          "wall_ns": 472000
+        },
+        "cold_generation_including_payload": {
+          "events": 1584,
+          "cpu_ns": 2450583,
+          "wall_ns": 3438000
+        },
+        "pixel_operation_body": {
+          "events": 19,
+          "cpu_ns": 304790,
+          "wall_ns": 372000
+        },
+        "private_seal": {
+          "events": 480,
+          "cpu_ns": 696045,
+          "wall_ns": 975000
+        },
+        "clear_page_residual": {
+          "events": 62,
+          "cpu_ns": 91334,
+          "wall_ns": 145000
+        },
+        "fill_framing": {
+          "events": 13,
+          "cpu_ns": 340002,
+          "wall_ns": 877000
+        },
+        "canonical_commit": {
+          "events": 208,
+          "cpu_ns": 677838,
+          "wall_ns": 746000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 72001,
+            "wall_ns": 1030000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 31,
+            "cpu_ns": 59247,
+            "wall_ns": 71000
+          },
+          "batch_framing": {
+            "events": 26,
+            "cpu_ns": 83738,
+            "wall_ns": 199000
+          },
+          "adapter_presence": {
+            "events": 104,
+            "cpu_ns": 68416,
+            "wall_ns": 116000
+          },
+          "cold_generation_including_payload": {
+            "events": 432,
+            "cpu_ns": 472501,
+            "wall_ns": 738000
+          },
+          "clear_page_residual": {
+            "events": 62,
+            "cpu_ns": 91334,
+            "wall_ns": 145000
+          },
+          "private_seal": {
+            "events": 195,
+            "cpu_ns": 225303,
+            "wall_ns": 341000
+          },
+          "fill_framing": {
+            "events": 13,
+            "cpu_ns": 340002,
+            "wall_ns": 877000
+          },
+          "canonical_commit": {
+            "events": 54,
+            "cpu_ns": 86417,
+            "wall_ns": 92000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 13541,
+            "wall_ns": 18000
+          }
+        },
+        "proj_composite": {
+          "operation_framing": {
+            "events": 171,
+            "cpu_ns": 340749,
+            "wall_ns": 875000
+          },
+          "other_projection_residual": {
+            "events": 105,
+            "cpu_ns": 1002131,
+            "wall_ns": 1802000
+          },
+          "batch_framing": {
+            "events": 38,
+            "cpu_ns": 151042,
+            "wall_ns": 281000
+          },
+          "adapter_presence": {
+            "events": 76,
+            "cpu_ns": 58377,
+            "wall_ns": 356000
+          },
+          "cold_generation_including_payload": {
+            "events": 1152,
+            "cpu_ns": 1978082,
+            "wall_ns": 2700000
+          },
+          "pixel_operation_body": {
+            "events": 19,
+            "cpu_ns": 304790,
+            "wall_ns": 372000
+          },
+          "private_seal": {
+            "events": 285,
+            "cpu_ns": 470742,
+            "wall_ns": 634000
+          },
+          "canonical_commit": {
+            "events": 154,
+            "cpu_ns": 591421,
+            "wall_ns": 654000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3166,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 73376,
+            "wall_ns": 100000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3789,
+          "wall_ns": 0
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 54290,
+          "wall_ns": 66000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13541,
+          "wall_ns": 18000
+        },
+        "pixel_operation_preflight": {
+          "events": 19,
+          "cpu_ns": 4623,
+          "wall_ns": 1000
+        },
+        "pixel_operation_storage_prepare": {
+          "events": 19,
+          "cpu_ns": 3876,
+          "wall_ns": 0
+        },
+        "pixel_operation_range_prepare": {
+          "events": 19,
+          "cpu_ns": 88584,
+          "wall_ns": 258000
+        },
+        "transaction_begin_owner_wait": {
+          "events": 11,
+          "cpu_ns": 1833,
+          "wall_ns": 0
+        },
+        "transaction_begin": {
+          "events": 11,
+          "cpu_ns": 7416,
+          "wall_ns": 9000
+        },
+        "batch_begin": {
+          "events": 32,
+          "cpu_ns": 73832,
+          "wall_ns": 204000
+        },
+        "pixel_operation_range_reserved": {
+          "events": 19,
+          "cpu_ns": 130417,
+          "wall_ns": 243000
+        },
+        "mutation_adapter_prepare": {
+          "events": 19,
+          "cpu_ns": 25166,
+          "wall_ns": 329000
+        },
+        "cold_owner_wait": {
+          "events": 132,
+          "cpu_ns": 49292,
+          "wall_ns": 159000
+        },
+        "cold_claim_and_base": {
+          "events": 132,
+          "cpu_ns": 236625,
+          "wall_ns": 307000
+        },
+        "cold_storage_and_plan": {
+          "events": 132,
+          "cpu_ns": 47838,
+          "wall_ns": 30000
+        },
+        "cold_descriptor": {
+          "events": 132,
+          "cpu_ns": 49335,
+          "wall_ns": 22000
+        },
+        "cold_backing_reserve": {
+          "events": 132,
+          "cpu_ns": 183791,
+          "wall_ns": 260000
+        },
+        "provider_identity_setup": {
+          "events": 132,
+          "cpu_ns": 181216,
+          "wall_ns": 166000
+        },
+        "tile_fill_pixel_loop": {
+          "events": 60,
+          "cpu_ns": 557250,
+          "wall_ns": 555000
+        },
+        "provider_initialize_payload": {
+          "events": 60,
+          "cpu_ns": 33170,
+          "wall_ns": 38000
+        },
+        "provider_allocate": {
+          "events": 132,
+          "cpu_ns": 117954,
+          "wall_ns": 128000
+        },
+        "write_provider_prepare": {
+          "events": 132,
+          "cpu_ns": 81289,
+          "wall_ns": 149000
+        },
+        "cold_register_pin_validate_install": {
+          "events": 132,
+          "cpu_ns": 578962,
+          "wall_ns": 1103000
+        },
+        "cold_generation": {
+          "events": 132,
+          "cpu_ns": 247030,
+          "wall_ns": 444000
+        },
+        "execution_prepare_writes": {
+          "events": 19,
+          "cpu_ns": 50168,
+          "wall_ns": 99000
+        },
+        "mutation_adapter_prepared": {
+          "events": 19,
+          "cpu_ns": 6124,
+          "wall_ns": 8000
+        },
+        "pixel_operation_body": {
+          "events": 19,
+          "cpu_ns": 304790,
+          "wall_ns": 372000
+        },
+        "pixel_operation_changed_export": {
+          "events": 19,
+          "cpu_ns": 4041,
+          "wall_ns": 2000
+        },
+        "mutation_seal_owner_wait": {
+          "events": 128,
+          "cpu_ns": 87667,
+          "wall_ns": 298000
+        },
+        "mutation_seal_inputs": {
+          "events": 96,
+          "cpu_ns": 52258,
+          "wall_ns": 38000
+        },
+        "mutation_seal_private_publish": {
+          "events": 32,
+          "cpu_ns": 266831,
+          "wall_ns": 277000
+        },
+        "mutation_seal_proof_prepare": {
+          "events": 32,
+          "cpu_ns": 90127,
+          "wall_ns": 184000
+        },
+        "mutation_seal_storage_prepare": {
+          "events": 32,
+          "cpu_ns": 90542,
+          "wall_ns": 90000
+        },
+        "mutation_seal_metadata_prepare": {
+          "events": 32,
+          "cpu_ns": 12709,
+          "wall_ns": 8000
+        },
+        "mutation_seal_publish_owner_wait": {
+          "events": 32,
+          "cpu_ns": 5040,
+          "wall_ns": 4000
+        },
+        "mutation_seal_surface_prepare": {
+          "events": 32,
+          "cpu_ns": 12753,
+          "wall_ns": 9000
+        },
+        "mutation_seal_install": {
+          "events": 32,
+          "cpu_ns": 34287,
+          "wall_ns": 30000
+        },
+        "mutation_seal_cleanup": {
+          "events": 32,
+          "cpu_ns": 43831,
+          "wall_ns": 37000
+        },
+        "batch_finish": {
+          "events": 32,
+          "cpu_ns": 160948,
+          "wall_ns": 276000
+        },
+        "mutation_adapter_install": {
+          "events": 32,
+          "cpu_ns": 53086,
+          "wall_ns": 52000
+        },
+        "mutation_adapter_installed": {
+          "events": 32,
+          "cpu_ns": 5294,
+          "wall_ns": 0
+        },
+        "pixel_operation_finish": {
+          "events": 19,
+          "cpu_ns": 52164,
+          "wall_ns": 270000
+        },
+        "pixel_operation_changed_deliver": {
+          "events": 19,
+          "cpu_ns": 3249,
+          "wall_ns": 0
+        },
+        "pixel_operation_cleanup": {
+          "events": 19,
+          "cpu_ns": 3627,
+          "wall_ns": 2000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 997839,
+          "wall_ns": 1798000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3166,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 73376,
+          "wall_ns": 100000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 68212,
+          "wall_ns": 1030000
+        },
+        "mutation_presence_preflight": {
+          "events": 26,
+          "cpu_ns": 4460,
+          "wall_ns": 1000
+        },
+        "mutation_presence_prepare": {
+          "events": 13,
+          "cpu_ns": 2166,
+          "wall_ns": 0
+        },
+        "mutation_presence_prepared": {
+          "events": 13,
+          "cpu_ns": 2166,
+          "wall_ns": 0
+        },
+        "tile_payload_memcpy": {
+          "events": 72,
+          "cpu_ns": 47711,
+          "wall_ns": 40000
+        },
+        "provider_copy_payload": {
+          "events": 72,
+          "cpu_ns": 39120,
+          "wall_ns": 37000
+        },
+        "clear_page": {
+          "events": 62,
+          "cpu_ns": 91334,
+          "wall_ns": 145000
+        },
+        "mutation_presence_resolve": {
+          "events": 13,
+          "cpu_ns": 26040,
+          "wall_ns": 82000
+        },
+        "mutation_presence_resolved": {
+          "events": 13,
+          "cpu_ns": 2291,
+          "wall_ns": 0
+        },
+        "backend_fill": {
+          "events": 13,
+          "cpu_ns": 340002,
+          "wall_ns": 877000
+        },
+        "commit_owner_wait": {
+          "events": 11,
+          "cpu_ns": 1959,
+          "wall_ns": 1000
+        },
+        "commit_proof_validation": {
+          "events": 11,
+          "cpu_ns": 15084,
+          "wall_ns": 14000
+        },
+        "commit_provider_validation": {
+          "events": 11,
+          "cpu_ns": 38540,
+          "wall_ns": 42000
+        },
+        "commit_epoch_delta_prepare": {
+          "events": 11,
+          "cpu_ns": 17001,
+          "wall_ns": 16000
+        },
+        "commit_input_owner_wait": {
+          "events": 11,
+          "cpu_ns": 1752,
+          "wall_ns": 1000
+        },
+        "commit_default_removal_prepare": {
+          "events": 12,
+          "cpu_ns": 11749,
+          "wall_ns": 12000
+        },
+        "commit_transition_inputs": {
+          "events": 12,
+          "cpu_ns": 4751,
+          "wall_ns": 3000
+        },
+        "commit_transition_preflight": {
+          "events": 12,
+          "cpu_ns": 183250,
+          "wall_ns": 185000
+        },
+        "commit_epoch_prepare": {
+          "events": 12,
+          "cpu_ns": 115085,
+          "wall_ns": 148000
+        },
+        "commit_publish_owner_wait": {
+          "events": 12,
+          "cpu_ns": 6086,
+          "wall_ns": 12000
+        },
+        "commit_publication_revalidate": {
+          "events": 12,
+          "cpu_ns": 2791,
+          "wall_ns": 3000
+        },
+        "commit_completion": {
+          "events": 12,
+          "cpu_ns": 100499,
+          "wall_ns": 106000
+        },
+        "commit_root": {
+          "events": 12,
+          "cpu_ns": 1708,
+          "wall_ns": 0
+        },
+        "commit_metadata_apply": {
+          "events": 12,
+          "cpu_ns": 54959,
+          "wall_ns": 53000
+        },
+        "commit_cleanup": {
+          "events": 12,
+          "cpu_ns": 94290,
+          "wall_ns": 96000
+        },
+        "commit_root_publication": {
+          "events": 11,
+          "cpu_ns": 1667,
+          "wall_ns": 0
+        },
+        "commit_history_collect": {
+          "events": 11,
+          "cpu_ns": 1707,
+          "wall_ns": 0
+        },
+        "commit_provider_retire": {
+          "events": 11,
+          "cpu_ns": 24960,
+          "wall_ns": 54000
+        }
+      },
+      "unassigned_process_cpu_ns": 2228702,
+      "checks": [
+        {
+          "mode": 3,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 6,
+          "events": 7762,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ],
+      "cold_pages": 132,
+      "unique_projection_pages": 56,
+      "lineage_prices": {
+        "proj_composite/fill/fill_without_observed_removal": {
+          "events": 56,
+          "cpu_ns": 1427208,
+          "wall_ns": 1865000
+        },
+        "proj_clear/copy/prior_merge_proj_composite_to_proj_clear": {
+          "events": 36,
+          "cpu_ns": 472501,
+          "wall_ns": 738000
+        },
+        "proj_composite/copy/same_merge_proj_clear_to_proj_composite": {
+          "events": 36,
+          "cpu_ns": 490957,
+          "wall_ns": 774000
+        },
+        "proj_composite/fill/fill_after_full_default_removal": {
+          "events": 4,
+          "cpu_ns": 59917,
+          "wall_ns": 61000
+        }
+      },
+      "lineage_exclusive_names": {
+        "proj_composite/fill/fill_without_observed_removal": {
+          "cold_owner_wait": {
+            "events": 56,
+            "cpu_ns": 24374,
+            "wall_ns": 65000
+          },
+          "cold_claim_and_base": {
+            "events": 56,
+            "cpu_ns": 165211,
+            "wall_ns": 168000
+          },
+          "cold_storage_and_plan": {
+            "events": 56,
+            "cpu_ns": 22587,
+            "wall_ns": 15000
+          },
+          "cold_descriptor": {
+            "events": 56,
+            "cpu_ns": 18416,
+            "wall_ns": 6000
+          },
+          "cold_backing_reserve": {
+            "events": 56,
+            "cpu_ns": 78289,
+            "wall_ns": 116000
+          },
+          "provider_identity_setup": {
+            "events": 56,
+            "cpu_ns": 76999,
+            "wall_ns": 71000
+          },
+          "tile_fill_pixel_loop": {
+            "events": 56,
+            "cpu_ns": 525000,
+            "wall_ns": 522000
+          },
+          "provider_initialize_payload": {
+            "events": 56,
+            "cpu_ns": 31504,
+            "wall_ns": 37000
+          },
+          "provider_allocate": {
+            "events": 56,
+            "cpu_ns": 53377,
+            "wall_ns": 57000
+          },
+          "write_provider_prepare": {
+            "events": 56,
+            "cpu_ns": 41622,
+            "wall_ns": 104000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 56,
+            "cpu_ns": 289203,
+            "wall_ns": 523000
+          },
+          "cold_generation": {
+            "events": 56,
+            "cpu_ns": 100626,
+            "wall_ns": 181000
+          }
+        },
+        "proj_clear/copy/prior_merge_proj_composite_to_proj_clear": {
+          "cold_owner_wait": {
+            "events": 36,
+            "cpu_ns": 16416,
+            "wall_ns": 87000
+          },
+          "cold_claim_and_base": {
+            "events": 36,
+            "cpu_ns": 34416,
+            "wall_ns": 54000
+          },
+          "cold_storage_and_plan": {
+            "events": 36,
+            "cpu_ns": 12130,
+            "wall_ns": 6000
+          },
+          "cold_descriptor": {
+            "events": 36,
+            "cpu_ns": 14502,
+            "wall_ns": 10000
+          },
+          "cold_backing_reserve": {
+            "events": 36,
+            "cpu_ns": 46459,
+            "wall_ns": 47000
+          },
+          "provider_identity_setup": {
+            "events": 36,
+            "cpu_ns": 50087,
+            "wall_ns": 46000
+          },
+          "tile_payload_memcpy": {
+            "events": 36,
+            "cpu_ns": 25462,
+            "wall_ns": 23000
+          },
+          "provider_copy_payload": {
+            "events": 36,
+            "cpu_ns": 18747,
+            "wall_ns": 16000
+          },
+          "provider_allocate": {
+            "events": 36,
+            "cpu_ns": 31829,
+            "wall_ns": 34000
+          },
+          "write_provider_prepare": {
+            "events": 36,
+            "cpu_ns": 18000,
+            "wall_ns": 20000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 36,
+            "cpu_ns": 128883,
+            "wall_ns": 238000
+          },
+          "cold_generation": {
+            "events": 36,
+            "cpu_ns": 75570,
+            "wall_ns": 157000
+          }
+        },
+        "proj_composite/copy/same_merge_proj_clear_to_proj_composite": {
+          "cold_owner_wait": {
+            "events": 36,
+            "cpu_ns": 7960,
+            "wall_ns": 7000
+          },
+          "cold_claim_and_base": {
+            "events": 36,
+            "cpu_ns": 35540,
+            "wall_ns": 84000
+          },
+          "cold_storage_and_plan": {
+            "events": 36,
+            "cpu_ns": 12245,
+            "wall_ns": 8000
+          },
+          "cold_descriptor": {
+            "events": 36,
+            "cpu_ns": 15251,
+            "wall_ns": 6000
+          },
+          "cold_backing_reserve": {
+            "events": 36,
+            "cpu_ns": 56668,
+            "wall_ns": 94000
+          },
+          "provider_identity_setup": {
+            "events": 36,
+            "cpu_ns": 51171,
+            "wall_ns": 46000
+          },
+          "tile_payload_memcpy": {
+            "events": 36,
+            "cpu_ns": 22249,
+            "wall_ns": 17000
+          },
+          "provider_copy_payload": {
+            "events": 36,
+            "cpu_ns": 20373,
+            "wall_ns": 21000
+          },
+          "provider_allocate": {
+            "events": 36,
+            "cpu_ns": 30081,
+            "wall_ns": 36000
+          },
+          "write_provider_prepare": {
+            "events": 36,
+            "cpu_ns": 20625,
+            "wall_ns": 24000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 36,
+            "cpu_ns": 152459,
+            "wall_ns": 334000
+          },
+          "cold_generation": {
+            "events": 36,
+            "cpu_ns": 66335,
+            "wall_ns": 97000
+          }
+        },
+        "proj_composite/fill/fill_after_full_default_removal": {
+          "cold_owner_wait": {
+            "events": 4,
+            "cpu_ns": 542,
+            "wall_ns": 0
+          },
+          "cold_claim_and_base": {
+            "events": 4,
+            "cpu_ns": 1458,
+            "wall_ns": 1000
+          },
+          "cold_storage_and_plan": {
+            "events": 4,
+            "cpu_ns": 876,
+            "wall_ns": 1000
+          },
+          "cold_descriptor": {
+            "events": 4,
+            "cpu_ns": 1166,
+            "wall_ns": 0
+          },
+          "cold_backing_reserve": {
+            "events": 4,
+            "cpu_ns": 2375,
+            "wall_ns": 3000
+          },
+          "provider_identity_setup": {
+            "events": 4,
+            "cpu_ns": 2959,
+            "wall_ns": 3000
+          },
+          "tile_fill_pixel_loop": {
+            "events": 4,
+            "cpu_ns": 32250,
+            "wall_ns": 33000
+          },
+          "provider_initialize_payload": {
+            "events": 4,
+            "cpu_ns": 1666,
+            "wall_ns": 1000
+          },
+          "provider_allocate": {
+            "events": 4,
+            "cpu_ns": 2667,
+            "wall_ns": 1000
+          },
+          "write_provider_prepare": {
+            "events": 4,
+            "cpu_ns": 1042,
+            "wall_ns": 1000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 4,
+            "cpu_ns": 8417,
+            "wall_ns": 8000
+          },
+          "cold_generation": {
+            "events": 4,
+            "cpu_ns": 4499,
+            "wall_ns": 9000
+          }
+        }
+      },
+      "clear_page_counts": {
+        "partial_write": 36,
+        "skip_default": 22,
+        "full_default_removal": 4
+      },
+      "phase_calls": {
+        "proj_clear": 19,
+        "proj_setup": 19,
+        "proj_composite": 95,
+        "proj_write": 19,
+        "proj_merge": 19
+      },
+      "batch_transactions": [
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 583,
+          "self_cpu_ns": 583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 24583,
+          "self_cpu_ns": 3501
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 5625,
+          "self_cpu_ns": 5625
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 27917,
+          "self_cpu_ns": 3210
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 792,
+          "self_cpu_ns": 792
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 246791,
+          "self_cpu_ns": 11168
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1542,
+          "self_cpu_ns": 1542
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 23208,
+          "self_cpu_ns": 3416
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2042,
+          "self_cpu_ns": 2042
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 14500,
+          "self_cpu_ns": 2334
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1875,
+          "self_cpu_ns": 1875
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 18209,
+          "self_cpu_ns": 3292
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 750,
+          "self_cpu_ns": 750
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 28208,
+          "self_cpu_ns": 3086
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 4750,
+          "self_cpu_ns": 4750
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 79875,
+          "self_cpu_ns": 8377
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2250,
+          "self_cpu_ns": 2250
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 24083,
+          "self_cpu_ns": 3038
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2334,
+          "self_cpu_ns": 2334
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 31958,
+          "self_cpu_ns": 2955
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3333,
+          "self_cpu_ns": 3333
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 17458,
+          "self_cpu_ns": 3039
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2791,
+          "self_cpu_ns": 2791
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 19417,
+          "self_cpu_ns": 3584
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3291,
+          "self_cpu_ns": 3291
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 18625,
+          "self_cpu_ns": 3123
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 4541,
+          "self_cpu_ns": 4541
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 28083,
+          "self_cpu_ns": 2958
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 875,
+          "self_cpu_ns": 875
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 30084,
+          "self_cpu_ns": 3376
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 7000,
+          "self_cpu_ns": 7000
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 14917,
+          "self_cpu_ns": 3167
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2625,
+          "self_cpu_ns": 2625
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 35041,
+          "self_cpu_ns": 3834
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3292,
+          "self_cpu_ns": 3292
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 77041,
+          "self_cpu_ns": 8458
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            8,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1000,
+          "self_cpu_ns": 1000
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            8,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 51000,
+          "self_cpu_ns": 6251
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            9,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 500,
+          "self_cpu_ns": 500
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            9,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 141833,
+          "self_cpu_ns": 10709
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3333,
+          "self_cpu_ns": 3333
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 14208,
+          "self_cpu_ns": 3209
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1625,
+          "self_cpu_ns": 1625
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 27625,
+          "self_cpu_ns": 3334
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 500,
+          "self_cpu_ns": 500
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            3,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 58542,
+          "self_cpu_ns": 6834
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            4,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 417,
+          "self_cpu_ns": 417
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            4,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 117000,
+          "self_cpu_ns": 9080
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 625,
+          "self_cpu_ns": 625
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 21500,
+          "self_cpu_ns": 6831
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 11583,
+          "self_cpu_ns": 11583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 32583,
+          "self_cpu_ns": 3416
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1167,
+          "self_cpu_ns": 1167
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 27333,
+          "self_cpu_ns": 3833
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 583,
+          "self_cpu_ns": 583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 66917,
+          "self_cpu_ns": 8621
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 500,
+          "self_cpu_ns": 500
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 22709,
+          "self_cpu_ns": 3289
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 625,
+          "self_cpu_ns": 625
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 86084,
+          "self_cpu_ns": 8668
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            11,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 583,
+          "self_cpu_ns": 583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            11,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 40666,
+          "self_cpu_ns": 5124
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            12,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 500,
+          "self_cpu_ns": 500
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            12,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 66833,
+          "self_cpu_ns": 5833
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "side": "upstream",
+      "mode": 3,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 3957000,
+        "cpu_ns": 9826000,
+        "user_ns": 8082000,
+        "system_ns": 1744000,
+        "start_ns": 1262069312220000,
+        "end_ns": 1262069316177000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 617458,
+      "projection_summed_wall_ns": 670000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 68625,
+          "wall_ns": 111000
+        },
+        "proj_clear": {
+          "events": 110,
+          "cpu_ns": 73167,
+          "wall_ns": 68000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13332,
+          "wall_ns": 12000
+        },
+        "proj_composite": {
+          "events": 277,
+          "cpu_ns": 374256,
+          "wall_ns": 368000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3125,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 84953,
+          "wall_ns": 111000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 482,
+          "cpu_ns": 617458,
+          "wall_ns": 670000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 68625,
+            "wall_ns": 111000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 110,
+            "cpu_ns": 73167,
+            "wall_ns": 68000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 13332,
+            "wall_ns": 12000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 277,
+            "cpu_ns": 374256,
+            "wall_ns": 368000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3125,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 84953,
+            "wall_ns": 111000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3669,
+          "wall_ns": 0
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 46830,
+          "wall_ns": 49000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 13332,
+          "wall_ns": 12000
+        },
+        "tile_payload_memcpy": {
+          "events": 60,
+          "cpu_ns": 27545,
+          "wall_ns": 24000
+        },
+        "upstream_tile_cow": {
+          "events": 60,
+          "cpu_ns": 35120,
+          "wall_ns": 31000
+        },
+        "upstream_tile_write": {
+          "events": 149,
+          "cpu_ns": 41175,
+          "wall_ns": 23000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 296045,
+          "wall_ns": 309000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3125,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 84953,
+          "wall_ns": 111000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 64956,
+          "wall_ns": 111000
+        },
+        "tile_release_memory": {
+          "events": 4,
+          "cpu_ns": 708,
+          "wall_ns": 0
+        }
+      },
+      "unassigned_process_cpu_ns": 555424,
+      "checks": [
+        {
+          "mode": 3,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 5,
+          "events": 2928,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ],
+      "cold_pages": 0,
+      "unique_projection_pages": 0,
+      "lineage_prices": {},
+      "lineage_exclusive_names": {},
+      "clear_page_counts": {},
+      "phase_calls": {
+        "proj_clear": 19,
+        "proj_setup": 19,
+        "proj_composite": 95,
+        "proj_write": 19,
+        "proj_merge": 19
+      },
+      "batch_transactions": []
+    },
+    {
+      "index": 14,
+      "side": "upstream",
+      "mode": 3,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 3858000,
+        "cpu_ns": 9252000,
+        "user_ns": 7854000,
+        "system_ns": 1399000,
+        "start_ns": 1262070978548000,
+        "end_ns": 1262070982406000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 662457,
+      "projection_summed_wall_ns": 701000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 75206,
+          "wall_ns": 116000
+        },
+        "proj_clear": {
+          "events": 110,
+          "cpu_ns": 72706,
+          "wall_ns": 73000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 15713,
+          "wall_ns": 14000
+        },
+        "proj_composite": {
+          "events": 277,
+          "cpu_ns": 403000,
+          "wall_ns": 384000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3374,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 92458,
+          "wall_ns": 114000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 482,
+          "cpu_ns": 662457,
+          "wall_ns": 701000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 75206,
+            "wall_ns": 116000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 110,
+            "cpu_ns": 72706,
+            "wall_ns": 73000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 15713,
+            "wall_ns": 14000
+          }
+        },
+        "proj_composite": {
+          "other_projection_residual": {
+            "events": 277,
+            "cpu_ns": 403000,
+            "wall_ns": 384000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3374,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 92458,
+            "wall_ns": 114000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 4000,
+          "wall_ns": 2000
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 47542,
+          "wall_ns": 55000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 15713,
+          "wall_ns": 14000
+        },
+        "tile_payload_memcpy": {
+          "events": 60,
+          "cpu_ns": 27666,
+          "wall_ns": 21000
+        },
+        "upstream_tile_cow": {
+          "events": 60,
+          "cpu_ns": 37086,
+          "wall_ns": 45000
+        },
+        "upstream_tile_write": {
+          "events": 149,
+          "cpu_ns": 35787,
+          "wall_ns": 12000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 326875,
+          "wall_ns": 323000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3374,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 92458,
+          "wall_ns": 114000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 71206,
+          "wall_ns": 114000
+        },
+        "tile_release_memory": {
+          "events": 4,
+          "cpu_ns": 750,
+          "wall_ns": 1000
+        }
+      },
+      "unassigned_process_cpu_ns": 469498,
+      "checks": [
+        {
+          "mode": 3,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 5,
+          "events": 2928,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ],
+      "cold_pages": 0,
+      "unique_projection_pages": 0,
+      "lineage_prices": {},
+      "lineage_exclusive_names": {},
+      "clear_page_counts": {},
+      "phase_calls": {
+        "proj_clear": 19,
+        "proj_setup": 19,
+        "proj_composite": 95,
+        "proj_write": 19,
+        "proj_merge": 19
+      },
+      "batch_transactions": []
+    },
+    {
+      "index": 15,
+      "side": "current",
+      "mode": 3,
+      "projection_updates": 19,
+      "stroke": {
+        "stage": "Stroke",
+        "wall_ns": 9227000,
+        "cpu_ns": 21595000,
+        "user_ns": 17414000,
+        "system_ns": 4200000,
+        "start_ns": 1262072626384000,
+        "end_ns": 1262072635611000
+      },
+      "merge_jobs": 19,
+      "projection_cpu_ns": 6381254,
+      "projection_summed_wall_ns": 11685000,
+      "phases": {
+        "job_outside_merge": {
+          "events": 38,
+          "cpu_ns": 118670,
+          "wall_ns": 1302000
+        },
+        "proj_clear": {
+          "events": 935,
+          "cpu_ns": 1515334,
+          "wall_ns": 2988000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 14085,
+          "wall_ns": 16000
+        },
+        "proj_composite": {
+          "events": 1992,
+          "cpu_ns": 4655868,
+          "wall_ns": 7278000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3123,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 74174,
+          "wall_ns": 101000
+        }
+      },
+      "mechanisms": {
+        "other_projection_residual": {
+          "events": 233,
+          "cpu_ns": 1259382,
+          "wall_ns": 3380000
+        },
+        "operation_framing": {
+          "events": 171,
+          "cpu_ns": 391505,
+          "wall_ns": 1061000
+        },
+        "batch_framing": {
+          "events": 64,
+          "cpu_ns": 271539,
+          "wall_ns": 518000
+        },
+        "adapter_presence": {
+          "events": 180,
+          "cpu_ns": 101134,
+          "wall_ns": 188000
+        },
+        "cold_generation_including_payload": {
+          "events": 1584,
+          "cpu_ns": 2374285,
+          "wall_ns": 3534000
+        },
+        "pixel_operation_body": {
+          "events": 19,
+          "cpu_ns": 297999,
+          "wall_ns": 323000
+        },
+        "private_seal": {
+          "events": 480,
+          "cpu_ns": 676628,
+          "wall_ns": 861000
+        },
+        "canonical_commit": {
+          "events": 216,
+          "cpu_ns": 551001,
+          "wall_ns": 572000
+        },
+        "clear_page_residual": {
+          "events": 62,
+          "cpu_ns": 100333,
+          "wall_ns": 240000
+        },
+        "fill_framing": {
+          "events": 13,
+          "cpu_ns": 357448,
+          "wall_ns": 1008000
+        }
+      },
+      "phase_mechanisms": {
+        "job_outside_merge": {
+          "other_projection_residual": {
+            "events": 38,
+            "cpu_ns": 118670,
+            "wall_ns": 1302000
+          }
+        },
+        "proj_clear": {
+          "other_projection_residual": {
+            "events": 31,
+            "cpu_ns": 94543,
+            "wall_ns": 214000
+          },
+          "batch_framing": {
+            "events": 26,
+            "cpu_ns": 110331,
+            "wall_ns": 218000
+          },
+          "adapter_presence": {
+            "events": 104,
+            "cpu_ns": 43050,
+            "wall_ns": 37000
+          },
+          "cold_generation_including_payload": {
+            "events": 432,
+            "cpu_ns": 472999,
+            "wall_ns": 871000
+          },
+          "clear_page_residual": {
+            "events": 62,
+            "cpu_ns": 100333,
+            "wall_ns": 240000
+          },
+          "private_seal": {
+            "events": 195,
+            "cpu_ns": 208756,
+            "wall_ns": 275000
+          },
+          "fill_framing": {
+            "events": 13,
+            "cpu_ns": 357448,
+            "wall_ns": 1008000
+          },
+          "canonical_commit": {
+            "events": 72,
+            "cpu_ns": 127874,
+            "wall_ns": 125000
+          }
+        },
+        "proj_setup": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 14085,
+            "wall_ns": 16000
+          }
+        },
+        "proj_composite": {
+          "operation_framing": {
+            "events": 171,
+            "cpu_ns": 391505,
+            "wall_ns": 1061000
+          },
+          "batch_framing": {
+            "events": 38,
+            "cpu_ns": 161208,
+            "wall_ns": 300000
+          },
+          "adapter_presence": {
+            "events": 76,
+            "cpu_ns": 58084,
+            "wall_ns": 151000
+          },
+          "cold_generation_including_payload": {
+            "events": 1152,
+            "cpu_ns": 1901286,
+            "wall_ns": 2663000
+          },
+          "pixel_operation_body": {
+            "events": 19,
+            "cpu_ns": 297999,
+            "wall_ns": 323000
+          },
+          "private_seal": {
+            "events": 285,
+            "cpu_ns": 467872,
+            "wall_ns": 586000
+          },
+          "canonical_commit": {
+            "events": 144,
+            "cpu_ns": 423127,
+            "wall_ns": 447000
+          },
+          "other_projection_residual": {
+            "events": 107,
+            "cpu_ns": 954787,
+            "wall_ns": 1747000
+          }
+        },
+        "proj_write": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 3123,
+            "wall_ns": 0
+          }
+        },
+        "proj_merge": {
+          "other_projection_residual": {
+            "events": 19,
+            "cpu_ns": 74174,
+            "wall_ns": 101000
+          }
+        }
+      },
+      "exclusive_names": {
+        "job_gate_wait": {
+          "events": 19,
+          "cpu_ns": 3712,
+          "wall_ns": 0
+        },
+        "proj_clear": {
+          "events": 19,
+          "cpu_ns": 88835,
+          "wall_ns": 208000
+        },
+        "proj_setup": {
+          "events": 19,
+          "cpu_ns": 14085,
+          "wall_ns": 16000
+        },
+        "pixel_operation_preflight": {
+          "events": 19,
+          "cpu_ns": 5042,
+          "wall_ns": 2000
+        },
+        "pixel_operation_storage_prepare": {
+          "events": 19,
+          "cpu_ns": 4000,
+          "wall_ns": 2000
+        },
+        "pixel_operation_range_prepare": {
+          "events": 19,
+          "cpu_ns": 121207,
+          "wall_ns": 295000
+        },
+        "batch_begin": {
+          "events": 32,
+          "cpu_ns": 95873,
+          "wall_ns": 212000
+        },
+        "pixel_operation_range_reserved": {
+          "events": 19,
+          "cpu_ns": 137418,
+          "wall_ns": 206000
+        },
+        "mutation_adapter_prepare": {
+          "events": 19,
+          "cpu_ns": 25248,
+          "wall_ns": 127000
+        },
+        "cold_owner_wait": {
+          "events": 132,
+          "cpu_ns": 35916,
+          "wall_ns": 95000
+        },
+        "cold_claim_and_base": {
+          "events": 132,
+          "cpu_ns": 213204,
+          "wall_ns": 280000
+        },
+        "cold_storage_and_plan": {
+          "events": 132,
+          "cpu_ns": 49418,
+          "wall_ns": 36000
+        },
+        "cold_descriptor": {
+          "events": 132,
+          "cpu_ns": 51995,
+          "wall_ns": 37000
+        },
+        "cold_backing_reserve": {
+          "events": 132,
+          "cpu_ns": 165456,
+          "wall_ns": 236000
+        },
+        "provider_identity_setup": {
+          "events": 132,
+          "cpu_ns": 216538,
+          "wall_ns": 223000
+        },
+        "tile_fill_pixel_loop": {
+          "events": 60,
+          "cpu_ns": 542009,
+          "wall_ns": 531000
+        },
+        "provider_initialize_payload": {
+          "events": 60,
+          "cpu_ns": 31283,
+          "wall_ns": 32000
+        },
+        "provider_allocate": {
+          "events": 132,
+          "cpu_ns": 112460,
+          "wall_ns": 132000
+        },
+        "write_provider_prepare": {
+          "events": 132,
+          "cpu_ns": 102169,
+          "wall_ns": 287000
+        },
+        "cold_register_pin_validate_install": {
+          "events": 132,
+          "cpu_ns": 503747,
+          "wall_ns": 1129000
+        },
+        "cold_generation": {
+          "events": 132,
+          "cpu_ns": 260799,
+          "wall_ns": 440000
+        },
+        "execution_prepare_writes": {
+          "events": 19,
+          "cpu_ns": 61795,
+          "wall_ns": 185000
+        },
+        "mutation_adapter_prepared": {
+          "events": 19,
+          "cpu_ns": 6002,
+          "wall_ns": 5000
+        },
+        "pixel_operation_body": {
+          "events": 19,
+          "cpu_ns": 297999,
+          "wall_ns": 323000
+        },
+        "pixel_operation_changed_export": {
+          "events": 19,
+          "cpu_ns": 4582,
+          "wall_ns": 1000
+        },
+        "mutation_seal_owner_wait": {
+          "events": 128,
+          "cpu_ns": 69250,
+          "wall_ns": 211000
+        },
+        "mutation_seal_inputs": {
+          "events": 96,
+          "cpu_ns": 49832,
+          "wall_ns": 33000
+        },
+        "mutation_seal_private_publish": {
+          "events": 32,
+          "cpu_ns": 254499,
+          "wall_ns": 252000
+        },
+        "mutation_seal_proof_prepare": {
+          "events": 32,
+          "cpu_ns": 95042,
+          "wall_ns": 184000
+        },
+        "mutation_seal_storage_prepare": {
+          "events": 32,
+          "cpu_ns": 98625,
+          "wall_ns": 90000
+        },
+        "mutation_seal_metadata_prepare": {
+          "events": 32,
+          "cpu_ns": 9377,
+          "wall_ns": 5000
+        },
+        "mutation_seal_publish_owner_wait": {
+          "events": 32,
+          "cpu_ns": 6499,
+          "wall_ns": 8000
+        },
+        "mutation_seal_surface_prepare": {
+          "events": 32,
+          "cpu_ns": 15126,
+          "wall_ns": 9000
+        },
+        "mutation_seal_install": {
+          "events": 32,
+          "cpu_ns": 35043,
+          "wall_ns": 29000
+        },
+        "mutation_seal_cleanup": {
+          "events": 32,
+          "cpu_ns": 43335,
+          "wall_ns": 40000
+        },
+        "commit_owner_wait": {
+          "events": 12,
+          "cpu_ns": 2793,
+          "wall_ns": 0
+        },
+        "commit_proof_validation": {
+          "events": 12,
+          "cpu_ns": 21001,
+          "wall_ns": 23000
+        },
+        "commit_provider_validation": {
+          "events": 12,
+          "cpu_ns": 33874,
+          "wall_ns": 33000
+        },
+        "commit_epoch_delta_prepare": {
+          "events": 12,
+          "cpu_ns": 18835,
+          "wall_ns": 16000
+        },
+        "commit_input_owner_wait": {
+          "events": 12,
+          "cpu_ns": 1876,
+          "wall_ns": 1000
+        },
+        "commit_default_removal_prepare": {
+          "events": 12,
+          "cpu_ns": 10958,
+          "wall_ns": 9000
+        },
+        "commit_transition_inputs": {
+          "events": 12,
+          "cpu_ns": 4418,
+          "wall_ns": 4000
+        },
+        "commit_transition_preflight": {
+          "events": 12,
+          "cpu_ns": 131124,
+          "wall_ns": 128000
+        },
+        "commit_epoch_prepare": {
+          "events": 12,
+          "cpu_ns": 61499,
+          "wall_ns": 62000
+        },
+        "commit_publish_owner_wait": {
+          "events": 12,
+          "cpu_ns": 1793,
+          "wall_ns": 0
+        },
+        "commit_publication_revalidate": {
+          "events": 12,
+          "cpu_ns": 2167,
+          "wall_ns": 1000
+        },
+        "commit_completion": {
+          "events": 12,
+          "cpu_ns": 73459,
+          "wall_ns": 70000
+        },
+        "commit_root": {
+          "events": 12,
+          "cpu_ns": 1833,
+          "wall_ns": 0
+        },
+        "commit_metadata_apply": {
+          "events": 12,
+          "cpu_ns": 55874,
+          "wall_ns": 53000
+        },
+        "commit_root_publication": {
+          "events": 12,
+          "cpu_ns": 1998,
+          "wall_ns": 0
+        },
+        "commit_cleanup": {
+          "events": 12,
+          "cpu_ns": 94666,
+          "wall_ns": 100000
+        },
+        "commit_history_collect": {
+          "events": 12,
+          "cpu_ns": 1874,
+          "wall_ns": 0
+        },
+        "commit_provider_retire": {
+          "events": 12,
+          "cpu_ns": 30959,
+          "wall_ns": 72000
+        },
+        "batch_finish": {
+          "events": 32,
+          "cpu_ns": 175666,
+          "wall_ns": 306000
+        },
+        "mutation_adapter_install": {
+          "events": 32,
+          "cpu_ns": 45584,
+          "wall_ns": 35000
+        },
+        "mutation_adapter_installed": {
+          "events": 32,
+          "cpu_ns": 5209,
+          "wall_ns": 2000
+        },
+        "pixel_operation_finish": {
+          "events": 19,
+          "cpu_ns": 50460,
+          "wall_ns": 369000
+        },
+        "pixel_operation_changed_deliver": {
+          "events": 19,
+          "cpu_ns": 3293,
+          "wall_ns": 0
+        },
+        "pixel_operation_cleanup": {
+          "events": 19,
+          "cpu_ns": 3708,
+          "wall_ns": 1000
+        },
+        "proj_composite": {
+          "events": 95,
+          "cpu_ns": 949205,
+          "wall_ns": 1743000
+        },
+        "proj_write": {
+          "events": 19,
+          "cpu_ns": 3123,
+          "wall_ns": 0
+        },
+        "proj_merge": {
+          "events": 19,
+          "cpu_ns": 74174,
+          "wall_ns": 101000
+        },
+        "job_merge": {
+          "events": 19,
+          "cpu_ns": 114958,
+          "wall_ns": 1302000
+        },
+        "mutation_presence_preflight": {
+          "events": 26,
+          "cpu_ns": 4335,
+          "wall_ns": 1000
+        },
+        "mutation_presence_prepare": {
+          "events": 13,
+          "cpu_ns": 2128,
+          "wall_ns": 0
+        },
+        "mutation_presence_prepared": {
+          "events": 13,
+          "cpu_ns": 2085,
+          "wall_ns": 0
+        },
+        "tile_payload_memcpy": {
+          "events": 72,
+          "cpu_ns": 50290,
+          "wall_ns": 43000
+        },
+        "provider_copy_payload": {
+          "events": 72,
+          "cpu_ns": 39001,
+          "wall_ns": 33000
+        },
+        "clear_page": {
+          "events": 62,
+          "cpu_ns": 100333,
+          "wall_ns": 240000
+        },
+        "mutation_presence_resolve": {
+          "events": 13,
+          "cpu_ns": 8376,
+          "wall_ns": 16000
+        },
+        "mutation_presence_resolved": {
+          "events": 13,
+          "cpu_ns": 2167,
+          "wall_ns": 2000
+        },
+        "backend_fill": {
+          "events": 13,
+          "cpu_ns": 357448,
+          "wall_ns": 1008000
+        },
+        "transaction_begin_owner_wait": {
+          "events": 12,
+          "cpu_ns": 2291,
+          "wall_ns": 1000
+        },
+        "transaction_begin": {
+          "events": 12,
+          "cpu_ns": 8999,
+          "wall_ns": 9000
+        }
+      },
+      "unassigned_process_cpu_ns": 1977556,
+      "checks": [
+        {
+          "mode": 3,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 6,
+          "events": 7760,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 41945088
+        }
+      ],
+      "cold_pages": 132,
+      "unique_projection_pages": 56,
+      "lineage_prices": {
+        "proj_composite/fill/fill_without_observed_removal": {
+          "events": 56,
+          "cpu_ns": 1369287,
+          "wall_ns": 1914000
+        },
+        "proj_clear/copy/prior_merge_proj_composite_to_proj_clear": {
+          "events": 36,
+          "cpu_ns": 472999,
+          "wall_ns": 871000
+        },
+        "proj_composite/copy/same_merge_proj_clear_to_proj_composite": {
+          "events": 36,
+          "cpu_ns": 468624,
+          "wall_ns": 686000
+        },
+        "proj_composite/fill/fill_after_full_default_removal": {
+          "events": 4,
+          "cpu_ns": 63375,
+          "wall_ns": 63000
+        }
+      },
+      "lineage_exclusive_names": {
+        "proj_composite/fill/fill_without_observed_removal": {
+          "cold_owner_wait": {
+            "events": 56,
+            "cpu_ns": 10623,
+            "wall_ns": 7000
+          },
+          "cold_claim_and_base": {
+            "events": 56,
+            "cpu_ns": 140122,
+            "wall_ns": 133000
+          },
+          "cold_storage_and_plan": {
+            "events": 56,
+            "cpu_ns": 20172,
+            "wall_ns": 17000
+          },
+          "cold_descriptor": {
+            "events": 56,
+            "cpu_ns": 16622,
+            "wall_ns": 7000
+          },
+          "cold_backing_reserve": {
+            "events": 56,
+            "cpu_ns": 58244,
+            "wall_ns": 59000
+          },
+          "provider_identity_setup": {
+            "events": 56,
+            "cpu_ns": 116043,
+            "wall_ns": 131000
+          },
+          "tile_fill_pixel_loop": {
+            "events": 56,
+            "cpu_ns": 507842,
+            "wall_ns": 498000
+          },
+          "provider_initialize_payload": {
+            "events": 56,
+            "cpu_ns": 29159,
+            "wall_ns": 30000
+          },
+          "provider_allocate": {
+            "events": 56,
+            "cpu_ns": 45995,
+            "wall_ns": 51000
+          },
+          "write_provider_prepare": {
+            "events": 56,
+            "cpu_ns": 54625,
+            "wall_ns": 211000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 56,
+            "cpu_ns": 249786,
+            "wall_ns": 535000
+          },
+          "cold_generation": {
+            "events": 56,
+            "cpu_ns": 120054,
+            "wall_ns": 235000
+          }
+        },
+        "proj_clear/copy/prior_merge_proj_composite_to_proj_clear": {
+          "cold_owner_wait": {
+            "events": 36,
+            "cpu_ns": 11625,
+            "wall_ns": 65000
+          },
+          "cold_claim_and_base": {
+            "events": 36,
+            "cpu_ns": 33668,
+            "wall_ns": 65000
+          },
+          "cold_storage_and_plan": {
+            "events": 36,
+            "cpu_ns": 13373,
+            "wall_ns": 7000
+          },
+          "cold_descriptor": {
+            "events": 36,
+            "cpu_ns": 15789,
+            "wall_ns": 10000
+          },
+          "cold_backing_reserve": {
+            "events": 36,
+            "cpu_ns": 52335,
+            "wall_ns": 113000
+          },
+          "provider_identity_setup": {
+            "events": 36,
+            "cpu_ns": 48248,
+            "wall_ns": 43000
+          },
+          "tile_payload_memcpy": {
+            "events": 36,
+            "cpu_ns": 26833,
+            "wall_ns": 21000
+          },
+          "provider_copy_payload": {
+            "events": 36,
+            "cpu_ns": 19169,
+            "wall_ns": 17000
+          },
+          "provider_allocate": {
+            "events": 36,
+            "cpu_ns": 34001,
+            "wall_ns": 42000
+          },
+          "write_provider_prepare": {
+            "events": 36,
+            "cpu_ns": 23960,
+            "wall_ns": 35000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 36,
+            "cpu_ns": 125125,
+            "wall_ns": 349000
+          },
+          "cold_generation": {
+            "events": 36,
+            "cpu_ns": 68873,
+            "wall_ns": 104000
+          }
+        },
+        "proj_composite/copy/same_merge_proj_clear_to_proj_composite": {
+          "cold_owner_wait": {
+            "events": 36,
+            "cpu_ns": 13126,
+            "wall_ns": 23000
+          },
+          "cold_claim_and_base": {
+            "events": 36,
+            "cpu_ns": 37831,
+            "wall_ns": 81000
+          },
+          "cold_storage_and_plan": {
+            "events": 36,
+            "cpu_ns": 14498,
+            "wall_ns": 11000
+          },
+          "cold_descriptor": {
+            "events": 36,
+            "cpu_ns": 18335,
+            "wall_ns": 20000
+          },
+          "cold_backing_reserve": {
+            "events": 36,
+            "cpu_ns": 52293,
+            "wall_ns": 61000
+          },
+          "provider_identity_setup": {
+            "events": 36,
+            "cpu_ns": 49205,
+            "wall_ns": 46000
+          },
+          "tile_payload_memcpy": {
+            "events": 36,
+            "cpu_ns": 23457,
+            "wall_ns": 22000
+          },
+          "provider_copy_payload": {
+            "events": 36,
+            "cpu_ns": 19832,
+            "wall_ns": 16000
+          },
+          "provider_allocate": {
+            "events": 36,
+            "cpu_ns": 29795,
+            "wall_ns": 35000
+          },
+          "write_provider_prepare": {
+            "events": 36,
+            "cpu_ns": 22502,
+            "wall_ns": 39000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 36,
+            "cpu_ns": 120795,
+            "wall_ns": 238000
+          },
+          "cold_generation": {
+            "events": 36,
+            "cpu_ns": 66955,
+            "wall_ns": 94000
+          }
+        },
+        "proj_composite/fill/fill_after_full_default_removal": {
+          "cold_owner_wait": {
+            "events": 4,
+            "cpu_ns": 542,
+            "wall_ns": 0
+          },
+          "cold_claim_and_base": {
+            "events": 4,
+            "cpu_ns": 1583,
+            "wall_ns": 1000
+          },
+          "cold_storage_and_plan": {
+            "events": 4,
+            "cpu_ns": 1375,
+            "wall_ns": 1000
+          },
+          "cold_descriptor": {
+            "events": 4,
+            "cpu_ns": 1249,
+            "wall_ns": 0
+          },
+          "cold_backing_reserve": {
+            "events": 4,
+            "cpu_ns": 2584,
+            "wall_ns": 3000
+          },
+          "provider_identity_setup": {
+            "events": 4,
+            "cpu_ns": 3042,
+            "wall_ns": 3000
+          },
+          "tile_fill_pixel_loop": {
+            "events": 4,
+            "cpu_ns": 34167,
+            "wall_ns": 33000
+          },
+          "provider_initialize_payload": {
+            "events": 4,
+            "cpu_ns": 2124,
+            "wall_ns": 2000
+          },
+          "provider_allocate": {
+            "events": 4,
+            "cpu_ns": 2669,
+            "wall_ns": 4000
+          },
+          "write_provider_prepare": {
+            "events": 4,
+            "cpu_ns": 1082,
+            "wall_ns": 2000
+          },
+          "cold_register_pin_validate_install": {
+            "events": 4,
+            "cpu_ns": 8041,
+            "wall_ns": 7000
+          },
+          "cold_generation": {
+            "events": 4,
+            "cpu_ns": 4917,
+            "wall_ns": 7000
+          }
+        }
+      },
+      "clear_page_counts": {
+        "partial_write": 36,
+        "full_default_removal": 4,
+        "skip_default": 22
+      },
+      "phase_calls": {
+        "proj_clear": 19,
+        "proj_setup": 19,
+        "proj_composite": 95,
+        "proj_write": 19,
+        "proj_merge": 19
+      },
+      "batch_transactions": [
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1667,
+          "self_cpu_ns": 1667
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 81916,
+          "self_cpu_ns": 9332
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3708,
+          "self_cpu_ns": 3708
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 17084,
+          "self_cpu_ns": 2708
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1458,
+          "self_cpu_ns": 1458
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 113541,
+          "self_cpu_ns": 16248
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 10458,
+          "self_cpu_ns": 10458
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 71250,
+          "self_cpu_ns": 8170
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 458,
+          "self_cpu_ns": 458
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 20250,
+          "self_cpu_ns": 3291
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 8875,
+          "self_cpu_ns": 8875
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 17042,
+          "self_cpu_ns": 3087
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            11,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 4916,
+          "self_cpu_ns": 4916
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            11,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 17625,
+          "self_cpu_ns": 3167
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 708,
+          "self_cpu_ns": 708
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 22084,
+          "self_cpu_ns": 2877
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 16000,
+          "self_cpu_ns": 16000
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            3,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 63292,
+          "self_cpu_ns": 7875
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            4,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 792,
+          "self_cpu_ns": 792
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            4,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 145000,
+          "self_cpu_ns": 21126
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1875,
+          "self_cpu_ns": 1875
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 17458,
+          "self_cpu_ns": 2956
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 6125,
+          "self_cpu_ns": 6125
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 34250,
+          "self_cpu_ns": 3500
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2042,
+          "self_cpu_ns": 2042
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 30500,
+          "self_cpu_ns": 3123
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            8,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 500,
+          "self_cpu_ns": 500
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            8,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 44709,
+          "self_cpu_ns": 5667
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            9,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 375,
+          "self_cpu_ns": 375
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            9,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 168917,
+          "self_cpu_ns": 13001
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1125,
+          "self_cpu_ns": 1125
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 51125,
+          "self_cpu_ns": 6792
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 583,
+          "self_cpu_ns": 583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 30334,
+          "self_cpu_ns": 2708
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1667,
+          "self_cpu_ns": 1667
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 18250,
+          "self_cpu_ns": 3039
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3542,
+          "self_cpu_ns": 3542
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 30166,
+          "self_cpu_ns": 2958
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 5083,
+          "self_cpu_ns": 5083
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 13334,
+          "self_cpu_ns": 2501
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3583,
+          "self_cpu_ns": 3583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 58459,
+          "self_cpu_ns": 6959
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1334,
+          "self_cpu_ns": 1334
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 17292,
+          "self_cpu_ns": 3123
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            11,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 3750,
+          "self_cpu_ns": 3750
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            11,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 50833,
+          "self_cpu_ns": 8623
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            12,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 500,
+          "self_cpu_ns": 500
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            12,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 41667,
+          "self_cpu_ns": 5541
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            13,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 542,
+          "self_cpu_ns": 542
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            13,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 62458,
+          "self_cpu_ns": 5126
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 583,
+          "self_cpu_ns": 583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 25708,
+          "self_cpu_ns": 3250
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 958,
+          "self_cpu_ns": 958
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 19792,
+          "self_cpu_ns": 3624
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 4458,
+          "self_cpu_ns": 4458
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 22334,
+          "self_cpu_ns": 2835
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1875,
+          "self_cpu_ns": 1875
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            6,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 35500,
+          "self_cpu_ns": 3374
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 1625,
+          "self_cpu_ns": 1625
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            7,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 30792,
+          "self_cpu_ns": 3376
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2583,
+          "self_cpu_ns": 2583
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_clear",
+          "tags": [
+            10,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 14875,
+          "self_cpu_ns": 3250
+        },
+        {
+          "name": "batch_begin",
+          "phase": "proj_composite",
+          "tags": [
+            11,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 2125,
+          "self_cpu_ns": 2125
+        },
+        {
+          "name": "batch_finish",
+          "phase": "proj_composite",
+          "tags": [
+            11,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cpu_ns": 15458,
+          "self_cpu_ns": 2459
+        }
+      ]
+    }
+  ],
+  "coarse_cpu_difference": {
+    "proj_clear": {
+      "current_mean_cpu_ns": 1200802,
+      "upstream_mean_cpu_ns": 49540.75,
+      "difference_mean_cpu_ns": 1151261.25,
+      "current_range_ns": [
+        1122836,
+        1401080
+      ],
+      "upstream_range_ns": [
+        48083,
+        51458
+      ]
+    },
+    "proj_composite": {
+      "current_mean_cpu_ns": 3933572.25,
+      "upstream_mean_cpu_ns": 349593.25,
+      "difference_mean_cpu_ns": 3583979.0,
+      "current_range_ns": [
+        3640742,
+        4161502
+      ],
+      "upstream_range_ns": [
+        337836,
+        363751
+      ]
+    },
+    "proj_write": {
+      "current_mean_cpu_ns": 2949,
+      "upstream_mean_cpu_ns": 3310.75,
+      "difference_mean_cpu_ns": -361.75,
+      "current_range_ns": [
+        2835,
+        3044
+      ],
+      "upstream_range_ns": [
+        3124,
+        3417
+      ]
+    },
+    "proj_setup": {
+      "current_mean_cpu_ns": 18290,
+      "upstream_mean_cpu_ns": 15459.75,
+      "difference_mean_cpu_ns": 2830.25,
+      "current_range_ns": [
+        16122,
+        22960
+      ],
+      "upstream_range_ns": [
+        13045,
+        19504
+      ]
+    },
+    "proj_merge": {
+      "current_mean_cpu_ns": 73886.75,
+      "upstream_mean_cpu_ns": 90418,
+      "difference_mean_cpu_ns": -16531.25,
+      "current_range_ns": [
+        66921,
+        89414
+      ],
+      "upstream_range_ns": [
+        80703,
+        96254
+      ]
+    },
+    "job_outside_merge": {
+      "current_mean_cpu_ns": 92563,
+      "upstream_mean_cpu_ns": 74647.75,
+      "difference_mean_cpu_ns": 17915.25,
+      "current_range_ns": [
+        63837,
+        149750
+      ],
+      "upstream_range_ns": [
+        68127,
+        77670
+      ]
+    }
+  },
+  "workload_variations": []
+}

@@ -1,0 +1,193 @@
+{
+  "generated_at": "2026-10-04",
+  "scope": "CP1 PageStore memento process ownership and allocating presence wrapper removal",
+  "product_commit": "0933ea04ddbe8bb58c04dc891d864be8cd95d778",
+  "product_parent": "02a92eb98d4ccfa02462f59ec04999bf7873dedb",
+  "product_tracked_tree_clean": true,
+  "diff": {
+    "production_private": {
+      "insertions": 121,
+      "deletions": 55
+    },
+    "test": {
+      "insertions": 44,
+      "deletions": 15
+    },
+    "total": {
+      "insertions": 165,
+      "deletions": 70
+    }
+  },
+  "source_sha256": {
+    "libs/image/tiles3/kis_memento.h": "d62bdc8770e2ed2ef53ad445272f00ecf20e05cde9c61c1001a90ba0e03f53e0",
+    "libs/image/tiles3/kis_memento_manager.cc": "9be9bc138c4110691ceeccf476c5eeb10f13cd66828af557e49da65287007a09",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "62269e72ea99fee4f29a6657df6f21f2f8a0c7a069f3aa2c7d0fa83e890cf8b3",
+    "libs/image/pagestore/KisPageStore.h": "31277637162fa0968b004fc8f9f984c63ff4d2ec4dc80189e46e9de83db90869",
+    "libs/image/pagestore/KisPageStore.cpp": "14b174a430b9318dac25f87a8228c72e20ef088d309ae5d5a3ecf77d18a02f8e",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "5c9de20f1342e0f860f18c6c57c108794472afafb86dd0a89481cf4ed1bad769"
+  },
+  "binary_sha256": {
+    "_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "abe0c456a19ed1414bfa9c4291b4274094c684d7d656cbce0184cfca54249e11",
+    "_build-br0-cpu/bin/KisPageStoreReferenceTest": "4d0f97522df419cc65a0979d58050b5b6c0a41f066200ac13f1a08c8633930f6",
+    "_build-br0-cpu/bin/kis_tiled_data_manager_test": "9aa9c117557cbbdf7aae9d84b46d430ec39aa394ec66708bba6b0193bb608ad4",
+    "_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "8c435f2ed542bf442cc70a6de0d4636852362abaf439f27a286bf2557777c488",
+    "_build-br1-tsan/bin/KisPageStoreCpuMutationTest": "17f22c11a20bc80400e8706b5893773bb1c525d00c5fd57e7a1374765016de60",
+    "_build-br1-tsan/bin/KisPageStoreReferenceTest": "dab1da0d932c8e490af7797c5a4ee8e0e8ad787fc8946650f543b38fe956a0af",
+    "_build-br1-tsan/bin/kis_tiled_data_manager_test": "766d05f7ca9d44ca38cc77e4b4309b18dffc73451dc1e3f2186be8a17a3fbe83",
+    "_build-br1-tsan/bin/libkritaimage.21.0.0.dylib": "eb2a9324a6a857bfacbfc74a04e6e8d9cdd7b5cf045eb57934ca8d9eee1c3258"
+  },
+  "runs": {
+    "baseline-failure-arm64.log": {
+      "classification": "expected_failure",
+      "sha256": "9bc33770c4f9255977c67652e7c1d3cb3aaaa8b86c1ff2fc04db99833c62e971",
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "failure_markers": 1,
+      "tsan_warnings": 0
+    },
+    "targeted-normal-arm64.log": {
+      "classification": "pass",
+      "sha256": "1e0e7a19e389d7236e761bafaf5781ca591c092d58bff387a82abc717cefbfb0",
+      "totals": [
+        "Totals: 7 passed, 0 failed, 0 skipped, 0 blacklisted, 5ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "targeted-normal-x86_64.log": {
+      "classification": "pass",
+      "sha256": "1492de9b7f795cd18fbf368e29ab606ddfdb4cb1808b36802e11af2e3db012a3",
+      "totals": [
+        "Totals: 7 passed, 0 failed, 0 skipped, 0 blacklisted, 7ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "cpu-full-normal-arm64.log": {
+      "classification": "pass",
+      "sha256": "2d704948b989bcd345dc89c74c6fa3ceabd0b458239adb60b8beebb0698c1a8c",
+      "totals": [
+        "Totals: 1390 passed, 0 failed, 0 skipped, 0 blacklisted, 10299ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "cpu-full-normal-x86_64.log": {
+      "classification": "pass",
+      "sha256": "29678b34466eebb59144de3d41667c7bb29c9eb10c09bd413db067024641fb22",
+      "totals": [
+        "Totals: 1390 passed, 0 failed, 0 skipped, 0 blacklisted, 11382ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "cpu-full-tsan-arm64.log": {
+      "classification": "pass",
+      "sha256": "0c53e8a1627f3e820620fb1e7c90c63ba33c0727d0c018bb9ce0ff0aed6455bf",
+      "totals": [
+        "Totals: 1390 passed, 0 failed, 0 skipped, 0 blacklisted, 128704ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "reference-full-normal-arm64.log": {
+      "classification": "pass",
+      "sha256": "1700ec3da160e7c71cd2603694adebdcc39fcd7ad22ef1b80d8a5ef8d97e2f8c",
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 8254ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "reference-full-normal-x86_64.log": {
+      "classification": "pass",
+      "sha256": "7c26c1f691365d9c1a2e544b0df4708003d0702c3fa023c25e337f9aef44fe69",
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 9198ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "reference-full-tsan-arm64.log": {
+      "classification": "pass",
+      "sha256": "9ddd986a4a2e46dc354ba7a7ce753c035639f53c89241fc23240bf2a8e43131d",
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 223597ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "legacy-targeted-normal-arm64.log": {
+      "classification": "pass",
+      "sha256": "de9304e3a253025e98947cef67de06ddfb239329520212cc1adf419e73248192",
+      "totals": [
+        "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 9ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "legacy-targeted-normal-x86_64.log": {
+      "classification": "pass",
+      "sha256": "937af5253000a60e63ce44f98c144d3bfcd325ba36a87559f2c7aa233a24d3b4",
+      "totals": [
+        "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 16ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "legacy-targeted-tsan-arm64.log": {
+      "classification": "pass",
+      "sha256": "7d693108002c93966e7fffb707a9855070d893ff16853f3ae8a54438330a93e6",
+      "totals": [
+        "Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 172ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "legacy-full-normal-arm64.log": {
+      "classification": "pass",
+      "sha256": "a93bc4ec2de4a4551538ce88f3e2ca4864470a6d2f2468e27a4d2ecc9080f45e",
+      "totals": [
+        "Totals: 1105 passed, 0 failed, 0 skipped, 0 blacklisted, 85054ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "legacy-full-normal-x86_64.log": {
+      "classification": "pass",
+      "sha256": "115489ace5b87055ceb7020828b1b779a0e71e869d8d33eb5178f95cc3b5cfd0",
+      "totals": [
+        "Totals: 1105 passed, 0 failed, 0 skipped, 0 blacklisted, 124648ms"
+      ],
+      "failure_markers": 0,
+      "tsan_warnings": 0
+    },
+    "legacy-full-tsan-known-open-interrupted.log": {
+      "classification": "known_open_interrupted",
+      "sha256": "680e612367f87b00e1a90ec598da2c597d7dd6a3fe39631f59f916c2a865c5dd",
+      "totals": [],
+      "failure_markers": 0,
+      "tsan_warnings": 108
+    }
+  },
+  "commands": {
+    "targeted": "KisPageStoreCpuMutationTest pageStoreMementoStorageIsProcessOwned metadataPresenceUsesCanonicalSelector",
+    "cpu_full": "KisPageStoreCpuMutationTest",
+    "reference_full": "KisPageStoreReferenceTest",
+    "legacy_targeted": "kis_tiled_data_manager_test testPageStoreHistoryDirtyExtent testUndoingNewTiles testPurgedAndEmptyTransactions testTransactions testPurgeHistory testUndoSetDefaultPixel",
+    "legacy_full": "env QT_QPA_PLATFORM=offscreen KIS_TEST_PREFIX_PATH=/Users/apple/krita_gpu/krita/_install kis_tiled_data_manager_test",
+    "architectures": [
+      "normal arm64",
+      "normal x86_64",
+      "TSAN arm64 where recorded"
+    ]
+  },
+  "notes": [
+    "The baseline failure is expected and proves PageStore memento object storage was outside process accounting on the parent.",
+    "Successful TSAN CPU, Reference, and legacy-targeted logs contain no ThreadSanitizer warning.",
+    "Normal full manager logs pass 1105/0/0 on both architectures with the required install prefix.",
+    "The interrupted full-manager TSAN log is retained as a known-open run: it reproduces unchanged KisTiledExtentManager concurrency reports also recorded by prior active evidence and is not counted as a pass or a memento regression.",
+    "This delivery closes concrete memento and presence-wrapper residue, not the complete all-owned pipeline hard bound."
+  ]
+}

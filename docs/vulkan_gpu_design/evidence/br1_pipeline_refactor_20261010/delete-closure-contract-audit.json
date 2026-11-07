@@ -1,0 +1,361 @@
+{
+  "base": "2eb9f4236ff3cf28550716717ec43c676336cd9d",
+  "commit": "16a4ff59eb01e87dc435afb81a305413d32223bb",
+  "verified": true,
+  "package_audit_sha256": "888e4c14bebe47343c06c2d13e198e7913c1c41e6ba499ad9f215767e1fa2d7c",
+  "graph": {
+    "api-count": 2253,
+    "call-edge-count": 30565,
+    "callback-registration-count": 26
+  },
+  "translation_units": 87,
+  "deleted_obligations_rechecked": {
+    "adapter-audit.json": "Prepared compatibility tile is unavailable|preparedTiles[.]install[(]",
+    "clone-view-audit.json": "updateSnapshotDerivedExtent",
+    "commit-audit.json": "commitAndReleasePublicationLock|recordPrepared|PreparedTransactionState",
+    "copy-audit.json": "pageStoreRefreshCapacity",
+    "copy-delivery-audit.json": "refreshPageStoreIndex|refreshPageStorePage|bitBltRoughImpl",
+    "delete-closure-audit.json": "installPageStoreReadCache|takeIdleReadCache",
+    "enumeration-audit.json": "KisPageKeyStorage visiblePages",
+    "history-audit.json": "pruneDefaultPreparedPages",
+    "history-segment-audit.json": "historyChangedPages|refreshPageStorePages",
+    "intent-audit.json": "pruneDefaultPreparedPages|testPageStoreWriteIntentDoesNotAllocateUntilDataExposure",
+    "operation-audit.json": "legacyFinalUnlock|privateCancelled",
+    "owned-terminal-audit.json": "abortOwnedTransaction",
+    "purge-delivery-audit.json": "tilesToDelete",
+    "restore-audit.json": "restoreRetainedEpochDelta|copyPageVersions|requiresFullPageRestore|releaseSnapshotDelta|releaseSnapshotLocked",
+    "restore-delivery-audit.json": "prepareMissingTile",
+    "trim-audit.json": "rebuildPageStoreIndex"
+  },
+  "scoped_deletions_rechecked": {
+    "core": [
+      "libs/image/pagestore",
+      "preparationOnly|recordPrepared|KisMutationPageEntryState::Prepared"
+    ],
+    "overlay": [
+      "libs/image",
+      "tryInstallLocked|collectRetirementsLocked"
+    ],
+    "owned-publication": [
+      "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anonymousTransaction|anonymousClients|anonymousFailed|finishBatchLease|m_ownedMutation"
+    ]
+  },
+  "obsolete_publication_lock_parameter_absent": true,
+  "retained_private_read_cache": {
+    "callback-registrations": [],
+    "codegen-name": "",
+    "declarations": [
+      {
+        "column": 15,
+        "line": 273,
+        "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h"
+      }
+    ],
+    "definitions": [
+      {
+        "column": 48,
+        "line": 2500,
+        "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+      }
+    ],
+    "kind": "instance-method",
+    "name": "readCacheForPage",
+    "non-call-references": [],
+    "production-callers": [
+      {
+        "caller": "KisTiledDataManagerPageStoreBackend::selectCurrentReadTile",
+        "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@selectCurrentReadTile#&$@S@KisTiledDataManager#$@S@KisSharedPtr>#$@S@KisTile#*b#",
+        "column": 33,
+        "dynamic": false,
+        "implicit": false,
+        "line": 1479,
+        "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+      },
+      {
+        "caller": "KisTiledDataManagerPageStoreBackend::acquireTile",
+        "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@acquireTile#I#I#$@S@KisTilePageStoreBridge@E@Access#*$@N@std@N@__1@S@unique_ptr>#$@S@KisTilePageStoreLease#$@N@std@N@__1@S@default_delete>#S3_#",
+        "column": 16,
+        "dynamic": false,
+        "implicit": false,
+        "line": 1525,
+        "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+      }
+    ],
+    "qualified-name": "KisTiledDataManagerPageStoreBackend::readCacheForPage",
+    "specializations-and-overrides": [],
+    "test-callers": [],
+    "usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@readCacheForPage#&1$@S@KisPageStoreReadPage#$@N@std@N@__1@S@unique_ptr>#$@S@KisTilePageStoreLease#$@N@std@N@__1@S@default_delete>#S3_#1"
+  },
+  "preserved_contract_rows": {
+    "arm64": {
+      "surfaceDefaultAndExtentMutateAtomicallyWithEpoch": [
+        ""
+      ],
+      "ownerLedgerVerifiesTerminalProviderIdentity": [
+        ""
+      ],
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit": [
+        ""
+      ],
+      "lastUseCloseAndLifetime": [
+        "close-queued-event",
+        "destroy-pending",
+        "destroy-queued-event"
+      ],
+      "firstRetirementRunsOffThreadAndCloseDrains": [
+        ""
+      ],
+      "physicalBackingHandoffGuards": [
+        "bpp1-none",
+        "bpp1-native-read",
+        "bpp1-native-write",
+        "bpp1-parked-writer",
+        "bpp1-generic-read",
+        "bpp1-generic-write",
+        "bpp1-raw-pin",
+        "bpp1-external-ref",
+        "bpp1-legacy-user",
+        "bpp1-immutable-source",
+        "bpp1-alias",
+        "bpp1-foreign-alias",
+        "bpp1-preclone",
+        "bpp1-swapped",
+        "bpp1-pooler-iteration",
+        "bpp4-none",
+        "bpp4-native-read",
+        "bpp4-native-write",
+        "bpp4-parked-writer",
+        "bpp4-generic-read",
+        "bpp4-generic-write",
+        "bpp4-raw-pin",
+        "bpp4-external-ref",
+        "bpp4-legacy-user",
+        "bpp4-immutable-source",
+        "bpp4-alias",
+        "bpp4-foreign-alias",
+        "bpp4-preclone",
+        "bpp4-swapped",
+        "bpp4-pooler-iteration",
+        "bpp8-none",
+        "bpp8-native-read",
+        "bpp8-native-write",
+        "bpp8-parked-writer",
+        "bpp8-generic-read",
+        "bpp8-generic-write",
+        "bpp8-raw-pin",
+        "bpp8-external-ref",
+        "bpp8-legacy-user",
+        "bpp8-immutable-source",
+        "bpp8-alias",
+        "bpp8-foreign-alias",
+        "bpp8-preclone",
+        "bpp8-swapped",
+        "bpp8-pooler-iteration",
+        "bpp16-none",
+        "bpp16-native-read",
+        "bpp16-native-write",
+        "bpp16-parked-writer",
+        "bpp16-generic-read",
+        "bpp16-generic-write",
+        "bpp16-raw-pin",
+        "bpp16-external-ref",
+        "bpp16-legacy-user",
+        "bpp16-immutable-source",
+        "bpp16-alias",
+        "bpp16-foreign-alias",
+        "bpp16-preclone",
+        "bpp16-swapped",
+        "bpp16-pooler-iteration"
+      ]
+    },
+    "x86_64": {
+      "surfaceDefaultAndExtentMutateAtomicallyWithEpoch": [
+        ""
+      ],
+      "ownerLedgerVerifiesTerminalProviderIdentity": [
+        ""
+      ],
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit": [
+        ""
+      ],
+      "lastUseCloseAndLifetime": [
+        "close-queued-event",
+        "destroy-pending",
+        "destroy-queued-event"
+      ],
+      "firstRetirementRunsOffThreadAndCloseDrains": [
+        ""
+      ],
+      "physicalBackingHandoffGuards": [
+        "bpp1-none",
+        "bpp1-native-read",
+        "bpp1-native-write",
+        "bpp1-parked-writer",
+        "bpp1-generic-read",
+        "bpp1-generic-write",
+        "bpp1-raw-pin",
+        "bpp1-external-ref",
+        "bpp1-legacy-user",
+        "bpp1-immutable-source",
+        "bpp1-alias",
+        "bpp1-foreign-alias",
+        "bpp1-preclone",
+        "bpp1-swapped",
+        "bpp1-pooler-iteration",
+        "bpp4-none",
+        "bpp4-native-read",
+        "bpp4-native-write",
+        "bpp4-parked-writer",
+        "bpp4-generic-read",
+        "bpp4-generic-write",
+        "bpp4-raw-pin",
+        "bpp4-external-ref",
+        "bpp4-legacy-user",
+        "bpp4-immutable-source",
+        "bpp4-alias",
+        "bpp4-foreign-alias",
+        "bpp4-preclone",
+        "bpp4-swapped",
+        "bpp4-pooler-iteration",
+        "bpp8-none",
+        "bpp8-native-read",
+        "bpp8-native-write",
+        "bpp8-parked-writer",
+        "bpp8-generic-read",
+        "bpp8-generic-write",
+        "bpp8-raw-pin",
+        "bpp8-external-ref",
+        "bpp8-legacy-user",
+        "bpp8-immutable-source",
+        "bpp8-alias",
+        "bpp8-foreign-alias",
+        "bpp8-preclone",
+        "bpp8-swapped",
+        "bpp8-pooler-iteration",
+        "bpp16-none",
+        "bpp16-native-read",
+        "bpp16-native-write",
+        "bpp16-parked-writer",
+        "bpp16-generic-read",
+        "bpp16-generic-write",
+        "bpp16-raw-pin",
+        "bpp16-external-ref",
+        "bpp16-legacy-user",
+        "bpp16-immutable-source",
+        "bpp16-alias",
+        "bpp16-foreign-alias",
+        "bpp16-preclone",
+        "bpp16-swapped",
+        "bpp16-pooler-iteration"
+      ]
+    }
+  },
+  "original_convergence_start_and_retired_proof_unchanged": true,
+  "only_reviewed_ceiling_changed": {
+    "libs/image/tiles3/kis_tiled_data_manager.cc": {
+      "identifier_occurrences": 60,
+      "direct_includes": 4,
+      "reason": "Current design 92 section 16.177 explicitly reviews the completed pipeline responsibility, rather than treating a refreshed checkpoint as permission: 32 diagnostic timer/phase occurrences and 28 operation/backend/capability occurrences, four direct includes. PreparedTileUpdates is operation-local B/R/extent storage; the original manager gate covers prepare/accept/install and the original scope retains admission. No new manager field, transaction directory, recovery queue or canonical authority. Preparation, gate duration, cache frees and final release remain charged; zero late allocation is not a zero-free or performance claim. Only this file ceiling changes. Lower it as the raw adapter consumers or their diagnostics migrate; other file and layout limits stay unchanged."
+    }
+  },
+  "diff_categories": {
+    "runtime": {
+      "files": [
+        "libs/image/tiles3/kis_tile.cc",
+        "libs/image/tiles3/kis_tile.h",
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h"
+      ],
+      "added": 1,
+      "deleted": 28
+    },
+    "checker": {
+      "files": [
+        "build-tools/ci-scripts/check-pagestore-architecture.py"
+      ],
+      "added": 2,
+      "deleted": 2
+    },
+    "reviewed_metadata": {
+      "files": [
+        "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+        "build-tools/ci-scripts/pagestore-audit/runtime-census.json",
+        "build-tools/ci-scripts/pagestore-audit/state-ownership.json"
+      ],
+      "added": 72,
+      "deleted": 40
+    },
+    "derived": {
+      "files": [
+        "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+        "build-tools/ci-scripts/pagestore-audit/baseline-source.json"
+      ],
+      "added": 49286,
+      "deleted": 33288
+    },
+    "tests": {
+      "files": [],
+      "added": 0,
+      "deleted": 0
+    }
+  },
+  "original_matrix_ids": [
+    "T01.1",
+    "T01.2",
+    "T01.3",
+    "T01.4",
+    "T02.1",
+    "T02.2",
+    "T02.3",
+    "T02.4",
+    "T03.1",
+    "T03.2",
+    "T03.3",
+    "T04.1",
+    "T04.2",
+    "T04.3",
+    "T04.4",
+    "T04.5",
+    "T04.6",
+    "T04.7",
+    "T04.8",
+    "T04.9",
+    "T04.10",
+    "T04.11",
+    "T04.12",
+    "T05.1",
+    "T05.2",
+    "T06.1",
+    "T06.2",
+    "T06.3",
+    "T07.1",
+    "T07.2",
+    "T07.3",
+    "T08.1",
+    "T08.2"
+  ],
+  "original_matrix_sha256": "02cd7a49291d947b3e8bbb9cf24e569e3ca4eae778ac6176be8167383487cc28",
+  "product_audit_sha256": {
+    "libs/image/tiles3/kis_tile.cc": "70f38b4ffc8785a6a7df436b9fdc3abce3fdf76868a5111682e525045604e443",
+    "libs/image/tiles3/kis_tile.h": "27263bb4c0f03656ab1241ef314ad0b4fae53050ef43327086b0ab1935dc1812",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "7bd69220722e5ec59089d954e2a1399308bf00263fa48e123a666670c59d621b",
+    "build-tools/ci-scripts/check-pagestore-architecture.py": "7965992b5e86002b858a84e4b80e1c5e72312be934c7182758ed9b4c402855d3",
+    "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json": "5d8e32c6074ff43d21ac1b9034e89949f0607433ef72b84cd9dc8e16c814c2f9",
+    "build-tools/ci-scripts/pagestore-audit/runtime-census.json": "79662a0bb23ffbda530f802617d2f35d1bfa52caf7b0c2d13dabcf0d2d38d0ec",
+    "build-tools/ci-scripts/pagestore-audit/state-ownership.json": "888d5bf08b350a6a1fa4968fac6d0a3d73d0d74c98951ddf2d56fc226b53cfba",
+    "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json": "b02a50553416862b6d7ff948820a5cfcbc8d1fe25e5c7fa14deecc4d1c415671",
+    "build-tools/ci-scripts/pagestore-audit/baseline-source.json": "b0a68d0145ba3210eb3bafdeb89dbc99efe2f280cba6cfc7c3d2d0cb3bd65ebe"
+  },
+  "artifact_sha256": {
+    "audit_delete_closure.py": "e8936b0ca88e750ef79b12a7f90258c177f4e19b6944bbe9263b0b14410518b0",
+    "delete-closure-architecture-final.log": "d8bd81a19f50b9fac4b0e06e497582b0c81644fb9a03160030ed157df92e74ee",
+    "delete-closure-tool-tests.log": "dcd2147edfda2291b456dfb6d9f3021f0fed07760d5a1c8869fc5446f30e28fe",
+    "delete-closure-architecture-before.log": "3e5539bfbc1a56d329d79e6377ef1264371140916817401ef6cbf8ab10e2428d"
+  },
+  "limits": [
+    "Dead API deletion and current architecture identity only; no runtime time benefit claim.",
+    "Two known live-source exact-view failures remain open.",
+    "Current six-group regression does not override those separately reproduced failures.",
+    "Full pipeline net cost, business controls and formal M6 qualification remain open."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "BR1 producer/Ledger/metadata/read/capture/history/retirement and adapter source plus image tests; archive excluded",
+  "checks": {
+    "wakeEligible": true,
+    "preparedPageExtent": true,
+    "preparedPageExtentLocked": true,
+    "resolveCurrentPagePresence": true,
+    "pendingEffects": true,
+    "pendingHistoryEffects": true,
+    "nextEffect": true,
+    "finishEffectsLocked": true,
+    "detachedRetirement": true,
+    "bindProviderOperationImpl": true,
+    "scheduleAfter": true,
+    "read_empty_effect_protocol_removed": true,
+    "foreground_read_pump_preserved": true,
+    "effect_acceptance_policy_shared": true,
+    "obsolete_effect_fallback_and_skip_removed": true,
+    "one_capability_query_for_unregistered_entry": true,
+    "old_late_completion_business_failure_strings_absent": true,
+    "real_generic_effect_and_pending_consumers_preserved": true,
+    "underlying_extent_algorithm_preserved": true
+  },
+  "all_passed": true,
+  "source_files_scanned": 325
+}

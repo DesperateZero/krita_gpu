@@ -1,0 +1,40 @@
+{
+  "scope": "S06 joint production handoff install allocation and prepared-versus-installed concurrent consumer evidence; cumulative CPU correctness, not complete M6/M7/M8 or performance qualification",
+  "final_run": "checks-01",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "e75930341f74f86a4433c3bbca2520a94cca5da803e5a0dfab7417bd55ffd185",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      2713,
+      0,
+      0
+    ],
+    "x86_64": [
+      2713,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    5426,
+    0,
+    0
+  ],
+  "new_concurrent_cases_per_architecture": 144,
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "indexed_apis": 1522,
+    "call_edges": 15075,
+    "manifest_entries": 21,
+    "ownership_facts": 22,
+    "runtime_census_groups": 16,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "allocator_summary": "allocator-summary.json",
+  "production_cpu_install_interval_qualified": true,
+  "legacy_cache_migration_complete": false,
+  "stage_or_performance_qualification": false
+}

@@ -1,0 +1,90 @@
+{
+  "business_processes": 21,
+  "qtest_passed": 63,
+  "qtest_failed": 0,
+  "all_exit_reap_runtime_pixel_callback_undo_redo_teardown_checks": true,
+  "projection_updates_all": 19,
+  "traced_processes": 17,
+  "mode0_processes": 4,
+  "all_17_projection_rectangle_multisets_equal": true,
+  "all_events_parent_child_exclusive_and_unchanged_stage_label_checks": true,
+  "all_stroke_events_within_sampled_stage_timestamps": true,
+  "nonstroke_timestamp_boundary_exceptions": [
+    {
+      "batch": "detail-capability",
+      "index": 0,
+      "side": "current",
+      "mode": 3,
+      "event": {
+        "thread": 114733371,
+        "id": 25769803885,
+        "parent": 0,
+        "name": "tile_release_memory",
+        "owner": 4539606528,
+        "stage": 3,
+        "end_stage": 3,
+        "start_ns": 1262635647323000,
+        "end_ns": 1262635647323000,
+        "cpu_ns": 291,
+        "self_wall_ns": 0,
+        "self_cpu_ns": 291,
+        "tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "facts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": {
+        "stage": "Undo",
+        "wall_ns": 481000,
+        "cpu_ns": 601000,
+        "user_ns": 541000,
+        "system_ns": 61000,
+        "start_ns": 1262635646841000,
+        "end_ns": 1262635647322000
+      }
+    }
+  ],
+  "max_process_cpu_vs_rusage_difference_ns": 19000,
+  "initial_observer_selftest_modes": [
+    0,
+    2,
+    3
+  ],
+  "base_fact_ancestor_selftest_log_verified": true,
+  "four_detailed_current_lineages_identical_counts": true,
+  "production_tree_unchanged": true,
+  "formal_m6_new_passes": 0,
+  "limitations": [
+    "native ARM single workload",
+    "coarse four pairs and detailed two repeats per batch are diagnostic, no formal CI",
+    "mode0 still uses derived library, not original binary",
+    "no complete lock/critical-path dependency graph",
+    "generation lineage does not prove legal elimination or wall gain",
+    "no Rosetta, product safety matrix, candidate comparison or formal M6"
+  ],
+  "non_runtime_failures": [
+    "build-v0 ambiguous affected-rect match; stopped before compilation",
+    "build-v1 ambiguous mutation-begin match; stopped before compilation",
+    "initial PLAN recovery hash rejected an extra newline; exact original bytes recovered by original digest",
+    "analyze-report-v0 exhausted a generator before max; fixed analyzer reused all original samples",
+    "freeze-v0 rejected one Undo capability event 1 us after sampled stage end but before marker reset; preserved explicitly, no Stroke exception or resampling",
+    "freeze-v1 snapshot list omitted the _p suffix of coordinator headers; corrected existing paths before archive creation"
+  ]
+}

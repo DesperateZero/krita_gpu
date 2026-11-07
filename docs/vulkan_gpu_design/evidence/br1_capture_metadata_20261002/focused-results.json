@@ -1,0 +1,96 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "capturedCutStorageRefusalAndLifetime",
+      "capturedOverlayOutlivesFacade",
+      "captureStorageRefusalPrecedesProtection",
+      "capturedReleaseKeepsOriginalFacts",
+      "capturedOverlayRevalidatesCommitPreparation",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.964,
+    "totals": [
+      "Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 213ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "capturedProtectionAndExactQueryAtCapacity",
+      "indexedMutationTransitions",
+      "indexedMutationBaseLookup",
+      "indexedMutationConcurrentProtection",
+      "indexedCompetingPreparedTransactions",
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 2.811,
+    "totals": [
+      "Totals: 56 passed, 1 failed, 0 skipped, 0 blacklisted, 46ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::indexedMutationConcurrentProtection() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "capturedCutStorageRefusalAndLifetime",
+      "capturedOverlayOutlivesFacade",
+      "captureStorageRefusalPrecedesProtection",
+      "capturedReleaseKeepsOriginalFacts",
+      "capturedOverlayRevalidatesCommitPreparation",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.885,
+    "totals": [
+      "Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 220ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "capturedProtectionAndExactQueryAtCapacity",
+      "indexedMutationTransitions",
+      "indexedMutationBaseLookup",
+      "indexedMutationConcurrentProtection",
+      "indexedCompetingPreparedTransactions",
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.723,
+    "totals": [
+      "Totals: 56 passed, 1 failed, 0 skipped, 0 blacklisted, 63ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::indexedMutationConcurrentProtection() Compared values are not the same"
+    ],
+    "passed": false
+  }
+]

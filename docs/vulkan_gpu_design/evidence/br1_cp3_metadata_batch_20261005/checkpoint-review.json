@@ -1,0 +1,28 @@
+{
+  "responsibility": "Complete original local accepted metadata batch validation and install",
+  "sole_consumer": "KisPageMetadataCoordinator::applyProjectedSequence",
+  "input_proof": [
+    "Original canonical physicalSlots index has one exact physical identity owner; projected input versions come from its existing records under the same shard gate",
+    "The input collector deduplicates version identities and includes the page-local physical owner witness for every transition target",
+    "Each original local transition applies to the same working result; any rejected step exits before record installation",
+    "After unlocked debt preparation or arena growth, same-page revision/canMutate is revalidated and the original canonical collision checks still cover other-page changes"
+  ],
+  "local_identity_introducing_kinds": [
+    "AcquireWrite: physicalSlotInUse before append; new generation/writer/base guards remain",
+    "AdoptPreparedWrite: physicalSlotInUse before append; adoption/generation/base guards remain",
+    "AttachHistoricalDefault: physicalSlotInUse before historical append",
+    "MaterializeDefault: physicalSlotInUse before appending to the existing virtual default",
+    "ReplacePrivatePreparedBacking: physicalSlotInUse before clearing/replacing the sole private replica; consumer/transaction guards remain"
+  ],
+  "remaining_local_kinds": "PrepareWrite,BeginPublish,PublishWrite,FailWrite,CancelWrite,Retain/ReleaseCapturedVersion,Detach/AbortPreparedVersion,AbortTransaction,DiscardHistoricalVersions,Begin/Commit/FailAuthorityHandoff,Acquire/ReleaseRead only preserve or remove physical identities. Nonlocal materialization/default/publication/recoverable preparation remains on its original separate policy and consumers.",
+  "original_checks_preserved": [
+    "canInstallPhysical still rejects within-version duplicates and collisions against every existing canonical physical identity owner",
+    "All batch inputs validate before original arena/exact/physical index reservation and first putReserved installation",
+    "Actual input/installation order and new-version/replica/demand counts are unchanged",
+    "Original stale retry, activity rollback, retirement debt cancellation/commit, storage refusal and eventual actual free remain"
+  ],
+  "same_batch_deletion": "No replacement scratch array, sorter or hash index remains. Generic putBatch is replaced by the existing owner's putAcceptedBatch taking the original KisPageWorkingResult. Accepted outcome is required at its boundary; no allow-bypass flag or new proof owner.",
+  "test_pressure_contract": "After observing real old-root reclamation176B and legal accepted sequences without scratch allocation, retain original2MiB/4MiB limits and semantic assertions. Seal refills actual full capacity before each attempt; generic Debt refusal fills actual spare replica arena slots before injection. Actual parent/control and all failed diagnostic records are separate in execution-issues.json.",
+  "growth_justification": "Production net-4 lines and no new persistent field, owner, queue or public API. The complete redundant scratch lifetime is deleted instead of adding a second representation. Test+127/-3 comprises96-line independent identity test,15-line real arena occupancy and16/-3 real pressure/concurrent-free stabilization.",
+  "exit": "All current consumers use the original accepted-result fact and complete canonical checks. Performance, same-semantic metadata residency and CP0 remain separate required qualifications."
+}

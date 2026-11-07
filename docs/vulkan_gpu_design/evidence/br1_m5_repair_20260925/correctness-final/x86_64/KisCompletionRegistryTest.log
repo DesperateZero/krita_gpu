@@ -1,0 +1,19 @@
+********* Start testing of KisCompletionRegistryTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisCompletionRegistryTest::initTestCase()
+PASS   : KisCompletionRegistryTest::identityAndTerminalValidation()
+PASS   : KisCompletionRegistryTest::pendingGapsAndTerminalBoundaries()
+PASS   : KisCompletionRegistryTest::shuffledCompletionMatchesOracle()
+PASS   : KisCompletionRegistryTest::concurrentAllocationAndCompletion()
+PASS   : KisCompletionRegistryTest::compactStorage()
+QINFO  : KisCompletionRegistryTest::benchmark(success) COMPLETION_BASELINE {"allocated_tickets":1024,"completed_operations":1024,"correctness":"Pass","pattern":"success","pending_tickets":0,"process_cpu_ns":50000,"scope":"completion-registry-lifecycle; allocate-complete-status; no provider/root/drain","storage_records":1,"terminal_tickets":1024,"wall_ns":45917}
+PASS   : KisCompletionRegistryTest::benchmark(success)
+QINFO  : KisCompletionRegistryTest::benchmark(pending-gap) COMPLETION_BASELINE {"allocated_tickets":1025,"completed_operations":1024,"correctness":"Pass","pattern":"pending-gap","pending_tickets":1,"process_cpu_ns":59000,"scope":"completion-registry-lifecycle; allocate-complete-status; no provider/root/drain","storage_records":1,"terminal_tickets":1024,"wall_ns":55167}
+PASS   : KisCompletionRegistryTest::benchmark(pending-gap)
+QINFO  : KisCompletionRegistryTest::benchmark(sparse-failure) COMPLETION_BASELINE {"allocated_tickets":1024,"completed_operations":1024,"correctness":"Pass","pattern":"sparse-failure","pending_tickets":0,"process_cpu_ns":60000,"scope":"completion-registry-lifecycle; allocate-complete-status; no provider/root/drain","storage_records":2,"terminal_tickets":1024,"wall_ns":56541}
+PASS   : KisCompletionRegistryTest::benchmark(sparse-failure)
+QINFO  : KisCompletionRegistryTest::benchmark(alternating) COMPLETION_BASELINE {"allocated_tickets":1024,"completed_operations":1024,"correctness":"Pass","pattern":"alternating","pending_tickets":0,"process_cpu_ns":79000,"scope":"completion-registry-lifecycle; allocate-complete-status; no provider/root/drain","storage_records":513,"terminal_tickets":1024,"wall_ns":73709}
+PASS   : KisCompletionRegistryTest::benchmark(alternating)
+PASS   : KisCompletionRegistryTest::cleanupTestCase()
+Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 465ms
+********* Finished testing of KisCompletionRegistryTest *********

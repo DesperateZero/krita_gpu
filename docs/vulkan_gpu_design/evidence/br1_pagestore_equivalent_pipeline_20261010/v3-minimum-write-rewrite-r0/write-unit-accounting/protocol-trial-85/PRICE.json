@@ -1,0 +1,4270 @@
+{
+  "schema": "br1-protocol-trial-85-exploratory-price",
+  "source_head": "0c6889e6fb92e06289c1a2547052fe724c76eadd",
+  "run_protocol_sha256": "3bef6a1deae2538e89c7cbb0c45e940ee9ff8a23290f54e6d2d5f17068ef4ed0",
+  "runs_sha256": "b6a9eb318829dc7b1903517ff6456bc29f9dc787627a0fde19ae576b7e7f6f76",
+  "processes": {
+    "public": 2,
+    "core": 5,
+    "ordinary_price": 32
+  },
+  "core_passed": 4696,
+  "cases": {
+    "3": {
+      "variants": {
+        "R": {
+          "setup_cpu_ns": {
+            "n": 4,
+            "values": [
+              1657000,
+              1478000,
+              1665000,
+              1568000
+            ],
+            "mean": 1592000,
+            "ci95": [
+              1452292.177890296,
+              1731707.822109704
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              1480958,
+              1314875,
+              1453457,
+              1389584
+            ],
+            "mean": 1409718.5,
+            "ci95": [
+              1292108.5199318116,
+              1527328.4800681884
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_wall_ns": {
+            "n": 4,
+            "values": [
+              1907000,
+              1615000,
+              1974000,
+              1741000
+            ],
+            "mean": 1809250,
+            "ci95": [
+              1550888.487895431,
+              2067611.512104569
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_cpu_ns": {
+            "n": 4,
+            "values": [
+              1955000,
+              2025000,
+              2288000,
+              2043000
+            ],
+            "mean": 2077750,
+            "ci95": [
+              1846679.5047523733,
+              2308820.4952476267
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              1926713,
+              1988668,
+              2236250,
+              2009828
+            ],
+            "mean": 2040364.75,
+            "ci95": [
+              1825122.1903503349,
+              2255607.3096496654
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_wall_ns": {
+            "n": 4,
+            "values": [
+              1937000,
+              2004000,
+              2294000,
+              2015000
+            ],
+            "mean": 2062500,
+            "ci95": [
+              1810870.3078421396,
+              2314129.6921578604
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_cpu_ns": {
+            "n": 4,
+            "values": [
+              1055000,
+              1005000,
+              1088000,
+              1023000
+            ],
+            "mean": 1042750,
+            "ci95": [
+              984554.217298225,
+              1100945.782701775
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              664795,
+              621876,
+              667752,
+              636166
+            ],
+            "mean": 647647.25,
+            "ci95": [
+              612135.0047513115,
+              683159.4952486885
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_wall_ns": {
+            "n": 4,
+            "values": [
+              673000,
+              646000,
+              685000,
+              654000
+            ],
+            "mean": 664500,
+            "ci95": [
+              636258.5906287616,
+              692741.4093712384
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_cpu_ns": {
+            "n": 4,
+            "values": [
+              3000,
+              1000,
+              2000,
+              2000
+            ],
+            "mean": 2000,
+            "ci95": [
+              700.7717363746626,
+              3299.2282636253376
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              2291,
+              2417,
+              2333,
+              2125
+            ],
+            "mean": 2291.5,
+            "ci95": [
+              2096.1939677187024,
+              2486.8060322812976
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_wall_ns": {
+            "n": 4,
+            "values": [
+              2000,
+              2000,
+              3000,
+              3000
+            ],
+            "mean": 2500,
+            "ci95": [
+              1581.3068844813006,
+              3418.6931155186994
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_wall_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_wall_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_cpu_ns": {
+            "n": 4,
+            "values": [
+              215000,
+              200000,
+              243000,
+              225000
+            ],
+            "mean": 220750,
+            "ci95": [
+              192038.08419297318,
+              249461.91580702682
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              198667,
+              181250,
+              224041,
+              204376
+            ],
+            "mean": 202083.5,
+            "ci95": [
+              174020.55210395716,
+              230146.44789604284
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_wall_ns": {
+            "n": 4,
+            "values": [
+              207000,
+              190000,
+              234000,
+              216000
+            ],
+            "mean": 211750,
+            "ci95": [
+              182571.54879700017,
+              240928.45120299983
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_cpu_ns": {
+            "n": 4,
+            "values": [
+              5333000,
+              5162000,
+              5770000,
+              5322000
+            ],
+            "mean": 5396750,
+            "ci95": [
+              4981733.75328058,
+              5811766.24671942
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "drain_cpu_ns": {
+            "n": 4,
+            "values": [
+              22000,
+              21000,
+              26000,
+              24000
+            ],
+            "mean": 23250,
+            "ci95": [
+              19721.69214106869,
+              26778.30785893131
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_cpu_ns": {
+            "n": 4,
+            "values": [
+              41012999.99999999,
+              40206999.99999999,
+              43488000.0,
+              43482999.99999999
+            ],
+            "mean": 42047749.99999999,
+            "ci95": [
+              39354657.77709893,
+              44740842.222901054
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_peak_rss": {
+            "n": 4,
+            "values": [
+              33603584,
+              33914880,
+              34029568,
+              34045952
+            ],
+            "mean": 33898496,
+            "ci95": [
+              33572179.27762442,
+              34224812.72237558
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_instructions": {
+            "n": 4,
+            "values": [
+              11049559.0,
+              11236061.0,
+              10902586.0,
+              11014722.0
+            ],
+            "mean": 11050732.0,
+            "ci95": [
+              10830260.635930568,
+              11271203.364069432
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_instructions": {
+            "n": 4,
+            "values": [
+              30462634.0,
+              30459837.0,
+              30520543.0,
+              30556341.0
+            ],
+            "mean": 30499838.75,
+            "ci95": [
+              30425172.656419538,
+              30574504.843580462
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_instructions": {
+            "n": 4,
+            "values": [
+              6981562.0,
+              7010271.0,
+              7179005.0,
+              7136049.0
+            ],
+            "mean": 7076721.75,
+            "ci95": [
+              6924504.901807364,
+              7228938.598192636
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_instructions": {
+            "n": 4,
+            "values": [
+              1060.0,
+              1060.0,
+              1060.0,
+              1060.0
+            ],
+            "mean": 1060.0,
+            "ci95": [
+              1060.0,
+              1060.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_instructions": {
+            "n": 4,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_instructions": {
+            "n": 4,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_instructions": {
+            "n": 4,
+            "values": [
+              1824672.0,
+              1818596.0,
+              1818687.0,
+              1812030.0
+            ],
+            "mean": 1818496.25,
+            "ci95": [
+              1810279.2802175789,
+              1826713.2197824211
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_main_instructions": {
+            "n": 4,
+            "values": [
+              60423469,
+              60629864,
+              60529394,
+              60659741
+            ],
+            "mean": 60560617,
+            "ci95": [
+              60390212.02175946,
+              60731021.97824054
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_instructions": {
+            "n": 4,
+            "values": [
+              65189729,
+              65597227,
+              65658053,
+              65694032
+            ],
+            "mean": 65534760.25,
+            "ci95": [
+              65163265.86805597,
+              65906254.63194403
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "sum_phase_instructions": {
+            "n": 4,
+            "values": [
+              50319487.0,
+              50525825.0,
+              50421881.0,
+              50520202.0
+            ],
+            "mean": 50446848.75,
+            "ci95": [
+              50291857.975361526,
+              50601839.524638474
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          }
+        },
+        "N": {
+          "setup_cpu_ns": {
+            "n": 4,
+            "values": [
+              1672000,
+              1558000,
+              1672000,
+              1673000
+            ],
+            "mean": 1643750,
+            "ci95": [
+              1552781.9837368284,
+              1734718.0162631716
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              1503542,
+              1386750,
+              1489876,
+              1470417
+            ],
+            "mean": 1462646.25,
+            "ci95": [
+              1379279.9901890235,
+              1546012.5098109765
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_wall_ns": {
+            "n": 4,
+            "values": [
+              1940000,
+              1893000,
+              1887000,
+              2007000
+            ],
+            "mean": 1931750,
+            "ci95": [
+              1843465.790371263,
+              2020034.209628737
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_cpu_ns": {
+            "n": 4,
+            "values": [
+              2061000,
+              1956000,
+              2125000,
+              2260000
+            ],
+            "mean": 2100500,
+            "ci95": [
+              1898218.4622350547,
+              2302781.5377649455
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              2008665,
+              1929544,
+              2073503,
+              2183295
+            ],
+            "mean": 2048751.75,
+            "ci95": [
+              1878033.0926745688,
+              2219470.4073254312
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_wall_ns": {
+            "n": 4,
+            "values": [
+              2021000,
+              1932000,
+              2097000,
+              2236000
+            ],
+            "mean": 2071500,
+            "ci95": [
+              1866647.9147024057,
+              2276352.0852975943
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_cpu_ns": {
+            "n": 4,
+            "values": [
+              1006000,
+              1004000,
+              1005000,
+              1059000
+            ],
+            "mean": 1018500,
+            "ci95": [
+              975517.3346375811,
+              1061482.6653624189
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              634379,
+              609664,
+              629376,
+              672417
+            ],
+            "mean": 636459,
+            "ci95": [
+              594706.9996509114,
+              678211.0003490886
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_wall_ns": {
+            "n": 4,
+            "values": [
+              656000,
+              617000,
+              627000,
+              719000
+            ],
+            "mean": 654750,
+            "ci95": [
+              581687.9011941788,
+              727812.0988058212
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_cpu_ns": {
+            "n": 4,
+            "values": [
+              2000,
+              3000,
+              2000,
+              2000
+            ],
+            "mean": 2250,
+            "ci95": [
+              1454.3884236789343,
+              3045.6115763210655
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              2541,
+              2291,
+              2543,
+              2875
+            ],
+            "mean": 2562.5,
+            "ci95": [
+              2181.2578534031213,
+              2943.7421465968787
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_wall_ns": {
+            "n": 4,
+            "values": [
+              3000,
+              2000,
+              4000,
+              3000
+            ],
+            "mean": 3000,
+            "ci95": [
+              1700.7717363746626,
+              4299.228263625338
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_wall_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_wall_ns": {
+            "n": 4,
+            "values": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "mean": 0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_cpu_ns": {
+            "n": 4,
+            "values": [
+              207000,
+              190000,
+              212000,
+              249000
+            ],
+            "mean": 214500,
+            "ci95": [
+              174953.4892051246,
+              254046.5107948754
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              190332,
+              170000,
+              197459,
+              210166
+            ],
+            "mean": 191989.25,
+            "ci95": [
+              165258.8164555367,
+              218719.6835444633
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_wall_ns": {
+            "n": 4,
+            "values": [
+              197000,
+              178000,
+              206000,
+              217000
+            ],
+            "mean": 199500,
+            "ci95": [
+              173240.80004856034,
+              225759.19995143966
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_cpu_ns": {
+            "n": 4,
+            "values": [
+              5395000,
+              5158000,
+              5469000,
+              5714000
+            ],
+            "mean": 5434000,
+            "ci95": [
+              5069611.056142245,
+              5798388.943857755
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "drain_cpu_ns": {
+            "n": 4,
+            "values": [
+              24000,
+              21000,
+              24000,
+              26000
+            ],
+            "mean": 23750,
+            "ci95": [
+              20469.60943386408,
+              27030.39056613592
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_cpu_ns": {
+            "n": 4,
+            "values": [
+              43965000.0,
+              42757000.0,
+              41908000.0,
+              41453000.0
+            ],
+            "mean": 42520750.0,
+            "ci95": [
+              40763853.05781794,
+              44277646.94218206
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_peak_rss": {
+            "n": 4,
+            "values": [
+              34258944,
+              33751040,
+              34095104,
+              34390016
+            ],
+            "mean": 34123776,
+            "ci95": [
+              33684233.10405707,
+              34563318.89594293
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_instructions": {
+            "n": 4,
+            "values": [
+              11010090.0,
+              10968173.0,
+              11017818.0,
+              11037183.0625
+            ],
+            "mean": 11008316.015625,
+            "ci95": [
+              10962031.723757721,
+              11054600.307492279
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_instructions": {
+            "n": 4,
+            "values": [
+              30808570.0,
+              30829503.0,
+              30790325.0,
+              30863560.0
+            ],
+            "mean": 30822989.5,
+            "ci95": [
+              30772979.48277284,
+              30872999.51722716
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_instructions": {
+            "n": 4,
+            "values": [
+              6980316.0,
+              6997846.0,
+              7056240.0,
+              7083581.0
+            ],
+            "mean": 7029495.75,
+            "ci95": [
+              6952299.155041572,
+              7106692.344958428
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_instructions": {
+            "n": 4,
+            "values": [
+              1059.0,
+              1060.0,
+              1060.0,
+              1060.0625
+            ],
+            "mean": 1059.765625,
+            "ci95": [
+              1058.9520862268175,
+              1060.5791637731825
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_instructions": {
+            "n": 4,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_instructions": {
+            "n": 4,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_instructions": {
+            "n": 4,
+            "values": [
+              1851007.0,
+              1831692.0,
+              1894849.0,
+              1829569.0625
+            ],
+            "mean": 1851779.265625,
+            "ci95": [
+              1803581.6637588432,
+              1899976.8674911568
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_main_instructions": {
+            "n": 4,
+            "values": [
+              60755043,
+              60732220,
+              60864326,
+              60918960
+            ],
+            "mean": 60817637.25,
+            "ci95": [
+              60676324.79063669,
+              60958949.70936331
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_instructions": {
+            "n": 4,
+            "values": [
+              65643403,
+              65579525,
+              65808575,
+              65942541
+            ],
+            "mean": 65743511,
+            "ci95": [
+              65482435.15391025,
+              66004586.84608975
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "sum_phase_instructions": {
+            "n": 4,
+            "values": [
+              50651042.0,
+              50628274.0,
+              50760292.0,
+              50814953.1875
+            ],
+            "mean": 50713640.296875,
+            "ci95": [
+              50572368.60954393,
+              50854911.98420607
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          }
+        }
+      },
+      "comparisons": {
+        "N-R": {
+          "setup_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                15000,
+                80000,
+                7000,
+                105000
+              ],
+              "mean": 51750,
+              "ci95": [
+                -25040.600484196882,
+                128540.60048419688
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.00905250452625217,
+                0.0541271989174561,
+                0.004204204204204309,
+                0.06696428571428581
+              ],
+              "mean": 0.0335870483405496,
+              "ci95": [
+                -0.01674218650058485,
+                0.08391628318168404
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "setup_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                22584,
+                71875,
+                36419,
+                80833
+              ],
+              "mean": 52927.75,
+              "ci95": [
+                8573.009947876373,
+                97282.49005212363
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.015249588442076023,
+                0.05466299077859116,
+                0.025056812826248054,
+                0.058170646754712285
+              ],
+              "mean": 0.03828500970040688,
+              "ci95": [
+                0.00428973143312323,
+                0.07228028796769054
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "setup_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                33000,
+                278000,
+                -87000,
+                266000
+              ],
+              "mean": 122500,
+              "ci95": [
+                -163142.6541964577,
+                408142.6541964577
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.017304667016255992,
+                0.1721362229102168,
+                -0.04407294832826747,
+                0.1527857553130385
+              ],
+              "mean": 0.07453842422781096,
+              "ci95": [
+                -0.09233108697539832,
+                0.24140793543102024
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                106000,
+                -69000,
+                -163000,
+                217000
+              ],
+              "mean": 22750,
+              "ci95": [
+                -249134.66266610142,
+                294634.6626661014
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.05421994884910486,
+                -0.034074074074074034,
+                -0.07124125874125875,
+                0.10621634850709749
+              ],
+              "mean": 0.013780241135217391,
+              "ci95": [
+                -0.11515955621251323,
+                0.142720038482948
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                81952,
+                -59124,
+                -162747,
+                173467
+              ],
+              "mean": 8387,
+              "ci95": [
+                -228535.7375891989,
+                245309.7375891989
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.04253461724709395,
+                -0.029730452745254654,
+                -0.07277674678591395,
+                0.08630937572767428
+              ],
+              "mean": 0.006584198360899907,
+              "ci95": [
+                -0.10692348702657371,
+                0.12009188374837353
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                84000,
+                -72000,
+                -197000,
+                221000
+              ],
+              "mean": 9000,
+              "ci95": [
+                -280885.1657718412,
+                298885.1657718412
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.04336602994321126,
+                -0.0359281437125748,
+                -0.08587619877942454,
+                0.10967741935483866
+              ],
+              "mean": 0.007809776701512644,
+              "ci95": [
+                -0.1294767035244004,
+                0.1450962569274257
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -49000,
+                -1000,
+                -83000,
+                36000
+              ],
+              "mean": -24250,
+              "ci95": [
+                -107617.28752496002,
+                59117.28752496002
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.04644549763033179,
+                -0.0009950248756218638,
+                -0.07628676470588236,
+                0.035190615835777095
+              ],
+              "mean": -0.02213416784401473,
+              "ci95": [
+                -0.10039333459482781,
+                0.056124998906798354
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -30416,
+                -12212,
+                -38376,
+                36251
+              ],
+              "mean": -11188.25,
+              "ci95": [
+                -64444.0160930593,
+                42067.5160930593
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.04575245000338446,
+                -0.019637355357016495,
+                -0.057470438126729695,
+                0.05698355460681648
+              ],
+              "mean": -0.016469172220078543,
+              "ci95": [
+                -0.09835124714823795,
+                0.06541290270808087
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -17000,
+                -29000,
+                -58000,
+                65000
+              ],
+              "mean": -9750,
+              "ci95": [
+                -93642.07543911108,
+                74142.07543911108
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.025260029717682042,
+                -0.04489164086687303,
+                -0.08467153284671536,
+                0.09938837920489307
+              ],
+              "mean": -0.013858706056594339,
+              "ci95": [
+                -0.14026631185131755,
+                0.11254889973812887
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1000,
+                2000,
+                0,
+                0
+              ],
+              "mean": 250,
+              "ci95": [
+                -1752.2452253362749,
+                2252.245225336275
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.33333333333333337,
+                2.0,
+                0.0,
+                0.0
+              ],
+              "mean": 0.41666666666666663,
+              "ci95": [
+                -1.2814665893078572,
+                2.11479992264119
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                250,
+                -126,
+                210,
+                750
+              ],
+              "mean": 271,
+              "ci95": [
+                -303.6144535326754,
+                845.6144535326754
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.10912265386294195,
+                -0.05213074058750522,
+                0.09001285897985434,
+                0.3529411764705883
+              ],
+              "mean": 0.12498648718146985,
+              "ci95": [
+                -0.14255465979030738,
+                0.3925276341532471
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                1000,
+                0,
+                1000,
+                0
+              ],
+              "mean": 500,
+              "ci95": [
+                -418.6931155186994,
+                1418.6931155186994
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.5,
+                0.0,
+                0.33333333333333326,
+                0.0
+              ],
+              "mean": 0.20833333333333331,
+              "ci95": [
+                -0.1894724548271995,
+                0.6061391214938661
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "undo_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mean": 0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "undo_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mean": 0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "undo_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mean": 0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "redo_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mean": 0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "redo_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mean": 0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "redo_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "mean": 0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "teardown_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -8000,
+                -10000,
+                -31000,
+                24000
+              ],
+              "mean": -6250,
+              "ci95": [
+                -42357.67824597176,
+                29857.678245971758
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.037209302325581395,
+                -0.050000000000000044,
+                -0.12757201646090532,
+                0.10666666666666669
+              ],
+              "mean": -0.02702866302995502,
+              "ci95": [
+                -0.18243378366665106,
+                0.12837645760674102
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "teardown_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -8335,
+                -11250,
+                -26582,
+                5790
+              ],
+              "mean": -10094.25,
+              "ci95": [
+                -31215.922135213452,
+                11027.422135213452
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.04195462759290669,
+                -0.06206896551724139,
+                -0.1186479260492499,
+                0.028330136610952295
+              ],
+              "mean": -0.04858534563711142,
+              "ci95": [
+                -0.14515974943373783,
+                0.047989058159515
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "teardown_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -10000,
+                -12000,
+                -28000,
+                1000
+              ],
+              "mean": -12250,
+              "ci95": [
+                -31272.716186575424,
+                6772.716186575424
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.048309178743961345,
+                -0.06315789473684208,
+                -0.11965811965811968,
+                0.004629629629629539
+              ],
+              "mean": -0.05662389087732339,
+              "ci95": [
+                -0.13795358470297014,
+                0.02470580294832335
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "case_process_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                62000,
+                -4000,
+                -301000,
+                392000
+              ],
+              "mean": 37250,
+              "ci95": [
+                -415223.6137062362,
+                489723.6137062362
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.011625726607912945,
+                -0.0007748934521503159,
+                -0.05216637781629119,
+                0.0736565201052235
+              ],
+              "mean": 0.008085243861173735,
+              "ci95": [
+                -0.07419236602128075,
+                0.09036285374362822
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "drain_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                2000,
+                0,
+                -2000,
+                2000
+              ],
+              "mean": 500,
+              "ci95": [
+                -2546.9603616581558,
+                3546.9603616581558
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.09090909090909083,
+                0.0,
+                -0.07692307692307687,
+                0.08333333333333326
+              ],
+              "mean": 0.024329836829836804,
+              "ci95": [
+                -0.10149524956482855,
+                0.15015492322450216
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "whole_child_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                2952000.0000000075,
+                2550000.0000000075,
+                -1580000.0,
+                -2029999.9999999925
+              ],
+              "mean": 473000.0000000056,
+              "ci95": [
+                -3730880.6717726365,
+                4676880.671772648
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.07197717796796166,
+                0.0634217922252347,
+                -0.03633186166298752,
+                -0.04668491134466324
+              ],
+              "mean": 0.0130955492963864,
+              "ci95": [
+                -0.08761161077301759,
+                0.11380270936579039
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "whole_child_peak_rss": {
+            "difference": {
+              "n": 4,
+              "values": [
+                655360,
+                -163840,
+                65536,
+                344064
+              ],
+              "mean": 225280,
+              "ci95": [
+                -338060.16513057554,
+                788620.1651305755
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.019502681618722484,
+                -0.004830917874396157,
+                0.001925854597977894,
+                0.010105871029836289
+              ],
+              "mean": 0.0066758723430351274,
+              "ci95": [
+                -0.010044867744491173,
+                0.023396612430561427
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "setup_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -39469.0,
+                -267888.0,
+                115232.0,
+                22461.0625
+              ],
+              "mean": -42415.984375,
+              "ci95": [
+                -302112.5610574265,
+                217280.5923074265
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.003571997760272616,
+                -0.023841807195599918,
+                0.010569235592363224,
+                0.0020391856008712406
+              ],
+              "mean": -0.0037013459406595173,
+              "ci95": [
+                -0.026983612673796085,
+                0.01958092079247705
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                345936.0,
+                369666.0,
+                269782.0,
+                307219.0
+              ],
+              "mean": 323150.75,
+              "ci95": [
+                253276.42139653963,
+                393025.07860346034
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.011356076431210838,
+                0.012136177879087162,
+                0.00883935780565892,
+                0.010054181552693109
+              ],
+              "mean": 0.010596448417162507,
+              "ci95": [
+                0.008285205268101805,
+                0.01290769156622321
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1246.0,
+                -12425.0,
+                -122765.0,
+                -52468.0
+              ],
+              "mean": -47226.0,
+              "ci95": [
+                -134665.55385759313,
+                40213.55385759313
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.0001784700902176528,
+                -0.0017723993837043261,
+                -0.017100559200056265,
+                -0.007352527988527036
+              ],
+              "mean": -0.00660098916562632,
+              "ci95": [
+                -0.018766991071644992,
+                0.0055650127403923545
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0625
+              ],
+              "mean": -0.234375,
+              "ci95": [
+                -1.0479137731825419,
+                0.579163773182542
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.0009433962264151496,
+                0.0,
+                0.0,
+                5.89622641509191e-05
+              ],
+              "mean": -0.00022110849056605764,
+              "ci95": [
+                -0.0009885978992288697,
+                0.0005463809180967543
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "undo_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "redo_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": null
+          },
+          "teardown_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                26335.0,
+                13096.0,
+                76162.0,
+                17539.0625
+              ],
+              "mean": 33283.015625,
+              "ci95": [
+                -13038.342910414904,
+                79604.37416041491
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.014432730923694681,
+                0.007201159575848548,
+                0.04187746434653139,
+                0.009679234063453723
+              ],
+              "mean": 0.018297647227382086,
+              "ci95": [
+                -0.00716779741717102,
+                0.043763091871935195
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "case_main_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                331574,
+                102356,
+                334932,
+                259219
+              ],
+              "mean": 257020.25,
+              "ci95": [
+                83792.70987661454,
+                430247.7901233855
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.005487503539394645,
+                0.0016882109450220284,
+                0.00553337771727902,
+                0.004273328499704521
+              ],
+              "mean": 0.0042456051753500534,
+              "ci95": [
+                0.0013782075883236565,
+                0.00711300276237645
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "case_process_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                453674,
+                -17702,
+                150522,
+                248509
+              ],
+              "mean": 208750.75,
+              "ci95": [
+                -104467.76477474236,
+                521969.26477474236
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.006959286485145544,
+                -0.00026985896827624867,
+                0.002292513912954375,
+                0.003782824595086609
+              ],
+              "mean": 0.0031911915062275698,
+              "ci95": [
+                -0.0016120064729371183,
+                0.007994389485392259
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "sum_phase_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                331555.0,
+                102449.0,
+                338411.0,
+                294751.1875
+              ],
+              "mean": 266791.546875,
+              "ci95": [
+                89805.69336413292,
+                443777.4003858671
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.00658899801581847,
+                0.002027656154055979,
+                0.0067115901526957344,
+                0.005834323217868365
+              ],
+              "mean": 0.005290641885109637,
+              "ci95": [
+                0.0017746162263182945,
+                0.00880666754390098
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          }
+        }
+      }
+    },
+    "7": {
+      "variants": {
+        "R": {
+          "setup_cpu_ns": {
+            "n": 4,
+            "values": [
+              2801000,
+              1568000,
+              1750000,
+              1662000
+            ],
+            "mean": 1945250,
+            "ci95": [
+              1029787.7526730914,
+              2860712.2473269086
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              2539458,
+              1389334,
+              1569166,
+              1479958
+            ],
+            "mean": 1744479,
+            "ci95": [
+              893099.9684762825,
+              2595858.0315237176
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_wall_ns": {
+            "n": 4,
+            "values": [
+              23012000,
+              1859000,
+              1978000,
+              1867000
+            ],
+            "mean": 7179000,
+            "ci95": [
+              -9617113.106063336,
+              23975113.106063336
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_cpu_ns": {
+            "n": 4,
+            "values": [
+              2742000,
+              1480000,
+              1470000,
+              1502000
+            ],
+            "mean": 1798500,
+            "ci95": [
+              797394.6700187753,
+              2799605.3299812246
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              2679831,
+              1473500,
+              1460254,
+              1500246
+            ],
+            "mean": 1778457.75,
+            "ci95": [
+              821900.8330620748,
+              2735014.666937925
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_wall_ns": {
+            "n": 4,
+            "values": [
+              2844000,
+              1470000,
+              1458000,
+              1502000
+            ],
+            "mean": 1818500,
+            "ci95": [
+              730232.4836566797,
+              2906767.5163433203
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_cpu_ns": {
+            "n": 4,
+            "values": [
+              963000,
+              561000,
+              520000,
+              548000
+            ],
+            "mean": 648000,
+            "ci95": [
+              312736.1667881507,
+              983263.8332118493
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              939414,
+              544956,
+              503125,
+              527379
+            ],
+            "mean": 628718.5,
+            "ci95": [
+              298000.1156762734,
+              959436.8843237266
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_wall_ns": {
+            "n": 4,
+            "values": [
+              1042000,
+              542000,
+              499000,
+              530000
+            ],
+            "mean": 653250,
+            "ci95": [
+              239851.62344203872,
+              1066648.3765579613
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_cpu_ns": {
+            "n": 4,
+            "values": [
+              185000,
+              89000,
+              96000,
+              87000
+            ],
+            "mean": 114250,
+            "ci95": [
+              38946.57965358315,
+              189553.42034641685
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              176251,
+              89167,
+              96041,
+              86876
+            ],
+            "mean": 112083.75,
+            "ci95": [
+              43732.64948403432,
+              180434.85051596566
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_wall_ns": {
+            "n": 4,
+            "values": [
+              176000,
+              89000,
+              96000,
+              87000
+            ],
+            "mean": 112000,
+            "ci95": [
+              43830.74222935231,
+              180169.2577706477
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_cpu_ns": {
+            "n": 4,
+            "values": [
+              229000,
+              159000,
+              164000,
+              162000
+            ],
+            "mean": 178500,
+            "ci95": [
+              124829.13360833956,
+              232170.86639166044
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              174124,
+              127375,
+              127999,
+              127167
+            ],
+            "mean": 139166.25,
+            "ci95": [
+              102078.26262895297,
+              176254.23737104703
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_wall_ns": {
+            "n": 4,
+            "values": [
+              173000,
+              127000,
+              129000,
+              126000
+            ],
+            "mean": 138750,
+            "ci95": [
+              102362.90946933712,
+              175137.09053066288
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_cpu_ns": {
+            "n": 4,
+            "values": [
+              133000,
+              103000,
+              111000,
+              109000
+            ],
+            "mean": 114000,
+            "ci95": [
+              93131.3039962064,
+              134868.6960037936
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              121166,
+              90292,
+              95877,
+              96792
+            ],
+            "mean": 101031.75,
+            "ci95": [
+              79189.30811233539,
+              122874.19188766461
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_wall_ns": {
+            "n": 4,
+            "values": [
+              121000,
+              89000,
+              96000,
+              98000
+            ],
+            "mean": 101000,
+            "ci95": [
+              78913.11951836926,
+              123086.88048163074
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_cpu_ns": {
+            "n": 4,
+            "values": [
+              583000,
+              375000,
+              379000,
+              374000
+            ],
+            "mean": 427750,
+            "ci95": [
+              263022.53462187265,
+              592477.4653781273
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              428209,
+              225207,
+              231290,
+              220251
+            ],
+            "mean": 276239.25,
+            "ci95": [
+              114867.42511281106,
+              437611.07488718897
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_wall_ns": {
+            "n": 4,
+            "values": [
+              3826000,
+              305000,
+              313000,
+              299000
+            ],
+            "mean": 1185750,
+            "ci95": [
+              -1615082.818550752,
+              3986582.818550752
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_cpu_ns": {
+            "n": 4,
+            "values": [
+              8323000,
+              4758000,
+              4915000,
+              4893000
+            ],
+            "mean": 5722250,
+            "ci95": [
+              2961124.489653023,
+              8483375.510346977
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "drain_cpu_ns": {
+            "n": 4,
+            "values": [
+              28000,
+              24000,
+              25000,
+              23000
+            ],
+            "mean": 25000,
+            "ci95": [
+              21562.565118141094,
+              28437.434881858906
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_cpu_ns": {
+            "n": 4,
+            "values": [
+              44475000.0,
+              40527000.0,
+              42110999.99999999,
+              42262000.0
+            ],
+            "mean": 42343750.0,
+            "ci95": [
+              39760986.369676545,
+              44926513.630323455
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_peak_rss": {
+            "n": 4,
+            "values": [
+              34717696,
+              33849344,
+              33816576,
+              33783808
+            ],
+            "mean": 34041856,
+            "ci95": [
+              33323651.57958355,
+              34760060.420416445
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_instructions": {
+            "n": 4,
+            "values": [
+              11390782.0,
+              11327062.0,
+              11468612.0,
+              11340655.0
+            ],
+            "mean": 11381777.75,
+            "ci95": [
+              11279864.25536341,
+              11483691.24463659
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_instructions": {
+            "n": 4,
+            "values": [
+              23571360.0,
+              23582628.0,
+              23582622.0,
+              23567776.0
+            ],
+            "mean": 23576096.5,
+            "ci95": [
+              23563877.26698718,
+              23588315.73301282
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_instructions": {
+            "n": 4,
+            "values": [
+              6909160.0,
+              6912712.0,
+              6908338.0,
+              6915477.0
+            ],
+            "mean": 6911421.75,
+            "ci95": [
+              6906165.506549556,
+              6916677.993450444
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_instructions": {
+            "n": 4,
+            "values": [
+              835289.0,
+              835519.0,
+              845763.0,
+              829912.0
+            ],
+            "mean": 836620.75,
+            "ci95": [
+              826082.7563767537,
+              847158.7436232463
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_instructions": {
+            "n": 4,
+            "values": [
+              1052552.0,
+              1064058.0,
+              1068461.0,
+              1076329.0
+            ],
+            "mean": 1065350.0,
+            "ci95": [
+              1049552.890091198,
+              1081147.109908802
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_instructions": {
+            "n": 4,
+            "values": [
+              1012972.0,
+              1012516.0,
+              1013713.0,
+              1051121.0
+            ],
+            "mean": 1022580.5,
+            "ci95": [
+              992294.1246397328,
+              1052866.8753602672
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_instructions": {
+            "n": 4,
+            "values": [
+              2000180.0,
+              2002604.0,
+              1991233.0,
+              1965660.0
+            ],
+            "mean": 1989919.25,
+            "ci95": [
+              1963033.9659840497,
+              2016804.5340159503
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_main_instructions": {
+            "n": 4,
+            "values": [
+              58039878,
+              57985639,
+              58130572,
+              57995440
+            ],
+            "mean": 58037882.25,
+            "ci95": [
+              57932628.42320179,
+              58143136.07679821
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_instructions": {
+            "n": 4,
+            "values": [
+              61035531,
+              60989627,
+              61084165,
+              61006628
+            ],
+            "mean": 61028987.75,
+            "ci95": [
+              60963145.13491164,
+              61094830.36508836
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "sum_phase_instructions": {
+            "n": 4,
+            "values": [
+              46772295.0,
+              46737099.0,
+              46878742.0,
+              46746930.0
+            ],
+            "mean": 46783766.5,
+            "ci95": [
+              46680289.17069884,
+              46887243.82930116
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          }
+        },
+        "N": {
+          "setup_cpu_ns": {
+            "n": 4,
+            "values": [
+              1666000,
+              1556000,
+              1670000,
+              1749000
+            ],
+            "mean": 1660250,
+            "ci95": [
+              1534041.6597600468,
+              1786458.3402399532
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              1474084,
+              1366542,
+              1489541,
+              1570792
+            ],
+            "mean": 1475239.75,
+            "ci95": [
+              1341629.756916613,
+              1608849.743083387
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_wall_ns": {
+            "n": 4,
+            "values": [
+              1897000,
+              1786000,
+              1817000,
+              2076000
+            ],
+            "mean": 1894000,
+            "ci95": [
+              1687087.956183124,
+              2100912.043816876
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_cpu_ns": {
+            "n": 4,
+            "values": [
+              1546000,
+              1461000,
+              1543000,
+              1584000
+            ],
+            "mean": 1533500,
+            "ci95": [
+              1451057.8495722108,
+              1615942.1504277892
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              1541835,
+              1453131,
+              1541333,
+              1588672
+            ],
+            "mean": 1531242.75,
+            "ci95": [
+              1441165.9644990216,
+              1621319.5355009784
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_wall_ns": {
+            "n": 4,
+            "values": [
+              1540000,
+              1450000,
+              1539000,
+              1596000
+            ],
+            "mean": 1531250,
+            "ci95": [
+              1435200.4260787105,
+              1627299.5739212895
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_cpu_ns": {
+            "n": 4,
+            "values": [
+              560000,
+              506000,
+              554000,
+              568000
+            ],
+            "mean": 547000,
+            "ci95": [
+              502559.55586660496,
+              591440.444133395
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              560624,
+              496625,
+              533502,
+              548828
+            ],
+            "mean": 534894.75,
+            "ci95": [
+              490619.4289576225,
+              579170.0710423775
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_wall_ns": {
+            "n": 4,
+            "values": [
+              555000,
+              492000,
+              532000,
+              553000
+            ],
+            "mean": 533000,
+            "ci95": [
+              486462.956626718,
+              579537.0433732821
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_cpu_ns": {
+            "n": 4,
+            "values": [
+              87000,
+              96000,
+              104000,
+              93000
+            ],
+            "mean": 95000,
+            "ci95": [
+              83748.35318385712,
+              106251.64681614288
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              88874,
+              95167,
+              104708,
+              94459
+            ],
+            "mean": 95802,
+            "ci95": [
+              85346.60659663624,
+              106257.39340336376
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_wall_ns": {
+            "n": 4,
+            "values": [
+              88000,
+              96000,
+              104000,
+              93000
+            ],
+            "mean": 95250,
+            "ci95": [
+              84585.63873419646,
+              105914.36126580354
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_cpu_ns": {
+            "n": 4,
+            "values": [
+              179000,
+              148000,
+              163000,
+              168000
+            ],
+            "mean": 164500,
+            "ci95": [
+              144019.1179601751,
+              184980.8820398249
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              146583,
+              119709,
+              126001,
+              127792
+            ],
+            "mean": 130021.25,
+            "ci95": [
+              111606.87139959585,
+              148435.62860040416
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_wall_ns": {
+            "n": 4,
+            "values": [
+              148000,
+              121000,
+              125000,
+              128000
+            ],
+            "mean": 130500,
+            "ci95": [
+              111383.23462148657,
+              149616.76537851343
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_cpu_ns": {
+            "n": 4,
+            "values": [
+              128000,
+              109000,
+              116000,
+              111000
+            ],
+            "mean": 116000,
+            "ci95": [
+              102435.65870271184,
+              129564.34129728816
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              111667,
+              95625,
+              100000,
+              95084
+            ],
+            "mean": 100594,
+            "ci95": [
+              88336.58086266943,
+              112851.41913733057
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_wall_ns": {
+            "n": 4,
+            "values": [
+              112000,
+              96000,
+              100000,
+              94000
+            ],
+            "mean": 100500,
+            "ci95": [
+              87671.14880833893,
+              113328.85119166107
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_cpu_ns": {
+            "n": 4,
+            "values": [
+              382000,
+              375000,
+              378000,
+              361000
+            ],
+            "mean": 374000,
+            "ci95": [
+              359474.1864212236,
+              388525.8135787764
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_thread_cpu_ns": {
+            "n": 4,
+            "values": [
+              216625,
+              230167,
+              213041,
+              215915
+            ],
+            "mean": 218937,
+            "ci95": [
+              206771.56239268635,
+              231102.43760731365
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_wall_ns": {
+            "n": 4,
+            "values": [
+              308000,
+              304000,
+              306000,
+              293000
+            ],
+            "mean": 302750,
+            "ci95": [
+              292085.63873419643,
+              313414.36126580357
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_cpu_ns": {
+            "n": 4,
+            "values": [
+              5028000,
+              4690000,
+              4974000,
+              5091000
+            ],
+            "mean": 4945750,
+            "ci95": [
+              4663981.040382956,
+              5227518.959617044
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "drain_cpu_ns": {
+            "n": 4,
+            "values": [
+              24000,
+              24000,
+              22000,
+              22000
+            ],
+            "mean": 23000,
+            "ci95": [
+              21162.6137689626,
+              24837.3862310374
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_cpu_ns": {
+            "n": 4,
+            "values": [
+              44559000.0,
+              40726000.0,
+              42242000.0,
+              45620999.99999999
+            ],
+            "mean": 43287000.0,
+            "ci95": [
+              39762726.765534066,
+              46811273.234465934
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "whole_child_peak_rss": {
+            "n": 4,
+            "values": [
+              33898496,
+              33996800,
+              34422784,
+              34406400
+            ],
+            "mean": 34181120,
+            "ci95": [
+              33747284.01105437,
+              34614955.98894563
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "setup_instructions": {
+            "n": 4,
+            "values": [
+              11249255.5,
+              11267699.0,
+              11483618.03125,
+              11247074.0
+            ],
+            "mean": 11311911.6328125,
+            "ci95": [
+              11129168.922195265,
+              11494654.343429735
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "write_instructions": {
+            "n": 4,
+            "values": [
+              23379494.0,
+              23384916.0,
+              23393344.5,
+              23473145.0
+            ],
+            "mean": 23407724.875,
+            "ci95": [
+              23337736.28519892,
+              23477713.46480108
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "read_instructions": {
+            "n": 4,
+            "values": [
+              6904935.0,
+              6915020.0,
+              6975157.5,
+              6909079.0
+            ],
+            "mean": 6926047.875,
+            "ci95": [
+              6873536.984542319,
+              6978558.765457681
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "finish_instructions": {
+            "n": 4,
+            "values": [
+              844141.5,
+              844371.0,
+              861056.03125,
+              840737.0
+            ],
+            "mean": 847576.3828125,
+            "ci95": [
+              833034.5712312069,
+              862118.1943937931
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "undo_instructions": {
+            "n": 4,
+            "values": [
+              1082995.5,
+              1041116.0,
+              1052459.03125,
+              1060347.0
+            ],
+            "mean": 1059229.3828125,
+            "ci95": [
+              1031062.6400526019,
+              1087396.125572398
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "redo_instructions": {
+            "n": 4,
+            "values": [
+              1012232.5,
+              1011258.0,
+              1012980.03125,
+              1013070.0
+            ],
+            "mean": 1012385.1328125,
+            "ci95": [
+              1011048.5456607454,
+              1013721.7199642546
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "teardown_instructions": {
+            "n": 4,
+            "values": [
+              2115723.5,
+              2110483.0,
+              1905577.03125,
+              2039992.0
+            ],
+            "mean": 2042943.8828125,
+            "ci95": [
+              1887207.7299875326,
+              2198680.035637467
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_main_instructions": {
+            "n": 4,
+            "values": [
+              57846421,
+              57823305,
+              57941826,
+              57831899
+            ],
+            "mean": 57860862.75,
+            "ci95": [
+              57773644.48449765,
+              57948081.01550235
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "case_process_instructions": {
+            "n": 4,
+            "values": [
+              60673099,
+              60682924,
+              60933849,
+              60892400
+            ],
+            "mean": 60795568,
+            "ci95": [
+              60577805.95203984,
+              61013330.04796016
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          },
+          "sum_phase_instructions": {
+            "n": 4,
+            "values": [
+              46588777.5,
+              46574863.0,
+              46684192.15625,
+              46583444.0
+            ],
+            "mean": 46607819.1640625,
+            "ci95": [
+              46526289.73703646,
+              46689348.59108854
+            ],
+            "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+          }
+        }
+      },
+      "comparisons": {
+        "N-R": {
+          "setup_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1135000,
+                -12000,
+                -80000,
+                87000
+              ],
+              "mean": -285000,
+              "ci95": [
+                -1193270.2126975544,
+                623270.2126975545
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.40521242413423775,
+                -0.007653061224489832,
+                -0.04571428571428571,
+                0.05234657039711199
+              ],
+              "mean": -0.10155830016897532,
+              "ci95": [
+                -0.4300206837327624,
+                0.22690408339481177
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "setup_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1065374,
+                -22792,
+                -79625,
+                90834
+              ],
+              "mean": -269239.25,
+              "ci95": [
+                -1121285.9316118453,
+                582807.4316118454
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.4195281040284974,
+                -0.016404982531198375,
+                -0.050743515982375365,
+                0.06137606607755086
+              ],
+              "mean": -0.10632513411613007,
+              "ci95": [
+                -0.446855244885479,
+                0.23420497665321885
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "setup_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -21115000,
+                -73000,
+                -161000,
+                209000
+              ],
+              "mean": -5285000,
+              "ci95": [
+                -22079586.003219757,
+                11509586.003219757
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.9175647488266991,
+                -0.03926842388380847,
+                -0.08139534883720934,
+                0.11194429566148911
+              ],
+              "mean": -0.23157105647155696,
+              "ci95": [
+                -0.9711750405053711,
+                0.5080329275622572
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1196000,
+                -19000,
+                73000,
+                82000
+              ],
+              "mean": -265000,
+              "ci95": [
+                -1255285.5554181607,
+                725285.5554181607
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.43617797228300514,
+                -0.012837837837837873,
+                0.04965986394557831,
+                0.05459387483355527
+              ],
+              "mean": -0.08619051783542736,
+              "ci95": [
+                -0.46066070146829136,
+                0.28827966579743663
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1137996,
+                -20369,
+                81079,
+                88426
+              ],
+              "mean": -247215,
+              "ci95": [
+                -1195465.5081861326,
+                701035.5081861328
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.4246521515722447,
+                -0.01382354937224295,
+                0.055523902006089365,
+                0.05894100034261052
+              ],
+              "mean": -0.08100269964894694,
+              "ci95": [
+                -0.44943384564873334,
+                0.28742844635083953
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -1304000,
+                -20000,
+                81000,
+                94000
+              ],
+              "mean": -287250,
+              "ci95": [
+                -1368877.1347619556,
+                794377.1347619556
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.45850914205344584,
+                -0.013605442176870763,
+                0.05555555555555558,
+                0.062583222370173
+              ],
+              "mean": -0.088493951576147,
+              "ci95": [
+                -0.4848055363181156,
+                0.30781763316582167
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -403000,
+                -55000,
+                34000,
+                20000
+              ],
+              "mean": -101000,
+              "ci95": [
+                -427344.3128855114,
+                225344.31288551138
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.4184839044652129,
+                -0.0980392156862745,
+                0.06538461538461537,
+                0.03649635036496357
+              ],
+              "mean": -0.10366053860047711,
+              "ci95": [
+                -0.456330502943879,
+                0.24900942574292476
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -378790,
+                -48331,
+                30377,
+                21449
+              ],
+              "mean": -93823.75,
+              "ci95": [
+                -401262.15636863257,
+                213614.65636863257
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.4032194538297279,
+                -0.08868789406851196,
+                0.060376645962732844,
+                0.04067094063282761
+              ],
+              "mean": -0.09771494032566985,
+              "ci95": [
+                -0.4384474260064462,
+                0.2430175453551065
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -487000,
+                -50000,
+                33000,
+                23000
+              ],
+              "mean": -120250,
+              "ci95": [
+                -513732.5461054279,
+                273232.5461054279
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.4673704414587332,
+                -0.09225092250922506,
+                0.06613226452905807,
+                0.04339622641509444
+              ],
+              "mean": -0.11252321825595143,
+              "ci95": [
+                -0.5050494840694065,
+                0.2800030475575037
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -98000,
+                7000,
+                8000,
+                6000
+              ],
+              "mean": -19250,
+              "ci95": [
+                -102799.31790701469,
+                64299.31790701469
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.5297297297297296,
+                0.0786516853932584,
+                0.08333333333333326,
+                0.06896551724137923
+              ],
+              "mean": -0.07469479844043969,
+              "ci95": [
+                -0.5574967527456394,
+                0.40810715586475993
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -87377,
+                6000,
+                8667,
+                7583
+              ],
+              "mean": -16281.75,
+              "ci95": [
+                -91720.81778624235,
+                59157.31778624235
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.4957532155845924,
+                0.06728946807675484,
+                0.09024270884309815,
+                0.0872853262120723
+              ],
+              "mean": -0.06273392811316678,
+              "ci95": [
+                -0.5223738365649363,
+                0.3969059803386028
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -88000,
+                7000,
+                8000,
+                6000
+              ],
+              "mean": -16750,
+              "ci95": [
+                -92344.26540403196,
+                58844.26540403196
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.5,
+                0.0786516853932584,
+                0.08333333333333326,
+                0.06896551724137923
+              ],
+              "mean": -0.06726236600800728,
+              "ci95": [
+                -0.5264158392160898,
+                0.3918911072000752
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "undo_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -50000,
+                -11000,
+                -1000,
+                6000
+              ],
+              "mean": -14000,
+              "ci95": [
+                -53769.96924690445,
+                25769.969246904453
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.21834061135371174,
+                -0.0691823899371069,
+                -0.0060975609756097615,
+                0.03703703703703698
+              ],
+              "mean": -0.06414588130734786,
+              "ci95": [
+                -0.24183398265877687,
+                0.11354222004408115
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "undo_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -27541,
+                -7666,
+                -1998,
+                625
+              ],
+              "mean": -9145,
+              "ci95": [
+                -29421.553277992974,
+                11131.553277992974
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.15816889113505317,
+                -0.060184494602551486,
+                -0.01560949694919489,
+                0.004914797077858246
+              ],
+              "mean": -0.057262021402235325,
+              "ci95": [
+                -0.17270935246223706,
+                0.0581853096577664
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "undo_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -25000,
+                -6000,
+                -4000,
+                2000
+              ],
+              "mean": -8250,
+              "ci95": [
+                -26823.739265559037,
+                10323.739265559037
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.1445086705202312,
+                -0.047244094488189003,
+                -0.03100775193798455,
+                0.015873015873015817
+              ],
+              "mean": -0.051721875268347234,
+              "ci95": [
+                -0.15896757754116214,
+                0.05552382700446766
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "redo_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -5000,
+                6000,
+                5000,
+                2000
+              ],
+              "mean": 2000,
+              "ci95": [
+                -5902.89700028462,
+                9902.89700028462
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.03759398496240607,
+                0.058252427184465994,
+                0.04504504504504503,
+                0.0183486238532109
+              ],
+              "mean": 0.021013027780078963,
+              "ci95": [
+                -0.04653554589773967,
+                0.0885616014578976
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "redo_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -9499,
+                5333,
+                4123,
+                -1708
+              ],
+              "mean": -437.75,
+              "ci95": [
+                -11222.979564438323,
+                10347.479564438323
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.07839657989865145,
+                0.059063925929207395,
+                0.04300301427871123,
+                -0.017646086453425913
+              ],
+              "mean": 0.001506068463960314,
+              "ci95": [
+                -0.09823092934373256,
+                0.10124306627165319
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "redo_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -9000,
+                7000,
+                4000,
+                -4000
+              ],
+              "mean": -500,
+              "ci95": [
+                -12156.908832136169,
+                11156.908832136169
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.07438016528925617,
+                0.0786516853932584,
+                0.04166666666666674,
+                -0.04081632653061229
+              ],
+              "mean": 0.0012804650600141687,
+              "ci95": [
+                -0.11166283807286877,
+                0.1142237681928971
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "teardown_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -201000,
+                0,
+                -1000,
+                -13000
+              ],
+              "mean": -53750,
+              "ci95": [
+                -210237.5813951049,
+                102737.5813951049
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.34476843910806176,
+                0.0,
+                -0.0026385224274406704,
+                -0.03475935828877008
+              ],
+              "mean": -0.09554157995606813,
+              "ci95": [
+                -0.36111807063368595,
+                0.17003491072154972
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "teardown_thread_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -211584,
+                4960,
+                -18249,
+                -4336
+              ],
+              "mean": -57302.25,
+              "ci95": [
+                -221668.81388212056,
+                107064.31388212056
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.49411385561723364,
+                0.02202418219682345,
+                -0.07890094686324522,
+                -0.019686630253665127
+              ],
+              "mean": -0.14266931263433014,
+              "ci95": [
+                -0.5212649176159401,
+                0.2359262923472798
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "teardown_wall_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -3518000,
+                -1000,
+                -7000,
+                -6000
+              ],
+              "mean": -883000,
+              "ci95": [
+                -3678251.7915183334,
+                1912251.7915183334
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.9194981704129639,
+                -0.003278688524590123,
+                -0.022364217252396124,
+                -0.02006688963210701
+              ],
+              "mean": -0.2413019914555143,
+              "ci95": [
+                -0.9608703134039016,
+                0.4782663304928731
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "case_process_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -3295000,
+                -68000,
+                59000,
+                198000
+              ],
+              "mean": -776500,
+              "ci95": [
+                -3453749.701911388,
+                1900749.701911388
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.39589090472185506,
+                -0.01429171920975203,
+                0.01200406917599195,
+                0.040465971796443956
+              ],
+              "mean": -0.0894281457397928,
+              "ci95": [
+                -0.4164698383590016,
+                0.237613546879416
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "drain_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -4000,
+                0,
+                -3000,
+                -1000
+              ],
+              "mean": -2000,
+              "ci95": [
+                -4905.162715755272,
+                905.1627157552716
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.1428571428571429,
+                0.0,
+                -0.12,
+                -0.04347826086956519
+              ],
+              "mean": -0.07658385093167702,
+              "ci95": [
+                -0.18228618139286373,
+                0.029118479529509675
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "whole_child_cpu_ns": {
+            "difference": {
+              "n": 4,
+              "values": [
+                84000.0,
+                199000.0,
+                131000.00000000745,
+                3358999.9999999925
+              ],
+              "mean": 943250.0,
+              "ci95": [
+                -1620515.6462648096,
+                3507015.6462648096
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.0018887015177064814,
+                0.004910306709107415,
+                0.0031108261499372958,
+                0.07948038426955639
+              ],
+              "mean": 0.022347554661576896,
+              "ci95": [
+                -0.03829199676229546,
+                0.08298710608544925
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "whole_child_peak_rss": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -819200,
+                147456,
+                606208,
+                622592
+              ],
+              "mean": 139264,
+              "ci95": [
+                -936181.1724022971,
+                1214709.1724022971
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.023596035865974474,
+                0.004356243949661165,
+                0.017926356589147208,
+                0.018428709990300662
+              ],
+              "mean": 0.00427881866578364,
+              "ci95": [
+                -0.027057751330861093,
+                0.035615388662428374
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "setup_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -141526.5,
+                -59363.0,
+                15006.03125,
+                -93581.0
+              ],
+              "mean": -69866.1171875,
+              "ci95": [
+                -174658.37348327108,
+                34926.139108271076
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.01242465179300245,
+                -0.005240811783320365,
+                0.0013084435370209757,
+                -0.008251816142894719
+              ],
+              "mean": -0.00615220904554914,
+              "ci95": [
+                -0.015350335459827951,
+                0.003045917368729672
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "write_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -191866.0,
+                -197712.0,
+                -189277.5,
+                -94631.0
+              ],
+              "mean": -168371.625,
+              "ci95": [
+                -246797.99052987678,
+                -89945.25947012322
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.00813979337636861,
+                -0.008383798446890633,
+                -0.00802614314896788,
+                -0.004015270681459349
+              ],
+              "mean": -0.007141251413421618,
+              "ci95": [
+                -0.010465828806327135,
+                -0.0038166740205160996
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "read_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -4225.0,
+                2308.0,
+                66819.5,
+                -6398.0
+              ],
+              "mean": 14626.125,
+              "ci95": [
+                -41053.524699263806,
+                70305.7746992638
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.0006115070428243108,
+                0.00033387764454828606,
+                0.009672297446940314,
+                -0.0009251711776353533
+              ],
+              "mean": 0.002117374217757234,
+              "ci95": [
+                -0.005942114786270424,
+                0.010176863221784892
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "finish_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                8852.5,
+                8852.0,
+                15293.03125,
+                10825.0
+              ],
+              "mean": 10955.6328125,
+              "ci95": [
+                6122.352728454201,
+                15788.9128965458
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.010598128312476307,
+                0.010594612450465002,
+                0.018081934596335003,
+                0.013043551605471437
+              ],
+              "mean": 0.013079556741186937,
+              "ci95": [
+                0.007464431387846948,
+                0.018694682094526925
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "undo_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                30443.5,
+                -22942.0,
+                -16001.96875,
+                -15982.0
+              ],
+              "mean": -6120.6171875,
+              "ci95": [
+                -45257.17643972521,
+                33015.94206472521
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.028923511617478193,
+                -0.021560854765435677,
+                -0.014976652166059368,
+                -0.014848619706428035
+              ],
+              "mean": -0.005615653755111222,
+              "ci95": [
+                -0.042593243739876836,
+                0.03136193622965439
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "redo_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -739.5,
+                -1258.0,
+                -732.96875,
+                -38051.0
+              ],
+              "mean": -10195.3671875,
+              "ci95": [
+                -39747.64451722376,
+                19356.910142223758
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.0007300300501889012,
+                -0.001242449502032561,
+                -0.000723053517119765,
+                -0.036200399383134796
+              ],
+              "mean": -0.009723983113119006,
+              "ci95": [
+                -0.03781324042533047,
+                0.01836527419909246
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "teardown_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                115543.5,
+                107879.0,
+                -85655.96875,
+                74332.0
+              ],
+              "mean": 53024.6328125,
+              "ci95": [
+                -96820.72981128292,
+                202869.99543628292
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                0.05776655101040906,
+                0.05386936209055815,
+                -0.04301654741057426,
+                0.037815288503606936
+              ],
+              "mean": 0.026608663548499972,
+              "ci95": [
+                -0.048517844880728134,
+                0.10173517197772808
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "case_main_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -193457,
+                -162334,
+                -188746,
+                -163541
+              ],
+              "mean": -177019.5,
+              "ci95": [
+                -203085.7246952045,
+                -150953.2753047955
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.0033331737878566914,
+                -0.0027995552484987307,
+                -0.0032469317521940377,
+                -0.002819894115813293
+              ],
+              "mean": -0.003049888726090688,
+              "ci95": [
+                -0.003494901197289712,
+                -0.0026048762548916645
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "case_process_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -362432,
+                -306703,
+                -150316,
+                -114228
+              ],
+              "mean": -233419.75,
+              "ci95": [
+                -424206.237935026,
+                -42633.262064974
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.005938049428946601,
+                -0.005028773171542711,
+                -0.002460801420466341,
+                -0.0018723867183743081
+              ],
+              "mean": -0.0038250026848324903,
+              "ci95": [
+                -0.006952310714335745,
+                -0.0006976946553292358
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          },
+          "sum_phase_instructions": {
+            "difference": {
+              "n": 4,
+              "values": [
+                -183517.5,
+                -162236.0,
+                -194549.84375,
+                -163486.0
+              ],
+              "mean": -175947.3359375,
+              "ci95": [
+                -201050.46868492218,
+                -150844.20319007782
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            },
+            "fraction": {
+              "n": 4,
+              "values": [
+                -0.003923636845273415,
+                -0.0034712466856361424,
+                -0.004150065369714961,
+                -0.003497256397371973
+              ],
+              "mean": -0.003760551324499123,
+              "ci95": [
+                -0.004289370322943157,
+                -0.003231732326055089
+              ],
+              "qualification": "Student-t df3 exploratory mean interval; differences/ratios paired by block; not worst-case cap or formal gate"
+            }
+          }
+        }
+      }
+    }
+  },
+  "production_changed": false,
+  "formal_gate": false,
+  "strict_constructive_upper_bound": null,
+  "qualification": "N defers stable identity until actual consumption and advances the original sole overlay owner at the all-D cut; control complete isolated81. Four paired exploratory blocks, mode0 ordinary CPU, mode2 phase instruction observer. No theoretical whole bound or production qualification."
+}

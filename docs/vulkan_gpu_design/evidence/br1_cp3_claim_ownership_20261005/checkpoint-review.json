@@ -1,0 +1,33 @@
+{
+  "responsibility": "Original Ledger selected backing claim lookup and complete insertion/release/install lifecycle",
+  "equivalence": [
+    "Every selected registered source exists in backings, owns its original physical identity from the provider footprint and has that physical record classClaim bound to the owning slot cookie",
+    "Original slot.changes retains every selected logical allocation identity until class/handoff commit or cancellation finishes under the same Ledger mutex",
+    "Class/domain transitions and new physical aliases still reject any active physical claim; selected-key lookup only preserves the earlier no-op rejection and error priority",
+    "Handoff rekeys the stable registered node while the original target key index protects the unregistered identity; both disappear atomically under the same gate",
+    "The existing free-slot count equals the slot count only after every claim is cleared; cold detached target node storage is not an active claim"
+  ],
+  "migrated_consumers": [
+    "registerBacking retains future target key guard and existing physical claim guard",
+    "reclassifyBackingImpl retains selected-source guard before same-class no-op",
+    "watchRetirementBudget retains source and physical transition exclusions",
+    "buildPhysicalBackingDelta moves into the original Private owner and preserves input order, exact identity, duplicate and physical projection policy",
+    "prepareBackingHandoff retains original source selection and future target guards",
+    "commitPreparedBackingChanges and releaseRetiredBacking retain selected-key assertions, including absent future target and forged same-key debug exclusion"
+  ],
+  "deleted": [
+    "Source-key reserve/insert/erase/extract calls",
+    "Charged source-key nodes and corresponding bucket growth",
+    "Second handoff detached node in the original cold slot",
+    "Free projection function accepting three separately passed owner indexes"
+  ],
+  "preserved": [
+    "Every original fallible capacity allocation precedes physical claim publication",
+    "Rollback releases only its own cookie and target, then returns the original reservation and slot",
+    "No allocation/free is moved into actual handoff installation",
+    "Physical alias reference ordering, provider footprint, exact identity/generation and all limiter policies remain unchanged"
+  ],
+  "growth_justification": "Production net+6 lines includes the original 91-line projection moving into its existing owner. The membership predicate reconciles the original consumers without a second owner or source index. The replacement field holds one detached target node instead of two nodes; no new persistent field, public API, queue or guarantee.",
+  "cost_limit": "Busy selected membership scans only its owning slot O(K). Actual performance gates adjudicate whether savings justify that cost; allocation counts alone grant no M6 qualification.",
+  "exit": "All consumers use the same original claim facts. Full M6 still requires the existing Fresh/handoff, resident-metadata and CP0 contracts."
+}

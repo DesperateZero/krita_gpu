@@ -1,0 +1,62 @@
+{
+  "product": "0a00bd3fe3fe71e44c04b987f9558bcd37f00dc6",
+  "question": "Test removal of two repeated handoff-only allocations per reused slot; retain actual physical capacity and final free",
+  "arch": "arm64",
+  "public_rows": [
+    [
+      64,
+      1,
+      4,
+      1
+    ],
+    [
+      1024,
+      16,
+      4,
+      1
+    ],
+    [
+      64,
+      16,
+      4,
+      1
+    ]
+  ],
+  "native_rows": [
+    [
+      "fresh",
+      1
+    ],
+    [
+      "handoff",
+      1
+    ],
+    [
+      "fresh",
+      16
+    ],
+    [
+      "handoff",
+      16
+    ]
+  ],
+  "blocks": 2,
+  "order": [
+    [
+      "control",
+      "trace"
+    ],
+    [
+      "trace",
+      "control"
+    ]
+  ],
+  "total_processes": 28,
+  "public_endpoint": "Original public scanline write, original N-page setup/warm read. Trace first write; disable for 64 warm writes; trace one later write, original pixel/extent validation and manager destruction. Work counters verify both captured writes independently.",
+  "native_endpoint": "Original native selector fixture, one exact validation view, N=K/H0/B4, complete transaction/beginWrite/seal/canonical commit, validation and close. One operation per process; Fresh and handoff retain original copy/reuse/physical delta/old/new checks.",
+  "trace": "One mechanically instrumented copy of budget TU; original 374 other image objects reused. Fixed preallocated global event array, no per-entry clocks. Capture all threads, separate measured main thread and phases. Each entry retains stack and object address/capacity where available. All trace timings excluded from performance conclusions.",
+  "limits": "Trace changes concurrency and allocation lifetime timing. First and later single-operation counts are not the prior 250 ms steady averages. All-thread phase is a temporal window, not ownership. Address matching uses event order and rejects ambiguous reuse. Same-thread unmatched allocations are not automatically escapes; pair all observed frees and keep unclosed tails explicit. Deref count is not allocation/free count. No claim of safe removability from call count alone.",
+  "stopping": "Exactly 28 sequential processes after build; no concurrent build, benchmark or profiler. Stop and retain any wrong loaded image, correctness/exit/identity failure or trace overflow. Do not adapt sample size or change performance gates. Any repaired failed batch is separate and explicitly documented.",
+  "analysis": "Counts and actual allocation/free/capacity/lifetime preserved; full scans vs metadata checks vs cache refresh/bucket work distinguished. No instrumented timing qualification.",
+  "source_identity": "0a00bd3fe3fe71e44c04b987f9558bcd37f00dc6 plus reviewed diff"
+}

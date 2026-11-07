@@ -1,0 +1,42 @@
+{
+  "verified": "2026-09-20T12:39:57.716Z",
+  "mode": "live-source-and-archive",
+  "identity_files_checked": 317,
+  "live_source_files_skipped": 0,
+  "independent_pairs": 184,
+  "timed_runs": 368,
+  "loader_checks": 4,
+  "analyses_byte_identical": [
+    {
+      "phase": "integration",
+      "sha256": "fad28d4af1ddde598b888e2d054e17bb5aea623ee496020ac7409b3b6d51c040"
+    },
+    {
+      "phase": "native",
+      "sha256": "c9a7bd45af7891136b2c3cf65a12ee1f31d3d55f5f79883eb7f317274c8954fb"
+    }
+  ],
+  "regression": {
+    "final-resident.log": 24,
+    "final-KisPageStoreReadBaselineTest.log": 21,
+    "final-KisPageStoreReferenceTest.log": 59,
+    "final-KisPageStoreFoundationTest.log": 24,
+    "final-kis_tiled_data_manager_test.log": 88,
+    "final-kis_tiles3_cpu_baseline_test.log": 34,
+    "final-vulkan.log": 13
+  },
+  "old_counterexample": "3 passed / 6 obsolete count assertions failed, loader verified",
+  "previous_artifacts_unchanged": {
+    "d6": 460,
+    "d7": 298
+  },
+  "sealed_artifacts_verified": null,
+  "documents": 65,
+  "local_links": 443,
+  "anchor_links": 17,
+  "current_vulkan_build_hashes": {
+    "library": "577f9de7a6d63fdb534ca06852c0eac54e618ac78b188baec30b7c98a074cd87",
+    "test": "43f5b03a8c2c651a6dd611c59cfded1ba884fb214e6d7f70f69e2f736f83f3ec"
+  },
+  "qualification": "D8 archived diagnostic/correctness only; native write regression and read offset unresolved; BR1-PERF active"
+}

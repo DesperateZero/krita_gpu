@@ -1,0 +1,42 @@
+{
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "ff6e867d3bf4bc84f20549f64f130d127567a22a06e781aa051feb2c159bdf02",
+  "image_sha256": "58b4b139b32486684d9f7238eb56441a0d1297b1be1bfd61627cf41f45d02d91",
+  "tests": {
+    "targets_per_arch": 17,
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "passed": 5934,
+    "failed": 0,
+    "skipped": 0,
+    "new_cases_per_arch": 68
+  },
+  "architecture": {
+    "apis": 1636,
+    "call_edges": 16231,
+    "callbacks": 15,
+    "manifest": 21,
+    "ownership": 24,
+    "census": 16,
+    "intrusion": 19,
+    "self_tests": 6
+  },
+  "probes": {
+    "new_cleanup_intervals_per_arch": 42,
+    "new_cleanup_allocations": 0,
+    "new_cleanup_allocated_bytes": 0,
+    "new_cleanup_freed_blocks_per_arch": 10,
+    "existing_intervals_per_arch": {
+      "budget": 96,
+      "root": 72,
+      "legacy": 28,
+      "warm": 96,
+      "joint": 31080
+    },
+    "existing_allocations_bytes_frees": 0,
+    "image_identity_matches": true
+  },
+  "qualification": "CPU correctness and measured metadata cleanup only; full S09/S10, M6/M7/M8 and BR1-PERF remain open"
+}

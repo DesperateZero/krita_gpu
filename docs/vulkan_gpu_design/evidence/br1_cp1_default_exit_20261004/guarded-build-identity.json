@@ -1,0 +1,89 @@
+{
+  "product_commit": "1177fa5ecab8318fe044b071342eb0ab51654e27",
+  "commands": [
+    [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-std=c++17",
+      "-arch",
+      "arm64",
+      "-arch",
+      "x86_64",
+      "-mmacosx-version-min=15.7",
+      "-dynamiclib",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-interposer.cpp",
+      "-o",
+      "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-interposer-guarded.dylib"
+    ],
+    [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-std=c++17",
+      "-arch",
+      "arm64",
+      "-arch",
+      "x86_64",
+      "-mmacosx-version-min=15.7",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-probe-guarded.cpp",
+      "-L/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+      "-lkritaimage",
+      "-Wl,-rpath,/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+      "-o",
+      "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-probe-guarded"
+    ]
+  ],
+  "results": [
+    {
+      "step": 0,
+      "exit_code": 0,
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-std=c++17",
+        "-arch",
+        "arm64",
+        "-arch",
+        "x86_64",
+        "-mmacosx-version-min=15.7",
+        "-dynamiclib",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-interposer.cpp",
+        "-o",
+        "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-interposer-guarded.dylib"
+      ]
+    },
+    {
+      "step": 1,
+      "exit_code": 0,
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-std=c++17",
+        "-arch",
+        "arm64",
+        "-arch",
+        "x86_64",
+        "-mmacosx-version-min=15.7",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-probe-guarded.cpp",
+        "-L/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+        "-lkritaimage",
+        "-Wl,-rpath,/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+        "-o",
+        "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-probe-guarded"
+      ]
+    }
+  ],
+  "inputs": {
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-interposer.cpp": "1ce6df1e762597f90e6177f314678f3a8573a8dd3d8d9947f9f6229b2e2db34a",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-probe-guarded.cpp": "1c43479f0387e4c9179fb247e30e944e6ddc941d8f2228e74129170ef9ec31f1",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/build_and_run_guarded.py": "e01fff7164d253c4f052e6e49e21c189351560acc74ba20e402fc32eaac414d6"
+  },
+  "outputs": {
+    "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-interposer-guarded.dylib": "fdcff9c792c9bb54439b9a48792b62f392bdc4cd809de9a5bab07b5379a844ec",
+    "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-probe-guarded": "8a726a9633cafa7b75517c183e52c3294f24a858f37fe0930abc12f9d95417ea"
+  },
+  "verified": true
+}

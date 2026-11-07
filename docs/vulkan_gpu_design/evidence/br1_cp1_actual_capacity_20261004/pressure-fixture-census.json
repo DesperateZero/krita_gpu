@@ -1,0 +1,1112 @@
+[
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 1112,
+    "method": "void KisPageStoreCpuMutationTest::epochNativeConfigurationResumes()",
+    "text": "    void *filler = kisAllocateMutationStorage(pressure, bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 1113,
+    "method": "void KisPageStoreCpuMutationTest::epochNativeConfigurationResumes()",
+    "text": "    const auto free = qScopeGuard([&] { if (filler) kisFreeMutationStorage(pressure, filler, bytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 1124,
+    "method": "void KisPageStoreCpuMutationTest::epochNativeConfigurationResumes()",
+    "text": "    kisFreeMutationStorage(pressure, filler, bytes, 1); filler = nullptr;"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 1628,
+    "method": "void KisPageStoreCpuMutationTest::capturedCutStorageRefusalAndLifetime()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 1630,
+    "method": "void KisPageStoreCpuMutationTest::capturedCutStorageRefusalAndLifetime()",
+    "text": "        const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2288,
+    "method": "void KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2289,
+    "method": "void KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity()",
+    "text": "    const auto free = qScopeGuard([&] { kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2346,
+    "method": "void KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest()",
+    "text": "    void *filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2347,
+    "method": "void KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest()",
+    "text": "    const auto free = qScopeGuard([&] { kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2358,
+    "method": "void KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest()",
+    "text": "        kisFreeMutationStorage(&f.budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2384,
+    "method": "void KisPageStoreCpuMutationTest::capturedReleaseKeepsOriginalFacts()",
+    "text": "    void *filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2385,
+    "method": "void KisPageStoreCpuMutationTest::capturedReleaseKeepsOriginalFacts()",
+    "text": "    const auto free = qScopeGuard([&] { kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2693,
+    "method": "void KisPageStoreCpuMutationTest::publicationInputRefusalKeepsOriginalTransaction()",
+    "text": "        filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 2705,
+    "method": "void KisPageStoreCpuMutationTest::publicationInputRefusalKeepsOriginalTransaction()",
+    "text": "        const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 4922,
+    "method": "void KisPageStoreCpuMutationTest::retirementRecordRefusedBeforePhysicalResult()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 4923,
+    "method": "void KisPageStoreCpuMutationTest::retirementRecordRefusedBeforePhysicalResult()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 4934,
+    "method": "void KisPageStoreCpuMutationTest::retirementRecordRefusedBeforePhysicalResult()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 4975,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingNodesRefusedBeforePhysicalResult()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 4976,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingNodesRefusedBeforePhysicalResult()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5000,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingNodesRefusedBeforePhysicalResult()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5010,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingNodesRefusedBeforePhysicalResult()",
+    "text": "    void *refill = kisAllocateMutationStorage(&budget, refillBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5011,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingNodesRefusedBeforePhysicalResult()",
+    "text": "    const auto releaseRefill = qScopeGuard([&] { kisFreeMutationStorage(&budget, refill, refillBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5017,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingNodesRefusedBeforePhysicalResult()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(refill, nullptr), refillBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5053,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingRegistrationExcludesDomainMovement()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5054,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingRegistrationExcludesDomainMovement()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5082,
+    "method": "void KisPageStoreCpuMutationTest::ledgerBackingRegistrationExcludesDomainMovement()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5133,
+    "method": "void KisPageStoreCpuMutationTest::retirementRecordTransfersAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5134,
+    "method": "void KisPageStoreCpuMutationTest::retirementRecordTransfersAtCapacity()",
+    "text": "    const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5255,
+    "method": "void KisPageStoreCpuMutationTest::publicationDescriptorStorageAtCapacity()",
+    "text": "        void *filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5257,
+    "method": "void KisPageStoreCpuMutationTest::publicationDescriptorStorageAtCapacity()",
+    "text": "            if (filler) kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5284,
+    "method": "void KisPageStoreCpuMutationTest::publicationDescriptorStorageAtCapacity()",
+    "text": "        kisFreeMutationStorage(&f.budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5414,
+    "method": "void KisPageStoreCpuMutationTest::overlayStorageAtCapacity()",
+    "text": "        filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5418,
+    "method": "void KisPageStoreCpuMutationTest::overlayStorageAtCapacity()",
+    "text": "        kisFreeMutationStorage(&f.budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5536,
+    "method": "void KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork()",
+    "text": "        filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5548,
+    "method": "void KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork()",
+    "text": "                filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5558,
+    "method": "void KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork()",
+    "text": "        kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5571,
+    "method": "void KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork()",
+    "text": "    kisFreeMutationStorage(&f.budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5644,
+    "method": "void KisPageStoreCpuMutationTest::genericEffectsTransferAtCapacity()",
+    "text": "        filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5650,
+    "method": "void KisPageStoreCpuMutationTest::genericEffectsTransferAtCapacity()",
+    "text": "        kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5729,
+    "method": "void KisPageStoreCpuMutationTest::synchronousProviderResultsAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5730,
+    "method": "void KisPageStoreCpuMutationTest::synchronousProviderResultsAtCapacity()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5786,
+    "method": "void KisPageStoreCpuMutationTest::providerCompletionPreparationRejectsBeforePayload()",
+    "text": "    void *filler = kisAllocateMutationStorage(process.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5787,
+    "method": "void KisPageStoreCpuMutationTest::providerCompletionPreparationRejectsBeforePayload()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(process.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5794,
+    "method": "void KisPageStoreCpuMutationTest::providerCompletionPreparationRejectsBeforePayload()",
+    "text": "    kisFreeMutationStorage(process.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5826,
+    "method": "void KisPageStoreCpuMutationTest::providerRetirementUsesPreparedCompletion()",
+    "text": "    void *filler = kisAllocateMutationStorage(process.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5827,
+    "method": "void KisPageStoreCpuMutationTest::providerRetirementUsesPreparedCompletion()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(process.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5847,
+    "method": "void KisPageStoreCpuMutationTest::providerRetirementUsesPreparedCompletion()",
+    "text": "    kisFreeMutationStorage(process.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5891,
+    "method": "void KisPageStoreCpuMutationTest::providerAdoptionPreparationRejectsBeforePayload()",
+    "text": "    void *filler = kisAllocateMutationStorage(process.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5892,
+    "method": "void KisPageStoreCpuMutationTest::providerAdoptionPreparationRejectsBeforePayload()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(process.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5907,
+    "method": "void KisPageStoreCpuMutationTest::providerAdoptionPreparationRejectsBeforePayload()",
+    "text": "    kisFreeMutationStorage(process.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5933,
+    "method": "void KisPageStoreCpuMutationTest::providerLeasePreparationPreservesOriginalPin()",
+    "text": "    void *filler = kisAllocateMutationStorage(process.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5934,
+    "method": "void KisPageStoreCpuMutationTest::providerLeasePreparationPreservesOriginalPin()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(process.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 5944,
+    "method": "void KisPageStoreCpuMutationTest::providerLeasePreparationPreservesOriginalPin()",
+    "text": "    kisFreeMutationStorage(process.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 6081,
+    "method": "void KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity()",
+    "text": "        void *filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 6082,
+    "method": "void KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity()",
+    "text": "        const auto release = qScopeGuard([&] { kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 6092,
+    "method": "void KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity()",
+    "text": "        kisFreeMutationStorage(&f.budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 6177,
+    "method": "void KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity()",
+    "text": "        filler = kisAllocateMutationStorage(&f.budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 6182,
+    "method": "void KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity()",
+    "text": "        kisFreeMutationStorage(&f.budget, filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 7662,
+    "method": "void KisPageStoreCpuMutationTest::abandonedMutationsRecoverWithoutInput()",
+    "text": "        kisFreeMutationStorage(parent.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 7679,
+    "method": "void KisPageStoreCpuMutationTest::abandonedMutationsRecoverWithoutInput()",
+    "text": "        filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 7735,
+    "method": "void KisPageStoreCpuMutationTest::abandonedMutationsReleaseWithFacade()",
+    "text": "        if (filler) kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 7740,
+    "method": "void KisPageStoreCpuMutationTest::abandonedMutationsReleaseWithFacade()",
+    "text": "        filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 7744,
+    "method": "void KisPageStoreCpuMutationTest::abandonedMutationsReleaseWithFacade()",
+    "text": "        kisFreeMutationStorage(parent.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 7759,
+    "method": "void KisPageStoreCpuMutationTest::abandonedMutationsReleaseWithFacade()",
+    "text": "    if (filler) kisFreeMutationStorage(parent.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 8174,
+    "method": "void KisPageStoreCpuMutationTest::sealStorageRefusalKeepsFrozenOwner()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 8176,
+    "method": "void KisPageStoreCpuMutationTest::sealStorageRefusalKeepsFrozenOwner()",
+    "text": "        const auto release = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 8234,
+    "method": "void KisPageStoreCpuMutationTest::checkpointCaptureRefusalKeepsAcceptedSegment()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 8236,
+    "method": "void KisPageStoreCpuMutationTest::checkpointCaptureRefusalKeepsAcceptedSegment()",
+    "text": "        const auto release = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9334,
+    "method": "void KisPageStoreCpuMutationTest::ledgerProviderRegistrationPreparedBeforeAdmission()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9337,
+    "method": "void KisPageStoreCpuMutationTest::ledgerProviderRegistrationPreparedBeforeAdmission()",
+    "text": "        kisFreeMutationStorage(&budget, filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9345,
+    "method": "void KisPageStoreCpuMutationTest::ledgerProviderRegistrationPreparedBeforeAdmission()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9368,
+    "method": "void KisPageStoreCpuMutationTest::ledgerProviderRegistrationPreparedBeforeAdmission()",
+    "text": "        filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9382,
+    "method": "void KisPageStoreCpuMutationTest::ledgerProviderRegistrationPreparedBeforeAdmission()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9448,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalSynchronizationRejectsAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9449,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalSynchronizationRejectsAtCapacity()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9458,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalSynchronizationRejectsAtCapacity()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9486,
+    "method": "void KisPageStoreCpuMutationTest::domainClaimPreparationRejectsBeforePhysicalMove()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9487,
+    "method": "void KisPageStoreCpuMutationTest::domainClaimPreparationRejectsBeforePhysicalMove()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9492,
+    "method": "void KisPageStoreCpuMutationTest::domainClaimPreparationRejectsBeforePhysicalMove()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9518,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalCommitsAtCapacity()",
+    "text": "        void release() { kisFreeMutationStorage(budget, std::exchange(filler, nullptr), bytes, 1); }"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9530,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalCommitsAtCapacity()",
+    "text": "            filler = kisAllocateMutationStorage(budget, bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9551,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalCommitsAtCapacity()",
+    "text": "    void *returned = kisAllocateMutationStorage(process.get(), returnedBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9552,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalCommitsAtCapacity()",
+    "text": "    auto releaseReturned = qScopeGuard([&] { kisFreeMutationStorage(process.get(), returned, returnedBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9554,
+    "method": "void KisPageStoreCpuMutationTest::domainJournalCommitsAtCapacity()",
+    "text": "    kisFreeMutationStorage(process.get(), std::exchange(returned, nullptr), returnedBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9776,
+    "method": "void KisPageStoreCpuMutationTest::storeRootStorageRefusal()",
+    "text": "    auto *filler = storage.allocate(fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9777,
+    "method": "void KisPageStoreCpuMutationTest::storeRootStorageRefusal()",
+    "text": "    auto releaseFiller = qScopeGuard([&] { storage.deallocate(filler, fillerBytes); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9789,
+    "method": "void KisPageStoreCpuMutationTest::storeRootStorageRefusal()",
+    "text": "    storage.deallocate(filler, fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9836,
+    "method": "void KisPageStoreCpuMutationTest::storeRootStorageRetained()",
+    "text": "    auto *filler = storage.allocate(fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9837,
+    "method": "void KisPageStoreCpuMutationTest::storeRootStorageRetained()",
+    "text": "    auto releaseFiller = qScopeGuard([&] { storage.deallocate(filler, fillerBytes); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9846,
+    "method": "void KisPageStoreCpuMutationTest::storeRootStorageRetained()",
+    "text": "    storage.deallocate(filler, fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9897,
+    "method": "void KisPageStoreCpuMutationTest::domainAdmissionStorageRetained()",
+    "text": "    auto *filler = storage.allocate(fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9898,
+    "method": "void KisPageStoreCpuMutationTest::domainAdmissionStorageRetained()",
+    "text": "    auto releaseFiller = qScopeGuard([&] { if (filler) storage.deallocate(filler, fillerBytes); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9913,
+    "method": "void KisPageStoreCpuMutationTest::domainAdmissionStorageRetained()",
+    "text": "    filler = storage.allocate(fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9977,
+    "method": "void KisPageStoreCpuMutationTest::domainReservationControlRetained()",
+    "text": "    auto *filler = storage.allocate(fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 9978,
+    "method": "void KisPageStoreCpuMutationTest::domainReservationControlRetained()",
+    "text": "    const auto releaseFiller = qScopeGuard([&] { if (filler) storage.deallocate(filler, fillerBytes); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10002,
+    "method": "void KisPageStoreCpuMutationTest::domainReservationControlRetained()",
+    "text": "    filler = storage.allocate(fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10808,
+    "method": "void KisPageStoreCpuMutationTest::processStorageRejectsAndRetains()",
+    "text": "        void *filler = kisAllocatePageProcessStorage(fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10809,
+    "method": "void KisPageStoreCpuMutationTest::processStorageRejectsAndRetains()",
+    "text": "        auto free = qScopeGuard([&] { if (filler) kisFreePageProcessStorage(filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10830,
+    "method": "void KisPageStoreCpuMutationTest::processStorageRejectsAndRetains()",
+    "text": "        kisFreePageProcessStorage(std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10930,
+    "method": "void KisPageStoreCpuMutationTest::runtimeStopsAtCapacity()",
+    "text": "    void *filler = kisAllocatePageProcessStorage(fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10931,
+    "method": "void KisPageStoreCpuMutationTest::runtimeStopsAtCapacity()",
+    "text": "    auto free = qScopeGuard([&] { kisFreePageProcessStorage(filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10934,
+    "method": "void KisPageStoreCpuMutationTest::runtimeStopsAtCapacity()",
+    "text": "    void *outerFiller = kisAllocateMutationStorage(parent.get(), outerFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10936,
+    "method": "void KisPageStoreCpuMutationTest::runtimeStopsAtCapacity()",
+    "text": "        if (outerFiller) kisFreeMutationStorage(parent.get(), outerFiller, outerFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10961,
+    "method": "void KisPageStoreCpuMutationTest::runtimeStopsAtCapacity()",
+    "text": "            kisFreeMutationStorage(parent.get(), std::exchange(outerFiller, nullptr), outerFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreCpuMutationTest.cpp",
+    "line": 10978,
+    "method": "void KisPageStoreCpuMutationTest::runtimeStopsAtCapacity()",
+    "text": "        kisFreeMutationStorage(parent.get(), std::exchange(outerFiller, nullptr), outerFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1305,
+    "method": "void KisPageStoreReferenceTest::epochInitializationStorageRefusal()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1306,
+    "method": "void KisPageStoreReferenceTest::epochInitializationStorageRefusal()",
+    "text": "    const auto free = qScopeGuard([&] { if (filler) kisFreeMutationStorage(parent.get(), filler, bytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1315,
+    "method": "void KisPageStoreReferenceTest::epochInitializationStorageRefusal()",
+    "text": "    kisFreeMutationStorage(parent.get(), filler, bytes, 1); filler = nullptr;"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1393,
+    "method": "void KisPageStoreReferenceTest::epochRootStorageRefusal()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1394,
+    "method": "void KisPageStoreReferenceTest::epochRootStorageRefusal()",
+    "text": "    const auto free = qScopeGuard([&] { if (filler) kisFreeMutationStorage(parent.get(), filler, bytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1410,
+    "method": "void KisPageStoreReferenceTest::epochRootStorageRefusal()",
+    "text": "    kisFreeMutationStorage(parent.get(), filler, bytes, 1); filler = nullptr;"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1425,
+    "method": "void KisPageStoreReferenceTest::epochRootStorageRefusal()",
+    "text": "        void *installPressure = kisAllocateMutationStorage(parent.get(), installBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1426,
+    "method": "void KisPageStoreReferenceTest::epochRootStorageRefusal()",
+    "text": "        const auto unfill = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), installPressure, installBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1477,
+    "method": "void KisPageStoreReferenceTest::epochTreeTailAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 1478,
+    "method": "void KisPageStoreReferenceTest::epochTreeTailAtCapacity()",
+    "text": "    const auto free = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, bytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 2373,
+    "method": "void KisPageStoreReferenceTest::epochTransactionStorageAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 2374,
+    "method": "void KisPageStoreReferenceTest::epochTransactionStorageAtCapacity()",
+    "text": "    const auto freeFiller = qScopeGuard([&] { if (filler) kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 2383,
+    "method": "void KisPageStoreReferenceTest::epochTransactionStorageAtCapacity()",
+    "text": "    kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); filler = nullptr;"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 2394,
+    "method": "void KisPageStoreReferenceTest::epochTransactionStorageAtCapacity()",
+    "text": "    void *installFiller = kisAllocateMutationStorage(parent.get(), installFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 2395,
+    "method": "void KisPageStoreReferenceTest::epochTransactionStorageAtCapacity()",
+    "text": "    const auto freeInstallFiller = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), installFiller, installFillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 3906,
+    "method": "void KisPageStoreReferenceTest::metadataReadProtectionAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 3907,
+    "method": "void KisPageStoreReferenceTest::metadataReadProtectionAtCapacity()",
+    "text": "    const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4261,
+    "method": "void KisPageStoreReferenceTest::metadataReadCleanupAfterController()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4262,
+    "method": "void KisPageStoreReferenceTest::metadataReadCleanupAfterController()",
+    "text": "    auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4269,
+    "method": "void KisPageStoreReferenceTest::metadataReadCleanupAfterController()",
+    "text": "    kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4385,
+    "method": "void KisPageStoreReferenceTest::reclamationTaskRejectedPreparation()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, remaining, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4387,
+    "method": "void KisPageStoreReferenceTest::reclamationTaskRejectedPreparation()",
+    "text": "        if (filler) kisFreeMutationStorage(&budget, filler, remaining, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4394,
+    "method": "void KisPageStoreReferenceTest::reclamationTaskRejectedPreparation()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), remaining, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4443,
+    "method": "void KisPageStoreReferenceTest::preparedReclamationRunsAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4446,
+    "method": "void KisPageStoreReferenceTest::preparedReclamationRunsAtCapacity()",
+    "text": "        kisFreeMutationStorage(&budget, filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4486,
+    "method": "void KisPageStoreReferenceTest::preparedReadinessAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4487,
+    "method": "void KisPageStoreReferenceTest::preparedReadinessAtCapacity()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4535,
+    "method": "void KisPageStoreReferenceTest::readinessRetainsOriginalPayer()",
+    "text": "        void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4536,
+    "method": "void KisPageStoreReferenceTest::readinessRetainsOriginalPayer()",
+    "text": "        const auto release = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4584,
+    "method": "void KisPageStoreReferenceTest::preparedDeadlineRearmsAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4585,
+    "method": "void KisPageStoreReferenceTest::preparedDeadlineRearmsAtCapacity()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4660,
+    "method": "void KisPageStoreReferenceTest::retainedStorageWeakTailAndCapacity()",
+    "text": "        void *filler = kisAllocateMutationStorage(parent.get(), remaining, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4662,
+    "method": "void KisPageStoreReferenceTest::retainedStorageWeakTailAndCapacity()",
+    "text": "            kisFreeMutationStorage(parent.get(), filler, remaining, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4793,
+    "method": "void KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted()",
+    "text": "        void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4794,
+    "method": "void KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted()",
+    "text": "        const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4853,
+    "method": "void KisPageStoreReferenceTest::metadataConfigurationStorageRefusal()",
+    "text": "    char *filler = storage.allocate(fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4854,
+    "method": "void KisPageStoreReferenceTest::metadataConfigurationStorageRefusal()",
+    "text": "    auto releaseFiller = qScopeGuard([&] { storage.deallocate(filler, fillerBytes); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 4885,
+    "method": "void KisPageStoreReferenceTest::metadataConfigurationStorageRefusal()",
+    "text": "    storage.deallocate(filler, fillerBytes);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5004,
+    "method": "void KisPageStoreReferenceTest::metadataArenaDirectoryGrowthAtCapacity()",
+    "text": "        char *filler = storage.allocate(shortFill);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5005,
+    "method": "void KisPageStoreReferenceTest::metadataArenaDirectoryGrowthAtCapacity()",
+    "text": "        auto release = qScopeGuard([&] { storage.deallocate(filler, shortFill); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5014,
+    "method": "void KisPageStoreReferenceTest::metadataArenaDirectoryGrowthAtCapacity()",
+    "text": "        storage.deallocate(filler, shortFill);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5019,
+    "method": "void KisPageStoreReferenceTest::metadataArenaDirectoryGrowthAtCapacity()",
+    "text": "        filler = storage.allocate(fullFill);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5020,
+    "method": "void KisPageStoreReferenceTest::metadataArenaDirectoryGrowthAtCapacity()",
+    "text": "        auto releaseFull = qScopeGuard([&] { storage.deallocate(filler, fullFill); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5029,
+    "method": "void KisPageStoreReferenceTest::metadataArenaDirectoryGrowthAtCapacity()",
+    "text": "        storage.deallocate(filler, fullFill);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5607,
+    "method": "void KisPageStoreReferenceTest::genericWorkingStorageRefusalIsAtomic()",
+    "text": "                d.filler = kisAllocateMutationStorage(d.budget, d.bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5663,
+    "method": "void KisPageStoreReferenceTest::genericWorkingStorageRefusalIsAtomic()",
+    "text": "        void *filler = kisAllocateMutationStorage(&budget, bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5665,
+    "method": "void KisPageStoreReferenceTest::genericWorkingStorageRefusalIsAtomic()",
+    "text": "            kisFreeMutationStorage(&budget, filler, bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5666,
+    "method": "void KisPageStoreReferenceTest::genericWorkingStorageRefusalIsAtomic()",
+    "text": "            kisFreeMutationStorage(&budget, std::exchange(debt.filler, nullptr), debt.bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5725,
+    "method": "void KisPageStoreReferenceTest::capturedProtectionAndExactQueryAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5726,
+    "method": "void KisPageStoreReferenceTest::capturedProtectionAndExactQueryAtCapacity()",
+    "text": "    const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5843,
+    "method": "void KisPageStoreReferenceTest::indexedMutationBaseLookup()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 5844,
+    "method": "void KisPageStoreReferenceTest::indexedMutationBaseLookup()",
+    "text": "    const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6339,
+    "method": "void KisPageStoreReferenceTest::publicationDirectoryStorageLifetime()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6341,
+    "method": "void KisPageStoreReferenceTest::publicationDirectoryStorageLifetime()",
+    "text": "        const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6633,
+    "method": "void KisPageStoreReferenceTest::mutationCandidateStorageAtSharedCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6634,
+    "method": "void KisPageStoreReferenceTest::mutationCandidateStorageAtSharedCapacity()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6640,
+    "method": "void KisPageStoreReferenceTest::mutationCandidateStorageAtSharedCapacity()",
+    "text": "    void *remaining = kisAllocateMutationStorage(parent.get(), remainingBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6641,
+    "method": "void KisPageStoreReferenceTest::mutationCandidateStorageAtSharedCapacity()",
+    "text": "    const auto releaseRemaining = qScopeGuard([&] { kisFreeMutationStorage(parent.get(), remaining, remainingBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6725,
+    "method": "void KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup()",
+    "text": "    void *filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6727,
+    "method": "void KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup()",
+    "text": "        if (filler) kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6735,
+    "method": "void KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup()",
+    "text": "    kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); filler = nullptr;"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6761,
+    "method": "void KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup()",
+    "text": "    filler = kisAllocateMutationStorage(parent.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 6783,
+    "method": "void KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup()",
+    "text": "    kisFreeMutationStorage(parent.get(), filler, fillerBytes, 1); filler = nullptr;"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 7260,
+    "method": "void KisPageStoreReferenceTest::recoverableWritePreparationHonorsBudget()",
+    "text": "        void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 7261,
+    "method": "void KisPageStoreReferenceTest::recoverableWritePreparationHonorsBudget()",
+    "text": "        const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 7870,
+    "method": "void KisPageStoreReferenceTest::admissionStorageRevalidatesGrowth()",
+    "text": "        void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 7871,
+    "method": "void KisPageStoreReferenceTest::admissionStorageRevalidatesGrowth()",
+    "text": "        const auto releaseFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 7885,
+    "method": "void KisPageStoreReferenceTest::admissionStorageRevalidatesGrowth()",
+    "text": "        kisFreeMutationStorage(&budget, std::exchange(filler, nullptr), fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 8190,
+    "method": "void KisPageStoreReferenceTest::freshWriteSelectorAndBackingBudgetAreBounded()",
+    "text": "    void *filler = kisAllocateMutationStorage(&budget, fillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 8192,
+    "method": "void KisPageStoreReferenceTest::freshWriteSelectorAndBackingBudgetAreBounded()",
+    "text": "        const auto freeFiller = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 9720,
+    "method": "void KisPageStoreReferenceTest::ownerLedgerSealsPreparedPageBeforeEpochCommit()",
+    "text": "        void *filler = kisAllocateMutationStorage(&budget, bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 9721,
+    "method": "void KisPageStoreReferenceTest::ownerLedgerSealsPreparedPageBeforeEpochCommit()",
+    "text": "        const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, bytes, 1); });"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 9740,
+    "method": "void KisPageStoreReferenceTest::ownerLedgerSealsPreparedPageBeforeEpochCommit()",
+    "text": "        kisFreeMutationStorage(&budget, sealFiller, sealFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 9745,
+    "method": "void KisPageStoreReferenceTest::ownerLedgerSealsPreparedPageBeforeEpochCommit()",
+    "text": "        sealFiller = kisAllocateMutationStorage(&budget, sealFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 9754,
+    "method": "void KisPageStoreReferenceTest::ownerLedgerSealsPreparedPageBeforeEpochCommit()",
+    "text": "    kisFreeMutationStorage(&budget, std::exchange(sealFiller, nullptr), sealFillerBytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 9763,
+    "method": "void KisPageStoreReferenceTest::ownerLedgerSealsPreparedPageBeforeEpochCommit()",
+    "text": "        void *filler = kisAllocateMutationStorage(&budget, bytes, 1);"
+  },
+  {
+    "file": "KisPageStoreReferenceTest.cpp",
+    "line": 9764,
+    "method": "void KisPageStoreReferenceTest::ownerLedgerSealsPreparedPageBeforeEpochCommit()",
+    "text": "        const auto release = qScopeGuard([&] { kisFreeMutationStorage(&budget, filler, bytes, 1); });"
+  },
+  {
+    "file": "KisCompletionRegistryTest.cpp",
+    "line": 570,
+    "method": "void KisCompletionRegistryTest::preparedCompletionsAtCapacity()",
+    "text": "    void *filler = kisAllocateMutationStorage(process.get(), fillerBytes, 1);"
+  },
+  {
+    "file": "KisCompletionRegistryTest.cpp",
+    "line": 571,
+    "method": "void KisCompletionRegistryTest::preparedCompletionsAtCapacity()",
+    "text": "    const auto release = qScopeGuard([&] { kisFreeMutationStorage(process.get(), filler, fillerBytes, 1); });"
+  },
+  {
+    "file": "KisCompletionRegistryTest.cpp",
+    "line": 587,
+    "method": "void KisCompletionRegistryTest::preparedCompletionsAtCapacity()",
+    "text": "    kisFreeMutationStorage(process.get(), std::exchange(filler, nullptr), fillerBytes, 1);"
+  }
+]

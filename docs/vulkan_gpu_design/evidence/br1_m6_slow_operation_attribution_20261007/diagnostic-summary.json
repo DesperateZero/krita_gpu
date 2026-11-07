@@ -1,0 +1,968 @@
+{
+  "clock_validation": {
+    "arm64": {
+      "thread": {
+        "busy_ratios": [
+          0.9995595891781616,
+          0.9998858416164828,
+          0.9997204143112113
+        ],
+        "sleep_ratios": [
+          0.00046477149973986787,
+          0.0004448050330579101,
+          0.0004714560583722732
+        ],
+        "valid": true,
+        "empty_ns": [
+          1041,
+          791,
+          750
+        ]
+      },
+      "process": {
+        "busy_ratios": [
+          0.9995691689785184,
+          0.9998958414748848,
+          0.9997145844011085
+        ],
+        "sleep_ratios": [
+          0.0004797641287637346,
+          0.00039982474881609893,
+          0.0004797721082485819
+        ],
+        "valid": true,
+        "empty_ns": [
+          1000,
+          1000,
+          0
+        ]
+      }
+    },
+    "x86_64": {
+      "thread": {
+        "busy_ratios": [
+          0.024002289965650514,
+          0.023991970070261884,
+          0.023999060016449712
+        ],
+        "sleep_ratios": [
+          2.947485631007549e-05,
+          3.120219417345168e-05,
+          1.4272530899129868e-05
+        ],
+        "valid": false,
+        "empty_ns": [
+          34,
+          28,
+          30
+        ]
+      },
+      "process": {
+        "busy_ratios": [
+          0.9999850002249966,
+          0.9996812527890381,
+          0.9999625006562385
+        ],
+        "sleep_ratios": [
+          0.0012663271599884284,
+          0.001318402570709226,
+          0.0005996861722323474
+        ],
+        "valid": true,
+        "empty_ns": [
+          2000,
+          0,
+          2000
+        ]
+      }
+    }
+  },
+  "processes": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 0,
+      "completed": 10239,
+      "wall_ns": 128009644,
+      "median_ns": 10833,
+      "maximum_ns": 124208,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "18b4a5f17a3d2a54340ff6a2a55984a0eafa9d4e5cd5186c469606614a61b6eb",
+      "context_sums": [
+        24,
+        0,
+        0,
+        441
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 0,
+      "completed": 10728,
+      "wall_ns": 128009426,
+      "median_ns": 11541.0,
+      "maximum_ns": 44292,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "ca36a2384ccfd8c631d88eaca5802cc3e4a866c464a715f85cb5d9bb9dfad6bd",
+      "context_sums": [
+        1,
+        0,
+        0,
+        258
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 0,
+      "completed": 1301,
+      "wall_ns": 128082990,
+      "median_ns": 96167,
+      "maximum_ns": 190583,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "e3e89ae8f66c10226c6a27d8573c8f128360cf3063151966bea3264fc657379a",
+      "context_sums": [
+        17,
+        0,
+        0,
+        1390
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 0,
+      "completed": 1072,
+      "wall_ns": 128107954,
+      "median_ns": 117354.0,
+      "maximum_ns": 244625,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "b8d56e77c60e23101e67646b000e5086fb5a1b1cfbc9dca7b6cc51a62565ac49",
+      "context_sums": [
+        17,
+        0,
+        0,
+        1115
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 0,
+      "completed": 7986,
+      "wall_ns": 128015905,
+      "median_ns": 15500.0,
+      "maximum_ns": 223292,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "b4153e4a10022b5e8c5e6fb09b0714b00ae62647c1dd65e5f9dda26e7a7d1808",
+      "context_sums": [
+        20,
+        0,
+        0,
+        371
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 0,
+      "completed": 7041,
+      "wall_ns": 128009884,
+      "median_ns": 17375,
+      "maximum_ns": 165417,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "e2f143f4aa2e139134925434f62f336fbe6a6d5bf88abedff2d4768565b47c82",
+      "context_sums": [
+        7,
+        0,
+        0,
+        333
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 0,
+      "completed": 788,
+      "wall_ns": 128100457,
+      "median_ns": 156979.0,
+      "maximum_ns": 664459,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "710f025512f7aea42afd3ed40cc08e7a19ad48943a84c290ac55fe079898aff7",
+      "context_sums": [
+        104,
+        0,
+        0,
+        939
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 0,
+      "completed": 643,
+      "wall_ns": 128072341,
+      "median_ns": 197958,
+      "maximum_ns": 267625,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "056294b238df39595210df212bc3d67ef5c557ad1d7f28851f8df938bdd60053",
+      "context_sums": [
+        91,
+        0,
+        0,
+        743
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 1,
+      "completed": 642,
+      "wall_ns": 128099828,
+      "median_ns": 198062.5,
+      "maximum_ns": 450791,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "d457a05c44d7f81c994226810ee4c411bd2f3fc65900be1b0c63797c42fa65eb",
+      "context_sums": [
+        65,
+        0,
+        0,
+        757
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 1,
+      "completed": 829,
+      "wall_ns": 128015803,
+      "median_ns": 153417,
+      "maximum_ns": 490375,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "a9f1898849f490a09b67d260b803523d520e6bbdd71f0e1c36b657e5cb9249fa",
+      "context_sums": [
+        67,
+        0,
+        0,
+        933
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 1,
+      "completed": 7083,
+      "wall_ns": 128014693,
+      "median_ns": 17541,
+      "maximum_ns": 43667,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "7a2a3b8ce843db59a221e6eb04b7c77a51212f61541281131a6df3dd6b5981d2",
+      "context_sums": [
+        7,
+        0,
+        0,
+        100
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 1,
+      "completed": 6696,
+      "wall_ns": 128001758,
+      "median_ns": 15708.0,
+      "maximum_ns": 235458,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "5f49470ea69098302b5a90dd97aa7a94f5bd8c7da98215444e788412314df961",
+      "context_sums": [
+        42,
+        0,
+        0,
+        751
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 1,
+      "completed": 1073,
+      "wall_ns": 128040353,
+      "median_ns": 118750,
+      "maximum_ns": 168792,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "afa380a30cc95924da5a46161f2f6aa3f3e9bc63b4c976d7692a484cf933adc8",
+      "context_sums": [
+        18,
+        0,
+        0,
+        1092
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 1,
+      "completed": 1319,
+      "wall_ns": 128032869,
+      "median_ns": 95667,
+      "maximum_ns": 168791,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "f8fa4953fb4b77f57d33be4fa7797a81c7680988f56abb2356e217bfceb1ed17",
+      "context_sums": [
+        19,
+        0,
+        0,
+        1344
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 1,
+      "completed": 10446,
+      "wall_ns": 128006017,
+      "median_ns": 11542.0,
+      "maximum_ns": 263541,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "327b079202691415d03b79fa2b43825171c6c041400dc605c100f298f3c06817",
+      "context_sums": [
+        13,
+        0,
+        0,
+        982
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 1,
+      "completed": 11819,
+      "wall_ns": 128008745,
+      "median_ns": 10416,
+      "maximum_ns": 114708,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "b0531994ee4c2dac4b671d63c5dbab93501c30964ab1407af63c80f048196f54",
+      "context_sums": [
+        9,
+        0,
+        0,
+        263
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 2,
+      "completed": 10973,
+      "wall_ns": 128005332,
+      "median_ns": 11250,
+      "maximum_ns": 77625,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "055ef23a6590388ff8d8cb2d8c9925f1aa3894ca3846ad5f5075a48451f0888a",
+      "context_sums": [
+        4,
+        0,
+        0,
+        590
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 2,
+      "completed": 1342,
+      "wall_ns": 128057500,
+      "median_ns": 94834.0,
+      "maximum_ns": 140875,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "44be2a86b4a9f727d9fea7513fe75b04514ae4ef465c50956de9bcda0e8c96a8",
+      "context_sums": [
+        12,
+        0,
+        0,
+        1358
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 2,
+      "completed": 1065,
+      "wall_ns": 128134213,
+      "median_ns": 120084,
+      "maximum_ns": 210000,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "6e528d2d59ce8b747f1542618a58a6aebea87b7177fa883de1467a6dafb87789",
+      "context_sums": [
+        23,
+        0,
+        0,
+        1079
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 2,
+      "completed": 7990,
+      "wall_ns": 128013606,
+      "median_ns": 15500.0,
+      "maximum_ns": 95500,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "045ba2cb4c05882c4c1c01d4d14d47b70809b4b66fc9c4cdeae80ff7cb6c9f42",
+      "context_sums": [
+        8,
+        0,
+        0,
+        341
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 2,
+      "completed": 7143,
+      "wall_ns": 128001831,
+      "median_ns": 17417,
+      "maximum_ns": 51209,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "cf5434f3e5cc12bc09ba72f06fd3c3fbb9d5de21a9977f751210657b8c92a52d",
+      "context_sums": [
+        9,
+        0,
+        0,
+        130
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 2,
+      "completed": 727,
+      "wall_ns": 128114020,
+      "median_ns": 156000,
+      "maximum_ns": 633458,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "ba9661c6ed80e9c18f50ea34631c6d79e2d707dcf7741c899fa3d2355b40e8e6",
+      "context_sums": [
+        234,
+        0,
+        0,
+        863
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 2,
+      "completed": 646,
+      "wall_ns": 128054210,
+      "median_ns": 196708.5,
+      "maximum_ns": 697792,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "1ea1fa2a6439cb0ef1bae69c19585f7019f734de6f7922a30f2e7def3240ed9d",
+      "context_sums": [
+        49,
+        0,
+        0,
+        732
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 2,
+      "completed": 11793,
+      "wall_ns": 128001007,
+      "median_ns": 10458,
+      "maximum_ns": 57750,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "68e8643375a77aa03f3985afc00fd7c1171b6d9f5a652cd66697a62150a7c4fa",
+      "context_sums": [
+        4,
+        0,
+        0,
+        485
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 3,
+      "completed": 11741,
+      "wall_ns": 128009656,
+      "median_ns": 10417,
+      "maximum_ns": 44167,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "5b8c064883d7a4d0d946f5eb716b0d4276f7d1da2ccdf73993c4f782b225031a",
+      "context_sums": [
+        3,
+        0,
+        0,
+        496
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 3,
+      "completed": 652,
+      "wall_ns": 128024780,
+      "median_ns": 196708.0,
+      "maximum_ns": 266250,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "90c84f3d7a17137ce4496c45ca94be2c508a4415407c9185bcb1e88377aafa3a",
+      "context_sums": [
+        64,
+        0,
+        0,
+        715
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 3,
+      "completed": 811,
+      "wall_ns": 128138473,
+      "median_ns": 156458,
+      "maximum_ns": 316500,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "f646cc8875c3cefc4af2fa8a7d0ecb7be72dac8b0344e6084deb1340dbdc71b3",
+      "context_sums": [
+        71,
+        0,
+        0,
+        916
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 3,
+      "completed": 7047,
+      "wall_ns": 128016492,
+      "median_ns": 17500,
+      "maximum_ns": 265209,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "a200914d25b625cb6e730816f387979503f2ae832871030d3f0a8a8a51d80954",
+      "context_sums": [
+        21,
+        0,
+        0,
+        267
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 3,
+      "completed": 7628,
+      "wall_ns": 128010416,
+      "median_ns": 15875.0,
+      "maximum_ns": 112959,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "1c2011c85878185bd38201ea5e24003b0b359677b63a35d433c6385ca8457b81",
+      "context_sums": [
+        14,
+        0,
+        0,
+        662
+      ],
+      "clock_metric": "process_all_threads"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 3,
+      "completed": 1043,
+      "wall_ns": 128020294,
+      "median_ns": 122584,
+      "maximum_ns": 258125,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "ec48d6f5d33ac88822d66a5c0e05455dcac22161d5c72ecc80135cad16e2098a",
+      "context_sums": [
+        16,
+        0,
+        0,
+        1079
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 3,
+      "completed": 1279,
+      "wall_ns": 128048785,
+      "median_ns": 98917,
+      "maximum_ns": 209375,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "c0348c608daba2e89aff9441b852ef0a5f10f02f2d21e8f1536034e73c3b921f",
+      "context_sums": [
+        9,
+        0,
+        0,
+        1370
+      ],
+      "clock_metric": "thread"
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 3,
+      "completed": 9502,
+      "wall_ns": 128004322,
+      "median_ns": 11417.0,
+      "maximum_ns": 121042,
+      "slow_count": 0,
+      "slow_wall_ns": 0,
+      "classes": {},
+      "class_wall_ns": {},
+      "operation_vector_sha256": "22d236da37dc21bc8b057ad2e871aa5f377e6ae4baf5ddd36a82107d5018e514",
+      "context_sums": [
+        19,
+        0,
+        0,
+        485
+      ],
+      "clock_metric": "thread"
+    }
+  ],
+  "buckets": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "completed": 45592,
+      "wall_ns": 512029052,
+      "process_medians_ns": [
+        10833,
+        10416,
+        10458,
+        10417
+      ],
+      "maximum_ns": 124208,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "completed": 41649,
+      "wall_ns": 512025097,
+      "process_medians_ns": [
+        11541.0,
+        11542.0,
+        11250,
+        11417.0
+      ],
+      "maximum_ns": 263541,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "completed": 5241,
+      "wall_ns": 512222144,
+      "process_medians_ns": [
+        96167,
+        95667,
+        94834.0,
+        98917
+      ],
+      "maximum_ns": 209375,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "completed": 4253,
+      "wall_ns": 512302814,
+      "process_medians_ns": [
+        117354.0,
+        118750,
+        120084,
+        122584
+      ],
+      "maximum_ns": 258125,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "completed": 30300,
+      "wall_ns": 512041685,
+      "process_medians_ns": [
+        15500.0,
+        15708.0,
+        15500.0,
+        15875.0
+      ],
+      "maximum_ns": 235458,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "completed": 28314,
+      "wall_ns": 512042900,
+      "process_medians_ns": [
+        17375,
+        17541,
+        17417,
+        17500
+      ],
+      "maximum_ns": 265209,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "completed": 3155,
+      "wall_ns": 512368753,
+      "process_medians_ns": [
+        156979.0,
+        153417,
+        156000,
+        156458
+      ],
+      "maximum_ns": 664459,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "completed": 2583,
+      "wall_ns": 512251159,
+      "process_medians_ns": [
+        197958,
+        198062.5,
+        196708.5,
+        196708.0
+      ],
+      "maximum_ns": 697792,
+      "slow_count": 0,
+      "slow_wall_fraction": 0.0,
+      "slow_classes": {},
+      "slow_class_wall_ns": {},
+      "slow_with_major_faults": 0,
+      "slow_with_minor_faults": 0,
+      "slow_with_voluntary_switches": 0,
+      "slow_with_involuntary_switches": 0
+    }
+  ],
+  "slow_events": [],
+  "statistical_scope": "32 diagnostic processes; internal operations dependent, no CI or gate qualification",
+  "instrumentation_scope": "CPU span includes timer/rusage calls outside original wall interval; no subtraction; slow threshold >=1ms only",
+  "verified": true
+}

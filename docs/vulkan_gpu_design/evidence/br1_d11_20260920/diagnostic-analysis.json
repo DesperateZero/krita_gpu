@@ -1,0 +1,3943 @@
+{
+  "phase": "diagnostic",
+  "manifest_sha256": "f5769d258fb26a30740362cb98c8dc36e237c967b872c0deaf84c3d0fee2b8c3",
+  "results": [
+    {
+      "fixture": "real-N64-K1-H0-B4",
+      "fixed_work_operation_ms": {
+        "baseline_median": 85.63960349999999,
+        "candidate_median": 90.0046665,
+        "paired_median_ratio": 1.0407272323547252,
+        "exploratory_95_interval": [
+          1.02521831841455,
+          1.0676155243739538
+        ],
+        "pair_ratios": [
+          1.0407375125953648,
+          1.0676155243739538,
+          1.0407169521140858,
+          1.02521831841455
+        ]
+      },
+      "sampled_operations": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sampled_stage_metrics": [
+        [
+          {
+            "cpu_ms": 0.069503,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008799,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.361172,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.302709,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.137277,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.079284,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.336037,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.278998,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.42892,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.36992,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.074083,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.014419,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.333708,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.275048,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.161163,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.103162,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.163904,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.104836,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.258871,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.200308,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.148964,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.079425,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.555163,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.501043,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.066665,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008042,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.075967,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.0163,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.078922,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.007967,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.587036,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.52812,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.636252,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.577336,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 5.421749,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 5.379913,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.33866,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.279466,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.781709,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 0.722567,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.511307,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.451,
+            "work_items": 512
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.07158,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008666,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.374799,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.313827,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.144717,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.084448,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.345007,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.28425,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.452632,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.391711,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.076574,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.015412,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.34988,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.289554,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.164463,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.103821,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.170633,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.110097,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.265543,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.204504,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.142752,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.080334,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.556839,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.494864,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.068635,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008624,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.077743,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.016276,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.081533,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008785,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.604047,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.542362,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.703135,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.642387,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 5.665754,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 5.616431,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.397799,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.335628,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.835405,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 0.773607,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.538422,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.475682,
+            "work_items": 512
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.069077,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008744,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.379382,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.319704,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.147092,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.087031,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.346164,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.28613,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.457205,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.398746,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.075001,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.01608,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.34538,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.286789,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.161199,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.102002,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.169662,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.11045,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.263758,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.203404,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.138172,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.077709,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.568171,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.508345,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.067085,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008743,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.076082,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.017753,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.079928,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.009218,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.604622,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.545009,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.681739,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.62197,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 5.632369,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 5.573126,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.371265,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.311585,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.812676,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 0.751992,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.514254,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.453627,
+            "work_items": 512
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.071421,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008288,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.384534,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.326467,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.143378,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.084371,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.34387,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.283957,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.449622,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.389917,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.076376,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.015656,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.341959,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.283328,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.160843,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.1016,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.165043,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.106223,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.26808,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.208494,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.139468,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.079943,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.562503,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.501484,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.067786,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008759,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.077451,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.016843,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.079619,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.009009,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.607447,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.54823,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.689776,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.628539,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 5.609626,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 5.550616,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.388266,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.327127,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.802374,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 0.741419,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.530083,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.468376,
+            "work_items": 512
+          }
+        ]
+      ],
+      "plain_structure": [
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0
+        },
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0.000041
+        },
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0
+        },
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0.000042
+        }
+      ]
+    },
+    {
+      "fixture": "real-N4096-K1-H0-B4",
+      "fixed_work_operation_ms": {
+        "baseline_median": 100.407833,
+        "candidate_median": 104.76375,
+        "paired_median_ratio": 1.0328694602209854,
+        "exploratory_95_interval": [
+          1.0203303612436847,
+          1.066877886765227
+        ],
+        "pair_ratios": [
+          1.0203303612436847,
+          1.066877886765227,
+          1.0414879980230012,
+          1.0242509224189695
+        ]
+      },
+      "sampled_operations": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sampled_stage_metrics": [
+        [
+          {
+            "cpu_ms": 0.068669,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008658,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.369427,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.310545,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.143927,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.086246,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.339844,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.28179,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.444576,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.386988,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.073841,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.015307,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.412509,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.352835,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.178369,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.111836,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.179581,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.126799,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.855638,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.80392,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.138218,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.078138,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.619046,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.558945,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.067007,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.007746,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.076541,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.01654,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.078926,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.007962,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.584079,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.525177,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.888801,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.835958,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 6.279371,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 6.242091,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.58129,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.52908,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.791878,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 0.73184,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.726997,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.672618,
+            "work_items": 512
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.07108,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.007786,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.379987,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.319338,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.149555,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.088623,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.355722,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.295058,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.480415,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.424915,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.082389,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.021043,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.435787,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.383336,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.174715,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.113689,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.203292,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.169214,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.877799,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.817412,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.138842,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.077711,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.653324,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.592075,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.06842,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008938,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.078378,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.017367,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.081052,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008869,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.613368,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.552618,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 2.01357,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.953714,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 6.563456,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 6.543353,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.697415,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.637063,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.839361,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 0.777523,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.799136,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.73824,
+            "work_items": 512
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.074205,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.013036,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.382793,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.325246,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.148292,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.088835,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.355647,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.295881,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.461364,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.402408,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.074838,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.015466,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.432428,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.378002,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.170508,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.110955,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.177702,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.121583,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.860607,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.802274,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.138754,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.079791,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.642824,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.582836,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.068497,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008367,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.078136,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.017579,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.082918,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.007835,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.6192,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.561623,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 2.047442,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.991206,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 6.751912,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 6.715992,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.718673,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.661084,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.105863,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 1.047007,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.827586,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.77045,
+            "work_items": 512
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.071093,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.007419,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.382499,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 0.322156,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.146672,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.087078,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.349093,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 0.290671,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.468047,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.409668,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.076828,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.017243,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.417831,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 0.358961,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.169751,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.110239,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.171782,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.111668,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.895484,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 0.836009,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.138747,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.078634,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 0.641821,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 0.581503,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.06774,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.00854,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.077287,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.017548,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.077366,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008411,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.604568,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.544961,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.996804,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 1.957584,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 6.450415,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 6.395759,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 1.690007,
+            "intervals": 512,
+            "name": "write_acquire",
+            "wall_ms": 1.648536,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.81426,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 0.754166,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.809498,
+            "intervals": 512,
+            "name": "write_provider_prepare",
+            "wall_ms": 0.768925,
+            "work_items": 512
+          }
+        ]
+      ],
+      "plain_structure": [
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0
+        },
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0
+        },
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0.000083
+        },
+        {
+          "reserved": 8192,
+          "sealed": 8192,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 134217728,
+          "retained_release_ms": 0
+        }
+      ]
+    },
+    {
+      "fixture": "real-N1024-K16-H0-B4",
+      "fixed_work_operation_ms": {
+        "baseline_median": 734.9976455000001,
+        "candidate_median": 741.7804165,
+        "paired_median_ratio": 1.003686754669026,
+        "exploratory_95_interval": [
+          0.9581046511889839,
+          1.0539371749732211
+        ],
+        "pair_ratios": [
+          1.009937922969403,
+          1.0539371749732211,
+          0.9581046511889839,
+          0.997435586368649
+        ]
+      },
+      "sampled_operations": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sampled_stage_metrics": [
+        [
+          {
+            "cpu_ms": 0.071379,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008033,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.824839,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.762948,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.15386,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.093956,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.30329,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.239204,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.016869,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.956571,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.079923,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.020584,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.618257,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.557797,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.206497,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.14491,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.17313,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.112157,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.290629,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.230754,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.142544,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.08255,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 4.954675,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.890131,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.067878,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.009178,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.07906,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.017956,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.129452,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008169,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.598871,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.539474,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 25.08092,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 25.036797,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.038571,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 27.982204,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 21.914526,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 20.948196,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 7.813327,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.750626,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.940954,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 7.974037,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.07439,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008169,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.906826,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.840372,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.154335,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.093851,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.349383,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.283361,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.029345,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.967672,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.080673,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.02,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.688081,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.627131,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.229906,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.166832,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.176797,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.116045,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.304544,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.242996,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.143444,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.081812,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 5.100508,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 5.035292,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.069584,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008586,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.081919,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.02026,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.102224,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.009381,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.616214,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.555503,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 25.999642,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 26.176067,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.815794,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 28.777424,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 22.775172,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 21.982397,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.124652,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 8.077003,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 9.401932,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 8.51368,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.072413,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008695,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.903591,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.862213,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.157335,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.097422,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.387546,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.328965,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.059002,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 1.006254,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.080038,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.020425,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.651201,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.611076,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.301358,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.264756,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.18421,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.130543,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.294802,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.239917,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.143926,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.083011,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 5.004906,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.954215,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.067957,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008874,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.078912,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.017802,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.109833,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.009538,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.604655,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.544794,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 25.369913,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 25.518965,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.788258,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 28.864795,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 22.172241,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 21.385594,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.054826,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 8.015593,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 9.002577,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 8.163815,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.071835,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008459,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.896331,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.833053,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.153373,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.093281,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.344318,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.285825,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.029091,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.968549,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.082877,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.022492,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.610754,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.559828,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.219864,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.157958,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.174748,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.114575,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.289547,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.230537,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.139629,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.08003,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 4.962407,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.896871,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.066961,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.007665,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.079085,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.018698,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.109091,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.009048,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.602548,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.542335,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 25.287826,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 25.282718,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.417201,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 28.37701,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 22.121809,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 21.198186,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 7.944454,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.885846,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 9.027149,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 8.073187,
+            "work_items": 8192
+          }
+        ]
+      ],
+      "plain_structure": [
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 0.000042
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 0
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 0
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 0
+        }
+      ]
+    },
+    {
+      "fixture": "real-N1024-K16-H4-B4",
+      "fixed_work_operation_ms": {
+        "baseline_median": 828.8183125,
+        "candidate_median": 839.283396,
+        "paired_median_ratio": 1.0094509835154857,
+        "exploratory_95_interval": [
+          1.0004924393672059,
+          1.0362752673158253
+        ],
+        "pair_ratios": [
+          1.0025183477769608,
+          1.0004924393672059,
+          1.0362752673158253,
+          1.0163836192540103
+        ]
+      },
+      "sampled_operations": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sampled_stage_metrics": [
+        [
+          {
+            "cpu_ms": 0.071919,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.009555,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.891046,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.832669,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.152443,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.09438,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.674912,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.613385,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.025171,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.964992,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.079666,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.020163,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.686641,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.684754,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.711918,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.652415,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.17983,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.121828,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.298242,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.238676,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.58701,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.537042,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 5.007244,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.954,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.067796,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008932,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.080883,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.02055,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.083828,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008301,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.598415,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.540126,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 25.680634,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 25.760042,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 33.84996,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 33.925221,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 22.533351,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 21.691927,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 7.986377,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.941423,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 9.094089,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 8.171752,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.072339,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008171,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.939729,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.903383,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.158703,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.098969,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.68679,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.647541,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.078591,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 1.021746,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.081543,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.021728,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.709452,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.668721,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.719002,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.658092,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.175376,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.116917,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.327377,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.27413,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.730825,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.690713,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 5.05741,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 5.012651,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.067744,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008499,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.07961,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.020166,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.085208,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008031,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.609677,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.553724,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 25.654854,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 25.701704,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.387487,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 34.488165,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 22.364074,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 21.475727,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.048819,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.988918,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.987216,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 8.042772,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.07267,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008916,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.953457,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.891459,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.158954,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.098375,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.723366,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.668745,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.095523,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 1.034088,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.080656,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.02024,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.847203,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.796821,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.732211,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.669959,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.18118,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.121619,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.34337,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.282538,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.805308,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.766373,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 5.199917,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 5.140293,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.071996,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.007467,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.083544,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.022547,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.086403,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008171,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.622953,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.561889,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 26.43717,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 26.459386,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 35.012502,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 35.096732,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 23.20709,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 22.299004,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.214913,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 8.162706,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 9.525242,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 8.5478,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.072005,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.00812,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.914379,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.852043,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.152844,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.094021,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.682705,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.621421,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.045541,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.985755,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.081631,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.022645,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.651507,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.593972,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.715157,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.654789,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.175332,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.116671,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.323407,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.263626,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.862298,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.812921,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 5.209382,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 5.147262,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.072872,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.010166,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.08226,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.020435,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.08212,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008589,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.614705,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.554897,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 25.466238,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 25.489006,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.497256,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 34.499453,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 22.304962,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 21.358497,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.112498,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 8.076869,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.81677,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 7.859075,
+            "work_items": 8192
+          }
+        ]
+      ],
+      "plain_structure": [
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 6.375958
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 6.791791
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 6.944917
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 2147483648,
+          "retained_release_ms": 6.715583
+        }
+      ]
+    },
+    {
+      "fixture": "real-N1024-K16-H0-B16",
+      "fixed_work_operation_ms": {
+        "baseline_median": 885.2147085,
+        "candidate_median": 884.935375,
+        "paired_median_ratio": 1.0036639990910086,
+        "exploratory_95_interval": [
+          0.9889262220869736,
+          1.0169318424555722
+        ],
+        "pair_ratios": [
+          1.0119025911015296,
+          1.0169318424555722,
+          0.9954254070804874,
+          0.9889262220869736
+        ]
+      },
+      "sampled_operations": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sampled_stage_metrics": [
+        [
+          {
+            "cpu_ms": 0.070533,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008246,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.81108,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.748701,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.15097,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.092585,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.317911,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.25509,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.023418,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.96374,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.077,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.018336,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.590288,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.53338,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.201133,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.142442,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.170915,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.115253,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.260335,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.201533,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.138718,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.079634,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 4.952361,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.921205,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.065791,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008366,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.076921,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.018046,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.107368,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008912,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.605052,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.545251,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.392923,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 34.384496,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.130936,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 28.194746,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 31.038871,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 30.132531,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 7.942573,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.961789,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 17.834062,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 16.900297,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.070838,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008088,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.862462,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.842969,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.154218,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.098662,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.326791,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.263502,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.015877,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.960507,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.079298,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.019721,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.681508,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.622242,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.273163,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.21191,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.178029,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.116824,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.288487,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.22892,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.139287,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.080262,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 5.069075,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 5.004421,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.067077,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008373,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.078199,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.018498,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.118998,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008245,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.609542,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.549709,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.837955,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 34.832108,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.690628,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 28.68962,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 31.499821,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 30.581775,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.118787,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 8.059369,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 18.261978,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 17.287246,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.072536,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.009043,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.816453,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.779497,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.154247,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.095488,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.313874,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.267866,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.038655,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.985083,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.079495,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.01983,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.580016,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.518659,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.223497,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.182551,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.17232,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.113798,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.274995,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.21542,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.139536,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.080336,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 4.898369,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.840083,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.067801,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008492,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.076996,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.017536,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.093037,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008952,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.608458,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.549068,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.226493,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 34.188629,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.055588,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 28.111588,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 30.85064,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 29.887752,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 7.892831,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.830948,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 17.692606,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 16.681357,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.071665,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.007742,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.911961,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.870257,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.157626,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.097986,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 2.327452,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 2.266793,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.029162,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.969161,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.08034,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.020968,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.623918,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.577431,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.182405,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 1.133345,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.171831,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.113382,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.279129,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.219675,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.14432,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 0.084853,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 5.010034,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.955762,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.07233,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.009794,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.080501,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.018545,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.09708,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008496,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.61336,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.570218,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.768765,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 34.763162,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 28.280701,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 28.290257,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 31.34204,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 30.414315,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 7.848816,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.779887,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 18.127675,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 17.150143,
+            "work_items": 8192
+          }
+        ]
+      ],
+      "plain_structure": [
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 0.000042
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 0.000084
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 0
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 0.000041
+        }
+      ]
+    },
+    {
+      "fixture": "real-N1024-K16-H4-B16",
+      "fixed_work_operation_ms": {
+        "baseline_median": 990.4130625,
+        "candidate_median": 988.703479,
+        "paired_median_ratio": 0.9964618744920604,
+        "exploratory_95_interval": [
+          0.9913720374119407,
+          1.0108930004106138
+        ],
+        "pair_ratios": [
+          0.9949699277457504,
+          0.9979538212383702,
+          1.0108930004106138,
+          0.9913720374119407
+        ]
+      },
+      "sampled_operations": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sampled_stage_metrics": [
+        [
+          {
+            "cpu_ms": 0.070619,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.00881,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.822923,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.768835,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.15382,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.095715,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.66813,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.606259,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.045334,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.986841,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.077445,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.019085,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.635828,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.614212,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.72163,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.660783,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.174206,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.115966,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.308123,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.250785,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.639492,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.640237,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 5.173579,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 5.173437,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.065827,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.007825,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.080698,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.020952,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.090078,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008364,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.601485,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.542907,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 35.436041,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 35.624579,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 33.914626,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 34.058301,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 32.064468,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 31.34016,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.006003,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.97347,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 18.477032,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 17.659258,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.074754,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.007668,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.85566,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.814332,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.153809,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.093661,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.67038,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.606419,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.033202,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.972795,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.088457,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.028999,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.573701,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.512044,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.71216,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.650626,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.175674,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.115438,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.318001,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.258045,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.562595,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.493037,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 4.959497,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.893376,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.069086,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.00819,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.083713,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.022747,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.083995,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.009206,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.618749,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.582816,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 35.468723,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 35.599498,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 33.595868,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 33.573408,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 32.036824,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 31.241405,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 7.924872,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 7.875621,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 18.258009,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 17.317851,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.072831,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.008836,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.900992,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.851256,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.154495,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.095539,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.708752,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.63667,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.050503,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 1.006158,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.081,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.022261,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.73526,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.697839,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.72187,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.663091,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.187168,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.123836,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.34868,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.313165,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.79901,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.751931,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 5.197132,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 5.178752,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.067407,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008209,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.081159,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.0213,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.080817,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008621,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.610742,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.551338,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 35.643758,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 35.837891,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.554119,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 34.712128,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 32.222014,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 31.451911,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.087951,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 8.061941,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 18.242885,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 17.326301,
+            "work_items": 8192
+          }
+        ],
+        [
+          {
+            "cpu_ms": 0.071547,
+            "intervals": 512,
+            "name": "commit_owner_wait",
+            "wall_ms": 0.009048,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 2.858121,
+            "intervals": 512,
+            "name": "commit_proof_validation",
+            "wall_ms": 2.803168,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.153866,
+            "intervals": 512,
+            "name": "commit_default_removal_prepare",
+            "wall_ms": 0.094008,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 1.68713,
+            "intervals": 512,
+            "name": "commit_transition_preflight",
+            "wall_ms": 1.637006,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.053216,
+            "intervals": 512,
+            "name": "commit_epoch_prepare",
+            "wall_ms": 0.992919,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.080623,
+            "intervals": 512,
+            "name": "commit_completion",
+            "wall_ms": 0.022667,
+            "work_items": 0
+          },
+          {
+            "cpu_ms": 3.635862,
+            "intervals": 512,
+            "name": "commit_root",
+            "wall_ms": 3.57588,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.7155,
+            "intervals": 512,
+            "name": "commit_metadata_apply",
+            "wall_ms": 0.655796,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 0.175876,
+            "intervals": 512,
+            "name": "commit_root_publication",
+            "wall_ms": 0.116268,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 1.330614,
+            "intervals": 512,
+            "name": "commit_cleanup",
+            "wall_ms": 1.270702,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 6.669263,
+            "intervals": 512,
+            "name": "commit_history_collect",
+            "wall_ms": 6.602376,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 5.055961,
+            "intervals": 512,
+            "name": "commit_provider_retire",
+            "wall_ms": 4.995582,
+            "work_items": 8176
+          },
+          {
+            "cpu_ms": 0.067579,
+            "intervals": 512,
+            "name": "transaction_begin_owner_wait",
+            "wall_ms": 0.008207,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.080624,
+            "intervals": 512,
+            "name": "transaction_begin",
+            "wall_ms": 0.020826,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.095928,
+            "intervals": 512,
+            "name": "write_bytes_owner_wait",
+            "wall_ms": 0.008037,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 0.613592,
+            "intervals": 512,
+            "name": "write_bytes_batch_begin",
+            "wall_ms": 0.553534,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 35.551206,
+            "intervals": 512,
+            "name": "write_bytes_body",
+            "wall_ms": 35.696948,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 34.120427,
+            "intervals": 512,
+            "name": "write_bytes_batch_finish",
+            "wall_ms": 34.148843,
+            "work_items": 512
+          },
+          {
+            "cpu_ms": 32.063868,
+            "intervals": 8192,
+            "name": "write_acquire",
+            "wall_ms": 31.274504,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 8.172697,
+            "intervals": 512,
+            "name": "write_publish_host",
+            "wall_ms": 8.162127,
+            "work_items": 8192
+          },
+          {
+            "cpu_ms": 18.308498,
+            "intervals": 8192,
+            "name": "write_provider_prepare",
+            "wall_ms": 17.397086,
+            "work_items": 8192
+          }
+        ]
+      ],
+      "plain_structure": [
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 6.716958
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 7.350583
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 7.521458
+        },
+        {
+          "reserved": 131072,
+          "sealed": 131072,
+          "requests": 0,
+          "commits": 8192,
+          "cow_bytes": 8589934592,
+          "retained_release_ms": 6.53875
+        }
+      ]
+    }
+  ],
+  "interpretation": "Sampled inclusive phase diagnostics and perturbation, not fine self/wait/hold attribution."
+}

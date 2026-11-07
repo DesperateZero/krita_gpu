@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/apple/krita_gpu/.venv/bin/ninja",
+    "-C",
+    "/Users/apple/krita_gpu/krita/_build-br1-tsan",
+    "-j6",
+    "KisPageStoreCpuMutationTest",
+    "KisPageStorePhysicalClaimTest",
+    "KisPageStoreReferenceTest",
+    "KisPageStoreResidentReadTest",
+    "KisPageStoreReadBaselineTest",
+    "kis_tiled_data_manager_test",
+    "FreehandStrokeTest",
+    "MatchedFreehandBaselineTest",
+    "kis_transaction_test",
+    "KisCompletionRegistryTest",
+    "KisPageStoreFoundationTest"
+  ],
+  "exit_code": 0
+}

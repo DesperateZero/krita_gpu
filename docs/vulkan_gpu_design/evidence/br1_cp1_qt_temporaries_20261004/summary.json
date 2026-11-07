@@ -1,0 +1,117 @@
+{
+  "observations": [
+    {
+      "arch": "arm64",
+      "previous_round": "reset-ledger-01-arm64",
+      "current_round": "observed-arm64",
+      "observed_unpaid_page_sites_before": 348,
+      "observed_unpaid_page_sites_after": 345,
+      "remaining_sites": [],
+      "removed_allocations": {
+        "mutation-error-output": 139,
+        "format-number-temporary": 10
+      },
+      "scope": "Exact three CPU-path source locations only. Other site-count changes are not credited; this is not a complete external capacity or fault qualification."
+    },
+    {
+      "arch": "x86_64",
+      "previous_round": "reset-ledger-02-x86_64",
+      "current_round": "observed-x86_64",
+      "observed_unpaid_page_sites_before": 346,
+      "observed_unpaid_page_sites_after": 340,
+      "remaining_sites": [],
+      "removed_allocations": {
+        "mutation-error-output": 139,
+        "format-number-temporary": 10
+      },
+      "scope": "Exact three CPU-path source locations only. Other site-count changes are not credited; this is not a complete external capacity or fault qualification."
+    }
+  ],
+  "runs": {
+    "normal-arm64": {
+      "pid": 35295,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 11.995539417024702,
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 9605ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "audit_loaded": null,
+      "heap": []
+    },
+    "normal-x86_64": {
+      "pid": 35293,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 15.155878500081599,
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 11905ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "audit_loaded": null,
+      "heap": []
+    },
+    "tsan-arm64": {
+      "pid": 35289,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 122.045920417062,
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 117977ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "audit_loaded": null,
+      "instrumented_core_loaded": true,
+      "tsan_warnings": [],
+      "heap": []
+    },
+    "observed-arm64": {
+      "pid": 35661,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 25.213823499972932,
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 19870ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "audit_loaded": true,
+      "heap": [
+        "HEAP label=after-static-destructors live=60276202 paid_live=0 peak=13003696571 paid_peak=12901646000 nodes=1461 paid_nodes=0 peak_nodes=28596 allocations=2425289 frees=2423828 overflow=0",
+        "VM_API label=after-static-destructors live=34045952 peak=12954796032 paid_live=0 paid_peak=12899581952 created=205 freed=200 partial=0 native_free_calls=0 native_freed=0 native_failures=0 paid_free_still_mapped=0",
+        "TABLE_OVERFLOW pointer=0 site=0 symbol=0 duplicate=0 native_request=0 native_mapping=0 destructor=0 total=0",
+        "NATIVE_EVENTS creates=444 destroys=443 request_live=1 request_peak=18",
+        "USABLE label=after-static-destructors live=60674352 peak=13004237968 paid_live=0 paid_peak=12901646000 paid_excess_peak=0"
+      ]
+    },
+    "observed-x86_64": {
+      "pid": 35662,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 31.78318062494509,
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 24117ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true,
+      "audit_loaded": true,
+      "heap": [
+        "HEAP label=after-static-destructors live=60284706 paid_live=0 peak=13003723795 paid_peak=12901662384 nodes=1482 paid_nodes=0 peak_nodes=29361 allocations=2322158 frees=2320676 overflow=0",
+        "VM_API label=after-static-destructors live=34033664 peak=12954767360 paid_live=0 paid_peak=12899602432 created=204 freed=199 partial=0 native_free_calls=0 native_freed=0 native_failures=0 paid_free_still_mapped=0",
+        "TABLE_OVERFLOW pointer=0 site=0 symbol=0 duplicate=0 native_request=0 native_mapping=0 destructor=0 total=0",
+        "NATIVE_EVENTS creates=444 destroys=443 request_live=1 request_peak=18",
+        "USABLE label=after-static-destructors live=60692784 peak=13004277888 paid_live=0 paid_peak=12901662384 paid_excess_peak=0"
+      ]
+    }
+  },
+  "complete_CP1": false
+}

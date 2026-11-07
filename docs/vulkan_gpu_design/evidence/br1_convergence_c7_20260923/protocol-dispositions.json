@@ -1,0 +1,344 @@
+{
+  "schema": 1,
+  "scope": "Batch 7 live superseded-overlay lifetime replacement; not all C2 or whole-program dead-code certification",
+  "pre-change-gate": "Passed: 21 manifest entries, 18 ownership facts, 16 census groups, 1514 APIs, 13463 edges, 14 callbacks, 21 external intrusion files",
+  "before-graph-sha256": "d5009d21db2137688cc506f0a21cee8d9be89ebf465f085d8b480207eebc578f",
+  "after-graph-sha256": "7cf59129715aa1ff4089b7f05c0d7d953f7ce4ed46ddbea71f5489c97a21026a",
+  "fixed-convergence-start-unchanged": true,
+  "retired-api-declarations": [
+    {
+      "callback-registrations": [],
+      "codegen-name": "",
+      "declarations": [
+        {
+          "column": 5,
+          "line": 71,
+          "path": "libs/image/pagestore/KisPageReadCoordinator_p.h"
+        }
+      ],
+      "definitions": [
+        {
+          "column": 25,
+          "line": 32,
+          "path": "libs/image/pagestore/KisPageReadCoordinator.cpp"
+        }
+      ],
+      "kind": "constructor",
+      "name": "KisPageReadCoordinator",
+      "non-call-references": [],
+      "production-callers": [
+        {
+          "caller": "KisPageStore::Private::Private",
+          "caller-usr": "c:@S@KisPageStore@S@Private@F@Private#",
+          "column": 11,
+          "dynamic": false,
+          "implicit": false,
+          "line": 291,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        }
+      ],
+      "qualified-name": "KisPageReadCoordinator::KisPageReadCoordinator",
+      "specializations-and-overrides": [],
+      "test-callers": [],
+      "usr": "c:@S@KisPageReadCoordinator@F@KisPageReadCoordinator#&$@S@KisPageMetadataCoordinator#&$@S@KisImageEpochReferenceModel#&$@S@KisPageOwnerLedger#&$@S@KisPageHistoryCollector#&$@S@KisPageRetirementQueue#&$@S@QSharedPointer>#$@S@KisCompletionRegistry#&$@S@QMutex#&K#&b#S16_#*v#*F$@S@QList>#$@S@KisPageTransitionEffect(#S17_#&1$@S@KisPageVersion)#",
+      "decision": "Live constructor signature loses Store reverse-callback/context parameters; constructor call migrated. Deleted copy/move declarations are unchanged, not removed APIs.",
+      "dead-code-certification": false
+    },
+    {
+      "callback-registrations": [],
+      "codegen-name": "",
+      "declarations": [
+        {
+          "column": 10,
+          "line": 99,
+          "path": "libs/image/pagestore/KisPageReadCoordinator_p.h"
+        }
+      ],
+      "definitions": [
+        {
+          "column": 30,
+          "line": 177,
+          "path": "libs/image/pagestore/KisPageReadCoordinator.cpp"
+        }
+      ],
+      "kind": "instance-method",
+      "name": "cancelLocked",
+      "non-call-references": [],
+      "production-callers": [
+        {
+          "caller": "KisPageStore::cancel",
+          "caller-usr": "c:@S@KisPageStore@F@cancel#&1$@S@KisReadRequest#",
+          "column": 31,
+          "dynamic": false,
+          "implicit": false,
+          "line": 3533,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        }
+      ],
+      "qualified-name": "KisPageReadCoordinator::cancelLocked",
+      "specializations-and-overrides": [],
+      "test-callers": [],
+      "usr": "c:@S@KisPageReadCoordinator@F@cancelLocked#&1$@S@KisReadRequest#",
+      "decision": "Live signature now takes the held owner lock; successful ReleaseRead triggers historical collection and lock-external retirement. Failed resolve reuses this method and retains rejected-release requests.",
+      "dead-code-certification": false
+    },
+    {
+      "callback-registrations": [
+        {
+          "column": 37,
+          "containers": [
+            {
+              "name": "KisPageStore::Private::Private",
+              "usr": "c:@S@KisPageStore@S@Private@F@Private#"
+            }
+          ],
+          "line": 302,
+          "path": "libs/image/pagestore/KisPageStore.cpp",
+          "scope": "production"
+        }
+      ],
+      "codegen-name": "",
+      "declarations": [],
+      "definitions": [
+        {
+          "column": 45,
+          "line": 341,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        }
+      ],
+      "kind": "static-method",
+      "name": "discardReadSuperseded",
+      "non-call-references": [],
+      "production-callers": [],
+      "qualified-name": "KisPageStore::Private::discardReadSuperseded",
+      "specializations-and-overrides": [],
+      "test-callers": [],
+      "usr": "c:@S@KisPageStore@S@Private@F@discardReadSuperseded#*v#&1$@S@KisPageVersion#S",
+      "decision": "Address-taken callback removed with its registration, context pointer and ReadCoordinator callback state. Captured-view release uses HistoryCollector directly.",
+      "dead-code-certification": false
+    },
+    {
+      "callback-registrations": [],
+      "codegen-name": "",
+      "declarations": [],
+      "definitions": [
+        {
+          "column": 38,
+          "line": 526,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        }
+      ],
+      "kind": "instance-method",
+      "name": "discardSupersededPreparedVersion",
+      "non-call-references": [],
+      "production-callers": [
+        {
+          "caller": "KisPageStore::Private::discardReadSuperseded",
+          "caller-usr": "c:@S@KisPageStore@S@Private@F@discardReadSuperseded#*v#&1$@S@KisPageVersion#S",
+          "column": 63,
+          "dynamic": false,
+          "implicit": false,
+          "line": 343,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        },
+        {
+          "caller": "KisPageStore::release",
+          "caller-usr": "c:@S@KisPageStore@F@release#$@S@KisReadLease#&1$@S@KisCompletionTicket#",
+          "column": 55,
+          "dynamic": false,
+          "implicit": false,
+          "line": 3562,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        },
+        {
+          "caller": "KisPageStore::acknowledgeLastUse",
+          "caller-usr": "c:@S@KisPageStore@F@acknowledgeLastUse#&1$@S@KisVerifiedCompletion#",
+          "column": 27,
+          "dynamic": false,
+          "implicit": false,
+          "line": 3581,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        },
+        {
+          "caller": "KisPageStore::finishWrite",
+          "caller-usr": "c:@S@KisPageStore@F@finishWrite#$@S@KisWriteLease#&1$@S@KisCompletionTicket#",
+          "column": 30,
+          "dynamic": false,
+          "implicit": false,
+          "line": 3825,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        }
+      ],
+      "qualified-name": "KisPageStore::Private::discardSupersededPreparedVersion",
+      "specializations-and-overrides": [],
+      "test-callers": [],
+      "usr": "c:@S@KisPageStore@S@Private@F@discardSupersededPreparedVersion#&1$@S@KisPageVersion#",
+      "decision": "Active cleanup protocol replaced, not dead: generic finishWrite detaches only after a valid replacement proof; HistoryCollector handles final eligibility and descriptor/replica cleanup. Old read release, last-use and captured-view consumers migrated.",
+      "dead-code-certification": false
+    },
+    {
+      "callback-registrations": [],
+      "codegen-name": "",
+      "declarations": [],
+      "definitions": [
+        {
+          "column": 10,
+          "line": 563,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        }
+      ],
+      "kind": "instance-method",
+      "name": "retireWriteEffectsLocked",
+      "non-call-references": [],
+      "production-callers": [
+        {
+          "caller": "KisPageMutationSession::Private::cancelLocked",
+          "caller-usr": "c:@S@KisPageMutationSession@S@Private@F@cancelLocked#*$@S@QMutexLocker>#$@S@QMutex#",
+          "column": 54,
+          "dynamic": false,
+          "implicit": false,
+          "line": 904,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        },
+        {
+          "caller": "KisPageStore::acquireWriteImpl",
+          "caller-usr": "c:@S@KisPageStore@F@acquireWriteImpl#&1$@S@KisPageTransaction#&1$@S@KisPageKey#$@S@KisPageAccessRequirement#$@E@KisPageWriteMode#$@E@KisPagePriority#*$@S@KisPageStoreWriteReservation#",
+          "column": 16,
+          "dynamic": false,
+          "implicit": false,
+          "line": 3383,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        },
+        {
+          "caller": "KisPageStore::cancel",
+          "caller-usr": "c:@S@KisPageStore@F@cancel#&1$@S@KisWriteRequest#",
+          "column": 8,
+          "dynamic": false,
+          "implicit": false,
+          "line": 3552,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        },
+        {
+          "caller": "KisPageStore::finishWrite",
+          "caller-usr": "c:@S@KisPageStore@F@finishWrite#$@S@KisWriteLease#&1$@S@KisCompletionTicket#",
+          "column": 8,
+          "dynamic": false,
+          "implicit": false,
+          "line": 3828,
+          "path": "libs/image/pagestore/KisPageStore.cpp"
+        }
+      ],
+      "qualified-name": "KisPageStore::Private::retireWriteEffectsLocked",
+      "specializations-and-overrides": [],
+      "test-callers": [],
+      "usr": "c:@S@KisPageStore@S@Private@F@retireWriteEffectsLocked#&1$@S@QList>#$@S@KisPageTransitionEffect#&$@S@QMutexLocker>#$@S@QMutex#",
+      "decision": "Renamed retireEffectsLocked and reused by native seal/read release/last-use in addition to generic terminal/cancel. This is shared execution of the existing retirement authority, not a new coordinator.",
+      "dead-code-certification": false
+    }
+  ],
+  "state-and-field-dispositions": [
+    {
+      "removed": "KisPageTransitionKind::DiscardSupersededPreparedVersions (25) and its 65-line StateMachine branch",
+      "replacement": "DetachPreparedVersion then canonical DiscardHistoricalVersions (26); subsequent enum values unchanged. Latest Prepared remains ineligible for historical deletion. Original transition tests migrated to the two-stage protocol."
+    },
+    {
+      "removed": "MetadataCoordinator superseded-discard local-transition and transaction-snapshot special cases",
+      "replacement": "Existing single-version detach and indexed historical-discard paths; no full snapshot export for indexed tests."
+    },
+    {
+      "removed": "KisPageReadCoordinator::DiscardSuperseded/m_ownerContext/m_discardSuperseded",
+      "replacement": "HistoryCollector is the sole old-version cleanup authority for captured views; no Store callback."
+    },
+    {
+      "removed": "KisPageLastUseAcknowledgeResult::releasedVersions and KisPageReadReleaseResult::version",
+      "replacement": "Keep only affected page keys for HistoryCollector; exact versions remain in active capabilities and metadata, not a second cleanup list."
+    },
+    {
+      "removed": "Failed resolve ignores ReleaseRead acceptance and erases request",
+      "replacement": "Existing cancelLocked retains requests on rejected release and schedules historical collection on success; no new request owner."
+    }
+  ],
+  "semantic-changes": [
+    "Detached generic overlay readers no longer block abort of the latest transaction overlay; exact old generation remains retained like native readers.",
+    "Request cancel and provider access failure now trigger historical collection after ReleaseRead."
+  ],
+  "regressions": [
+    "KisPageStoreCpuMutationTest::supersededOverlayUsesHistoricalLifetime (84 rows)",
+    "KisPageStoreFoundationTest::stateMachineCommitsLatestTransactionGeneration",
+    "KisPageStoreFoundationTest::stateMachineCapturedVersionRetention",
+    "KisPageStoreReferenceTest::indexedHistoricalDiscard (20 rows)"
+  ],
+  "retained-gaps": [
+    "provider preparation and overlay seal not fully unified",
+    "native multi-page atomic candidates remain required",
+    "native destructor under full Debt lacks retained cancellation ownership or reserved exit resources",
+    "C3 compatibility/scope/cache, C4 global scans/swap accounting/finite config/identity lifetime, C5 compact projection/descriptors/performance remain open"
+  ],
+  "line-changes": [
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "added": 1,
+      "removed": 3
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator.cpp",
+      "added": 9,
+      "removed": 22
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator_p.h",
+      "added": 3,
+      "removed": 11
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStateMachine.cpp",
+      "added": 0,
+      "removed": 65
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStateMachine.h",
+      "added": 1,
+      "removed": 2
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "added": 24,
+      "removed": 70
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreFoundationTest.cpp",
+      "added": 8,
+      "removed": 6
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "added": 16,
+      "removed": 9
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "added": 99,
+      "removed": 0
+    },
+    {
+      "path": "build-tools/ci-scripts/check-pagestore-architecture.py",
+      "added": 2,
+      "removed": 1
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+      "added": 3,
+      "removed": 0
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/state-ownership.json",
+      "added": 1,
+      "removed": 1
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/runtime-census.json",
+      "added": 2,
+      "removed": 1
+    }
+  ]
+}

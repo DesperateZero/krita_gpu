@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "captured_at_utc": "2026-09-29T06:57:41Z",
+  "head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "origin_master": "cdf0a1c4a37ca3a928c37d44465e7e52b4b9bae9",
+  "scope": "BC9/OP9 ordinary direct writeOperation backing preflight, execution-local rollback, same-history-owner retry, and untouched preparation cleanup",
+  "production_changes": true,
+  "production_scope": {
+    "files": 6,
+    "public_or_protected_product_api_added": 0,
+    "manager_or_tile_fields_added": 0,
+    "ui_tool_paintop_painter_paintdevice_scheduler_files_changed": 0,
+    "new_includes": 0,
+    "new_friends": 0,
+    "new_locks": 0,
+    "new_tls": 0
+  },
+  "source_files": {
+    "libs/image/pagestore/KisPageStore.h": "000af9e78de8ae45704f1684265bb138c0081a8a8270c88a29f791827ea23405",
+    "libs/image/pagestore/KisPageStore.cpp": "ff6f077b0cceed6f82d2710c81ae1151aaf367c239fcd5a323a679ae937601ef",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "a63905df75b2ce2260ba3a065f8a482b894331fda507df0c6adf39465a45ecfb",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "1a1b97e366b2bcd421e98f2b68d9b5ece298bbe058f92c41fa8408e22e49d5d5",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "57df13d35488f5514d18d0038754f4100542247f586e16656695db9058f6ef35",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "b0edefed5fe468498b93406c315102bd609376b2197c95237faca466f50f8875",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.h": "e06c861f42fc4311c62f000d981e9cc40bfef2934e971dea4627d5a05a6223d4",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "3420e5be0dc17ddc836f435e6a4d3cf57ad937d439a06a55fbcde572be0bddac"
+  },
+  "binaries": {
+    "kis_tiled_data_manager_test": "20b49dc0c2d52fbdcc870ea74a6a785500c63748c6cb667235b49196a869af16",
+    "libkritaimage": "49a029e17a4c668d881d641b5ca49e981568b63378260bff35bd1fb462526c68",
+    "reverse_callgraph": "56ecc601a2509f3c28e3d4e258588515d2faa6e01a13dc8ff044b4d998c3cdc8"
+  },
+  "logs": {
+    "tiled-arm64.log": "2a21d4d13ab3c459e02c69bfcd8d906d2e994161699f03c5df2a5fd77f8a46ec",
+    "tiled-x86_64.log": "67b1424696113b7660dc6c4c459eab7ad7ba31e0f380104549b5b2304ba4b9dd",
+    "architecture.log": "a6bd9ed2a44ddbea5fbb66f0ae183bed6867fb54fd97aad61d7adc57735807a0",
+    "document-validation.json": "d6b3e4de749d4da3719481787ca2f0072d924a65a3cd2b9063f99a9fbb1f7411"
+  },
+  "tests": [
+    {
+      "target": "kis_tiled_data_manager_test",
+      "cases": [
+        "testPageStorePixelOperationPreflightBudgetPressure",
+        "testPageStoreChangedStorage"
+      ],
+      "arm64": {"passed": 131, "failed": 0, "skipped": 0}
+    },
+    {
+      "target": "kis_tiled_data_manager_test",
+      "cases": ["testPageStorePixelOperationPreflightBudgetPressure"],
+      "x86_64": {"passed": 3, "failed": 0, "skipped": 0}
+    }
+  ],
+  "assertions": {
+    "callback_not_invoked_on_preflight_failure": true,
+    "same_history_owner_retry_succeeds": true,
+    "previous_pending_work_retained": true,
+    "untouched_preparations_cancelled_before_export": true,
+    "pages_sealed_equals_changed_pages": true,
+    "active_write_pages_zero_after_commit": true,
+    "structured_pressure_result_complete": false,
+    "scheduler_continuation_complete": false,
+    "default_enablement": false
+  },
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 25,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1824,
+    "reverse_call_edges": 19890,
+    "callback_registrations": 17,
+    "external_intrusion_files": 19
+  },
+  "open_scope": [
+    "reliable permanent/waitable/cancel classification",
+    "pre-first-byte scheduler continuation",
+    "automatic recovery after resource release",
+    "multi-store and multi-document fairness",
+    "complete resource charging",
+    "default enablement"
+  ]
+}

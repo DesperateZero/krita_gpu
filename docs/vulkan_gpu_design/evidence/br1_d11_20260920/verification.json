@@ -1,0 +1,45 @@
+{
+  "verified": "2026-09-20T14:25:09.646Z",
+  "mode": "live-source-and-archive",
+  "identity_files_checked": 418,
+  "live_source_files_skipped": 0,
+  "timed_runs": 400,
+  "loader_checks": 6,
+  "failed_loader_preserved": 1,
+  "analyses_byte_identical": [
+    {
+      "phase": "native",
+      "sha256": "591915446eb3ed5ecf0522eff9dfab282544e058da4a4cef24cd27faad31948b"
+    },
+    {
+      "phase": "native_reference",
+      "sha256": "4cdc2ebb3f79d58297d94d31a0876bd9de349d1fb3c42777c2a7ccf1a722c9fc"
+    },
+    {
+      "phase": "diagnostic",
+      "sha256": "336c33fd512014d83ba127ba9d8a1f620a2d95de86a3859becde29278ad355e1"
+    }
+  ],
+  "regression": {
+    "cpu-mutation-final.log": 17,
+    "tiled-regression.log": 88,
+    "KisPageStoreReferenceTest.log": 59,
+    "KisPageStoreFoundationTest.log": 24,
+    "KisPageStoreResidentReadTest.log": 28,
+    "KisPageStoreReadBaselineTest.log": 41,
+    "kis_tiles3_cpu_baseline_test.log": 34,
+    "vulkan-regression.log": 13
+  },
+  "previous_artifacts_unchanged": {
+    "d6": 460,
+    "d7": 298,
+    "d8": 475,
+    "d9": 889,
+    "d10": 1938
+  },
+  "sealed_artifacts_verified": null,
+  "documents": 68,
+  "local_links": 494,
+  "anchor_links": 19,
+  "qualification": "D11 safe-COW production segment correctness/diagnostic only. K1 regression and upstream write gap remain; no NI, in-place permit, short publication, full drain or GPU/UMA qualification."
+}

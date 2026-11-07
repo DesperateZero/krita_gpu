@@ -1,0 +1,84 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "preparedCompletionsAtCapacity",
+      "registryStorageReturnsToProcessOwner",
+      "compactStorage",
+      "pendingGapsAndTerminalBoundaries",
+      "shuffledCompletionMatchesOracle"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.344,
+    "totals": [
+      "Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 311ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "providerCompletionPreparationRejectsBeforePayload",
+      "providerRetirementUsesPreparedCompletion",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.417,
+    "totals": [
+      "Totals: 12 passed, 0 failed, 0 skipped, 0 blacklisted, 468ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "preparedCompletionsAtCapacity",
+      "registryStorageReturnsToProcessOwner",
+      "compactStorage",
+      "pendingGapsAndTerminalBoundaries",
+      "shuffledCompletionMatchesOracle"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.61,
+    "totals": [
+      "Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 503ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "providerCompletionPreparationRejectsBeforePayload",
+      "providerRetirementUsesPreparedCompletion",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.83,
+    "totals": [
+      "Totals: 12 passed, 0 failed, 0 skipped, 0 blacklisted, 464ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

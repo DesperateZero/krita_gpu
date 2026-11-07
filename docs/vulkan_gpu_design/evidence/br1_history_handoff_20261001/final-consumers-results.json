@@ -1,0 +1,166 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 5,
+    "duration_seconds": 7.822,
+    "totals": [
+      "Totals: 1266 passed, 5 failed, 0 skipped, 0 blacklisted, 4661ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::rejectedRetirementsPreserveDebtAndBudget() 'initialDebt.retirementRetryRequeues >= 20' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank0-delta0) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank0-delta1) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank1-delta0) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank1-delta1) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 9,
+    "duration_seconds": 5.966,
+    "totals": [
+      "Totals: 650 passed, 9 failed, 0 skipped, 0 blacklisted, 2138ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::capturedReadViewFreezesPagesAndSurfaceDefault() 'provider->memoryUsage().committedBytes + 2 * 4096 <= bytesWithHistory' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::capturedReadViewReleasesChangedPagesOnly() Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::capturedReadViewReleaseSkipsReachableHistory() Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::cpuAccessSessionScopesOldAndWritablePageLeases() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::sparseDefaultPageFirstWriteAndUndoStayVersioned() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::surfaceDefaultAndExtentMutateAtomicallyWithEpoch() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::exactGenerationArchivePreservesPublishedAuthorityOnFailure() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::asyncArchiveCompletionCancellationAndShutdownAreFailClosed() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::randomAccessorMatchesTiles3AcrossNegativePageBoundary() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.185,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 20ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 14.374,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 94ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 5,
+    "duration_seconds": 6.447,
+    "totals": [
+      "Totals: 1266 passed, 5 failed, 0 skipped, 0 blacklisted, 5302ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::rejectedRetirementsPreserveDebtAndBudget() 'initialDebt.retirementRetryRequeues >= 20' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank0-delta0) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank0-delta1) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank1-delta0) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::restoreIgnoresDetachedRetirement(blank1-delta1) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 9,
+    "duration_seconds": 4.221,
+    "totals": [
+      "Totals: 650 passed, 9 failed, 0 skipped, 0 blacklisted, 2365ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::capturedReadViewFreezesPagesAndSurfaceDefault() 'provider->memoryUsage().committedBytes + 2 * 4096 <= bytesWithHistory' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::capturedReadViewReleasesChangedPagesOnly() Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::capturedReadViewReleaseSkipsReachableHistory() Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::cpuAccessSessionScopesOldAndWritablePageLeases() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::sparseDefaultPageFirstWriteAndUndoStayVersioned() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::surfaceDefaultAndExtentMutateAtomicallyWithEpoch() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::exactGenerationArchivePreservesPublishedAuthorityOnFailure() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::asyncArchiveCompletionCancellationAndShutdownAreFailClosed() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::randomAccessorMatchesTiles3AcrossNegativePageBoundary() '!store.sessionStats().hasOutstandingCapabilities()' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.163,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 30ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 15.665,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 243ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

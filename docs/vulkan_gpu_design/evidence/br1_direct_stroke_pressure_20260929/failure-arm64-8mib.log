@@ -1,0 +1,71 @@
+Result of deleting resourcecache.sqlite: true
+krita.db.migration: Completed DB update step: "Create table version_information"
+krita.db.migration: Completed DB update step: "Create table storage_types"
+krita.db.migration: Completed DB update step: "Create table resource_types"
+krita.db.migration: Completed DB update step: "Create table storages"
+krita.db.migration: Completed DB update step: "Create table tags"
+krita.db.migration: Completed DB update step: "Create table resources"
+krita.db.migration: Completed DB update step: "Create table versioned_resources"
+krita.db.migration: Completed DB update step: "Create table resource_tags"
+krita.db.migration: Completed DB update step: "Create table metadata"
+krita.db.migration: Completed DB update step: "Create table tags_storages"
+krita.db.migration: Completed DB update step: "Create table tag_translations"
+krita.db.migration: Completed DB update step: "Update metadata table constraints"
+krita.db.migration: Completed DB update step: "Create index for storages"
+krita.db.migration: Completed DB update step: "Create index for versioned_resources"
+krita.db.migration: Completed DB update step: "Create index for tags"
+krita.db.migration: Completed DB update step: "Create index for resources"
+krita.db.migration: Completed DB update step: "Create index for tag_translations"
+krita.db.migration: Completed DB update step: "Create index for resource_tags"
+krita.db.migration: Completed DB update step: "Create index for resources_signature"
+krita.db.migration: Completed DB update step: "Create index for metadata_key"
+krita.db.migration: Completed DB update step: "Register storage type: Unknown"
+krita.db.migration: Completed DB update step: "Register storage type: Folder"
+krita.db.migration: Completed DB update step: "Register storage type: Bundle"
+krita.db.migration: Completed DB update step: "Register storage type: Adobe Brush Library"
+krita.db.migration: Completed DB update step: "Register storage type: Adobe Style Library"
+krita.db.migration: Completed DB update step: "Register storage type: Memory"
+krita.db.migration: Completed DB update step: "Register storage type: Font Storage"
+krita.db.migration: Completed DB update step: "Register resource type: brushes"
+krita.db.migration: Completed DB update step: "Register resource type: fontfamilies"
+krita.db.migration: Completed DB update step: "Register resource type: gamutmasks"
+krita.db.migration: Completed DB update step: "Register resource type: gradients"
+krita.db.migration: Completed DB update step: "Register resource type: layerstyles"
+krita.db.migration: Completed DB update step: "Register resource type: paintoppresets"
+krita.db.migration: Completed DB update step: "Register resource type: palettes"
+krita.db.migration: Completed DB update step: "Register resource type: patterns"
+krita.db.migration: Completed DB update step: "Register resource type: sessions"
+krita.db.migration: Completed DB update step: "Register resource type: symbols"
+krita.db.migration: Completed DB update step: "Register resource type: windowlayouts"
+krita.db.migration: Completed DB update step: "Register resource type: workspaces"
+krita.db.migration: Filled version table
+"/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/org/krita/components/kritaqmlcomponents.qmltypes" has no json!
+"/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/org/krita/components/kritaqmlcomponents_qml_module_dir_map.qrc" has no json!
+"/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita_version" has no json!
+"/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita.app/Contents/MacOS/krita" has no json!
+"/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita.app/Contents/Resources/krita-kra.icns" has no json!
+"/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita.app/Contents/Resources/krita.icns" has no json!
+"/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita.app/Contents/Resources/krita-krz.icns" has no json!
+Invalid profile :  "/Library/ColorSync/Profiles//WebSafeColors.icc"
+********* Start testing of FreehandStrokeTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 17.0.0 (clang-1700.6.4.2)), macos 15.7
+PASS   : FreehandStrokeTest::initTestCase()
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() WARNING: configured swap location is not writable, using a fall-back location "/Users/apple/.qttest/Library/Application Support/FreehandStrokeTest/swap" -> "/private/var/folders/c9/1npx65jj2c92d11w_125xmsm0000gn/T"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "pixel operation history owner is unavailable"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "pixel operation history owner is unavailable"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "CPU mutation is unavailable or used from another thread"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "CPU mutation is unavailable or used from another thread"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "pixel operation history owner is unavailable"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "pixel operation history owner is unavailable"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "pixel operation history owner is unavailable"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "pixel operation history owner is unavailable"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "pixel operation history owner is unavailable"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() Stroke failed: "FREEHAND_STROKE" "Painter multi-dab pixel operation failed"
+QWARN  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() BC9 diagnostic: "metadata arena budget is exhausted"
+FAIL!  : FreehandStrokeTest::testPersistentAutoBrushStrokePressure() Compared values are not the same
+   Actual   (tester.persistentProbe().slowReaderChecks.load()): 0
+   Expected (1)                                               : 1
+   Loc: [/Users/apple/krita_gpu/krita/libs/ui/tests/freehand_stroke_test.cpp(604)]
+PASS   : FreehandStrokeTest::cleanupTestCase()
+Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 53ms
+********* Finished testing of FreehandStrokeTest *********

@@ -1,0 +1,78 @@
+{
+  "product_commit": "e1c328ce8d275f32d2a53f2b2782c09a890016ed",
+  "product_parent": "ee67754c0297e596f9a5b1d1cbe21166488df1e1",
+  "outer_parent": "c9bb8804dddb80601d64d91aebdbd88d0d26743e",
+  "product_tracked_clean": true,
+  "scope": "Darwin PageStore pthread control ownership when external pthread controls share the containing VM region",
+  "production_diff": {
+    "files": 1,
+    "insertions": 20,
+    "deletions": 26
+  },
+  "test_diff": {
+    "files": 1,
+    "insertions": 105,
+    "deletions": 0
+  },
+  "sources": {
+    "libs/image/pagestore/KisPageStoreReclamation.cpp": "63a5fbc9828324745f126c7683deab95e060d06b7a07102924d01b241b2527a7",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "39387e3372b6a81fee19ce02b98a6e984acdb26444627b3fb4a5543368b8b2bd"
+  },
+  "binaries": {
+    "_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "84ac1016a59e45f81f006e5628c12a7c33ed9bcb684c5727fc01418edba17f33",
+    "_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "a6e1dbe3bd32cf0fbf76ed8b7a916d4d4ebc35754008218492b79ef18dd13f9d",
+    "_build-br1-tsan/bin/KisPageStoreCpuMutationTest": "242f64718a981c75022376587376b303e7a29c62f8b83e7a54d660e58ffc59ad",
+    "_build-br1-tsan/bin/libkritaimage.21.0.0.dylib": "8170949b736cdf5b49f3070541cdd47b89c0787fe33564473c2098f4c686fd28"
+  },
+  "logs": {
+    "baseline-failure-arm64.log": {
+      "sha256": "09a07c01701cea5ed4678656b4a4f33de38fc916a4d7864126befcf4ba799026",
+      "production_source": "ee67754c0297e596f9a5b1d1cbe21166488df1e1",
+      "test_source_sha256": "39387e3372b6a81fee19ce02b98a6e984acdb26444627b3fb4a5543368b8b2bd",
+      "totals": "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms",
+      "classification": "Expected test-first failure: the external pthread region was charged as PageStore-owned storage."
+    },
+    "targeted-normal-arm64.log": {
+      "sha256": "81327f50325cc63b407218035df1222340f1042be1cb0732c5e7968304cbcfa8",
+      "totals": "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms",
+      "tsan_reports": 0
+    },
+    "targeted-normal-x86_64.log": {
+      "sha256": "41700ac0932b9cde2aad7c59763e3e02a0248b1b8ad582177177fabf2e7e0a9c",
+      "totals": "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms",
+      "tsan_reports": 0
+    },
+    "targeted-tsan-arm64.log": {
+      "sha256": "a65426727fe39714aca0025189536c2fbfe8fa96189111f5f9de54bc2ad33123",
+      "totals": "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms",
+      "tsan_reports": 0
+    },
+    "full-normal-arm64.log": {
+      "sha256": "a14f4164338ee63d39133e6a674c89433d56f76f15dc58048a0a8b53f65105c0",
+      "totals": "Totals: 1388 passed, 0 failed, 0 skipped, 0 blacklisted, 10417ms",
+      "tsan_reports": 0
+    },
+    "full-normal-x86_64.log": {
+      "sha256": "b7e2c60f84920fcc17fc2fc011d4e6b0169689e2de7553a05b55edf8df6636e8",
+      "totals": "Totals: 1388 passed, 0 failed, 0 skipped, 0 blacklisted, 11311ms",
+      "tsan_reports": 0
+    },
+    "full-tsan-arm64.log": {
+      "sha256": "4e5f9db97da8f66f3865d2051b7b96f1591f0e01dbc51166d89804063ba1f579",
+      "totals": "Totals: 1388 passed, 0 failed, 0 skipped, 0 blacklisted, 125088ms",
+      "tsan_reports": 0
+    }
+  },
+  "commands": {
+    "build_normal": "../../.venv/bin/ninja -j4 bin/KisPageStoreCpuMutationTest (cwd krita/_build-br0-cpu)",
+    "build_tsan": "../../.venv/bin/ninja -j4 bin/KisPageStoreCpuMutationTest (cwd krita/_build-br1-tsan)",
+    "targeted": "KisPageStoreCpuMutationTest nativeControlExcludesExternalThreads -nocrashhandler",
+    "full": "KisPageStoreCpuMutationTest -nocrashhandler"
+  },
+  "limitations": [
+    "The arm64 test closes the first external pthread-control VM-region merge; it is not a full pipeline owned/native peak proof.",
+    "The x86_64 run verifies external-thread coexistence and the charged upper bound but did not reproduce Darwin arm64 region coalescing.",
+    "This run does not repeat completed long manager or pressure workloads.",
+    "It does not qualify non-Darwin capacity/free or host default-abort recovery."
+  ]
+}

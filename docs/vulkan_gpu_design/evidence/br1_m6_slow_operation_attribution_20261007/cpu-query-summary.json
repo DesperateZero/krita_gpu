@@ -1,0 +1,966 @@
+{
+  "processes": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 0,
+      "log": "00-arm64-k1-hit-r0.log",
+      "completed": 46397,
+      "wall_ns": 512004926,
+      "median_ns": 9875,
+      "maximum_ns": 305958,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 771,
+          "wall_ns": 25274638,
+          "median_ns": 31000
+        },
+        "same_query_6_9": {
+          "count": 45514,
+          "wall_ns": 481448660,
+          "median_ns": 9875.0
+        },
+        "different_endpoint_query": {
+          "count": 112,
+          "wall_ns": 5281628,
+          "median_ns": 34916.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.1392405063291138
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 0,
+      "log": "01-arm64-k1-native-pin-r0.log",
+      "completed": 43288,
+      "wall_ns": 512008850,
+      "median_ns": 10917.0,
+      "maximum_ns": 2607000,
+      "slow_1ms_count": 1,
+      "groups": {
+        "same_query_0_5": {
+          "count": 57,
+          "wall_ns": 3388960,
+          "median_ns": 53292
+        },
+        "same_query_6_9": {
+          "count": 43047,
+          "wall_ns": 496465423,
+          "median_ns": 10917
+        },
+        "different_endpoint_query": {
+          "count": 184,
+          "wall_ns": 12154467,
+          "median_ns": 34458.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 4.881560868370431
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 0,
+      "log": "02-arm64-k16-hit-r0.log",
+      "completed": 5044,
+      "wall_ns": 512010593,
+      "median_ns": 97083.0,
+      "maximum_ns": 680709,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 26,
+          "wall_ns": 8909294,
+          "median_ns": 335500.5
+        },
+        "same_query_6_9": {
+          "count": 4906,
+          "wall_ns": 484217426,
+          "median_ns": 96750.0
+        },
+        "different_endpoint_query": {
+          "count": 112,
+          "wall_ns": 18883873,
+          "median_ns": 131750.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.467705426356589
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 0,
+      "log": "03-arm64-k16-native-pin-r0.log",
+      "completed": 3813,
+      "wall_ns": 512065327,
+      "median_ns": 130416,
+      "maximum_ns": 1073125,
+      "slow_1ms_count": 1,
+      "groups": {
+        "same_query_0_5": {
+          "count": 6,
+          "wall_ns": 3147666,
+          "median_ns": 410479.0
+        },
+        "same_query_6_9": {
+          "count": 3669,
+          "wall_ns": 482649908,
+          "median_ns": 129833
+        },
+        "different_endpoint_query": {
+          "count": 138,
+          "wall_ns": 26267753,
+          "median_ns": 160583.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.161592199209754
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 0,
+      "log": "04-x86_64-k1-hit-r0.log",
+      "completed": 32067,
+      "wall_ns": 512001455,
+      "median_ns": 15375,
+      "maximum_ns": 154625,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 27,
+          "wall_ns": 2192457,
+          "median_ns": 76084
+        },
+        "same_query_6_9": {
+          "count": 31977,
+          "wall_ns": 507489500,
+          "median_ns": 15375
+        },
+        "different_endpoint_query": {
+          "count": 63,
+          "wall_ns": 2319498,
+          "median_ns": 29917
+        }
+      },
+      "same_query_slow_fast_median_ratio": 4.9485528455284555
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 0,
+      "log": "05-x86_64-k1-native-pin-r0.log",
+      "completed": 27249,
+      "wall_ns": 512015977,
+      "median_ns": 17250,
+      "maximum_ns": 231666,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 402,
+          "wall_ns": 28723996,
+          "median_ns": 65667.0
+        },
+        "same_query_6_9": {
+          "count": 26751,
+          "wall_ns": 476322484,
+          "median_ns": 17209
+        },
+        "different_endpoint_query": {
+          "count": 96,
+          "wall_ns": 6969497,
+          "median_ns": 41937.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.8158521703759662
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 0,
+      "log": "06-x86_64-k16-hit-r0.log",
+      "completed": 3050,
+      "wall_ns": 512161855,
+      "median_ns": 160209.0,
+      "maximum_ns": 1013708,
+      "slow_1ms_count": 1,
+      "groups": {
+        "same_query_0_5": {
+          "count": 5,
+          "wall_ns": 2916459,
+          "median_ns": 577583
+        },
+        "same_query_6_9": {
+          "count": 2900,
+          "wall_ns": 470707562,
+          "median_ns": 159792.0
+        },
+        "different_endpoint_query": {
+          "count": 145,
+          "wall_ns": 38537834,
+          "median_ns": 188667
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.614592720536698
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 0,
+      "log": "07-x86_64-k16-native-pin-r0.log",
+      "completed": 2483,
+      "wall_ns": 512204859,
+      "median_ns": 200459,
+      "maximum_ns": 962500,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 6,
+          "wall_ns": 4594417,
+          "median_ns": 739250.0
+        },
+        "same_query_6_9": {
+          "count": 2372,
+          "wall_ns": 476928863,
+          "median_ns": 200083.0
+        },
+        "different_endpoint_query": {
+          "count": 105,
+          "wall_ns": 30681579,
+          "median_ns": 222250
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.6947166925725825
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 1,
+      "log": "08-x86_64-k16-native-pin-r1.log",
+      "completed": 2530,
+      "wall_ns": 512145953,
+      "median_ns": 201208.5,
+      "maximum_ns": 683583,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 1,
+          "wall_ns": 645250,
+          "median_ns": 645250
+        },
+        "same_query_6_9": {
+          "count": 2433,
+          "wall_ns": 489197413,
+          "median_ns": 201083
+        },
+        "different_endpoint_query": {
+          "count": 96,
+          "wall_ns": 22303290,
+          "median_ns": 219500.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.2088739475738874
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 1,
+      "log": "09-x86_64-k16-hit-r1.log",
+      "completed": 3168,
+      "wall_ns": 512046266,
+      "median_ns": 160084.0,
+      "maximum_ns": 574666,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 2,
+          "wall_ns": 1143999,
+          "median_ns": 571999.5
+        },
+        "same_query_6_9": {
+          "count": 3012,
+          "wall_ns": 483088016,
+          "median_ns": 159833.0
+        },
+        "different_endpoint_query": {
+          "count": 154,
+          "wall_ns": 27814251,
+          "median_ns": 176083.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.5787321767094404
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 1,
+      "log": "10-x86_64-k1-native-pin-r1.log",
+      "completed": 28354,
+      "wall_ns": 512003900,
+      "median_ns": 17250.0,
+      "maximum_ns": 189542,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 21,
+          "wall_ns": 1970207,
+          "median_ns": 92000
+        },
+        "same_query_6_9": {
+          "count": 28261,
+          "wall_ns": 506475484,
+          "median_ns": 17250
+        },
+        "different_endpoint_query": {
+          "count": 72,
+          "wall_ns": 3558209,
+          "median_ns": 33167.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 5.333333333333333
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 1,
+      "log": "11-x86_64-k1-hit-r1.log",
+      "completed": 29643,
+      "wall_ns": 512009987,
+      "median_ns": 16041,
+      "maximum_ns": 266750,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 397,
+          "wall_ns": 25072891,
+          "median_ns": 58125
+        },
+        "same_query_6_9": {
+          "count": 29164,
+          "wall_ns": 482076267,
+          "median_ns": 15958.0
+        },
+        "different_endpoint_query": {
+          "count": 82,
+          "wall_ns": 4860829,
+          "median_ns": 32520.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.6423737310439903
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 1,
+      "log": "12-arm64-k16-native-pin-r1.log",
+      "completed": 4050,
+      "wall_ns": 512053138,
+      "median_ns": 121667.0,
+      "maximum_ns": 1964875,
+      "slow_1ms_count": 1,
+      "groups": {
+        "same_query_0_5": {
+          "count": 18,
+          "wall_ns": 9174249,
+          "median_ns": 469812.5
+        },
+        "same_query_6_9": {
+          "count": 3988,
+          "wall_ns": 486320888,
+          "median_ns": 121542.0
+        },
+        "different_endpoint_query": {
+          "count": 44,
+          "wall_ns": 16558001,
+          "median_ns": 222604.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.865433348143029
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 1,
+      "log": "13-arm64-k16-hit-r1.log",
+      "completed": 5166,
+      "wall_ns": 512082900,
+      "median_ns": 97875.0,
+      "maximum_ns": 591125,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 6,
+          "wall_ns": 2235333,
+          "median_ns": 359646.5
+        },
+        "same_query_6_9": {
+          "count": 5098,
+          "wall_ns": 495997074,
+          "median_ns": 97854.5
+        },
+        "different_endpoint_query": {
+          "count": 62,
+          "wall_ns": 13850493,
+          "median_ns": 128312.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.6753189684684915
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 1,
+      "log": "14-arm64-k1-native-pin-r1.log",
+      "completed": 43217,
+      "wall_ns": 512005627,
+      "median_ns": 10834,
+      "maximum_ns": 221167,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 711,
+          "wall_ns": 27417650,
+          "median_ns": 35375
+        },
+        "same_query_6_9": {
+          "count": 42407,
+          "wall_ns": 478846102,
+          "median_ns": 10833
+        },
+        "different_endpoint_query": {
+          "count": 99,
+          "wall_ns": 5741875,
+          "median_ns": 53541
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.26548509184898
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 1,
+      "log": "15-arm64-k1-hit-r1.log",
+      "completed": 49611,
+      "wall_ns": 512000091,
+      "median_ns": 10167,
+      "maximum_ns": 133291,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 16,
+          "wall_ns": 732998,
+          "median_ns": 38979.0
+        },
+        "same_query_6_9": {
+          "count": 49555,
+          "wall_ns": 509730967,
+          "median_ns": 10167
+        },
+        "different_endpoint_query": {
+          "count": 40,
+          "wall_ns": 1536126,
+          "median_ns": 23146.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.833874299203305
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 2,
+      "log": "16-arm64-k1-native-pin-r2.log",
+      "completed": 45135,
+      "wall_ns": 512007751,
+      "median_ns": 10875,
+      "maximum_ns": 380000,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 48,
+          "wall_ns": 2115207,
+          "median_ns": 35500.0
+        },
+        "same_query_6_9": {
+          "count": 44997,
+          "wall_ns": 506238459,
+          "median_ns": 10875
+        },
+        "different_endpoint_query": {
+          "count": 90,
+          "wall_ns": 3654085,
+          "median_ns": 24416.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.264367816091954
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 2,
+      "log": "17-arm64-k16-hit-r2.log",
+      "completed": 4974,
+      "wall_ns": 512024366,
+      "median_ns": 99042.0,
+      "maximum_ns": 631875,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 43,
+          "wall_ns": 13755000,
+          "median_ns": 313416
+        },
+        "same_query_6_9": {
+          "count": 4863,
+          "wall_ns": 484335907,
+          "median_ns": 99000
+        },
+        "different_endpoint_query": {
+          "count": 68,
+          "wall_ns": 13933459,
+          "median_ns": 130458.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.1658181818181816
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 2,
+      "log": "18-arm64-k16-native-pin-r2.log",
+      "completed": 4093,
+      "wall_ns": 512104398,
+      "median_ns": 122875,
+      "maximum_ns": 547958,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 5,
+          "wall_ns": 2148418,
+          "median_ns": 418417
+        },
+        "same_query_6_9": {
+          "count": 4033,
+          "wall_ns": 497494313,
+          "median_ns": 122791
+        },
+        "different_endpoint_query": {
+          "count": 55,
+          "wall_ns": 12461667,
+          "median_ns": 151625
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.407554299582217
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 2,
+      "log": "19-x86_64-k1-hit-r2.log",
+      "completed": 30040,
+      "wall_ns": 512012753,
+      "median_ns": 16917.0,
+      "maximum_ns": 242458,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 33,
+          "wall_ns": 3073878,
+          "median_ns": 87083
+        },
+        "same_query_6_9": {
+          "count": 29916,
+          "wall_ns": 503523663,
+          "median_ns": 16917.0
+        },
+        "different_endpoint_query": {
+          "count": 91,
+          "wall_ns": 5415212,
+          "median_ns": 34375
+        }
+      },
+      "same_query_slow_fast_median_ratio": 5.147662115032216
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 2,
+      "log": "20-x86_64-k1-native-pin-r2.log",
+      "completed": 26250,
+      "wall_ns": 512002074,
+      "median_ns": 18459.0,
+      "maximum_ns": 298166,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 312,
+          "wall_ns": 23066661,
+          "median_ns": 65292.0
+        },
+        "same_query_6_9": {
+          "count": 25793,
+          "wall_ns": 479143827,
+          "median_ns": 18458
+        },
+        "different_endpoint_query": {
+          "count": 145,
+          "wall_ns": 9791586,
+          "median_ns": 52333
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.537327987864341
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 2,
+      "log": "21-x86_64-k16-hit-r2.log",
+      "completed": 3124,
+      "wall_ns": 512137184,
+      "median_ns": 161834.0,
+      "maximum_ns": 730750,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 0,
+          "wall_ns": 0,
+          "median_ns": null
+        },
+        "same_query_6_9": {
+          "count": 3010,
+          "wall_ns": 490572599,
+          "median_ns": 161667.0
+        },
+        "different_endpoint_query": {
+          "count": 114,
+          "wall_ns": 21564585,
+          "median_ns": 177646.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": null
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 2,
+      "log": "22-x86_64-k16-native-pin-r2.log",
+      "completed": 2479,
+      "wall_ns": 512069365,
+      "median_ns": 203917,
+      "maximum_ns": 699625,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 0,
+          "wall_ns": 0,
+          "median_ns": null
+        },
+        "same_query_6_9": {
+          "count": 2377,
+          "wall_ns": 488552287,
+          "median_ns": 203500
+        },
+        "different_endpoint_query": {
+          "count": 102,
+          "wall_ns": 23517078,
+          "median_ns": 225583.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": null
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 2,
+      "log": "23-arm64-k1-hit-r2.log",
+      "completed": 47802,
+      "wall_ns": 512001291,
+      "median_ns": 9792.0,
+      "maximum_ns": 142250,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 666,
+          "wall_ns": 21998383,
+          "median_ns": 31708.0
+        },
+        "same_query_6_9": {
+          "count": 47063,
+          "wall_ns": 487282745,
+          "median_ns": 9791
+        },
+        "different_endpoint_query": {
+          "count": 73,
+          "wall_ns": 2720163,
+          "median_ns": 22541
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.23848432233684
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 3,
+      "log": "24-arm64-k1-hit-r3.log",
+      "completed": 48875,
+      "wall_ns": 512002718,
+      "median_ns": 10291,
+      "maximum_ns": 84625,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 47,
+          "wall_ns": 1906832,
+          "median_ns": 34958
+        },
+        "same_query_6_9": {
+          "count": 48790,
+          "wall_ns": 509110840,
+          "median_ns": 10291.0
+        },
+        "different_endpoint_query": {
+          "count": 38,
+          "wall_ns": 985046,
+          "median_ns": 20312.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.3969487902050335
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 3,
+      "log": "25-x86_64-k16-native-pin-r3.log",
+      "completed": 2405,
+      "wall_ns": 512068664,
+      "median_ns": 202375,
+      "maximum_ns": 1786875,
+      "slow_1ms_count": 1,
+      "groups": {
+        "same_query_0_5": {
+          "count": 21,
+          "wall_ns": 13480916,
+          "median_ns": 628792
+        },
+        "same_query_6_9": {
+          "count": 2252,
+          "wall_ns": 459797332,
+          "median_ns": 201958.0
+        },
+        "different_endpoint_query": {
+          "count": 132,
+          "wall_ns": 38790416,
+          "median_ns": 216354.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.1134790401964767
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 3,
+      "log": "26-x86_64-k16-hit-r3.log",
+      "completed": 3100,
+      "wall_ns": 512030711,
+      "median_ns": 161625.0,
+      "maximum_ns": 735125,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 1,
+          "wall_ns": 735125,
+          "median_ns": 735125
+        },
+        "same_query_6_9": {
+          "count": 2987,
+          "wall_ns": 489417875,
+          "median_ns": 161417
+        },
+        "different_endpoint_query": {
+          "count": 112,
+          "wall_ns": 21877711,
+          "median_ns": 184083.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 4.554198132786509
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 3,
+      "log": "27-x86_64-k1-native-pin-r3.log",
+      "completed": 26753,
+      "wall_ns": 512016630,
+      "median_ns": 18750,
+      "maximum_ns": 238042,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 39,
+          "wall_ns": 3660377,
+          "median_ns": 92875
+        },
+        "same_query_6_9": {
+          "count": 26629,
+          "wall_ns": 503143542,
+          "median_ns": 18750
+        },
+        "different_endpoint_query": {
+          "count": 85,
+          "wall_ns": 5212711,
+          "median_ns": 40333
+        }
+      },
+      "same_query_slow_fast_median_ratio": 4.953333333333333
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 3,
+      "log": "28-x86_64-k1-hit-r3.log",
+      "completed": 28448,
+      "wall_ns": 512009977,
+      "median_ns": 17166.0,
+      "maximum_ns": 540833,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 374,
+          "wall_ns": 22522092,
+          "median_ns": 55375.0
+        },
+        "same_query_6_9": {
+          "count": 28000,
+          "wall_ns": 484403678,
+          "median_ns": 17125.0
+        },
+        "different_endpoint_query": {
+          "count": 74,
+          "wall_ns": 5084207,
+          "median_ns": 45041.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.2335766423357666
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "repeat": 3,
+      "log": "29-arm64-k16-native-pin-r3.log",
+      "completed": 4028,
+      "wall_ns": 512066482,
+      "median_ns": 123750.0,
+      "maximum_ns": 702583,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 8,
+          "wall_ns": 3809957,
+          "median_ns": 463895.5
+        },
+        "same_query_6_9": {
+          "count": 3944,
+          "wall_ns": 491869896,
+          "median_ns": 123666.0
+        },
+        "different_endpoint_query": {
+          "count": 76,
+          "wall_ns": 16386629,
+          "median_ns": 149666.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.7511967719502533
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "repeat": 3,
+      "log": "30-arm64-k16-hit-r3.log",
+      "completed": 5117,
+      "wall_ns": 512025341,
+      "median_ns": 98542,
+      "maximum_ns": 581209,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 4,
+          "wall_ns": 1481626,
+          "median_ns": 357417.0
+        },
+        "same_query_6_9": {
+          "count": 5069,
+          "wall_ns": 501253047,
+          "median_ns": 98542
+        },
+        "different_endpoint_query": {
+          "count": 44,
+          "wall_ns": 9290668,
+          "median_ns": 125833.5
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.627052424346979
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 3,
+      "log": "31-arm64-k1-native-pin-r3.log",
+      "completed": 43197,
+      "wall_ns": 512004320,
+      "median_ns": 10917,
+      "maximum_ns": 153083,
+      "slow_1ms_count": 0,
+      "groups": {
+        "same_query_0_5": {
+          "count": 637,
+          "wall_ns": 25017133,
+          "median_ns": 36625
+        },
+        "same_query_6_9": {
+          "count": 42464,
+          "wall_ns": 482006764,
+          "median_ns": 10875.0
+        },
+        "different_endpoint_query": {
+          "count": 96,
+          "wall_ns": 4980423,
+          "median_ns": 44417.0
+        }
+      },
+      "same_query_slow_fast_median_ratio": 3.367816091954023
+    }
+  ],
+  "scope": "Exploratory query strata; no samples deleted, normalized, or qualified; same endpoint does not exclude intervening migration.",
+  "verified": true
+}

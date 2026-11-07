@@ -1,0 +1,82 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": -6,
+    "duration_seconds": 1.565,
+    "totals": [],
+    "failures": [],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": -6,
+    "duration_seconds": 1.557,
+    "totals": [],
+    "failures": [],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementPreparationRollsBackAtCapacity",
+      "retirementResultBindsAtCapacity",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "terminalReclamationStorageAtCapacity"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.24,
+    "totals": [
+      "Totals: 0 passed, 1 failed, 0 skipped, 0 blacklisted, 2ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementPreparationRollsBackAtCapacity() Function not found: retirementPreparationRollsBackAtCapacity"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "indexedHistorySlices"
+    ],
+    "exit_code": -11,
+    "duration_seconds": 1.298,
+    "totals": [],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::indexedHistorySlices(0) Compared values are not the same"
+    ],
+    "passed": false
+  }
+]

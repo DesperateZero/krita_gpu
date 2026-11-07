@@ -1,0 +1,2349 @@
+{
+  "source_identity": {
+    "current": {
+      "sdk/tests/matched_freehand_baseline.h": "07ccdcec67faf26fa23990e947e73567197c6cf22386ac5c1ea5a0e9e3c582b9",
+      "libs/ui/tests/data/autobrush_300px.kpp": "5e86804f67610c653502d0c66948dfc101a8bbbc33f94ac3057a9d6d3ec4f5b3"
+    },
+    "upstream": {
+      "sdk/tests/matched_freehand_baseline.h": "07ccdcec67faf26fa23990e947e73567197c6cf22386ac5c1ea5a0e9e3c582b9",
+      "libs/ui/tests/data/autobrush_300px.kpp": "5e86804f67610c653502d0c66948dfc101a8bbbc33f94ac3057a9d6d3ec4f5b3"
+    }
+  },
+  "preregister_sha256": "5b6398f1438859e5069bf34d813223ad442867b423abc51a2c9ecd258e4bf97d",
+  "records": [
+    {
+      "side": "upstream",
+      "arch": "arm64",
+      "pair": null,
+      "command": [
+        "arch",
+        "-arm64",
+        "-e",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/MatchedFreehandBaselineTest",
+        "testMatchedCpuBaseline",
+        "-nocrashhandler"
+      ],
+      "log": "capability-03-upstream-arm64.log",
+      "exit_code": 1,
+      "process_elapsed_seconds": 2.253054875,
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 579ms"
+      ],
+      "failures": [
+        "FAIL!  : MatchedFreehandBaselineTest::testMatchedCpuBaseline() 'imageDestroyed' returned FALSE. ()"
+      ],
+      "sample": null,
+      "passed": false,
+      "loaded_local_files": [
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/MatchedFreehandBaselineTest",
+          "uuid": "CA585B3D-BE27-3106-AC79-43F513FE5958",
+          "sha256": "f695f549e49f90d0c494d19c6a603f15b7d74ecaa7e9a5f77f74332e157b5582"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaui.21.0.0.dylib",
+          "uuid": "F2AC1E3B-BBE2-3374-AF35-A4E1EC892FBD",
+          "sha256": "8db44255860225cc7428ed972ec456ef3e638e733b09356ee4ea044de537829c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtNetwork.framework/Versions/A/QtNetwork",
+          "uuid": "B24E6759-0C69-3411-8E38-35148A5B40E7",
+          "sha256": "44e2760636ff0cc102ef1d201352caf3bf2a23840e62d7be56ab044738f39a75"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtConcurrent.framework/Versions/A/QtConcurrent",
+          "uuid": "321D3071-7336-370A-A8C0-6EFB3E521530",
+          "sha256": "a5832725aa72e37d64299e8248b4eef9364af1cd284b6eb25155f81c887d6fdb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libpng16.16.51.0.dylib",
+          "uuid": "2870042A-12E8-3C53-8C74-B011434E0E61",
+          "sha256": "3467973a082023e9ac02723a65ee12fcd0297b9cf7ae1209f4679e20f0764e52"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libz.1.3.1.dylib",
+          "uuid": "2FBBC06B-6E87-37EF-95DC-D7F84C9D8EE9",
+          "sha256": "002f9b2efb64eac916c424d158058da4443d79c9c7720c71f3804c2034b88a5c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaimpex.21.0.0.dylib",
+          "uuid": "4BA321AC-B88B-36B9-8886-A1D4997D2536",
+          "sha256": "5b70cb496eee938852525e10785b0ef60735ad2507eb99124aec6aed6efaf365"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritalibbrush.21.0.0.dylib",
+          "uuid": "5DA5DFE5-48A9-355A-BC6A-A845AB4CB222",
+          "sha256": "b8c3fc4fd4731b0eed3f4f8297541565c1f6951f39b14eb38414cc44bc61d871"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaimage.21.0.0.dylib",
+          "uuid": "4A1447A8-5260-3BA4-B50F-D6AD80DEE7F4",
+          "sha256": "a288ac214124c80c4d3961112c3b4ca8c13ee922e8208a63b204dd597f441908"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritapsdutils.21.0.0.dylib",
+          "uuid": "18E9050F-A77E-388E-8ED2-1392AC574A1B",
+          "sha256": "b750256f38285db49a2bd71e6488428b67f716d1b702ee8d5ca046257897f810"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritametadata.21.0.0.dylib",
+          "uuid": "A772F7E0-520A-33EB-93B5-F54AA0447A6F",
+          "sha256": "b3746162dd758959477d33542b40a1e0cd2319ec8ab403bf2a69b72b262c9469"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritawidgets.21.0.0.dylib",
+          "uuid": "CF4E52B1-CCC8-3CDB-8273-10D49E51D7BF",
+          "sha256": "1e8b8f97fc076acaa9ea7fdcb835f910e6aa4a4727c4d1e7cdca66ffe79d5050"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Completion.6.7.0.dylib",
+          "uuid": "6D5F095F-9F53-3D1D-A2A2-FBEE5A1F47B8",
+          "sha256": "0db6af80207e318c9db0391968935c12e96ac89dca7331f580f24c0f27b46830"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaflake.21.0.0.dylib",
+          "uuid": "5F7AB6A8-7CA3-3F58-A4A7-EF3227F63315",
+          "sha256": "9d7bad937e4537ddeef311956a6d19d85005e69a1bf5b27903d7f9aad7ecc2ad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritapigment.21.0.0.dylib",
+          "uuid": "73FAE785-A330-3775-A925-F4B76B69042A",
+          "sha256": "54090a92d3b036e8b4186b5b81d8b8b90a3114c222df94a9c7808715473c836c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritamultiarch.21.0.0.dylib",
+          "uuid": "B7D1DF68-AD4F-360F-85E4-DC8C0903862C",
+          "sha256": "713fea1bbac8a936c3eb933db3d20f8ee3b2cbf99df3bf97e0cf11da56dc2307"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritacommand.21.0.0.dylib",
+          "uuid": "B04DAC9D-F76C-3E7E-AB0B-F8AECA72CF95",
+          "sha256": "de569aacb8c392983fd03dd5e921c3a40dc7fc47806e69f34a70cf3e2df5d265"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfreetype.6.18.3.dylib",
+          "uuid": "F8B3F46F-02A5-3AD8-AD62-82809B702E22",
+          "sha256": "8687c146500e3fcb4b6f4819e4eb9365e42e0f5ec0ca50e281dc7d2ef8cf45d5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libharfbuzz.0.dylib",
+          "uuid": "42AA83F0-7D8C-3F7D-8748-E66A373AC9EC",
+          "sha256": "223f85f420de9d14fe95cadc59bf811ad83b83bf33e540dcc2f4415c2ccad4ad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaresourcewidgets.21.0.0.dylib",
+          "uuid": "DB751154-D3F1-3315-B8EB-0917079C4012",
+          "sha256": "df1eaa39d4767c62a6d1665a7ef24d5b77d9e1adff6f442deff922d8b0e44f42"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritawidgetutils.21.0.0.dylib",
+          "uuid": "51CDD939-EBB0-3739-9A00-EAB3D7A6314B",
+          "sha256": "91e7e67b969e4baeda54472a4a8d44440265d001355fb71f2b4c813cb334098e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ItemViews.6.7.0.dylib",
+          "uuid": "EC3F2599-45D9-30E7-BF9C-43DC292FBB22",
+          "sha256": "8d5cad67629ec5eef7c4f733b57ff38627142c7a2979f9bf4ee84fba5ef9b4f6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Versions/A/QtPrintSupport",
+          "uuid": "809D6BF8-509F-359A-9343-EF721573C4D2",
+          "sha256": "7b7bb861da56d9a78df54bfdcf1ea0cfb94f876fe05a007daf957bf23ef6c40b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6WidgetsAddons.6.7.0.dylib",
+          "uuid": "330503F0-9D88-3223-A353-5F2C739A1ADA",
+          "sha256": "dbcd0ea8096165f0718212e3fda8dcdabd63603bc6efa86201fc008b25e86e63"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaresources.21.0.0.dylib",
+          "uuid": "55758F06-C36E-3C76-A2FD-7FBE29973BF6",
+          "sha256": "d81f108465efe2c4e66a2b13ca9409b534b235731db4bae080e40b57189cfeae"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Versions/A/QtSql",
+          "uuid": "417B1C3F-0363-3D63-87A8-20DEA12FA3CD",
+          "sha256": "b58338f7c91be76b56e878b21acf974611a80ecec01e0a7ed4163c451b3c6127"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaplugin.21.0.0.dylib",
+          "uuid": "F5C79289-7CBA-3494-92D3-14F510B77DEA",
+          "sha256": "d8e844cee84b10336beb05191e885e6a692361459495c09716bcf64ccc19b3f8"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6CoreAddons.6.7.0.dylib",
+          "uuid": "C8A82F49-3149-3F18-BF15-CE910AE02C2C",
+          "sha256": "89e7cd197f46b2ff8215dbe84da7bf279a91ebeedd26a9a5d84fa2bf1135f8ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritastore.21.0.0.dylib",
+          "uuid": "3E717D3B-104E-39E4-B8A5-43037CD7AF19",
+          "sha256": "5a8efbfe5d0328d29d6634680712fb4d90d2cd572c509539ac327ab43b6762c1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaglobal.21.0.0.dylib",
+          "uuid": "D924F970-CBC7-3842-A938-2865694A8F81",
+          "sha256": "aafc586109c9c668109e86994bb77bc9313a940d1633887c31be58df3d258fd9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaversion.21.0.0.dylib",
+          "uuid": "0ECF1D12-7F12-39B4-BE12-B5C47BC9E9CF",
+          "sha256": "291968568c5b11f060deea6752dff14aae9d307d8803d0081e3d4a26f0b8371e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Versions/A/QtXml",
+          "uuid": "03F6F5A0-5C51-3218-839E-7FFA36409098",
+          "sha256": "fb29d57096668771a05ae89d0163fa1ad967accfc76d53aafd8d2b15975d0343"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Versions/A/QtCore5Compat",
+          "uuid": "10A6E7C3-61C7-39E2-ABFF-9F1C08033A32",
+          "sha256": "6d2fd4e23668c385e3a10fda088246cf1f3e03dce272a7ba154251cc6be8bcee"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritamacosutils.21.0.0.dylib",
+          "uuid": "A3CBFD40-B8BD-3B63-83D0-87D20594C021",
+          "sha256": "7ebbb239c74451bde224bb7d9db84f05ba9bd72c4651367f4d2c0413ee0379a5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmImf-2_5.26.0.0.dylib",
+          "uuid": "0550F07E-48B2-3FB5-8F3D-978438EA6BF4",
+          "sha256": "8f6324662ffbb35f35c60f28000749d41b77c865510b48a383cacdedffd707a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libImath-2_5.25.0.7.dylib",
+          "uuid": "472DFFF4-854D-320A-8928-9DFD4FF040A4",
+          "sha256": "393f57e33139793c2314c7b54b5a147e6c3ff772083eb7d8ad74f1b081a8f15d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libHalf-2_5.25.0.7.dylib",
+          "uuid": "E22ACBCC-8636-3188-8F67-0108C56732D5",
+          "sha256": "11eec6d588cd21ca673edc98420b3ce45207906f7be5e830128e58c96157487d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIexMath-2_5.25.0.7.dylib",
+          "uuid": "D62AF6C5-0F7E-3624-93F0-8C66CA262723",
+          "sha256": "de9817f5b43df10eb4662c58feb594a1e08ef6b79ddd5a79f99ac3fc7598c603"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmThread-2_5.25.0.7.dylib",
+          "uuid": "D232F6DA-0609-3662-B641-4A212E4D7FEE",
+          "sha256": "1a5076131207ba05d4e6b962f045c42c828363a16ee4efa2597952bba141e828"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIex-2_5.25.0.7.dylib",
+          "uuid": "9D29BBFA-30F8-3F1D-B28C-0590C67859F4",
+          "sha256": "249642c3babd270a1a9b58f836fde4de6ce0f11fa5ec7fbaef66001b256c0589"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Versions/A/QtOpenGL",
+          "uuid": "6C19C970-1D68-347F-927A-F546DA4E37D7",
+          "sha256": "fc679fb3dd862c9666f6c4a70ec38367eda49e26453936d44663c97d06d9b518"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Versions/A/QtWidgets",
+          "uuid": "0664C36C-D545-3E61-AB51-6AAFE8572CEE",
+          "sha256": "b42b88fdeea4a8372a08477dad3bd208ae51ff66b3d84e517cca1331c15de33e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Versions/A/QtSvg",
+          "uuid": "93AFD7DB-C303-3EB6-9785-42C99A56956A",
+          "sha256": "ea8e26a18f25e00a213fa3abe36737d966995d5620093bc2fb2ebad55e3a1d20"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6I18n.6.7.0.dylib",
+          "uuid": "4E65FC57-FC87-3B36-ADFF-C373163199DA",
+          "sha256": "1d94fbcfd6e2245c2b9a5dc0fd8f66abfab93175ba687e4a2e71b1eb7d2d20ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigGui.6.7.0.dylib",
+          "uuid": "70E3C836-F6A3-3A83-8A73-2C12FF0AF557",
+          "sha256": "7874d60335f3c9e12abb81153e7b060869e123aa4e0300030d171425f3d159f5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6GuiAddons.6.7.0.dylib",
+          "uuid": "E0DB8D97-A10D-3108-9E7D-7C01EEB8C410",
+          "sha256": "c4d3976e0925cb61eae8fea3dddbd72b7fc03524f74ba78a35e5a270de8189f7"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigCore.6.7.0.dylib",
+          "uuid": "2A07C2C5-11EA-3918-A958-0CD75704A8F7",
+          "sha256": "e2db46d081487f1c4499f6cdd947ba0f901b51441f4f726fbe4aef2e23bbf900"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Versions/A/QtGui",
+          "uuid": "577C9144-0A01-3557-B7C6-0A7808E3C6CA",
+          "sha256": "696b8b068c854b2248d06c383a42488dd380d997ec7263e0bfaee28301915d64"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+          "uuid": "35B43927-50B5-361F-BBD4-245B112B9539",
+          "sha256": "06b88fe8a8396e095a1eae6ea8c1ab6ecf78f3ada3d288d8bf3a92b4d986e92d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+          "uuid": "7244EDF8-5FFB-33E2-BA5A-ED3DAB7EFC9E",
+          "sha256": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvgWidgets.framework/Versions/A/QtSvgWidgets",
+          "uuid": "01004800-3911-345F-83BA-7051091CCFD9",
+          "sha256": "daf18bdfa7faad133821ece919daae939d9e79bc62d75554cd4bd0fa8ce8325b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libSDL2-2.0.0.dylib",
+          "uuid": "68EF8D8C-65E8-3656-AA8C-F97F28299130",
+          "sha256": "2479aef4ad661a858440c4153e4399dd56453eff63be262311b05b01eabbd764"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt++-7.7.28.0.dylib",
+          "uuid": "07295C60-0B2E-3C60-8DAC-75827FBE1EC1",
+          "sha256": "f2e6fc820775eb25b2af865847dc004915b664118402083d37dde4c4977b78c6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets",
+          "uuid": "5CBB52C1-2334-332C-855F-8DB23FC243B2",
+          "sha256": "38947912b141913c60b2f0d0c09f4f39111b9c8906b4af2f9a514fbe51bd4957"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ColorScheme.6.7.0.dylib",
+          "uuid": "E2E4596D-C706-3A14-9D5D-6D8DC7FE085B",
+          "sha256": "923cf937f6b139bb94f477d7e5afc85d169695924bc5d9ddff079b5c92efa84f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt-7.7.28.0.dylib",
+          "uuid": "9937739D-F00E-312F-962F-1C4EFE2E82F6",
+          "sha256": "c8f43c47a70c07495a260297d596d468de2c08061e6bd7dc52c6c5b59c690d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicui18n.72.dylib",
+          "uuid": "A7C5C6C1-B3BC-3FED-8840-608E53C2C6F2",
+          "sha256": "c2bf58e9638e2f9de001cc8a9a96cf739583abf8ad0c4d6d65fc83b68b518678"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicuuc.72.dylib",
+          "uuid": "002776AC-FEF9-34D6-9783-138A48AA6933",
+          "sha256": "0c9e9af333b5ec91d5a2f4cc4e76fc7140b06bbf2434e2c6cdd7513ede7b2931"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicudata.72.dylib",
+          "uuid": "881774DF-DA94-386E-BAF1-9CBA61E3639A",
+          "sha256": "b6ea871dc90f4ae58d92d6352483cafdde2eb9d50fbc46696030e62890b8eaa6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfftw3.3.dylib",
+          "uuid": "B97FD69D-6C06-3F6A-91A0-09C570C6F0E6",
+          "sha256": "f0e7faf61df13481b1f67e0f4ca48ace70eaaf0658b2eecab0f90be2c7e46238"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgsl.dylib",
+          "uuid": "6D5F7B8B-62BE-34D4-8C44-0BB4ECA7C423",
+          "sha256": "5ade92bcd56d0a837087f4dc97ff83d1797ff2449ec3943894a833fcb81617dd"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgslcblas.dylib",
+          "uuid": "B35034DD-F228-3301-B5FD-11959D073E55",
+          "sha256": "7e7df8ee3abc256088b09ac0857258d4768a0fb9d65c93fdd597e97f02bce483"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfontconfig.1.dylib",
+          "uuid": "57D6F191-D853-37A0-8D43-E8E42C18FB34",
+          "sha256": "822c81ae2cce24c9f55bf774ee69522f98c5174802426d3c40f05f6cd12a534e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfribidi.0.dylib",
+          "uuid": "5D882703-800B-3592-8F73-85E0DF931F95",
+          "sha256": "5e99aa07f5b9f75132fe5b55691e06432297edf43d3c710c8b6b952dbdc6ac66"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/png.framework/Versions/1.6.51/png",
+          "uuid": "6488B550-213F-3469-9B04-30234B75A774",
+          "sha256": "88b63245f58cbe3e9d02236ad46aa3bf0c365f409466272befa1881c9a7971b2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libquazip1-qt6.1.4.dylib",
+          "uuid": "410DE580-D0CB-384B-A7CE-772DAA6882EA",
+          "sha256": "2faf1fcc4bd8b20e9520ea8b93e2cc5d93aeb9c43d65c155c6b03ef2aee1d6ca"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libintl.8.dylib",
+          "uuid": "15621D5B-2739-34B8-A2C0-1401214F01CA",
+          "sha256": "14b2139031e618fa2325b01e9943843686efd1a232818adb62a56b3e38c3086e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libexpat.1.8.8.dylib",
+          "uuid": "298E1690-FB50-36B0-91CB-6CC2F53A3335",
+          "sha256": "2f50ed3a34ec650ceff0663d7db8e1107e1934d8e99bacfe65b8bf03277d1ebf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Codecs.6.7.0.dylib",
+          "uuid": "34CEE0B7-CE11-3E93-837C-E7C6936A8BA0",
+          "sha256": "eedb2ddc6d6b7d2ebe734610258a90cd29b9eb8ad235da25e64a6be92dae6629"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/platforms/libqoffscreen.dylib",
+          "uuid": "07CCE845-0DA2-3A74-8994-CD127EA674D1",
+          "sha256": "eed8ec727309e2f102c9f148a58f8e4eb6a5788c562bb8e46f8320f50295b5a3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/kritalcmsengine.so",
+          "uuid": "89729C4C-FFF5-3B03-A73C-18C45117642E",
+          "sha256": "86b7786562e807d11280c2d94938387e5527838c93292645439a937371d40488"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2.2.12.dylib",
+          "uuid": "C2A180B4-95BC-30F1-A00C-EFC32721CE12",
+          "sha256": "94a3968fed31cdf942b5adbc0548c8e6facf9047525a5262cfcc23e181e01b1d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2_fast_float.2.12.dylib",
+          "uuid": "F168FE35-CAA2-3C46-8C39-97A012192090",
+          "sha256": "dcbfeea3be3ac9881fc73f2fd32dfa96d836647ad0c68f4bcdfaf054b8354eac"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/krita_colorspaces_extensions.so",
+          "uuid": "FE86338A-62A3-39E8-B4C6-E61D9432C774",
+          "sha256": "3985691007e75c13ee48703ab0eabd0fdae67e00532f3f587de0c05309b8f4ba"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pcx.dylib",
+          "uuid": "DC1F615B-3CB2-3996-86B3-9078F7819945",
+          "sha256": "074e62dbc6d97600ed1eead60a6a651c423d2533cf136fa5e56c40b626c9f287"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_psd.dylib",
+          "uuid": "DC2F2C55-6D07-3C06-BC58-3E0D38A6E164",
+          "sha256": "0bebad6addf8f41f26a97dbd15dad6aad6c6174bf23f621ea6078605902296ff"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pfm.dylib",
+          "uuid": "DF2F63CC-EE39-33C4-94EE-6B7D985E8DD3",
+          "sha256": "d1ae3fff2baef047326672cd14654b779eb2327f6f2d9343079b3292d3c9c363"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqgif.dylib",
+          "uuid": "2F51C8E2-252D-36D1-AF5C-60634C567FE2",
+          "sha256": "20b6d4367703fd29740dc8e8ab38b73c2f4c6b859bb08ded3f0b494cd2ec24e6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwbmp.dylib",
+          "uuid": "76DB98FE-05C9-3C2D-B476-136C3ADEDF00",
+          "sha256": "3422e28eebfae6457bb3e280643c8f8fd22339bd1ceeab99dc59c148425ba6a2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwebp.dylib",
+          "uuid": "A47272AC-95D4-322B-AB3B-046653E29730",
+          "sha256": "5575c2bd0860d3c38fcccbe3d329180a57aab13c5ceb0b97a94570883be25d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_eps.dylib",
+          "uuid": "B4A5C073-462C-3935-B955-3CA019E9876C",
+          "sha256": "47ca5ec5777066c8791b6c50c91b4a45cc372e3cbecf93c90539f0bc689b859f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_xcf.dylib",
+          "uuid": "5156C3A0-F350-3266-B813-DFE73F23A082",
+          "sha256": "cc1f1a602eb4f664eb806faf85e075ef19552794effe7b4cf0bdb038f51a19c1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqico.dylib",
+          "uuid": "0CC9A6FC-3FC3-3B48-802C-F303C76790E7",
+          "sha256": "8813e67728d45b94c686d5c966987932ecf48749858a185adf5f2bfa7591229d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pic.dylib",
+          "uuid": "084E741D-8FB2-3499-ADA5-207A153AADC0",
+          "sha256": "72037fec76dccfd485eaee0fb2599856ba0203d751783522260f908818cb3a1a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_rgb.dylib",
+          "uuid": "159B1924-6BFA-3505-93BE-A8B534EC8FCD",
+          "sha256": "f98609ce14c7e4f77c6fce552af93ba11dd7cb22ead37aa8cf646d03d5e167de"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacheif.dylib",
+          "uuid": "B3C4C4BC-8334-3771-B3D8-50EF3C45607E",
+          "sha256": "20ea84aaeda0aaa19e5197d28e97253a8cf7119513599f611e3f90164bd0a66e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_kra.dylib",
+          "uuid": "2FEFB175-E78B-3F7D-8F8C-12B426B2331D",
+          "sha256": "286c9d91f3589c2e402a09c7a9ac226bec0bea4b5b793be229cdf5e5a616b811"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Archive.6.7.0.dylib",
+          "uuid": "D0B68BD7-01A0-37F3-973D-5F8780C376F6",
+          "sha256": "bac8563ff98ce582637dfaf938ec60d1f2aa89c181c98fe1bd37e3514447aa1f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pxr.dylib",
+          "uuid": "F04535A9-0EF0-30DF-89A1-06B10F483315",
+          "sha256": "24b1d1c8587e341d43033012f4fbede17779a3807cdae57013b5fb406df507a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ani.dylib",
+          "uuid": "7ABC2AE4-CCFD-3940-B87A-E16D11FD7257",
+          "sha256": "2e403a7e63806d4c0bbae8d85c5f11ccdc6f095d720aade7d03a0d9f020986c4"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqjpeg.dylib",
+          "uuid": "194BBD10-D49B-3DBA-8ED8-0CF50274D784",
+          "sha256": "8f3118105cee5865d4e5dd39e5444f1764952f5af8833aa930ca383e783ae672"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libjpeg.62.3.0.dylib",
+          "uuid": "BF8E03DC-554B-39F6-831F-2338928FBF07",
+          "sha256": "0a232056b3d6f858b1752ae8cfcf802c62c53a803fba0eda81e4e75bcb385506"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ora.dylib",
+          "uuid": "0FA0E59C-305D-3ACE-8643-32F586F703C4",
+          "sha256": "ba39e310e4ba43bafc09c10043ee90026975e946e48e8725ba81261a68b2631a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqtiff.dylib",
+          "uuid": "864E3F9B-6ED3-3A52-8F6F-F38E2838DA9A",
+          "sha256": "067d8be03a9349062dbdedad2ec4290b74867865345f37bbb5f6783127227cdf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqsvg.dylib",
+          "uuid": "866F5E72-DCD6-3AB6-8879-ABA1FF1ED039",
+          "sha256": "f3754bc2d6170fa62e5056d63c50d10c7cfdde4cdb17baf2b1386eb46b95c3b6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_tga.dylib",
+          "uuid": "1A139A6B-BDBD-34D2-9ED6-6098EE1123C2",
+          "sha256": "2d472fbcba409b276b1d398dab6d3226cbaaecc0fb1eae844054bc62beb5bd40"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_hdr.dylib",
+          "uuid": "BFCF149C-D1AB-3C84-BF3E-10E52BDE120B",
+          "sha256": "8acf6891dfa64b962a021284284ee417c4ee07daacf0ce2d3535ea8ebd6decf9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ras.dylib",
+          "uuid": "6B2EEF83-7412-3346-BFF0-0BE1B3C192F4",
+          "sha256": "07ef4099da64049a3eea9b05bb2f7882e967f00a4f83adf82c9249b0e5ae0568"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_qoi.dylib",
+          "uuid": "1DA2EF10-05D6-3CAC-8B46-6B1B47458602",
+          "sha256": "1d9134df083df5be089cf373e9f0b998fce0d7104fee49b7396c4e51d74246cb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqicns.dylib",
+          "uuid": "23D9C578-EDB3-3058-933D-085384D1FAE7",
+          "sha256": "e0b08a10346630689091ae2f15c4d58d8a8a6e555fb3db5db88d66a01c758ddc"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacjp2.dylib",
+          "uuid": "58CFC19C-4B67-343D-8FB2-84217ADAF15F",
+          "sha256": "5a9b845d38d291b4cf53255389f991d18af7ded6936bb5edb7209a4db69d7ac5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/kritadefaultpaintops.so",
+          "uuid": "C54AAA6F-CC75-36B6-B5AB-BFA2B0922D1D",
+          "sha256": "b4940693aa72372b4488ff1d65e2079daf7284200db57719ada6af5749968795"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritalibpaintop.21.0.0.dylib",
+          "uuid": "AEB3B196-491D-39A0-8E37-347DA7B65493",
+          "sha256": "ae4d99f1998dcdd43cfc1b89e626a6095c65db88f05a1a839e888ff1b972168f"
+        }
+      ],
+      "loaded_identity_passed": true
+    },
+    {
+      "side": "current",
+      "arch": "arm64",
+      "pair": null,
+      "command": [
+        "arch",
+        "-arm64",
+        "-e",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest",
+        "testMatchedCpuBaseline",
+        "-nocrashhandler"
+      ],
+      "log": "capability-03-current-arm64.log",
+      "exit_code": 1,
+      "process_elapsed_seconds": 3.942427792,
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 624ms"
+      ],
+      "failures": [
+        "FAIL!  : MatchedFreehandBaselineTest::testMatchedCpuBaseline() 'imageDestroyed' returned FALSE. ()"
+      ],
+      "sample": null,
+      "passed": false,
+      "loaded_local_files": [
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest",
+          "uuid": "2DFA547E-0E8C-39A7-8070-0FB72FF89E8E",
+          "sha256": "22972d4a8e8b0031595ed7fee5531dba911804edc1e845b01b1e479f5ba8cd1a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaui.21.0.0.dylib",
+          "uuid": "B0E548BE-FB3B-3DB4-9B31-ECDF71176560",
+          "sha256": "bc407200919f19f876a7d7e2a44146ea186b874705888ecbdf43662be6983fa3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtNetwork.framework/Versions/A/QtNetwork",
+          "uuid": "B24E6759-0C69-3411-8E38-35148A5B40E7",
+          "sha256": "44e2760636ff0cc102ef1d201352caf3bf2a23840e62d7be56ab044738f39a75"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtConcurrent.framework/Versions/A/QtConcurrent",
+          "uuid": "321D3071-7336-370A-A8C0-6EFB3E521530",
+          "sha256": "a5832725aa72e37d64299e8248b4eef9364af1cd284b6eb25155f81c887d6fdb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libpng16.16.51.0.dylib",
+          "uuid": "2870042A-12E8-3C53-8C74-B011434E0E61",
+          "sha256": "3467973a082023e9ac02723a65ee12fcd0297b9cf7ae1209f4679e20f0764e52"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimpex.21.0.0.dylib",
+          "uuid": "CF379F67-B5B7-3EEB-B543-7DEEBBAB0ECC",
+          "sha256": "8c8fa1288c6e4feeeadab471e0f56ef6f4a6dd2678a0312415ad4a1381af2055"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritalibbrush.21.0.0.dylib",
+          "uuid": "B90F30BD-3FBF-3EF6-8AA0-B73C1CD18E6D",
+          "sha256": "1424541a0d8ecea4c54eb053a710b2d180a06ea20250c11b855c078f17cee5ff"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib",
+          "uuid": "2F9B504C-40F6-3757-B237-BA01D79C5B10",
+          "sha256": "f63b9696a0bbad74197d044216accd9bbd121ee75059d5b2b829255996abb0f8"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapsdutils.21.0.0.dylib",
+          "uuid": "8F393364-6540-3231-A735-C8E84CC4F3A7",
+          "sha256": "70aa0870bfa4468c50ec5253f2deb7dc87c4980f67a8f055c4dc5b0989fb05e5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritametadata.21.0.0.dylib",
+          "uuid": "09C5ED49-23B9-31DE-A004-0180DBDED852",
+          "sha256": "92942ccc3feb0faaf358995ae7640d2e4909bdc737fc3baa991a33ca3cbbf961"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgets.21.0.0.dylib",
+          "uuid": "76B029F2-5D9E-300B-8D60-E65CCA73DD46",
+          "sha256": "e60f4a1a6f70d6577937a6529952af1ef0888d97232641ffcf9a562d94beb495"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Completion.6.7.0.dylib",
+          "uuid": "6D5F095F-9F53-3D1D-A2A2-FBEE5A1F47B8",
+          "sha256": "0db6af80207e318c9db0391968935c12e96ac89dca7331f580f24c0f27b46830"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaflake.21.0.0.dylib",
+          "uuid": "E86C3CA7-5420-36CC-86CE-3BF06FB599C5",
+          "sha256": "a541b441dd2da683163402f0ade530e68c696cf88244039a796b6f1367788e06"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapigment.21.0.0.dylib",
+          "uuid": "2A358026-E1C1-30FD-A12C-B6216F1A0120",
+          "sha256": "0c5363b4bd9ab1237a7679a1f3f4ecee5c55aeb2383c20260dba5059bffff6ba"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamultiarch.21.0.0.dylib",
+          "uuid": "17A6F188-451B-3EB7-9664-2EAD0FF4FFD5",
+          "sha256": "b8adcf8275eade99beac58d76a5e2de261953bb1ef109e14aa6d6c5e6048e25e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritacommand.21.0.0.dylib",
+          "uuid": "9E47472D-CCB8-3550-B154-FA7F7B961E56",
+          "sha256": "4fe95cb2ee66cb9cad4c878f058acb37f0d198a2d00a6df5e9b6150a068268a3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfreetype.6.18.3.dylib",
+          "uuid": "F8B3F46F-02A5-3AD8-AD62-82809B702E22",
+          "sha256": "8687c146500e3fcb4b6f4819e4eb9365e42e0f5ec0ca50e281dc7d2ef8cf45d5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libharfbuzz.0.dylib",
+          "uuid": "42AA83F0-7D8C-3F7D-8748-E66A373AC9EC",
+          "sha256": "223f85f420de9d14fe95cadc59bf811ad83b83bf33e540dcc2f4415c2ccad4ad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresourcewidgets.21.0.0.dylib",
+          "uuid": "E690C711-73E5-366A-905D-B34719785741",
+          "sha256": "2d4bde81c42a5f14edd24c5b8391d6d28a45f9230574b874495e1720f171b653"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgetutils.21.0.0.dylib",
+          "uuid": "6D22A502-134C-3C51-8D08-109DB4C66ECB",
+          "sha256": "53e7ff60e840f5e4b88ad502dcd5c9dd807d5e866d9afa29cbd8b2233c1c7ad3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ItemViews.6.7.0.dylib",
+          "uuid": "EC3F2599-45D9-30E7-BF9C-43DC292FBB22",
+          "sha256": "8d5cad67629ec5eef7c4f733b57ff38627142c7a2979f9bf4ee84fba5ef9b4f6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Versions/A/QtPrintSupport",
+          "uuid": "809D6BF8-509F-359A-9343-EF721573C4D2",
+          "sha256": "7b7bb861da56d9a78df54bfdcf1ea0cfb94f876fe05a007daf957bf23ef6c40b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6WidgetsAddons.6.7.0.dylib",
+          "uuid": "330503F0-9D88-3223-A353-5F2C739A1ADA",
+          "sha256": "dbcd0ea8096165f0718212e3fda8dcdabd63603bc6efa86201fc008b25e86e63"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresources.21.0.0.dylib",
+          "uuid": "05C5ECB7-DAFA-385B-8994-AD5BAF926866",
+          "sha256": "89009c2e9cba00afa36cae994efba1b5333773751fb47fb1261cb8c4464baf2d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Versions/A/QtSql",
+          "uuid": "417B1C3F-0363-3D63-87A8-20DEA12FA3CD",
+          "sha256": "b58338f7c91be76b56e878b21acf974611a80ecec01e0a7ed4163c451b3c6127"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaplugin.21.0.0.dylib",
+          "uuid": "4B28773B-D3BF-3C6A-BD81-0740DC72A25C",
+          "sha256": "1180f53891132beedc2bc2ad603b31ab0d6b0ee862d56793038e6309ed6723fe"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6CoreAddons.6.7.0.dylib",
+          "uuid": "C8A82F49-3149-3F18-BF15-CE910AE02C2C",
+          "sha256": "89e7cd197f46b2ff8215dbe84da7bf279a91ebeedd26a9a5d84fa2bf1135f8ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritastore.21.0.0.dylib",
+          "uuid": "1367274F-9C32-32CA-A613-0876B8C294AA",
+          "sha256": "229514294d6eebb7777821a94254f8719bc63ddbbf5e9fb5ad0f86d7df5c07e0"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaglobal.21.0.0.dylib",
+          "uuid": "97B5B2B3-09F8-35E2-936A-2D65C0B19824",
+          "sha256": "19cd6d6ace0fe09ac16fbdee9dee76bc93ff71a0327d90ca3b1489e14da124ca"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaversion.21.0.0.dylib",
+          "uuid": "F0A73366-6967-3551-A37F-6B025DB45509",
+          "sha256": "b9e737709499c41866bdf1b443872eb6c8894dd88860725f9d0a3fdae26d51f9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Versions/A/QtXml",
+          "uuid": "03F6F5A0-5C51-3218-839E-7FFA36409098",
+          "sha256": "fb29d57096668771a05ae89d0163fa1ad967accfc76d53aafd8d2b15975d0343"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Versions/A/QtCore5Compat",
+          "uuid": "10A6E7C3-61C7-39E2-ABFF-9F1C08033A32",
+          "sha256": "6d2fd4e23668c385e3a10fda088246cf1f3e03dce272a7ba154251cc6be8bcee"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamacosutils.21.0.0.dylib",
+          "uuid": "2B6515C0-961D-3DA2-8D41-9B420BC24BAD",
+          "sha256": "e5964681416cc88883aa3b0a1ef3684caf4029b7fea081334b9ab1b10f1e92b9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmImf-2_5.26.0.0.dylib",
+          "uuid": "0550F07E-48B2-3FB5-8F3D-978438EA6BF4",
+          "sha256": "8f6324662ffbb35f35c60f28000749d41b77c865510b48a383cacdedffd707a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libImath-2_5.25.0.7.dylib",
+          "uuid": "472DFFF4-854D-320A-8928-9DFD4FF040A4",
+          "sha256": "393f57e33139793c2314c7b54b5a147e6c3ff772083eb7d8ad74f1b081a8f15d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libHalf-2_5.25.0.7.dylib",
+          "uuid": "E22ACBCC-8636-3188-8F67-0108C56732D5",
+          "sha256": "11eec6d588cd21ca673edc98420b3ce45207906f7be5e830128e58c96157487d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIexMath-2_5.25.0.7.dylib",
+          "uuid": "D62AF6C5-0F7E-3624-93F0-8C66CA262723",
+          "sha256": "de9817f5b43df10eb4662c58feb594a1e08ef6b79ddd5a79f99ac3fc7598c603"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmThread-2_5.25.0.7.dylib",
+          "uuid": "D232F6DA-0609-3662-B641-4A212E4D7FEE",
+          "sha256": "1a5076131207ba05d4e6b962f045c42c828363a16ee4efa2597952bba141e828"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIex-2_5.25.0.7.dylib",
+          "uuid": "9D29BBFA-30F8-3F1D-B28C-0590C67859F4",
+          "sha256": "249642c3babd270a1a9b58f836fde4de6ce0f11fa5ec7fbaef66001b256c0589"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Versions/A/QtOpenGL",
+          "uuid": "6C19C970-1D68-347F-927A-F546DA4E37D7",
+          "sha256": "fc679fb3dd862c9666f6c4a70ec38367eda49e26453936d44663c97d06d9b518"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Versions/A/QtWidgets",
+          "uuid": "0664C36C-D545-3E61-AB51-6AAFE8572CEE",
+          "sha256": "b42b88fdeea4a8372a08477dad3bd208ae51ff66b3d84e517cca1331c15de33e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Versions/A/QtSvg",
+          "uuid": "93AFD7DB-C303-3EB6-9785-42C99A56956A",
+          "sha256": "ea8e26a18f25e00a213fa3abe36737d966995d5620093bc2fb2ebad55e3a1d20"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6I18n.6.7.0.dylib",
+          "uuid": "4E65FC57-FC87-3B36-ADFF-C373163199DA",
+          "sha256": "1d94fbcfd6e2245c2b9a5dc0fd8f66abfab93175ba687e4a2e71b1eb7d2d20ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigGui.6.7.0.dylib",
+          "uuid": "70E3C836-F6A3-3A83-8A73-2C12FF0AF557",
+          "sha256": "7874d60335f3c9e12abb81153e7b060869e123aa4e0300030d171425f3d159f5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6GuiAddons.6.7.0.dylib",
+          "uuid": "E0DB8D97-A10D-3108-9E7D-7C01EEB8C410",
+          "sha256": "c4d3976e0925cb61eae8fea3dddbd72b7fc03524f74ba78a35e5a270de8189f7"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigCore.6.7.0.dylib",
+          "uuid": "2A07C2C5-11EA-3918-A958-0CD75704A8F7",
+          "sha256": "e2db46d081487f1c4499f6cdd947ba0f901b51441f4f726fbe4aef2e23bbf900"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Versions/A/QtGui",
+          "uuid": "577C9144-0A01-3557-B7C6-0A7808E3C6CA",
+          "sha256": "696b8b068c854b2248d06c383a42488dd380d997ec7263e0bfaee28301915d64"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+          "uuid": "35B43927-50B5-361F-BBD4-245B112B9539",
+          "sha256": "06b88fe8a8396e095a1eae6ea8c1ab6ecf78f3ada3d288d8bf3a92b4d986e92d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+          "uuid": "7244EDF8-5FFB-33E2-BA5A-ED3DAB7EFC9E",
+          "sha256": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvgWidgets.framework/Versions/A/QtSvgWidgets",
+          "uuid": "01004800-3911-345F-83BA-7051091CCFD9",
+          "sha256": "daf18bdfa7faad133821ece919daae939d9e79bc62d75554cd4bd0fa8ce8325b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libSDL2-2.0.0.dylib",
+          "uuid": "68EF8D8C-65E8-3656-AA8C-F97F28299130",
+          "sha256": "2479aef4ad661a858440c4153e4399dd56453eff63be262311b05b01eabbd764"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt++-7.7.28.0.dylib",
+          "uuid": "07295C60-0B2E-3C60-8DAC-75827FBE1EC1",
+          "sha256": "f2e6fc820775eb25b2af865847dc004915b664118402083d37dde4c4977b78c6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets",
+          "uuid": "5CBB52C1-2334-332C-855F-8DB23FC243B2",
+          "sha256": "38947912b141913c60b2f0d0c09f4f39111b9c8906b4af2f9a514fbe51bd4957"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ColorScheme.6.7.0.dylib",
+          "uuid": "E2E4596D-C706-3A14-9D5D-6D8DC7FE085B",
+          "sha256": "923cf937f6b139bb94f477d7e5afc85d169695924bc5d9ddff079b5c92efa84f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt-7.7.28.0.dylib",
+          "uuid": "9937739D-F00E-312F-962F-1C4EFE2E82F6",
+          "sha256": "c8f43c47a70c07495a260297d596d468de2c08061e6bd7dc52c6c5b59c690d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libz.1.3.1.dylib",
+          "uuid": "2FBBC06B-6E87-37EF-95DC-D7F84C9D8EE9",
+          "sha256": "002f9b2efb64eac916c424d158058da4443d79c9c7720c71f3804c2034b88a5c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicui18n.72.dylib",
+          "uuid": "A7C5C6C1-B3BC-3FED-8840-608E53C2C6F2",
+          "sha256": "c2bf58e9638e2f9de001cc8a9a96cf739583abf8ad0c4d6d65fc83b68b518678"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicuuc.72.dylib",
+          "uuid": "002776AC-FEF9-34D6-9783-138A48AA6933",
+          "sha256": "0c9e9af333b5ec91d5a2f4cc4e76fc7140b06bbf2434e2c6cdd7513ede7b2931"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicudata.72.dylib",
+          "uuid": "881774DF-DA94-386E-BAF1-9CBA61E3639A",
+          "sha256": "b6ea871dc90f4ae58d92d6352483cafdde2eb9d50fbc46696030e62890b8eaa6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfftw3.3.dylib",
+          "uuid": "B97FD69D-6C06-3F6A-91A0-09C570C6F0E6",
+          "sha256": "f0e7faf61df13481b1f67e0f4ca48ace70eaaf0658b2eecab0f90be2c7e46238"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgsl.dylib",
+          "uuid": "6D5F7B8B-62BE-34D4-8C44-0BB4ECA7C423",
+          "sha256": "5ade92bcd56d0a837087f4dc97ff83d1797ff2449ec3943894a833fcb81617dd"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgslcblas.dylib",
+          "uuid": "B35034DD-F228-3301-B5FD-11959D073E55",
+          "sha256": "7e7df8ee3abc256088b09ac0857258d4768a0fb9d65c93fdd597e97f02bce483"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfontconfig.1.dylib",
+          "uuid": "57D6F191-D853-37A0-8D43-E8E42C18FB34",
+          "sha256": "822c81ae2cce24c9f55bf774ee69522f98c5174802426d3c40f05f6cd12a534e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfribidi.0.dylib",
+          "uuid": "5D882703-800B-3592-8F73-85E0DF931F95",
+          "sha256": "5e99aa07f5b9f75132fe5b55691e06432297edf43d3c710c8b6b952dbdc6ac66"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/png.framework/Versions/1.6.51/png",
+          "uuid": "6488B550-213F-3469-9B04-30234B75A774",
+          "sha256": "88b63245f58cbe3e9d02236ad46aa3bf0c365f409466272befa1881c9a7971b2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libquazip1-qt6.1.4.dylib",
+          "uuid": "410DE580-D0CB-384B-A7CE-772DAA6882EA",
+          "sha256": "2faf1fcc4bd8b20e9520ea8b93e2cc5d93aeb9c43d65c155c6b03ef2aee1d6ca"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libintl.8.dylib",
+          "uuid": "15621D5B-2739-34B8-A2C0-1401214F01CA",
+          "sha256": "14b2139031e618fa2325b01e9943843686efd1a232818adb62a56b3e38c3086e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libexpat.1.8.8.dylib",
+          "uuid": "298E1690-FB50-36B0-91CB-6CC2F53A3335",
+          "sha256": "2f50ed3a34ec650ceff0663d7db8e1107e1934d8e99bacfe65b8bf03277d1ebf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Codecs.6.7.0.dylib",
+          "uuid": "34CEE0B7-CE11-3E93-837C-E7C6936A8BA0",
+          "sha256": "eedb2ddc6d6b7d2ebe734610258a90cd29b9eb8ad235da25e64a6be92dae6629"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/platforms/libqoffscreen.dylib",
+          "uuid": "07CCE845-0DA2-3A74-8994-CD127EA674D1",
+          "sha256": "eed8ec727309e2f102c9f148a58f8e4eb6a5788c562bb8e46f8320f50295b5a3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritalcmsengine.so",
+          "uuid": "5A91A6F1-C731-3886-826F-7433C993AE77",
+          "sha256": "12b1c221ad6e3f9e3f924a0c31320980d85f3c30cb9f971d50d691350b230ffb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2.2.12.dylib",
+          "uuid": "C2A180B4-95BC-30F1-A00C-EFC32721CE12",
+          "sha256": "94a3968fed31cdf942b5adbc0548c8e6facf9047525a5262cfcc23e181e01b1d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2_fast_float.2.12.dylib",
+          "uuid": "F168FE35-CAA2-3C46-8C39-97A012192090",
+          "sha256": "dcbfeea3be3ac9881fc73f2fd32dfa96d836647ad0c68f4bcdfaf054b8354eac"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita_colorspaces_extensions.so",
+          "uuid": "E23EAAD7-ECB9-3BC4-8A9E-5FB021CA24CE",
+          "sha256": "d093d396d5a4c18591bfa92f88ff0ca114b12e2cf34e7d3f0126dc746854db94"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pcx.dylib",
+          "uuid": "DC1F615B-3CB2-3996-86B3-9078F7819945",
+          "sha256": "074e62dbc6d97600ed1eead60a6a651c423d2533cf136fa5e56c40b626c9f287"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_psd.dylib",
+          "uuid": "DC2F2C55-6D07-3C06-BC58-3E0D38A6E164",
+          "sha256": "0bebad6addf8f41f26a97dbd15dad6aad6c6174bf23f621ea6078605902296ff"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pfm.dylib",
+          "uuid": "DF2F63CC-EE39-33C4-94EE-6B7D985E8DD3",
+          "sha256": "d1ae3fff2baef047326672cd14654b779eb2327f6f2d9343079b3292d3c9c363"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqgif.dylib",
+          "uuid": "2F51C8E2-252D-36D1-AF5C-60634C567FE2",
+          "sha256": "20b6d4367703fd29740dc8e8ab38b73c2f4c6b859bb08ded3f0b494cd2ec24e6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwbmp.dylib",
+          "uuid": "76DB98FE-05C9-3C2D-B476-136C3ADEDF00",
+          "sha256": "3422e28eebfae6457bb3e280643c8f8fd22339bd1ceeab99dc59c148425ba6a2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwebp.dylib",
+          "uuid": "A47272AC-95D4-322B-AB3B-046653E29730",
+          "sha256": "5575c2bd0860d3c38fcccbe3d329180a57aab13c5ceb0b97a94570883be25d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_eps.dylib",
+          "uuid": "B4A5C073-462C-3935-B955-3CA019E9876C",
+          "sha256": "47ca5ec5777066c8791b6c50c91b4a45cc372e3cbecf93c90539f0bc689b859f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_xcf.dylib",
+          "uuid": "5156C3A0-F350-3266-B813-DFE73F23A082",
+          "sha256": "cc1f1a602eb4f664eb806faf85e075ef19552794effe7b4cf0bdb038f51a19c1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqico.dylib",
+          "uuid": "0CC9A6FC-3FC3-3B48-802C-F303C76790E7",
+          "sha256": "8813e67728d45b94c686d5c966987932ecf48749858a185adf5f2bfa7591229d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pic.dylib",
+          "uuid": "084E741D-8FB2-3499-ADA5-207A153AADC0",
+          "sha256": "72037fec76dccfd485eaee0fb2599856ba0203d751783522260f908818cb3a1a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_rgb.dylib",
+          "uuid": "159B1924-6BFA-3505-93BE-A8B534EC8FCD",
+          "sha256": "f98609ce14c7e4f77c6fce552af93ba11dd7cb22ead37aa8cf646d03d5e167de"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacheif.dylib",
+          "uuid": "B3C4C4BC-8334-3771-B3D8-50EF3C45607E",
+          "sha256": "20ea84aaeda0aaa19e5197d28e97253a8cf7119513599f611e3f90164bd0a66e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_kra.dylib",
+          "uuid": "2FEFB175-E78B-3F7D-8F8C-12B426B2331D",
+          "sha256": "286c9d91f3589c2e402a09c7a9ac226bec0bea4b5b793be229cdf5e5a616b811"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Archive.6.7.0.dylib",
+          "uuid": "D0B68BD7-01A0-37F3-973D-5F8780C376F6",
+          "sha256": "bac8563ff98ce582637dfaf938ec60d1f2aa89c181c98fe1bd37e3514447aa1f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pxr.dylib",
+          "uuid": "F04535A9-0EF0-30DF-89A1-06B10F483315",
+          "sha256": "24b1d1c8587e341d43033012f4fbede17779a3807cdae57013b5fb406df507a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ani.dylib",
+          "uuid": "7ABC2AE4-CCFD-3940-B87A-E16D11FD7257",
+          "sha256": "2e403a7e63806d4c0bbae8d85c5f11ccdc6f095d720aade7d03a0d9f020986c4"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqjpeg.dylib",
+          "uuid": "194BBD10-D49B-3DBA-8ED8-0CF50274D784",
+          "sha256": "8f3118105cee5865d4e5dd39e5444f1764952f5af8833aa930ca383e783ae672"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libjpeg.62.3.0.dylib",
+          "uuid": "BF8E03DC-554B-39F6-831F-2338928FBF07",
+          "sha256": "0a232056b3d6f858b1752ae8cfcf802c62c53a803fba0eda81e4e75bcb385506"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ora.dylib",
+          "uuid": "0FA0E59C-305D-3ACE-8643-32F586F703C4",
+          "sha256": "ba39e310e4ba43bafc09c10043ee90026975e946e48e8725ba81261a68b2631a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqtiff.dylib",
+          "uuid": "864E3F9B-6ED3-3A52-8F6F-F38E2838DA9A",
+          "sha256": "067d8be03a9349062dbdedad2ec4290b74867865345f37bbb5f6783127227cdf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqsvg.dylib",
+          "uuid": "866F5E72-DCD6-3AB6-8879-ABA1FF1ED039",
+          "sha256": "f3754bc2d6170fa62e5056d63c50d10c7cfdde4cdb17baf2b1386eb46b95c3b6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_tga.dylib",
+          "uuid": "1A139A6B-BDBD-34D2-9ED6-6098EE1123C2",
+          "sha256": "2d472fbcba409b276b1d398dab6d3226cbaaecc0fb1eae844054bc62beb5bd40"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_hdr.dylib",
+          "uuid": "BFCF149C-D1AB-3C84-BF3E-10E52BDE120B",
+          "sha256": "8acf6891dfa64b962a021284284ee417c4ee07daacf0ce2d3535ea8ebd6decf9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ras.dylib",
+          "uuid": "6B2EEF83-7412-3346-BFF0-0BE1B3C192F4",
+          "sha256": "07ef4099da64049a3eea9b05bb2f7882e967f00a4f83adf82c9249b0e5ae0568"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_qoi.dylib",
+          "uuid": "1DA2EF10-05D6-3CAC-8B46-6B1B47458602",
+          "sha256": "1d9134df083df5be089cf373e9f0b998fce0d7104fee49b7396c4e51d74246cb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqicns.dylib",
+          "uuid": "23D9C578-EDB3-3058-933D-085384D1FAE7",
+          "sha256": "e0b08a10346630689091ae2f15c4d58d8a8a6e555fb3db5db88d66a01c758ddc"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacjp2.dylib",
+          "uuid": "58CFC19C-4B67-343D-8FB2-84217ADAF15F",
+          "sha256": "5a9b845d38d291b4cf53255389f991d18af7ded6936bb5edb7209a4db69d7ac5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritacolorsmudgepaintop.so",
+          "uuid": "C8BC6A5A-C5E9-30B7-A6A5-6C2CDA9BBA02",
+          "sha256": "cc73f4b76fd1fc34f1fb2dc6044d9932d329dcd80b55fcc357fd9a375853d345"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritalibpaintop.21.0.0.dylib",
+          "uuid": "E32CC35F-EE67-3880-91F6-CD1F0C7EEAE1",
+          "sha256": "2090e08a7d014340b61203eea6d66e37bd5b707ad78b893b76bc40528445c4c2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritacurvepaintop.so",
+          "uuid": "79FFFE38-19F5-3B67-A38F-67AF625E2B2C",
+          "sha256": "c890604e6a77a6f15c1bf2b240cf38723ce01de624d36a63b7a8db691fc1c2de"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritadefaultpaintops.so",
+          "uuid": "E4B7A759-9647-3B5B-B2A2-D0A5C57E5513",
+          "sha256": "472fb69eea891e31ee0812c24974128b2eedbd0894056e870e98c9f440871237"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritadeformpaintop.so",
+          "uuid": "01EC4477-AEB1-3C53-95BF-A8EBD7DC39A7",
+          "sha256": "9e0258b000e0a6a9f9922e56dfdcc95133bf4d272b1a8e557ae3e9b5f7e89fad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaexperimentpaintop.so",
+          "uuid": "7877F56C-4080-3DFD-88AD-2C5A2F78649A",
+          "sha256": "db886c29077d90b87cb9f1f68484c85deafaf5458301580599e0b36aa5663753"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritafilterop.so",
+          "uuid": "59CED174-00FE-32E8-AE0C-87A5AF4FC373",
+          "sha256": "290233216106ca8d51d75dbf6d9dc3efaa29c029c5fa5ddd149fe344f119ae74"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritagridpaintop.so",
+          "uuid": "4E601895-B33A-3947-93C4-530DF77539E1",
+          "sha256": "3cc0717ebf449cc369eb61154089e001c8e57e3699501e7013a853f41e26430f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritahairypaintop.so",
+          "uuid": "03FFBF63-DAF3-3DAF-A364-13DFB64EA315",
+          "sha256": "b57f64bafab840f704f3aa013a6655be7d4427f29ab498a19961a8d41783f60b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritahatchingpaintop.so",
+          "uuid": "05EAB0F4-7361-3CA7-B6C6-4098300CC206",
+          "sha256": "15fb3e99abd1227893a9dae2797fb3a02a9b0b06cd4c582c474c19dd9d07a5c7"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritamypaintop.so",
+          "uuid": "8E5A2E42-4E8E-30F4-A065-7900563F8260",
+          "sha256": "5f0389b117a5b1cd92c8df9a85597a27ea3ac8b1e8fcbba225a7377a53752d3e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmypaint.dylib",
+          "uuid": "F0B9E691-ABB1-37BA-ABC6-3BE972CABA69",
+          "sha256": "a0da103c507dcdbabbacd1c29d5256403517e1aba53ea4e2efd7e55540afd824"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libjson-c.5.4.0.dylib",
+          "uuid": "1E2A77F1-3B50-34FB-95A3-2BEADD9A296B",
+          "sha256": "21f85de0aa09efb811ae89798b22d06f2239b03acecb0059f913f187fd951caf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaparticlepaintop.so",
+          "uuid": "E0886993-2069-37D9-934C-E2CE2A4A26E1",
+          "sha256": "0785629cd1460939d72a887125cda49b9a39f712b5af22aeb960da4fb76ac1b8"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaroundmarkerpaintop.so",
+          "uuid": "3DDC5033-4E6D-314F-BAE7-618B5CBB7D07",
+          "sha256": "96e04245a43ed9733611e1de5c0e53669192d00c65b60b76ca086ae6003259d6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritasketchpaintop.so",
+          "uuid": "6AC9505E-597A-3526-A1E3-1988A939223B",
+          "sha256": "f58dc6c3a2900214cf149cc0cd816fa278155b3b6d1277d7b394054b70e020ee"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaspraypaintop.so",
+          "uuid": "B74F3357-E801-3D9A-ACA4-A6AFF34FC1B0",
+          "sha256": "4382575d4deb01ef35d72224291ec892a997f7005adc5798b8dbd4f49a060fcf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritatangentnormalpaintop.so",
+          "uuid": "D3F9EC91-40F7-3623-9878-0FBBE9FD974D",
+          "sha256": "e7ae842bf6983b0a01ec3e6dd3d44ada8ca3d74dde1762e4789ebd481c37adc9"
+        }
+      ],
+      "loaded_identity_passed": true
+    },
+    {
+      "side": "upstream",
+      "arch": "x86_64",
+      "pair": null,
+      "command": [
+        "arch",
+        "-x86_64",
+        "-e",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/MatchedFreehandBaselineTest",
+        "testMatchedCpuBaseline",
+        "-nocrashhandler"
+      ],
+      "log": "capability-03-upstream-x86_64.log",
+      "exit_code": 1,
+      "process_elapsed_seconds": 9.256571249999999,
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 3703ms"
+      ],
+      "failures": [
+        "FAIL!  : MatchedFreehandBaselineTest::testMatchedCpuBaseline() 'imageDestroyed' returned FALSE. ()"
+      ],
+      "sample": null,
+      "passed": false,
+      "loaded_local_files": [
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/MatchedFreehandBaselineTest",
+          "uuid": "F868D8FB-19A5-3F9D-8524-93E5D922AFFC",
+          "sha256": "f695f549e49f90d0c494d19c6a603f15b7d74ecaa7e9a5f77f74332e157b5582"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaui.21.0.0.dylib",
+          "uuid": "781A7B6E-4BA1-34A6-A8CB-55D77251FBE2",
+          "sha256": "8db44255860225cc7428ed972ec456ef3e638e733b09356ee4ea044de537829c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtNetwork.framework/Versions/A/QtNetwork",
+          "uuid": "A865328C-CD31-3353-8191-C2A2163328E2",
+          "sha256": "44e2760636ff0cc102ef1d201352caf3bf2a23840e62d7be56ab044738f39a75"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtConcurrent.framework/Versions/A/QtConcurrent",
+          "uuid": "68A56388-BA25-3D41-AC9A-4821530D7C2E",
+          "sha256": "a5832725aa72e37d64299e8248b4eef9364af1cd284b6eb25155f81c887d6fdb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libpng16.16.51.0.dylib",
+          "uuid": "660106AD-7211-3BD5-8C68-625458320509",
+          "sha256": "3467973a082023e9ac02723a65ee12fcd0297b9cf7ae1209f4679e20f0764e52"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libz.1.3.1.dylib",
+          "uuid": "6D24EE25-F495-3DE1-A5DC-9612CA18D2B8",
+          "sha256": "002f9b2efb64eac916c424d158058da4443d79c9c7720c71f3804c2034b88a5c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaimpex.21.0.0.dylib",
+          "uuid": "45BE9187-86C1-35EC-9E29-A0681C15CA25",
+          "sha256": "5b70cb496eee938852525e10785b0ef60735ad2507eb99124aec6aed6efaf365"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritalibbrush.21.0.0.dylib",
+          "uuid": "E7000017-BF3C-3834-9F31-56116426CBEC",
+          "sha256": "b8c3fc4fd4731b0eed3f4f8297541565c1f6951f39b14eb38414cc44bc61d871"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaimage.21.0.0.dylib",
+          "uuid": "084E8B85-55B9-378B-96EF-C01186C73A26",
+          "sha256": "a288ac214124c80c4d3961112c3b4ca8c13ee922e8208a63b204dd597f441908"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritapsdutils.21.0.0.dylib",
+          "uuid": "ECF494C6-F27D-38B3-B897-6D85936B2246",
+          "sha256": "b750256f38285db49a2bd71e6488428b67f716d1b702ee8d5ca046257897f810"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritametadata.21.0.0.dylib",
+          "uuid": "867B3895-4057-382A-9217-8C3A5DDCAA61",
+          "sha256": "b3746162dd758959477d33542b40a1e0cd2319ec8ab403bf2a69b72b262c9469"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritawidgets.21.0.0.dylib",
+          "uuid": "567B3474-931A-3ED9-A96E-9712F22C43E6",
+          "sha256": "1e8b8f97fc076acaa9ea7fdcb835f910e6aa4a4727c4d1e7cdca66ffe79d5050"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Completion.6.7.0.dylib",
+          "uuid": "62FEDFDE-A833-33B5-8BE9-8174ED4B79CA",
+          "sha256": "0db6af80207e318c9db0391968935c12e96ac89dca7331f580f24c0f27b46830"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaflake.21.0.0.dylib",
+          "uuid": "C2880FFE-0EC6-3CF9-B81A-AFFBD7CC25ED",
+          "sha256": "9d7bad937e4537ddeef311956a6d19d85005e69a1bf5b27903d7f9aad7ecc2ad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritapigment.21.0.0.dylib",
+          "uuid": "7FA4AEA5-8A4D-3AD0-ACE1-755FCB555756",
+          "sha256": "54090a92d3b036e8b4186b5b81d8b8b90a3114c222df94a9c7808715473c836c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritamultiarch.21.0.0.dylib",
+          "uuid": "93813486-82D4-3A34-8AAE-42C6535EF5BD",
+          "sha256": "713fea1bbac8a936c3eb933db3d20f8ee3b2cbf99df3bf97e0cf11da56dc2307"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritacommand.21.0.0.dylib",
+          "uuid": "DE8CE430-F60A-33C9-9D4D-6060883A418D",
+          "sha256": "de569aacb8c392983fd03dd5e921c3a40dc7fc47806e69f34a70cf3e2df5d265"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfreetype.6.18.3.dylib",
+          "uuid": "581134EB-D3F3-3930-B49B-7BCC4F79614A",
+          "sha256": "8687c146500e3fcb4b6f4819e4eb9365e42e0f5ec0ca50e281dc7d2ef8cf45d5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libharfbuzz.0.dylib",
+          "uuid": "B51559E2-7C4C-31C2-917D-91EF0AD16524",
+          "sha256": "223f85f420de9d14fe95cadc59bf811ad83b83bf33e540dcc2f4415c2ccad4ad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaresourcewidgets.21.0.0.dylib",
+          "uuid": "17DA7407-A76B-3FA2-AAD9-FC5BFE62E45F",
+          "sha256": "df1eaa39d4767c62a6d1665a7ef24d5b77d9e1adff6f442deff922d8b0e44f42"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritawidgetutils.21.0.0.dylib",
+          "uuid": "C2F6A39B-D290-3915-A93A-018D9C8DF28D",
+          "sha256": "91e7e67b969e4baeda54472a4a8d44440265d001355fb71f2b4c813cb334098e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ItemViews.6.7.0.dylib",
+          "uuid": "5F71904D-B518-3850-ADE7-82CAAA6DEDD1",
+          "sha256": "8d5cad67629ec5eef7c4f733b57ff38627142c7a2979f9bf4ee84fba5ef9b4f6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Versions/A/QtPrintSupport",
+          "uuid": "11B70E50-FA76-3B8C-824D-8344BBABCF81",
+          "sha256": "7b7bb861da56d9a78df54bfdcf1ea0cfb94f876fe05a007daf957bf23ef6c40b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6WidgetsAddons.6.7.0.dylib",
+          "uuid": "58570D4B-585A-353F-BA76-6A8E91E4D147",
+          "sha256": "dbcd0ea8096165f0718212e3fda8dcdabd63603bc6efa86201fc008b25e86e63"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaresources.21.0.0.dylib",
+          "uuid": "40489E7F-AE0C-393C-9BE9-9A5359C9A35C",
+          "sha256": "d81f108465efe2c4e66a2b13ca9409b534b235731db4bae080e40b57189cfeae"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Versions/A/QtSql",
+          "uuid": "B0C27457-0432-359E-8D6C-3DC209067EED",
+          "sha256": "b58338f7c91be76b56e878b21acf974611a80ecec01e0a7ed4163c451b3c6127"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaplugin.21.0.0.dylib",
+          "uuid": "B32EF4D7-9436-3378-84A9-500F7085489E",
+          "sha256": "d8e844cee84b10336beb05191e885e6a692361459495c09716bcf64ccc19b3f8"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6CoreAddons.6.7.0.dylib",
+          "uuid": "218E7933-4B8B-3A28-A6B1-C30344A03AD3",
+          "sha256": "89e7cd197f46b2ff8215dbe84da7bf279a91ebeedd26a9a5d84fa2bf1135f8ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritastore.21.0.0.dylib",
+          "uuid": "8722B0BA-AFF8-3C29-9C4B-D5AD5D410770",
+          "sha256": "5a8efbfe5d0328d29d6634680712fb4d90d2cd572c509539ac327ab43b6762c1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaglobal.21.0.0.dylib",
+          "uuid": "C984CB36-75CD-3B3B-8446-47EEEDFA1788",
+          "sha256": "aafc586109c9c668109e86994bb77bc9313a940d1633887c31be58df3d258fd9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritaversion.21.0.0.dylib",
+          "uuid": "858ED65C-053F-32C3-AF8B-F42AB164DBC2",
+          "sha256": "291968568c5b11f060deea6752dff14aae9d307d8803d0081e3d4a26f0b8371e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Versions/A/QtXml",
+          "uuid": "CF85B84F-194D-32BE-83EC-3B72FC190C99",
+          "sha256": "fb29d57096668771a05ae89d0163fa1ad967accfc76d53aafd8d2b15975d0343"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Versions/A/QtCore5Compat",
+          "uuid": "C1734BB6-855D-30CD-9840-0A8362E1530A",
+          "sha256": "6d2fd4e23668c385e3a10fda088246cf1f3e03dce272a7ba154251cc6be8bcee"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritamacosutils.21.0.0.dylib",
+          "uuid": "0E4C7AB9-8D3A-31C8-ACC6-47C1B468D74B",
+          "sha256": "7ebbb239c74451bde224bb7d9db84f05ba9bd72c4651367f4d2c0413ee0379a5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmImf-2_5.26.0.0.dylib",
+          "uuid": "E6F73BA0-7D9C-3882-95B1-59F2F7BDD932",
+          "sha256": "8f6324662ffbb35f35c60f28000749d41b77c865510b48a383cacdedffd707a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libImath-2_5.25.0.7.dylib",
+          "uuid": "53D4B5C2-74E2-31AA-A6BE-27EECC0D1F66",
+          "sha256": "393f57e33139793c2314c7b54b5a147e6c3ff772083eb7d8ad74f1b081a8f15d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libHalf-2_5.25.0.7.dylib",
+          "uuid": "27AFA877-FE5C-34D9-BA18-09911F0262A1",
+          "sha256": "11eec6d588cd21ca673edc98420b3ce45207906f7be5e830128e58c96157487d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIexMath-2_5.25.0.7.dylib",
+          "uuid": "1EFE8B6D-9B44-3ACC-AE55-252F9D14CED7",
+          "sha256": "de9817f5b43df10eb4662c58feb594a1e08ef6b79ddd5a79f99ac3fc7598c603"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmThread-2_5.25.0.7.dylib",
+          "uuid": "0FE03D50-AF39-365C-A3A6-16EA176738D5",
+          "sha256": "1a5076131207ba05d4e6b962f045c42c828363a16ee4efa2597952bba141e828"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIex-2_5.25.0.7.dylib",
+          "uuid": "8F70C70E-246D-3EE8-BB26-0072D8969ADD",
+          "sha256": "249642c3babd270a1a9b58f836fde4de6ce0f11fa5ec7fbaef66001b256c0589"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Versions/A/QtOpenGL",
+          "uuid": "C1D795DB-E409-3626-BC27-E8C98DD53297",
+          "sha256": "fc679fb3dd862c9666f6c4a70ec38367eda49e26453936d44663c97d06d9b518"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Versions/A/QtWidgets",
+          "uuid": "BD355544-056A-38FF-8C97-A6E95A2971D7",
+          "sha256": "b42b88fdeea4a8372a08477dad3bd208ae51ff66b3d84e517cca1331c15de33e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Versions/A/QtSvg",
+          "uuid": "A7CAFE91-89F0-32AE-8811-4FCBB97F72F2",
+          "sha256": "ea8e26a18f25e00a213fa3abe36737d966995d5620093bc2fb2ebad55e3a1d20"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6I18n.6.7.0.dylib",
+          "uuid": "4EF44186-92CD-3387-A2BA-5222A34FFD06",
+          "sha256": "1d94fbcfd6e2245c2b9a5dc0fd8f66abfab93175ba687e4a2e71b1eb7d2d20ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigGui.6.7.0.dylib",
+          "uuid": "EC0C91B4-AC92-3DA6-B434-3FBF0588FB41",
+          "sha256": "7874d60335f3c9e12abb81153e7b060869e123aa4e0300030d171425f3d159f5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6GuiAddons.6.7.0.dylib",
+          "uuid": "F52F2E95-D8B6-335A-88AB-3393B7681E33",
+          "sha256": "c4d3976e0925cb61eae8fea3dddbd72b7fc03524f74ba78a35e5a270de8189f7"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigCore.6.7.0.dylib",
+          "uuid": "B2757FA8-7AD3-3E96-9C66-B0AA84AF6B10",
+          "sha256": "e2db46d081487f1c4499f6cdd947ba0f901b51441f4f726fbe4aef2e23bbf900"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Versions/A/QtGui",
+          "uuid": "96911A33-9DC6-3327-8419-ADE2B2D4B55D",
+          "sha256": "696b8b068c854b2248d06c383a42488dd380d997ec7263e0bfaee28301915d64"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+          "uuid": "AB7F1272-394F-3E1B-8A2E-3E9A47E572DE",
+          "sha256": "06b88fe8a8396e095a1eae6ea8c1ab6ecf78f3ada3d288d8bf3a92b4d986e92d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+          "uuid": "C3BD39DE-98AD-360C-A29F-152F8122CE3F",
+          "sha256": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvgWidgets.framework/Versions/A/QtSvgWidgets",
+          "uuid": "A52F30D0-AC75-3500-AFCD-0E359DC10EDA",
+          "sha256": "daf18bdfa7faad133821ece919daae939d9e79bc62d75554cd4bd0fa8ce8325b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libSDL2-2.0.0.dylib",
+          "uuid": "09297A37-C895-3DCD-9148-6B085FE98C90",
+          "sha256": "2479aef4ad661a858440c4153e4399dd56453eff63be262311b05b01eabbd764"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt++-7.7.28.0.dylib",
+          "uuid": "A3B3B964-5B7D-3179-8AD2-94E9F94E3B0B",
+          "sha256": "f2e6fc820775eb25b2af865847dc004915b664118402083d37dde4c4977b78c6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets",
+          "uuid": "AE127694-149B-3FC7-A2E3-FE20142A1AC6",
+          "sha256": "38947912b141913c60b2f0d0c09f4f39111b9c8906b4af2f9a514fbe51bd4957"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ColorScheme.6.7.0.dylib",
+          "uuid": "FDD19C3C-A116-37AA-8DE2-E1DF5BF864C8",
+          "sha256": "923cf937f6b139bb94f477d7e5afc85d169695924bc5d9ddff079b5c92efa84f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt-7.7.28.0.dylib",
+          "uuid": "2FD97907-276E-3C27-9B0A-E74272678E5B",
+          "sha256": "c8f43c47a70c07495a260297d596d468de2c08061e6bd7dc52c6c5b59c690d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicui18n.72.dylib",
+          "uuid": "D6FF3F7C-A963-3829-BCE9-8492B94CEEA5",
+          "sha256": "c2bf58e9638e2f9de001cc8a9a96cf739583abf8ad0c4d6d65fc83b68b518678"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicuuc.72.dylib",
+          "uuid": "E2AC1E29-81C6-3561-B243-7844F9FDB86F",
+          "sha256": "0c9e9af333b5ec91d5a2f4cc4e76fc7140b06bbf2434e2c6cdd7513ede7b2931"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicudata.72.dylib",
+          "uuid": "3252C38E-1AF6-3F87-A45F-36C69B9BE09A",
+          "sha256": "b6ea871dc90f4ae58d92d6352483cafdde2eb9d50fbc46696030e62890b8eaa6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfftw3.3.dylib",
+          "uuid": "945747ED-05C4-39E2-BB23-305F0B6AD745",
+          "sha256": "f0e7faf61df13481b1f67e0f4ca48ace70eaaf0658b2eecab0f90be2c7e46238"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgsl.dylib",
+          "uuid": "DAD38FA1-0032-3E29-BB13-E05F043C825D",
+          "sha256": "5ade92bcd56d0a837087f4dc97ff83d1797ff2449ec3943894a833fcb81617dd"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgslcblas.dylib",
+          "uuid": "79D25CD3-DA6A-3494-92F9-5F2581B52681",
+          "sha256": "7e7df8ee3abc256088b09ac0857258d4768a0fb9d65c93fdd597e97f02bce483"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfontconfig.1.dylib",
+          "uuid": "78FEE7C4-EA00-3F9A-BD82-B34CC5FDBD8D",
+          "sha256": "822c81ae2cce24c9f55bf774ee69522f98c5174802426d3c40f05f6cd12a534e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfribidi.0.dylib",
+          "uuid": "C80A337A-7552-3F80-BFC8-169AE7901942",
+          "sha256": "5e99aa07f5b9f75132fe5b55691e06432297edf43d3c710c8b6b952dbdc6ac66"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/png.framework/Versions/1.6.51/png",
+          "uuid": "87B269D5-A7C3-3C4D-AABE-BACF0F3F8EC0",
+          "sha256": "88b63245f58cbe3e9d02236ad46aa3bf0c365f409466272befa1881c9a7971b2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libquazip1-qt6.1.4.dylib",
+          "uuid": "360A6529-4DE2-3F98-8C33-E98559B7B80F",
+          "sha256": "2faf1fcc4bd8b20e9520ea8b93e2cc5d93aeb9c43d65c155c6b03ef2aee1d6ca"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libintl.8.dylib",
+          "uuid": "3B5F5230-2FDB-3FA2-B1AC-5B7FBCA13C42",
+          "sha256": "14b2139031e618fa2325b01e9943843686efd1a232818adb62a56b3e38c3086e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libexpat.1.8.8.dylib",
+          "uuid": "469FF101-CF80-358B-8504-B881CB30D759",
+          "sha256": "2f50ed3a34ec650ceff0663d7db8e1107e1934d8e99bacfe65b8bf03277d1ebf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Codecs.6.7.0.dylib",
+          "uuid": "3B194384-6557-38D8-B1F0-FE90EECEBBB2",
+          "sha256": "eedb2ddc6d6b7d2ebe734610258a90cd29b9eb8ad235da25e64a6be92dae6629"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/platforms/libqoffscreen.dylib",
+          "uuid": "BBE6B687-7585-3839-9674-B22FB4832F6F",
+          "sha256": "eed8ec727309e2f102c9f148a58f8e4eb6a5788c562bb8e46f8320f50295b5a3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/kritalcmsengine.so",
+          "uuid": "5F6E1C65-0EB6-3A71-BB04-6EFA13F70AEF",
+          "sha256": "86b7786562e807d11280c2d94938387e5527838c93292645439a937371d40488"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2.2.12.dylib",
+          "uuid": "FBAB1021-4B7B-3882-A330-2C37B60F4E38",
+          "sha256": "94a3968fed31cdf942b5adbc0548c8e6facf9047525a5262cfcc23e181e01b1d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2_fast_float.2.12.dylib",
+          "uuid": "1B7307F9-2CE7-319E-BDD4-8BB3045D9ACB",
+          "sha256": "dcbfeea3be3ac9881fc73f2fd32dfa96d836647ad0c68f4bcdfaf054b8354eac"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/krita_colorspaces_extensions.so",
+          "uuid": "2B5DF36C-79DC-3CAD-8F50-0D10F8F592DC",
+          "sha256": "3985691007e75c13ee48703ab0eabd0fdae67e00532f3f587de0c05309b8f4ba"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pcx.dylib",
+          "uuid": "F796886D-8504-30AA-A72B-B88E61A4498F",
+          "sha256": "074e62dbc6d97600ed1eead60a6a651c423d2533cf136fa5e56c40b626c9f287"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_psd.dylib",
+          "uuid": "5AF49049-DA09-363D-966F-B6A416B36670",
+          "sha256": "0bebad6addf8f41f26a97dbd15dad6aad6c6174bf23f621ea6078605902296ff"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pfm.dylib",
+          "uuid": "81681642-BB00-3D6D-96CA-52422C62D59B",
+          "sha256": "d1ae3fff2baef047326672cd14654b779eb2327f6f2d9343079b3292d3c9c363"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqgif.dylib",
+          "uuid": "6080EDA9-F52A-3E3E-AAC0-E1601A042916",
+          "sha256": "20b6d4367703fd29740dc8e8ab38b73c2f4c6b859bb08ded3f0b494cd2ec24e6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwbmp.dylib",
+          "uuid": "B0C6FCB9-80DD-3401-8D8A-0EFBFE815EBC",
+          "sha256": "3422e28eebfae6457bb3e280643c8f8fd22339bd1ceeab99dc59c148425ba6a2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwebp.dylib",
+          "uuid": "DB8E3282-8AE4-3A5A-A8A9-7434C21349A0",
+          "sha256": "5575c2bd0860d3c38fcccbe3d329180a57aab13c5ceb0b97a94570883be25d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_eps.dylib",
+          "uuid": "E6D70DEF-B9C3-33B9-92F3-8DCE73B0CCD5",
+          "sha256": "47ca5ec5777066c8791b6c50c91b4a45cc372e3cbecf93c90539f0bc689b859f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_xcf.dylib",
+          "uuid": "EFDE1EE3-517A-3D39-BA2C-34CFAAFAAC76",
+          "sha256": "cc1f1a602eb4f664eb806faf85e075ef19552794effe7b4cf0bdb038f51a19c1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqico.dylib",
+          "uuid": "16F2D067-473B-338E-9FD7-8E480E98A631",
+          "sha256": "8813e67728d45b94c686d5c966987932ecf48749858a185adf5f2bfa7591229d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pic.dylib",
+          "uuid": "6141A497-A1F4-3176-BD07-58B86AA44073",
+          "sha256": "72037fec76dccfd485eaee0fb2599856ba0203d751783522260f908818cb3a1a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_rgb.dylib",
+          "uuid": "17D50E7B-DE25-3810-8E50-C0D830D78589",
+          "sha256": "f98609ce14c7e4f77c6fce552af93ba11dd7cb22ead37aa8cf646d03d5e167de"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacheif.dylib",
+          "uuid": "ED7DE59C-B2A1-3126-AA83-5653B1417734",
+          "sha256": "20ea84aaeda0aaa19e5197d28e97253a8cf7119513599f611e3f90164bd0a66e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_kra.dylib",
+          "uuid": "F1A46728-4718-32FA-8B2C-1C973F68E177",
+          "sha256": "286c9d91f3589c2e402a09c7a9ac226bec0bea4b5b793be229cdf5e5a616b811"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Archive.6.7.0.dylib",
+          "uuid": "BCF01167-62B1-37B1-B0C5-04274B98F98F",
+          "sha256": "bac8563ff98ce582637dfaf938ec60d1f2aa89c181c98fe1bd37e3514447aa1f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pxr.dylib",
+          "uuid": "031E1EE4-B52E-32FA-BFEE-D95AFFD282A8",
+          "sha256": "24b1d1c8587e341d43033012f4fbede17779a3807cdae57013b5fb406df507a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ani.dylib",
+          "uuid": "767F9BF7-211D-3417-ACC6-CAED4CEA7C3A",
+          "sha256": "2e403a7e63806d4c0bbae8d85c5f11ccdc6f095d720aade7d03a0d9f020986c4"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqjpeg.dylib",
+          "uuid": "A5804D00-1DA5-3EED-81CF-A912CDA2FC4B",
+          "sha256": "8f3118105cee5865d4e5dd39e5444f1764952f5af8833aa930ca383e783ae672"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libjpeg.62.3.0.dylib",
+          "uuid": "59E6BDFF-3259-3E87-9330-AF46A70DA991",
+          "sha256": "0a232056b3d6f858b1752ae8cfcf802c62c53a803fba0eda81e4e75bcb385506"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ora.dylib",
+          "uuid": "1C62F175-FC50-30F0-9922-18DBAB637522",
+          "sha256": "ba39e310e4ba43bafc09c10043ee90026975e946e48e8725ba81261a68b2631a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqtiff.dylib",
+          "uuid": "8A153BF3-9C03-3472-B5E9-E50E92EEE54F",
+          "sha256": "067d8be03a9349062dbdedad2ec4290b74867865345f37bbb5f6783127227cdf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqsvg.dylib",
+          "uuid": "90B8117A-2260-393B-A9D8-C38013D07FCA",
+          "sha256": "f3754bc2d6170fa62e5056d63c50d10c7cfdde4cdb17baf2b1386eb46b95c3b6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_tga.dylib",
+          "uuid": "15E9CE2D-7663-32E9-BFDD-2B070D159784",
+          "sha256": "2d472fbcba409b276b1d398dab6d3226cbaaecc0fb1eae844054bc62beb5bd40"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_hdr.dylib",
+          "uuid": "0BF53ACB-3580-3388-817B-20804CD299B5",
+          "sha256": "8acf6891dfa64b962a021284284ee417c4ee07daacf0ce2d3535ea8ebd6decf9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ras.dylib",
+          "uuid": "1903D4C5-FE7E-3239-970A-479FE0251754",
+          "sha256": "07ef4099da64049a3eea9b05bb2f7882e967f00a4f83adf82c9249b0e5ae0568"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_qoi.dylib",
+          "uuid": "14BD7B8F-6C80-3FB9-A977-76AB70D6E663",
+          "sha256": "1d9134df083df5be089cf373e9f0b998fce0d7104fee49b7396c4e51d74246cb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqicns.dylib",
+          "uuid": "48426D79-CB74-322D-81FB-B37A8660BA7D",
+          "sha256": "e0b08a10346630689091ae2f15c4d58d8a8a6e555fb3db5db88d66a01c758ddc"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacjp2.dylib",
+          "uuid": "201F90CA-A3A9-390B-B153-60FFE7FD29C9",
+          "sha256": "5a9b845d38d291b4cf53255389f991d18af7ded6936bb5edb7209a4db69d7ac5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/kritadefaultpaintops.so",
+          "uuid": "C543BE79-56CD-3888-A706-2F338B861DF3",
+          "sha256": "b4940693aa72372b4488ff1d65e2079daf7284200db57719ada6af5749968795"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/libkritalibpaintop.21.0.0.dylib",
+          "uuid": "7B1FC94D-9C10-3529-9B86-94ACFB542455",
+          "sha256": "ae4d99f1998dcdd43cfc1b89e626a6095c65db88f05a1a839e888ff1b972168f"
+        }
+      ],
+      "loaded_identity_passed": true
+    },
+    {
+      "side": "current",
+      "arch": "x86_64",
+      "pair": null,
+      "command": [
+        "arch",
+        "-x86_64",
+        "-e",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest",
+        "testMatchedCpuBaseline",
+        "-nocrashhandler"
+      ],
+      "log": "capability-03-current-x86_64.log",
+      "exit_code": 1,
+      "process_elapsed_seconds": 3.5565793749999983,
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1261ms"
+      ],
+      "failures": [
+        "FAIL!  : MatchedFreehandBaselineTest::testMatchedCpuBaseline() 'imageDestroyed' returned FALSE. ()"
+      ],
+      "sample": null,
+      "passed": false,
+      "loaded_local_files": [
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest",
+          "uuid": "34C177AF-97F2-372C-AAC6-7C87313B1E6F",
+          "sha256": "22972d4a8e8b0031595ed7fee5531dba911804edc1e845b01b1e479f5ba8cd1a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaui.21.0.0.dylib",
+          "uuid": "632ADA7B-517E-32AF-8A73-A3340694917C",
+          "sha256": "bc407200919f19f876a7d7e2a44146ea186b874705888ecbdf43662be6983fa3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtNetwork.framework/Versions/A/QtNetwork",
+          "uuid": "A865328C-CD31-3353-8191-C2A2163328E2",
+          "sha256": "44e2760636ff0cc102ef1d201352caf3bf2a23840e62d7be56ab044738f39a75"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtConcurrent.framework/Versions/A/QtConcurrent",
+          "uuid": "68A56388-BA25-3D41-AC9A-4821530D7C2E",
+          "sha256": "a5832725aa72e37d64299e8248b4eef9364af1cd284b6eb25155f81c887d6fdb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libpng16.16.51.0.dylib",
+          "uuid": "660106AD-7211-3BD5-8C68-625458320509",
+          "sha256": "3467973a082023e9ac02723a65ee12fcd0297b9cf7ae1209f4679e20f0764e52"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimpex.21.0.0.dylib",
+          "uuid": "76C2272E-8839-38C1-85D0-6800F8858801",
+          "sha256": "8c8fa1288c6e4feeeadab471e0f56ef6f4a6dd2678a0312415ad4a1381af2055"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritalibbrush.21.0.0.dylib",
+          "uuid": "5876C675-42B7-3A50-9EAD-D40D7414E698",
+          "sha256": "1424541a0d8ecea4c54eb053a710b2d180a06ea20250c11b855c078f17cee5ff"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib",
+          "uuid": "0CF9DD58-7F35-3557-9824-476AE6725E30",
+          "sha256": "f63b9696a0bbad74197d044216accd9bbd121ee75059d5b2b829255996abb0f8"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapsdutils.21.0.0.dylib",
+          "uuid": "DA56AB4A-0318-30CD-A937-527207DFFF3A",
+          "sha256": "70aa0870bfa4468c50ec5253f2deb7dc87c4980f67a8f055c4dc5b0989fb05e5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritametadata.21.0.0.dylib",
+          "uuid": "6BDF92CC-CC1C-364B-905E-3112C332CB9D",
+          "sha256": "92942ccc3feb0faaf358995ae7640d2e4909bdc737fc3baa991a33ca3cbbf961"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgets.21.0.0.dylib",
+          "uuid": "3EBB366B-1EE5-3044-9D65-0C79C22B3722",
+          "sha256": "e60f4a1a6f70d6577937a6529952af1ef0888d97232641ffcf9a562d94beb495"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Completion.6.7.0.dylib",
+          "uuid": "62FEDFDE-A833-33B5-8BE9-8174ED4B79CA",
+          "sha256": "0db6af80207e318c9db0391968935c12e96ac89dca7331f580f24c0f27b46830"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaflake.21.0.0.dylib",
+          "uuid": "4C5C6059-7C63-338F-847C-2D44B77AF4F8",
+          "sha256": "a541b441dd2da683163402f0ade530e68c696cf88244039a796b6f1367788e06"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapigment.21.0.0.dylib",
+          "uuid": "5AFDAA86-9D00-36C4-8989-D4037BB378FB",
+          "sha256": "0c5363b4bd9ab1237a7679a1f3f4ecee5c55aeb2383c20260dba5059bffff6ba"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamultiarch.21.0.0.dylib",
+          "uuid": "DCE02558-831C-3B90-A950-A58D3468D6E3",
+          "sha256": "b8adcf8275eade99beac58d76a5e2de261953bb1ef109e14aa6d6c5e6048e25e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritacommand.21.0.0.dylib",
+          "uuid": "2616AC71-4BC0-3969-8E52-7BF0EAFCBAB4",
+          "sha256": "4fe95cb2ee66cb9cad4c878f058acb37f0d198a2d00a6df5e9b6150a068268a3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfreetype.6.18.3.dylib",
+          "uuid": "581134EB-D3F3-3930-B49B-7BCC4F79614A",
+          "sha256": "8687c146500e3fcb4b6f4819e4eb9365e42e0f5ec0ca50e281dc7d2ef8cf45d5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libharfbuzz.0.dylib",
+          "uuid": "B51559E2-7C4C-31C2-917D-91EF0AD16524",
+          "sha256": "223f85f420de9d14fe95cadc59bf811ad83b83bf33e540dcc2f4415c2ccad4ad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresourcewidgets.21.0.0.dylib",
+          "uuid": "A32D7E94-54E5-3045-8460-40F1ADF870AD",
+          "sha256": "2d4bde81c42a5f14edd24c5b8391d6d28a45f9230574b874495e1720f171b653"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgetutils.21.0.0.dylib",
+          "uuid": "F1D6F213-ED49-3AEA-9529-74C200C90C01",
+          "sha256": "53e7ff60e840f5e4b88ad502dcd5c9dd807d5e866d9afa29cbd8b2233c1c7ad3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ItemViews.6.7.0.dylib",
+          "uuid": "5F71904D-B518-3850-ADE7-82CAAA6DEDD1",
+          "sha256": "8d5cad67629ec5eef7c4f733b57ff38627142c7a2979f9bf4ee84fba5ef9b4f6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Versions/A/QtPrintSupport",
+          "uuid": "11B70E50-FA76-3B8C-824D-8344BBABCF81",
+          "sha256": "7b7bb861da56d9a78df54bfdcf1ea0cfb94f876fe05a007daf957bf23ef6c40b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6WidgetsAddons.6.7.0.dylib",
+          "uuid": "58570D4B-585A-353F-BA76-6A8E91E4D147",
+          "sha256": "dbcd0ea8096165f0718212e3fda8dcdabd63603bc6efa86201fc008b25e86e63"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresources.21.0.0.dylib",
+          "uuid": "CAE08C2C-7539-3E34-AAB2-25C3E58A5820",
+          "sha256": "89009c2e9cba00afa36cae994efba1b5333773751fb47fb1261cb8c4464baf2d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Versions/A/QtSql",
+          "uuid": "B0C27457-0432-359E-8D6C-3DC209067EED",
+          "sha256": "b58338f7c91be76b56e878b21acf974611a80ecec01e0a7ed4163c451b3c6127"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaplugin.21.0.0.dylib",
+          "uuid": "D3448A23-6D2E-359C-A300-8793C5F6419D",
+          "sha256": "1180f53891132beedc2bc2ad603b31ab0d6b0ee862d56793038e6309ed6723fe"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6CoreAddons.6.7.0.dylib",
+          "uuid": "218E7933-4B8B-3A28-A6B1-C30344A03AD3",
+          "sha256": "89e7cd197f46b2ff8215dbe84da7bf279a91ebeedd26a9a5d84fa2bf1135f8ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritastore.21.0.0.dylib",
+          "uuid": "DAB0C177-91C3-300E-B7B7-BEE4FEEA4000",
+          "sha256": "229514294d6eebb7777821a94254f8719bc63ddbbf5e9fb5ad0f86d7df5c07e0"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaglobal.21.0.0.dylib",
+          "uuid": "7D22B098-4636-3E16-8DB2-4F85D878474E",
+          "sha256": "19cd6d6ace0fe09ac16fbdee9dee76bc93ff71a0327d90ca3b1489e14da124ca"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaversion.21.0.0.dylib",
+          "uuid": "F9A28D0D-B722-38DF-9BBA-0D01F3304F5F",
+          "sha256": "b9e737709499c41866bdf1b443872eb6c8894dd88860725f9d0a3fdae26d51f9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Versions/A/QtXml",
+          "uuid": "CF85B84F-194D-32BE-83EC-3B72FC190C99",
+          "sha256": "fb29d57096668771a05ae89d0163fa1ad967accfc76d53aafd8d2b15975d0343"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Versions/A/QtCore5Compat",
+          "uuid": "C1734BB6-855D-30CD-9840-0A8362E1530A",
+          "sha256": "6d2fd4e23668c385e3a10fda088246cf1f3e03dce272a7ba154251cc6be8bcee"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamacosutils.21.0.0.dylib",
+          "uuid": "F93B235C-28EE-37E5-B1A2-60458FAC8744",
+          "sha256": "e5964681416cc88883aa3b0a1ef3684caf4029b7fea081334b9ab1b10f1e92b9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmImf-2_5.26.0.0.dylib",
+          "uuid": "E6F73BA0-7D9C-3882-95B1-59F2F7BDD932",
+          "sha256": "8f6324662ffbb35f35c60f28000749d41b77c865510b48a383cacdedffd707a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libImath-2_5.25.0.7.dylib",
+          "uuid": "53D4B5C2-74E2-31AA-A6BE-27EECC0D1F66",
+          "sha256": "393f57e33139793c2314c7b54b5a147e6c3ff772083eb7d8ad74f1b081a8f15d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libHalf-2_5.25.0.7.dylib",
+          "uuid": "27AFA877-FE5C-34D9-BA18-09911F0262A1",
+          "sha256": "11eec6d588cd21ca673edc98420b3ce45207906f7be5e830128e58c96157487d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIexMath-2_5.25.0.7.dylib",
+          "uuid": "1EFE8B6D-9B44-3ACC-AE55-252F9D14CED7",
+          "sha256": "de9817f5b43df10eb4662c58feb594a1e08ef6b79ddd5a79f99ac3fc7598c603"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIlmThread-2_5.25.0.7.dylib",
+          "uuid": "0FE03D50-AF39-365C-A3A6-16EA176738D5",
+          "sha256": "1a5076131207ba05d4e6b962f045c42c828363a16ee4efa2597952bba141e828"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libIex-2_5.25.0.7.dylib",
+          "uuid": "8F70C70E-246D-3EE8-BB26-0072D8969ADD",
+          "sha256": "249642c3babd270a1a9b58f836fde4de6ce0f11fa5ec7fbaef66001b256c0589"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Versions/A/QtOpenGL",
+          "uuid": "C1D795DB-E409-3626-BC27-E8C98DD53297",
+          "sha256": "fc679fb3dd862c9666f6c4a70ec38367eda49e26453936d44663c97d06d9b518"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Versions/A/QtWidgets",
+          "uuid": "BD355544-056A-38FF-8C97-A6E95A2971D7",
+          "sha256": "b42b88fdeea4a8372a08477dad3bd208ae51ff66b3d84e517cca1331c15de33e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Versions/A/QtSvg",
+          "uuid": "A7CAFE91-89F0-32AE-8811-4FCBB97F72F2",
+          "sha256": "ea8e26a18f25e00a213fa3abe36737d966995d5620093bc2fb2ebad55e3a1d20"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6I18n.6.7.0.dylib",
+          "uuid": "4EF44186-92CD-3387-A2BA-5222A34FFD06",
+          "sha256": "1d94fbcfd6e2245c2b9a5dc0fd8f66abfab93175ba687e4a2e71b1eb7d2d20ab"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigGui.6.7.0.dylib",
+          "uuid": "EC0C91B4-AC92-3DA6-B434-3FBF0588FB41",
+          "sha256": "7874d60335f3c9e12abb81153e7b060869e123aa4e0300030d171425f3d159f5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6GuiAddons.6.7.0.dylib",
+          "uuid": "F52F2E95-D8B6-335A-88AB-3393B7681E33",
+          "sha256": "c4d3976e0925cb61eae8fea3dddbd72b7fc03524f74ba78a35e5a270de8189f7"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigCore.6.7.0.dylib",
+          "uuid": "B2757FA8-7AD3-3E96-9C66-B0AA84AF6B10",
+          "sha256": "e2db46d081487f1c4499f6cdd947ba0f901b51441f4f726fbe4aef2e23bbf900"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Versions/A/QtGui",
+          "uuid": "96911A33-9DC6-3327-8419-ADE2B2D4B55D",
+          "sha256": "696b8b068c854b2248d06c383a42488dd380d997ec7263e0bfaee28301915d64"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+          "uuid": "AB7F1272-394F-3E1B-8A2E-3E9A47E572DE",
+          "sha256": "06b88fe8a8396e095a1eae6ea8c1ab6ecf78f3ada3d288d8bf3a92b4d986e92d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+          "uuid": "C3BD39DE-98AD-360C-A29F-152F8122CE3F",
+          "sha256": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtSvgWidgets.framework/Versions/A/QtSvgWidgets",
+          "uuid": "A52F30D0-AC75-3500-AFCD-0E359DC10EDA",
+          "sha256": "daf18bdfa7faad133821ece919daae939d9e79bc62d75554cd4bd0fa8ce8325b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libSDL2-2.0.0.dylib",
+          "uuid": "09297A37-C895-3DCD-9148-6B085FE98C90",
+          "sha256": "2479aef4ad661a858440c4153e4399dd56453eff63be262311b05b01eabbd764"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt++-7.7.28.0.dylib",
+          "uuid": "A3B3B964-5B7D-3179-8AD2-94E9F94E3B0B",
+          "sha256": "f2e6fc820775eb25b2af865847dc004915b664118402083d37dde4c4977b78c6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets",
+          "uuid": "AE127694-149B-3FC7-A2E3-FE20142A1AC6",
+          "sha256": "38947912b141913c60b2f0d0c09f4f39111b9c8906b4af2f9a514fbe51bd4957"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6ColorScheme.6.7.0.dylib",
+          "uuid": "FDD19C3C-A116-37AA-8DE2-E1DF5BF864C8",
+          "sha256": "923cf937f6b139bb94f477d7e5afc85d169695924bc5d9ddff079b5c92efa84f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmlt-7.7.28.0.dylib",
+          "uuid": "2FD97907-276E-3C27-9B0A-E74272678E5B",
+          "sha256": "c8f43c47a70c07495a260297d596d468de2c08061e6bd7dc52c6c5b59c690d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libz.1.3.1.dylib",
+          "uuid": "6D24EE25-F495-3DE1-A5DC-9612CA18D2B8",
+          "sha256": "002f9b2efb64eac916c424d158058da4443d79c9c7720c71f3804c2034b88a5c"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicui18n.72.dylib",
+          "uuid": "D6FF3F7C-A963-3829-BCE9-8492B94CEEA5",
+          "sha256": "c2bf58e9638e2f9de001cc8a9a96cf739583abf8ad0c4d6d65fc83b68b518678"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicuuc.72.dylib",
+          "uuid": "E2AC1E29-81C6-3561-B243-7844F9FDB86F",
+          "sha256": "0c9e9af333b5ec91d5a2f4cc4e76fc7140b06bbf2434e2c6cdd7513ede7b2931"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libicudata.72.dylib",
+          "uuid": "3252C38E-1AF6-3F87-A45F-36C69B9BE09A",
+          "sha256": "b6ea871dc90f4ae58d92d6352483cafdde2eb9d50fbc46696030e62890b8eaa6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfftw3.3.dylib",
+          "uuid": "945747ED-05C4-39E2-BB23-305F0B6AD745",
+          "sha256": "f0e7faf61df13481b1f67e0f4ca48ace70eaaf0658b2eecab0f90be2c7e46238"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgsl.dylib",
+          "uuid": "DAD38FA1-0032-3E29-BB13-E05F043C825D",
+          "sha256": "5ade92bcd56d0a837087f4dc97ff83d1797ff2449ec3943894a833fcb81617dd"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libgslcblas.dylib",
+          "uuid": "79D25CD3-DA6A-3494-92F9-5F2581B52681",
+          "sha256": "7e7df8ee3abc256088b09ac0857258d4768a0fb9d65c93fdd597e97f02bce483"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfontconfig.1.dylib",
+          "uuid": "78FEE7C4-EA00-3F9A-BD82-B34CC5FDBD8D",
+          "sha256": "822c81ae2cce24c9f55bf774ee69522f98c5174802426d3c40f05f6cd12a534e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libfribidi.0.dylib",
+          "uuid": "C80A337A-7552-3F80-BFC8-169AE7901942",
+          "sha256": "5e99aa07f5b9f75132fe5b55691e06432297edf43d3c710c8b6b952dbdc6ac66"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/png.framework/Versions/1.6.51/png",
+          "uuid": "87B269D5-A7C3-3C4D-AABE-BACF0F3F8EC0",
+          "sha256": "88b63245f58cbe3e9d02236ad46aa3bf0c365f409466272befa1881c9a7971b2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libquazip1-qt6.1.4.dylib",
+          "uuid": "360A6529-4DE2-3F98-8C33-E98559B7B80F",
+          "sha256": "2faf1fcc4bd8b20e9520ea8b93e2cc5d93aeb9c43d65c155c6b03ef2aee1d6ca"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libintl.8.dylib",
+          "uuid": "3B5F5230-2FDB-3FA2-B1AC-5B7FBCA13C42",
+          "sha256": "14b2139031e618fa2325b01e9943843686efd1a232818adb62a56b3e38c3086e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libexpat.1.8.8.dylib",
+          "uuid": "469FF101-CF80-358B-8504-B881CB30D759",
+          "sha256": "2f50ed3a34ec650ceff0663d7db8e1107e1934d8e99bacfe65b8bf03277d1ebf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Codecs.6.7.0.dylib",
+          "uuid": "3B194384-6557-38D8-B1F0-FE90EECEBBB2",
+          "sha256": "eedb2ddc6d6b7d2ebe734610258a90cd29b9eb8ad235da25e64a6be92dae6629"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/platforms/libqoffscreen.dylib",
+          "uuid": "BBE6B687-7585-3839-9674-B22FB4832F6F",
+          "sha256": "eed8ec727309e2f102c9f148a58f8e4eb6a5788c562bb8e46f8320f50295b5a3"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritalcmsengine.so",
+          "uuid": "3AB5E80A-CBF4-3F82-8674-32B58F7E0707",
+          "sha256": "12b1c221ad6e3f9e3f924a0c31320980d85f3c30cb9f971d50d691350b230ffb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2.2.12.dylib",
+          "uuid": "FBAB1021-4B7B-3882-A330-2C37B60F4E38",
+          "sha256": "94a3968fed31cdf942b5adbc0548c8e6facf9047525a5262cfcc23e181e01b1d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/liblcms2_fast_float.2.12.dylib",
+          "uuid": "1B7307F9-2CE7-319E-BDD4-8BB3045D9ACB",
+          "sha256": "dcbfeea3be3ac9881fc73f2fd32dfa96d836647ad0c68f4bcdfaf054b8354eac"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita_colorspaces_extensions.so",
+          "uuid": "8EEAA70D-FB18-3E4C-A7D9-A311A7214B59",
+          "sha256": "d093d396d5a4c18591bfa92f88ff0ca114b12e2cf34e7d3f0126dc746854db94"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pcx.dylib",
+          "uuid": "F796886D-8504-30AA-A72B-B88E61A4498F",
+          "sha256": "074e62dbc6d97600ed1eead60a6a651c423d2533cf136fa5e56c40b626c9f287"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_psd.dylib",
+          "uuid": "5AF49049-DA09-363D-966F-B6A416B36670",
+          "sha256": "0bebad6addf8f41f26a97dbd15dad6aad6c6174bf23f621ea6078605902296ff"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pfm.dylib",
+          "uuid": "81681642-BB00-3D6D-96CA-52422C62D59B",
+          "sha256": "d1ae3fff2baef047326672cd14654b779eb2327f6f2d9343079b3292d3c9c363"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqgif.dylib",
+          "uuid": "6080EDA9-F52A-3E3E-AAC0-E1601A042916",
+          "sha256": "20b6d4367703fd29740dc8e8ab38b73c2f4c6b859bb08ded3f0b494cd2ec24e6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwbmp.dylib",
+          "uuid": "B0C6FCB9-80DD-3401-8D8A-0EFBFE815EBC",
+          "sha256": "3422e28eebfae6457bb3e280643c8f8fd22339bd1ceeab99dc59c148425ba6a2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwebp.dylib",
+          "uuid": "DB8E3282-8AE4-3A5A-A8A9-7434C21349A0",
+          "sha256": "5575c2bd0860d3c38fcccbe3d329180a57aab13c5ceb0b97a94570883be25d4f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_eps.dylib",
+          "uuid": "E6D70DEF-B9C3-33B9-92F3-8DCE73B0CCD5",
+          "sha256": "47ca5ec5777066c8791b6c50c91b4a45cc372e3cbecf93c90539f0bc689b859f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_xcf.dylib",
+          "uuid": "EFDE1EE3-517A-3D39-BA2C-34CFAAFAAC76",
+          "sha256": "cc1f1a602eb4f664eb806faf85e075ef19552794effe7b4cf0bdb038f51a19c1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqico.dylib",
+          "uuid": "16F2D067-473B-338E-9FD7-8E480E98A631",
+          "sha256": "8813e67728d45b94c686d5c966987932ecf48749858a185adf5f2bfa7591229d"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pic.dylib",
+          "uuid": "6141A497-A1F4-3176-BD07-58B86AA44073",
+          "sha256": "72037fec76dccfd485eaee0fb2599856ba0203d751783522260f908818cb3a1a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_rgb.dylib",
+          "uuid": "17D50E7B-DE25-3810-8E50-C0D830D78589",
+          "sha256": "f98609ce14c7e4f77c6fce552af93ba11dd7cb22ead37aa8cf646d03d5e167de"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacheif.dylib",
+          "uuid": "ED7DE59C-B2A1-3126-AA83-5653B1417734",
+          "sha256": "20ea84aaeda0aaa19e5197d28e97253a8cf7119513599f611e3f90164bd0a66e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_kra.dylib",
+          "uuid": "F1A46728-4718-32FA-8B2C-1C973F68E177",
+          "sha256": "286c9d91f3589c2e402a09c7a9ac226bec0bea4b5b793be229cdf5e5a616b811"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libKF6Archive.6.7.0.dylib",
+          "uuid": "BCF01167-62B1-37B1-B0C5-04274B98F98F",
+          "sha256": "bac8563ff98ce582637dfaf938ec60d1f2aa89c181c98fe1bd37e3514447aa1f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pxr.dylib",
+          "uuid": "031E1EE4-B52E-32FA-BFEE-D95AFFD282A8",
+          "sha256": "24b1d1c8587e341d43033012f4fbede17779a3807cdae57013b5fb406df507a1"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ani.dylib",
+          "uuid": "767F9BF7-211D-3417-ACC6-CAED4CEA7C3A",
+          "sha256": "2e403a7e63806d4c0bbae8d85c5f11ccdc6f095d720aade7d03a0d9f020986c4"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqjpeg.dylib",
+          "uuid": "A5804D00-1DA5-3EED-81CF-A912CDA2FC4B",
+          "sha256": "8f3118105cee5865d4e5dd39e5444f1764952f5af8833aa930ca383e783ae672"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libjpeg.62.3.0.dylib",
+          "uuid": "59E6BDFF-3259-3E87-9330-AF46A70DA991",
+          "sha256": "0a232056b3d6f858b1752ae8cfcf802c62c53a803fba0eda81e4e75bcb385506"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ora.dylib",
+          "uuid": "1C62F175-FC50-30F0-9922-18DBAB637522",
+          "sha256": "ba39e310e4ba43bafc09c10043ee90026975e946e48e8725ba81261a68b2631a"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqtiff.dylib",
+          "uuid": "8A153BF3-9C03-3472-B5E9-E50E92EEE54F",
+          "sha256": "067d8be03a9349062dbdedad2ec4290b74867865345f37bbb5f6783127227cdf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqsvg.dylib",
+          "uuid": "90B8117A-2260-393B-A9D8-C38013D07FCA",
+          "sha256": "f3754bc2d6170fa62e5056d63c50d10c7cfdde4cdb17baf2b1386eb46b95c3b6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_tga.dylib",
+          "uuid": "15E9CE2D-7663-32E9-BFDD-2B070D159784",
+          "sha256": "2d472fbcba409b276b1d398dab6d3226cbaaecc0fb1eae844054bc62beb5bd40"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_hdr.dylib",
+          "uuid": "0BF53ACB-3580-3388-817B-20804CD299B5",
+          "sha256": "8acf6891dfa64b962a021284284ee417c4ee07daacf0ce2d3535ea8ebd6decf9"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ras.dylib",
+          "uuid": "1903D4C5-FE7E-3239-970A-479FE0251754",
+          "sha256": "07ef4099da64049a3eea9b05bb2f7882e967f00a4f83adf82c9249b0e5ae0568"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_qoi.dylib",
+          "uuid": "14BD7B8F-6C80-3FB9-A977-76AB70D6E663",
+          "sha256": "1d9134df083df5be089cf373e9f0b998fce0d7104fee49b7396c4e51d74246cb"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqicns.dylib",
+          "uuid": "48426D79-CB74-322D-81FB-B37A8660BA7D",
+          "sha256": "e0b08a10346630689091ae2f15c4d58d8a8a6e555fb3db5db88d66a01c758ddc"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacjp2.dylib",
+          "uuid": "201F90CA-A3A9-390B-B153-60FFE7FD29C9",
+          "sha256": "5a9b845d38d291b4cf53255389f991d18af7ded6936bb5edb7209a4db69d7ac5"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritacolorsmudgepaintop.so",
+          "uuid": "18466157-BD40-3F2B-B07C-F8D9298D5002",
+          "sha256": "cc73f4b76fd1fc34f1fb2dc6044d9932d329dcd80b55fcc357fd9a375853d345"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritalibpaintop.21.0.0.dylib",
+          "uuid": "834F39CA-9212-3BFC-BBB5-AC76F14AB886",
+          "sha256": "2090e08a7d014340b61203eea6d66e37bd5b707ad78b893b76bc40528445c4c2"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritacurvepaintop.so",
+          "uuid": "D5B9588A-3E37-35DE-8056-8BF7F195EB34",
+          "sha256": "c890604e6a77a6f15c1bf2b240cf38723ce01de624d36a63b7a8db691fc1c2de"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritadefaultpaintops.so",
+          "uuid": "0B3D1B56-C421-3D2C-92E8-9F2A528826E1",
+          "sha256": "472fb69eea891e31ee0812c24974128b2eedbd0894056e870e98c9f440871237"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritadeformpaintop.so",
+          "uuid": "23C36A0F-0B3C-327B-AC8A-D3325EB242C1",
+          "sha256": "9e0258b000e0a6a9f9922e56dfdcc95133bf4d272b1a8e557ae3e9b5f7e89fad"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaexperimentpaintop.so",
+          "uuid": "3D168EBC-2A99-3616-A1F3-58DD1AD2E67F",
+          "sha256": "db886c29077d90b87cb9f1f68484c85deafaf5458301580599e0b36aa5663753"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritafilterop.so",
+          "uuid": "EAD1D661-A7B8-31F6-BC94-3A0F0966801A",
+          "sha256": "290233216106ca8d51d75dbf6d9dc3efaa29c029c5fa5ddd149fe344f119ae74"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritagridpaintop.so",
+          "uuid": "BC4304FF-75DC-34A4-A9A0-34D02B0A5F69",
+          "sha256": "3cc0717ebf449cc369eb61154089e001c8e57e3699501e7013a853f41e26430f"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritahairypaintop.so",
+          "uuid": "F6577685-D7F3-3D71-8C3B-864CBC669945",
+          "sha256": "b57f64bafab840f704f3aa013a6655be7d4427f29ab498a19961a8d41783f60b"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritahatchingpaintop.so",
+          "uuid": "71268786-0CF0-3B7A-8820-553DFDA60EB4",
+          "sha256": "15fb3e99abd1227893a9dae2797fb3a02a9b0b06cd4c582c474c19dd9d07a5c7"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritamypaintop.so",
+          "uuid": "CF0DC307-2902-3790-86D6-EF4E4E1FC3B8",
+          "sha256": "5f0389b117a5b1cd92c8df9a85597a27ea3ac8b1e8fcbba225a7377a53752d3e"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libmypaint.dylib",
+          "uuid": "6ADA95C8-9C69-3172-BCC6-429CE543D06B",
+          "sha256": "a0da103c507dcdbabbacd1c29d5256403517e1aba53ea4e2efd7e55540afd824"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_install/lib/libjson-c.5.4.0.dylib",
+          "uuid": "B09A3FB9-4E67-3590-93AC-667D9EE7B332",
+          "sha256": "21f85de0aa09efb811ae89798b22d06f2239b03acecb0059f913f187fd951caf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaparticlepaintop.so",
+          "uuid": "2C1715F5-286C-3F20-B9EA-86099F397567",
+          "sha256": "0785629cd1460939d72a887125cda49b9a39f712b5af22aeb960da4fb76ac1b8"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaroundmarkerpaintop.so",
+          "uuid": "49FB91ED-43D2-3EDE-9E94-1E194CCCB6B1",
+          "sha256": "96e04245a43ed9733611e1de5c0e53669192d00c65b60b76ca086ae6003259d6"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritasketchpaintop.so",
+          "uuid": "AA51E3A7-B181-3A66-AA48-B152CD5D9E2C",
+          "sha256": "f58dc6c3a2900214cf149cc0cd816fa278155b3b6d1277d7b394054b70e020ee"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritaspraypaintop.so",
+          "uuid": "4BE48873-B909-38C8-8DBA-70D43E5DD88D",
+          "sha256": "4382575d4deb01ef35d72224291ec892a997f7005adc5798b8dbd4f49a060fcf"
+        },
+        {
+          "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritatangentnormalpaintop.so",
+          "uuid": "9B28BBB0-1970-37DB-A928-B841188166F2",
+          "sha256": "e7ae842bf6983b0a01ec3e6dd3d44ada8ca3d74dde1762e4789ebd481c37adc9"
+        }
+      ],
+      "loaded_identity_passed": true
+    }
+  ],
+  "passed": false,
+  "pixel_hashes_identical": false
+}

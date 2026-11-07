@@ -1,0 +1,161 @@
+{
+  "records": [
+    {
+      "record": "profile-k1-native-pin",
+      "fixture_valid": false,
+      "totals": {
+        "all_samples": 3853,
+        "running_samples": 3853,
+        "main_running_samples": 3075,
+        "operation_samples": 472,
+        "ambiguous_source_only_samples": 1879,
+        "outside_operation_main_samples": 2603,
+        "background_running_samples": 778
+      },
+      "core_labels_all_running": {
+        "CPU 7 (P Core)": 886,
+        "CPU 8 (P Core)": 908,
+        "CPU 6 (P Core)": 1100,
+        "CPU 9 (P Core)": 939,
+        "CPU 0 (E Core)": 4,
+        "CPU 1 (E Core)": 4,
+        "CPU 2 (E Core)": 4,
+        "CPU 5 (E Core)": 4,
+        "CPU 3 (E Core)": 3,
+        "CPU 4 (E Core)": 1
+      },
+      "core_labels_operation": {
+        "CPU 7 (P Core)": 98,
+        "CPU 6 (P Core)": 167,
+        "CPU 9 (P Core)": 98,
+        "CPU 8 (P Core)": 109
+      },
+      "exclusive_phase_samples": {
+        "seal": 96,
+        "commit": 191,
+        "begin_write": 182,
+        "begin_pixels_guard_other": 3
+      },
+      "exclusive_mechanism_samples": {
+        "provider_payload_lifecycle": 44,
+        "budget_policy": 20,
+        "write_protocol": 120,
+        "physical_heap": 92,
+        "metadata_working": 77,
+        "retirement": 32,
+        "storage_charge_or_capacity": 56,
+        "owner_backing_ledger": 14,
+        "epoch_root_transaction": 12,
+        "fixture_or_unclassified": 5
+      },
+      "top_operation_leaves": {
+        "__psynch_cvsignal": 30,
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": 21,
+        "tiny_malloc_from_free_list": 19,
+        "_platform_memmove": 15,
+        "tiny_size": 10,
+        "tiny_free_no_lock": 10,
+        "KisMutationStorageOwner::deref()": 9,
+        "(anonymous namespace)::fitsBudgetBucket(KisPageDomainBytes const&, KisPageDomainBytes const&, KisPageDomainByteDelta const&, std::__1::array<unsigned long long, 4ul> const&, unsigned long long, unsigned long long, unsigned long long)": 8,
+        "malloc_size": 8,
+        "kisStablePageKeyHash(KisPageKey const&)::'lambda'(unsigned long long)::operator()(unsigned long long) const": 6,
+        "tiny_malloc_should_clear": 6,
+        "QMutexPrivate* std::__1::__cxx_atomic_load[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*> const*, std::__1::memory_order)": 6,
+        "operator==(KisPageVersion const&, KisPageVersion const&)": 6,
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": 6,
+        "kisPageStorageAllocationBytes(unsigned long, unsigned long)": 6,
+        "KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)": 5,
+        "boost::container::vector_alloc_holder<boost::container::small_vector_allocator<KisPageWorkingReplica, KisMutationStorageAllocator<void, false>, void>, unsigned long, boost::move_detail::integral_constant<unsigned int, 1u>>::capacity() const": 5,
+        "free_tiny": 5,
+        "KisReplicaLayout::isValid() const": 5,
+        "QRect::contains(QRect const&, bool) const": 5,
+        "_tiny_check_and_zero_inline_meta_from_freelist": 5,
+        "malloc_type_malloc": 4,
+        "KisReplicaLayout::KisReplicaLayout()": 4,
+        "std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::less<unsigned long long>, true>, KisMutationStorageAllocator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, true>>::__lower_bound<unsigned long long>(unsigned long long const&, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)": 4,
+        "QHashPrivate::hash(unsigned long, unsigned long)": 4
+      },
+      "sufficient_for_coarse_localization": false,
+      "xml_sha256": "4ebc94fd76fc5b915920f6d0adbd6c73f890f31bec9311324d129f9ce33bade3"
+    },
+    {
+      "record": "profile-k16-hit",
+      "fixture_valid": true,
+      "totals": {
+        "all_samples": 3614,
+        "running_samples": 3614,
+        "main_running_samples": 3400,
+        "outside_operation_main_samples": 2907,
+        "operation_samples": 493,
+        "background_running_samples": 214
+      },
+      "core_labels_all_running": {
+        "CPU 6 (P Core)": 931,
+        "CPU 9 (P Core)": 909,
+        "CPU 8 (P Core)": 878,
+        "CPU 7 (P Core)": 871,
+        "CPU 2 (E Core)": 4,
+        "CPU 3 (E Core)": 5,
+        "CPU 4 (E Core)": 2,
+        "CPU 5 (E Core)": 2,
+        "CPU 0 (E Core)": 8,
+        "CPU 1 (E Core)": 4
+      },
+      "core_labels_operation": {
+        "CPU 6 (P Core)": 133,
+        "CPU 9 (P Core)": 106,
+        "CPU 8 (P Core)": 125,
+        "CPU 7 (P Core)": 128,
+        "CPU 3 (E Core)": 1
+      },
+      "exclusive_phase_samples": {
+        "commit": 144,
+        "begin_write": 223,
+        "seal": 125,
+        "begin_pixels_guard_other": 1
+      },
+      "exclusive_mechanism_samples": {
+        "physical_heap": 62,
+        "metadata_working": 138,
+        "owner_backing_ledger": 49,
+        "provider_payload_lifecycle": 7,
+        "write_protocol": 171,
+        "fixture_or_unclassified": 3,
+        "storage_charge_or_capacity": 30,
+        "budget_policy": 26,
+        "epoch_root_transaction": 4,
+        "retirement": 3
+      },
+      "top_operation_leaves": {
+        "bool std::__1::__cxx_atomic_compare_exchange_strong[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*>*, QMutexPrivate**, QMutexPrivate*, std::__1::memory_order, std::__1::memory_order)": 11,
+        "bool std::__1::__tuple_less<3ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, int const&, int const&>, std::__1::tuple<unsigned long long const&, int const&, int const&>>(std::__1::tuple<unsigned long long const&, int const&, int const&> const&, std::__1::tuple<unsigned long long const&, int const&, int const&> const&)": 10,
+        "tiny_size": 10,
+        "QHashPrivate::hash(unsigned long, unsigned long)": 10,
+        "_platform_memmove": 10,
+        "QRect::contains(QRect const&, bool) const": 9,
+        "kisStablePageKeyHash(KisPageKey const&)::'lambda'(unsigned long long)::operator()(unsigned long long) const": 8,
+        "(anonymous namespace)::fitsBudgetBucket(KisPageDomainBytes const&, KisPageDomainBytes const&, KisPageDomainByteDelta const&, std::__1::array<unsigned long long, 4ul> const&, unsigned long long, unsigned long long, unsigned long long)": 8,
+        "tiny_malloc_from_free_list": 8,
+        "std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, std::__1::less<unsigned long long>, true>, KisMutationStorageAllocator<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, true>>::__lower_bound<unsigned long long>(unsigned long long const&, std::__1::__tree_node<std::__1::__value_type<unsigned long long, KisBackingBudgetController::SharedChildUsage>, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)": 8,
+        "tiny_free_no_lock": 7,
+        "bool std::__1::__tuple_less<4ul>::operator()[abi:ne200100]<std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&>>(std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&, std::__1::tuple<unsigned long long const&, unsigned long long const&, unsigned long long const&, unsigned long long const&> const&)": 7,
+        "KisBackingBudgetController::fitsMetadataStorageLocked(unsigned long long) const": 7,
+        "std::__1::__tree_iterator<std::__1::__value_type<KisReplicaAllocationIdentity, KisPageBackingRecord>, std::__1::__tree_node<std::__1::__value_type<KisReplicaAllocationIdentity, KisPageBackingRecord>, void*>*, long> std::__1::__tree<std::__1::__value_type<KisReplicaAllocationIdentity, KisPageBackingRecord>, std::__1::__map_value_compare<KisReplicaAllocationIdentity, std::__1::__value_type<KisReplicaAllocationIdentity, KisPageBackingRecord>, KisPageBackingIdentityLess, true>, KisMutationStorageAllocator<std::__1::__value_type<KisReplicaAllocationIdentity, KisPageBackingRecord>, true>>::__lower_bound<KisReplicaAllocationIdentity>(KisReplicaAllocationIdentity const&, std::__1::__tree_node<std::__1::__value_type<KisReplicaAllocationIdentity, KisPageBackingRecord>, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)": 6,
+        "(anonymous namespace)::replicaHandle(KisReplicaRecord const&, KisPageVersion const&)": 6,
+        "free_tiny": 6,
+        "KisMutationAdmissionTable<KisPageKey, KisPageWriteAdmission::ActiveClaim>::bucket(KisMutationAdmissionTable<KisPageKey, KisPageWriteAdmission::ActiveClaim>::Entry const*, unsigned long, KisPageKey const&, unsigned long)": 6,
+        "KisMutationWriteSet::nextEntry(KisMutationSlotHandle) const": 5,
+        "void (anonymous namespace)::applyPolicy<KisPageWorkingResult, KisPageStateMachine::applyKnownValid(KisPageWorkingResult&, KisPageTransition const&) const::$_0>(KisPageWorkingResult&, KisPageTransition const&, bool, KisPageStateMachine::applyKnownValid(KisPageWorkingResult&, KisPageTransition const&) const::$_0)": 5,
+        "void std::__1::__tree_remove[abi:ne200100]<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)": 5,
+        "QMutexPrivate* std::__1::__cxx_atomic_load[abi:ne200100]<QMutexPrivate*>(std::__1::__cxx_atomic_base_impl<QMutexPrivate*> const*, std::__1::memory_order)": 5,
+        "KisGenerationalSlotId<KisReplicaSlotTag>::isValid() const": 5,
+        "KisShardSlotIndex<KisPageVersion, KisGenerationalSlotId<KisVersionSlotTag>>::findBucket(KisPageVersion const&) const": 5,
+        "malloc_size": 4,
+        "szone_good_size": 4
+      },
+      "sufficient_for_coarse_localization": true,
+      "xml_sha256": "5f990488779a6246bba9e8e1cb145974af947c74d1b3db3b81176c2506858f6a"
+    }
+  ],
+  "scope": "Running samples; operation partition uses explicit API ancestors only. Source-only inline PC matches counted as ambiguous, excluded from operation. Missing pixels/guard-only context is not zero cost. No scaling to CPU microseconds or removable budget; failed K1 fixture grants hardware labels only. Not formal performance qualification."
+}

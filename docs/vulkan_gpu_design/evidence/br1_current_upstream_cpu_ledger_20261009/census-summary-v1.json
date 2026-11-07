@@ -1,0 +1,3729 @@
+{
+  "method": "Fixed supplementary 4-block descriptive comparison; Mach live-thread cumulative CPU has a wider endpoint window than Stroke. Do not add snapshot role times to exact event spans as an exact partition.",
+  "inputs": {
+    "SUPPLEMENT.md": "a22ff04ea9b4d21d17f6da9b1a6980d0638cd497e88ec5d97ee6f2cda97dae75",
+    "run_census.py": "2a62c322280970917ddeba5d806d2b204cf7abd25b54bc8e4b77da13575d8b6b",
+    "census/results.json": "72f829265e35ba4e0044cf0bc49b32f721d1a8b7b0b53f8a436338ed80a89e6d",
+    "census/identity-final.json": "360cb80ea9fe8e311d10e9fe47269c4b56a84e054afdd22e53e546673457e94d"
+  },
+  "summary": {
+    "control": {
+      "current": {
+        "process_cpu_ms": {
+          "mean": 16.512125,
+          "median": 16.3095,
+          "minimum": 15.51,
+          "maximum": 17.919,
+          "values": [
+            15.95,
+            17.299,
+            16.669,
+            15.51,
+            17.919,
+            15.725,
+            17.352,
+            15.673
+          ]
+        },
+        "wall_ms": {
+          "mean": 7.02325,
+          "median": 6.968,
+          "minimum": 6.441,
+          "maximum": 7.679,
+          "values": [
+            6.548,
+            7.52,
+            7.213,
+            6.723,
+            7.679,
+            6.441,
+            7.586,
+            6.476
+          ]
+        },
+        "coarse_ms": {
+          "job_merge": {
+            "mean": 4.21302625,
+            "median": 4.2414365,
+            "minimum": 3.843958,
+            "maximum": 4.482581,
+            "values": [
+              4.132751,
+              4.482581,
+              4.42971,
+              3.906375,
+              4.425962,
+              4.17479,
+              4.308083,
+              3.843958
+            ]
+          },
+          "job_stroke": {
+            "mean": 10.545323125,
+            "median": 10.3105045,
+            "minimum": 9.817008,
+            "maximum": 11.682153,
+            "values": [
+              10.083369,
+              10.947289,
+              10.436672,
+              9.915756,
+              11.682153,
+              9.817008,
+              11.296001,
+              10.184337
+            ]
+          },
+          "uncovered": {
+            "mean": 1.753775625,
+            "median": 1.740898,
+            "minimum": 1.644705,
+            "maximum": 1.86913,
+            "values": [
+              1.73388,
+              1.86913,
+              1.802618,
+              1.687869,
+              1.810885,
+              1.733202,
+              1.747916,
+              1.644705
+            ]
+          }
+        },
+        "main_parts_ms": {}
+      },
+      "upstream": {
+        "process_cpu_ms": {
+          "mean": 8.692,
+          "median": 8.6125,
+          "minimum": 8.069,
+          "maximum": 9.69,
+          "values": [
+            8.293,
+            8.543,
+            8.528,
+            8.966,
+            8.069,
+            8.682,
+            9.69,
+            8.765
+          ]
+        },
+        "wall_ms": {
+          "mean": 3.653625,
+          "median": 3.6254999999999997,
+          "minimum": 3.406,
+          "maximum": 4.078,
+          "values": [
+            3.642,
+            3.604,
+            3.547,
+            3.694,
+            3.406,
+            3.609,
+            4.078,
+            3.649
+          ]
+        },
+        "coarse_ms": {
+          "job_merge": {
+            "mean": 0.518885875,
+            "median": 0.5309375000000001,
+            "minimum": 0.414168,
+            "maximum": 0.626837,
+            "values": [
+              0.414168,
+              0.529541,
+              0.548041,
+              0.552833,
+              0.425292,
+              0.522041,
+              0.532334,
+              0.626837
+            ]
+          },
+          "job_stroke": {
+            "mean": 7.71799375,
+            "median": 7.631663,
+            "minimum": 7.209077,
+            "maximum": 8.613304,
+            "values": [
+              7.440363,
+              7.551295,
+              7.566328,
+              7.965629,
+              7.209077,
+              7.696998,
+              8.613304,
+              7.700956
+            ]
+          },
+          "uncovered": {
+            "mean": 0.455120375,
+            "median": 0.4430035,
+            "minimum": 0.413631,
+            "maximum": 0.544362,
+            "values": [
+              0.438469,
+              0.462164,
+              0.413631,
+              0.447538,
+              0.434631,
+              0.462961,
+              0.544362,
+              0.437207
+            ]
+          }
+        },
+        "main_parts_ms": {}
+      },
+      "paired_extra": {
+        "process_cpu_ms": {
+          "mean": 7.820125,
+          "median": 7.6595,
+          "minimum": 6.5440000000000005,
+          "maximum": 9.85,
+          "values": [
+            7.657,
+            8.756,
+            8.141,
+            6.5440000000000005,
+            9.85,
+            7.042999999999999,
+            7.662000000000001,
+            6.9079999999999995
+          ]
+        },
+        "coarse_ms/job_merge": {
+          "mean": 3.694140375,
+          "median": 3.747166,
+          "minimum": 3.217121,
+          "maximum": 4.00067,
+          "values": [
+            3.7185829999999997,
+            3.9530399999999997,
+            3.881669,
+            3.353542,
+            4.00067,
+            3.652749,
+            3.775749,
+            3.217121
+          ]
+        },
+        "coarse_ms/job_stroke": {
+          "mean": 2.8273293749999997,
+          "median": 2.6628515000000004,
+          "minimum": 1.9501270000000002,
+          "maximum": 4.473076,
+          "values": [
+            2.6430059999999997,
+            3.395994,
+            2.8703439999999993,
+            1.9501270000000002,
+            4.473076,
+            2.1200099999999997,
+            2.682697000000001,
+            2.4833809999999996
+          ]
+        },
+        "coarse_ms/uncovered": {
+          "mean": 1.29865525,
+          "median": 1.282826,
+          "minimum": 1.203554,
+          "maximum": 1.406966,
+          "values": [
+            1.295411,
+            1.406966,
+            1.388987,
+            1.240331,
+            1.376254,
+            1.270241,
+            1.203554,
+            1.2074980000000002
+          ]
+        }
+      },
+      "block_extra": [
+        {
+          "process_cpu_ms": 8.2065,
+          "coarse_ms/job_merge": 3.8358114999999997,
+          "coarse_ms/job_stroke": 3.0195,
+          "coarse_ms/uncovered": 1.3511885000000001
+        },
+        {
+          "process_cpu_ms": 7.3425,
+          "coarse_ms/job_merge": 3.6176055,
+          "coarse_ms/job_stroke": 2.4102354999999998,
+          "coarse_ms/uncovered": 1.314659
+        },
+        {
+          "process_cpu_ms": 8.4465,
+          "coarse_ms/job_merge": 3.8267095,
+          "coarse_ms/job_stroke": 3.296543,
+          "coarse_ms/uncovered": 1.3232475
+        },
+        {
+          "process_cpu_ms": 7.285,
+          "coarse_ms/job_merge": 3.496435,
+          "coarse_ms/job_stroke": 2.5830390000000003,
+          "coarse_ms/uncovered": 1.205526
+        }
+      ]
+    },
+    "census": {
+      "current": {
+        "process_cpu_ms": {
+          "mean": 17.0215,
+          "median": 16.831,
+          "minimum": 16.452,
+          "maximum": 18.017,
+          "values": [
+            16.782,
+            16.621,
+            17.549,
+            16.855,
+            16.807,
+            16.452,
+            17.089,
+            18.017
+          ]
+        },
+        "wall_ms": {
+          "mean": 7.31975,
+          "median": 7.302,
+          "minimum": 6.899,
+          "maximum": 7.707,
+          "values": [
+            7.185,
+            7.24,
+            7.707,
+            7.272,
+            7.359,
+            6.899,
+            7.332,
+            7.564
+          ]
+        },
+        "coarse_ms": {
+          "job_merge": {
+            "mean": 4.365359625,
+            "median": 4.332874500000001,
+            "minimum": 4.087501,
+            "maximum": 4.676041,
+            "values": [
+              4.249583,
+              4.297251,
+              4.45375,
+              4.493002,
+              4.322333,
+              4.087501,
+              4.343416,
+              4.676041
+            ]
+          },
+          "job_stroke": {
+            "mean": 10.81838,
+            "median": 10.7016595,
+            "minimum": 10.547948,
+            "maximum": 11.327582,
+            "values": [
+              10.770241,
+              10.588408,
+              11.248994,
+              10.547948,
+              10.633078,
+              10.569705,
+              10.861084,
+              11.327582
+            ]
+          },
+          "main_stroke": {
+            "mean": 0.08611437499999999,
+            "median": 0.0836245,
+            "minimum": 0.079333,
+            "maximum": 0.106083,
+            "values": [
+              0.085833,
+              0.089,
+              0.106083,
+              0.079542,
+              0.081416,
+              0.079667,
+              0.088041,
+              0.079333
+            ]
+          },
+          "uncovered": {
+            "mean": 1.751646,
+            "median": 1.7373405,
+            "minimum": 1.646341,
+            "maximum": 1.934044,
+            "values": [
+              1.676343,
+              1.646341,
+              1.740173,
+              1.734508,
+              1.770173,
+              1.715127,
+              1.796459,
+              1.934044
+            ]
+          }
+        },
+        "main_parts_ms": {
+          "main_end_stroke": {
+            "mean": 0.0018437500000000001,
+            "median": 0.001729,
+            "minimum": 0.001541,
+            "maximum": 0.0025,
+            "values": [
+              0.002125,
+              0.001667,
+              0.0025,
+              0.001541,
+              0.001708,
+              0.001542,
+              0.001917,
+              0.00175
+            ]
+          },
+          "main_start_strategy": {
+            "mean": 0.0637655,
+            "median": 0.060938,
+            "minimum": 0.057583,
+            "maximum": 0.079166,
+            "values": [
+              0.061167,
+              0.067041,
+              0.079166,
+              0.059291,
+              0.060709,
+              0.059,
+              0.066167,
+              0.057583
+            ]
+          },
+          "main_stroke": {
+            "mean": 0.00105725,
+            "median": 0.0010015,
+            "minimum": 0.000915,
+            "maximum": 0.001417,
+            "values": [
+              0.001041,
+              0.001001,
+              0.001417,
+              0.001002,
+              0.000957,
+              0.001,
+              0.000915,
+              0.001125
+            ]
+          },
+          "main_submit_inputs": {
+            "mean": 0.014666499999999999,
+            "median": 0.0138955,
+            "minimum": 0.013458,
+            "maximum": 0.017667,
+            "values": [
+              0.016833,
+              0.013916,
+              0.017667,
+              0.013458,
+              0.013875,
+              0.013583,
+              0.014375,
+              0.013625
+            ]
+          },
+          "main_wait_for_done": {
+            "mean": 0.004781375,
+            "median": 0.004667,
+            "minimum": 0.004167,
+            "maximum": 0.005375,
+            "values": [
+              0.004667,
+              0.005375,
+              0.005333,
+              0.00425,
+              0.004167,
+              0.004542,
+              0.004667,
+              0.00525
+            ]
+          }
+        },
+        "thread_roles_ms": {
+          "BR1-delay": {
+            "mean": 0.1755,
+            "median": 0.17149999999999999,
+            "minimum": 0.154,
+            "maximum": 0.217,
+            "values": [
+              0.154,
+              0.174,
+              0.187,
+              0.155,
+              0.169,
+              0.163,
+              0.185,
+              0.217
+            ]
+          },
+          "BR1-reclaim": {
+            "mean": 1.265625,
+            "median": 1.2574999999999998,
+            "minimum": 1.182,
+            "maximum": 1.4,
+            "values": [
+              1.199,
+              1.182,
+              1.23,
+              1.298,
+              1.285,
+              1.22,
+              1.311,
+              1.4
+            ]
+          },
+          "KisTileDataSwapper": {
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "QtTest Watchdog": {
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "job_workers": {
+            "mean": 15.51825,
+            "median": 15.3485,
+            "minimum": 14.988,
+            "maximum": 16.352,
+            "values": [
+              15.343,
+              15.213,
+              16.059,
+              15.354,
+              15.302,
+              14.988,
+              15.535,
+              16.352
+            ]
+          },
+          "main": {
+            "mean": 0.117375,
+            "median": 0.1145,
+            "minimum": 0.106,
+            "maximum": 0.142,
+            "values": [
+              0.113,
+              0.12,
+              0.142,
+              0.106,
+              0.109,
+              0.113,
+              0.116,
+              0.12
+            ]
+          },
+          "unnamed": {
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "snapshot_outer_minus_stage_cpu_ms": {
+          "mean": 0.092125,
+          "median": 0.0975,
+          "minimum": 0.06,
+          "maximum": 0.112,
+          "values": [
+            0.06,
+            0.105,
+            0.108,
+            0.092,
+            0.093,
+            0.065,
+            0.102,
+            0.112
+          ]
+        },
+        "snapshot_inner_minus_stage_cpu_ms": {
+          "mean": 0.002875,
+          "median": 0.003,
+          "minimum": 0.001,
+          "maximum": 0.005,
+          "values": [
+            0.002,
+            0.003,
+            0.005,
+            0.003,
+            0.001,
+            0.003,
+            0.003,
+            0.003
+          ]
+        },
+        "snapshot_thread_minus_stage_cpu_ms": {
+          "mean": 0.05525,
+          "median": 0.058,
+          "minimum": 0.027,
+          "maximum": 0.072,
+          "values": [
+            0.027,
+            0.068,
+            0.069,
+            0.058,
+            0.058,
+            0.032,
+            0.058,
+            0.072
+          ]
+        }
+      },
+      "upstream": {
+        "process_cpu_ms": {
+          "mean": 9.85,
+          "median": 8.811499999999999,
+          "minimum": 8.553,
+          "maximum": 17.125,
+          "values": [
+            8.757,
+            8.866,
+            17.125,
+            8.91,
+            8.553,
+            8.688,
+            8.585,
+            9.316
+          ]
+        },
+        "wall_ms": {
+          "mean": 4.16375,
+          "median": 3.6950000000000003,
+          "minimum": 3.47,
+          "maximum": 7.572,
+          "values": [
+            3.661,
+            3.729,
+            7.572,
+            3.778,
+            3.47,
+            3.603,
+            3.555,
+            3.942
+          ]
+        },
+        "coarse_ms": {
+          "job_merge": {
+            "mean": 0.5911875,
+            "median": 0.567042,
+            "minimum": 0.454999,
+            "maximum": 0.856584,
+            "values": [
+              0.62004,
+              0.516251,
+              0.856584,
+              0.596876,
+              0.454999,
+              0.575291,
+              0.558793,
+              0.550666
+            ]
+          },
+          "job_stroke": {
+            "mean": 8.754728,
+            "median": 7.7802095,
+            "minimum": 7.608283,
+            "maximum": 15.400137,
+            "values": [
+              7.689385,
+              7.871034,
+              15.400137,
+              7.874413,
+              7.648369,
+              7.666373,
+              7.608283,
+              8.27983
+            ]
+          },
+          "main_stroke": {
+            "mean": 0.092895625,
+            "median": 0.090458,
+            "minimum": 0.079125,
+            "maximum": 0.125125,
+            "values": [
+              0.091208,
+              0.125125,
+              0.094083,
+              0.089875,
+              0.079125,
+              0.090416,
+              0.0905,
+              0.082833
+            ]
+          },
+          "uncovered": {
+            "mean": 0.411188875,
+            "median": 0.3561435,
+            "minimum": 0.327424,
+            "maximum": 0.774196,
+            "values": [
+              0.356367,
+              0.35359,
+              0.774196,
+              0.348836,
+              0.370507,
+              0.35592,
+              0.327424,
+              0.402671
+            ]
+          }
+        },
+        "main_parts_ms": {
+          "main_end_stroke": {
+            "mean": 0.001817875,
+            "median": 0.0018544999999999998,
+            "minimum": 0.001542,
+            "maximum": 0.002042,
+            "values": [
+              0.001875,
+              0.002,
+              0.001834,
+              0.001708,
+              0.001542,
+              0.002042,
+              0.001959,
+              0.001583
+            ]
+          },
+          "main_start_strategy": {
+            "mean": 0.070963625,
+            "median": 0.06868750000000001,
+            "minimum": 0.061333,
+            "maximum": 0.099959,
+            "values": [
+              0.068875,
+              0.099959,
+              0.067917,
+              0.06925,
+              0.061333,
+              0.07,
+              0.0685,
+              0.061875
+            ]
+          },
+          "main_stroke": {
+            "mean": 0.00164025,
+            "median": 0.0011665,
+            "minimum": 0.000958,
+            "maximum": 0.003998,
+            "values": [
+              0.001167,
+              0.002416,
+              0.003998,
+              0.001251,
+              0.000958,
+              0.001083,
+              0.001083,
+              0.001166
+            ]
+          },
+          "main_submit_inputs": {
+            "mean": 0.013536375,
+            "median": 0.0135415,
+            "minimum": 0.011875,
+            "maximum": 0.014833,
+            "values": [
+              0.014416,
+              0.014833,
+              0.012334,
+              0.013458,
+              0.011875,
+              0.01325,
+              0.0145,
+              0.013625
+            ]
+          },
+          "main_wait_for_done": {
+            "mean": 0.0049375,
+            "median": 0.004521000000000001,
+            "minimum": 0.003417,
+            "maximum": 0.008,
+            "values": [
+              0.004875,
+              0.005917,
+              0.008,
+              0.004208,
+              0.003417,
+              0.004041,
+              0.004458,
+              0.004584
+            ]
+          }
+        },
+        "thread_roles_ms": {
+          "KisTileDataSwapper": {
+            "mean": 0.00875,
+            "median": 0.0075,
+            "minimum": 0.005,
+            "maximum": 0.02,
+            "values": [
+              0.008,
+              0.008,
+              0.02,
+              0.007,
+              0.005,
+              0.006,
+              0.007,
+              0.009
+            ]
+          },
+          "QtTest Watchdog": {
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "job_workers": {
+            "mean": 9.745125,
+            "median": 8.692,
+            "minimum": 8.466,
+            "maximum": 17.008,
+            "values": [
+              8.655,
+              8.729,
+              17.008,
+              8.809,
+              8.466,
+              8.588,
+              8.486,
+              9.22
+            ]
+          },
+          "main": {
+            "mean": 0.12162500000000001,
+            "median": 0.1165,
+            "minimum": 0.101,
+            "maximum": 0.155,
+            "values": [
+              0.116,
+              0.155,
+              0.136,
+              0.117,
+              0.101,
+              0.118,
+              0.114,
+              0.116
+            ]
+          },
+          "unnamed": {
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "snapshot_outer_minus_stage_cpu_ms": {
+          "mean": 0.057999999999999996,
+          "median": 0.0545,
+          "minimum": 0.045,
+          "maximum": 0.088,
+          "values": [
+            0.049,
+            0.063,
+            0.088,
+            0.055,
+            0.045,
+            0.054,
+            0.053,
+            0.057
+          ]
+        },
+        "snapshot_inner_minus_stage_cpu_ms": {
+          "mean": 0.0022500000000000003,
+          "median": 0.002,
+          "minimum": 0.001,
+          "maximum": 0.004,
+          "values": [
+            0.001,
+            0.001,
+            0.004,
+            0.002,
+            0.002,
+            0.002,
+            0.003,
+            0.003
+          ]
+        },
+        "snapshot_thread_minus_stage_cpu_ms": {
+          "mean": 0.0255,
+          "median": 0.0235,
+          "minimum": 0.019,
+          "maximum": 0.039,
+          "values": [
+            0.022,
+            0.026,
+            0.039,
+            0.023,
+            0.019,
+            0.024,
+            0.022,
+            0.029
+          ]
+        }
+      },
+      "paired_extra": {
+        "process_cpu_ms": {
+          "mean": 7.171499999999999,
+          "median": 7.985,
+          "minimum": 0.4239999999999995,
+          "maximum": 8.700999999999999,
+          "values": [
+            8.025,
+            7.754999999999999,
+            0.4239999999999995,
+            7.945,
+            8.253999999999998,
+            7.764000000000001,
+            8.503999999999998,
+            8.700999999999999
+          ]
+        },
+        "coarse_ms/job_merge": {
+          "mean": 3.774172125,
+          "median": 3.7828115,
+          "minimum": 3.5122099999999996,
+          "maximum": 4.125375,
+          "values": [
+            3.6295430000000004,
+            3.781,
+            3.5971660000000005,
+            3.8961259999999998,
+            3.8673340000000005,
+            3.5122099999999996,
+            3.7846230000000003,
+            4.125375
+          ]
+        },
+        "coarse_ms/job_stroke": {
+          "mean": 2.063652,
+          "median": 2.9440205,
+          "minimum": -4.151143000000001,
+          "maximum": 3.252801,
+          "values": [
+            3.0808560000000007,
+            2.7173739999999995,
+            -4.151143000000001,
+            2.673535,
+            2.9847089999999996,
+            2.9033320000000007,
+            3.252801,
+            3.047751999999999
+          ]
+        },
+        "coarse_ms/main_stroke": {
+          "mean": -0.006781249999999997,
+          "median": -0.004437499999999997,
+          "minimum": -0.03612499999999999,
+          "maximum": 0.011999999999999997,
+          "values": [
+            -0.005374999999999991,
+            -0.03612499999999999,
+            0.011999999999999997,
+            -0.010332999999999995,
+            0.0022910000000000014,
+            -0.010748999999999995,
+            -0.002459000000000003,
+            -0.003500000000000003
+          ]
+        },
+        "coarse_ms/uncovered": {
+          "mean": 1.3404571250000001,
+          "median": 1.3724395,
+          "minimum": 0.965977,
+          "maximum": 1.531373,
+          "values": [
+            1.319976,
+            1.292751,
+            0.965977,
+            1.385672,
+            1.399666,
+            1.359207,
+            1.469035,
+            1.531373
+          ]
+        },
+        "main_parts_ms/main_end_stroke": {
+          "mean": 2.58750000000001e-05,
+          "median": 6.20000000000002e-05,
+          "minimum": -0.0005,
+          "maximum": 0.0006660000000000001,
+          "values": [
+            0.0002500000000000002,
+            -0.00033299999999999996,
+            0.0006660000000000001,
+            -0.00016700000000000005,
+            0.00016600000000000013,
+            -0.0005,
+            -4.199999999999972e-05,
+            0.00016700000000000005
+          ]
+        },
+        "main_parts_ms/main_start_strategy": {
+          "mean": -0.007198125000000003,
+          "median": -0.006000000000000002,
+          "minimum": -0.032918,
+          "maximum": 0.011248999999999995,
+          "values": [
+            -0.0077080000000000065,
+            -0.032918,
+            0.011248999999999995,
+            -0.009959000000000003,
+            -0.0006239999999999996,
+            -0.01100000000000001,
+            -0.0023330000000000017,
+            -0.004291999999999997
+          ]
+        },
+        "main_parts_ms/main_stroke": {
+          "mean": -0.000583,
+          "median": -0.000147,
+          "minimum": -0.002581,
+          "maximum": -1.0000000000000243e-06,
+          "values": [
+            -0.00012600000000000003,
+            -0.0014150000000000002,
+            -0.002581,
+            -0.00024899999999999987,
+            -1.0000000000000243e-06,
+            -8.299999999999996e-05,
+            -0.00016799999999999996,
+            -4.100000000000002e-05
+          ]
+        },
+        "main_parts_ms/main_submit_inputs": {
+          "mean": 0.0011301249999999998,
+          "median": 0.00016649999999999998,
+          "minimum": -0.0009170000000000011,
+          "maximum": 0.005332999999999999,
+          "values": [
+            0.0024170000000000007,
+            -0.0009170000000000011,
+            0.005332999999999999,
+            0.0,
+            0.002,
+            0.00033299999999999996,
+            -0.0001250000000000001,
+            0.0
+          ]
+        },
+        "main_parts_ms/main_wait_for_done": {
+          "mean": -0.00015612500000000012,
+          "median": 0.00012550000000000018,
+          "minimum": -0.002667,
+          "maximum": 0.0007499999999999998,
+          "values": [
+            -0.00020799999999999985,
+            -0.0005420000000000008,
+            -0.002667,
+            4.200000000000037e-05,
+            0.0007499999999999998,
+            0.0005009999999999997,
+            0.00020899999999999998,
+            0.0006659999999999999
+          ]
+        },
+        "thread_roles_ms/BR1-delay": {
+          "mean": 0.1755,
+          "median": 0.17149999999999999,
+          "minimum": 0.154,
+          "maximum": 0.217,
+          "values": [
+            0.154,
+            0.174,
+            0.187,
+            0.155,
+            0.169,
+            0.163,
+            0.185,
+            0.217
+          ]
+        },
+        "thread_roles_ms/BR1-reclaim": {
+          "mean": 1.265625,
+          "median": 1.2574999999999998,
+          "minimum": 1.182,
+          "maximum": 1.4,
+          "values": [
+            1.199,
+            1.182,
+            1.23,
+            1.298,
+            1.285,
+            1.22,
+            1.311,
+            1.4
+          ]
+        },
+        "thread_roles_ms/KisTileDataSwapper": {
+          "mean": -0.00875,
+          "median": -0.0075,
+          "minimum": -0.02,
+          "maximum": -0.005,
+          "values": [
+            -0.008,
+            -0.008,
+            -0.02,
+            -0.007,
+            -0.005,
+            -0.006,
+            -0.007,
+            -0.009
+          ]
+        },
+        "thread_roles_ms/QtTest Watchdog": {
+          "mean": 0.0,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "thread_roles_ms/job_workers": {
+          "mean": 5.773125,
+          "median": 6.6165,
+          "minimum": -0.9489999999999981,
+          "maximum": 7.132,
+          "values": [
+            6.688000000000001,
+            6.484,
+            -0.9489999999999981,
+            6.545,
+            6.836,
+            6.4,
+            7.0489999999999995,
+            7.132
+          ]
+        },
+        "thread_roles_ms/main": {
+          "mean": -0.0042500000000000055,
+          "median": -0.0005000000000000004,
+          "minimum": -0.035,
+          "maximum": 0.007999999999999993,
+          "values": [
+            -0.0030000000000000027,
+            -0.035,
+            0.005999999999999978,
+            -0.01100000000000001,
+            0.007999999999999993,
+            -0.0049999999999999906,
+            0.0020000000000000018,
+            0.00399999999999999
+          ]
+        },
+        "thread_roles_ms/unnamed": {
+          "mean": 0.0,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "block_extra": [
+        {
+          "process_cpu_ms": 7.89,
+          "coarse_ms/job_merge": 3.7052715000000003,
+          "coarse_ms/job_stroke": 2.899115,
+          "coarse_ms/main_stroke": -0.02074999999999999,
+          "coarse_ms/uncovered": 1.3063635,
+          "main_parts_ms/main_end_stroke": -4.149999999999987e-05,
+          "main_parts_ms/main_start_strategy": -0.020313000000000005,
+          "main_parts_ms/main_stroke": -0.0007705000000000001,
+          "main_parts_ms/main_submit_inputs": 0.0007499999999999998,
+          "main_parts_ms/main_wait_for_done": -0.00037500000000000033,
+          "thread_roles_ms/BR1-delay": 0.16399999999999998,
+          "thread_roles_ms/BR1-reclaim": 1.1905000000000001,
+          "thread_roles_ms/KisTileDataSwapper": -0.008,
+          "thread_roles_ms/QtTest Watchdog": 0.0,
+          "thread_roles_ms/job_workers": 6.586,
+          "thread_roles_ms/main": -0.019000000000000003,
+          "thread_roles_ms/unnamed": 0.0
+        },
+        {
+          "process_cpu_ms": 4.1845,
+          "coarse_ms/job_merge": 3.746646,
+          "coarse_ms/job_stroke": -0.7388040000000005,
+          "coarse_ms/main_stroke": 0.0008335000000000009,
+          "coarse_ms/uncovered": 1.1758245,
+          "main_parts_ms/main_end_stroke": 0.00024950000000000005,
+          "main_parts_ms/main_start_strategy": 0.0006449999999999963,
+          "main_parts_ms/main_stroke": -0.001415,
+          "main_parts_ms/main_submit_inputs": 0.0026664999999999996,
+          "main_parts_ms/main_wait_for_done": -0.0013124999999999999,
+          "thread_roles_ms/BR1-delay": 0.17099999999999999,
+          "thread_roles_ms/BR1-reclaim": 1.264,
+          "thread_roles_ms/KisTileDataSwapper": -0.0135,
+          "thread_roles_ms/QtTest Watchdog": 0.0,
+          "thread_roles_ms/job_workers": 2.798000000000001,
+          "thread_roles_ms/main": -0.002500000000000016,
+          "thread_roles_ms/unnamed": 0.0
+        },
+        {
+          "process_cpu_ms": 8.009,
+          "coarse_ms/job_merge": 3.689772,
+          "coarse_ms/job_stroke": 2.9440205,
+          "coarse_ms/main_stroke": -0.004228999999999997,
+          "coarse_ms/uncovered": 1.3794365000000002,
+          "main_parts_ms/main_end_stroke": -0.00016699999999999994,
+          "main_parts_ms/main_start_strategy": -0.005812000000000005,
+          "main_parts_ms/main_stroke": -4.199999999999999e-05,
+          "main_parts_ms/main_submit_inputs": 0.0011665,
+          "main_parts_ms/main_wait_for_done": 0.0006254999999999998,
+          "thread_roles_ms/BR1-delay": 0.166,
+          "thread_roles_ms/BR1-reclaim": 1.2525,
+          "thread_roles_ms/KisTileDataSwapper": -0.0055,
+          "thread_roles_ms/QtTest Watchdog": 0.0,
+          "thread_roles_ms/job_workers": 6.618,
+          "thread_roles_ms/main": 0.0015000000000000013,
+          "thread_roles_ms/unnamed": 0.0
+        },
+        {
+          "process_cpu_ms": 8.6025,
+          "coarse_ms/job_merge": 3.954999,
+          "coarse_ms/job_stroke": 3.1502764999999995,
+          "coarse_ms/main_stroke": -0.002979500000000003,
+          "coarse_ms/uncovered": 1.500204,
+          "main_parts_ms/main_end_stroke": 6.250000000000016e-05,
+          "main_parts_ms/main_start_strategy": -0.0033124999999999995,
+          "main_parts_ms/main_stroke": -0.00010449999999999999,
+          "main_parts_ms/main_submit_inputs": -6.250000000000006e-05,
+          "main_parts_ms/main_wait_for_done": 0.00043749999999999995,
+          "thread_roles_ms/BR1-delay": 0.201,
+          "thread_roles_ms/BR1-reclaim": 1.3555,
+          "thread_roles_ms/KisTileDataSwapper": -0.008,
+          "thread_roles_ms/QtTest Watchdog": 0.0,
+          "thread_roles_ms/job_workers": 7.0905,
+          "thread_roles_ms/main": 0.0029999999999999957,
+          "thread_roles_ms/unnamed": 0.0
+        }
+      ]
+    }
+  },
+  "processes": [
+    {
+      "index": 0,
+      "block": 0,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 15.95,
+      "wall_ms": 6.548,
+      "coarse_ms": {
+        "job_merge": 4.132751,
+        "job_stroke": 10.083369,
+        "uncovered": 1.73388
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 1,
+      "block": 0,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 8.293,
+      "wall_ms": 3.642,
+      "coarse_ms": {
+        "job_merge": 0.414168,
+        "job_stroke": 7.440363,
+        "uncovered": 0.438469
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 2,
+      "block": 0,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 8.543,
+      "wall_ms": 3.604,
+      "coarse_ms": {
+        "job_merge": 0.529541,
+        "job_stroke": 7.551295,
+        "uncovered": 0.462164
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 3,
+      "block": 0,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 17.299,
+      "wall_ms": 7.52,
+      "coarse_ms": {
+        "job_merge": 4.482581,
+        "job_stroke": 10.947289,
+        "uncovered": 1.86913
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 4,
+      "block": 0,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 16.782,
+      "wall_ms": 7.185,
+      "coarse_ms": {
+        "job_merge": 4.249583,
+        "job_stroke": 10.770241,
+        "main_stroke": 0.085833,
+        "uncovered": 1.676343
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.002125,
+        "main_start_strategy": 0.061167,
+        "main_stroke": 0.001041,
+        "main_submit_inputs": 0.016833,
+        "main_wait_for_done": 0.004667
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.154,
+        "BR1-reclaim": 1.199,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 15.343,
+        "main": 0.113,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124845631,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.113,
+          "event_root_cpu_ms": 0.085833,
+          "snapshot_minus_event_ms": 0.027167,
+          "born": false
+        },
+        {
+          "thread": 124845633,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124845634,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124845635,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124845736,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124845737,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.199,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.199,
+          "born": false
+        },
+        {
+          "thread": 124845738,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.154,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.154,
+          "born": false
+        },
+        {
+          "thread": 124845740,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.074,
+          "event_root_cpu_ms": 3.99337,
+          "snapshot_minus_event_ms": 0.08063,
+          "born": true
+        },
+        {
+          "thread": 124845741,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.841,
+          "event_root_cpu_ms": 3.751535,
+          "snapshot_minus_event_ms": 0.089465,
+          "born": true
+        },
+        {
+          "thread": 124845742,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.895,
+          "event_root_cpu_ms": 3.821585,
+          "snapshot_minus_event_ms": 0.073415,
+          "born": true
+        },
+        {
+          "thread": 124845743,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.533,
+          "event_root_cpu_ms": 3.453334,
+          "snapshot_minus_event_ms": 0.079666,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124845740,
+        124845741,
+        124845742,
+        124845743
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 16.809,
+      "snapshot_outer_cpu_ms": 16.842,
+      "snapshot_inner_cpu_ms": 16.784,
+      "snapshot_outer_minus_stage_cpu_ms": 0.06,
+      "snapshot_inner_minus_stage_cpu_ms": 0.002,
+      "snapshot_thread_minus_stage_cpu_ms": 0.027
+    },
+    {
+      "index": 5,
+      "block": 0,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 8.757,
+      "wall_ms": 3.661,
+      "coarse_ms": {
+        "job_merge": 0.62004,
+        "job_stroke": 7.689385,
+        "main_stroke": 0.091208,
+        "uncovered": 0.356367
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001875,
+        "main_start_strategy": 0.068875,
+        "main_stroke": 0.001167,
+        "main_submit_inputs": 0.014416,
+        "main_wait_for_done": 0.004875
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.008,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 8.655,
+        "main": 0.116,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124845760,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.116,
+          "event_root_cpu_ms": 0.091208,
+          "snapshot_minus_event_ms": 0.024792,
+          "born": false
+        },
+        {
+          "thread": 124845766,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124845767,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124845768,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124845771,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.008,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.008,
+          "born": false
+        },
+        {
+          "thread": 124845776,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.531,
+          "event_root_cpu_ms": 2.444255,
+          "snapshot_minus_event_ms": 0.086745,
+          "born": true
+        },
+        {
+          "thread": 124845777,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.102,
+          "event_root_cpu_ms": 2.008041,
+          "snapshot_minus_event_ms": 0.093959,
+          "born": true
+        },
+        {
+          "thread": 124845778,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 1.894,
+          "event_root_cpu_ms": 1.804711,
+          "snapshot_minus_event_ms": 0.089289,
+          "born": true
+        },
+        {
+          "thread": 124845779,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.128,
+          "event_root_cpu_ms": 2.052418,
+          "snapshot_minus_event_ms": 0.075582,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124845776,
+        124845777,
+        124845778,
+        124845779
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 8.779,
+      "snapshot_outer_cpu_ms": 8.806,
+      "snapshot_inner_cpu_ms": 8.758,
+      "snapshot_outer_minus_stage_cpu_ms": 0.049,
+      "snapshot_inner_minus_stage_cpu_ms": 0.001,
+      "snapshot_thread_minus_stage_cpu_ms": 0.022
+    },
+    {
+      "index": 6,
+      "block": 0,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 8.866,
+      "wall_ms": 3.729,
+      "coarse_ms": {
+        "job_merge": 0.516251,
+        "job_stroke": 7.871034,
+        "main_stroke": 0.125125,
+        "uncovered": 0.35359
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.002,
+        "main_start_strategy": 0.099959,
+        "main_stroke": 0.002416,
+        "main_submit_inputs": 0.014833,
+        "main_wait_for_done": 0.005917
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.008,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 8.729,
+        "main": 0.155,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124846029,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.155,
+          "event_root_cpu_ms": 0.125125,
+          "snapshot_minus_event_ms": 0.029875,
+          "born": false
+        },
+        {
+          "thread": 124846031,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846032,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846033,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846045,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.008,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.008,
+          "born": false
+        },
+        {
+          "thread": 124846046,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.575,
+          "event_root_cpu_ms": 2.494496,
+          "snapshot_minus_event_ms": 0.080504,
+          "born": true
+        },
+        {
+          "thread": 124846047,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 1.967,
+          "event_root_cpu_ms": 1.868545,
+          "snapshot_minus_event_ms": 0.098455,
+          "born": true
+        },
+        {
+          "thread": 124846048,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.141,
+          "event_root_cpu_ms": 2.061707,
+          "snapshot_minus_event_ms": 0.079293,
+          "born": true
+        },
+        {
+          "thread": 124846049,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.046,
+          "event_root_cpu_ms": 1.962537,
+          "snapshot_minus_event_ms": 0.083463,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124846046,
+        124846047,
+        124846048,
+        124846049
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 8.892,
+      "snapshot_outer_cpu_ms": 8.929,
+      "snapshot_inner_cpu_ms": 8.867,
+      "snapshot_outer_minus_stage_cpu_ms": 0.063,
+      "snapshot_inner_minus_stage_cpu_ms": 0.001,
+      "snapshot_thread_minus_stage_cpu_ms": 0.026
+    },
+    {
+      "index": 7,
+      "block": 0,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 16.621,
+      "wall_ms": 7.24,
+      "coarse_ms": {
+        "job_merge": 4.297251,
+        "job_stroke": 10.588408,
+        "main_stroke": 0.089,
+        "uncovered": 1.646341
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001667,
+        "main_start_strategy": 0.067041,
+        "main_stroke": 0.001001,
+        "main_submit_inputs": 0.013916,
+        "main_wait_for_done": 0.005375
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.174,
+        "BR1-reclaim": 1.182,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 15.213,
+        "main": 0.12,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124846187,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.12,
+          "event_root_cpu_ms": 0.089,
+          "snapshot_minus_event_ms": 0.031,
+          "born": false
+        },
+        {
+          "thread": 124846189,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846190,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846191,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846198,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846199,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.182,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.182,
+          "born": false
+        },
+        {
+          "thread": 124846200,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.174,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.174,
+          "born": false
+        },
+        {
+          "thread": 124846201,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.316,
+          "event_root_cpu_ms": 4.232708,
+          "snapshot_minus_event_ms": 0.083292,
+          "born": true
+        },
+        {
+          "thread": 124846202,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.146,
+          "event_root_cpu_ms": 4.083003,
+          "snapshot_minus_event_ms": 0.062997,
+          "born": true
+        },
+        {
+          "thread": 124846203,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.324,
+          "event_root_cpu_ms": 3.228369,
+          "snapshot_minus_event_ms": 0.095631,
+          "born": true
+        },
+        {
+          "thread": 124846204,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.427,
+          "event_root_cpu_ms": 3.341579,
+          "snapshot_minus_event_ms": 0.085421,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124846201,
+        124846202,
+        124846203,
+        124846204
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 16.689,
+      "snapshot_outer_cpu_ms": 16.726,
+      "snapshot_inner_cpu_ms": 16.624,
+      "snapshot_outer_minus_stage_cpu_ms": 0.105,
+      "snapshot_inner_minus_stage_cpu_ms": 0.003,
+      "snapshot_thread_minus_stage_cpu_ms": 0.068
+    },
+    {
+      "index": 8,
+      "block": 1,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 17.549,
+      "wall_ms": 7.707,
+      "coarse_ms": {
+        "job_merge": 4.45375,
+        "job_stroke": 11.248994,
+        "main_stroke": 0.106083,
+        "uncovered": 1.740173
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.0025,
+        "main_start_strategy": 0.079166,
+        "main_stroke": 0.001417,
+        "main_submit_inputs": 0.017667,
+        "main_wait_for_done": 0.005333
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.187,
+        "BR1-reclaim": 1.23,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 16.059,
+        "main": 0.142,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124846218,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.142,
+          "event_root_cpu_ms": 0.106083,
+          "snapshot_minus_event_ms": 0.035917,
+          "born": false
+        },
+        {
+          "thread": 124846254,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846255,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846260,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846325,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846326,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.23,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.23,
+          "born": false
+        },
+        {
+          "thread": 124846327,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.187,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.187,
+          "born": false
+        },
+        {
+          "thread": 124846328,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.472,
+          "event_root_cpu_ms": 4.365295,
+          "snapshot_minus_event_ms": 0.106705,
+          "born": true
+        },
+        {
+          "thread": 124846329,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.85,
+          "event_root_cpu_ms": 3.768535,
+          "snapshot_minus_event_ms": 0.081465,
+          "born": true
+        },
+        {
+          "thread": 124846330,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.407,
+          "event_root_cpu_ms": 3.330334,
+          "snapshot_minus_event_ms": 0.076666,
+          "born": true
+        },
+        {
+          "thread": 124846331,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.33,
+          "event_root_cpu_ms": 4.23858,
+          "snapshot_minus_event_ms": 0.09142,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124846328,
+        124846329,
+        124846330,
+        124846331
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 17.618,
+      "snapshot_outer_cpu_ms": 17.657,
+      "snapshot_inner_cpu_ms": 17.554,
+      "snapshot_outer_minus_stage_cpu_ms": 0.108,
+      "snapshot_inner_minus_stage_cpu_ms": 0.005,
+      "snapshot_thread_minus_stage_cpu_ms": 0.069
+    },
+    {
+      "index": 9,
+      "block": 1,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 17.125,
+      "wall_ms": 7.572,
+      "coarse_ms": {
+        "job_merge": 0.856584,
+        "job_stroke": 15.400137,
+        "main_stroke": 0.094083,
+        "uncovered": 0.774196
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001834,
+        "main_start_strategy": 0.067917,
+        "main_stroke": 0.003998,
+        "main_submit_inputs": 0.012334,
+        "main_wait_for_done": 0.008
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.02,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 17.008,
+        "main": 0.136,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124846347,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.136,
+          "event_root_cpu_ms": 0.094083,
+          "snapshot_minus_event_ms": 0.041917,
+          "born": false
+        },
+        {
+          "thread": 124846353,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846354,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846355,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846363,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.02,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.02,
+          "born": false
+        },
+        {
+          "thread": 124846376,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.908,
+          "event_root_cpu_ms": 4.700449,
+          "snapshot_minus_event_ms": 0.207551,
+          "born": true
+        },
+        {
+          "thread": 124846377,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.306,
+          "event_root_cpu_ms": 4.121611,
+          "snapshot_minus_event_ms": 0.184389,
+          "born": true
+        },
+        {
+          "thread": 124846378,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.911,
+          "event_root_cpu_ms": 3.73554,
+          "snapshot_minus_event_ms": 0.17546,
+          "born": true
+        },
+        {
+          "thread": 124846379,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.883,
+          "event_root_cpu_ms": 3.699121,
+          "snapshot_minus_event_ms": 0.183879,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124846376,
+        124846377,
+        124846378,
+        124846379
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 17.164,
+      "snapshot_outer_cpu_ms": 17.213,
+      "snapshot_inner_cpu_ms": 17.129,
+      "snapshot_outer_minus_stage_cpu_ms": 0.088,
+      "snapshot_inner_minus_stage_cpu_ms": 0.004,
+      "snapshot_thread_minus_stage_cpu_ms": 0.039
+    },
+    {
+      "index": 10,
+      "block": 1,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 8.91,
+      "wall_ms": 3.778,
+      "coarse_ms": {
+        "job_merge": 0.596876,
+        "job_stroke": 7.874413,
+        "main_stroke": 0.089875,
+        "uncovered": 0.348836
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001708,
+        "main_start_strategy": 0.06925,
+        "main_stroke": 0.001251,
+        "main_submit_inputs": 0.013458,
+        "main_wait_for_done": 0.004208
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.007,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 8.809,
+        "main": 0.117,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124846506,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.117,
+          "event_root_cpu_ms": 0.089875,
+          "snapshot_minus_event_ms": 0.027125,
+          "born": false
+        },
+        {
+          "thread": 124846508,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846509,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846510,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846516,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.007,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.007,
+          "born": false
+        },
+        {
+          "thread": 124846517,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.931,
+          "event_root_cpu_ms": 2.853793,
+          "snapshot_minus_event_ms": 0.077207,
+          "born": true
+        },
+        {
+          "thread": 124846518,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.136,
+          "event_root_cpu_ms": 2.060289,
+          "snapshot_minus_event_ms": 0.075711,
+          "born": true
+        },
+        {
+          "thread": 124846519,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 1.848,
+          "event_root_cpu_ms": 1.759662,
+          "snapshot_minus_event_ms": 0.088338,
+          "born": true
+        },
+        {
+          "thread": 124846520,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 1.894,
+          "event_root_cpu_ms": 1.797545,
+          "snapshot_minus_event_ms": 0.096455,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124846517,
+        124846518,
+        124846519,
+        124846520
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 8.933,
+      "snapshot_outer_cpu_ms": 8.965,
+      "snapshot_inner_cpu_ms": 8.912,
+      "snapshot_outer_minus_stage_cpu_ms": 0.055,
+      "snapshot_inner_minus_stage_cpu_ms": 0.002,
+      "snapshot_thread_minus_stage_cpu_ms": 0.023
+    },
+    {
+      "index": 11,
+      "block": 1,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 16.855,
+      "wall_ms": 7.272,
+      "coarse_ms": {
+        "job_merge": 4.493002,
+        "job_stroke": 10.547948,
+        "main_stroke": 0.079542,
+        "uncovered": 1.734508
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001541,
+        "main_start_strategy": 0.059291,
+        "main_stroke": 0.001002,
+        "main_submit_inputs": 0.013458,
+        "main_wait_for_done": 0.00425
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.155,
+        "BR1-reclaim": 1.298,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 15.354,
+        "main": 0.106,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124846631,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.106,
+          "event_root_cpu_ms": 0.079542,
+          "snapshot_minus_event_ms": 0.026458,
+          "born": false
+        },
+        {
+          "thread": 124846641,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846642,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846659,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846666,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124846667,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.298,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.298,
+          "born": false
+        },
+        {
+          "thread": 124846668,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.155,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.155,
+          "born": false
+        },
+        {
+          "thread": 124846670,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.831,
+          "event_root_cpu_ms": 3.737081,
+          "snapshot_minus_event_ms": 0.093919,
+          "born": true
+        },
+        {
+          "thread": 124846671,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.706,
+          "event_root_cpu_ms": 3.628539,
+          "snapshot_minus_event_ms": 0.077461,
+          "born": true
+        },
+        {
+          "thread": 124846672,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.797,
+          "event_root_cpu_ms": 3.718912,
+          "snapshot_minus_event_ms": 0.078088,
+          "born": true
+        },
+        {
+          "thread": 124846673,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.02,
+          "event_root_cpu_ms": 3.956418,
+          "snapshot_minus_event_ms": 0.063582,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124846670,
+        124846671,
+        124846672,
+        124846673
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 16.913,
+      "snapshot_outer_cpu_ms": 16.947,
+      "snapshot_inner_cpu_ms": 16.858,
+      "snapshot_outer_minus_stage_cpu_ms": 0.092,
+      "snapshot_inner_minus_stage_cpu_ms": 0.003,
+      "snapshot_thread_minus_stage_cpu_ms": 0.058
+    },
+    {
+      "index": 12,
+      "block": 1,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 16.669,
+      "wall_ms": 7.213,
+      "coarse_ms": {
+        "job_merge": 4.42971,
+        "job_stroke": 10.436672,
+        "uncovered": 1.802618
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 13,
+      "block": 1,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 8.528,
+      "wall_ms": 3.547,
+      "coarse_ms": {
+        "job_merge": 0.548041,
+        "job_stroke": 7.566328,
+        "uncovered": 0.413631
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 14,
+      "block": 1,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 8.966,
+      "wall_ms": 3.694,
+      "coarse_ms": {
+        "job_merge": 0.552833,
+        "job_stroke": 7.965629,
+        "uncovered": 0.447538
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 15,
+      "block": 1,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 15.51,
+      "wall_ms": 6.723,
+      "coarse_ms": {
+        "job_merge": 3.906375,
+        "job_stroke": 9.915756,
+        "uncovered": 1.687869
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 16,
+      "block": 2,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 17.919,
+      "wall_ms": 7.679,
+      "coarse_ms": {
+        "job_merge": 4.425962,
+        "job_stroke": 11.682153,
+        "uncovered": 1.810885
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 17,
+      "block": 2,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 8.069,
+      "wall_ms": 3.406,
+      "coarse_ms": {
+        "job_merge": 0.425292,
+        "job_stroke": 7.209077,
+        "uncovered": 0.434631
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 18,
+      "block": 2,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 8.682,
+      "wall_ms": 3.609,
+      "coarse_ms": {
+        "job_merge": 0.522041,
+        "job_stroke": 7.696998,
+        "uncovered": 0.462961
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 19,
+      "block": 2,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 15.725,
+      "wall_ms": 6.441,
+      "coarse_ms": {
+        "job_merge": 4.17479,
+        "job_stroke": 9.817008,
+        "uncovered": 1.733202
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 20,
+      "block": 2,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 16.807,
+      "wall_ms": 7.359,
+      "coarse_ms": {
+        "job_merge": 4.322333,
+        "job_stroke": 10.633078,
+        "main_stroke": 0.081416,
+        "uncovered": 1.770173
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001708,
+        "main_start_strategy": 0.060709,
+        "main_stroke": 0.000957,
+        "main_submit_inputs": 0.013875,
+        "main_wait_for_done": 0.004167
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.169,
+        "BR1-reclaim": 1.285,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 15.302,
+        "main": 0.109,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124847685,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.109,
+          "event_root_cpu_ms": 0.081416,
+          "snapshot_minus_event_ms": 0.027584,
+          "born": false
+        },
+        {
+          "thread": 124847691,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847692,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847693,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847702,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847703,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.285,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.285,
+          "born": false
+        },
+        {
+          "thread": 124847704,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.169,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.169,
+          "born": false
+        },
+        {
+          "thread": 124847708,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.379,
+          "event_root_cpu_ms": 4.294201,
+          "snapshot_minus_event_ms": 0.084799,
+          "born": true
+        },
+        {
+          "thread": 124847709,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.8,
+          "event_root_cpu_ms": 3.7135,
+          "snapshot_minus_event_ms": 0.0865,
+          "born": true
+        },
+        {
+          "thread": 124847710,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.697,
+          "event_root_cpu_ms": 3.632751,
+          "snapshot_minus_event_ms": 0.064249,
+          "born": true
+        },
+        {
+          "thread": 124847711,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.426,
+          "event_root_cpu_ms": 3.314959,
+          "snapshot_minus_event_ms": 0.111041,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124847708,
+        124847709,
+        124847710,
+        124847711
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 16.865,
+      "snapshot_outer_cpu_ms": 16.9,
+      "snapshot_inner_cpu_ms": 16.808,
+      "snapshot_outer_minus_stage_cpu_ms": 0.093,
+      "snapshot_inner_minus_stage_cpu_ms": 0.001,
+      "snapshot_thread_minus_stage_cpu_ms": 0.058
+    },
+    {
+      "index": 21,
+      "block": 2,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 8.553,
+      "wall_ms": 3.47,
+      "coarse_ms": {
+        "job_merge": 0.454999,
+        "job_stroke": 7.648369,
+        "main_stroke": 0.079125,
+        "uncovered": 0.370507
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001542,
+        "main_start_strategy": 0.061333,
+        "main_stroke": 0.000958,
+        "main_submit_inputs": 0.011875,
+        "main_wait_for_done": 0.003417
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.005,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 8.466,
+        "main": 0.101,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124847730,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.101,
+          "event_root_cpu_ms": 0.079125,
+          "snapshot_minus_event_ms": 0.021875,
+          "born": false
+        },
+        {
+          "thread": 124847735,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847736,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847737,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847759,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847837,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.005,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.005,
+          "born": false
+        },
+        {
+          "thread": 124847839,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.354,
+          "event_root_cpu_ms": 2.250881,
+          "snapshot_minus_event_ms": 0.103119,
+          "born": true
+        },
+        {
+          "thread": 124847840,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.047,
+          "event_root_cpu_ms": 1.958453,
+          "snapshot_minus_event_ms": 0.088547,
+          "born": true
+        },
+        {
+          "thread": 124847841,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.105,
+          "event_root_cpu_ms": 2.028371,
+          "snapshot_minus_event_ms": 0.076629,
+          "born": true
+        },
+        {
+          "thread": 124847842,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 1.96,
+          "event_root_cpu_ms": 1.865663,
+          "snapshot_minus_event_ms": 0.094337,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124847839,
+        124847840,
+        124847841,
+        124847842
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 8.572,
+      "snapshot_outer_cpu_ms": 8.598,
+      "snapshot_inner_cpu_ms": 8.555,
+      "snapshot_outer_minus_stage_cpu_ms": 0.045,
+      "snapshot_inner_minus_stage_cpu_ms": 0.002,
+      "snapshot_thread_minus_stage_cpu_ms": 0.019
+    },
+    {
+      "index": 22,
+      "block": 2,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 8.688,
+      "wall_ms": 3.603,
+      "coarse_ms": {
+        "job_merge": 0.575291,
+        "job_stroke": 7.666373,
+        "main_stroke": 0.090416,
+        "uncovered": 0.35592
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.002042,
+        "main_start_strategy": 0.07,
+        "main_stroke": 0.001083,
+        "main_submit_inputs": 0.01325,
+        "main_wait_for_done": 0.004041
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.006,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 8.588,
+        "main": 0.118,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124847880,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.118,
+          "event_root_cpu_ms": 0.090416,
+          "snapshot_minus_event_ms": 0.027584,
+          "born": false
+        },
+        {
+          "thread": 124847883,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847884,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847885,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847888,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124847897,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.006,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.006,
+          "born": false
+        },
+        {
+          "thread": 124847902,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.442,
+          "event_root_cpu_ms": 2.356494,
+          "snapshot_minus_event_ms": 0.085506,
+          "born": true
+        },
+        {
+          "thread": 124847903,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.121,
+          "event_root_cpu_ms": 2.040005,
+          "snapshot_minus_event_ms": 0.080995,
+          "born": true
+        },
+        {
+          "thread": 124847904,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.02,
+          "event_root_cpu_ms": 1.922664,
+          "snapshot_minus_event_ms": 0.097336,
+          "born": true
+        },
+        {
+          "thread": 124847905,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.005,
+          "event_root_cpu_ms": 1.922501,
+          "snapshot_minus_event_ms": 0.082499,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124847902,
+        124847903,
+        124847904,
+        124847905
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 8.712,
+      "snapshot_outer_cpu_ms": 8.742,
+      "snapshot_inner_cpu_ms": 8.69,
+      "snapshot_outer_minus_stage_cpu_ms": 0.054,
+      "snapshot_inner_minus_stage_cpu_ms": 0.002,
+      "snapshot_thread_minus_stage_cpu_ms": 0.024
+    },
+    {
+      "index": 23,
+      "block": 2,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 16.452,
+      "wall_ms": 6.899,
+      "coarse_ms": {
+        "job_merge": 4.087501,
+        "job_stroke": 10.569705,
+        "main_stroke": 0.079667,
+        "uncovered": 1.715127
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001542,
+        "main_start_strategy": 0.059,
+        "main_stroke": 0.001,
+        "main_submit_inputs": 0.013583,
+        "main_wait_for_done": 0.004542
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.163,
+        "BR1-reclaim": 1.22,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 14.988,
+        "main": 0.113,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124848025,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.113,
+          "event_root_cpu_ms": 0.079667,
+          "snapshot_minus_event_ms": 0.033333,
+          "born": false
+        },
+        {
+          "thread": 124848027,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848028,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848029,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848036,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848037,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.22,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.22,
+          "born": false
+        },
+        {
+          "thread": 124848038,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.163,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.163,
+          "born": false
+        },
+        {
+          "thread": 124848039,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.523,
+          "event_root_cpu_ms": 4.44641,
+          "snapshot_minus_event_ms": 0.07659,
+          "born": true
+        },
+        {
+          "thread": 124848040,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.447,
+          "event_root_cpu_ms": 3.349749,
+          "snapshot_minus_event_ms": 0.097251,
+          "born": true
+        },
+        {
+          "thread": 124848041,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.62,
+          "event_root_cpu_ms": 3.52713,
+          "snapshot_minus_event_ms": 0.09287,
+          "born": true
+        },
+        {
+          "thread": 124848042,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.398,
+          "event_root_cpu_ms": 3.333917,
+          "snapshot_minus_event_ms": 0.064083,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124848039,
+        124848040,
+        124848041,
+        124848042
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 16.484,
+      "snapshot_outer_cpu_ms": 16.517,
+      "snapshot_inner_cpu_ms": 16.455,
+      "snapshot_outer_minus_stage_cpu_ms": 0.065,
+      "snapshot_inner_minus_stage_cpu_ms": 0.003,
+      "snapshot_thread_minus_stage_cpu_ms": 0.032
+    },
+    {
+      "index": 24,
+      "block": 3,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 17.089,
+      "wall_ms": 7.332,
+      "coarse_ms": {
+        "job_merge": 4.343416,
+        "job_stroke": 10.861084,
+        "main_stroke": 0.088041,
+        "uncovered": 1.796459
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001917,
+        "main_start_strategy": 0.066167,
+        "main_stroke": 0.000915,
+        "main_submit_inputs": 0.014375,
+        "main_wait_for_done": 0.004667
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.185,
+        "BR1-reclaim": 1.311,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 15.535,
+        "main": 0.116,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124848147,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.116,
+          "event_root_cpu_ms": 0.088041,
+          "snapshot_minus_event_ms": 0.027959,
+          "born": false
+        },
+        {
+          "thread": 124848149,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848150,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848151,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848158,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848159,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.311,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.311,
+          "born": false
+        },
+        {
+          "thread": 124848160,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.185,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.185,
+          "born": false
+        },
+        {
+          "thread": 124848161,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.941,
+          "event_root_cpu_ms": 3.840497,
+          "snapshot_minus_event_ms": 0.100503,
+          "born": true
+        },
+        {
+          "thread": 124848162,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.919,
+          "event_root_cpu_ms": 3.835422,
+          "snapshot_minus_event_ms": 0.083578,
+          "born": true
+        },
+        {
+          "thread": 124848163,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.971,
+          "event_root_cpu_ms": 3.896789,
+          "snapshot_minus_event_ms": 0.074211,
+          "born": true
+        },
+        {
+          "thread": 124848164,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.704,
+          "event_root_cpu_ms": 3.631792,
+          "snapshot_minus_event_ms": 0.072208,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124848161,
+        124848162,
+        124848163,
+        124848164
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 17.147,
+      "snapshot_outer_cpu_ms": 17.191,
+      "snapshot_inner_cpu_ms": 17.092,
+      "snapshot_outer_minus_stage_cpu_ms": 0.102,
+      "snapshot_inner_minus_stage_cpu_ms": 0.003,
+      "snapshot_thread_minus_stage_cpu_ms": 0.058
+    },
+    {
+      "index": 25,
+      "block": 3,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 8.585,
+      "wall_ms": 3.555,
+      "coarse_ms": {
+        "job_merge": 0.558793,
+        "job_stroke": 7.608283,
+        "main_stroke": 0.0905,
+        "uncovered": 0.327424
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001959,
+        "main_start_strategy": 0.0685,
+        "main_stroke": 0.001083,
+        "main_submit_inputs": 0.0145,
+        "main_wait_for_done": 0.004458
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.007,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 8.486,
+        "main": 0.114,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124848212,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.114,
+          "event_root_cpu_ms": 0.0905,
+          "snapshot_minus_event_ms": 0.0235,
+          "born": false
+        },
+        {
+          "thread": 124848214,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848215,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848216,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848217,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848282,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.007,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.007,
+          "born": false
+        },
+        {
+          "thread": 124848284,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.266,
+          "event_root_cpu_ms": 2.176418,
+          "snapshot_minus_event_ms": 0.089582,
+          "born": true
+        },
+        {
+          "thread": 124848285,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.019,
+          "event_root_cpu_ms": 1.937327,
+          "snapshot_minus_event_ms": 0.081673,
+          "born": true
+        },
+        {
+          "thread": 124848286,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.117,
+          "event_root_cpu_ms": 2.044793,
+          "snapshot_minus_event_ms": 0.072207,
+          "born": true
+        },
+        {
+          "thread": 124848287,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.084,
+          "event_root_cpu_ms": 2.008538,
+          "snapshot_minus_event_ms": 0.075462,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124848284,
+        124848285,
+        124848286,
+        124848287
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 8.607,
+      "snapshot_outer_cpu_ms": 8.638,
+      "snapshot_inner_cpu_ms": 8.588,
+      "snapshot_outer_minus_stage_cpu_ms": 0.053,
+      "snapshot_inner_minus_stage_cpu_ms": 0.003,
+      "snapshot_thread_minus_stage_cpu_ms": 0.022
+    },
+    {
+      "index": 26,
+      "block": 3,
+      "side": "upstream",
+      "configuration": "census",
+      "process_cpu_ms": 9.316,
+      "wall_ms": 3.942,
+      "coarse_ms": {
+        "job_merge": 0.550666,
+        "job_stroke": 8.27983,
+        "main_stroke": 0.082833,
+        "uncovered": 0.402671
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.001583,
+        "main_start_strategy": 0.061875,
+        "main_stroke": 0.001166,
+        "main_submit_inputs": 0.013625,
+        "main_wait_for_done": 0.004584
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "KisTileDataSwapper": 0.009,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 9.22,
+        "main": 0.116,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124848417,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.116,
+          "event_root_cpu_ms": 0.082833,
+          "snapshot_minus_event_ms": 0.033167,
+          "born": false
+        },
+        {
+          "thread": 124848419,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848420,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848422,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848431,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.009,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.009,
+          "born": false
+        },
+        {
+          "thread": 124848434,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.787,
+          "event_root_cpu_ms": 2.694829,
+          "snapshot_minus_event_ms": 0.092171,
+          "born": true
+        },
+        {
+          "thread": 124848435,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.026,
+          "event_root_cpu_ms": 1.922083,
+          "snapshot_minus_event_ms": 0.103917,
+          "born": true
+        },
+        {
+          "thread": 124848436,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.245,
+          "event_root_cpu_ms": 2.144205,
+          "snapshot_minus_event_ms": 0.100795,
+          "born": true
+        },
+        {
+          "thread": 124848437,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 2.162,
+          "event_root_cpu_ms": 2.069379,
+          "snapshot_minus_event_ms": 0.092621,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124848434,
+        124848435,
+        124848436,
+        124848437
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 9.345,
+      "snapshot_outer_cpu_ms": 9.373,
+      "snapshot_inner_cpu_ms": 9.319,
+      "snapshot_outer_minus_stage_cpu_ms": 0.057,
+      "snapshot_inner_minus_stage_cpu_ms": 0.003,
+      "snapshot_thread_minus_stage_cpu_ms": 0.029
+    },
+    {
+      "index": 27,
+      "block": 3,
+      "side": "current",
+      "configuration": "census",
+      "process_cpu_ms": 18.017,
+      "wall_ms": 7.564,
+      "coarse_ms": {
+        "job_merge": 4.676041,
+        "job_stroke": 11.327582,
+        "main_stroke": 0.079333,
+        "uncovered": 1.934044
+      },
+      "main_parts_ms": {
+        "main_end_stroke": 0.00175,
+        "main_start_strategy": 0.057583,
+        "main_stroke": 0.001125,
+        "main_submit_inputs": 0.013625,
+        "main_wait_for_done": 0.00525
+      },
+      "projection_updates": 19,
+      "thread_roles_ms": {
+        "BR1-delay": 0.217,
+        "BR1-reclaim": 1.4,
+        "KisTileDataSwapper": 0.0,
+        "QtTest Watchdog": 0.0,
+        "job_workers": 16.352,
+        "main": 0.12,
+        "unnamed": 0.0
+      },
+      "threads": [
+        {
+          "thread": 124848553,
+          "name": "",
+          "role": "main",
+          "cpu_ms": 0.12,
+          "event_root_cpu_ms": 0.079333,
+          "snapshot_minus_event_ms": 0.040667,
+          "born": false
+        },
+        {
+          "thread": 124848555,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848556,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848557,
+          "name": "",
+          "role": "unnamed",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848558,
+          "name": "QtTest Watchdog",
+          "role": "QtTest Watchdog",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848565,
+          "name": "KisTileDataSwapper",
+          "role": "KisTileDataSwapper",
+          "cpu_ms": 0.0,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.0,
+          "born": false
+        },
+        {
+          "thread": 124848566,
+          "name": "BR1-reclaim",
+          "role": "BR1-reclaim",
+          "cpu_ms": 1.4,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 1.4,
+          "born": false
+        },
+        {
+          "thread": 124848567,
+          "name": "BR1-delay",
+          "role": "BR1-delay",
+          "cpu_ms": 0.217,
+          "event_root_cpu_ms": 0.0,
+          "snapshot_minus_event_ms": 0.217,
+          "born": false
+        },
+        {
+          "thread": 124848568,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.624,
+          "event_root_cpu_ms": 4.523249,
+          "snapshot_minus_event_ms": 0.100751,
+          "born": true
+        },
+        {
+          "thread": 124848569,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 4.406,
+          "event_root_cpu_ms": 4.310834,
+          "snapshot_minus_event_ms": 0.095166,
+          "born": true
+        },
+        {
+          "thread": 124848570,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.437,
+          "event_root_cpu_ms": 3.349792,
+          "snapshot_minus_event_ms": 0.087208,
+          "born": true
+        },
+        {
+          "thread": 124848571,
+          "name": "Thread (pooled)",
+          "role": "job_workers",
+          "cpu_ms": 3.885,
+          "event_root_cpu_ms": 3.819748,
+          "snapshot_minus_event_ms": 0.065252,
+          "born": true
+        }
+      ],
+      "born_threads": [
+        124848568,
+        124848569,
+        124848570,
+        124848571
+      ],
+      "disappeared_threads": [],
+      "snapshot_thread_cpu_ms": 18.089,
+      "snapshot_outer_cpu_ms": 18.129,
+      "snapshot_inner_cpu_ms": 18.02,
+      "snapshot_outer_minus_stage_cpu_ms": 0.112,
+      "snapshot_inner_minus_stage_cpu_ms": 0.003,
+      "snapshot_thread_minus_stage_cpu_ms": 0.072
+    },
+    {
+      "index": 28,
+      "block": 3,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 17.352,
+      "wall_ms": 7.586,
+      "coarse_ms": {
+        "job_merge": 4.308083,
+        "job_stroke": 11.296001,
+        "uncovered": 1.747916
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 29,
+      "block": 3,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 9.69,
+      "wall_ms": 4.078,
+      "coarse_ms": {
+        "job_merge": 0.532334,
+        "job_stroke": 8.613304,
+        "uncovered": 0.544362
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 30,
+      "block": 3,
+      "side": "upstream",
+      "configuration": "control",
+      "process_cpu_ms": 8.765,
+      "wall_ms": 3.649,
+      "coarse_ms": {
+        "job_merge": 0.626837,
+        "job_stroke": 7.700956,
+        "uncovered": 0.437207
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    },
+    {
+      "index": 31,
+      "block": 3,
+      "side": "current",
+      "configuration": "control",
+      "process_cpu_ms": 15.673,
+      "wall_ms": 6.476,
+      "coarse_ms": {
+        "job_merge": 3.843958,
+        "job_stroke": 10.184337,
+        "uncovered": 1.644705
+      },
+      "main_parts_ms": {},
+      "projection_updates": 19
+    }
+  ],
+  "thread_difference_reconciliation_ms": {
+    "sum_of_role_extra": 7.201250000000001,
+    "snapshot_minus_stage_difference": 0.029750000000000002,
+    "strict_stage_extra": 7.171499999999999,
+    "note": "The measured snapshot/strict-stage discrepancy is retained, not removed as a performance correction."
+  }
+}

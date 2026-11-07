@@ -1,0 +1,1683 @@
+{
+  "passed": false,
+  "scope": "HX6 migration failure protocol and HX8 caller implementation; cross-job installation capacity and publication remain open",
+  "guide_files": 31,
+  "local_links_checked": 2681,
+  "fragments_checked": 453,
+  "archive_links_not_followed": 2,
+  "modification_ids": [
+    "C01",
+    "C02",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "U01",
+    "U02",
+    "V01"
+  ],
+  "operation_storage_units": 10,
+  "hash_storage_units": 10,
+  "hash_storage_anchors": [
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/qsbr.h",
+      "line": 27,
+      "source": "class Action {"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/qsbr.h",
+      "line": 87,
+      "source": "static PreparedAction prepare()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/qsbr.h",
+      "line": 102,
+      "source": "void enqueuePrepared(PreparedAction action, bool migration = false) noexcept"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/qsbr.h",
+      "line": 165,
+      "source": "void releasePoolSafely(QAtomicPointer<Action> &pool, bool force = false)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/qsbr.h",
+      "line": 117,
+      "source": "void enqueue(void (T::*method)(), T *target, bool migration = false)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/qsbr.h",
+      "line": 122,
+      "source": "class RawPointerAccess {"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 134,
+      "source": "TableMigration(Map& map) : m_map(map)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 139,
+      "source": "static TableMigration* create(Map& map, quint64 numSources)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 166,
+      "source": "void destroy()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 499,
+      "source": "void Leapfrog<Map>::TableMigration::run()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 612,
+      "source": "m_map.getGC().enqueueEmbedded(m_reclaim, true);"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 183,
+      "source": "Value exchangeValue(Value desired)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 367,
+      "source": "typename KisTileHashTableTraits2<T>::TileTypeSP KisTileHashTableTraits2<T>::getTileLazy(qint32 col, qint32 row, bool &newTile)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 131,
+      "source": "static void releaseMapReference(TileType *tile)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 179,
+      "source": "inline void insert(quint32 idx, TileTypeSP item)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 222,
+      "source": "inline bool erase(quint32 idx)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile.cc",
+      "line": 213,
+      "source": "void KisTile::notifyDetachedFromDataManager()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile.cc",
+      "line": 234,
+      "source": "void KisTile::notifyDeadWithoutDetaching()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile.cc",
+      "line": 252,
+      "source": "void KisTile::notifyAttachedToDataManager(KisMementoManager *mm)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 468,
+      "source": "bool KisTileHashTableTraits2<T>::deleteTile(qint32 col, qint32 row)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 487,
+      "source": "void KisTileHashTableTraits2<T>::clear()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 323,
+      "source": "KisTileHashTableTraits2<T>::~KisTileHashTableTraits2()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 290,
+      "source": "Mutator insertOrFind(Key key)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 357,
+      "source": "static void beginTableMigrationToSize(Map& map, Table* table, quint64 nextTableSize)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 399,
+      "source": "bool Leapfrog<Map>::TableMigration::migrateRange(Table* srcTable, quint64 startIdx)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 962,
+      "source": "void KisTiledDataManager::refreshPageStorePage(const KisLogicalPageId &page, bool present)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1610,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManager::writePageStoreOperation("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 348,
+      "source": "m_hashTable = preparedTable.release();"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table_p.h",
+      "line": 219,
+      "source": "KisTileHashTableTraits<T>::getTileLazy(qint32 col, qint32 row,"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table_p.h",
+      "line": 291,
+      "source": "void KisTileHashTableTraits<T>::clear()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.h",
+      "line": 265,
+      "source": "ConcurrentMap<int, KisTileData*> m_tileDataMap;"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.cc",
+      "line": 146,
+      "source": "KisTileData *old = cell.exchangeValue(td);"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/CMakeLists.txt",
+      "line": 1,
+      "source": "kis_add_tests("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.h",
+      "line": 13,
+      "source": "class KisLocklessStackTest : public QObject"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1812,
+      "source": "void KisTiledDataManagerTest::testPageStorePixelOperation()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/qsbr.h",
+      "line": 59,
+      "source": "void set(const Closure &closure) noexcept"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 130,
+      "source": "QSBR::Action m_reclaim;"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 191,
+      "source": "Value insertIfAbsentValue(Value desired)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 209,
+      "source": "inline bool erasePrepared(quint32 idx, QSBR::PreparedAction retirement)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 144,
+      "source": "void retire(TileType *tile, QSBR::PreparedAction action) noexcept"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 258,
+      "source": "~KisTileHashTableIteratorTraits2()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 61,
+      "source": "void KisLocklessStackTest::testPreparedRetirement()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 128,
+      "source": "void KisLocklessStackTest::testInsertIfAbsentAcrossMigration()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 177,
+      "source": "void KisLocklessStackTest::testTileHashReferenceLifetime()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 217,
+      "source": "void KisLocklessStackTest::testTileHashNotificationFailure()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 241,
+      "source": "void KisLocklessStackTest::testTileHashConcurrentClear()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 64,
+      "source": "static Table* create(quint64 tableSize)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 190,
+      "source": "static Candidate prepare(Map &map, quint64 numSources, quint64 size)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 582,
+      "source": "void Leapfrog<Map>::TableMigration::finishMigration()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 132,
+      "source": "bool m_ownsSources{true};"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/simple_job_coordinator.h",
+      "line": 94,
+      "source": "void notifyRetry()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 49,
+      "source": "LocatedCell locateExistingCell(Hash hash)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 282,
+      "source": "const auto location = m_map.locateExistingCell(m_cell->hash.load(Relaxed));"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 472,
+      "source": "Value doubleCheckedSrcValue = srcCell->value.compareExchange(srcValue, Value(ValueTraits::Redirect), Release);"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 145,
+      "source": "if (m_cell->value.load(Consume) == Value(ValueTraits::Redirect)) break;"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 327,
+      "source": "class Iterator"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "line": 74,
+      "source": "~ConcurrentMap()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "line": 179,
+      "source": "void discardUnpublished()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.cc",
+      "line": 138,
+      "source": "void KisTileDataStore::registerTileDataInCell("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.cc",
+      "line": 240,
+      "source": "KisTileData *KisTileDataStore::allocTileData(qint32 pixelSize, const quint8 *defPixel)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.cc",
+      "line": 252,
+      "source": "KisTileData *KisTileDataStore::createTileDataFromRows("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.cc",
+      "line": 278,
+      "source": "KisTileData *KisTileDataStore::duplicateTileData(KisTileData *rhs, bool *precloneHit)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.cc",
+      "line": 307,
+      "source": "KisTileData *KisTileDataStore::duplicatePinnedTileData(KisTileData *rhs, bool *precloneHit)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_data_store.cc",
+      "line": 520,
+      "source": "bool KisTileDataStore::ensureTileDataLoaded(KisTileData *td)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 272,
+      "source": "void KisLocklessStackTest::testReadEraseDuringPartialMigration()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 315,
+      "source": "void KisLocklessStackTest::testMigrationOverflowCompletion()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 334,
+      "source": "void KisLocklessStackTest::testPartialMigrationTileHashDestruction()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 366,
+      "source": "void KisLocklessStackTest::testPrepareRedirectedEmptyCell()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 385,
+      "source": "void KisLocklessStackTest::testInvalidMapCapacity()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "line": 398,
+      "source": "void KisLocklessStackTest::testCoordinatorRetryWakeup()"
+    }
+  ],
+  "new_source_anchors": [
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1610,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManager::writePageStoreOperation("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1936,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::writeOperation("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 1261,
+      "source": "class KisPageMutationExecution::Private"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 2053,
+      "source": "if (execution) execution->markTouched(size_t(bound - execution->entries()));"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 1429,
+      "source": "qsizetype KisPageMutationExecution::collectChangedPages(QVector<KisLogicalPageId> *prepared) const"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1931,
+      "source": "if (changed) changed->swap(preparedChanged);"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1273,
+      "source": "bool KisTiledDataManagerPageStoreBackend::preparePagePresence("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 3291,
+      "source": "bool KisPageStore::resolvePagePresenceInto(KisSurfaceId surface,"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 951,
+      "source": "void KisTiledDataManager::refreshPageStorePages("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 962,
+      "source": "void KisTiledDataManager::refreshPageStorePage(const KisLogicalPageId &page, bool present)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 367,
+      "source": "typename KisTileHashTableTraits2<T>::TileTypeSP KisTileHashTableTraits2<T>::getTileLazy(qint32 col, qint32 row, bool &newTile)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 179,
+      "source": "inline void insert(quint32 idx, TileTypeSP item)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table2.h",
+      "line": 222,
+      "source": "inline bool erase(quint32 idx)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile_hash_table_p.h",
+      "line": 219,
+      "source": "KisTileHashTableTraits<T>::getTileLazy(qint32 col, qint32 row,"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 312,
+      "source": "bool KisTiledExtentManager::prepareTileRange(const QRect &tileRange) try"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 204,
+      "source": "KisTiledExtentManager::Data::Growth KisTiledExtentManager::Data::planGrowth("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 231,
+      "source": "void KisTiledExtentManager::Data::install("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 270,
+      "source": "void KisTiledExtentManager::Data::updateMin()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 288,
+      "source": "void KisTiledExtentManager::Data::updateMax()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1839,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1587,
+      "source": "bool KisTiledDataManager::checkpointStrokeMutation("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1577,
+      "source": "KisCapturedReadView KisTiledDataManagerPageStoreBackend::checkpointHistoryMutation("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1596,
+      "source": "bool KisTiledDataManagerPageStoreBackend::commitHistory("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 915,
+      "source": "bool KisTiledDataManagerPageStoreBackend::finishOwnedTransaction("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1770,
+      "source": "bool KisTiledDataManagerPageStoreBackend::fillRect("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 2116,
+      "source": "bool KisTiledDataManagerPageStoreBackend::copyFrom("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1437,
+      "source": "void KisTiledDataManager::writeBytes(const quint8 *data,"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1677,
+      "source": "void KisTiledDataManager::writePlanarBytes(QVector<quint8*> planes,"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 706,
+      "source": "void KisTiledDataManager::clear(QRect clearRect, const quint8 *clearPixel)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 999,
+      "source": "void KisTiledDataManager::refreshPageStoreIndex(const QRect &rect)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisMutationStorage_p.h",
+      "line": 31,
+      "source": "class KisMutationStorageAllocator"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "line": 587,
+      "source": "KisBackingBudgetReservation KisBackingBudgetController::reserveImpl("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStoreWriteOperation_p.h",
+      "line": 10,
+      "source": "enum class KisPageStoreWriteOperationResult { Unavailable, Borrowed, Failed, Succeeded };"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1812,
+      "source": "void KisTiledDataManagerTest::testPageStorePixelOperation()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 3181,
+      "source": "void KisTiledDataManagerTest::testPageStorePackedWriteNative()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 3258,
+      "source": "void KisTiledDataManagerTest::testPageStorePackedWritePreclaimExcludesLateWriter()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1503,
+      "source": "void KisTiledDataManagerTest::testPageStoreMetadataRefresh()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 2800,
+      "source": "void KisTiledDataManagerTest::testPageStoreCompatibilityCopyFailure()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "line": 4501,
+      "source": "void KisPageStoreCpuMutationTest::mutationStorageBudgetRejection()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 1272,
+      "source": "Private(const std::shared_ptr<KisPageMutationSession::Private> &owner, size_t size)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 1298,
+      "source": "void markTouched(size_t index) noexcept"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.h",
+      "line": 137,
+      "source": "qsizetype collectChangedPages(QVector<KisLogicalPageId> *prepared) const;"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1871,
+      "source": "preparedChanged.reserve(targets.size());"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1874,
+      "source": "if (preparedChanged.capacity() < targets.size()) {"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1919,
+      "source": "phase.next(Phase::PixelOperationChangedExport, quint64(targets.size()));"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1932,
+      "source": "phase.next(Phase::PixelOperationCleanup, quint64(touched));"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStoreDiagnostics_p.h",
+      "line": 102,
+      "source": "PixelOperationPreflight,"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStoreDiagnostics.cpp",
+      "line": 87,
+      "source": "\"pixel_operation_preflight\", \"pixel_operation_storage_prepare\", \"pixel_operation_changed_export\", \"pixel_operation_changed_deliver\", \"pixel_operation_cleanup\","
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1884,
+      "source": "void KisTiledDataManagerTest::testPageStoreChangedStorage()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1962,
+      "source": "void KisTiledDataManagerTest::testPageStoreChangedStorageBudget()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 2014,
+      "source": "void KisTiledDataManagerTest::testPageStorePackedChangedStorage()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.h",
+      "line": 89,
+      "source": "void testPageStoreChangedStorageBudget();"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 942,
+      "source": "qsizetype KisTiledDataManager::pageStoreRefreshCapacity(const QRect &rect) const"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1312,
+      "source": "bool KisTiledDataManagerPageStoreBackend::resolveCurrentPagePresenceInto("
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1041,
+      "source": "void KisTiledDataManager::bitBltImpl(KisTiledDataManager *srcDM, const QRect &rect)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1184,
+      "source": "void KisTiledDataManager::bitBltRoughImpl(KisTiledDataManager *srcDM, const QRect &rect)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 285,
+      "source": "bool KisTiledDataManager::tryCommit(QString *error)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1711,
+      "source": "void KisTiledDataManagerTest::testPageStorePresenceStorage()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "line": 5023,
+      "source": "void KisPageStoreCpuMutationTest::metadataPresenceUsesCanonicalSelector()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.h",
+      "line": 76,
+      "source": "bool prepareTileRange(const QRect &tileRange);"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 194,
+      "source": "void KisTiledExtentManager::Data::Growth::allocate()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 344,
+      "source": "void KisTiledExtentManager::notifyTileAdded(qint32 col, qint32 row)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/KisTiledExtentManager.cpp",
+      "line": 371,
+      "source": "void KisTiledExtentManager::replaceTileStats(const QVector<QPoint> &indexes)"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1560,
+      "source": "void KisTiledDataManagerTest::testExtentStoragePreparation()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1610,
+      "source": "void KisTiledDataManagerTest::testExtentStorageConcurrent()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "line": 1638,
+      "source": "void KisTiledDataManagerTest::testPageStoreExtentStorage()"
+    }
+  ],
+  "admission_capture_anchors": [
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisMutationStorage_p.h",
+      "line": 180,
+      "source": "bool capture(Growth &growth, size_t additional = 0) const noexcept"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisMutationStorage_p.h",
+      "line": 194,
+      "source": "bool install(Growth &growth, size_t additional = 0) noexcept"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "line": 31,
+      "source": "bool admitMutationRecords(Table &table, QMutexLocker<QMutex> &lock,"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "line": 5733,
+      "source": "void KisPageStoreReferenceTest::admissionStorageRevalidatesGrowth()"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "line": 5779,
+      "source": "void KisPageStoreReferenceTest::admissionStorageCaptureRebasesBeforeCopy()"
+    }
+  ],
+  "superseded_OP_anchor_count": 66,
+  "prior_source_anchors_rechecked": [
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 251,
+      "source": "void KisPainterBasedStrokeStrategy::initStrokeCallback()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 187,
+      "source": "void KisPainterBasedStrokeStrategy::initPainters(KisPaintDeviceSP targetDevice,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 230,
+      "source": "std::pair<int, bool> KisBrushOp::doAsynchronousUpdate(QVector<KisRunnableStrokeJobData*> &jobs)"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 189,
+      "source": "void KisBrushOp::addMirroringJobs(Qt::Orientation direction,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/brushengine/kis_paintop_utils.cpp",
+      "line": 75,
+      "source": "QVector<QRect> splitDabsIntoRects(const QVector<QRect> &dabRects, int idealNumRects, int diameter, qreal spacing)"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 280,
+      "source": "bool applyPixelOperationImpl(const QVector<QRect> &rects, const KisPageStorePixelOperation &operation,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 169,
+      "source": "void KisPainter::bltFixed(const QRect &applyRect, const QList<KisRenderedDab> &allSrcDevices,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 18,
+      "source": "bool KisPainter::Private::applyDevice(const QRect &applyRect,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 88,
+      "source": "bool KisPainter::Private::applyDeviceWithSelection(const QRect &applyRect,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 164,
+      "source": "void KisPainter::bltFixed(const QRect &applyRect, const QList<KisRenderedDab> allSrcDevices)"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.cc",
+      "line": 1888,
+      "source": "bool KisPaintDevice::applyPixelOperation("
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction.h",
+      "line": 73,
+      "source": "bool applyStrokePixelOperation(KisPaintDeviceSP target, const QVector<QRect> &rects,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/freehand_stroke.cpp",
+      "line": 228,
+      "source": "void FreehandStrokeStrategy::tryDoUpdate(bool forceEnd)"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 395,
+      "source": "void KisPainterBasedStrokeStrategy::finishStrokeCallback()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 488,
+      "source": "void KisPainterBasedStrokeStrategy::cancelStrokeCallback()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 226,
+      "source": "if (!painted) {"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 169,
+      "source": "void KisPainter::bltFixed(const QRect &applyRect, const QList<KisRenderedDab> &allSrcDevices,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1839,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation("
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1610,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManager::writePageStoreOperation("
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 718,
+      "source": "void KisPainterTest::testMultiDabOperation()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 819,
+      "source": "void KisPainterTest::testMultiDabReuse()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 845,
+      "source": "void KisPainterTest::testMultiDabConcurrent()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 927,
+      "source": "void KisPainterTest::testMultiDabCancellation()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 1063,
+      "source": "void KisPainterTest::testMultiDabOwnerRejection()"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 184,
+      "source": "state->painter->bltFixed(clips, state->dabsQueue, nullptr);"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 184,
+      "source": "state->painter->bltFixed(clips, state->dabsQueue, nullptr);"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.h",
+      "line": 318,
+      "source": "void bltFixed(const QRect &rc, const QList<KisRenderedDab> &allSrcDevices,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_p.h",
+      "line": 83,
+      "source": "bool applyDevice(const QRect &applyRect,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.h",
+      "line": 860,
+      "source": "bool applyPixelOperation(const QRect &rect,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 1933,
+      "source": "KisPageStoreDiagnosticPhase::WriteProviderPrepare,"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStoreDiagnostics_p.h",
+      "line": 161,
+      "source": "// Test-only scheduling observation, on explicit timer.next() boundaries"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStoreDiagnostics.cpp",
+      "line": 142,
+      "source": "void KisPageStoreDiagnosticTimer::next(KisPageStoreDiagnosticPhase phase, quint64 workItems)"
+    },
+    {
+      "group": "MD",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 1029,
+      "source": "void KisPainterTest::testMultiDabSelectionSnapshot()"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.h",
+      "line": 866,
+      "source": "bool applyPixelOperation(const QVector<QRect> &rects,"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.cc",
+      "line": 1896,
+      "source": "bool KisPaintDevice::applyPixelOperation("
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 171,
+      "source": "virtual bool applyPixelOperation(const QVector<QRect> &rects, const KisPageStorePixelOperation &operation,"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 520,
+      "source": "bool applyPixelOperation(const QVector<QRect> &rects, const KisPageStorePixelOperation &operation,"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 280,
+      "source": "bool applyPixelOperationImpl(const QVector<QRect> &rects, const KisPageStorePixelOperation &operation,"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 169,
+      "source": "void KisPainter::bltFixed(const QRect &applyRect, const QList<KisRenderedDab> &allSrcDevices,"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 215,
+      "source": "const bool painted = d->device->applyPixelOperation(targetRects, [&](KisPixelWriteCursor *dstIt) {"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1610,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManager::writePageStoreOperation("
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1619,
+      "source": "QRegion pageCoverage;"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1951,
+      "source": "class BoundedCursor final : public KisPixelWriteCursor {"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 687,
+      "source": "void KisPainterTest::testSparsePixelOperationBounds()"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 557,
+      "source": "void KisPainterTest::testMultiDabSparseFootprint()"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 643,
+      "source": "void KisPainterTest::testMultiDabSparseConcurrent()"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 1063,
+      "source": "void KisPainterTest::testMultiDabOwnerRejection()"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 189,
+      "source": "void KisBrushOp::addMirroringJobs(Qt::Orientation direction,"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 230,
+      "source": "std::pair<int, bool> KisBrushOp::doAsynchronousUpdate(QVector<KisRunnableStrokeJobData*> &jobs)"
+    },
+    {
+      "group": "SR",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/brushengine/kis_paintop_utils.cpp",
+      "line": 75,
+      "source": "QVector<QRect> splitDabsIntoRects(const QVector<QRect> &dabRects, int idealNumRects, int diameter, qreal spacing)"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 18,
+      "source": "class KisOperationMappedAccessor final : public KisPixelWriteCursor"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 41,
+      "source": "qint64 columnsUntilWrap(qint32 x) const {"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.h",
+      "line": 901,
+      "source": "bool partitionWriteRects(const QVector<QRect> &rects, int patchSize,"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.cc",
+      "line": 1949,
+      "source": "bool KisPaintDevice::partitionWriteRects(const QVector<QRect> &rects, int patchSize,"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 226,
+      "source": "bool partitionWriteRectsImpl(const QVector<QRect> &rects, int patchSize, const QRect &wrap,"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/brushengine/kis_paintop_utils.cpp",
+      "line": 81,
+      "source": "qreal spacing, int *patchSize)"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 169,
+      "source": "void KisBrushOp::addDabJobs(const QVector<QRect> &rects, UpdateSharedStateSP state,"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 230,
+      "source": "std::pair<int, bool> KisBrushOp::doAsynchronousUpdate(QVector<KisRunnableStrokeJobData*> &jobs)"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 189,
+      "source": "void KisBrushOp::addMirroringJobs(Qt::Orientation direction,"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.h",
+      "line": 323,
+      "source": "void bltFixed(const QVector<QRect> &clips, const QList<KisRenderedDab> &allSrcDevices,"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 175,
+      "source": "void KisPainter::bltFixed(const QVector<QRect> &applyRects, const QList<KisRenderedDab> &allSrcDevices,"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/pigment/compositeops/KoOptimizedCompositeOpOver32.h",
+      "line": 81,
+      "source": "// A transparent source lane is a no-op, just like the scalar"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/pigment/compositeops/KoOptimizedCompositeOpOver128.h",
+      "line": 102,
+      "source": "// Preserve transparent-source lanes independently of vector"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/pigment/CMakeLists.txt",
+      "line": 10,
+      "source": "set_property(SOURCE ${__per_arch_factory_objs} APPEND PROPERTY OBJECT_DEPENDS ${_composite_factory_headers})"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 345,
+      "source": "void KisPainterTest::testCompositeOverTransparentLanes()"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 397,
+      "source": "void KisPainterTest::testMappedWritePartition()"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 498,
+      "source": "void KisPainterTest::testMappedWritePartitionParallel()"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 528,
+      "source": "void KisPainterTest::testMappedWritePartitionRejection()"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.cpp",
+      "line": 629,
+      "source": "void KisDabRenderingQueueTest::testBrushPagePartition()"
+    },
+    {
+      "group": "PG",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 411,
+      "source": "void KisBrushOp::paintLine(const KisPaintInformation& pi1, const KisPaintInformation& pi2, KisDistanceInformation *currentDistance)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 251,
+      "source": "void KisPainterBasedStrokeStrategy::initStrokeCallback()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.cpp",
+      "line": 187,
+      "source": "bool KisTransactionData::beginStrokeMutation(QString *error)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 187,
+      "source": "void KisPainterBasedStrokeStrategy::initPainters(KisPaintDeviceSP targetDevice,"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_p.h",
+      "line": 30,
+      "source": "KisTransaction*             transaction {nullptr};"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 322,
+      "source": "void KisPainter::beginTransaction(const KUndo2MagicString& transactionName,int timedID)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 300,
+      "source": "void KisPainter::begin(KisPaintDeviceSP device, KisSelectionSP selection)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 169,
+      "source": "void KisBrushOp::addDabJobs(const QVector<QRect> &rects, UpdateSharedStateSP state,"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 184,
+      "source": "state->painter->bltFixed(clips, state->dabsQueue, nullptr);"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 189,
+      "source": "void KisBrushOp::addMirroringJobs(Qt::Orientation direction,"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.cc",
+      "line": 1949,
+      "source": "bool KisPaintDevice::partitionWriteRects(const QVector<QRect> &rects, int patchSize,"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.cpp",
+      "line": 173,
+      "source": "bool KisTransactionData::strokeMutationTargetIsCurrent(KisPaintDeviceSP target, QString *error) const"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 411,
+      "source": "void KisBrushOp::paintLine(const KisPaintInformation& pi1, const KisPaintInformation& pi2, KisDistanceInformation *currentDistance)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/freehand_stroke.cpp",
+      "line": 143,
+      "source": "void FreehandStrokeStrategy::doStrokeCallback(KisStrokeJobData *data)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/KisMaskedFreehandStrokePainter.cpp",
+      "line": 101,
+      "source": "void KisMaskedFreehandStrokePainter::drawAndFillPainterPath(const QPainterPath &path, const QPen &pen, const KoColor &customColor)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 175,
+      "source": "void KisPainter::bltFixed(const QVector<QRect> &applyRects, const QList<KisRenderedDab> &allSrcDevices,"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.cc",
+      "line": 1896,
+      "source": "bool KisPaintDevice::applyPixelOperation("
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.cpp",
+      "line": 199,
+      "source": "bool KisTransactionData::applyStrokePixelOperation(KisPaintDeviceSP target, const QVector<QRect> &rects,"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/freehand_stroke.cpp",
+      "line": 228,
+      "source": "void FreehandStrokeStrategy::tryDoUpdate(bool forceEnd)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/freehand_stroke.cpp",
+      "line": 281,
+      "source": "void FreehandStrokeStrategy::issueSetDirtySignals()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_strokes_queue.cpp",
+      "line": 372,
+      "source": "bool KisStrokesQueue::addCheckpointJob(KisStrokeId id, KisStrokeJobData *data)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.cpp",
+      "line": 213,
+      "source": "bool KisTransactionData::checkpointStrokeMutation(QString *error)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 395,
+      "source": "void KisPainterBasedStrokeStrategy::finishStrokeCallback()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 488,
+      "source": "void KisPainterBasedStrokeStrategy::cancelStrokeCallback()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 230,
+      "source": "void KisPainterBasedStrokeStrategy::deletePainters()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 332,
+      "source": "m_maskingBrushRenderer.reset(new KisMaskingBrushRenderer(targetDevice, compositeOpId));"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/KisMaskedFreehandStrokePainter.cpp",
+      "line": 110,
+      "source": "std::pair<int, bool> KisMaskedFreehandStrokePainter::doAsynchronousUpdate(QVector<KisRunnableStrokeJobData *> &jobs)"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 523,
+      "source": "void KisPainterBasedStrokeStrategy::suspendStrokeCallback()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "line": 535,
+      "source": "void KisPainterBasedStrokeStrategy::resumeStrokeCallback()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "line": 1839,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation("
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tiled_data_manager.cc",
+      "line": 1610,
+      "source": "KisPageStoreWriteOperationResult KisTiledDataManager::writePageStoreOperation("
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.cpp",
+      "line": 629,
+      "source": "void KisDabRenderingQueueTest::testBrushPagePartition()"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tests/KisPainterStrokeCompletionTest.cpp",
+      "line": 51,
+      "source": "class CompletionStrategy : public KisPainterBasedStrokeStrategy"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tests/freehand_stroke_test.cpp",
+      "line": 25,
+      "source": "class FreehandStrokeTester : public utils::StrokeTester"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tests/CMakeLists.txt",
+      "line": 137,
+      "source": "krita_add_broken_unit_test( freehand_stroke_test.cpp  $<TARGET_PROPERTY:kritatestsdk,SOURCE_DIR>/stroke_testing_utils.cpp"
+    },
+    {
+      "group": "BC",
+      "file": "/Users/apple/krita_gpu/krita/libs/ui/tests/CMakeLists.txt",
+      "line": 142,
+      "source": "krita_add_broken_unit_test( FreehandStrokeBenchmark.cpp  $<TARGET_PROPERTY:kritatestsdk,SOURCE_DIR>/stroke_testing_utils.cpp"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 1006,
+      "source": "void KisPainter::bltFixed(qint32 dstX, qint32 dstY,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.h",
+      "line": 303,
+      "source": "void bltFixed(qint32 dstX, qint32 dstY,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 186,
+      "source": "void KisPainterTest::testFixedCursor()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 18,
+      "source": "bool KisPainter::Private::applyDevice(const QRect &applyRect,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_blt_multi_fixed.cpp",
+      "line": 88,
+      "source": "bool KisPainter::Private::applyDeviceWithSelection(const QRect &applyRect,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter_p.h",
+      "line": 83,
+      "source": "bool applyDevice(const QRect &applyRect,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 307,
+      "source": "void KisPainterTest::testFixedCursorOwnerRejection()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 1018,
+      "source": "const QRect dirtyRect(dstX, dstY, srcWidth, srcHeight);"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device_strategies.h",
+      "line": 609,
+      "source": "void writeBytes(const quint8 *data, const QRect &rect) override {"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 80,
+      "source": "void legacyFixedBlit(KisPaintDeviceSP target, KisFixedPaintDeviceSP source,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 682,
+      "source": "void KisPainter::bitBltImpl(qint32 dstX, qint32 dstY,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 3040,
+      "source": "void KisPainter::renderMirrorMask(QRect rc, KisPaintDeviceSP dab, KisTransaction *strokeOwner)"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 2965,
+      "source": "void KisPainter::renderMirrorMaskImpl(QRect rc, KisFixedPaintDeviceSP dab, KisTransaction *strokeOwner)"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 411,
+      "source": "void KisBrushOp::paintLine(const KisPaintInformation& pi1, const KisPaintInformation& pi2, KisDistanceInformation *currentDistance)"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 277,
+      "source": "void KisPainterTest::testSharpnessMirrorOwner()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 991,
+      "source": "void KisPainterTest::testFixedCursorSnapshots()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 868,
+      "source": "void KisPainterTest::testFixedCursorCancellation()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/pigment/compositeops/KoOptimizedCompositeOpAlphaDarken128.h",
+      "line": 28,
+      "source": "static ALWAYS_INLINE auto calculateAlpha("
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 142,
+      "source": "void KisPainterTest::testAlphaDarkenSpanInvariant()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.cpp",
+      "line": 717,
+      "source": "void KisDabRenderingQueueTest::testSharpnessLine()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp",
+      "line": 251,
+      "source": "void KisPainterTest::testFixedCursorReuse()"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_painter.cc",
+      "line": 1056,
+      "source": "void KisPainter::bltFixedWithFixedSelection(qint32 dstX, qint32 dstY,"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.h",
+      "line": 31,
+      "source": "void testAlphaDarkenSpanInvariant_data();"
+    },
+    {
+      "group": "FC",
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.h",
+      "line": 18,
+      "source": "void testSharpnessLine_data();"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.h",
+      "line": 874,
+      "source": "class KRITAIMAGE_EXPORT WriteContext {",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.cc",
+      "line": 1915,
+      "source": "KisPaintDevice::WriteContext KisPaintDevice::captureWriteContext()",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.cc",
+      "line": 1934,
+      "source": "bool KisPaintDevice::WriteContext::matches(KisPaintDevice *target) const",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.cpp",
+      "line": 187,
+      "source": "bool KisTransactionData::beginStrokeMutation(QString *error)",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.cpp",
+      "line": 173,
+      "source": "bool KisTransactionData::strokeMutationTargetIsCurrent(KisPaintDeviceSP target, QString *error) const",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.h",
+      "line": 56,
+      "source": "// write; source input must be immutable and coordinates are manager-local.",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/kis_transaction_data.cpp",
+      "line": 264,
+      "source": "bool KisTransactionData::tryAbortTransaction(QString *error)",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_transaction_test.cpp",
+      "line": 60,
+      "source": "void KisTransactionTest::testStrokeMappingContext()",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/kis_transaction_test.cpp",
+      "line": 127,
+      "source": "void KisTransactionTest::testOrdinaryTransactionMove()",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 241,
+      "source": "state->writeContext = state->painter->device()->captureWriteContext();",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 180,
+      "source": "if (!state->writeContext.matches(state->painter->device().data())) {",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.cpp",
+      "line": 772,
+      "source": "void KisDabRenderingQueueTest::testBrushQueuedContext()",
+      "group": "WC"
+    },
+    {
+      "file": "/Users/apple/krita_gpu/krita/plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "line": 348,
+      "source": "if (!state->writeContext.matches(state->painter->device().data())) {",
+      "group": "WC"
+    }
+  ],
+  "document_links_remapped": 0,
+  "topic_source_files": 158,
+  "reverse_index_files": 164,
+  "source_unchanged": true,
+  "source_diff_sha256": "e809ed039190e4bbc0a6b653653b67325d2761de666bb580a2dbd3e347b73830",
+  "active_hash_configuration": "ON",
+  "observed_matrix_totals": [
+    8891,
+    1,
+    0
+  ],
+  "matrix_passed": false,
+  "unresolved_matrix_failures": [
+    {
+      "name": "arm64-kis_tiled_data_manager_test",
+      "command": [
+        "arch",
+        "-arm64",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test"
+      ],
+      "started": "2026-09-28T05:36:22.692691+00:00",
+      "returncode": -6,
+      "log": "arm64-kis_tiled_data_manager_test.log",
+      "ended": "2026-09-28T05:42:12.326694+00:00",
+      "totals": [
+        806,
+        1,
+        0
+      ],
+      "passed": false
+    }
+  ],
+  "passed_probe_count": 54,
+  "runtime_tests_rerun_by_this_validator": false,
+  "new_stage_or_performance_qualification": false,
+  "changed_documents": [
+    "docs/vulkan_gpu_design/br1_modification_guide/01m_operation_storage_preparation.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/01n_hash_storage_and_reclamation.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/03_write_plans_and_hot_path.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/03b_legacy_cache_migration.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/04_reclamation_and_budgets.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/CHANGE_MAP.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/NEXT_EDITS.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/README.md",
+    "docs/vulkan_gpu_design/br1_modification_guide/STAGE_MAP.md",
+    "docs/vulkan_gpu_design/README.md",
+    "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+    "docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/README.md"
+  ],
+  "documents_sha256": {
+    "docs/vulkan_gpu_design/br1_modification_guide/01_stroke_scope_and_failure.md": "1d75bde94a324fc5b2ebce3a146ec09223ca0cc0d6c7ec7b6a110155b6c40eb1",
+    "docs/vulkan_gpu_design/br1_modification_guide/01a_transaction_completion_callers.md": "888aeff05db6e2600327a6b73c3558a991879f61993046a686bbde03f1ebad2e",
+    "docs/vulkan_gpu_design/br1_modification_guide/01b_pixel_failure_boundaries.md": "19b6fff1b90f9c310162fa27e0e338b1bf28c8a98b4cb986dcf492fb17d59b6f",
+    "docs/vulkan_gpu_design/br1_modification_guide/01c_mutation_session_storage_and_borrow.md": "e52254eb18a1c7732c9455a7cfbdfd9be1b7307748be4881a4e7f2e55c8b65d1",
+    "docs/vulkan_gpu_design/br1_modification_guide/01d_metadata_refresh_and_pending_visibility.md": "0642a7d0d8735514b37fd46089909ffa4641bb6cb3fe60a0b4c533d6e091f3ee",
+    "docs/vulkan_gpu_design/br1_modification_guide/01e_scheduler_cut_and_job_admission.md": "2b229f07c254e6079f0233d1ac99edfbccef2c744f9818c35ce9481502b34cbb",
+    "docs/vulkan_gpu_design/br1_modification_guide/01f_history_owned_mutation_scope.md": "4f55033ce68fa9c668f208705ceb51bf26a5909795f67bcba990194d753cd651",
+    "docs/vulkan_gpu_design/br1_modification_guide/01g_multi_dab_and_painter_scope.md": "24ff797ae18231f71f596290b1e7bd523d80cf0475ce9b26896c2b7a1e259a35",
+    "docs/vulkan_gpu_design/br1_modification_guide/01h_sparse_write_footprints.md": "83ba28181edacabc0308e1fecb3cb704b4842a2f93056121f0d280a4d77bed2c",
+    "docs/vulkan_gpu_design/br1_modification_guide/01i_page_owned_brush_jobs.md": "820b79dd6d77b24ba2e04e5ad01053d0ecb800d6753312c4bc12251a67ea1434",
+    "docs/vulkan_gpu_design/br1_modification_guide/01j_real_stroke_integration.md": "6dc24f66790c29cc8e1aa8007d835f21f1cf787d5b41eb89eb3c95c26db7fdc7",
+    "docs/vulkan_gpu_design/br1_modification_guide/01k_fixed_source_and_sharpness.md": "f18bb3dd7efefed6f3caf2045ea8955c9ec0b7c6b3fdffebebfc657c72113940",
+    "docs/vulkan_gpu_design/br1_modification_guide/01l_write_context.md": "addb59c010b65637c11729993a12d5409767ac13bf92824447c80f001ecc281e",
+    "docs/vulkan_gpu_design/br1_modification_guide/01m_operation_storage_preparation.md": "9278eff16e3c99e6e7b5f0c6f2719efa232b3dbf4d904f56e19a01a3ce13ca04",
+    "docs/vulkan_gpu_design/br1_modification_guide/01n_hash_storage_and_reclamation.md": "6f2fd53ea2fd344be2532cece09cabc5b77fa25aa309739b4ae0855fdc1441c4",
+    "docs/vulkan_gpu_design/br1_modification_guide/02_visibility_and_publication.md": "b1332f2a8f30ae319c298df4d50ec3f0e0a07c0f78f000918db3c69fb166507c",
+    "docs/vulkan_gpu_design/br1_modification_guide/03_write_plans_and_hot_path.md": "1769c5c0c7e2be747108efc942bc18fac322f8ff4f5aa9eea5c10637e6b0367a",
+    "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md": "9820143758844d1c4012ab05eb8c6c6eefc542157e2928e77b5f2f2f6c2edacc",
+    "docs/vulkan_gpu_design/br1_modification_guide/03b_legacy_cache_migration.md": "ad1da8058cb11b436e75c8b2d68ac3431497b567462c6a67f565909d1f6192c2",
+    "docs/vulkan_gpu_design/br1_modification_guide/04_reclamation_and_budgets.md": "60ba790b08e190cf5ff9e0ca51fe119faec45e3a847bb21b793af55dccaf390d",
+    "docs/vulkan_gpu_design/br1_modification_guide/04a_retirement_wakeup_implementation_map.md": "01979bfd9f81c7cc9782f466b69a1b5896c0e68a831beadb5c18883e845ba03a",
+    "docs/vulkan_gpu_design/br1_modification_guide/04b_budget_waiter_implementation_map.md": "2304b87308fe58773bdab94ffe39100e779467f07b4d58ecd4f89a30f87b7e85",
+    "docs/vulkan_gpu_design/br1_modification_guide/04c_generic_write_admission.md": "9be519453594aa4aa37a1ac34f87bbbf24790427d024b76d572a999c05fd8cd5",
+    "docs/vulkan_gpu_design/br1_modification_guide/05_undo_delta.md": "a2ea9af58f567d3363309c2cd5e030266f9c91dc0de13c6a7c9a1ce28e3c5c67",
+    "docs/vulkan_gpu_design/br1_modification_guide/06_context_switching.md": "8bbfbf782a8f4a4092f78419c8f3abb12b79cb2e599485c645abe4c6beed51ad",
+    "docs/vulkan_gpu_design/br1_modification_guide/07_validation_and_migration.md": "e2c035c4d33ccdb037380c7a4896e64d8e52083977327fec531ebcc8fcdc58d3",
+    "docs/vulkan_gpu_design/br1_modification_guide/CHANGE_MAP.md": "290b408e1ad273753bf43984b9d838365b0fede76a54b1d90e473abdaf2e6d82",
+    "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md": "080bd57f9c5e707857675f2ebe00e76285327df30779de1f675dfefdc9237e6f",
+    "docs/vulkan_gpu_design/br1_modification_guide/NEXT_EDITS.md": "931255856fd2bc0703cbeff337b277055739a66494b64d25117f0bdfefddc151",
+    "docs/vulkan_gpu_design/br1_modification_guide/README.md": "6bf18cf62de6ff91847d58c95047d2cb40256d2347c5665d0ed6b4e5b7fe872c",
+    "docs/vulkan_gpu_design/br1_modification_guide/STAGE_MAP.md": "53c174fe11e1749aa1a9238b3053c42fd8ece441b2319503a90512f8a97cd48f",
+    "docs/vulkan_gpu_design/README.md": "501209676b3b0b21f434faa8490f746f312c189eb8607356fd9cc6f26f84d955",
+    "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md": "96d5c13b01630b6400883fe3cc7bbf5a5090086f3cc995200cf9f89739a193bf",
+    "docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/README.md": "29c15eebdbc4fa46be26776a348e5062aaaacd4d15fc81f38e11460c3d00c745"
+  },
+  "errors": [
+    "HX anchor coverage differs"
+  ]
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_parent_comparison.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 126.71879966603592,
+    "log": "final-performance-command-0.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/analyze_parent_comparison.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.2431235839612782,
+    "log": "final-performance-command-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 125.19669958390296,
+    "log": "final-performance-command-2.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/fixed-m5-fresh-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.3658472078386694,
+    "log": "final-performance-command-3.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_fixed_m5_history.py",
+      "--round",
+      "fixed-m5-history"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 129.03611149988137,
+    "log": "final-performance-command-4.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-history",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/fixed-m5-history-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.4054258749820292,
+    "log": "final-performance-command-5.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/run_latency.py",
+      "--round",
+      "latency-paired"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 44.4597909161821,
+    "log": "final-performance-command-6.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/analyze_latency.py",
+      "--round",
+      "latency-paired",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/latency-paired-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.29154091607779264,
+    "log": "final-performance-command-7.log"
+  }
+]

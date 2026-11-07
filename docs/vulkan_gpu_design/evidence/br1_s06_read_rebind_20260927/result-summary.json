@@ -1,0 +1,40 @@
+{
+  "scope": "S06 bounded exact-version read cache rediscovery and metadata/physical/ledger/read primitive integration; cumulative CPU correctness, not production handoff selector/M6/stage/performance qualification",
+  "final_run": "checks-01",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "1a110cfd892c50c982e8365f196e9a3a248ad7d0123392996233c77671a1520e",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      2339,
+      0,
+      0
+    ],
+    "x86_64": [
+      2339,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    4678,
+    0,
+    0
+  ],
+  "new_read_rediscovery_cases_per_architecture": 160,
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 22,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1514,
+    "call_edges": 14614,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "allocator_summary": "allocator-summary.json",
+  "production_captured_read_bounded_retry": true,
+  "production_selector_handoff": false,
+  "stage_or_performance_qualification": false
+}

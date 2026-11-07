@@ -1,0 +1,601 @@
+{
+  "raw_sample_sha256": "d0fbc30fa1f5485c015d9e3d992f9be831207928315bbee34060225e6782ed34",
+  "actual_handoff_prepare": true,
+  "scope": "Original native N=K16,H0,B4 harness; completed-operation marker first; all-thread exclusive frames and exact preparation contextual rows. Setup/cleanup are present in the harness, so neither inclusive rows nor global top-of-stack figures establish timing fractions or causal speedups.",
+  "product_frames": [
+    {
+      "function": "KisBackingBudgetController::fitsLocked(KisBackingBudgetDelta const&, std::array<unsigned long long, 7ul> const&, unsigned long long, bool, unsigned long long) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 179
+    },
+    {
+      "function": "DYLD-STUB$$memcpy",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 130
+    },
+    {
+      "function": "KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 61
+    },
+    {
+      "function": "KisMutationStorageOwner::deref()",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 43
+    },
+    {
+      "function": "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)::$_0::operator()(KisBackingBudgetController*, unsigned long long) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 32
+    },
+    {
+      "function": "<deduplicated_symbol>",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 26
+    },
+    {
+      "function": "kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 22
+    },
+    {
+      "function": "KisBackingBudgetController::releaseSharedNonPayloadLive(unsigned long long, KisPageAccessDomain, unsigned long long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 13
+    },
+    {
+      "function": "KisReplicaHandle::isValid() const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 12
+    },
+    {
+      "function": "KisShardSlotIndex<KisPageVersion, KisGenerationalSlotId<KisVersionSlotTag>>::hash(KisPageVersion const&) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 10
+    },
+    {
+      "function": "KisPageMetadataCoordinator::versionSnapshot(KisPageVersion const&, KisPageMetadataCoordinator::VersionInfo*, std::vector<KisPageMetadataCoordinator::ReplicaCandidate, KisMutationStorageAllocator<KisPageMetadataCoordinator::ReplicaCandidate>>*) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "operator==(KisReplicaHandle const&, KisReplicaHandle const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "KisBackingBudgetController::commitRetaining(unsigned long long, KisBackingBudgetDelta const&, KisBackingBudgetDelta const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisBackingBudgetController::releaseLive(KisBackingBudgetClass, KisPageAccessDomain, unsigned long long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisCompletionRegistry::allocatePending(unsigned long long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisCompletionRegistry::complete(KisCompletionTicket const&, KisCompletionStatus)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisPageMetadataCoordinator::registerPage(KisPageStateSnapshot const&, QString*)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "KisPageOwnerLedger::Private::storePreparedChange(std::vector<KisBackingClassChange, KisMutationStorageAllocator<KisBackingClassChange>>, KisBackingBudgetReservation, KisReplicaHandle const&, std::vector<(anonymous namespace)::PreparedRetirementCredit, KisMutationStorageAllocator<(anonymous namespace)::PreparedRetirementCredit>>)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "kisPageStorageAllocationBytes(unsigned long, unsigned long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "std::__tree<std::__value_type<KisPageVersion, std::shared_ptr<KisCpuReadBindingLink>>, std::__map_value_compare<KisPageVersion, std::__value_type<KisPageVersion, std::shared_ptr<KisCpuReadBindingLink>>, (anonymous namespace)::MetadataKeyLess, true>, (anonymous namespace)::MetadataMapAllocator<std::__value_type<KisPageVersion, std::shared_ptr<KisCpuReadBindingLink>>>>::find<KisPageVersion>(KisPageVersion const&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "CompletionSourceState::complete(unsigned long long, KisCompletionStatus, CompletionInterval*&)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "DYLD-STUB$$malloc_good_size",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "DYLD-STUB$$malloc_size",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "KisMutationStorageOwner::allocate(unsigned long, unsigned long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "kisFreePageStorage(void*, unsigned long)",
+      "image": "libkritaimage.21.0.0.dylib",
+      "exclusive_samples": 5
+    }
+  ],
+  "background_and_system_frames": [
+    {
+      "function": "__workq_kernreturn",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 3366
+    },
+    {
+      "function": "__psynch_cvwait",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 3158
+    },
+    {
+      "function": "__ulock_wait2",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 1793
+    },
+    {
+      "function": "_platform_memmove",
+      "image": "libsystem_platform.dylib",
+      "exclusive_samples": 397
+    },
+    {
+      "function": "__ulock_wake",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 82
+    },
+    {
+      "function": "tiny_free_no_lock",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 39
+    },
+    {
+      "function": "tiny_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 31
+    },
+    {
+      "function": "_platform_memset",
+      "image": "libsystem_platform.dylib",
+      "exclusive_samples": 28
+    },
+    {
+      "function": "tiny_malloc_from_free_list",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 27
+    },
+    {
+      "function": "__psynch_cvsignal",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 23
+    },
+    {
+      "function": "free_tiny",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 23
+    },
+    {
+      "function": "malloc_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 20
+    },
+    {
+      "function": "QRect::contains(QRect const&, bool) const",
+      "image": "QtCore",
+      "exclusive_samples": 14
+    },
+    {
+      "function": "mach_continuous_time",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 13
+    },
+    {
+      "function": "tiny_free_list_add_ptr",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 13
+    },
+    {
+      "function": "_free",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 12
+    },
+    {
+      "function": "tiny_free_list_remove_ptr",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 11
+    },
+    {
+      "function": "tiny_malloc_should_clear",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 10
+    },
+    {
+      "function": "__write_nocancel",
+      "image": "libsystem_kernel.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "szone_malloc_should_clear",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 7
+    },
+    {
+      "function": "default_zone_good_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 6
+    },
+    {
+      "function": "QBasicMutex::lockInternal()",
+      "image": "QtCore",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "get_tiny_previous_free_msize",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "main",
+      "image": "probe",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "malloc_good_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "malloc_type_malloc",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 5
+    },
+    {
+      "function": "szone_good_size",
+      "image": "libsystem_malloc.dylib",
+      "exclusive_samples": 5
+    }
+  ],
+  "actual_preparation_contexts": [
+    {
+      "raw_line": 1145,
+      "inclusive_samples": 59,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1147,
+      "inclusive_samples": 8,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1169,
+      "inclusive_samples": 6,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1183,
+      "inclusive_samples": 6,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1198,
+      "inclusive_samples": 5,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1210,
+      "inclusive_samples": 5,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1227,
+      "inclusive_samples": 4,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1241,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1250,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1254,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1260,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1262,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1267,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1273,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1274,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1277,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1279,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1281,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1283,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1289,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1291,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1293,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1295,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1297,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1303,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1305,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1307,
+      "inclusive_samples": 27,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1308,
+      "inclusive_samples": 14,
+      "function": "KisPageOwnerLedger::prepareBackingHandoff(KisReplicaHandle const&, KisReplicaHandle const&, QString*)"
+    },
+    {
+      "raw_line": 1341,
+      "inclusive_samples": 7,
+      "function": "KisPageOwnerLedger::prepareBackingHandoff(KisReplicaHandle const&, KisReplicaHandle const&, QString*)"
+    },
+    {
+      "raw_line": 1357,
+      "inclusive_samples": 1,
+      "function": "KisPageOwnerLedger::prepareBackingHandoff(KisReplicaHandle const&, KisReplicaHandle const&, QString*)"
+    },
+    {
+      "raw_line": 1359,
+      "inclusive_samples": 1,
+      "function": "KisPageOwnerLedger::prepareBackingHandoff(KisReplicaHandle const&, KisReplicaHandle const&, QString*)"
+    },
+    {
+      "raw_line": 1361,
+      "inclusive_samples": 1,
+      "function": "KisPageOwnerLedger::prepareBackingHandoff(KisReplicaHandle const&, KisReplicaHandle const&, QString*)"
+    },
+    {
+      "raw_line": 1362,
+      "inclusive_samples": 1,
+      "function": "KisPageOwnerLedger::prepareBackingHandoff(KisReplicaHandle const&, KisReplicaHandle const&, QString*)"
+    },
+    {
+      "raw_line": 1363,
+      "inclusive_samples": 1,
+      "function": "KisPageOwnerLedger::prepareBackingHandoff(KisReplicaHandle const&, KisReplicaHandle const&, QString*)"
+    },
+    {
+      "raw_line": 1372,
+      "inclusive_samples": 9,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1392,
+      "inclusive_samples": 7,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1394,
+      "inclusive_samples": 7,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)::Prepared::~Prepared()"
+    },
+    {
+      "raw_line": 1415,
+      "inclusive_samples": 6,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1430,
+      "inclusive_samples": 4,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1447,
+      "inclusive_samples": 2,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1451,
+      "inclusive_samples": 1,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1453,
+      "inclusive_samples": 1,
+      "function": "KisPageWriteCoordinator::prepareWritePlanLocked(KisPageTransaction const&, KisPageWriteIntent const&, std::shared_ptr<KisPageReplicaProvider> const&, KisPageAccessRequirement, KisPageAllocationDescriptor const&, KisPagePublicationCoordinator&, KisPageTransition&, KisReplicaHandle const&, QMutexLocker<QMutex>&, KisCpuWriteBindingReservation&, KisPageStoreDiagnosticTimer&)"
+    },
+    {
+      "raw_line": 1454,
+      "inclusive_samples": 1,
+      "function": "KisCpuBackingHandoff::prepare(std::shared_ptr<KisPageReplicaProvider> const&, KisReplicaHandle const&, KisPageVersion const&, KisPageAllocationDescriptor const&)"
+    },
+    {
+      "raw_line": 1542,
+      "inclusive_samples": 7,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1559,
+      "inclusive_samples": 5,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1571,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1577,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1581,
+      "inclusive_samples": 2,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1584,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1590,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1594,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1595,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1597,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1600,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1602,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1604,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1611,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1612,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1615,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1616,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1620,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1628,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1632,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1633,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    },
+    {
+      "raw_line": 1634,
+      "inclusive_samples": 1,
+      "function": "KisPageMetadataCoordinator::preparePublicationImpl(KisPageTransaction const&, KisImageEpochId, KisPageTransition const*, long long, bool, QString*, KisPageMetadataCoordinator::PreparationKind, KisPageVersion const*, KisPageMetadataCoordinator::PublicationChange const*) const"
+    }
+  ]
+}

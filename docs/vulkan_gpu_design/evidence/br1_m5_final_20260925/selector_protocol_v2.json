@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "purpose": "M5 selector forced-COW matched-control throughput gate after mutable-hot-branch convergence",
+  "source_revision": "a0400cf0f7484004dd520e5c03dbc71cbe6827b4",
+  "architecture": "arm64",
+  "candidate": "Unmodified production selector and runtime from the frozen source revision.",
+  "control": "The same source, compiler, build configuration, fixture and runtime with only selector-control-v2.patch applied. The exact measured MutableGuard + PreserveContents + no-ready-payload condition returns FreshCow through an early specialized branch; every other plan follows the final production selector.",
+  "required_buckets": [
+    "write-n64-k1-b4",
+    "write-n1024-k16-b4"
+  ],
+  "bucket_scope": "Resident CPU/CpuRam partial writes, H=0, one thread, one in-flight operation, diagnostics disabled. Current M5 has no handoff and therefore selects FreshCow for these PreserveContents MutableGuard writes.",
+  "pairs": 40,
+  "rate_ms": 750,
+  "metric": "Direct completed-operation throughput reported by the fixture as completed_operations / wall_ns. This is not inferred by inverting sampled latency.",
+  "comparison": "Per-pair candidate/control throughput ratio. The control changes only the selector result computation for the measured forced-COW intent; allocation, copy, publication, drain and fixture code are identical.",
+  "tolerance": "Candidate throughput regression must not exceed 2% in either required bucket: candidate/control >= 0.98.",
+  "confidence": "For two required buckets, each bucket uses a one-sided 97.5% paired-bootstrap lower bound, giving at least 95% familywise confidence by Bonferroni. The statistic is the median paired throughput ratio.",
+  "bootstrap_seed": 260925,
+  "bootstrap_resamples": 50000,
+  "run_order": "Rotate bucket order by pair. Alternate control/candidate order on successive pairs. Preserve all samples.",
+  "stop_rule": "Exactly 40 independent process pairs per bucket; no optional stopping, sample deletion or rerun replacement. This is a new protocol for a changed production implementation; the failed 20-pair pre-change experiment remains preserved.",
+  "environment": "No build, TSAN, profiler or other benchmark runs concurrently. QT_QPA_PLATFORM=offscreen; KIS_CPU_BASELINE_LOOPS=4; KIS_CPU_BASELINE_RATE_MS=750; KIS_BR1_STAGE_PROFILE=0.",
+  "secondary_evidence": "Preserve process wall time, setup, manager destruction, correctness and loader identity. These are reported but do not replace the selector throughput gate.",
+  "limits": "This gate closes the M5 selector regression requirement only. It is not the full upstream CPU BR1-PERF, M/K/X/E matrix, tail-latency qualification or M6/M7 handoff performance."
+}

@@ -1,0 +1,126 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.944,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 370ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "historyDetachRequiresRetirementOwner",
+      "historyPreparationRevalidatesProtection",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity",
+      "providerCompletionPreparationRejectsBeforePayload",
+      "synchronousProviderResultsAtCapacity",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 5.081,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 1549ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "ownerLedgerSeparatesDetachedRetirement",
+      "ownerLedgerVerifiesTerminalProviderIdentity",
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.574,
+    "totals": [
+      "Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.751,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 557ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "historyDetachRequiresRetirementOwner",
+      "historyPreparationRevalidatesProtection",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity",
+      "providerCompletionPreparationRejectsBeforePayload",
+      "synchronousProviderResultsAtCapacity",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.836,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 1597ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "ownerLedgerSeparatesDetachedRetirement",
+      "ownerLedgerVerifiesTerminalProviderIdentity",
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.217,
+    "totals": [
+      "Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 3ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

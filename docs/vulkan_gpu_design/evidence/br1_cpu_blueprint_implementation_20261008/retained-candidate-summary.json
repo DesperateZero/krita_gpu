@@ -1,0 +1,123 @@
+{
+  "pairs": 8,
+  "blocks": 4,
+  "bootstrap": 20000,
+  "seed": 261028,
+  "interval": "pointwise two-sided95%, block log ratios; no family adjustment",
+  "interpretation": "local control only, no formal M6 qualification",
+  "endpoints": {
+    "Stroke/wall_ns": {
+      "reduction": -0.041184721739270236,
+      "ci_low": -0.06284866681085144,
+      "ci_high": -0.022573740972978706,
+      "parent_median_ns": 8027500.0,
+      "candidate_median_ns": 8396500.0,
+      "paired_saving_median_ns": -422500.0,
+      "block_log_ratios": [
+        0.07275949257208915,
+        0.04403193944308237,
+        0.01911302707446185,
+        0.025532422216340302
+      ]
+    },
+    "Stroke/cpu_ns": {
+      "reduction": -0.04918485182451038,
+      "ci_low": -0.060585873735417906,
+      "ci_high": -0.03790638792972567,
+      "parent_median_ns": 18211000.0,
+      "candidate_median_ns": 19210500.0,
+      "paired_saving_median_ns": -846000.0,
+      "block_log_ratios": [
+        0.058695695254822176,
+        0.05894723775841737,
+        0.03561289316814111,
+        0.03879829810782247
+      ]
+    },
+    "Undo/wall_ns": {
+      "reduction": 0.037953430953349465,
+      "ci_low": -0.04142939793326228,
+      "ci_high": 0.09376484131167628,
+      "parent_median_ns": 560500.0,
+      "candidate_median_ns": 510500.0,
+      "paired_saving_median_ns": 38500.0,
+      "block_log_ratios": [
+        0.0868741891450049,
+        -0.09824580507164696,
+        -0.04473097367348546,
+        -0.09866709406261619
+      ]
+    },
+    "Undo/cpu_ns": {
+      "reduction": 0.03205054906502436,
+      "ci_low": -0.054533263534463305,
+      "ci_high": 0.09788894620762734,
+      "parent_median_ns": 701500.0,
+      "candidate_median_ns": 642500.0,
+      "paired_saving_median_ns": 42500.0,
+      "block_log_ratios": [
+        0.1026895136597833,
+        -0.11035981223204218,
+        -0.0269558723813612,
+        -0.09567548175667444
+      ]
+    },
+    "Redo/wall_ns": {
+      "reduction": -0.0007020459654794031,
+      "ci_low": -0.025775107533106745,
+      "ci_high": 0.017027697445214818,
+      "parent_median_ns": 1320500.0,
+      "candidate_median_ns": 1333500.0,
+      "paired_saving_median_ns": -20500.0,
+      "block_log_ratios": [
+        -0.021718548166647547,
+        0.03686333608958503,
+        -0.00879589113008554,
+        -0.0035416982068973164
+      ]
+    },
+    "Redo/cpu_ns": {
+      "reduction": -0.013525499455891765,
+      "ci_low": -0.03854481102005258,
+      "ci_high": 0.002486824018912981,
+      "parent_median_ns": 1453500.0,
+      "candidate_median_ns": 1479500.0,
+      "paired_saving_median_ns": -35000.0,
+      "block_log_ratios": [
+        -0.0059779682573816925,
+        0.04976945918502956,
+        0.007974219565102456,
+        0.0019736750753524216
+      ]
+    },
+    "Teardown/wall_ns": {
+      "reduction": 0.0013119670408028306,
+      "ci_low": -0.04403226001040528,
+      "ci_high": 0.037978730098885416,
+      "parent_median_ns": 582500.0,
+      "candidate_median_ns": 578000.0,
+      "paired_saving_median_ns": 6000.0,
+      "block_log_ratios": [
+        0.06370573189871143,
+        -0.018755638191541836,
+        -0.05233673325339392,
+        0.002135325854037218
+      ]
+    },
+    "Teardown/cpu_ns": {
+      "reduction": -0.001178447275539396,
+      "ci_low": -0.03543376986817903,
+      "ci_high": 0.03194360425711218,
+      "parent_median_ns": 840000.0,
+      "candidate_median_ns": 837500.0,
+      "paired_saving_median_ns": 8500.0,
+      "block_log_ratios": [
+        0.04837251009670123,
+        -0.019951423065596503,
+        -0.04497844360969334,
+        0.021268370384929933
+      ]
+    }
+  },
+  "workload_variations": []
+}

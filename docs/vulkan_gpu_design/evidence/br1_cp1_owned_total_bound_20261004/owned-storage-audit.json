@@ -1,0 +1,99 @@
+{
+  "product": "0933ea04ddbe8bb58c04dc891d864be8cd95d778",
+  "scope": "Current BR1 CPU/PageStore production-owned dynamic control storage on Darwin",
+  "hard_bound": {
+    "control": "one product process metadata budget; admission requires live + reserved <= limit",
+    "payload": "original provider/ledger logical, resident, history, pending and retirement domain limits; one physical backing charge",
+    "composition": "vector bound; overlapping payload buckets are not summed and caller adapter storage is not charged twice"
+  },
+  "owned": [
+    {
+      "objects": "backend facade and Private",
+      "source": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h:85; libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:305",
+      "allocation": "KisPageProcessStorageObject",
+      "release": "facade and QScopedPointer destruction"
+    },
+    {
+      "objects": "Store, completion, provider and history roots plus their Private/control blocks",
+      "source": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:319-330",
+      "allocation": "retained KisMutationStorageAllocator backed by the product process budget",
+      "release": "original retained allocators survive through final shared/weak free"
+    },
+    {
+      "objects": "history/thread/source maps, uniform pixel and uniform source",
+      "source": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:37-38,382-393,2392-2408",
+      "allocation": "StorageMap, KisPageByteArray and provider retained allocator",
+      "release": "backend owner or final shared source"
+    },
+    {
+      "objects": "write batch facade, Private/control and source map",
+      "source": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h:40; libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:398-432,542",
+      "allocation": "process object plus allocate_shared/StorageMap with KisMutationStorageAllocator",
+      "release": "final public batch or borrowed lease control"
+    },
+    {
+      "objects": "iterator write scope facade and Private",
+      "source": "libs/image/tiles3/kis_tiled_data_manager.h:53-70; libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:502-521",
+      "allocation": "explicit process operator new for facade and KisPageProcessStorageObject Private",
+      "release": "scope destruction after final client finish/cancel"
+    },
+    {
+      "objects": "iterator read scope and cold invalid scope",
+      "source": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:394-395,1248-1295",
+      "allocation": "allocate_shared with KisMutationStorageAllocator",
+      "release": "final immutable scope reference"
+    },
+    {
+      "objects": "writable lease and Tiles3 read cache",
+      "source": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:183-264,1605-1647; libs/image/pagestore/KisTiles3PageReplicaProvider.cpp:151-190",
+      "allocation": "KisPageProcessStorageObject",
+      "release": "finish/cancel and unique_ptr destruction"
+    },
+    {
+      "objects": "PageStore memento object and old/new default pixels",
+      "source": "libs/image/tiles3/kis_memento_manager.cc:19-103; libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:1648-1680",
+      "allocation": "kisAllocatePageProcessStorage with source prefix",
+      "release": "matching kisFreePageProcessStorage on final memento destruction/replacement"
+    },
+    {
+      "objects": "extent facade and row/column atomic buffers",
+      "source": "libs/image/tiles3/KisTiledExtentManager.cpp:334-346",
+      "allocation": "process object and process PMR resource",
+      "release": "facade destruction and original buffer deleter"
+    },
+    {
+      "objects": "operation-local transfer row storage",
+      "source": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp:1994",
+      "allocation": "std::vector with KisMutationStorageAllocator",
+      "release": "operation scope"
+    },
+    {
+      "objects": "process/native reservation, live storage and worker control",
+      "source": "libs/image/pagestore/KisPageWriteCoordinator.cpp:55-126,1720-1925; libs/image/pagestore/KisPageStoreReclamation.cpp",
+      "allocation": "single ProcessStorageState and process allocator",
+      "release": "physical free or pthread join precedes live charge release"
+    }
+  ],
+  "excluded": [
+    {
+      "objects": "KisTiledDataManager hash/memento manager/default pixel, Tile wrappers and compatibility preparation identity",
+      "owner": "existing caller adapter",
+      "source": "libs/image/tiles3/kis_tiled_data_manager.cc:221-306; libs/image/tiles3/kis_tile_hash_table_p.h:19-66,247-281"
+    },
+    {
+      "objects": "input/output QVector/QByteArray and PreparedTileUpdates",
+      "owner": "operation caller",
+      "source": "libs/image/tiles3/kis_tiled_data_manager.cc:50-143"
+    },
+    {
+      "objects": "Surface/BackendService/EvaluationGraph prototypes and Unified SSD persistence records",
+      "owner": "disabled BR0/BR3 or test-only path",
+      "source": "docs/vulkan_gpu_design/evidence/br1_cp1_concentrated_20261003/allocation-contracts.json"
+    }
+  ],
+  "remaining": [
+    "remaining real allocator faults and joint read/publication/late-fence/caller terminals",
+    "non-Darwin capacity/free implementation and platform execution",
+    "29 historical UE processes and recoverable default-abort host qualification"
+  ]
+}

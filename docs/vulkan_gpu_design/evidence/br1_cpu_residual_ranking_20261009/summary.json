@@ -1,0 +1,1318 @@
+{
+  "schema": 1,
+  "source_product": "704d96e81cf29d16191bc3db8785859d79775e27",
+  "source_tree": "4e7fc164db46c02b968fdd04400b9e4402e289d0",
+  "source_document_parent": "36fb72baf25412fd5f7f7f6c71c487ff93162019",
+  "input_sha256": {
+    "runs-upstream/results.json": "7a1fa446b0b18ce954665b3e90b3c85604a38e681b6f54f0c90fba7f44aa7faa",
+    "upstream-summary.json": "fd3499d52535e9b3bf21d489b7dd9234dd2cc65f6c5559eeab349606cdefaaa9",
+    "parent-summary.json": "de85f97df08b79b80a3bd957238d9a836970a635a2bc6840bfb7ab2b61264555",
+    "original-summary.json": "894f9a78dd6480b4d8d8fa06a5b64e5f1695bb342bca9b2a3f0d2499e71dcfac",
+    "runs-countfix-diagnostic/results.json": "e50ef598a265bd9d2bda84ba360e272ca207fd2e8f6e4d749a058f935e564064",
+    "counts-summary.json": "2437bde36a0f8b244c001c0a11a8dd0635b917436d6285a94f512f36a8f9a239",
+    "delivery-identity.json": "b94d080facd7eb99fb3bb95f87553d46a240a36036f33bfdf7362818993ef08f"
+  },
+  "method": "Post-hoc reanalysis of all frozen rows; no new samples or CIs. Stage CIs copied from original pointwise block analysis. Diagnostic timings include observation costs, do not price upstream differences or removable work.",
+  "four_phase_mean_extra_ms": 9.55595,
+  "stages": {
+    "Stroke": {
+      "cpu_extra_ms": {
+        "values": [
+          8.039,
+          0.312,
+          7.379,
+          8.104,
+          8.064,
+          6.956,
+          6.085,
+          8.9,
+          7.634,
+          7.005,
+          6.723,
+          8.794,
+          8.51,
+          8.059,
+          7.67,
+          7.734,
+          -0.834,
+          7.732,
+          7.061,
+          7.853,
+          7.422,
+          22.82,
+          9.947,
+          8.466,
+          7.458,
+          7.388,
+          6.547,
+          7.31,
+          8.258,
+          9.508,
+          7.122,
+          8.241,
+          7.838,
+          7.122,
+          8.104,
+          8.125,
+          7.019,
+          8.846,
+          8.792,
+          7.803
+        ],
+        "median": 7.7684999999999995,
+        "minimum": -0.834,
+        "maximum": 22.82
+      },
+      "mean_cpu_extra_ms": 7.7979,
+      "cpu_ratio": 1.8648758648647297,
+      "cpu_ratio_pointwise_95_ci": [
+        1.7591767493038348,
+        1.9704047754849214
+      ],
+      "share_of_four_phase_mean_extra": 0.8160256175471827
+    },
+    "Undo": {
+      "cpu_extra_ms": {
+        "values": [
+          0.477,
+          0.563,
+          0.434,
+          0.52,
+          0.508,
+          0.427,
+          0.463,
+          0.459,
+          0.596,
+          0.628,
+          0.517,
+          0.539,
+          0.38,
+          0.594,
+          0.502,
+          0.435,
+          0.503,
+          0.453,
+          0.571,
+          0.599,
+          0.572,
+          0.911,
+          0.795,
+          0.505,
+          0.517,
+          0.518,
+          0.575,
+          0.59,
+          0.459,
+          0.43,
+          0.425,
+          0.504,
+          0.534,
+          0.583,
+          0.435,
+          0.508,
+          0.534,
+          0.507,
+          0.492,
+          0.555
+        ],
+        "median": 0.5125,
+        "minimum": 0.38,
+        "maximum": 0.911
+      },
+      "mean_cpu_extra_ms": 0.527925,
+      "cpu_ratio": 6.18953986534963,
+      "cpu_ratio_pointwise_95_ci": [
+        5.705194068031988,
+        6.7669388138776645
+      ],
+      "share_of_four_phase_mean_extra": 0.055245684625809054
+    },
+    "Redo": {
+      "cpu_extra_ms": {
+        "values": [
+          0.822,
+          0.445,
+          0.788,
+          0.684,
+          0.751,
+          0.751,
+          0.733,
+          0.795,
+          0.735,
+          0.759,
+          0.672,
+          0.747,
+          0.774,
+          0.76,
+          0.786,
+          0.745,
+          0.45,
+          0.805,
+          0.602,
+          0.793,
+          0.625,
+          0.889,
+          0.851,
+          0.731,
+          0.758,
+          0.883,
+          0.87,
+          1.039,
+          0.773,
+          0.885,
+          0.707,
+          0.748,
+          0.771,
+          0.702,
+          0.805,
+          0.743,
+          0.673,
+          0.818,
+          0.852,
+          0.64
+        ],
+        "median": 0.7585,
+        "minimum": 0.445,
+        "maximum": 1.039
+      },
+      "mean_cpu_extra_ms": 0.754,
+      "cpu_ratio": 4.803596988203178,
+      "cpu_ratio_pointwise_95_ci": [
+        4.498621056847345,
+        5.096711708932478
+      ],
+      "share_of_four_phase_mean_extra": 0.0789037196720368
+    },
+    "Teardown": {
+      "cpu_extra_ms": {
+        "values": [
+          0.494,
+          0.164,
+          0.447,
+          0.449,
+          0.454,
+          0.441,
+          0.452,
+          0.457,
+          0.486,
+          0.619,
+          0.513,
+          0.508,
+          0.502,
+          0.559,
+          0.465,
+          0.501,
+          0.333,
+          0.54,
+          0.441,
+          0.507,
+          0.644,
+          0.462,
+          0.532,
+          0.479,
+          0.497,
+          0.456,
+          0.412,
+          0.435,
+          0.477,
+          0.407,
+          0.436,
+          0.408,
+          0.512,
+          0.47,
+          0.516,
+          0.442,
+          0.53,
+          0.495,
+          0.448,
+          0.655
+        ],
+        "median": 0.4735,
+        "minimum": 0.164,
+        "maximum": 0.655
+      },
+      "mean_cpu_extra_ms": 0.476125,
+      "cpu_ratio": 2.464414295505297,
+      "cpu_ratio_pointwise_95_ci": [
+        2.3493723906361867,
+        2.562241698157121
+      ],
+      "share_of_four_phase_mean_extra": 0.049824978154971514
+    }
+  },
+  "workload_variations": [
+    {
+      "index": 11,
+      "side": "upstream",
+      "updates": 20
+    }
+  ],
+  "diagnostic_processes": [
+    {
+      "index": 0,
+      "side": "parent",
+      "groups_ms": {
+        "capture": 0.341247,
+        "cold": 2.893587,
+        "commit": 0.811876,
+        "merge_residual": 1.127344,
+        "operation_residual": 3.543035,
+        "other_observed": 0.037379,
+        "seal": 0.841915
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.009709,
+          "cold": 1.417962,
+          "commit": 0.170084,
+          "operation_residual": 2.91679,
+          "other_observed": 0.037379,
+          "seal": 0.344459
+        },
+        "projection": {
+          "capture": 0.331538,
+          "cold": 1.475625,
+          "commit": 0.641792,
+          "merge_residual": 1.127344,
+          "operation_residual": 0.626245,
+          "seal": 0.497456
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 96,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 49,
+          "cold": 132,
+          "commit": 14,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.341247,
+        "cold": 1.757547,
+        "commit": 0.811876,
+        "completion_allocate": 0.09166,
+        "completion_complete": 0.037379,
+        "fill": 0.099209,
+        "operation": 3.543035,
+        "physical_record": 0.06362,
+        "private_prepare": 0.463497,
+        "private_publish": 0.256788,
+        "proj_merge": 1.127344,
+        "provider_allocate": 0.418054,
+        "seal": 0.585127
+      },
+      "covered_ms": 9.596383,
+      "process_cpu_ms": 18.776,
+      "uncovered_ms": 9.179617,
+      "lifecycle_ms": 4.547378,
+      "seal_commit_ms": 1.653791,
+      "capture_merge_ms": 1.468591
+    },
+    {
+      "index": 1,
+      "side": "candidate",
+      "groups_ms": {
+        "capture": 0.360913,
+        "cold": 2.790966,
+        "commit": 0.650251,
+        "merge_residual": 1.133928,
+        "operation_residual": 3.359409,
+        "other_observed": 0.040544,
+        "seal": 0.875371
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.025333,
+          "cold": 1.265752,
+          "commit": 0.155125,
+          "operation_residual": 2.68546,
+          "other_observed": 0.040544,
+          "seal": 0.364791
+        },
+        "projection": {
+          "capture": 0.33558,
+          "cold": 1.525214,
+          "commit": 0.495126,
+          "merge_residual": 1.133928,
+          "operation_residual": 0.673949,
+          "seal": 0.51058
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 90,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 50,
+          "cold": 132,
+          "commit": 13,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.360913,
+        "cold": 1.64082,
+        "commit": 0.650251,
+        "completion_allocate": 0.096459,
+        "completion_complete": 0.040544,
+        "fill": 0.083047,
+        "operation": 3.359409,
+        "physical_record": 0.073658,
+        "private_prepare": 0.46024,
+        "private_publish": 0.271839,
+        "proj_merge": 1.133928,
+        "provider_allocate": 0.436742,
+        "seal": 0.603532
+      },
+      "covered_ms": 9.211382,
+      "process_cpu_ms": 17.437,
+      "uncovered_ms": 8.225618,
+      "lifecycle_ms": 4.316588,
+      "seal_commit_ms": 1.525622,
+      "capture_merge_ms": 1.494841
+    },
+    {
+      "index": 2,
+      "side": "candidate",
+      "groups_ms": {
+        "capture": 0.325252,
+        "cold": 2.617154,
+        "commit": 0.665751,
+        "merge_residual": 1.085506,
+        "operation_residual": 3.300925,
+        "other_observed": 0.038796,
+        "seal": 0.846414
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.014208,
+          "cold": 1.232997,
+          "commit": 0.143583,
+          "operation_residual": 2.656044,
+          "other_observed": 0.038796,
+          "seal": 0.361002
+        },
+        "projection": {
+          "capture": 0.311044,
+          "cold": 1.384157,
+          "commit": 0.522168,
+          "merge_residual": 1.085506,
+          "operation_residual": 0.644881,
+          "seal": 0.485412
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 90,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 50,
+          "cold": 132,
+          "commit": 12,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.325252,
+        "cold": 1.531053,
+        "commit": 0.665751,
+        "completion_allocate": 0.089286,
+        "completion_complete": 0.038796,
+        "fill": 0.083462,
+        "operation": 3.300925,
+        "physical_record": 0.066453,
+        "private_prepare": 0.4318,
+        "private_publish": 0.257008,
+        "proj_merge": 1.085506,
+        "provider_allocate": 0.4151,
+        "seal": 0.589406
+      },
+      "covered_ms": 8.879798,
+      "process_cpu_ms": 17.085,
+      "uncovered_ms": 8.205202,
+      "lifecycle_ms": 4.129319,
+      "seal_commit_ms": 1.512165,
+      "capture_merge_ms": 1.410758
+    },
+    {
+      "index": 3,
+      "side": "parent",
+      "groups_ms": {
+        "capture": 0.368417,
+        "cold": 2.652005,
+        "commit": 0.633917,
+        "merge_residual": 1.062958,
+        "operation_residual": 3.456077,
+        "other_observed": 0.037468,
+        "seal": 0.850336
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.011125,
+          "cold": 1.20817,
+          "commit": 0.161417,
+          "operation_residual": 2.707079,
+          "other_observed": 0.037468,
+          "seal": 0.346542
+        },
+        "projection": {
+          "capture": 0.357292,
+          "cold": 1.443835,
+          "commit": 0.4725,
+          "merge_residual": 1.062958,
+          "operation_residual": 0.748998,
+          "seal": 0.503794
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 90,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 49,
+          "cold": 132,
+          "commit": 13,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.368417,
+        "cold": 1.584251,
+        "commit": 0.633917,
+        "completion_allocate": 0.087587,
+        "completion_complete": 0.037468,
+        "fill": 0.081121,
+        "operation": 3.456077,
+        "physical_record": 0.060071,
+        "private_prepare": 0.435831,
+        "private_publish": 0.267958,
+        "proj_merge": 1.062958,
+        "provider_allocate": 0.403144,
+        "seal": 0.582378
+      },
+      "covered_ms": 9.061178,
+      "process_cpu_ms": 17.185,
+      "uncovered_ms": 8.123822,
+      "lifecycle_ms": 4.136258,
+      "seal_commit_ms": 1.484253,
+      "capture_merge_ms": 1.431375
+    },
+    {
+      "index": 4,
+      "side": "parent",
+      "groups_ms": {
+        "capture": 0.356036,
+        "cold": 2.680837,
+        "commit": 0.681458,
+        "merge_residual": 1.111172,
+        "operation_residual": 3.437659,
+        "other_observed": 0.035916,
+        "seal": 0.867291
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.013708,
+          "cold": 1.113961,
+          "commit": 0.171041,
+          "operation_residual": 2.76158,
+          "other_observed": 0.035916,
+          "seal": 0.339831
+        },
+        "projection": {
+          "capture": 0.342328,
+          "cold": 1.566876,
+          "commit": 0.510417,
+          "merge_residual": 1.111172,
+          "operation_residual": 0.676079,
+          "seal": 0.52746
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 90,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 50,
+          "cold": 132,
+          "commit": 12,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.356036,
+        "cold": 1.575714,
+        "commit": 0.681458,
+        "completion_allocate": 0.090251,
+        "completion_complete": 0.035916,
+        "fill": 0.086708,
+        "operation": 3.437659,
+        "physical_record": 0.065703,
+        "private_prepare": 0.435117,
+        "private_publish": 0.26358,
+        "proj_merge": 1.111172,
+        "provider_allocate": 0.427344,
+        "seal": 0.603711
+      },
+      "covered_ms": 9.170369,
+      "process_cpu_ms": 17.302,
+      "uncovered_ms": 8.131631,
+      "lifecycle_ms": 4.229586,
+      "seal_commit_ms": 1.548749,
+      "capture_merge_ms": 1.467208
+    },
+    {
+      "index": 5,
+      "side": "candidate",
+      "groups_ms": {
+        "capture": 0.360912,
+        "cold": 2.580915,
+        "commit": 0.760289,
+        "merge_residual": 1.124678,
+        "operation_residual": 3.230829,
+        "other_observed": 0.038493,
+        "seal": 0.876378
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.014583,
+          "cold": 1.166669,
+          "commit": 0.155417,
+          "operation_residual": 2.555578,
+          "other_observed": 0.038493,
+          "seal": 0.350712
+        },
+        "projection": {
+          "capture": 0.346329,
+          "cold": 1.414246,
+          "commit": 0.604872,
+          "merge_residual": 1.124678,
+          "operation_residual": 0.675251,
+          "seal": 0.525666
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 90,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 50,
+          "cold": 132,
+          "commit": 12,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.360912,
+        "cold": 1.489904,
+        "commit": 0.760289,
+        "completion_allocate": 0.089032,
+        "completion_complete": 0.038493,
+        "fill": 0.083496,
+        "operation": 3.230829,
+        "physical_record": 0.065705,
+        "private_prepare": 0.446922,
+        "private_publish": 0.270537,
+        "proj_merge": 1.124678,
+        "provider_allocate": 0.405856,
+        "seal": 0.605841
+      },
+      "covered_ms": 8.972494,
+      "process_cpu_ms": 17.406,
+      "uncovered_ms": 8.433506,
+      "lifecycle_ms": 4.217582,
+      "seal_commit_ms": 1.636667,
+      "capture_merge_ms": 1.48559
+    },
+    {
+      "index": 6,
+      "side": "candidate",
+      "groups_ms": {
+        "capture": 0.353544,
+        "cold": 2.836164,
+        "commit": 0.627167,
+        "merge_residual": 1.246412,
+        "operation_residual": 3.371714,
+        "other_observed": 0.037087,
+        "seal": 0.929414
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.015958,
+          "cold": 1.269709,
+          "commit": 0.15625,
+          "operation_residual": 2.667958,
+          "other_observed": 0.037087,
+          "seal": 0.341207
+        },
+        "projection": {
+          "capture": 0.337586,
+          "cold": 1.566455,
+          "commit": 0.470917,
+          "merge_residual": 1.246412,
+          "operation_residual": 0.703756,
+          "seal": 0.588207
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 90,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 50,
+          "cold": 132,
+          "commit": 10,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.353544,
+        "cold": 1.678342,
+        "commit": 0.627167,
+        "completion_allocate": 0.086246,
+        "completion_complete": 0.037087,
+        "fill": 0.083705,
+        "operation": 3.371714,
+        "physical_record": 0.073166,
+        "private_prepare": 0.473617,
+        "private_publish": 0.30687,
+        "proj_merge": 1.246412,
+        "provider_allocate": 0.441088,
+        "seal": 0.622544
+      },
+      "covered_ms": 9.401502,
+      "process_cpu_ms": 18.181,
+      "uncovered_ms": 8.779498,
+      "lifecycle_ms": 4.392745,
+      "seal_commit_ms": 1.556581,
+      "capture_merge_ms": 1.599956
+    },
+    {
+      "index": 7,
+      "side": "parent",
+      "groups_ms": {
+        "capture": 0.3175,
+        "cold": 2.803958,
+        "commit": 0.765373,
+        "merge_residual": 1.082918,
+        "operation_residual": 3.508413,
+        "other_observed": 0.034752,
+        "seal": 0.922295
+      },
+      "contexts_ms": {
+        "stroke_other": {
+          "capture": 0.009208,
+          "cold": 1.273335,
+          "commit": 0.157584,
+          "operation_residual": 2.806415,
+          "other_observed": 0.034752,
+          "seal": 0.3785
+        },
+        "projection": {
+          "capture": 0.308292,
+          "cold": 1.530623,
+          "commit": 0.607789,
+          "merge_residual": 1.082918,
+          "operation_residual": 0.701998,
+          "seal": 0.543795
+        }
+      },
+      "event_counts": {
+        "stroke_other": {
+          "capture": 1,
+          "cold": 76,
+          "commit": 1,
+          "completion_allocate": 76,
+          "completion_complete": 90,
+          "fill": 56,
+          "operation": 27,
+          "physical_record": 76,
+          "private_prepare": 76,
+          "private_publish": 76,
+          "provider_allocate": 76,
+          "seal": 27
+        },
+        "projection": {
+          "capture": 49,
+          "cold": 132,
+          "commit": 12,
+          "completion_allocate": 132,
+          "fill": 60,
+          "operation": 19,
+          "physical_record": 132,
+          "private_prepare": 132,
+          "private_publish": 132,
+          "proj_merge": 19,
+          "provider_allocate": 132,
+          "seal": 32
+        }
+      },
+      "name_self_ms": {
+        "capture": 0.3175,
+        "cold": 1.722507,
+        "commit": 0.765373,
+        "completion_allocate": 0.091457,
+        "completion_complete": 0.034752,
+        "fill": 0.078493,
+        "operation": 3.508413,
+        "physical_record": 0.065169,
+        "private_prepare": 0.446041,
+        "private_publish": 0.26791,
+        "proj_merge": 1.082918,
+        "provider_allocate": 0.400291,
+        "seal": 0.654385
+      },
+      "covered_ms": 9.435209,
+      "process_cpu_ms": 17.576,
+      "uncovered_ms": 8.140791,
+      "lifecycle_ms": 4.491626,
+      "seal_commit_ms": 1.687668,
+      "capture_merge_ms": 1.400418
+    }
+  ],
+  "diagnostic_summary": {
+    "parent": {
+      "covered_ms": {
+        "values": [
+          9.596383,
+          9.061178,
+          9.170369,
+          9.435209
+        ],
+        "median": 9.302789,
+        "minimum": 9.061178,
+        "maximum": 9.596383
+      },
+      "process_cpu_ms": {
+        "values": [
+          18.776,
+          17.185,
+          17.302,
+          17.576
+        ],
+        "median": 17.439,
+        "minimum": 17.185,
+        "maximum": 18.776
+      },
+      "uncovered_ms": {
+        "values": [
+          9.179617,
+          8.123822,
+          8.131631,
+          8.140791
+        ],
+        "median": 8.136211,
+        "minimum": 8.123822,
+        "maximum": 9.179617
+      },
+      "lifecycle_ms": {
+        "values": [
+          4.547378,
+          4.136258,
+          4.229586,
+          4.491626
+        ],
+        "median": 4.360606000000001,
+        "minimum": 4.136258,
+        "maximum": 4.547378
+      },
+      "seal_commit_ms": {
+        "values": [
+          1.653791,
+          1.484253,
+          1.548749,
+          1.687668
+        ],
+        "median": 1.60127,
+        "minimum": 1.484253,
+        "maximum": 1.687668
+      },
+      "capture_merge_ms": {
+        "values": [
+          1.468591,
+          1.431375,
+          1.467208,
+          1.400418
+        ],
+        "median": 1.4492915000000002,
+        "minimum": 1.400418,
+        "maximum": 1.468591
+      },
+      "groups_ms": {
+        "capture": {
+          "values": [
+            0.341247,
+            0.368417,
+            0.356036,
+            0.3175
+          ],
+          "median": 0.34864150000000005,
+          "minimum": 0.3175,
+          "maximum": 0.368417
+        },
+        "cold": {
+          "values": [
+            2.893587,
+            2.652005,
+            2.680837,
+            2.803958
+          ],
+          "median": 2.7423975,
+          "minimum": 2.652005,
+          "maximum": 2.893587
+        },
+        "commit": {
+          "values": [
+            0.811876,
+            0.633917,
+            0.681458,
+            0.765373
+          ],
+          "median": 0.7234155,
+          "minimum": 0.633917,
+          "maximum": 0.811876
+        },
+        "merge_residual": {
+          "values": [
+            1.127344,
+            1.062958,
+            1.111172,
+            1.082918
+          ],
+          "median": 1.097045,
+          "minimum": 1.062958,
+          "maximum": 1.127344
+        },
+        "operation_residual": {
+          "values": [
+            3.543035,
+            3.456077,
+            3.437659,
+            3.508413
+          ],
+          "median": 3.482245,
+          "minimum": 3.437659,
+          "maximum": 3.543035
+        },
+        "other_observed": {
+          "values": [
+            0.037379,
+            0.037468,
+            0.035916,
+            0.034752
+          ],
+          "median": 0.0366475,
+          "minimum": 0.034752,
+          "maximum": 0.037468
+        },
+        "seal": {
+          "values": [
+            0.841915,
+            0.850336,
+            0.867291,
+            0.922295
+          ],
+          "median": 0.8588135,
+          "minimum": 0.841915,
+          "maximum": 0.922295
+        }
+      }
+    },
+    "candidate": {
+      "covered_ms": {
+        "values": [
+          9.211382,
+          8.879798,
+          8.972494,
+          9.401502
+        ],
+        "median": 9.091937999999999,
+        "minimum": 8.879798,
+        "maximum": 9.401502
+      },
+      "process_cpu_ms": {
+        "values": [
+          17.437,
+          17.085,
+          17.406,
+          18.181
+        ],
+        "median": 17.4215,
+        "minimum": 17.085,
+        "maximum": 18.181
+      },
+      "uncovered_ms": {
+        "values": [
+          8.225618,
+          8.205202,
+          8.433506,
+          8.779498
+        ],
+        "median": 8.329562,
+        "minimum": 8.205202,
+        "maximum": 8.779498
+      },
+      "lifecycle_ms": {
+        "values": [
+          4.316588,
+          4.129319,
+          4.217582,
+          4.392745
+        ],
+        "median": 4.267085,
+        "minimum": 4.129319,
+        "maximum": 4.392745
+      },
+      "seal_commit_ms": {
+        "values": [
+          1.525622,
+          1.512165,
+          1.636667,
+          1.556581
+        ],
+        "median": 1.5411015,
+        "minimum": 1.512165,
+        "maximum": 1.636667
+      },
+      "capture_merge_ms": {
+        "values": [
+          1.494841,
+          1.410758,
+          1.48559,
+          1.599956
+        ],
+        "median": 1.4902155000000001,
+        "minimum": 1.410758,
+        "maximum": 1.599956
+      },
+      "groups_ms": {
+        "capture": {
+          "values": [
+            0.360913,
+            0.325252,
+            0.360912,
+            0.353544
+          ],
+          "median": 0.357228,
+          "minimum": 0.325252,
+          "maximum": 0.360913
+        },
+        "cold": {
+          "values": [
+            2.790966,
+            2.617154,
+            2.580915,
+            2.836164
+          ],
+          "median": 2.70406,
+          "minimum": 2.580915,
+          "maximum": 2.836164
+        },
+        "commit": {
+          "values": [
+            0.650251,
+            0.665751,
+            0.760289,
+            0.627167
+          ],
+          "median": 0.6580010000000001,
+          "minimum": 0.627167,
+          "maximum": 0.760289
+        },
+        "merge_residual": {
+          "values": [
+            1.133928,
+            1.085506,
+            1.124678,
+            1.246412
+          ],
+          "median": 1.1293030000000002,
+          "minimum": 1.085506,
+          "maximum": 1.246412
+        },
+        "operation_residual": {
+          "values": [
+            3.359409,
+            3.300925,
+            3.230829,
+            3.371714
+          ],
+          "median": 3.330167,
+          "minimum": 3.230829,
+          "maximum": 3.371714
+        },
+        "other_observed": {
+          "values": [
+            0.040544,
+            0.038796,
+            0.038493,
+            0.037087
+          ],
+          "median": 0.0386445,
+          "minimum": 0.037087,
+          "maximum": 0.040544
+        },
+        "seal": {
+          "values": [
+            0.875371,
+            0.846414,
+            0.876378,
+            0.929414
+          ],
+          "median": 0.8758745,
+          "minimum": 0.846414,
+          "maximum": 0.929414
+        }
+      }
+    }
+  },
+  "incremental_stroke_cpu": {
+    "candidate_over_baseline": 0.9691557472783473,
+    "ratio_ci": [
+      0.9314012359360029,
+      0.9966570571167076
+    ],
+    "reduction": 0.0308442527216527,
+    "reduction_ci": [
+      0.003342942883292399,
+      0.06859876406399712
+    ],
+    "baseline_median_ns": 16726000.0,
+    "candidate_median_ns": 16514500.0,
+    "paired_saving_median_ns": 182500.0,
+    "control_pass": true,
+    "blocks": [
+      0.020527918163654936,
+      -0.03385736029908617,
+      0.05590849181238065,
+      -0.04701830878352185,
+      -0.01891101066358196,
+      -0.012481275721398094,
+      0.006523462964771411,
+      -0.016532379061479495,
+      0.02966778701523561,
+      -0.35321855432294563,
+      0.009059894657517446,
+      -0.05059969322573559,
+      -0.0006543004785430871,
+      -0.03026753728326427,
+      -0.03190834907691295,
+      -0.020394631433161968,
+      -0.06491225312238154,
+      -0.0793424451585465,
+      -0.004070990793697521,
+      0.0158825327782363
+    ]
+  },
+  "incremental_stroke_wall": {
+    "candidate_over_baseline": 0.9691900383260483,
+    "ratio_ci": [
+      0.9264601744833212,
+      1.000659380435329
+    ],
+    "reduction": 0.03080996167395167,
+    "reduction_ci": [
+      -0.0006593804353289823,
+      0.07353982551667881
+    ],
+    "baseline_median_ns": 7221500.0,
+    "candidate_median_ns": 7143000.0,
+    "paired_saving_median_ns": 76500.0,
+    "control_pass": true,
+    "blocks": [
+      0.020978300071907444,
+      -0.036986660903212724,
+      0.05751585170344181,
+      -0.07004304996835273,
+      -0.025413819798674218,
+      -0.006401179373365236,
+      0.023889726479811964,
+      0.021398108111466224,
+      0.003384603629350432,
+      -0.3996850940255905,
+      0.025798107879367323,
+      -0.045158807682660874,
+      0.017509871232230145,
+      0.002760516506274624,
+      -0.034202516493038695,
+      -0.015687221489417168,
+      -0.08545282277872662,
+      -0.08037902161686415,
+      -0.010530815450110677,
+      0.010814557237152167
+    ]
+  },
+  "original_undo_cpu": {
+    "candidate_over_baseline": 0.9340353588767165,
+    "ratio_ci": [
+      0.8756971246658816,
+      0.9965410691787624
+    ],
+    "reduction": 0.06596464112328349,
+    "reduction_ci": [
+      0.0034589308212376046,
+      0.12430287533411843
+    ],
+    "baseline_median_ns": 683500.0,
+    "candidate_median_ns": 646000.0,
+    "paired_saving_median_ns": 31000.0,
+    "control_pass": true,
+    "blocks": [
+      0.05559794725598438,
+      0.0513617443155975,
+      -0.12876694877661835,
+      -0.2574780931465955,
+      0.08012905876449326,
+      0.023322015630510333,
+      -0.06697215664665751,
+      0.054425377284422524,
+      0.0758535071760697,
+      -0.26495805717959325,
+      -0.34416757339351656,
+      -0.18858959834797323,
+      -0.017643012492492727,
+      -0.20749339789791216,
+      0.2585079614873625,
+      -0.22487479830028578,
+      -0.18157340452803117,
+      -0.053455627373758585,
+      -0.02447675844685094,
+      -0.0035678653872036233
+    ]
+  }
+}

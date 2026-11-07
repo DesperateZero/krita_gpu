@@ -101,7 +101,8 @@ preset 语义、传感器曲线和部分资源解析天然位于 CPU。必须保
 
 - 已接受的 `ResolvedDab` 不允许因固定 ring 满而丢失。
 - command journal 使用分块、受预算管理的存储；持久超载时在 Krita stroke worker 上施加可观测 backpressure，不能冻结 UI。
-- GPU 资源未准备好时，策略以整笔为单位决定 GPU 延迟执行或 CPU 回退，禁止一笔中途切换 backend。
+- GPU 资源未准备好，或完整 accelerator ETA 在当前硬件/queue/residency 状态下没有胜过成熟 CPU product path 的
+  风险余量时，策略以整笔为单位决定 GPU 延迟执行或 CPU 回退，禁止一笔中途切换 backend。
 - 不支持的 preset 在 stroke begin 前被 capability gate 拒绝，不能在 GPU 热路径中近似执行。
 
 ## 4. 核心对象模型
@@ -485,7 +486,8 @@ UI adapter 只管理 WSI/display。PaintOp 通过 `KisPaintExecutionContext` 获
 
 - `PreparedBrushProgram` 在 preset 选中时异步建立。
 - begin stroke 时一次性决定 GPU 或 CPU backend。
-- GPU program 未 ready 时，可以延迟该笔 GPU 执行或整笔走 CPU；策略必须可配置和可观测。
+- GPU program 未 ready 或该 brush/format/page-count/device profile 未达到 39 的 `AutoPreferred` 门禁时，可以延迟该笔
+  GPU 执行或整笔走 CPU；策略必须可配置和可观测。Vulkan/UMA capability 存在或零拷贝不构成 route 依据。
 - Auto Round 不依赖外部纹理，应作为首个永远 ready 的 golden path。
 - predefined tip、texture、mask 作为 immutable resource surface 进入统一预算。
 - descriptor 不按 dab 或 frame 分配；使用稳定 ResourceSet 和延迟回收。
@@ -507,10 +509,14 @@ visible latency
 page count / dab references / covered pixels
 migration bytes
 oldest outstanding sequence
+predicted CPU ETA / accelerator ETA / risk margin
+route decision / profile freshness / realized regret bucket
 ```
 
 验收必须区分 CPU 命令录制时间和 GPU timestamp。性能报告必须附带硬件、驱动、页面预算、
-文档尺寸、图层结构、笔刷和输入脚本。
+文档尺寸、图层结构、笔刷和输入脚本，并同时报告同机 CPU-only、forced GPU/UMA 和 Auto 三组端到端结果。CPU 基线
+必须是启用实际 SIMD/线程优化的产品实现，不是本文件的 scalar/reference executor。GPU timestamp 更短但
+input-to-commit/visible 更慢仍判为失败。
 
 核心自动测试：
 
@@ -523,7 +529,11 @@ oldest outstanding sequence
 7. **undo-before-complete**：GPU 工作尚在途时撤销，最终状态正确。
 8. **save snapshot isolation**：保存与新笔迹并发，文件对应捕获 generation。
 9. **fault injection**：上传、SSD、提交和设备丢失不能静默丢失最后权威数据。
-10. **validation**：无 queue ownership、layout、descriptor lifetime 和 in-flight reuse 错误。
+10. **CPU-relative route**：覆盖 tiny stroke、GPU 低功耗/热降频、queue contention、UMA 共享带宽争用；Auto 的
+    median/P95 不高于 CPU-only 1.10×，P99/最长停顿不高于 1.25×，否则该 bucket 在首写前整笔 CPU route。
+    口径按 39 的 M/K/X/E：管理成本不能用异构 kernel 比值证明，GPU direct/VT 要同域；吞吐按实际完成量，CPU/GPU
+    对照具有相同交付 endpoint，必要迁移不能漏计。局部 route 按当前副本状态，产品门禁按完整外部任务 replay。
+11. **validation**：无 queue ownership、layout、descriptor lifetime 和 in-flight reuse 错误。
 
 首个性能出口不是一个脱离硬件的绝对 FPS 数字，而是：
 

@@ -1,0 +1,34 @@
+{
+  "product_parent": "6d439e0437c86b5214064eef5bc5134f2160cf43",
+  "working_owner": "KisPageMetadataCoordinator creates one result; only accepted projected records install into the original indexed authority",
+  "entry_points": [
+    "preparePublicationImpl for ordinary/restoration/recoverable transitions",
+    "applyProjectedSequence for all local owner sequences",
+    "public KisPageStateMachine::apply oracle"
+  ],
+  "replacement": "Shared applyPolicy mutates an existing result by reference; private applyKnownValid returns no working value",
+  "deleted": [
+    "Both transitionResult overloads",
+    "Working state by-value policy entry",
+    "Private working result by-value return",
+    "Repeated local state movement into and out of each sequence step"
+  ],
+  "public_semantics": "The public wrapper owns one result snapshot, validates before/after, and restores current on rejected policy or original bad_alloc handling",
+  "private_semantics": "On semantic refusal or bad_alloc the original coordinator discards the local projected result; no authoritative state has changed",
+  "preserved_boundaries": [
+    "Exact revision/capture/lease/pin/physical-slot guards",
+    "Effects reset per transition and accumulate only in original sequence carrier",
+    "Retirement debt prepared before arena growth and putBatch",
+    "Stale unlock windows retry through original cleanup",
+    "Prepared publication/canonical root have independent acceptance",
+    "Arena/index/activity reservations before installation",
+    "Original allocator/controller detach/free accounting"
+  ],
+  "source_patch_sha256": "f33c68cd187144669aa7a74151ecc6da0a69b973722f6b98b44d361b8d3ef3af",
+  "production_insertions": 34,
+  "production_deletions": 41,
+  "test_changes": 0,
+  "guarantee_increment": "None; equivalent lifetime/storage-expression refactor",
+  "validation": "Existing independent oracle/sequence refusal/concurrency/physical storage tests; no helper mirror tests added",
+  "qualification": "Pending actual safety, identity and unchanged performance protocol results"
+}

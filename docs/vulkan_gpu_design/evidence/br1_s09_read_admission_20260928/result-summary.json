@@ -1,0 +1,34 @@
+{
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "c58faaf12d3b7f45453e1c92e9b73592cbb9fec8fe505e009752b9937694b966",
+  "image_sha256": "a60614da6c0602941ca304d08affb700f3069906e6bc4057c0cc75118de33576",
+  "tests": {
+    "targets_per_arch": 17,
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "passed": 6128,
+    "failed": 0,
+    "skipped": 0,
+    "new_cases_per_arch": 28
+  },
+  "architecture": {
+    "api-count": 1655,
+    "call-edge-count": 16459,
+    "callback-registration-count": 15
+  },
+  "probes": {
+    "final_runs": 30,
+    "request_intervals_per_arch": 4,
+    "request_rejections_per_arch": 2,
+    "resolve_intervals_per_arch": 9,
+    "resolve_rejections_per_arch": 7,
+    "provider_intervals_per_arch": 10,
+    "provider_rejections_per_arch": 6,
+    "post_pin_intervals_per_arch": 2,
+    "post_pin_allocation_attempts": 0,
+    "image_identity_matches": true
+  },
+  "qualification": "generic read record admission and resident provider lease registration; not full T6/S10/M6/M7/M8 or performance"
+}

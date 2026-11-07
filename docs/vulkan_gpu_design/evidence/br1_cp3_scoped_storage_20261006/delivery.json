@@ -1,0 +1,66 @@
+{
+  "product_parent": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "product_commit": "57e59e6b0e53c625b0e4853985a242b5433ca618",
+  "product_patch_sha256": "f3569c6e2a3b2300f560b17a0f7bafd4d9d9a626d1d946eb731709b5814082c8",
+  "fixed_m5": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "documentation_repository_head_before": "8b10d30b07b6883acca24dbdc4339b59e5072d40",
+  "documentation_commit": "The outer Git commit containing this file; deliberately not self-referential",
+  "scope": "Scoped metadata lifetime optimization complete; formal M6/CP0 required and metadata residency qualification remain open",
+  "safety": {
+    "QTest_processes": 38,
+    "passed": 11114,
+    "failed": 0,
+    "skipped": 0,
+    "allocator_probe_processes": 6,
+    "all_probe_checks_passed": true,
+    "architectures": [
+      "arm64",
+      "x86_64 under Rosetta"
+    ],
+    "scope": "original participants, selected five persistent business cases, ReadBaseline and Vulkan compatibility; all original install/publication/storage probes; not full CP0, long/OFF or TSAN qualification"
+  },
+  "performance_processes": 1280,
+  "quantity_processes": 28,
+  "cpu_diagnostic_processes": 4,
+  "design_and_matrix": "README.md",
+  "failures": "execution-issues.json",
+  "closure_review": "closure-review.json",
+  "unchanged": {
+    "control_requests": 524,
+    "controller_successes": 446,
+    "process_requests": 78,
+    "retained_allocate_requests": 339,
+    "full_fits_checks": 988
+  },
+  "quantity": {
+    "parent_total_deref": 6157,
+    "current_total_deref": [
+      1645,
+      1642
+    ],
+    "parent_target_chain": 4569,
+    "current_target_chain": [
+      54,
+      54
+    ],
+    "model_extra_E": [
+      1,
+      1
+    ]
+  },
+  "qualification": {
+    "parent_incremental_speedup": true,
+    "fixed_m5_fresh_family_pass": false,
+    "fixed_m5_history_family_pass": true,
+    "native_handoff_family_pass": false,
+    "M6": false,
+    "persistent_default_enabled": false
+  },
+  "raw_evidence": {
+    "archive": "raw-evidence.tar.gz",
+    "bytes": 46250742,
+    "sha256": "304daaecb8cbe661eeaaf92ade9d37e4f68a4797ec8339641eae734a1c48f8f5",
+    "files": 1825,
+    "content_verified": true
+  }
+}

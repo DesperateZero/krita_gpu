@@ -1,0 +1,43 @@
+{
+  "issues": [
+    {
+      "scope": "build-01",
+      "result": "exit1: explicit allocator constructor disallows default parameter copy-list initialization; build stopped before tests",
+      "repair": "spell explicit default construction; full build-02 exit0"
+    },
+    {
+      "scope": "evidence-tool-copy",
+      "result": "optional allocation-interposer.cpp absent in previous directory; no product/test run",
+      "repair": "use original allocation-fault-interposer.cpp already required by all registered probes"
+    },
+    {
+      "scope": "initial-structure",
+      "result": "textual contract still required original owning MetadataMapAllocator base spelling",
+      "repair": "require explicit borrowed spelling, map root factory and prepared Data root factory; no ratchet raised"
+    },
+    {
+      "scope": "initial-safety-arm64",
+      "result": "Foundation28 and Registry87 passed; CpuMutation1561 passed/1 failed at runtimeStopsAtCapacity:512B residual. Isolated original case reproduced2/1. No performance run.",
+      "diagnosis": "LLDB found four facade-release Store children with64B live each plus64B registration. Trace39131 events found late MutationSession shared control allocated by base allocator: newly inherited rebind discarded derived MutationLifetime.",
+      "repair": "MutationAllocator explicitly rebinds to its own family; static_assert preserves lifetime for control allocations; same existing final-zero-live assertion unchanged",
+      "evidence": [
+        "runtime-stop-lldb-02.log",
+        "runtime-owner-lldb-03.log",
+        "runtime-diagnostic/mismatch-symbols.txt",
+        "failed-candidate.patch"
+      ]
+    },
+    {
+      "scope": "debugger-inspection",
+      "result": "first expression scripts could not call optimized-out inline shared_ptr/array methods; raw field inspection then completed; diagnostic targets not qualification samples"
+    },
+    {
+      "scope": "quantity-summary-first-attempt",
+      "result": "28 runs and full attribution passed; reused summarizer incorrectly required all per-block free/deref/lifetime timing to be identical",
+      "observation": "Both blocks chain54, request524,success446,fits988. Full deref1645/1642; publication_descriptor differed by3 deref and1 retained free. Worker cleanup phase placement differs and is retained.",
+      "repair": "Analyze the same raw samples; invariant admissions and target-chain counts must match; report total and lifetime values per block; no rerun or deletion",
+      "original_analysis_script": "summarize_trace_first_attempt.py",
+      "original_analysis_sha256": "9f6b6d75b084b2d6dd5e1f97c84a85d83e5df89eb52f123a36e78d39b79e68ed"
+    }
+  ]
+}

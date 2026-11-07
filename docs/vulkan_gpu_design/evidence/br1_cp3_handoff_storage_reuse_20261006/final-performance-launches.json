@@ -1,0 +1,130 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/run_native_parent.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 86.543781333,
+    "log": "final-performance-command-0.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/analyze_native_parent.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.7236484579999996,
+    "log": "final-performance-command-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/run_parent_comparison.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 127.505885583,
+    "log": "final-performance-command-2.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/analyze_parent_comparison.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.2235956250000015,
+    "log": "final-performance-command-3.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/run_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 126.52120325000001,
+    "log": "final-performance-command-4.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-fresh",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/fixed-m5-fresh-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.407798334000006,
+    "log": "final-performance-command-5.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/run_fixed_m5_history.py",
+      "--round",
+      "fixed-m5-history"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 128.33417954200002,
+    "log": "final-performance-command-6.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/analyze_fixed_m5_fresh.py",
+      "--round",
+      "fixed-m5-history",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/fixed-m5-history-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.4080736669999965,
+    "log": "final-performance-command-7.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/run_latency.py",
+      "--round",
+      "latency-paired"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 43.27487124999999,
+    "log": "final-performance-command-8.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/analyze_latency.py",
+      "--round",
+      "latency-paired",
+      "--output",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_handoff_storage_reuse_20261006/latency-paired-summary.json"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.29737966599998344,
+    "log": "final-performance-command-9.log"
+  }
+]

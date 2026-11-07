@@ -1,0 +1,52 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "overlayStorageAtCapacity",
+      "conditionalRemovalRejectsChangedOverlay",
+      "capturedOverlayConcurrentSegments",
+      "supersededOverlayUsesHistoricalLifetime",
+      "-nocrashhandler"
+    ],
+    "exit_code": 3,
+    "duration_seconds": 49.532,
+    "totals": [
+      "Totals: 88 passed, 3 failed, 0 skipped, 0 blacklisted, 47718ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(candidate-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(surface-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(prepared-install-and-history) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "overlayStorageAtCapacity",
+      "conditionalRemovalRejectsChangedOverlay",
+      "capturedOverlayConcurrentSegments",
+      "supersededOverlayUsesHistoricalLifetime",
+      "-nocrashhandler"
+    ],
+    "exit_code": 3,
+    "duration_seconds": 49.161,
+    "totals": [
+      "Totals: 88 passed, 3 failed, 0 skipped, 0 blacklisted, 47921ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(candidate-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(surface-refusal) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageAtCapacity(prepared-install-and-history) Compared values are not the same"
+    ],
+    "passed": false
+  }
+]

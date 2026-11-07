@@ -1,0 +1,37 @@
+{
+  "retired_symbols": [
+    "KisTiledDataManagerPageStoreCpuBackend",
+    "KRITA_NATIVE_RESULT_PROTOCOL",
+    "AdapterDelivery",
+    "LegacyAdapterDelivery",
+    "LegacyFinal",
+    "reserveLegacyMutationPage",
+    "reserveManagedRange",
+    "takeTransactionOwnership",
+    "retainClaimsForTerminal",
+    "LegacyInspection",
+    "prepareTileReadCache",
+    "sourceMatchesReadGuard",
+    "readCacheMatchesVersion",
+    "selectReadWindow",
+    "resolvePagePresenceInto"
+  ],
+  "matches": [
+    {
+      "file": "libs/image/tiles3/tests/kis_tiled_data_manager_test.h",
+      "symbol": "AdapterDelivery"
+    },
+    {
+      "file": "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "symbol": "AdapterDelivery"
+    }
+  ],
+  "scope": "actual tracked production/test cpp cc h under libs/image; external generic contracts remain, no native bridge",
+  "match_review": {
+    "AdapterDelivery": "Only retained test method names. Their bodies use native protocol; no retired enum/service or production entry remains."
+  },
+  "retained_generic_contracts": [
+    "KisPageStoreMementoManager public generic epoch contract -> restoreRetainedEpoch preparation/completion; independent generic tests, never called by native DataManager",
+    "public generic explicit transaction/CPU mutation/provider read; common budget, physical provider and retirement remain real services"
+  ]
+}

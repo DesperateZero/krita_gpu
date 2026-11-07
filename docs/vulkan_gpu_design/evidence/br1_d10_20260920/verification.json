@@ -1,0 +1,92 @@
+{
+  "verified": "2026-09-20T13:37:42.968Z",
+  "mode": "live-source-and-archive",
+  "identity_files_checked": 497,
+  "live_source_files_skipped": 0,
+  "independent_pairs": 888,
+  "timed_runs": 1776,
+  "loader_checks": 28,
+  "analyses_byte_identical": [
+    {
+      "phase": "integration",
+      "sha256": "9384849d9df198c4b91c50604f025b7d88e72b2c25dbf09bc123e9b91ffe8d97"
+    },
+    {
+      "phase": "integration_reference",
+      "sha256": "00759d85915fe4ff2ebaddf65e40b3c83769c566fab339be4e9a662e24e7a504"
+    },
+    {
+      "phase": "guard",
+      "sha256": "a679fb4774e34af6f9130b19e2f3b93dd315c80863c334664c6030c1856ce82e"
+    },
+    {
+      "phase": "guard_reference",
+      "sha256": "daf5fcb7bdcb3cb7f151ec6798cbed9701045947fc4d02337d39f21c149112d4"
+    },
+    {
+      "phase": "native",
+      "sha256": "e9db2c739e1d754d8b3d563faf18cd42e74c91e5358889a0da2000644d903915"
+    },
+    {
+      "phase": "native_reference",
+      "sha256": "b5de7e0c3912a19ce1c49bbe27fa1bb984c486c406a4c8af7444a657da51d436"
+    },
+    {
+      "phase": "native_original",
+      "sha256": "cc62be40ec0f3200ed3e60a0c26defb0454fe4c558187beb74070731c3919a1b"
+    },
+    {
+      "phase": "cold",
+      "sha256": "9a7233e99c04011d38c1020664d2761c04fd9e9a232d0dab58e2980d214c9331"
+    },
+    {
+      "phase": "cold_reference",
+      "sha256": "11cea5f9c29e2a2715765cb63bc18425c44eddd18fce2077a5497eab7abb0f0f"
+    },
+    {
+      "phase": "cold_profile",
+      "sha256": "bb8a6df738ca7ddba1177172af41ca1a90cabc43a479912bcd6896213522400b"
+    },
+    {
+      "phase": "cold_profile_reference",
+      "sha256": "6613e87d4bf4fd09ff52f6fd25052af9451e8c5b4462efdb97d27c14298e2464"
+    },
+    {
+      "phase": "cold_perturbation",
+      "sha256": "3e72db0d762be518dac756455ab603413b259b5edfb0e8c342280804e7425336"
+    },
+    {
+      "phase": "cold_fixed",
+      "sha256": "526b548bd243caccd705ff42d8b5e42b553f10328e20db3cb1feda805935c3cb"
+    },
+    {
+      "phase": "cold_fixed_reference",
+      "sha256": "53de3819107f32c265f86bfab2e695a01622ec65e3ea5300a1d4300d151f1f78"
+    }
+  ],
+  "regression": {
+    "final-KisPageStoreResidentReadTest.log": 28,
+    "final-read.log": 41,
+    "final-KisPageStoreReferenceTest.log": 59,
+    "final-KisPageStoreFoundationTest.log": 24,
+    "final-kis_tiled_data_manager_test.log": 88,
+    "final-kis_tiles3_cpu_baseline_test.log": 34,
+    "final-vulkan.log": 13
+  },
+  "production_treatment": "Split warm lookup and out-of-line cold discovery; shared access/retire gate retained; fixture measures final container destruction",
+  "previous_artifacts_unchanged": {
+    "d6": 460,
+    "d7": 298,
+    "d8": 475,
+    "d9": 889
+  },
+  "sealed_artifacts_verified": null,
+  "documents": 67,
+  "local_links": 477,
+  "anchor_links": 19,
+  "current_vulkan_build_hashes": {
+    "library": "e2cff492c70f68d0dd1d5a909472be17c2f40cfdc9578f85666c60c166727330",
+    "test": "43f5b03a8c2c651a6dd611c59cfded1ba884fb214e6d7f70f69e2f736f83f3ec"
+  },
+  "qualification": "D10 diagnostic/correctness only; cold/warm/component/fixed-work results do not grant upstream NI, full background drain or BR1-PERF completion"
+}

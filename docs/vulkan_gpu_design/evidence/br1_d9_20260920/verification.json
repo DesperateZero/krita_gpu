@@ -1,0 +1,59 @@
+{
+  "verified": "2026-09-20T13:01:00.117Z",
+  "mode": "live-source-and-archive",
+  "identity_files_checked": 407,
+  "live_source_files_skipped": 0,
+  "independent_pairs": 384,
+  "timed_runs": 768,
+  "loader_checks": 12,
+  "analyses_byte_identical": [
+    {
+      "phase": "integration",
+      "sha256": "7b67694f8f2f32243be74f41e060a8f91ee8c82dce6aae6e837f571419e4d65d"
+    },
+    {
+      "phase": "native",
+      "sha256": "8a4b4eb8b1da24964aba977859e3d29849de8fa141ee8237a80e57acfc4ad4dc"
+    },
+    {
+      "phase": "native_reference",
+      "sha256": "f60d79f97726a90ad5a85016f3e91994c634c96504f3be4a473b08f5678e3023"
+    },
+    {
+      "phase": "cold",
+      "sha256": "cedee2170c7291997b3126989532d6eff6a3803fcf19af18f9abaf52dbb4a97b"
+    },
+    {
+      "phase": "cold_profile",
+      "sha256": "a780938e13582ad47f5700503210a1c1733826da032e92298267568a89c22a11"
+    },
+    {
+      "phase": "cold_perturbation",
+      "sha256": "63a32e8d884f0e0482941169a89f18682e16a69fef2641c94083356492b2ed5f"
+    }
+  ],
+  "regression": {
+    "resident-first.log": 28,
+    "read-first.log": 33,
+    "final-KisPageStoreReferenceTest.log": 59,
+    "final-KisPageStoreFoundationTest.log": 24,
+    "final-kis_tiled_data_manager_test.log": 88,
+    "final-kis_tiles3_cpu_baseline_test.log": 34,
+    "final-vulkan.log": 13
+  },
+  "production_treatment": "Demand-built native read cache; stable provider records and shared access/retire gate retained",
+  "previous_artifacts_unchanged": {
+    "d6": 460,
+    "d7": 298,
+    "d8": 475
+  },
+  "sealed_artifacts_verified": null,
+  "documents": 66,
+  "local_links": 453,
+  "anchor_links": 17,
+  "current_vulkan_build_hashes": {
+    "library": "9f3baef0be19c5e62a5705f238672cafabdc0df15a4c17ab5f3dfc5cf1e16358",
+    "test": "43f5b03a8c2c651a6dd611c59cfded1ba884fb214e6d7f70f69e2f736f83f3ec"
+  },
+  "qualification": "D9 diagnostic/correctness only; cold/warm/control results do not grant upstream NI or BR1-PERF completion"
+}

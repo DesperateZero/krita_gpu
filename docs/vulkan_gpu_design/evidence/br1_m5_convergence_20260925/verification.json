@@ -1,0 +1,101 @@
+{
+  "captured_at": "2026-09-25T06:58:03.272301+00:00",
+  "source_revision": "095193d11a1041c31ba92f218ccaea4a8d4f396f",
+  "tracked_status": "",
+  "correctness": {
+    "architectures": {
+      "arm64": {
+        "processes": 10,
+        "passed": 1476,
+        "failed": 0,
+        "skipped": 0
+      },
+      "x86_64": {
+        "processes": 10,
+        "passed": 1476,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "total_processes": 20,
+    "total_passed": 2952,
+    "total_failed": 0,
+    "total_skipped": 0,
+    "architecture_gate": {
+      "manifest_entries": 21,
+      "ownership_facts": 21,
+      "runtime_census_groups": 16,
+      "indexed_apis": 1461,
+      "reverse_call_edges": 13725,
+      "external_intrusion_files": 19,
+      "reachability_self_tests_passed": 6
+    }
+  },
+  "vulkan_foundation_compatibility": {
+    "arm64": {
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "returncode": 0
+    },
+    "x86_64": {
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "returncode": 0
+    },
+    "binary": {
+      "path": "/Users/apple/krita_gpu/krita/_build/bin/KisVulkanFoundationContractsTest",
+      "sha256": "b7502c386070608e34c0486c590a26534b6cc8a5628f7546db0f605c97280c78",
+      "size": 507344
+    },
+    "image_library": {
+      "path": "/Users/apple/krita_gpu/krita/_build/bin/libkritaimage.21.0.0.dylib",
+      "sha256": "4b4678221a304e80336aea1d1b724131977846dd40969e0ddeff28c8541f749c",
+      "size": 24664568
+    },
+    "scope": "Build and foundation-contract compatibility only; no Vulkan device or GPU performance qualification."
+  },
+  "probes": {
+    "metadata_and_reservation": {
+      "identity": "probe-identity.json",
+      "log": "probe.log",
+      "returncode": 0
+    },
+    "product_multi_store": {
+      "identity": "product-probe-identity.json",
+      "log": "product-probe.log",
+      "returncode": 0
+    }
+  },
+  "selector_resolution": {
+    "prior_candidate_samples_retained": true,
+    "final_adopts_measured_control": true,
+    "machine_equivalence": {
+      "result": "Pass",
+      "proof": "complete __TEXT,__text disassembly identity",
+      "final_revision": "095193d11a1041c31ba92f218ccaea4a8d4f396f",
+      "control_parent_revision": "6ac53223efcb152253786b69ac4a92224151a12a",
+      "control_identity_sha256": "17d84b7c56da67ef54e1fe5686ca12215f0d7e0bb448f9531c5305ed0f7780ad",
+      "final_library_sha256": "1896a8a4ec2c1fabf414e8ccd9fbb7651510c95635a8ca6058ce66bc4be09e49",
+      "control_library_sha256": "ec69150b01270f1f3739f4b79c0166f1d845cba715a364f1f2811edb80c50c83",
+      "architectures": {
+        "arm64": {
+          "final_text_sha256": "6c8ee790ec7a09d2d331b1503e7e9d56a4bd027471369100a43c778cf57faa98",
+          "control_text_sha256": "6c8ee790ec7a09d2d331b1503e7e9d56a4bd027471369100a43c778cf57faa98",
+          "identical": true
+        },
+        "x86_64": {
+          "final_text_sha256": "762de07b588b7bc793de6a71d398d032ee5f647b692e60ddbd333e2f7583d590",
+          "control_text_sha256": "762de07b588b7bc793de6a71d398d032ee5f647b692e60ddbd333e2f7583d590",
+          "identical": true
+        }
+      },
+      "interpretation": "The final production library has the same executable text as the matched control measured from its parent revision. The prior failed candidate samples are retained; their control implementation was adopted instead of reinterpreting those samples as a pass."
+    }
+  },
+  "limits": {
+    "tsan": "Inconclusive; supplemental qualification remains open.",
+    "full_br1": "M6/M7, formal BR1-PERF, lifecycle and tail-latency qualification remain open."
+  }
+}

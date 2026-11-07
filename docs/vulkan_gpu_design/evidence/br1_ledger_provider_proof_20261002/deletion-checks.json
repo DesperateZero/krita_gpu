@@ -1,0 +1,28 @@
+{
+  "scope": "Original Ledger provider registration/cut/route and proof seal/validate/revoke; archive excluded",
+  "checks": {
+    "pendingProviderRegistrations_absent": true,
+    "QSet<ProviderKey>_absent": true,
+    "QHash<quint64, KisPreparedPageProof>_absent": true,
+    "d->providers.value(_absent": true,
+    "d->providers.values()_absent": true,
+    "old_local_provider_snapshot_absent": true,
+    "accepted_provider_lookup_shared": true,
+    "accepted_cut_excludes_pending_and_later": true,
+    "route_and_domain_share_cut_cursor": true,
+    "node_installed_before_external_admission": true,
+    "acceptance_only_sets_revision": true,
+    "pending_rollback_unlinks_original_node": true,
+    "proof_node_prepared_before_provider_validation": true,
+    "stamp_advances_after_prepared_insert": true,
+    "output_assigned_after_acceptance": true,
+    "revoke_releases_after_locker": true,
+    "original_budget_provenance": true,
+    "original_member_destruction_order": true,
+    "actual_registration_boundary_test": true,
+    "actual_validation_capacity_boundary": true,
+    "public_ledger_header_unchanged": true
+  },
+  "all_passed": true,
+  "behavior_evidence": "qualified CPU and Reference logs; static checks alone do not prove resource behavior"
+}

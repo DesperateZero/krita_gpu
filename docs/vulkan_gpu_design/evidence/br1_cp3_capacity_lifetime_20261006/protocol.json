@@ -1,0 +1,16 @@
+{
+  "product": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "question": "Which original capacity/lifetime responsibilities cause repeated complete budget admissions and retained allocator dereferences? Compare public and native endpoints without changing admission or ownership policy.",
+  "arch": "arm64",
+  "public_rows": [[64,1,4,1],[1024,16,4,1],[64,16,4,1]],
+  "native_rows": [["fresh",1],["handoff",1],["fresh",16],["handoff",16]],
+  "blocks": 2,
+  "order": [["control","trace"],["trace","control"]],
+  "total_processes": 28,
+  "public_endpoint": "Original public scanline write, original N-page setup/warm read. Trace first write; disable for 64 warm writes; trace one later write, original pixel/extent validation and manager destruction. Work counters verify both captured writes independently.",
+  "native_endpoint": "Original native selector fixture, one exact validation view, N=K/H0/B4, complete transaction/beginWrite/seal/canonical commit, validation and close. One operation per process; Fresh and handoff retain original copy/reuse/physical delta/old/new checks.",
+  "trace": "One mechanically instrumented copy of budget TU; original 374 other image objects reused. Fixed preallocated global event array, no per-entry clocks. Capture all threads, separate measured main thread and phases. Each entry retains stack and object address/capacity where available. All trace timings excluded from performance conclusions.",
+  "limits": "Trace changes concurrency and allocation lifetime timing. First and later single-operation counts are not the prior 250 ms steady averages. All-thread phase is a temporal window, not ownership. Address matching uses event order and rejects ambiguous reuse. Same-thread unmatched allocations are not automatically escapes; pair all observed frees and keep unclosed tails explicit. Deref count is not allocation/free count. No claim of safe removability from call count alone.",
+  "stopping": "Exactly 28 sequential processes after build; no concurrent build, benchmark or profiler. Stop and retain any wrong loaded image, correctness/exit/identity failure or trace overflow. Do not adapt sample size or change performance gates. Any repaired failed batch is separate and explicitly documented.",
+  "analysis": "Report counts/capacity by source responsibility and phase; transient versus operation-surviving allocations, worker frees, and unclosed tails. Attribute deref callers with complete stack and original CPU evidence; assess candidate upper bounds against Fresh/native deficits. Product unchanged, no formal M6 qualification."
+}

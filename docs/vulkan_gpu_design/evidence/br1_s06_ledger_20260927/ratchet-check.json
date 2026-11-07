@@ -1,0 +1,347 @@
+{
+  "base": "../br1_s06_physical_20260927/checks-01/source.patch",
+  "compared": "raw ratchet object",
+  "equal": true,
+  "previous": {
+    "backend_duplicate_state": [
+      "anonymousLeases",
+      "cpuMutationBatches"
+    ],
+    "external_pagestore_usage": {
+      "libs/image/kis_paint_device_strategies.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 4,
+        "symbols": [
+          "KisPageStorePixelOperation",
+          "KisPageStoreWriteOperationResult"
+        ]
+      },
+      "libs/image/kis_repeat_iterators_pixel.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/kis_wrapped_hline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/kis_wrapped_vline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/tiles3/KisTilePageStoreBridge.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 5,
+        "symbols": [
+          "KisTilePageStoreBridge",
+          "KisTilePageStoreLease"
+        ]
+      },
+      "libs/image/tiles3/kis_base_iterator.h": {
+        "direct_includes": 1,
+        "identifier_occurrences": 3,
+        "symbols": [
+          "KisPageStoreIteratorReadScope",
+          "KisPageStoreReadCursor"
+        ]
+      },
+      "libs/image/tiles3/kis_hline_iterator.cpp": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/tiles3/kis_hline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 2,
+        "symbols": [
+          "KisPageStoreIteratorReadScope",
+          "KisPageStoreReadPage"
+        ]
+      },
+      "libs/image/tiles3/kis_memento_manager.cc": {
+        "direct_includes": 0,
+        "identifier_occurrences": 2,
+        "symbols": [
+          "KisTilePageStoreBridge"
+        ]
+      },
+      "libs/image/tiles3/kis_memento_manager.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 4,
+        "symbols": [
+          "KisTilePageStoreBridge"
+        ]
+      },
+      "libs/image/tiles3/kis_random_accessor.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreReadPage"
+        ]
+      },
+      "libs/image/tiles3/kis_tile.cc": {
+        "direct_includes": 1,
+        "identifier_occurrences": 10,
+        "symbols": [
+          "KisTilePageStoreBridge",
+          "KisTilePageStoreLease"
+        ]
+      },
+      "libs/image/tiles3/kis_tile.h": {
+        "direct_includes": 1,
+        "identifier_occurrences": 6,
+        "symbols": [
+          "KisTilePageStoreBridge",
+          "KisTilePageStoreLease"
+        ]
+      },
+      "libs/image/tiles3/kis_tile_data_interface.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStorePhysicalClaimTest"
+        ]
+      },
+      "libs/image/tiles3/kis_tiled_data_manager.cc": {
+        "direct_includes": 3,
+        "identifier_occurrences": 21,
+        "symbols": [
+          "KisCapturedReadView",
+          "KisPageStoreDiagnosticPhase",
+          "KisPageStoreDiagnosticTimer",
+          "KisPageStoreIteratorReadScope",
+          "KisPageStorePixelOperation",
+          "KisPageStoreReadPage",
+          "KisPageStoreWriteOperationResult",
+          "KisTiledDataManagerPageStoreBackend",
+          "KisTiledDataManagerPageStoreWriteBatch"
+        ]
+      },
+      "libs/image/tiles3/kis_tiled_data_manager.h": {
+        "direct_includes": 1,
+        "identifier_occurrences": 10,
+        "symbols": [
+          "KisCapturedReadView",
+          "KisPageStoreIteratorReadScope",
+          "KisPageStorePixelOperation",
+          "KisPageStoreWriteOperationResult",
+          "KisTiledDataManagerPageStoreBackend"
+        ]
+      },
+      "libs/image/tiles3/kis_tiled_data_manager_p.h": {
+        "direct_includes": 3,
+        "identifier_occurrences": 7,
+        "symbols": [
+          "KisCapturedReadView",
+          "KisPageStoreDiagnosticPhase",
+          "KisPageStoreDiagnosticTimer",
+          "KisPageStoreReadPage"
+        ]
+      },
+      "libs/image/tiles3/kis_vline_iterator.cpp": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/tiles3/kis_vline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 2,
+        "symbols": [
+          "KisPageStoreIteratorReadScope",
+          "KisPageStoreReadPage"
+        ]
+      }
+    },
+    "tile_pagestore_fields": [
+      "m_pageStoreBridge",
+      "m_pageStoreLeases",
+      "m_pageStoreNativeReadReady",
+      "m_pageStoreOldDataView",
+      "m_pageStoreWriteIntentOwnsNativePin",
+      "m_pageStoreWriteLockCount"
+    ]
+  },
+  "current": {
+    "backend_duplicate_state": [
+      "anonymousLeases",
+      "cpuMutationBatches"
+    ],
+    "external_pagestore_usage": {
+      "libs/image/kis_paint_device_strategies.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 4,
+        "symbols": [
+          "KisPageStorePixelOperation",
+          "KisPageStoreWriteOperationResult"
+        ]
+      },
+      "libs/image/kis_repeat_iterators_pixel.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/kis_wrapped_hline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/kis_wrapped_vline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/tiles3/KisTilePageStoreBridge.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 5,
+        "symbols": [
+          "KisTilePageStoreBridge",
+          "KisTilePageStoreLease"
+        ]
+      },
+      "libs/image/tiles3/kis_base_iterator.h": {
+        "direct_includes": 1,
+        "identifier_occurrences": 3,
+        "symbols": [
+          "KisPageStoreIteratorReadScope",
+          "KisPageStoreReadCursor"
+        ]
+      },
+      "libs/image/tiles3/kis_hline_iterator.cpp": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/tiles3/kis_hline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 2,
+        "symbols": [
+          "KisPageStoreIteratorReadScope",
+          "KisPageStoreReadPage"
+        ]
+      },
+      "libs/image/tiles3/kis_memento_manager.cc": {
+        "direct_includes": 0,
+        "identifier_occurrences": 2,
+        "symbols": [
+          "KisTilePageStoreBridge"
+        ]
+      },
+      "libs/image/tiles3/kis_memento_manager.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 4,
+        "symbols": [
+          "KisTilePageStoreBridge"
+        ]
+      },
+      "libs/image/tiles3/kis_random_accessor.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreReadPage"
+        ]
+      },
+      "libs/image/tiles3/kis_tile.cc": {
+        "direct_includes": 1,
+        "identifier_occurrences": 10,
+        "symbols": [
+          "KisTilePageStoreBridge",
+          "KisTilePageStoreLease"
+        ]
+      },
+      "libs/image/tiles3/kis_tile.h": {
+        "direct_includes": 1,
+        "identifier_occurrences": 6,
+        "symbols": [
+          "KisTilePageStoreBridge",
+          "KisTilePageStoreLease"
+        ]
+      },
+      "libs/image/tiles3/kis_tile_data_interface.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStorePhysicalClaimTest"
+        ]
+      },
+      "libs/image/tiles3/kis_tiled_data_manager.cc": {
+        "direct_includes": 3,
+        "identifier_occurrences": 21,
+        "symbols": [
+          "KisCapturedReadView",
+          "KisPageStoreDiagnosticPhase",
+          "KisPageStoreDiagnosticTimer",
+          "KisPageStoreIteratorReadScope",
+          "KisPageStorePixelOperation",
+          "KisPageStoreReadPage",
+          "KisPageStoreWriteOperationResult",
+          "KisTiledDataManagerPageStoreBackend",
+          "KisTiledDataManagerPageStoreWriteBatch"
+        ]
+      },
+      "libs/image/tiles3/kis_tiled_data_manager.h": {
+        "direct_includes": 1,
+        "identifier_occurrences": 10,
+        "symbols": [
+          "KisCapturedReadView",
+          "KisPageStoreIteratorReadScope",
+          "KisPageStorePixelOperation",
+          "KisPageStoreWriteOperationResult",
+          "KisTiledDataManagerPageStoreBackend"
+        ]
+      },
+      "libs/image/tiles3/kis_tiled_data_manager_p.h": {
+        "direct_includes": 3,
+        "identifier_occurrences": 7,
+        "symbols": [
+          "KisCapturedReadView",
+          "KisPageStoreDiagnosticPhase",
+          "KisPageStoreDiagnosticTimer",
+          "KisPageStoreReadPage"
+        ]
+      },
+      "libs/image/tiles3/kis_vline_iterator.cpp": {
+        "direct_includes": 0,
+        "identifier_occurrences": 1,
+        "symbols": [
+          "KisPageStoreIteratorReadScope"
+        ]
+      },
+      "libs/image/tiles3/kis_vline_iterator.h": {
+        "direct_includes": 0,
+        "identifier_occurrences": 2,
+        "symbols": [
+          "KisPageStoreIteratorReadScope",
+          "KisPageStoreReadPage"
+        ]
+      }
+    },
+    "tile_pagestore_fields": [
+      "m_pageStoreBridge",
+      "m_pageStoreLeases",
+      "m_pageStoreNativeReadReady",
+      "m_pageStoreOldDataView",
+      "m_pageStoreWriteIntentOwnsNativePin",
+      "m_pageStoreWriteLockCount"
+    ]
+  }
+}

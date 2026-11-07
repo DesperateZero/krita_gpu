@@ -1,0 +1,3153 @@
+{
+  "product": "11c6895ddfeae074df727c76dcbf9e12988479ee",
+  "product_changed": false,
+  "library_sha256": "91e962c2c43379697b13f37a2ee388d408440c67f3e21458e75c70dab4b21b38",
+  "input_hashes": {
+    "net-ledger-r1/observations/results.json": "82d37a6de9e902bca3de57346864e3b1605f9ec739e8e249759603edd12ec5ff",
+    "net-ledger-r1/observations/04-timing-current-mode0/fixture.log": "4052e978d658cb68c6338ad6b94ff3dd722cfa951c4fd21e7af734f9d3c08923",
+    "net-ledger-r1/observations/04-timing-current-mode0/result.json": "a5265dd87e1fde6f24a2415e13d1a773c929aedd8263f6d2d937b7050fd03ba3",
+    "net-ledger-r1/observations/04-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/05-timing-upstream-mode0/fixture.log": "583c171ca59b1d8f97706482f32b149612704ea4719c4f53de3f5b4e2bf7a988",
+    "net-ledger-r1/observations/05-timing-upstream-mode0/result.json": "07712622de213eb085d891ce0ac2c91967a6364b6c93c178f9c03403ad4fb208",
+    "net-ledger-r1/observations/05-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/10-timing-upstream-mode0/fixture.log": "9f5de9ef4da1679ac5fa7f351117f7683138ccfe7a05f651cf38578ee8366148",
+    "net-ledger-r1/observations/10-timing-upstream-mode0/result.json": "db2a10c6464b9630da1f883f778881931db8c2c59018c88ac8c0a9bf4d43eb9c",
+    "net-ledger-r1/observations/10-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/11-timing-current-mode0/fixture.log": "d5168055ed7674d74ab3579b06c2585296c0faf321051ad27c26c7f551855983",
+    "net-ledger-r1/observations/11-timing-current-mode0/result.json": "c907e65b62671bdef3883b8354c3c480eafce3b407762350454633816d3a81a3",
+    "net-ledger-r1/observations/11-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/12-timing-upstream-mode0/fixture.log": "7c754e30274058fd7c52d7ed65df83cc1af749b3be430151c24e24fdbb67d1ee",
+    "net-ledger-r1/observations/12-timing-upstream-mode0/result.json": "6fdad2fe2d87541b95404cea54a3dbe6061eb4b6fae9d37f4d2c1c1e7b7a53b2",
+    "net-ledger-r1/observations/12-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/15-timing-current-mode0/fixture.log": "e7a0645360b24b761ea864c4551d917644456ed40270fae6ecc8429e29969915",
+    "net-ledger-r1/observations/15-timing-current-mode0/result.json": "cd38bf19dd39c88631a8a0b1137d956005e14f55c0e45bd24fcb46bdb0a13d7c",
+    "net-ledger-r1/observations/15-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/16-timing-current-mode0/fixture.log": "d562b372562354e2ca994d955f01bf013516fb73409b56a019d9694d6a74dc52",
+    "net-ledger-r1/observations/16-timing-current-mode0/result.json": "026b2a4b397b1f45ef2ea4670393719e2bbd9e4f47220f36e9256396d867d40a",
+    "net-ledger-r1/observations/16-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/19-timing-upstream-mode0/fixture.log": "2ee24e3532ecc8b08864a66f49ce339e7ae357564105495792f10106a6250729",
+    "net-ledger-r1/observations/19-timing-upstream-mode0/result.json": "4f874834198b43682d4baf92f7323e0b75dc46b167a230b7143e8d1197822069",
+    "net-ledger-r1/observations/19-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/22-timing-current-mode0/fixture.log": "730f31079ea4847e89c21401cab6f42877df123446f1c8cb30c58dad69960ca1",
+    "net-ledger-r1/observations/22-timing-current-mode0/result.json": "317be5f4635a2b0abb1cda6ec51a80e7ecc571922eee2509f6c187901ecb0ba0",
+    "net-ledger-r1/observations/22-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/23-timing-upstream-mode0/fixture.log": "e1b67616bb1bcc07dc255f46265ac3f9255fcba2fe944005736c42002a3f8706",
+    "net-ledger-r1/observations/23-timing-upstream-mode0/result.json": "088e85b2f07060f62024343dd4f558f53aac6381d9eafe06548a9e2c4c0dd7d5",
+    "net-ledger-r1/observations/23-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/24-timing-upstream-mode0/fixture.log": "61aac61f4110cfe757a8cee7b573c1cf0963d86feb7894336c407afc56c5e79a",
+    "net-ledger-r1/observations/24-timing-upstream-mode0/result.json": "dfd1354f1c52cdd1b0570a2e6845325a64f7ea07cf36763f3e15dd569c9b7ea3",
+    "net-ledger-r1/observations/24-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/25-timing-current-mode0/fixture.log": "11434ebb3b7ccb6dbea93dffc8316fe01044f4cc07843fe0d22afa9df4d59241",
+    "net-ledger-r1/observations/25-timing-current-mode0/result.json": "9f3bc9d0af9076737164f17e8b254354d10b7cdab8d99938eea750aedd70760c",
+    "net-ledger-r1/observations/25-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/29-timing-current-mode0/fixture.log": "b52c1f04344185c22c4b9b2e79f5443e24dcd862c7102293506f61b9aab98c9d",
+    "net-ledger-r1/observations/29-timing-current-mode0/result.json": "5faa82c1993cd41d45cf2d631016f343523f22b66f2335cb7823a74c88ab9778",
+    "net-ledger-r1/observations/29-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/30-timing-upstream-mode0/fixture.log": "308e2db53a12084053d61dcb32d6e5cd3067fbc04dbaf34636db85ff16235a0a",
+    "net-ledger-r1/observations/30-timing-upstream-mode0/result.json": "acb940a0d6dc4e9a2894d5014b3a4ed19e52e4e21a47d42b4534f0ebcaf150bb",
+    "net-ledger-r1/observations/30-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/33-timing-upstream-mode0/fixture.log": "566ff6e6d37d06a07bff55db0ad8a28f48a28aafed536d2a34cc5847a0d06e36",
+    "net-ledger-r1/observations/33-timing-upstream-mode0/result.json": "a80fc7b1e31731582a77a94da3031f04c72408f4ada98c7901e4b354f6e24438",
+    "net-ledger-r1/observations/33-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/34-timing-current-mode0/fixture.log": "51e3d521f0b0f0090e112c96622422a2f538e3abe66c40040d8f712824c74a95",
+    "net-ledger-r1/observations/34-timing-current-mode0/result.json": "d286c9ffec8a00cfda8c80023f73f3d363d70f67a51bd7f7f4abbd1dfd607e2a",
+    "net-ledger-r1/observations/34-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/36-timing-current-mode0/fixture.log": "e25c4dca50777b69c4cec9dd5586768e16b95360947591c6335f2b6c99b4293e",
+    "net-ledger-r1/observations/36-timing-current-mode0/result.json": "f74eddc477cca40af054e738c0186144f38e96d95dc409161613e9f440f8179b",
+    "net-ledger-r1/observations/36-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/37-timing-upstream-mode0/fixture.log": "e5b4be314a3c20fa40eb9267ca1c4981e9cc49132e3e04cab1c903a0a159a0ce",
+    "net-ledger-r1/observations/37-timing-upstream-mode0/result.json": "25fa87af95efda587d48ba50f5738982938f9a31ea3b3e816586cbfd9c06d457",
+    "net-ledger-r1/observations/37-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/42-timing-upstream-mode0/fixture.log": "d224e18cf7269bcbb384eaf8107daa8bf807db36b5e2c7890234363fd7158f02",
+    "net-ledger-r1/observations/42-timing-upstream-mode0/result.json": "0278aac3882911d242d6e1d830deee1265108f063bf2a729d30f5052f019e63a",
+    "net-ledger-r1/observations/42-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/43-timing-current-mode0/fixture.log": "059383a0c7e36f97153a32f40c7f5c1fc1c7fb23810de7e06e2f452bc00c0ea2",
+    "net-ledger-r1/observations/43-timing-current-mode0/result.json": "6d3371be20480ad008f0c3e6b45ec3d3850be100b944f3e3985cd43cf13f4c1c",
+    "net-ledger-r1/observations/43-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/44-timing-upstream-mode0/fixture.log": "f8d15e08f3835302fd28a200f71a1b8402247b55be31d04bcbf2a10c5c715dd2",
+    "net-ledger-r1/observations/44-timing-upstream-mode0/result.json": "3f892a2f719681c12fdfc14c52cf83090e0f0e4a1d6e4fc3191c1a6476d458cf",
+    "net-ledger-r1/observations/44-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/47-timing-current-mode0/fixture.log": "4a5cce49d0c5ef77a1d06b68aebdf1c25217c644cf9f9c4d4c803b322505af44",
+    "net-ledger-r1/observations/47-timing-current-mode0/result.json": "9ed518ee72e4f6558564a14a1dfa4d988902e93cacb47f456726030f5fe8e1b1",
+    "net-ledger-r1/observations/47-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/48-timing-current-mode0/fixture.log": "cd45c3a9ef25e41a794cdad98b015575868ff1b68512404d6661980d29afb668",
+    "net-ledger-r1/observations/48-timing-current-mode0/result.json": "7feafece5076afd9312e7755ed46d2e2c46c07298fc6f10defc32adf57ad0825",
+    "net-ledger-r1/observations/48-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/51-timing-upstream-mode0/fixture.log": "964918c8758abccd583dbcec93bd237480087d44ea86e2fcd31da679f3e56bb1",
+    "net-ledger-r1/observations/51-timing-upstream-mode0/result.json": "69eba0040a2d206eb65d8998f528f926d0f3d899f82b1024722e75926ec952fe",
+    "net-ledger-r1/observations/51-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/54-timing-current-mode0/fixture.log": "7c0af18a6ba7055b3f348dd2d47fc9089d9cc6a92244a0754dff55f981c12b74",
+    "net-ledger-r1/observations/54-timing-current-mode0/result.json": "f1c528eb3413e210cbe6345030c7c6f3706234aae5968a702240280d579265f9",
+    "net-ledger-r1/observations/54-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/55-timing-upstream-mode0/fixture.log": "ae29a84cc59e3ef16dcae24d8480af4fce146f9d0365852a8dd9a376202a19f8",
+    "net-ledger-r1/observations/55-timing-upstream-mode0/result.json": "0a9ce5cd4748a7291ec7ea670f2009a63917e68353ade52b725b5580cf29c374",
+    "net-ledger-r1/observations/55-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/56-timing-upstream-mode0/fixture.log": "be54d67bb4c8e776d428b2b99cf3b92fa8ec3c61b884d85b665a78d6725bf64e",
+    "net-ledger-r1/observations/56-timing-upstream-mode0/result.json": "8c66269e664ddf0b34f956ab9f85d481a5b83a7f698ea7198e257dcc7cc46586",
+    "net-ledger-r1/observations/56-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/57-timing-current-mode0/fixture.log": "f8f0b9175995132472dae08eb7331f0b9e25941060bd5af2251ae73947c38b8d",
+    "net-ledger-r1/observations/57-timing-current-mode0/result.json": "b750ae39a97ff4a7c7067a43ec769df4799d3235a9531278dfb47699d24675d3",
+    "net-ledger-r1/observations/57-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/61-timing-current-mode0/fixture.log": "97287aec61a0b9b49dbc3d16561327760d8f79f49f617645c40415672aec12da",
+    "net-ledger-r1/observations/61-timing-current-mode0/result.json": "177c1b20a794dd1de0677533b6e20c273df8f8c2e64f3790cf7d9f4044dd5657",
+    "net-ledger-r1/observations/61-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-r1/observations/62-timing-upstream-mode0/fixture.log": "e38c5425dc36d78092b21b98a8f1179185803ab6de6c63bf660d05cd737a7d9c",
+    "net-ledger-r1/observations/62-timing-upstream-mode0/result.json": "0b6eb463b066266ed7a4556de6e9c123bd5aba846cb5172e28a9b2bdc6f546f1",
+    "net-ledger-r1/observations/62-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/65-timing-upstream-mode0/fixture.log": "b288eca1a1a64ee51a39231c82d95ced611afe058a9e89e3a928b20baf3c4c83",
+    "net-ledger-r1/observations/65-timing-upstream-mode0/result.json": "3d9303460ea46fcb9165a67833a5745695a0d1d0415afa38d7ad376eb6525d94",
+    "net-ledger-r1/observations/65-timing-upstream-mode0/runtime.json": "070a3a4424410945861cfab1d7aca94405e1a5045ac939082b148a0c9088cce7",
+    "net-ledger-r1/observations/66-timing-current-mode0/fixture.log": "33246fc4f70e35d18baa4697b60ef521e37dfbe3b520a0dce173e8ac36b0091e",
+    "net-ledger-r1/observations/66-timing-current-mode0/result.json": "c6166b0e0c372552522715009959b298ac7f270826cbe9c54048b79d40b732fb",
+    "net-ledger-r1/observations/66-timing-current-mode0/runtime.json": "5a7a97738994ae28155322af8dcc0efb39f376dcdf256656bbe3b74d9744d191",
+    "net-ledger-summary.json": "087a713f46b4a7cea113e2c3d2b0ef512030d0012ec71cb8469d8076213727bc",
+    "net-ledger-r1/observations/identity-final.json": "7faa78badeef40e1f00c68be94c28cfd97049376e55cdcdd85377595543d4aeb",
+    "flow-census-r1/results.json": "514415a17ad0515682aadd50a7385af50d10f4a311aa32d613a778c187d897c9",
+    "flow-census-r1/runs/00-current/fixture.log": "f12250ea18e4b8e56eed87cc92aedabe8693aa14175bfd4b2f437cbd864d0a53",
+    "flow-census-r1/runs/01-upstream/fixture.log": "4070534b54cff8b129b9cfd01f207020539853f0104345cb576ce8680c3957b9",
+    "flow-census-r1/runs/02-upstream/fixture.log": "7b199bed3812625df147d9b074498b29514c82c078fbcc26f4b6a1c164d0f0f7",
+    "flow-census-r1/runs/03-current/fixture.log": "eb93567bf987683e6bb8dc4507f2f81a6e644e29e15fbfe8a006bdb57a0709b7",
+    "flow-census-r1/identity-final.json": "14062fd8f3e4a398e30f3348e51d15557e52ac428e8de06ed317b19cc2c7bc9f",
+    "../br1_pagestore_equivalent_pipeline_20261010/PIPELINE_PLAN.md": "14b40a636c1ca8382da0898ce741a67997fcc04efd88f5189d0b211569ef2d70",
+    "cost-ledger-storage-work-summary.json": "493be1fd47f675f797514d7d9980a9a537d9ae4dee83cdd664fae60acab18b9f",
+    "net-background-summary.json": "cef9f5f07905d6e3cd8ade6541b504b4d1fdd193ca112a7e659a1364750335f7",
+    "detach-summary.json": "27587cff72c2de313ade74239c10c2fab2296b7bd81f26ed2cc741f32f3b71de",
+    "completion-summary.json": "e1be1346eca9f9faca82f547563fed82fb593548eca746ff7dd6b9fd9f6a433d",
+    "payload-counts-summary.json": "67f0cc0438dcfb93291bfe6f69c7b1734895cf1dab40a2a9a3b48ff1536ea9c5"
+  },
+  "old_off_processes_reconciled": 32,
+  "new_count_processes": 4,
+  "identity_checks": 498,
+  "old_identity_checks": 878,
+  "frozen_identity_resolutions": {
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/NET_PROTOCOL.md": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/net-ledger-r1/observations/NET_PROTOCOL.md",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_net_ledger.py": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/net-ledger-r1/observations/run_net_ledger.py"
+  },
+  "maximum_process_closure_error_ms": 3.552713678800501e-15,
+  "cases": {
+    "0": {
+      "pages": 1,
+      "writes": 1,
+      "history": false,
+      "components_extra_mean_ms": {
+        "setup": 0.4526796249999999,
+        "write": 0.08563806249999999,
+        "read": 0.0155994375,
+        "finish": -0.0009195,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.029789,
+        "case_frame": 0.0041170625,
+        "tail_foreground": 0.0013724375,
+        "observer_boundary_foreground": 0.000429625,
+        "reclaimer": 0.184125,
+        "monitor": 0.002375,
+        "pooler": 0.0019375,
+        "swapper": -0.0010625,
+        "unregistered_boundary": 0.0006692499999999996
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.59775,
+          0.2076055,
+          0.6499584999999998,
+          0.18273049999999996,
+          0.504437,
+          0.1935415,
+          1.1050199999999997,
+          0.180394
+        ],
+        "write": [
+          0.09347799999999999,
+          0.0650005,
+          0.08287499999999999,
+          0.052854,
+          0.11104149999999999,
+          0.06279149999999999,
+          0.16279249999999998,
+          0.0542715
+        ],
+        "read": [
+          0.022063,
+          0.0088345,
+          0.0206875,
+          0.005418000000000001,
+          0.0253755,
+          0.009042000000000001,
+          0.0281875,
+          0.0051875
+        ],
+        "finish": [
+          -0.001313,
+          -0.0007704999999999999,
+          -0.0010625,
+          -0.0009384999999999997,
+          -0.0010629999999999997,
+          -0.0006260000000000003,
+          -0.0004364999999999998,
+          -0.0011460000000000003
+        ],
+        "undo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "redo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "teardown": [
+          0.024772000000000002,
+          0.024646,
+          0.026289999999999997,
+          0.023979,
+          0.027042000000000004,
+          0.024271,
+          0.05972899999999999,
+          0.027583000000000003
+        ],
+        "case_frame": [
+          0.004,
+          0.0023295000000000017,
+          0.004710499999999999,
+          0.002061499999999999,
+          0.0046044999999999975,
+          0.0037715000000000005,
+          0.010374500000000002,
+          0.0010844999999999987
+        ],
+        "tail_foreground": [
+          0.001271,
+          0.001084,
+          0.001479,
+          0.0013124999999999999,
+          0.0013325000000000001,
+          0.001396,
+          0.0020835000000000003,
+          0.001021
+        ],
+        "observer_boundary_foreground": [
+          0.000562,
+          0.0002705000000000001,
+          0.00024950000000000016,
+          0.00016649999999999998,
+          0.0005220000000000003,
+          0.0006045,
+          0.0009994999999999995,
+          6.250000000000006e-05
+        ],
+        "reclaimer": [
+          0.1945,
+          0.16299999999999998,
+          0.1995,
+          0.1465,
+          0.21000000000000002,
+          0.15300000000000002,
+          0.255,
+          0.1515
+        ],
+        "monitor": [
+          0.005,
+          0.0,
+          0.004,
+          0.0,
+          0.004,
+          0.0,
+          0.006,
+          0.0
+        ],
+        "pooler": [
+          0.0004999999999999987,
+          0.0,
+          0.0014999999999999996,
+          0.0,
+          0.0014999999999999996,
+          0.0,
+          0.012000000000000002,
+          0.0
+        ],
+        "swapper": [
+          -0.005500000000000001,
+          0.0,
+          0.005500000000000001,
+          0.0,
+          -0.005000000000000001,
+          0.0,
+          -0.0034999999999999996,
+          0.0
+        ],
+        "unregistered_boundary": [
+          -0.002583000000000002,
+          0.0009999999999999998,
+          0.0003124999999999968,
+          -8.349999999999992e-05,
+          -0.0057919999999999985,
+          0.00020799999999999996,
+          0.012750000000000001,
+          -0.0004580000000000001
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 0.49114599999999986,
+        "mean": 0.58870575,
+        "ci95": [
+          0.268458,
+          0.7851874999999999
+        ],
+        "blocks": [
+          0.742583,
+          0.309,
+          0.7851874999999999,
+          0.2675835,
+          0.6732919999999998,
+          0.29479200000000005,
+          1.3687500000000001,
+          0.268458
+        ]
+      },
+      "process_extra_ms": {
+        "median": 0.6755,
+        "mean": 0.7767499999999999,
+        "ci95": [
+          0.4195,
+          0.996
+        ],
+        "blocks": [
+          0.9344999999999999,
+          0.473,
+          0.996,
+          0.414,
+          0.8780000000000001,
+          0.44800000000000006,
+          1.6509999999999998,
+          0.4195
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    },
+    "1": {
+      "pages": 16,
+      "writes": 1,
+      "history": false,
+      "components_extra_mean_ms": {
+        "setup": 0.7095052500000001,
+        "write": 0.446164,
+        "read": 0.115625125,
+        "finish": -0.0115286875,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.077734625,
+        "case_frame": 0.0066326875,
+        "tail_foreground": 0.0016301875,
+        "observer_boundary_foreground": 0.00032287500000000003,
+        "reclaimer": 0.552875,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 0.0001639375
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.669791,
+          0.6571885000000001,
+          0.692271,
+          0.5514384999999999,
+          0.7817080000000001,
+          0.546188,
+          1.226271,
+          0.5511860000000001
+        ],
+        "write": [
+          0.4251665,
+          0.4399995,
+          0.4402094999999999,
+          0.3603945,
+          0.4834804999999999,
+          0.393874,
+          0.673417,
+          0.3527705
+        ],
+        "read": [
+          0.10095849999999999,
+          0.124541,
+          0.103938,
+          0.10377100000000002,
+          0.10072899999999999,
+          0.10748,
+          0.1772705,
+          0.106313
+        ],
+        "finish": [
+          -0.0121025,
+          -0.0122075,
+          -0.011916999999999999,
+          -0.010729000000000002,
+          -0.0116045,
+          -0.0120625,
+          -0.00948,
+          -0.0121265
+        ],
+        "undo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "redo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "teardown": [
+          0.069249,
+          0.0800845,
+          0.07896,
+          0.06410450000000001,
+          0.09000100000000001,
+          0.066686,
+          0.10810350000000002,
+          0.06468850000000001
+        ],
+        "case_frame": [
+          0.0030629999999999998,
+          0.0058945,
+          0.004913500000000001,
+          0.0017704999999999978,
+          0.005998499999999997,
+          0.001625999999999999,
+          0.0289395,
+          0.0008559999999999991
+        ],
+        "tail_foreground": [
+          0.001021,
+          0.0028539999999999998,
+          0.0017915,
+          0.0011875,
+          0.0015,
+          0.0016874999999999998,
+          0.0020629999999999997,
+          0.000937
+        ],
+        "observer_boundary_foreground": [
+          6.250000000000006e-05,
+          0.00035400000000000015,
+          0.00014600000000000008,
+          0.00031249999999999984,
+          0.00014600000000000008,
+          0.00043749999999999995,
+          0.0009155000000000001,
+          0.00020899999999999998
+        ],
+        "reclaimer": [
+          0.523,
+          0.6025,
+          0.558,
+          0.47250000000000003,
+          0.5565,
+          0.4825,
+          0.737,
+          0.491
+        ],
+        "monitor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pooler": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "swapper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unregistered_boundary": [
+          -0.000709,
+          -0.00020850000000000003,
+          0.0006875000000000001,
+          0.00025,
+          0.0005414999999999999,
+          0.0010835,
+          -0.0005,
+          0.0001665
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 1.27795875,
+        "mean": 1.3460860625,
+        "ci95": [
+          1.07225,
+          1.4519585000000002
+        ],
+        "blocks": [
+          1.257209,
+          1.2987085,
+          1.3103125,
+          1.07225,
+          1.4519585000000002,
+          1.1059165,
+          2.2075,
+          1.0648335000000002
+        ]
+      },
+      "process_extra_ms": {
+        "median": 1.82425,
+        "mean": 1.899125,
+        "ci95": [
+          1.5559999999999998,
+          2.009
+        ],
+        "blocks": [
+          1.7795,
+          1.901,
+          1.8689999999999998,
+          1.545,
+          2.009,
+          1.5895,
+          2.944,
+          1.5559999999999998
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    },
+    "2": {
+      "pages": 1,
+      "writes": 16,
+      "history": false,
+      "components_extra_mean_ms": {
+        "setup": 0.2182471875,
+        "write": 0.8679783750000001,
+        "read": 0.19753174999999998,
+        "finish": -0.0007004375000000001,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.0333281875,
+        "case_frame": 0.0250706875,
+        "tail_foreground": 0.0012504375,
+        "observer_boundary_foreground": 0.00024681249999999996,
+        "reclaimer": 0.59275,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": -1.549999999999999e-05
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.19247899999999998,
+          0.1988125,
+          0.30839500000000003,
+          0.1832905,
+          0.23699999999999996,
+          0.18433300000000002,
+          0.24901999999999996,
+          0.19264750000000003
+        ],
+        "write": [
+          0.7113115,
+          0.8922074999999999,
+          1.0939805000000002,
+          0.819731,
+          0.8051444999999999,
+          0.837165,
+          0.9724985,
+          0.8117885
+        ],
+        "read": [
+          0.294627,
+          0.111131,
+          0.334561,
+          0.088144,
+          0.3259795,
+          0.1002695,
+          0.235731,
+          0.08981099999999999
+        ],
+        "finish": [
+          -0.0007504999999999999,
+          -0.0008550000000000003,
+          -0.00018750000000000017,
+          -0.0010409999999999998,
+          -0.0006675000000000001,
+          -0.0010624999999999999,
+          -0.0002695000000000002,
+          -0.0007700000000000001
+        ],
+        "undo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "redo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "teardown": [
+          0.01627,
+          0.025,
+          0.10066699999999999,
+          0.0243335,
+          0.022103500000000005,
+          0.02402,
+          0.0321045,
+          0.022127
+        ],
+        "case_frame": [
+          0.016959500000000002,
+          0.02622450000000001,
+          0.0421875,
+          0.017688499999999996,
+          0.02325200000000001,
+          0.01683749999999999,
+          0.03631149999999999,
+          0.021104499999999998
+        ],
+        "tail_foreground": [
+          0.001042,
+          0.0011465,
+          0.0012504999999999999,
+          0.0008545000000000002,
+          0.0011884999999999999,
+          0.001104,
+          0.0023125,
+          0.0011049999999999999
+        ],
+        "observer_boundary_foreground": [
+          4.0499999999999954e-05,
+          0.0003119999999999998,
+          8.299999999999974e-05,
+          0.00024899999999999987,
+          0.0002695,
+          0.00014600000000000008,
+          0.0005420000000000002,
+          0.0003325000000000001
+        ],
+        "reclaimer": [
+          0.567,
+          0.5815,
+          0.6885,
+          0.522,
+          0.6245,
+          0.5395000000000001,
+          0.681,
+          0.538
+        ],
+        "monitor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pooler": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "swapper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unregistered_boundary": [
+          2.1000000000000023e-05,
+          -0.000479,
+          6.29999999999999e-05,
+          0.00075,
+          -0.00027,
+          -0.0013124999999999999,
+          0.00024950000000000005,
+          0.0008539999999999999
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 1.242979,
+        "mean": 1.342953,
+        "ci95": [
+          1.1381459999999999,
+          1.5282505
+        ],
+        "blocks": [
+          1.231979,
+          1.2539790000000002,
+          1.8809369999999999,
+          1.13325,
+          1.41427,
+          1.1628125,
+          1.5282505,
+          1.1381459999999999
+        ]
+      },
+      "process_extra_ms": {
+        "median": 1.8170000000000002,
+        "mean": 1.9356875000000002,
+        "ci95": [
+          1.677,
+          2.2095000000000002
+        ],
+        "blocks": [
+          1.7990000000000002,
+          1.835,
+          2.5695,
+          1.656,
+          2.0385000000000004,
+          1.701,
+          2.2095000000000002,
+          1.677
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    },
+    "3": {
+      "pages": 16,
+      "writes": 16,
+      "history": false,
+      "components_extra_mean_ms": {
+        "setup": 0.66770275,
+        "write": 6.2956216875,
+        "read": 1.7298775,
+        "finish": -0.0118590625,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.1944919375,
+        "case_frame": 0.03899075,
+        "tail_foreground": 0.0017186249999999999,
+        "observer_boundary_foreground": 0.00032331250000000003,
+        "reclaimer": 4.895375,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 6.999999999999998e-05
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.6912495,
+          0.6323124999999999,
+          0.6686865,
+          0.597687,
+          0.7423345,
+          0.6144785,
+          0.7856034999999999,
+          0.60927
+        ],
+        "write": [
+          6.238484999999999,
+          6.123929,
+          6.5462065,
+          5.9913940000000006,
+          6.264272,
+          6.051539,
+          7.2149165,
+          5.9342315
+        ],
+        "read": [
+          1.6916469999999997,
+          1.8013530000000002,
+          1.7159355,
+          1.6960600000000001,
+          1.7551224999999997,
+          1.628916,
+          1.8688770000000001,
+          1.6811089999999997
+        ],
+        "finish": [
+          -0.012103,
+          -0.012166,
+          -0.0117925,
+          -0.0116045,
+          -0.011541999999999998,
+          -0.012229,
+          -0.011186000000000001,
+          -0.012249499999999998
+        ],
+        "undo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "redo": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "teardown": [
+          0.1128545,
+          0.110874,
+          0.09808249999999998,
+          0.08470850000000002,
+          0.1267915,
+          0.096625,
+          0.8300415,
+          0.09595800000000002
+        ],
+        "case_frame": [
+          0.04359650000000004,
+          0.02975950000000005,
+          0.04325599999999996,
+          0.015692499999999998,
+          0.0474175,
+          0.012315999999999938,
+          0.09893549999999995,
+          0.02095250000000004
+        ],
+        "tail_foreground": [
+          0.0016664999999999996,
+          0.0016255,
+          0.0016245,
+          0.002375,
+          0.0015415,
+          0.0012915,
+          0.001604,
+          0.0020205
+        ],
+        "observer_boundary_foreground": [
+          0.0003130000000000001,
+          0.00020899999999999998,
+          0.00010550000000000012,
+          0.0003535000000000001,
+          0.0005214999999999998,
+          0.0002720000000000001,
+          0.00031250000000000006,
+          0.0004994999999999999
+        ],
+        "reclaimer": [
+          4.946,
+          5.0055,
+          4.8945,
+          4.7535,
+          5.0045,
+          4.756,
+          5.0485,
+          4.7545
+        ],
+        "monitor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pooler": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "swapper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unregistered_boundary": [
+          -0.0007090000000000001,
+          0.0011034999999999999,
+          0.0003955,
+          0.000334,
+          -0.000459,
+          0.000291,
+          -0.00010449999999999999,
+          -0.0002915
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 8.72780275,
+        "mean": 8.9168675,
+        "ci95": [
+          8.376666,
+          9.0621045
+        ],
+        "blocks": [
+          8.767709,
+          8.6878965,
+          9.0621045,
+          8.376666,
+          8.926459,
+          8.393208999999999,
+          10.789104499999999,
+          8.3317915
+        ]
+      },
+      "process_extra_ms": {
+        "median": 13.70375,
+        "mean": 13.8123125,
+        "ci95": [
+          13.1305,
+          13.957
+        ],
+        "blocks": [
+          13.713,
+          13.694500000000001,
+          13.957,
+          13.1305,
+          13.9305,
+          13.1495,
+          15.837499999999999,
+          13.086
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    },
+    "4": {
+      "pages": 1,
+      "writes": 1,
+      "history": true,
+      "components_extra_mean_ms": {
+        "setup": 0.225042,
+        "write": 0.036341250000000005,
+        "read": 0.012828500000000001,
+        "finish": 0.02815125,
+        "undo": 0.034979375,
+        "redo": 0.0280905,
+        "teardown": 0.0294008125,
+        "case_frame": 0.004246999999999999,
+        "tail_foreground": 0.0012941875,
+        "observer_boundary_foreground": 0.00031775,
+        "reclaimer": 0.1726875,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 0.00018237499999999997
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.2335215,
+          0.2081255,
+          0.21810499999999997,
+          0.20860399999999998,
+          0.2367075,
+          0.21672949999999996,
+          0.2695835,
+          0.20895950000000002
+        ],
+        "write": [
+          0.038564,
+          0.0347075,
+          0.036500500000000005,
+          0.0396035,
+          0.034166,
+          0.0312705,
+          0.042688000000000004,
+          0.03323
+        ],
+        "read": [
+          0.0169795,
+          0.0100015,
+          0.015209500000000003,
+          0.009646,
+          0.014541500000000002,
+          0.010479500000000001,
+          0.016082000000000003,
+          0.009688500000000001
+        ],
+        "finish": [
+          0.031021499999999997,
+          0.026292000000000003,
+          0.028105,
+          0.0254165,
+          0.030374,
+          0.02573,
+          0.032770499999999994,
+          0.025500500000000002
+        ],
+        "undo": [
+          0.042541499999999996,
+          0.0278135,
+          0.034584000000000004,
+          0.0324585,
+          0.039438,
+          0.035103,
+          0.043520500000000004,
+          0.024376
+        ],
+        "redo": [
+          0.031749000000000006,
+          0.02229,
+          0.0310195,
+          0.020521,
+          0.033229,
+          0.025415999999999998,
+          0.038040500000000005,
+          0.022459
+        ],
+        "teardown": [
+          0.031332500000000006,
+          0.030417,
+          0.026437500000000003,
+          0.0238945,
+          0.032187,
+          0.035896,
+          0.0319375,
+          0.0231045
+        ],
+        "case_frame": [
+          0.0052695,
+          0.0038524999999999983,
+          0.0032259999999999997,
+          0.004210499999999999,
+          0.0054395,
+          0.0033345000000000007,
+          0.006378,
+          0.0022654999999999967
+        ],
+        "tail_foreground": [
+          0.001229,
+          0.0011875,
+          0.0012085,
+          0.0016039999999999997,
+          0.0016875,
+          0.0011454999999999998,
+          0.0015,
+          0.0007914999999999999
+        ],
+        "observer_boundary_foreground": [
+          0.00025049999999999985,
+          0.00035400000000000015,
+          0.0001249999999999999,
+          0.00027150000000000004,
+          0.00043849999999999987,
+          0.0003325000000000001,
+          0.000541,
+          0.00022899999999999982
+        ],
+        "reclaimer": [
+          0.183,
+          0.152,
+          0.17149999999999999,
+          0.159,
+          0.183,
+          0.16799999999999998,
+          0.20400000000000001,
+          0.16099999999999998
+        ],
+        "monitor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pooler": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "swapper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unregistered_boundary": [
+          0.0005415,
+          0.000459,
+          -0.0005205,
+          -0.00023,
+          0.00029150000000000004,
+          6.300000000000001e-05,
+          -0.0005415,
+          0.0013959999999999999
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 0.38997875000000004,
+        "mean": 0.400692625,
+        "ci95": [
+          0.36504099999999995,
+          0.43245849999999997
+        ],
+        "blocks": [
+          0.43245849999999997,
+          0.36504099999999995,
+          0.39452050000000005,
+          0.36622999999999994,
+          0.4282085,
+          0.38543700000000003,
+          0.48304150000000007,
+          0.35060399999999997
+        ]
+      },
+      "process_extra_ms": {
+        "median": 0.5595000000000001,
+        "mean": 0.5735625,
+        "ci95": [
+          0.5175,
+          0.616
+        ],
+        "blocks": [
+          0.616,
+          0.5175,
+          0.5655,
+          0.525,
+          0.6115,
+          0.5535000000000001,
+          0.6865,
+          0.513
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    },
+    "5": {
+      "pages": 16,
+      "writes": 1,
+      "history": true,
+      "components_extra_mean_ms": {
+        "setup": 0.636091125,
+        "write": 0.2396434375,
+        "read": 0.0661850625,
+        "finish": 0.11702125,
+        "undo": 0.1327684375,
+        "redo": 0.09502287499999999,
+        "teardown": 0.1274529375,
+        "case_frame": 0.006650437500000004,
+        "tail_foreground": 0.00143475,
+        "observer_boundary_foreground": 0.00029493750000000006,
+        "reclaimer": 0.5251250000000001,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 0.00024725
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.6180835,
+          0.6131455,
+          0.6397075,
+          0.6020220000000001,
+          0.59925,
+          0.7495620000000001,
+          0.6444165000000001,
+          0.6225419999999999
+        ],
+        "write": [
+          0.22879299999999997,
+          0.22622950000000003,
+          0.2523955,
+          0.2414575,
+          0.22447949999999997,
+          0.2694175,
+          0.243729,
+          0.230646
+        ],
+        "read": [
+          0.069959,
+          0.05054199999999999,
+          0.080146,
+          0.058894999999999996,
+          0.06449949999999999,
+          0.075771,
+          0.0724795,
+          0.0571885
+        ],
+        "finish": [
+          0.106793,
+          0.1167495,
+          0.115291,
+          0.11725000000000001,
+          0.1017295,
+          0.14848,
+          0.11060499999999998,
+          0.119272
+        ],
+        "undo": [
+          0.128229,
+          0.12781349999999997,
+          0.1341875,
+          0.1255425,
+          0.142,
+          0.135605,
+          0.14279150000000002,
+          0.12597850000000002
+        ],
+        "redo": [
+          0.09045800000000001,
+          0.089228,
+          0.095333,
+          0.08470899999999999,
+          0.09735449999999998,
+          0.09422849999999999,
+          0.11837400000000001,
+          0.090498
+        ],
+        "teardown": [
+          0.14787550000000002,
+          0.09822949999999998,
+          0.11585500000000001,
+          0.143791,
+          0.08306199999999998,
+          0.175895,
+          0.1295625,
+          0.125353
+        ],
+        "case_frame": [
+          0.005808500000000008,
+          0.0013535000000000075,
+          0.009271500000000002,
+          0.008020000000000013,
+          0.005645499999999998,
+          0.0082285,
+          0.0084375,
+          0.0064385
+        ],
+        "tail_foreground": [
+          0.001062,
+          0.0012915,
+          0.0018960000000000001,
+          0.0012085,
+          0.0011045,
+          0.001604,
+          0.0019375,
+          0.0013739999999999998
+        ],
+        "observer_boundary_foreground": [
+          0.0004600000000000001,
+          0.00025149999999999977,
+          0.00014600000000000008,
+          0.0002710000000000002,
+          0.00043749999999999995,
+          0.00016700000000000005,
+          0.0002295000000000001,
+          0.000397
+        ],
+        "reclaimer": [
+          0.489,
+          0.5075000000000001,
+          0.525,
+          0.486,
+          0.5549999999999999,
+          0.5195000000000001,
+          0.595,
+          0.524
+        ],
+        "monitor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pooler": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "swapper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unregistered_boundary": [
+          0.00047850000000000003,
+          -0.00033399999999999993,
+          0.0007710000000000002,
+          0.00033350000000000003,
+          0.00043749999999999995,
+          4.149999999999998e-05,
+          0.0004375,
+          -0.00018749999999999995
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 1.3903439999999998,
+        "mean": 1.42256525,
+        "ci95": [
+          1.324834,
+          1.4725625
+        ],
+        "blocks": [
+          1.3975214999999999,
+          1.324834,
+          1.444229,
+          1.3831665,
+          1.3195625,
+          1.6589585,
+          1.4725625,
+          1.3796875000000002
+        ]
+      },
+      "process_extra_ms": {
+        "median": 1.8952499999999999,
+        "mean": 1.9479374999999999,
+        "ci95": [
+          1.8695,
+          2.0679999999999996
+        ],
+        "blocks": [
+          1.887,
+          1.8319999999999999,
+          1.9699999999999998,
+          1.8695,
+          1.875,
+          2.1785,
+          2.0679999999999996,
+          1.9034999999999997
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    },
+    "6": {
+      "pages": 1,
+      "writes": 16,
+      "history": true,
+      "components_extra_mean_ms": {
+        "setup": 0.23415906250000001,
+        "write": 0.6658513125,
+        "read": 0.127521875,
+        "finish": 0.0388795625,
+        "undo": 0.036706312500000005,
+        "redo": 0.030536437500000003,
+        "teardown": 0.031767875,
+        "case_frame": 0.025335375,
+        "tail_foreground": 0.0015234375,
+        "observer_boundary_foreground": 0.00032537500000000003,
+        "reclaimer": 0.572125,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 8.087500000000003e-05
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.21098,
+          0.2591875,
+          0.2268115,
+          0.23060499999999998,
+          0.21029249999999997,
+          0.2755205,
+          0.217479,
+          0.24239650000000004
+        ],
+        "write": [
+          0.62208,
+          0.6318735,
+          0.6494195,
+          0.6939585,
+          0.688018,
+          0.7325659999999999,
+          0.6265405000000001,
+          0.6823545
+        ],
+        "read": [
+          0.133066,
+          0.11123449999999999,
+          0.115563,
+          0.136851,
+          0.127894,
+          0.155023,
+          0.10744100000000001,
+          0.1331025
+        ],
+        "finish": [
+          0.033062499999999995,
+          0.038041,
+          0.0413105,
+          0.0437495,
+          0.036729,
+          0.045791,
+          0.03291549999999999,
+          0.0394375
+        ],
+        "undo": [
+          0.03227200000000001,
+          0.03862549999999999,
+          0.035749,
+          0.038501499999999994,
+          0.0345005,
+          0.044396500000000005,
+          0.027522,
+          0.0420835
+        ],
+        "redo": [
+          0.024125,
+          0.031144500000000006,
+          0.029458999999999996,
+          0.035208,
+          0.032396,
+          0.037584,
+          0.023188,
+          0.031187000000000006
+        ],
+        "teardown": [
+          0.024333,
+          0.0299995,
+          0.028061000000000003,
+          0.035188,
+          0.03187449999999999,
+          0.0433955,
+          0.022813,
+          0.038478500000000006
+        ],
+        "case_frame": [
+          0.020226999999999995,
+          0.021872500000000003,
+          0.023356000000000016,
+          0.032146999999999995,
+          0.022067000000000003,
+          0.03584899999999999,
+          0.017559000000000005,
+          0.029605499999999993
+        ],
+        "tail_foreground": [
+          0.0011245,
+          0.001271,
+          0.0012915000000000001,
+          0.002354,
+          0.0012714999999999998,
+          0.0021255,
+          0.001333,
+          0.0014165
+        ],
+        "observer_boundary_foreground": [
+          0.0003340000000000001,
+          0.0002499999999999998,
+          0.0003954999999999998,
+          0.0004165000000000002,
+          0.00041550000000000007,
+          0.00020750000000000022,
+          0.00018800000000000023,
+          0.0003960000000000001
+        ],
+        "reclaimer": [
+          0.5375,
+          0.5325,
+          0.5589999999999999,
+          0.5885,
+          0.5945,
+          0.6345000000000001,
+          0.538,
+          0.5925
+        ],
+        "monitor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pooler": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "swapper": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unregistered_boundary": [
+          0.000896,
+          -0.0009995,
+          8.350000000000002e-05,
+          0.001521,
+          -0.0009584999999999998,
+          4.149999999999998e-05,
+          2.1000000000000023e-05,
+          4.199999999999999e-05
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 1.1744789999999998,
+        "mean": 1.192606625,
+        "ci95": [
+          1.101604,
+          1.248979
+        ],
+        "blocks": [
+          1.101604,
+          1.1634995,
+          1.1514165,
+          1.248979,
+          1.1854585,
+          1.3724585,
+          1.0769790000000001,
+          1.2404579999999998
+        ]
+      },
+      "process_extra_ms": {
+        "median": 1.7447500000000002,
+        "mean": 1.7648125000000001,
+        "ci95": [
+          1.6400000000000001,
+          1.839
+        ],
+        "blocks": [
+          1.6400000000000001,
+          1.6950000000000003,
+          1.7105000000000001,
+          1.839,
+          1.7790000000000001,
+          2.0069999999999997,
+          1.6149999999999998,
+          1.8330000000000002
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    },
+    "7": {
+      "pages": 16,
+      "writes": 16,
+      "history": true,
+      "components_extra_mean_ms": {
+        "setup": 0.842932375,
+        "write": 4.6493506875,
+        "read": 1.6985946250000001,
+        "finish": 0.161551875,
+        "undo": 0.133557125,
+        "redo": 0.1027186875,
+        "teardown": 0.151221625,
+        "case_frame": 0.030820437499999992,
+        "tail_foreground": 0.001448,
+        "observer_boundary_foreground": 0.00047143749999999996,
+        "reclaimer": 4.1899375,
+        "monitor": 0.0023125,
+        "pooler": 0.0,
+        "swapper": -0.002875,
+        "unregistered_boundary": 0.0003331250000000003
+      },
+      "components_extra_blocks_ms": {
+        "setup": [
+          0.5948955,
+          1.071563,
+          0.620333,
+          1.221022,
+          0.5985415000000001,
+          0.9549380000000001,
+          0.6277495,
+          1.0544164999999999
+        ],
+        "write": [
+          4.499232000000001,
+          4.894171999999999,
+          4.504186,
+          4.670648000000001,
+          4.551691,
+          4.6448935,
+          4.5562735,
+          4.8737095
+        ],
+        "read": [
+          1.7230844999999997,
+          1.6914775,
+          1.7020675000000005,
+          1.6445214999999997,
+          1.6626230000000002,
+          1.630567,
+          1.7412310000000002,
+          1.7931849999999998
+        ],
+        "finish": [
+          0.1203755,
+          0.2188745,
+          0.127229,
+          0.17874949999999998,
+          0.1314365,
+          0.1829575,
+          0.1306875,
+          0.20210499999999998
+        ],
+        "undo": [
+          0.1188955,
+          0.1407915,
+          0.12972999999999998,
+          0.1415615,
+          0.123791,
+          0.1411035,
+          0.12937500000000002,
+          0.14320900000000003
+        ],
+        "redo": [
+          0.08606299999999999,
+          0.10772799999999999,
+          0.09010400000000002,
+          0.1176045,
+          0.084541,
+          0.1266255,
+          0.09458400000000002,
+          0.1144995
+        ],
+        "teardown": [
+          0.1657915,
+          0.158791,
+          0.14443850000000003,
+          0.186979,
+          0.0996675,
+          0.159042,
+          0.1328545,
+          0.162209
+        ],
+        "case_frame": [
+          0.007746000000000031,
+          0.05578950000000005,
+          0.0200785,
+          0.042497499999999966,
+          0.02058399999999999,
+          0.027414999999999967,
+          0.021160999999999985,
+          0.05129199999999995
+        ],
+        "tail_foreground": [
+          0.0010210000000000002,
+          0.0020415,
+          0.0011669999999999999,
+          0.0016039999999999995,
+          0.001146,
+          0.001584,
+          0.0015,
+          0.0015205000000000002
+        ],
+        "observer_boundary_foreground": [
+          0.0001250000000000001,
+          8.399999999999987e-05,
+          0.0002915000000000001,
+          0.0017294999999999993,
+          0.00016599999999999991,
+          0.0002909999999999996,
+          0.0004800000000000002,
+          0.0006045000000000004
+        ],
+        "reclaimer": [
+          4.035,
+          4.2755,
+          3.981,
+          4.2780000000000005,
+          4.1354999999999995,
+          4.1865,
+          4.2509999999999994,
+          4.377
+        ],
+        "monitor": [
+          0.0,
+          0.005,
+          0.0,
+          0.0055,
+          0.0,
+          0.004,
+          0.0,
+          0.004
+        ],
+        "pooler": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "swapper": [
+          0.0,
+          -0.0055,
+          0.0,
+          -0.006,
+          0.0,
+          -0.006499999999999999,
+          0.0,
+          -0.005000000000000001
+        ],
+        "unregistered_boundary": [
+          -0.0017295,
+          0.003187500000000001,
+          0.000375,
+          0.001583000000000001,
+          -0.0006875,
+          0.0020830000000000015,
+          -0.000896,
+          -0.0012505000000000016
+        ]
+      },
+      "foreground_extra_ms": {
+        "median": 7.6526565,
+        "mean": 7.7726668750000005,
+        "ci95": [
+          7.317229500000001,
+          8.3413125
+        ],
+        "blocks": [
+          7.317229500000001,
+          8.3413125,
+          7.339625,
+          8.206917,
+          7.2741875,
+          7.869416999999999,
+          7.4358960000000005,
+          8.3967505
+        ]
+      },
+      "process_extra_ms": {
+        "median": 11.87075,
+        "mean": 11.962375,
+        "ci95": [
+          11.3505,
+          12.619499999999999
+        ],
+        "blocks": [
+          11.3505,
+          12.619499999999999,
+          11.320999999999998,
+          12.486,
+          11.409,
+          12.055499999999999,
+          11.686,
+          12.7715
+        ]
+      },
+      "source": "net-ledger-r1/observations/results.json mode0 only"
+    }
+  },
+  "census": {
+    "0": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 16,
+          "descriptor_prepared": 12,
+          "metadata_default_created": 4,
+          "descriptor_installed": 12,
+          "binding_created": 8,
+          "rows": 8,
+          "provider_physical_registered": 8,
+          "provider_adopted": 8,
+          "owner_physical_installed": 8,
+          "owner_backing_installed": 8,
+          "metadata_version_created": 8,
+          "fresh_accepted": 8,
+          "proof_installed": 8,
+          "proof_revoked": 8,
+          "provider_retire": 8,
+          "provider_physical_released": 8,
+          "provider_allocation_removed": 8,
+          "free": 12,
+          "owner_backing_removed": 8,
+          "owner_physical_removed": 8,
+          "binding_destroyed": 8,
+          "metadata_default_removed": 4,
+          "descriptor_removed": 8,
+          "metadata_version_removed": 4,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 4,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 4,
+          "metadata_final_replicas": 4,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 16,
+              "descriptor_prepared": 12,
+              "metadata_default_created": 4,
+              "descriptor_installed": 12,
+              "binding_created": 8,
+              "rows": 8,
+              "provider_physical_registered": 8,
+              "provider_adopted": 8,
+              "owner_physical_installed": 8,
+              "owner_backing_installed": 8,
+              "metadata_version_created": 8,
+              "fresh_accepted": 8,
+              "proof_installed": 8,
+              "proof_revoked": 8,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 8,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "binding_destroyed": 4
+            },
+            "1": {
+              "metadata_default_removed": 4,
+              "descriptor_removed": 8,
+              "metadata_version_removed": 4,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 4,
+              "binding_destroyed": 4,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 16,
+              "descriptor_prepared": 12,
+              "metadata_default_created": 4,
+              "descriptor_installed": 12,
+              "binding_created": 8,
+              "rows": 8,
+              "provider_physical_registered": 8,
+              "provider_adopted": 8,
+              "owner_physical_installed": 8,
+              "owner_backing_installed": 8,
+              "metadata_version_created": 8,
+              "fresh_accepted": 8,
+              "proof_installed": 8,
+              "proof_revoked": 8,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 8,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "binding_destroyed": 4
+            },
+            "1": {
+              "metadata_default_removed": 4,
+              "descriptor_removed": 8,
+              "metadata_version_removed": 4,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 4,
+              "binding_destroyed": 4,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 0,
+      "terminal_balances_verified": true
+    },
+    "1": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 136,
+          "descriptor_prepared": 192,
+          "metadata_default_created": 64,
+          "descriptor_installed": 192,
+          "binding_created": 128,
+          "rows": 128,
+          "provider_physical_registered": 128,
+          "provider_adopted": 128,
+          "owner_physical_installed": 128,
+          "owner_backing_installed": 128,
+          "metadata_version_created": 128,
+          "fresh_accepted": 128,
+          "proof_installed": 128,
+          "proof_revoked": 128,
+          "provider_retire": 128,
+          "provider_physical_released": 128,
+          "provider_allocation_removed": 128,
+          "free": 132,
+          "owner_backing_removed": 128,
+          "owner_physical_removed": 128,
+          "binding_destroyed": 128,
+          "metadata_default_removed": 64,
+          "descriptor_removed": 128,
+          "metadata_version_removed": 64,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 64,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 64,
+          "metadata_final_replicas": 64,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 136,
+              "descriptor_prepared": 192,
+              "metadata_default_created": 64,
+              "descriptor_installed": 192,
+              "binding_created": 128,
+              "rows": 128,
+              "provider_physical_registered": 128,
+              "provider_adopted": 128,
+              "owner_physical_installed": 128,
+              "owner_backing_installed": 128,
+              "metadata_version_created": 128,
+              "fresh_accepted": 128,
+              "proof_installed": 128,
+              "proof_revoked": 128,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 68,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "binding_destroyed": 64
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 128,
+              "metadata_version_removed": 64,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 64,
+              "binding_destroyed": 64,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 136,
+              "descriptor_prepared": 192,
+              "metadata_default_created": 64,
+              "descriptor_installed": 192,
+              "binding_created": 128,
+              "rows": 128,
+              "provider_physical_registered": 128,
+              "provider_adopted": 128,
+              "owner_physical_installed": 128,
+              "owner_backing_installed": 128,
+              "metadata_version_created": 128,
+              "fresh_accepted": 128,
+              "proof_installed": 128,
+              "proof_revoked": 128,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 68,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "binding_destroyed": 64
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 128,
+              "metadata_version_removed": 64,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 64,
+              "binding_destroyed": 64,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 0,
+      "terminal_balances_verified": true
+    },
+    "2": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 76,
+          "descriptor_prepared": 72,
+          "metadata_default_created": 4,
+          "descriptor_installed": 72,
+          "binding_created": 68,
+          "rows": 68,
+          "provider_physical_registered": 68,
+          "provider_adopted": 68,
+          "owner_physical_installed": 68,
+          "owner_backing_installed": 68,
+          "metadata_version_created": 68,
+          "fresh_accepted": 68,
+          "proof_installed": 68,
+          "proof_revoked": 68,
+          "provider_retire": 68,
+          "provider_physical_released": 68,
+          "provider_allocation_removed": 68,
+          "free": 72,
+          "owner_backing_removed": 68,
+          "owner_physical_removed": 68,
+          "binding_destroyed": 68,
+          "metadata_default_removed": 4,
+          "descriptor_removed": 68,
+          "metadata_version_removed": 64,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 4,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 4,
+          "metadata_final_replicas": 4,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 76,
+              "descriptor_prepared": 72,
+              "metadata_default_created": 4,
+              "descriptor_installed": 72,
+              "binding_created": 68,
+              "rows": 68,
+              "provider_physical_registered": 68,
+              "provider_adopted": 68,
+              "owner_physical_installed": 68,
+              "owner_backing_installed": 68,
+              "metadata_version_created": 68,
+              "fresh_accepted": 68,
+              "proof_installed": 68,
+              "proof_revoked": 68,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 8,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "binding_destroyed": 4
+            },
+            "1": {
+              "metadata_default_removed": 4,
+              "descriptor_removed": 68,
+              "metadata_version_removed": 64,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 64,
+              "binding_destroyed": 64,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 76,
+              "descriptor_prepared": 72,
+              "metadata_default_created": 4,
+              "descriptor_installed": 72,
+              "binding_created": 68,
+              "rows": 68,
+              "provider_physical_registered": 68,
+              "provider_adopted": 68,
+              "owner_physical_installed": 68,
+              "owner_backing_installed": 68,
+              "metadata_version_created": 68,
+              "fresh_accepted": 68,
+              "proof_installed": 68,
+              "proof_revoked": 68,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 8,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "binding_destroyed": 4
+            },
+            "1": {
+              "metadata_default_removed": 4,
+              "descriptor_removed": 68,
+              "metadata_version_removed": 64,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 64,
+              "binding_destroyed": 64,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 60,
+      "terminal_balances_verified": true
+    },
+    "3": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 1096,
+          "descriptor_prepared": 1152,
+          "metadata_default_created": 64,
+          "descriptor_installed": 1152,
+          "binding_created": 1088,
+          "rows": 1088,
+          "provider_physical_registered": 1088,
+          "provider_adopted": 1088,
+          "owner_physical_installed": 1088,
+          "owner_backing_installed": 1088,
+          "metadata_version_created": 1088,
+          "fresh_accepted": 1088,
+          "proof_installed": 1088,
+          "proof_revoked": 1088,
+          "provider_retire": 1088,
+          "provider_physical_released": 1088,
+          "provider_allocation_removed": 1088,
+          "free": 1092,
+          "owner_backing_removed": 1088,
+          "owner_physical_removed": 1088,
+          "binding_destroyed": 1088,
+          "metadata_default_removed": 64,
+          "descriptor_removed": 1088,
+          "metadata_version_removed": 1024,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 64,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 64,
+          "metadata_final_replicas": 64,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 1096,
+              "descriptor_prepared": 1152,
+              "metadata_default_created": 64,
+              "descriptor_installed": 1152,
+              "binding_created": 1088,
+              "rows": 1088,
+              "provider_physical_registered": 1088,
+              "provider_adopted": 1088,
+              "owner_physical_installed": 1088,
+              "owner_backing_installed": 1088,
+              "metadata_version_created": 1088,
+              "fresh_accepted": 1088,
+              "proof_installed": 1088,
+              "proof_revoked": 1088,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 68,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "binding_destroyed": 64
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 1088,
+              "metadata_version_removed": 1024,
+              "provider_retire": 1024,
+              "provider_physical_released": 1024,
+              "provider_allocation_removed": 1024,
+              "free": 1024,
+              "binding_destroyed": 1024,
+              "owner_backing_removed": 1024,
+              "owner_physical_removed": 1024,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 1096,
+              "descriptor_prepared": 1152,
+              "metadata_default_created": 64,
+              "descriptor_installed": 1152,
+              "binding_created": 1088,
+              "rows": 1088,
+              "provider_physical_registered": 1088,
+              "provider_adopted": 1088,
+              "owner_physical_installed": 1088,
+              "owner_backing_installed": 1088,
+              "metadata_version_created": 1088,
+              "fresh_accepted": 1088,
+              "proof_installed": 1088,
+              "proof_revoked": 1088,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 68,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "binding_destroyed": 64
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 1088,
+              "metadata_version_removed": 1024,
+              "provider_retire": 1024,
+              "provider_physical_released": 1024,
+              "provider_allocation_removed": 1024,
+              "free": 1024,
+              "binding_destroyed": 1024,
+              "owner_backing_removed": 1024,
+              "owner_physical_removed": 1024,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 960,
+      "terminal_balances_verified": true
+    },
+    "4": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 16,
+          "descriptor_prepared": 12,
+          "metadata_default_created": 4,
+          "descriptor_installed": 12,
+          "binding_created": 8,
+          "rows": 8,
+          "provider_physical_registered": 8,
+          "provider_adopted": 8,
+          "owner_physical_installed": 8,
+          "owner_backing_installed": 8,
+          "metadata_version_created": 8,
+          "fresh_accepted": 8,
+          "proof_installed": 8,
+          "proof_revoked": 8,
+          "provider_retire": 8,
+          "provider_physical_released": 8,
+          "provider_allocation_removed": 8,
+          "free": 12,
+          "owner_backing_removed": 8,
+          "owner_physical_removed": 8,
+          "binding_destroyed": 8,
+          "metadata_default_removed": 4,
+          "descriptor_removed": 8,
+          "metadata_version_removed": 4,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 4,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 4,
+          "metadata_final_replicas": 4,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 16,
+              "descriptor_prepared": 12,
+              "metadata_default_created": 4,
+              "descriptor_installed": 12,
+              "binding_created": 8,
+              "rows": 8,
+              "provider_physical_registered": 8,
+              "provider_adopted": 8,
+              "owner_physical_installed": 8,
+              "owner_backing_installed": 8,
+              "metadata_version_created": 8,
+              "fresh_accepted": 8,
+              "proof_installed": 8,
+              "proof_revoked": 8,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 8,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "binding_destroyed": 4
+            },
+            "1": {
+              "metadata_default_removed": 4,
+              "descriptor_removed": 8,
+              "metadata_version_removed": 4,
+              "provider_retire": 4,
+              "provider_physical_released": 4,
+              "provider_allocation_removed": 4,
+              "free": 4,
+              "binding_destroyed": 4,
+              "owner_backing_removed": 4,
+              "owner_physical_removed": 4,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 16,
+              "descriptor_prepared": 12,
+              "metadata_default_created": 4,
+              "descriptor_installed": 12,
+              "binding_created": 8,
+              "rows": 8,
+              "provider_physical_registered": 8,
+              "provider_adopted": 8,
+              "owner_physical_installed": 8,
+              "owner_backing_installed": 8,
+              "metadata_version_created": 8,
+              "fresh_accepted": 8,
+              "proof_installed": 8,
+              "proof_revoked": 8,
+              "provider_retire": 8,
+              "provider_physical_released": 8,
+              "provider_allocation_removed": 8,
+              "free": 12,
+              "owner_backing_removed": 8,
+              "owner_physical_removed": 8,
+              "binding_destroyed": 8,
+              "metadata_version_removed": 4,
+              "descriptor_removed": 7,
+              "metadata_default_removed": 3
+            },
+            "1": {
+              "metadata_default_removed": 1,
+              "descriptor_removed": 1,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 0,
+      "terminal_balances_verified": true
+    },
+    "5": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 136,
+          "descriptor_prepared": 192,
+          "metadata_default_created": 64,
+          "descriptor_installed": 192,
+          "binding_created": 128,
+          "rows": 128,
+          "provider_physical_registered": 128,
+          "provider_adopted": 128,
+          "owner_physical_installed": 128,
+          "owner_backing_installed": 128,
+          "metadata_version_created": 128,
+          "fresh_accepted": 128,
+          "proof_installed": 128,
+          "proof_revoked": 128,
+          "provider_retire": 128,
+          "provider_physical_released": 128,
+          "provider_allocation_removed": 128,
+          "free": 132,
+          "owner_backing_removed": 128,
+          "owner_physical_removed": 128,
+          "binding_destroyed": 128,
+          "metadata_version_removed": 64,
+          "descriptor_removed": 128,
+          "metadata_default_removed": 64,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 64,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 64,
+          "metadata_final_replicas": 64,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 136,
+              "descriptor_prepared": 192,
+              "metadata_default_created": 64,
+              "descriptor_installed": 192,
+              "binding_created": 128,
+              "rows": 128,
+              "provider_physical_registered": 128,
+              "provider_adopted": 128,
+              "owner_physical_installed": 128,
+              "owner_backing_installed": 128,
+              "metadata_version_created": 128,
+              "fresh_accepted": 128,
+              "proof_installed": 128,
+              "proof_revoked": 128,
+              "provider_retire": 80,
+              "provider_physical_released": 80,
+              "provider_allocation_removed": 80,
+              "free": 84,
+              "owner_backing_removed": 80,
+              "owner_physical_removed": 80,
+              "binding_destroyed": 80,
+              "metadata_version_removed": 16,
+              "descriptor_removed": 16
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 112,
+              "metadata_version_removed": 48,
+              "provider_retire": 48,
+              "provider_physical_released": 48,
+              "provider_allocation_removed": 48,
+              "free": 48,
+              "binding_destroyed": 48,
+              "owner_backing_removed": 48,
+              "owner_physical_removed": 48,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 136,
+              "descriptor_prepared": 192,
+              "metadata_default_created": 64,
+              "descriptor_installed": 192,
+              "binding_created": 128,
+              "rows": 128,
+              "provider_physical_registered": 128,
+              "provider_adopted": 128,
+              "owner_physical_installed": 128,
+              "owner_backing_installed": 128,
+              "metadata_version_created": 128,
+              "fresh_accepted": 128,
+              "proof_installed": 128,
+              "proof_revoked": 128,
+              "provider_retire": 96,
+              "provider_physical_released": 96,
+              "provider_allocation_removed": 96,
+              "free": 100,
+              "owner_backing_removed": 96,
+              "owner_physical_removed": 96,
+              "binding_destroyed": 96,
+              "metadata_version_removed": 32,
+              "descriptor_removed": 32
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 96,
+              "metadata_version_removed": 32,
+              "provider_retire": 32,
+              "provider_physical_released": 32,
+              "provider_allocation_removed": 32,
+              "free": 32,
+              "binding_destroyed": 32,
+              "owner_backing_removed": 32,
+              "owner_physical_removed": 32,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 0,
+      "terminal_balances_verified": true
+    },
+    "6": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 76,
+          "descriptor_prepared": 72,
+          "metadata_default_created": 4,
+          "descriptor_installed": 72,
+          "binding_created": 68,
+          "rows": 68,
+          "provider_physical_registered": 68,
+          "provider_adopted": 68,
+          "owner_physical_installed": 68,
+          "owner_backing_installed": 68,
+          "metadata_version_created": 68,
+          "fresh_accepted": 68,
+          "proof_installed": 68,
+          "proof_revoked": 68,
+          "provider_retire": 68,
+          "provider_physical_released": 68,
+          "provider_allocation_removed": 68,
+          "free": 72,
+          "owner_backing_removed": 68,
+          "owner_physical_removed": 68,
+          "binding_destroyed": 68,
+          "metadata_version_removed": 64,
+          "descriptor_removed": 68,
+          "metadata_default_removed": 4,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 4,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 4,
+          "metadata_final_replicas": 4,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 8,
+          "free": 12
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 76,
+              "descriptor_prepared": 72,
+              "metadata_default_created": 4,
+              "descriptor_installed": 72,
+              "binding_created": 68,
+              "rows": 68,
+              "provider_physical_registered": 68,
+              "provider_adopted": 68,
+              "owner_physical_installed": 68,
+              "owner_backing_installed": 68,
+              "metadata_version_created": 68,
+              "fresh_accepted": 68,
+              "proof_installed": 68,
+              "proof_revoked": 68,
+              "provider_retire": 5,
+              "provider_physical_released": 5,
+              "provider_allocation_removed": 5,
+              "free": 9,
+              "owner_backing_removed": 5,
+              "owner_physical_removed": 5,
+              "binding_destroyed": 5,
+              "metadata_version_removed": 1,
+              "descriptor_removed": 1
+            },
+            "1": {
+              "metadata_default_removed": 4,
+              "descriptor_removed": 67,
+              "metadata_version_removed": 63,
+              "provider_retire": 63,
+              "provider_physical_released": 63,
+              "provider_allocation_removed": 63,
+              "free": 63,
+              "binding_destroyed": 63,
+              "owner_backing_removed": 63,
+              "owner_physical_removed": 63,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 76,
+              "descriptor_prepared": 72,
+              "metadata_default_created": 4,
+              "descriptor_installed": 72,
+              "binding_created": 68,
+              "rows": 68,
+              "provider_physical_registered": 68,
+              "provider_adopted": 68,
+              "owner_physical_installed": 68,
+              "owner_backing_installed": 68,
+              "metadata_version_created": 68,
+              "fresh_accepted": 68,
+              "proof_installed": 68,
+              "proof_revoked": 68,
+              "provider_retire": 5,
+              "provider_physical_released": 5,
+              "provider_allocation_removed": 5,
+              "free": 9,
+              "owner_backing_removed": 5,
+              "owner_physical_removed": 5,
+              "binding_destroyed": 5,
+              "metadata_version_removed": 1,
+              "descriptor_removed": 1
+            },
+            "1": {
+              "metadata_default_removed": 4,
+              "descriptor_removed": 67,
+              "metadata_version_removed": 63,
+              "provider_retire": 63,
+              "provider_physical_released": 63,
+              "provider_allocation_removed": 63,
+              "free": 63,
+              "binding_destroyed": 63,
+              "owner_backing_removed": 63,
+              "owner_physical_removed": 63,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 4,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 4,
+              "metadata_final_replicas": 4,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 8,
+              "free": 12
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 60,
+      "terminal_balances_verified": true
+    },
+    "7": {
+      "counts": {
+        "current": {
+          "alloc": 4,
+          "pending_ticket_issued": 1096,
+          "descriptor_prepared": 1152,
+          "metadata_default_created": 64,
+          "descriptor_installed": 1152,
+          "binding_created": 1088,
+          "rows": 1088,
+          "provider_physical_registered": 1088,
+          "provider_adopted": 1088,
+          "owner_physical_installed": 1088,
+          "owner_backing_installed": 1088,
+          "metadata_version_created": 1088,
+          "fresh_accepted": 1088,
+          "proof_installed": 1088,
+          "proof_revoked": 1088,
+          "provider_retire": 1088,
+          "provider_physical_released": 1088,
+          "provider_allocation_removed": 1088,
+          "free": 1092,
+          "owner_backing_removed": 1088,
+          "owner_physical_removed": 1088,
+          "binding_destroyed": 1088,
+          "metadata_version_removed": 1024,
+          "descriptor_removed": 1088,
+          "metadata_default_removed": 64,
+          "publication_destroy": 4,
+          "descriptor_final_nodes": 64,
+          "metadata_destroy": 4,
+          "metadata_final_versions": 64,
+          "metadata_final_replicas": 64,
+          "owner_destroy": 4,
+          "provider_destroy": 4
+        },
+        "upstream": {
+          "alloc": 4,
+          "duplicate": 128,
+          "free": 132
+        }
+      },
+      "role_observations": {
+        "current": [
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 1096,
+              "descriptor_prepared": 1152,
+              "metadata_default_created": 64,
+              "descriptor_installed": 1152,
+              "binding_created": 1088,
+              "rows": 1088,
+              "provider_physical_registered": 1088,
+              "provider_adopted": 1088,
+              "owner_physical_installed": 1088,
+              "owner_backing_installed": 1088,
+              "metadata_version_created": 1088,
+              "fresh_accepted": 1088,
+              "proof_installed": 1088,
+              "proof_revoked": 1088,
+              "provider_retire": 96,
+              "provider_physical_released": 96,
+              "provider_allocation_removed": 96,
+              "free": 100,
+              "owner_backing_removed": 96,
+              "owner_physical_removed": 96,
+              "binding_destroyed": 96,
+              "metadata_version_removed": 32,
+              "descriptor_removed": 32
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 1056,
+              "metadata_version_removed": 992,
+              "provider_retire": 992,
+              "provider_physical_released": 992,
+              "provider_allocation_removed": 992,
+              "free": 992,
+              "binding_destroyed": 992,
+              "owner_backing_removed": 992,
+              "owner_physical_removed": 992,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "pending_ticket_issued": 1096,
+              "descriptor_prepared": 1152,
+              "metadata_default_created": 64,
+              "descriptor_installed": 1152,
+              "binding_created": 1088,
+              "rows": 1088,
+              "provider_physical_registered": 1088,
+              "provider_adopted": 1088,
+              "owner_physical_installed": 1088,
+              "owner_backing_installed": 1088,
+              "metadata_version_created": 1088,
+              "fresh_accepted": 1088,
+              "proof_installed": 1088,
+              "proof_revoked": 1088,
+              "provider_retire": 64,
+              "provider_physical_released": 64,
+              "provider_allocation_removed": 64,
+              "free": 68,
+              "owner_backing_removed": 64,
+              "owner_physical_removed": 64,
+              "binding_destroyed": 64
+            },
+            "1": {
+              "metadata_default_removed": 64,
+              "descriptor_removed": 1088,
+              "metadata_version_removed": 1024,
+              "provider_retire": 1024,
+              "provider_physical_released": 1024,
+              "provider_allocation_removed": 1024,
+              "free": 1024,
+              "binding_destroyed": 1024,
+              "owner_backing_removed": 1024,
+              "owner_physical_removed": 1024,
+              "publication_destroy": 4,
+              "descriptor_final_nodes": 64,
+              "metadata_destroy": 4,
+              "metadata_final_versions": 64,
+              "metadata_final_replicas": 64,
+              "owner_destroy": 4,
+              "provider_destroy": 4
+            }
+          }
+        ],
+        "upstream": [
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          },
+          {
+            "0": {
+              "alloc": 4,
+              "duplicate": 128,
+              "free": 132
+            }
+          }
+        ]
+      },
+      "identical_totals_in_two_runs": true,
+      "physical_extra": 960,
+      "terminal_balances_verified": true
+    }
+  },
+  "flow_map": {
+    "input_operation": [
+      "T01.1",
+      "T01.2",
+      "T02.1",
+      "T02.2"
+    ],
+    "read_selection": [
+      "T06.1"
+    ],
+    "target_physical": [
+      "T03.1",
+      "T03.2",
+      "T03.3",
+      "T05.1",
+      "T05.2"
+    ],
+    "logical_identity": [
+      "T03.1",
+      "T04.1"
+    ],
+    "accept_publish": [
+      "T02.3",
+      "T02.4",
+      "T04.2",
+      "T04.3",
+      "T04.4",
+      "T04.5",
+      "T04.6"
+    ],
+    "adapter_delivery": [
+      "T01.3",
+      "T01.4",
+      "T04.7",
+      "T06.3"
+    ],
+    "read_terminal": [
+      "T06.1",
+      "T07.2"
+    ],
+    "history_restore": [
+      "T04.8",
+      "T04.9",
+      "T04.10"
+    ],
+    "enumerate_clone_import": [
+      "T04.11",
+      "T04.12",
+      "T06.2"
+    ],
+    "collection_retirement": [
+      "T07.2"
+    ],
+    "cancel_close": [
+      "T02.2",
+      "T07.1",
+      "T07.3"
+    ],
+    "evidence_controls": [
+      "T08.1",
+      "T08.2"
+    ]
+  },
+  "matrix_rows": 33,
+  "matrix_columns": 6,
+  "full_pipeline_data_complete": false,
+  "selected_optimal_design": null,
+  "new_optimization_implementation_authorized_by_this_audit": false,
+  "missing": [
+    "H1 qualified exclusive mechanism increment",
+    "Lock/ready/dispatch causal waits",
+    "Peak live/reserved bytes by real lifetime and pressure state",
+    "All production operation families performance coverage",
+    "Comparable lawful full-design counterfactuals and joint controls"
+  ],
+  "limits": [
+    "Same-batch arithmetic closure is not mechanism attribution.",
+    "Counters are baseline observations, no new time or net-price qualification.",
+    "Metadata/descriptor terminal records are counted separately from payload ownership.",
+    "No cross-batch subtraction, no conversion of counts to milliseconds or percentages of recoverable time."
+  ]
+}

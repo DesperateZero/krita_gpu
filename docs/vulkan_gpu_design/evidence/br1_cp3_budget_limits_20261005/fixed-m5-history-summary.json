@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "pairs": 40,
+      "independent_blocks": 20,
+      "median_completed_rates": {
+        "m5": 15489.766100940298,
+        "current": 18733.28045508239
+      },
+      "current_over_m5_throughput": 1.2062441079615944,
+      "one_sided_9875_lower": 1.1752678962146574,
+      "minimum_ratio": 0.98,
+      "passes_scoped_nonregression": true
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "pairs": 40,
+      "independent_blocks": 20,
+      "median_completed_rates": {
+        "m5": 2274.658948630874,
+        "current": 1762.9375351486706
+      },
+      "current_over_m5_throughput": 0.788362179053626,
+      "one_sided_9875_lower": 0.7715637460747,
+      "minimum_ratio": 0.98,
+      "passes_scoped_nonregression": false
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "pairs": 40,
+      "independent_blocks": 20,
+      "median_completed_rates": {
+        "m5": 11900.438422405525,
+        "current": 12768.201963980788
+      },
+      "current_over_m5_throughput": 1.062008125285933,
+      "one_sided_9875_lower": 1.0506156874886314,
+      "minimum_ratio": 0.98,
+      "passes_scoped_nonregression": true
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "pairs": 40,
+      "independent_blocks": 20,
+      "median_completed_rates": {
+        "m5": 1428.6286143492994,
+        "current": 1153.3376877265127
+      },
+      "current_over_m5_throughput": 0.8048329926199954,
+      "one_sided_9875_lower": 0.7845972984405242,
+      "minimum_ratio": 0.98,
+      "passes_scoped_nonregression": false
+    }
+  ],
+  "scoped_family_pass": false,
+  "protocol_sha256": "c611be2941b5221ded5168c7f2f770868cddbe51c9e6b037c8daa5da1c0bcddb",
+  "inputs_verified": true,
+  "qualification": "Fixed5173 same-dependency public full-payload/history control; same external source on each tree; full M6/CP0 gates remain separate"
+}

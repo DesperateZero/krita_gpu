@@ -212,6 +212,16 @@ session begin stroke/view operation 时获取不可变 capability descriptor：
 
 operation 期间 capability 不原地改变。device/pipeline generation 变化创建新 descriptor/session epoch。
 
+capability 只回答该 backend 是否能正确执行，不能单独决定产品 route。stroke/evaluation operation 还必须在首次写入前获取
+与当前设备、格式、brush、page-count、queue/residency、功耗/温控状态匹配的不可变 performance profile snapshot，并记录
+`CpuETA`、`AcceleratorETA`、置信区间、risk margin 与 `AutoPreferred`。CPU 基线必须是同机启用产品 SIMD/线程优化的真实
+CPU 路径，不能用 scalar reference、GPU timestamp、零拷贝或“设备可用”代替。具体模型和门禁见
+[39_virtual_texture_performance_gates.md](39_virtual_texture_performance_gates.md)。
+
+route 在 operation 首次写入前冻结，当前 operation 不因中途 profile 更新而逐页/逐 dab 切换；新测量只能影响下一 operation。
+profile 缺失、过期、置信不足，或 GPU/UMA 相对 CPU 没有规定的收益余量时，session 仍可保持 correctness-supported，但产品
+route 必须选择 CPU。强制 accelerator 只允许诊断，不得伪装成 Auto 产品结果。
+
 ## 10. 实现路线
 
 ### DS0：Core interface

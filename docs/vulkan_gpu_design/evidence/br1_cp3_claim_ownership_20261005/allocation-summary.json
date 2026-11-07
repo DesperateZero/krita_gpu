@@ -1,0 +1,384 @@
+{
+  "scope": "Same-ABI parent/current external audited-thread malloc-family requests; begin/write/seal/commit; all128 retained. Native payload independently validated; not complete metadata residency or runtime gate.",
+  "parent": "5086aa6ef92e81575eca58e6862d411a593cfb7c",
+  "processes": 16,
+  "samples": 128,
+  "buckets": [
+    {
+      "architecture": "arm64",
+      "variant": "fresh",
+      "K": 1,
+      "parent": {
+        "first": {
+          "allocations": 64,
+          "allocation_bytes": 16088,
+          "frees": 36
+        },
+        "all_ranges": {
+          "allocations": [
+            64,
+            64
+          ],
+          "allocation_bytes": [
+            16088,
+            16088
+          ],
+          "frees": [
+            36,
+            37
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 61,
+          "allocation_bytes": 15944,
+          "frees": 34
+        },
+        "all_ranges": {
+          "allocations": [
+            61,
+            61
+          ],
+          "allocation_bytes": [
+            15944,
+            15944
+          ],
+          "frees": [
+            34,
+            35
+          ]
+        }
+      }
+    },
+    {
+      "architecture": "arm64",
+      "variant": "fresh",
+      "K": 16,
+      "parent": {
+        "first": {
+          "allocations": 624,
+          "allocation_bytes": 200176,
+          "frees": 303
+        },
+        "all_ranges": {
+          "allocations": [
+            624,
+            624
+          ],
+          "allocation_bytes": [
+            200176,
+            200176
+          ],
+          "frees": [
+            303,
+            319
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 591,
+          "allocation_bytes": 198352,
+          "frees": 271
+        },
+        "all_ranges": {
+          "allocations": [
+            591,
+            591
+          ],
+          "allocation_bytes": [
+            198352,
+            198352
+          ],
+          "frees": [
+            271,
+            287
+          ]
+        }
+      }
+    },
+    {
+      "architecture": "arm64",
+      "variant": "handoff",
+      "K": 1,
+      "parent": {
+        "first": {
+          "allocations": 56,
+          "allocation_bytes": 17200,
+          "frees": 41
+        },
+        "all_ranges": {
+          "allocations": [
+            56,
+            56
+          ],
+          "allocation_bytes": [
+            17200,
+            17200
+          ],
+          "frees": [
+            41,
+            41
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 53,
+          "allocation_bytes": 17024,
+          "frees": 38
+        },
+        "all_ranges": {
+          "allocations": [
+            53,
+            53
+          ],
+          "allocation_bytes": [
+            17024,
+            17024
+          ],
+          "frees": [
+            38,
+            38
+          ]
+        }
+      }
+    },
+    {
+      "architecture": "arm64",
+      "variant": "handoff",
+      "K": 16,
+      "parent": {
+        "first": {
+          "allocations": 468,
+          "allocation_bytes": 226720,
+          "frees": 355
+        },
+        "all_ranges": {
+          "allocations": [
+            468,
+            468
+          ],
+          "allocation_bytes": [
+            226720,
+            226720
+          ],
+          "frees": [
+            355,
+            355
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 419,
+          "allocation_bytes": 224128,
+          "frees": 306
+        },
+        "all_ranges": {
+          "allocations": [
+            419,
+            419
+          ],
+          "allocation_bytes": [
+            224128,
+            224128
+          ],
+          "frees": [
+            306,
+            306
+          ]
+        }
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "fresh",
+      "K": 1,
+      "parent": {
+        "first": {
+          "allocations": 64,
+          "allocation_bytes": 16088,
+          "frees": 36
+        },
+        "all_ranges": {
+          "allocations": [
+            64,
+            64
+          ],
+          "allocation_bytes": [
+            16088,
+            16088
+          ],
+          "frees": [
+            36,
+            37
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 61,
+          "allocation_bytes": 15944,
+          "frees": 34
+        },
+        "all_ranges": {
+          "allocations": [
+            61,
+            61
+          ],
+          "allocation_bytes": [
+            15944,
+            15944
+          ],
+          "frees": [
+            34,
+            35
+          ]
+        }
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "fresh",
+      "K": 16,
+      "parent": {
+        "first": {
+          "allocations": 624,
+          "allocation_bytes": 200176,
+          "frees": 303
+        },
+        "all_ranges": {
+          "allocations": [
+            624,
+            624
+          ],
+          "allocation_bytes": [
+            200176,
+            200176
+          ],
+          "frees": [
+            303,
+            319
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 591,
+          "allocation_bytes": 198352,
+          "frees": 271
+        },
+        "all_ranges": {
+          "allocations": [
+            591,
+            591
+          ],
+          "allocation_bytes": [
+            198352,
+            198352
+          ],
+          "frees": [
+            271,
+            287
+          ]
+        }
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "handoff",
+      "K": 1,
+      "parent": {
+        "first": {
+          "allocations": 56,
+          "allocation_bytes": 17200,
+          "frees": 41
+        },
+        "all_ranges": {
+          "allocations": [
+            56,
+            56
+          ],
+          "allocation_bytes": [
+            17200,
+            17200
+          ],
+          "frees": [
+            41,
+            41
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 53,
+          "allocation_bytes": 17024,
+          "frees": 38
+        },
+        "all_ranges": {
+          "allocations": [
+            53,
+            53
+          ],
+          "allocation_bytes": [
+            17024,
+            17024
+          ],
+          "frees": [
+            38,
+            38
+          ]
+        }
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "variant": "handoff",
+      "K": 16,
+      "parent": {
+        "first": {
+          "allocations": 468,
+          "allocation_bytes": 226720,
+          "frees": 355
+        },
+        "all_ranges": {
+          "allocations": [
+            468,
+            468
+          ],
+          "allocation_bytes": [
+            226720,
+            226720
+          ],
+          "frees": [
+            355,
+            355
+          ]
+        }
+      },
+      "current": {
+        "first": {
+          "allocations": 419,
+          "allocation_bytes": 224128,
+          "frees": 306
+        },
+        "all_ranges": {
+          "allocations": [
+            419,
+            419
+          ],
+          "allocation_bytes": [
+            224128,
+            224128
+          ],
+          "frees": [
+            306,
+            306
+          ]
+        }
+      }
+    }
+  ]
+}

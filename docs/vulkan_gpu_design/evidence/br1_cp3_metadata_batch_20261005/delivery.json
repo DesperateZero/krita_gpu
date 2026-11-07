@@ -1,0 +1,29 @@
+{
+  "product_commit": "864627f95737c62fe79da87677c8f4b0ab44c55a",
+  "product_parent": "84b5d5aad9f4c0c890ea2fc6dd5fb92548111524",
+  "product_paths": [
+    "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp"
+  ],
+  "production_insertions": 10,
+  "production_deletions": 14,
+  "test_insertions": 127,
+  "test_deletions": 3,
+  "numstat": [
+    "9\t11\tbuild-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "9182\t8878\tbuild-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "10\t14\tlibs/image/pagestore/KisPageMetadataCoordinator.cpp",
+    "16\t3\tlibs/image/tests/KisPageStoreCpuMutationTest.cpp",
+    "111\t0\tlibs/image/tests/KisPageStoreReferenceTest.cpp"
+  ],
+  "patch_sha256": "8067a3aa2d1744d5756b6cdfbd0a96e40c2651dd5ed29039f780915a223dd540",
+  "qualification": "Original accepted metadata batch responsibility/safety closed; complete CP3/M6/M7/M8 and BR1-PERF require actual statistical/residency/CP0 gates",
+  "scopes": {
+    "fixed_m5_fresh": "K1 both pass;K16 both fail",
+    "fixed_m5_history": "Four buckets and scoped family pass",
+    "current_handoff": "All four thresholds fail"
+  }
+}

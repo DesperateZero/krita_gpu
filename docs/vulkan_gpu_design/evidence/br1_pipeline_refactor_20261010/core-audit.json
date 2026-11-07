@@ -1,0 +1,335 @@
+{
+  "base": "8198c36ed722030edae715b7423554036bf1bcf7",
+  "core": "3f2826d4647b75a49488ad88b8f499d214af62f3",
+  "source_diff_sha256": "6b7f862bc7a88feb1f7efd030bfd69d60945182e696cbd52a2731116265032c1",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    }
+  },
+  "passed_total": 7270,
+  "counts": {
+    "parent": [
+      {
+        "case": 0,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 4,
+          "foreground_sequences": 8,
+          "foreground_version_inputs": 12,
+          "fresh": 4,
+          "pages_sealed": 4,
+          "write_pins": 4,
+          "write_unpins": 4
+        }
+      },
+      {
+        "case": 1,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 128,
+          "foreground_version_inputs": 192,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 64,
+          "write_unpins": 64
+        }
+      },
+      {
+        "case": 2,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 128,
+          "foreground_version_inputs": 192,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 64,
+          "write_unpins": 64
+        }
+      },
+      {
+        "case": 3,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 1024,
+          "foreground_sequences": 2048,
+          "foreground_version_inputs": 3072,
+          "fresh": 1024,
+          "pages_sealed": 1024,
+          "write_pins": 1024,
+          "write_unpins": 1024
+        }
+      },
+      {
+        "case": 4,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 4,
+          "foreground_sequences": 16,
+          "foreground_version_inputs": 12,
+          "fresh": 4,
+          "pages_sealed": 4,
+          "write_pins": 4,
+          "write_unpins": 4
+        }
+      },
+      {
+        "case": 5,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 256,
+          "foreground_version_inputs": 192,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 64,
+          "write_unpins": 64
+        }
+      },
+      {
+        "case": 6,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 376,
+          "foreground_version_inputs": 192,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 64,
+          "write_unpins": 64
+        }
+      },
+      {
+        "case": 7,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 1024,
+          "foreground_sequences": 6016,
+          "foreground_version_inputs": 3072,
+          "fresh": 1024,
+          "pages_sealed": 1024,
+          "write_pins": 1024,
+          "write_unpins": 1024
+        }
+      }
+    ],
+    "new": [
+      {
+        "case": 0,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 4,
+          "foreground_sequences": 4,
+          "foreground_version_inputs": 4,
+          "fresh": 4,
+          "pages_sealed": 4,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      },
+      {
+        "case": 1,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 64,
+          "foreground_version_inputs": 64,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      },
+      {
+        "case": 2,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 64,
+          "foreground_version_inputs": 64,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      },
+      {
+        "case": 3,
+        "history": false,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 1024,
+          "foreground_sequences": 1024,
+          "foreground_version_inputs": 1024,
+          "fresh": 1024,
+          "pages_sealed": 1024,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      },
+      {
+        "case": 4,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 4,
+          "foreground_sequences": 12,
+          "foreground_version_inputs": 4,
+          "fresh": 4,
+          "pages_sealed": 4,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      },
+      {
+        "case": 5,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 1,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 192,
+          "foreground_version_inputs": 64,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      },
+      {
+        "case": 6,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 1,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 64,
+          "foreground_sequences": 312,
+          "foreground_version_inputs": 64,
+          "fresh": 64,
+          "pages_sealed": 64,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      },
+      {
+        "case": 7,
+        "history": true,
+        "lifetimes": 4,
+        "pages": 16,
+        "writes": 16,
+        "mechanism": {
+          "foreground_installs": 1024,
+          "foreground_sequences": 4992,
+          "foreground_version_inputs": 1024,
+          "fresh": 1024,
+          "pages_sealed": 1024,
+          "write_pins": 0,
+          "write_unpins": 0
+        }
+      }
+    ]
+  },
+  "old_symbols_absent": true,
+  "numstat": [
+    "324\t197\tlibs/image/pagestore/KisPageStore.cpp",
+    "4\t2\tlibs/image/pagestore/KisPageStore.h",
+    "37\t14\tlibs/image/pagestore/KisPageWriteCoordinator.cpp",
+    "15\t4\tlibs/image/pagestore/KisPageWriteCoordinator_p.h",
+    "3\t3\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+    "179\t4\tlibs/image/tests/KisPageStoreCpuMutationTest.cpp",
+    "9\t5\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.cpp"
+  ],
+  "source_hashes": {
+    "libs/image/pagestore/KisPageStore.cpp": "0cc2552f1d634b230b1c0fa8cf46d939071c15fcca4115cf0fa89f6a66cbe8a8",
+    "libs/image/pagestore/KisPageStore.h": "ee7af5372e97a7d59b8288d5990923bdabfa81d9b3660d9f0beb93c43ccc71a6",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "02f75d03d47e948dbe2cfc06ca58f449d4894fe3536bb22a06563c3f26c88cd3",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "4d9ab0d64e001cd8dbe7e2aae11e1b85587674628d331a044d884099185f933c",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "233cbe0560db5cbae0aaae4c2b039d7cb867e9a205c1f9f18e9573af5b1a01ca",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "be8bd4f2ed0963e6096c92d322250ff289d5f611dfeaabf38fd92b0aa53a0f85",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "c5925d20780fb69c1d1b245854fb8ca58559b8e17d47f60062e82808b436c94f"
+  },
+  "limits": "Mechanism and safety only. No uninstrumented time claim; full blueprint remains open."
+}

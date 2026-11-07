@@ -1,0 +1,80 @@
+[
+  {
+    "index": 0,
+    "phase": "lowreuse",
+    "arch": "arm64",
+    "pattern": 0,
+    "pair": 0,
+    "block": 0,
+    "side": "parent",
+    "persistent": 0,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/parent-bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/low-reuse-arm64/probe",
+      "0"
+    ],
+    "pid": 67330,
+    "actual_exit": 0,
+    "reaped": true,
+    "timed_out": false,
+    "loading_ok": true,
+    "passed": true,
+    "sample": {
+      "F": 16,
+      "P": 1,
+      "R": 1,
+      "correctness": true,
+      "loop_ns": 4760292,
+      "operations": 256,
+      "pattern": 0,
+      "sha256": "c6395070a5405168256d02e85a7da608a841cf245a2d4b46c9681af2e98eb756"
+    },
+    "visits": [],
+    "holds": [],
+    "snapshots": [],
+    "seconds": 1.812294542
+  },
+  {
+    "index": 1,
+    "phase": "lowreuse",
+    "arch": "arm64",
+    "pattern": 0,
+    "pair": 0,
+    "block": 0,
+    "side": "candidate",
+    "persistent": 0,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/low-reuse-arm64/probe",
+      "0"
+    ],
+    "pid": 67343,
+    "actual_exit": 0,
+    "reaped": true,
+    "timed_out": false,
+    "loading_ok": true,
+    "passed": false,
+    "sample": {
+      "F": 16,
+      "P": 1,
+      "R": 1,
+      "correctness": true,
+      "loop_ns": 5078500,
+      "operations": 256,
+      "pattern": 0,
+      "sha256": "e680d05b64fa4fc91bf2ad464059d73cc6c9c7e4f69a08eb7ffbdf4e169006fa"
+    },
+    "visits": [],
+    "holds": [],
+    "snapshots": [],
+    "seconds": 0.31731795900000015
+  }
+]

@@ -1,0 +1,67 @@
+ninja: Entering directory `krita/_build-br0-cpu'
+[1/26] Automatic MOC for target kritaimage
+[2/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/kis_random_accessor.cc.o
+[3/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/kis_vline_iterator.cpp.o
+[4/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/kis_hline_iterator.cpp.o
+[5/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/kis_tiled_data_manager.cc.o
+[6/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/swap/kis_abstract_tile_compressor.cpp.o
+[7/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/swap/kis_legacy_tile_compressor.cpp.o
+[8/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/swap/kis_tile_compressor_2.cpp.o
+[9/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/pagestore/KisTiledDataManagerPageStoreBackend.cpp.o
+[10/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/pagestore/KisPageMetadataCoordinator.cpp.o
+[11/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/tiles3/swap/kis_swapped_data_store.cpp.o
+[12/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/kis_wrapped_random_accessor.cpp.o
+[13/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/brushengine/kis_paintop.cc.o
+[14/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/kis_convolution_painter.cc.o
+[15/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/kis_transaction_data.cpp.o
+[16/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/kis_warptransform_worker.cc.o
+[17/25] Building CXX object libs/image/CMakeFiles/kritaimage.dir/kis_paint_device.cc.o
+[18/25] Linking CXX shared library bin/libkritaimage.21.0.0.dylib
+ld: warning: -single_module is obsolete
+ld: warning: -multiply_defined is obsolete
+ld: warning: -single_module is obsolete
+ld: warning: -multiply_defined is obsolete
+[19/25] Creating library symlink bin/libkritaimage.21.dylib bin/libkritaimage.dylib
+[20/25] Automatic MOC for target KisPageStoreReferenceTest
+[21/24] Building CXX object libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o
+[22/24] Linking CXX executable bin/kis_tiled_data_manager_test
+[23/24] Building CXX object libs/image/tests/CMakeFiles/KisPageStoreReferenceTest.dir/KisPageStoreReferenceTest.cpp.o
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:1584:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 1584 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:1662:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 1662 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:1762:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 1762 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:2566:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 2566 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:4224:53: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 4224 |                                       transaction.id});
+      |                                                     ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:4658:37: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 4658 |                                tx.id});
+      |                                     ^
+6 warnings generated.
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:1584:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 1584 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:1662:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 1662 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:1762:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 1762 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:2566:45: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 2566 |                               transaction.id});
+      |                                             ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:4224:53: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 4224 |                                       transaction.id});
+      |                                                     ^
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:4658:37: warning: missing field 'capturedReadViews' initializer [-Wmissing-field-initializers]
+ 4658 |                                tx.id});
+      |                                     ^
+6 warnings generated.
+[24/24] Linking CXX executable bin/KisPageStoreReferenceTest

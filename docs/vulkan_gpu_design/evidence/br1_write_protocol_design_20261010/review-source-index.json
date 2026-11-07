@@ -1,0 +1,418 @@
+{
+  "active_product": "8198c36ed722030edae715b7423554036bf1bcf7",
+  "review_outer_parent": "ec94fc52b",
+  "scope": "Static soundness/deletion specification. Product changes/tests/performance samples: zero.",
+  "inherited_index": {
+    "file": "expanded-source-index.json",
+    "sha256": "88030002678323dde6f5bdbe96442f10a14686a3836a386fcf4c0c2f2272d71e",
+    "source_hashes_verified": 41
+  },
+  "source_hashes_for_review": {
+    "libs/image/3rdparty/lock_free_map/concurrent_map.h": "e1e11ade7b22be0c0ba8af1cbd8895548a54f604c4416dd9209fa6ae3f6cf224",
+    "libs/image/pagestore/KisImageEpochReferenceModel.cpp": "1332550b428e8c96370df22e7c70e6d3a5ccbc45f79f3e73b23fb056fb4a5076",
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp": "6a2b52d5780609e28f76a5dde6570a5dd8629de84bf70a8a0fa6447ea4903c74",
+    "libs/image/pagestore/KisPageStateMachine.cpp": "6d446c55a22cd029771b4b8608c6244aacaee2378f45287b760e41216d5f1105",
+    "libs/image/pagestore/KisPageStore.cpp": "447715516129afa0e0ac749bab607f83d08ebf737bc594ed56c433a2b50398c0",
+    "libs/image/pagestore/KisPageStoreMementoManager.cpp": "92b3a397c87c368a58d7413e0d840bb7259e2bbcc8438c9141562b005b1531af",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "6a6b9159d4a242cb944ced6f40eb24a013821c09be69d44e370c1d05f27a448b",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "17ef9529545e4ea0b355e325a10d983147f36c66a72e87da7dcd9008c99742fa",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "d682a1c8b87b533baa91fb4d7830465943825791ab9098adc7aa8c5181ee388f",
+    "libs/image/tiles3/kis_tile_hash_table2.h": "7736ea4b57e55549be0a635431415914fc33ae9589603a1afcca016245b903b7",
+    "libs/image/tiles3/kis_tile_hash_table_p.h": "ea3b62cb126697736aedb5d3b2df10fa7c1eb5f7bf1629148b2b10a050aa3b46",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "3c4b51d952547c01833435af5baf5b24b5e4ed082e879fec5aeb9638d66ad0f4",
+    "libs/image/tiles3/kis_tiled_data_manager.h": "a798a315a7873b171ce65ec7b7513df13ef11fed9ab38188532f16b276c20563",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "f9f24d2e3303f0d6875def3d8fc10949c3204ac099359d8a0609513bd41e22f8"
+  },
+  "matrix_ids": [
+    "T01.1",
+    "T01.2",
+    "T01.3",
+    "T01.4",
+    "T02.1",
+    "T02.2",
+    "T02.3",
+    "T02.4",
+    "T03.1",
+    "T03.2",
+    "T03.3",
+    "T04.1",
+    "T04.2",
+    "T04.3",
+    "T04.4",
+    "T04.5",
+    "T04.6",
+    "T04.7",
+    "T04.8",
+    "T04.9",
+    "T04.10",
+    "T04.11",
+    "T04.12",
+    "T05.1",
+    "T05.2",
+    "T06.1",
+    "T06.2",
+    "T06.3",
+    "T07.1",
+    "T07.2",
+    "T07.3",
+    "T08.1",
+    "T08.2"
+  ],
+  "review_anchors": [
+    {
+      "indices": [
+        "T04.1",
+        "T04.2"
+      ],
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "needle": "bool prepareAliasLocked(",
+          "lines": [
+            1115
+          ]
+        },
+        {
+          "needle": "KisPageMutationSession::sealImpl(",
+          "lines": [
+            2355
+          ]
+        },
+        {
+          "needle": "if (page && !page->writable.isValid()) return true",
+          "lines": [
+            1134
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.1",
+        "T07.1"
+      ],
+      "file": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "anchors": [
+        {
+          "needle": "KisPageWriteCoordinator::recordPrepared(",
+          "lines": [
+            3079
+          ]
+        },
+        {
+          "needle": "KisPageWriteCoordinator::recordCancelled(",
+          "lines": [
+            3095
+          ]
+        },
+        {
+          "needle": "KisPageWriteCoordinator::recordExposure(",
+          "lines": [
+            3105
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.1"
+      ],
+      "file": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "anchors": [
+        {
+          "needle": "enum class KisMutationPageEntryState",
+          "lines": [
+            72
+          ]
+        },
+        {
+          "needle": "initializationSource() const",
+          "lines": [
+            412
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.2"
+      ],
+      "file": "libs/image/pagestore/KisPageStateMachine.cpp",
+      "anchors": [
+        {
+          "needle": "case KisPageTransitionKind::ReplacePrivatePreparedBacking:",
+          "lines": [
+            907
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T03.3",
+        "T04.3"
+      ],
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "needle": "KisPageStore::finishWrite(",
+          "lines": [
+            4642
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.3",
+        "T04.6"
+      ],
+      "file": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "anchors": [
+        {
+          "needle": "KisPreparedOverlayUpdate::collectRetirementsLocked(",
+          "lines": [
+            451
+          ]
+        },
+        {
+          "needle": "KisPagePublicationCoordinator::stagePageRemovalLocked(",
+          "lines": [
+            797
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.8",
+        "T04.10"
+      ],
+      "file": "libs/image/pagestore/KisPageStoreMementoManager.cpp",
+      "anchors": [
+        {
+          "needle": "KisPageStoreMementoManager::restore(",
+          "lines": [
+            372
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.9",
+        "T04.10"
+      ],
+      "file": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "anchors": [
+        {
+          "needle": "KisPagePublicationCoordinator::restoreRetainedEpochLocked(",
+          "lines": [
+            1178
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.9",
+        "T04.10"
+      ],
+      "file": "libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+      "anchors": [
+        {
+          "needle": "KisImageEpochReferenceModel::prepareRestore(",
+          "lines": [
+            1368
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.10"
+      ],
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "needle": "KisTiledDataManagerPageStoreBackend::restoreHistory(",
+          "lines": [
+            1916
+          ]
+        },
+        {
+          "needle": "trim requires adapter delivery to finish",
+          "lines": [
+            2603
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.7"
+      ],
+      "file": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "anchors": [
+        {
+          "needle": "class PreparedTileUpdates",
+          "lines": [
+            66
+          ]
+        },
+        {
+          "needle": "Prepared compatibility tile is unavailable",
+          "lines": [
+            126
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.7"
+      ],
+      "file": "libs/image/tiles3/kis_tile_hash_table_p.h",
+      "anchors": [
+        {
+          "needle": "KisTileHashTableTraits<T>::installPreparedTile(",
+          "lines": [
+            251
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.7"
+      ],
+      "file": "libs/image/tiles3/kis_tile_hash_table2.h",
+      "anchors": [
+        {
+          "needle": "KisTileHashTableTraits2<T>::installPreparedTile(",
+          "lines": [
+            484
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.7"
+      ],
+      "file": "libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "anchors": [
+        {
+          "needle": "bool belongsTo(const ConcurrentMap &map)",
+          "lines": [
+            267
+          ]
+        },
+        {
+          "needle": "Result replace(Value desired, bool onlyIfAbsent)",
+          "lines": [
+            287
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T04.12"
+      ],
+      "file": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "anchors": [
+        {
+          "needle": "KisTiledDataManager::read(QIODevice *stream)",
+          "lines": [
+            608
+          ]
+        }
+      ]
+    },
+    {
+      "indices": [
+        "T06.3"
+      ],
+      "file": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "anchors": [
+        {
+          "needle": "KisTiledDataManager::refreshPageStoreIndex(",
+          "lines": [
+            1132
+          ]
+        },
+        {
+          "needle": "KisTiledDataManager::refreshPageStorePage(",
+          "lines": [
+            1095,
+            1109
+          ]
+        }
+      ]
+    }
+  ],
+  "lexical_consumer_census": {
+    "command": [
+      "rg",
+      "--json",
+      "\\b(rebuildPageStoreIndex|refreshPageStoreIndex|refreshPageStorePage|prepareAliasLocked)\\s*\\(",
+      "libs",
+      "plugins",
+      "-g",
+      "*.cpp",
+      "-g",
+      "*.h",
+      "-g",
+      "*.cc"
+    ],
+    "symbols": {
+      "rebuildPageStoreIndex": {
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          518,
+          672,
+          1051,
+          1483
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.h": [
+          369
+        ]
+      },
+      "refreshPageStoreIndex": {
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          1132,
+          1247,
+          1368,
+          1678,
+          1878
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.h": [
+          370
+        ]
+      },
+      "refreshPageStorePage": {
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          1092,
+          1095,
+          1109,
+          1148,
+          1763
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.h": [
+          374,
+          375
+        ],
+        "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": [
+          3327
+        ]
+      },
+      "prepareAliasLocked": {
+        "libs/image/pagestore/KisPageStore.cpp": [
+          1115,
+          2481
+        ]
+      }
+    },
+    "limits": "Lexical only, including definitions/declarations/tests; not runtime counts, a parsed call graph, or proof that a branch is dead."
+  }
+}

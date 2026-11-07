@@ -1,0 +1,323 @@
+{
+  "date": "2026-10-27",
+  "source_digest": "2d5d1aaf9f27f4a490d1d268d92a0f245ff2a30424ac10ff3c5818335f8e5eba",
+  "library_sha256": "ce1d02675511ce031683c98f88d6179726d31e0b34bb585f0d692c10d3bee90e",
+  "product_head": "b0fb5acb04d3c4d8dfee33ffbae6cc9c9bb18e03",
+  "source_files": {
+    "libs/image/pagestore/KisCompletionRegistry.cpp": "e7351fb39102718c0810890b445295dc4a2879b3883ce7c7456a5c8ff1f025a7",
+    "libs/image/pagestore/KisCompletionRegistry.h": "353e18d46307a59251b5883b0fd0feda0f59b674b519e801a499c2d655fec95a",
+    "libs/image/pagestore/KisCpuResidentBinding.cpp": "1f2217e55a82d3c9b22fb576065180bced42fdc73ddf26513be888a5bf7a48e5",
+    "libs/image/pagestore/KisCpuResidentBinding_p.h": "e9e49dbf93a9e62871d32fac07556f365f92c56ecdd6ee64a5a7306cc8007880",
+    "libs/image/pagestore/KisImageEpochReferenceModel.cpp": "14d62d1b6afaa0af95ce4539da95689f0cfcee792714e1996ac9f928356bceba",
+    "libs/image/pagestore/KisImageEpochReferenceModel.h": "9cb26f28a88f61552b139bf70ae3b9f25cd29fd6ed8fc09db67d15d4f3b46444",
+    "libs/image/pagestore/KisMutationStorage_p.h": "94a96c7c252355d5df7da890a2c966226451fa416f168de46c511d5f7d44966b",
+    "libs/image/pagestore/KisPageBackingBudget_p.h": "6a0cd0680eb845a1832d5f71da79e77c27bf5c59fa7b27e50381712e9f299a33",
+    "libs/image/pagestore/KisPageDefaultStorage.cpp": "b252a87c5a00cf5270ebcaba9a2700f6b9508d588bdea89b3078f97eb26a30d2",
+    "libs/image/pagestore/KisPageHistoryCollector.cpp": "d491970e310bbf357df299f36de1e70293fb046402b957e4d88d4ddca1ee8c4c",
+    "libs/image/pagestore/KisPageHistoryCollector_p.h": "0af393398d83ee84e0952c4dd290fed3f223fc7874e4723854fab3917564ec31",
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp": "3411dbd2ece033e29f1e495c9f4220c0de2051c6c55fb62bf5eec10a13ae4463",
+    "libs/image/pagestore/KisPageMetadataCoordinator.h": "7b11e0ea751d69d875ec4a10c2b937813e3d2c469b7ea6d5fd5d628a7ebb6256",
+    "libs/image/pagestore/KisPageMetadataCoordinator_p.h": "d778ccf5a840500d6ddcefe9ac39eb28a60009e8cda8769f47d655220c344fa2",
+    "libs/image/pagestore/KisPageOwnerLedger.cpp": "47764ad614269cbbdd311beb001407e63b010704bd2ab09173607272f5a5b188",
+    "libs/image/pagestore/KisPageOwnerLedger.h": "fac513b8d2ac1ff0b9481158d8d53443c87f27c75aa55e7f841741d393e10d95",
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp": "9be807e3ee0c562242e2158484b1ed805483d38029a4f91145047f0b5e774166",
+    "libs/image/pagestore/KisPagePublicationCoordinator_p.h": "543404100aa88532f38180c0f73fc50d61366b354fe9653e713e5d2a80152b09",
+    "libs/image/pagestore/KisPagePublicationInput_p.h": "56a25b18fff2f10117f8c69e51c531c042c15d0efd1dc4c46b00bc076ba213bb",
+    "libs/image/pagestore/KisPageReadCoordinator.cpp": "ea936ba6c35ef7fbdc5e8d6c67c34bb2d2c65f3b4be373fc89d029b9b64b992d",
+    "libs/image/pagestore/KisPageReadCoordinator_p.h": "cea6c5e93e0185d988fc3cf0abbee7cc6801773b4b4524840cd4d5d9adea6a77",
+    "libs/image/pagestore/KisPageRetirementQueue.cpp": "c371e6257760d965ba444eb957b5d050ad041456b84736c90437c707487c1239",
+    "libs/image/pagestore/KisPageRetirementQueue_p.h": "6890a9ed12c41f6b4d8be6ad69fe49ebb98ff9a8e338ab11bbe5cf2e25c41eed",
+    "libs/image/pagestore/KisPageRetirementRecord_p.h": "25ccd68338879668b15459b6aa917ce6d20a69e014cbfd94a2cebf87616849ad",
+    "libs/image/pagestore/KisPageRetirementStorage_p.h": "2d301a3eb78ca61882fc80c38fcf2094705136145255878528762c505b390e78",
+    "libs/image/pagestore/KisPageStore.cpp": "9fe718eb128838d628165b2e1a8b47b253c38f2d601bf12f66124d9b80f4e693",
+    "libs/image/pagestore/KisPageStore.h": "cf976ae47d1c55bef5a9c6d67144655f98ddbe6699fb69e261300fd938da5fdc",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "373bf6a9762fc2e4e5887efbab9617d07870b1ad236f6b8477b67c45626809ce",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "348b179afe68d15bcba3661a4b4d37945ea9b2952b576d7bec43bc25fe2a5559",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "b0fc509d700f84a4d48a3afe519dec73eb92f03e3b57b57b08cc3f2d919ed4b0",
+    "libs/image/pagestore/KisTiles3PageReplicaProvider.cpp": "766dc082d33b8177abbca961e3277c370cc742a4becc06ba4197cfb6a416e79c",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "6e2426dcedd60558027dde69010d34ed3a2c748d0583ec33198841336d0cde9f",
+    "libs/image/tests/KisPageStorePhysicalClaimTest.cpp": "fec8768a050689959f18c110398aec6d8ad243244117509d557b3874c523da0d",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp": "a3e2fdc5d4652783e6397a4bdf04d3981489f4100592346bdb2259458dea6762",
+    "libs/image/tests/KisPageStoreResidentReadTest.cpp": "bc50109893ff97ecefea5a5d32f62b0cea24dbc4d0d8569872ce18879733611e",
+    "libs/image/tests/pagestore/KisCpuPageReplicaProvider.cpp": "8884800658f7146cda4e0fe423cea002177977f79c4b4204ec4e7ae0f6097544",
+    "libs/image/tests/pagestore/KisPageOwnerLedgerTestAccess.h": "396a79230e8727187b595476e923adc8040f8e93858c080d498352f3d67d79e1",
+    "libs/image/tests/pagestore/KisPageStoreStoragePressure.h": "b7e8b207d832c6939415290c2f0b1aa76a9ccb42f82c4ecf5f957bb8cf6678f8",
+    "libs/image/tiles3/kis_tile_data_store.cc": "8eef63d20446c420154e7530dd197e2de72a23ac15a00f8aba56c9ea50f88d6e",
+    "libs/image/tiles3/kis_tile_data_store.h": "82e9778c2385de7693b06dd247e53b129621160736ed74b8ef223e9ed235ce5c",
+    "libs/image/tiles3/tests/kis_tile_data_store_test_access.h": "5a841c15fa954819665541d9a033cfec2cbcc5477d130754c70abe65bca2006f"
+  },
+  "identity_matches_last_delivery": true,
+  "scope": "Pre-validation readiness audit, not new product implementation or performance acceptance",
+  "new_product_changes": 0,
+  "new_runtime_or_performance_processes": 0,
+  "reuse_evidence": {
+    "manifest": "refactor-implementation-closure-r0/IMPLEMENTATION_MANIFEST.json",
+    "fixed_contract_passes": 8862,
+    "source_checks": 449,
+    "identity_checks": 24,
+    "rerun_in_this_audit": false
+  },
+  "strict_preflight": {
+    "exit": 1,
+    "grouped_errors": {
+      "task_dimensions_not_accepted": 20,
+      "candidate_evidence_binding": 40,
+      "evidence_summary": 9,
+      "consumer_closure": 6,
+      "identity_or_protocol_freeze": 2
+    },
+    "error_count": 77,
+    "errors": [
+      "RF00: 设计/行为验证未完成",
+      "RF01: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF01/consumer: 证据未绑定整包候选",
+      "RF01/deletion: 证据未绑定整包候选",
+      "RF01/deletion: 缺证据所证明的具体结论",
+      "RF01/retained: 证据未绑定整包候选",
+      "RF02: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF02/consumer: 证据未绑定整包候选",
+      "RF02/deletion: 证据未绑定整包候选",
+      "RF02/retained: 证据未绑定整包候选",
+      "RF03: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF03/consumer: 证据未绑定整包候选",
+      "RF03/deletion: 证据未绑定整包候选",
+      "RF03/retained: 证据未绑定整包候选",
+      "RF04: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF04/consumer: 证据未绑定整包候选",
+      "RF04/deletion: 证据未绑定整包候选",
+      "RF04/retained: 证据未绑定整包候选",
+      "RF05: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF05/consumer: 证据未绑定整包候选",
+      "RF05/deletion: 证据未绑定整包候选",
+      "RF05/retained: 证据未绑定整包候选",
+      "RF06: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF06: 实际消费者闭包未完成",
+      "RF06/deletion: 证据未绑定整包候选",
+      "RF07: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF07: 实际消费者闭包未完成",
+      "RF07/deletion: 证据未绑定整包候选",
+      "RF08: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF08/consumer: 证据未绑定整包候选",
+      "RF08/deletion: 证据未绑定整包候选",
+      "RF08/deletion: 缺证据所证明的具体结论",
+      "RF08/retained: 证据未绑定整包候选",
+      "RF09: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF09/consumer: 证据未绑定整包候选",
+      "RF09/deletion: 证据未绑定整包候选",
+      "RF09/deletion: 缺证据所证明的具体结论",
+      "RF09/retained: 证据未绑定整包候选",
+      "RF10: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF10: 实际消费者闭包未完成",
+      "RF10/deletion: 缺证据所证明的具体结论",
+      "RF10/deletion: 证据未绑定整包候选",
+      "RF11: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF11: 实际消费者闭包未完成",
+      "RF11/deletion: 证据未绑定整包候选",
+      "RF11/deletion: 缺证据所证明的具体结论",
+      "RF11/retained: 证据未绑定整包候选",
+      "RF12: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF12/consumer: 证据未绑定整包候选",
+      "RF12/deletion: 证据未绑定整包候选",
+      "RF12/retained: 证据未绑定整包候选",
+      "RF13: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF13/consumer: 证据未绑定整包候选",
+      "RF13/deletion: 证据未绑定整包候选",
+      "RF13/retained: 证据未绑定整包候选",
+      "RF14: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF14/consumer: 证据未绑定整包候选",
+      "RF14/deletion: 证据未绑定整包候选",
+      "RF14/deletion: 缺证据所证明的具体结论",
+      "RF14/retained: 证据未绑定整包候选",
+      "RF15: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF15/consumer: 证据未绑定整包候选",
+      "RF15/deletion: 证据未绑定整包候选",
+      "RF15/deletion: 缺证据所证明的具体结论",
+      "RF15/retained: 证据未绑定整包候选",
+      "RF16: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF16: 实际消费者闭包未完成",
+      "RF16/deletion: 证据未绑定整包候选",
+      "RF16/deletion: 缺证据所证明的具体结论",
+      "RF17: 设计/消费者迁移/旧实现删除/行为验证未完成",
+      "RF17: 实际消费者闭包未完成",
+      "RF17/deletion: 证据未绑定整包候选",
+      "RF17/deletion: 缺证据所证明的具体结论",
+      "RF18: 设计/行为验证未完成",
+      "RF19: 设计/行为验证未完成",
+      "未冻结整包候选身份",
+      "未冻结完整预测与联合实验协议"
+    ]
+  },
+  "implementation_vs_acceptance": {
+    "bounded_responsibilities_closed": 19,
+    "finite_implementation_consumer_closures": 11,
+    "implementation_tasks": 17,
+    "open_consumer_tasks": [
+      "RF06",
+      "RF07",
+      "RF10",
+      "RF11",
+      "RF16",
+      "RF17"
+    ],
+    "verdict": "Last known implementation group closed; full consumer and cross-responsibility acceptance still open. No newly demonstrated product defect in this audit."
+  },
+  "evidence_packaging_findings": {
+    "all_deletion_references_checked_as_current": 228,
+    "references_not_binding_to_current_source": 223,
+    "references_without_summary": 15,
+    "manifest_digest": "2d5d1aaf9f27f4a490d1d268d92a0f245ff2a30424ac10ff3c5818335f8e5eba",
+    "same_files_candidate_checker_digest": "bcd5b1bd64581585e4feea34c9a2fca3c7cae54fccf1a589acc97501a295354e",
+    "missing_candidate_identity": true,
+    "missing_frozen_joint_protocol": true,
+    "required_work": "One versioned canonical source identity; current revalidation receipts separated from immutable historical provenance; freeze actual candidate including test access header. Do not relabel old PASS or relax the readiness gate."
+  },
+  "stale_consumer_anchors": [
+    {
+      "task": "RF07",
+      "stale": "PreparedPublication::NativeCapacity::finishShardLocked/finish",
+      "current": "PreparedPublication::MutationCapacity",
+      "source": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp:2521",
+      "classification": "index migration gap, not evidence that obsolete code remains"
+    },
+    {
+      "task": "RF10",
+      "stale": "KisPageMutationSession::Private::prepareAliasLocked",
+      "current": "KisPageMutationSession::Private::prepareTarget",
+      "source": "krita/libs/image/pagestore/KisPageStore.cpp:1358",
+      "classification": "index migration gap, not a new production rewrite"
+    }
+  ],
+  "resource_decisions": [
+    {
+      "task_ids": [
+        "RF10",
+        "RF19"
+      ],
+      "issue": "completion 8槽低并发/散洞余量",
+      "known": "N=2声明合计280→776B；source+88B；不是malloc实收费。",
+      "required": "补实际取整、live/reserved/peak、区间重叠与碎片的保留时长、父压下可回收与准备进度；同限额旧可成功而新拒绝要记为回归并明确是否符合既定成功集合。",
+      "on_failure": "若违反既定资源/成功集合合同，调整原source内粒度或布局后重验；不能只写最终归零，也不引入全局池掩盖。"
+    },
+    {
+      "task_ids": [
+        "RF10",
+        "RF15",
+        "RF19"
+      ],
+      "issue": "provider内嵌记录随strong/weak尾延长",
+      "known": "新增88B声明驻留/活binding；原map在retire可free，现随原控制块尾。",
+      "required": "补实际收费取整、retire→最后strong→最后weak的峰值/时长，混合读者和关闭压力；最终退款已有合同，不替代峰值/byte-time。",
+      "on_failure": "若违反原资源合同，调整原记录寿命或表示；不得为少一次申请默认接受弱尾常驻增加。"
+    },
+    {
+      "task_ids": [
+        "RF10",
+        "RF15",
+        "RF19"
+      ],
+      "issue": "physical记录随global observer/snapshot尾延长",
+      "known": "新完整record声明/实收费288B；旧孤立global声明104B，新增184B声明尾；其它observer和显式原snapshot pin两个端点已准确退款。observer/binding大小不变。",
+      "required": "补真实多provider observer/并发换页pin的peak/live/reserved、持有时长/byte-time和同硬限额成功集合；端点退款不是全部压力裁决。",
+      "on_failure": "若资源合同不成立，调整原物理记录拆分/寿命与保活粒度；不引入全局池或第二owner隐藏驻留。"
+    },
+    {
+      "task_ids": [
+        "RF07",
+        "RF11",
+        "RF13",
+        "RF15",
+        "RF19"
+      ],
+      "issue": "可选idle子集与history→原queue等待转移",
+      "known": "删除类别前置门/终结预查，真实Debt满额保持原收费且不调用provider；新合法metadata撤下可增加A检查、idle尝试ΔI或合法idle驻留，等待地点可改变。当前未测H0/H1净数量。",
+      "required": "同一可见性/费用限额下对齐实际A/E、ΔI、原record等待集合、Work/唤醒、idle及Debt的live/reserved/peak和byte-time；保留真实晚读者重验、额度/年龄边界及自动进度。",
+      "on_failure": "若新增工作或驻留违背原合同，调整原触发/接受粒度和交接，不恢复收费桶名充当读者权限，也不新增owner/队列或放宽限额。"
+    },
+    {
+      "task_ids": [
+        "RF06",
+        "RF07",
+        "RF18",
+        "RF19"
+      ],
+      "issue": "原D补容量的真实新增组和保留时长",
+      "known": "carrier80/row320/native344/prepared88保持；追加块80+616*S_R，R=0零分配；C1/R1当前准备2，纯外部满额repair成功，真实新增拒绝可恢复。",
+      "required": "补实际命中率、原C与真实R的峰值/byte-time；同shard组数可不降，不能按每条少616B计价。",
+      "on_failure": "在原准备/预约owner内调整粒度或缩短实际保留，不恢复整D重建、不另添通用池或后台重试域。"
+    },
+    {
+      "task_ids": [
+        "RF02",
+        "RF18",
+        "RF19"
+      ],
+      "issue": "RF02 scalable execution冷布局与inert control的分离代价",
+      "known": "两架16页1536→1152；64/65/256多208B，4096页多720B。精确旧容量的实际存储几何夹具旧成功/新拒绝且完整退款；不是旧全管线二进制或公开操作成功率。",
+      "required": "核对原完整管线目标范围、冷工作集/瞬时重叠与同硬限额成功集合，裁决控制表示/可回收尾/冷布局的合法替代。此项未获整包资源接受。",
+      "on_failure": "若违反既定成功集合，调整原控制/容量表示和几何；不得放宽硬额、隐瞒取整成本或恢复任意大workspace随inert facade常驻。"
+    }
+  ],
+  "exit_sequence": [
+    {
+      "step": 1,
+      "tasks": [
+        "RF00",
+        "RF06",
+        "RF07",
+        "RF10",
+        "RF11",
+        "RF16",
+        "RF17"
+      ],
+      "output": "Current candidate identity/evidence packaging and six finite consumer closures; 33 original rows map entry, authority, acceptance, refusal/retry and final release; migrated or retained with actual contract. No unexplained stale anchor/temporary bridge."
+    },
+    {
+      "step": 2,
+      "tasks": [
+        "RF02",
+        "RF06",
+        "RF07",
+        "RF10",
+        "RF11",
+        "RF12",
+        "RF13",
+        "RF15",
+        "RF19"
+      ],
+      "output": "Six bounded resource receipts at actual endpoints; real allocations, live/reserved/peak, residence, progress and same hard-limit public success/refusal. Reuse existing tests, add missing witnesses only. Cold-layout geometry and history-to-queue timing are first priorities."
+    },
+    {
+      "step": 3,
+      "tasks": [
+        "RF18"
+      ],
+      "output": "Freeze unchanged output/work/control scope, before-package/current/upstream identities, endpoint and pricing plan. Attribute actual event counts, added/transferred work and final drain. Numerical unknowns remain explicit; use only predeclared bounded diagnostics where needed, not RF20 results as its own prerequisite."
+    },
+    {
+      "step": 4,
+      "tasks": [
+        "RF20",
+        "RF21"
+      ],
+      "output": "After original readiness gate passes, run full mechanism/resource and uninstrumented package comparison; then separately judge cost targets, equivalent upstream and M6. No arbitrary 30% gate or assumed positive payoff."
+    }
+  ],
+  "stop_rules": [
+    "No new broad optimization merely because unit price is unknown.",
+    "Repair only a concrete contract failure or unmigrated consumer found by bounded validation.",
+    "Space increase alone is not rejection when time-first priority and hard-limit/public contracts hold.",
+    "Cold-layout standalone refusal is a real warning, not yet a public-pipeline success-set verdict.",
+    "Full matrix does not require exhaustive combinations; cover distinct failure/lifetime/pressure boundaries and actual entry families.",
+    "No performance, management ratio, paid<1M or M6 qualification is inferred from code/test counts."
+  ],
+  "formal_status_unchanged": {
+    "M6_M7_M8": "0/3",
+    "calibration": "2/20",
+    "persistent_default": "off"
+  },
+  "confidence": {
+    "current_identity_and_gate_deficits": "high, directly checked",
+    "specific_resource_regressions_in_full_public_pipeline": "unresolved",
+    "net_time_instruction_gain_or_management_ratio": "unknown"
+  }
+}

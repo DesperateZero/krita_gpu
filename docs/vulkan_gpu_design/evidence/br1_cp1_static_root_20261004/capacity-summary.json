@@ -1,0 +1,66 @@
+{
+  "rows": [
+    {
+      "round": "capacity-01-arm64",
+      "method": "testPersistentAutoBrushStrokePressureCancelled",
+      "passed": 4,
+      "actual_exit_zero": true,
+      "log_sha256": "c2dbc711804c56b13249f3673dbc11f2d142bc2833eb4797b2f9f6a46e871ffa",
+      "joined_addresses_unmapped": true,
+      "fixed": 332,
+      "native": 32768,
+      "paid": 1049512,
+      "limit": 8388608,
+      "peak": 7960366,
+      "samples": 32847,
+      "violations": 0
+    },
+    {
+      "round": "capacity-01-arm64",
+      "method": "testPersistentAutoBrushStrokePressure",
+      "passed": 3,
+      "actual_exit_zero": true,
+      "log_sha256": "c57bd1a3aa3b10471b2161583b77c7a2cc3871df6c1e89ff78baa808c11cf730",
+      "joined_addresses_unmapped": true,
+      "fixed": 332,
+      "native": 32768,
+      "paid": 1049512,
+      "limit": 25165824,
+      "peak": 13269222,
+      "samples": 305166,
+      "violations": 0
+    },
+    {
+      "round": "capacity-02-x86_64",
+      "method": "testPersistentAutoBrushStrokePressureCancelled",
+      "passed": 4,
+      "actual_exit_zero": true,
+      "log_sha256": "09d94d7465caa388a06ff2433c6ce57c1072a74eddc9395a67155d50b946d601",
+      "joined_addresses_unmapped": true,
+      "fixed": 332,
+      "native": 16384,
+      "paid": 1049520,
+      "limit": 8388608,
+      "peak": 8031374,
+      "samples": 32188,
+      "violations": 0
+    },
+    {
+      "round": "capacity-02-x86_64",
+      "method": "testPersistentAutoBrushStrokePressure",
+      "passed": 3,
+      "actual_exit_zero": true,
+      "log_sha256": "3a5137675d793efadaa15c422753c25d8f39cdb5c5508fbfeb5c4355d3495b7d",
+      "joined_addresses_unmapped": true,
+      "fixed": 332,
+      "native": 16384,
+      "paid": 1049520,
+      "limit": 25165824,
+      "peak": 13072630,
+      "samples": 307094,
+      "violations": 0
+    }
+  ],
+  "formula": "E8-classified paid malloc requests + actual native requests + independently compiled named fixed storage 332B",
+  "whole_owned_qualified": false
+}

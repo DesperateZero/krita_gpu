@@ -1,0 +1,7 @@
+# 实际写计划与恢复前提判别（前瞻冻结）
+
+83过程之后，源码已确认native路径共用prepareWritePlanLocked；冷准备次数不能直接冒称Fresh分配次数。本次只在原返回plan之后记录枚举、recoverableBefore/source有效性、default base、完整payload、mode/input flags与页坐标，不改变selector或预算/读者条件。
+
+固定4个current观察进程，顺序storage/business/business/storage；复用原共同矩阵和freehand未融合控制，mode2。前者每case重置原observer，后者保持全笔事件。观察数仅作机制，CPU不作性能增量；无扩样、无新产品代码。库身份/语义/完整退出/事件作用域沿原runner规则，失败立即停并保留。对应枚举在当前private头冻结，不按整数猜含义。
+
+先判是否在缺少independent before的首个条件返回Fresh；如before有效却仍失败，保留未解析原因而不从总计数推断是锁。history起点只有内容恰好等于当前旧值且具备独立保活/物理身份等保证时才可能是recoverable before，不能把旧起点A替代本操作前的B。

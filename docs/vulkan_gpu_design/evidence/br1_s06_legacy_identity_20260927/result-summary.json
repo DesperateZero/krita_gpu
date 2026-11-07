@@ -1,0 +1,77 @@
+{
+  "scope": "S06 legacy read cache provider identity and local repin, read/write cache reuse and detached tile lifetime; cumulative CPU correctness, not complete idle-cache release/M6/M7/M8 or performance qualification",
+  "tests": {
+    "arm64": [
+      2741,
+      0,
+      0
+    ],
+    "x86_64": [
+      2741,
+      0,
+      0
+    ]
+  },
+  "total_passed": 5482,
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "8017105a9dfb79ba74bab614cf3690e7bdfbbc0b097003bcbc920dd7b17b2100",
+  "image_sha256": "c8a82a1ee3ce52bf16af46788f0aa84b56c5f004761461527364e01375c26cb8",
+  "ui_sha256": "f20fe2f83feab2784405119e7a2650d5c2fc2bc9c16765905c182f596e5d33bc",
+  "allocator": {
+    "arm64-warm": {
+      "intervals": 96,
+      "positive_control_allocations": 4,
+      "allocations": 0,
+      "bytes": 0,
+      "frees": 0,
+      "same_matrix_image_library": true,
+      "outer_reads": 98304,
+      "nested_read_locks": 196608
+    },
+    "arm64-joint": {
+      "intervals": 31080,
+      "positive_control_allocations": 4,
+      "allocations": 0,
+      "bytes": 0,
+      "frees": 0,
+      "same_matrix_image_library": true,
+      "conflicts": {
+        "0": 10360,
+        "1": 10360,
+        "2": 10360
+      }
+    },
+    "x86_64-warm": {
+      "intervals": 96,
+      "positive_control_allocations": 4,
+      "allocations": 0,
+      "bytes": 0,
+      "frees": 0,
+      "same_matrix_image_library": true,
+      "outer_reads": 98304,
+      "nested_read_locks": 196608
+    },
+    "x86_64-joint": {
+      "intervals": 31080,
+      "positive_control_allocations": 4,
+      "allocations": 0,
+      "bytes": 0,
+      "frees": 0,
+      "same_matrix_image_library": true,
+      "conflicts": {
+        "0": 10360,
+        "1": 10360,
+        "2": 10360
+      }
+    }
+  },
+  "ratchet": {
+    "loosened": false,
+    "only_change": {
+      "file": "libs/image/tiles3/kis_tile.cc",
+      "identifier_occurrences_before": 10,
+      "identifier_occurrences_after": 9
+    },
+    "other_ratchet_fields_unchanged": true
+  }
+}

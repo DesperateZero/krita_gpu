@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "docs/vulkan_gpu_design/evidence/br1_m6_calibration_resolution_20261006/verify_docs.py"
+  ],
+  "exit_code": 1,
+  "scope": "Post-archive documentation checker, no performance samples",
+  "reason": "Checker wrongly required visible16.138 text in guide README whose verified navigation uses the new package link",
+  "initial_script": "verify_docs_initial.py",
+  "repair": "Require actual new package or current calibration anchor reference in every active document; preserve target and anchor existence checks",
+  "second_attempt": {
+    "exit_code": 1,
+    "reason": "API guide links to current92 anchor rather than directly to the evidence directory",
+    "script": "verify_docs_retry.py"
+  }
+}

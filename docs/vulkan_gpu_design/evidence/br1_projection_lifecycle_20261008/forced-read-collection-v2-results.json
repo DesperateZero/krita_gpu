@@ -1,0 +1,66 @@
+[
+  {
+    "side": "before",
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/forced-read-collection-v2-before:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/safety-read-fix-arm64/runtime/KisPageStoreCpuMutationTest",
+      "overlayStorageSurvivesSiblingCandidates",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 1,
+    "timed_out": false,
+    "reaped": true,
+    "loaded_expected": true,
+    "totals": [
+      [
+        "49",
+        "1",
+        "0"
+      ]
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::overlayStorageSurvivesSiblingCandidates(bpp8-K65-mode2) 'pixel.size() == bpp' returned FALSE. (pixel read failed at page 28: status=3 valid=0 requested exact generation has no compatible valid replica)"
+    ],
+    "hashes": {
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/forced-read-collection-v2-before/KisPageStore.cpp": "34315e97102040a5bf1b7f25f13d7814815745c77fb7d79812fd5902076a107e",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/candidate/source/libs/image/pagestore/KisPageStore.cpp": "576514371311aaadbf90e843e278dccfa7100a582353786b1f0f36dc6e93151b",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/forced-read-collection-v2-before/libkritaimage.21.0.0.dylib": "adcd871389c5938fb79de92c10723276333e0dd1855fa3ba7afd1d1c5fbe67ed",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/safety-read-fix-arm64/runtime/KisPageStoreCpuMutationTest": "470d530776045501e5acac89bdefbe43e72b778ee606282e8e388e6148e0d72c"
+    }
+  },
+  {
+    "side": "after",
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/forced-read-collection-v2-after:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/safety-read-fix-arm64/runtime/KisPageStoreCpuMutationTest",
+      "overlayStorageSurvivesSiblingCandidates",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "loaded_expected": true,
+    "totals": [
+      [
+        "50",
+        "0",
+        "0"
+      ]
+    ],
+    "failures": [],
+    "hashes": {
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/forced-read-collection-v2-after/KisPageStore.cpp": "bbc4ce28f99105fb02159680d264b88df9d3d9f411886098a49c1d9a70964815",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/candidate-read-fix/source/libs/image/pagestore/KisPageStore.cpp": "5c7d318370e2e5565712bd8ed9e61cfaa210383501b250efcad30f785d0bb5e7",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/forced-read-collection-v2-after/libkritaimage.21.0.0.dylib": "6a13454b5b8ab8bb336cf10df9ad2883d5caf49d64e1ba66690078779d6c2fd0",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/safety-read-fix-arm64/runtime/KisPageStoreCpuMutationTest": "470d530776045501e5acac89bdefbe43e72b778ee606282e8e388e6148e0d72c"
+    }
+  }
+]

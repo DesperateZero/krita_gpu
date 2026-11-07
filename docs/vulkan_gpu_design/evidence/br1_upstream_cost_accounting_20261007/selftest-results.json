@@ -1,0 +1,57 @@
+{
+  "build_command": [
+    "/usr/bin/clang++",
+    "-std=c++17",
+    "-O2",
+    "-arch",
+    "arm64",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/cost_observer.cpp",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/observer_selftest.cpp",
+    "-o",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/observer_selftest"
+  ],
+  "results": [
+    {
+      "mode": 0,
+      "command": [
+        "/usr/bin/env",
+        "BR1_COST_MODE=0",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/observer_selftest"
+      ],
+      "exit": 0,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 0,
+          "events": 0,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 20973568
+        }
+      ]
+    },
+    {
+      "mode": 2,
+      "command": [
+        "/usr/bin/env",
+        "BR1_COST_MODE=2",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/observer_selftest"
+      ],
+      "exit": 0,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 2,
+          "errors": 0,
+          "overflow": 0,
+          "threads": 1,
+          "events": 3,
+          "active_at_dump": 0,
+          "fixed_capacity_bytes": 20973568
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "source_head": "b1c2f61290b25723d5a57ea2cdc430139e511e80",
+  "scope": "docs/vulkan_gpu_design/evidence",
+  "counts_and_logical_bytes_by_type": {
+    "per-run-snapshot": [
+      1682,
+      18021917570
+    ],
+    "sample-json-and-sidecar": [
+      33309,
+      4673265399
+    ],
+    ".o": [
+      3742,
+      16834614096
+    ],
+    ".dylib": [
+      1676,
+      12771191812
+    ]
+  },
+  "by_reason": {
+    "per-run-probe-snapshot": [
+      1682,
+      18021917570
+    ],
+    "observed-invocation": [
+      9652,
+      1664913959
+    ],
+    "same-sample-runtime-sidecar": [
+      12353,
+      230918855
+    ],
+    "archived-experiment-binary": [
+      4643,
+      29605784056
+    ],
+    "archived-experiment-binary-link": [
+      775,
+      21852
+    ],
+    "raw-run-series": [
+      132,
+      129906935
+    ],
+    "raw-events-or-stacks": [
+      147,
+      2571727663
+    ],
+    "numbered-measurement": [
+      11021,
+      75794027
+    ],
+    "old-instruction-sample-stream": [
+      4,
+      3960
+    ]
+  },
+  "by_git": {
+    "untracked": [
+      39717,
+      52211759792
+    ],
+    "HEAD": [
+      692,
+      89229085
+    ]
+  },
+  "total_paths": 40409,
+  "logical_bytes": 52300988877,
+  "available_bytes_before_unlink": 6695768064,
+  "available_bytes_after_unlink": 59095474176,
+  "cold_object": {
+    "verified_manifest_sha256": "4582afc5eff24c03adbce8030381d0931edee4c90f7b88223c12b93b8eb62142",
+    "cold_sha256": "9b4a32a3c58a9f6fe18ed6b36327c586051257bc3186500287937741c0d6e0e4",
+    "cold_bytes": 246650845,
+    "verified_chunks": 1940,
+    "recovery": {
+      "cold-sample": 1838,
+      "frozen-tar": 30722,
+      "expired-binary": 5418,
+      "git": 2431
+    }
+  },
+  "current_gate_inputs_verified": 21,
+  "current_binary_library_pairs_verified": 3,
+  "date": "2026-11-05",
+  "current_cpu_source": "0fd96f2fa3f24e70c1652ea17b8cc87192acf6d2",
+  "preserved": "Reviewed P/U/N inputs, referenced gates and final receipts, current native CPU and 105 packages, named M5 control, contracts, source/patches and historical archives.",
+  "policy": "Ignore .o and .dylib at all depths. Remove inactive compiler outputs and archived-protocol raw JSON from expanded evidence only. Classify measurements by contents and role. Preserve live build, install and gate artifacts.",
+  "evidence_dot_o_or_dylib_remaining": 0,
+  "validation": {
+    "cpu_reanalysis_samples": {
+      "calibration": 12,
+      "validation": 144,
+      "fresh": 160
+    },
+    "byte_identical": [
+      "FORECAST.json",
+      "VALIDATION_PROTOCOL.json",
+      "JOINT_RESULT.json",
+      "FRESH_RESULT.json"
+    ],
+    "sample_recovery_hash_checked": [
+      "git blob",
+      "tracked tar member",
+      "cold raw JSON",
+      "cold reconstructed probe snapshot"
+    ]
+  },
+  "local_recovery": {
+    "location": "build/m6-baseline-cutover-20261105/cleanup",
+    "manifest": "verified.jsonl.gz",
+    "residue": "old-sample-residue.tar.zst",
+    "restore_command": "python3 build/m6-baseline-cutover-20261105/cleanup/restore_sample.py ORIGINAL_REPO_PATH NEW_FILE",
+    "cold_storage": "local only",
+    "expired_binaries": "no recovery guarantee"
+  }
+}

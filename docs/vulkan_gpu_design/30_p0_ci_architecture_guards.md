@@ -17,6 +17,10 @@ P0 校正不能依赖 code review 记忆来维持方向。以下事实必须由 
 7. 旧 runtime、全局 router 和第二套 swap/cache 不会以“临时兼容”名义返回。
 8. Layer/Flow 只能经 versioned lowerer 进入 typed EvalGraphIR；Layer 专用 planner、封闭值类型枚举和
    composite-only cache 不得重新成为全局求值接口。
+9. resident CPU/default 热路径保持稀疏、局部和批量提交；reference 容器、通用异步 request 粒度或全 manifest 扫描
+   不能进入 production iterator/tile lock。
+10. GPU/UMA Auto route 以同机成熟 CPU product path 为基线；在 GPU 劣势环境下前置回退，不能用 capability、零拷贝或
+    device timestamp 掩盖端到端退化。
 
 CI 只认可可复现证据：构建图、AST/符号扫描、状态机测试、Vulkan validation、像素 golden、fault
 injection 和性能 trace。文档声明或手工演示不能替代其中任何一项。
@@ -145,6 +149,10 @@ PageStore materialization、SSD I/O、host wait 和 Vulkan wait 记录调用线�
 
 ## 6. Canonical PageStore 守卫
 
+BR1 当前已有的 tiles3/iterator/painter 侵入先以 allowlist ratchet 封存，再随统一 owner 迁移逐项降低；source inventory、
+symbol/reverse-call graph、状态所有权矩阵、runtime census 和单项删除门槛见
+[69](archive/br1_pre_m6_20260925/documents/69_br1_pagestore_decomposition_and_intrusion_audit_20260921.md)。本节定义永久不变量，69 定义当前污染面如何证明退出。
+
 ### 6.1 状态机断言
 
 debug 和所有 CI profile 中永久开启：
@@ -198,6 +206,65 @@ unified store。
 
 Vulkan staging、transient upload ring、pipeline cache 不属于 SSD page store，但必须以类型和目录明确其生命周期，
 不得把画布 canonical page 写成 backend 私有持久文件。
+
+### 6.4 Resident CPU 与 production layout 守卫
+
+Tier 0/4 必须以计数器、allocation hook 和复杂度 sweep 主动拒绝：
+
+- default/blank read 为每个坐标创建 PageKey、PageVersion、replica、request 或物理 tile；
+- 已捕获 scope 内的 ready resident CPU read/write 建立 heap request/lease、插入全局 request map、取得 PageStore 全局 mutex；
+- CPU provider 通过遍历 active leases 把 pointer/handle 反查为 tile；
+- 同一 mutation 的同一未发布段对同一 PageKey 重复 reserve generation、重复 COW 或重复 seal；
+- tile/accessor unlock 隐式执行 epoch commit、全 extent 或完整 manifest 扫描；
+- 未升级的 write intent 创建 generation、allocation 或 proof，或在 writable pointer 已暴露后仍声称 no-op；
+- production epoch commit/read 依赖 reference `QHash` 重建、owning `QVector` manifest 或全量 sort；
+- 每页创建 owning write-plan、`shared_ptr<Page>` 或 generation 级 shared binding；
+- publication install 触发 metadata slot allocation、index rehash 或大对象析构；
+- 为 handoff 绕过 shard-owned generational slot arena，或在 slot/block generation 回绕后复用 identity；
+- K 固定、N 扩大时 commit allocation/latency 随 N 线性增长。
+
+必须有正向测试证明：
+
+1. 32767+ 不同 blank coordinates 读取后 page/version/replica allocation 为 0，default pixel backing 为 O(1)；
+2. resident read guard 只产生 page-local pin/unpin，cache tag 失配会回到 immutable root 校验；
+3. CPU allocation 只有经 PageStore 私有 `KisPageWriteCoordinator` 选择 `HandoffRecoverable`（已有 exact before）或
+   `HandoffCommitOnly`（capture gate + 完整预检 + 首字节后不可失败）才可移交，observed PageVersion 仍单调推进；
+   并证明可取消/可失败的多页 Prepared transaction 不会无 before 覆盖旧 G；
+4. 旧值仍可观察且没有 alternate before 时 first-write COW；同一未发布段后续写复用 pending G+1，发布后新段重新选择 write plan；
+5. persistent root commit K 个 changed pages，只复制 changed paths，extent 按 delta 更新；
+6. fast path 与通用 request path 对同一事件序列输出相同 transition trace/invariant 结果。
+7. 无旧值保留的 resident handoff 桶中 before-image copy、新 payload allocation、payload migration 和 retirement payload 均为 0；
+8. current/history/pending/in-flight/retiring/optional backing 的精确字节 ledger 在 tiny-budget、旧 View、undo、last-use 与
+   retire 拒绝压力下不越硬上限，并出现预期背压或 `ResourcePressure`，最终 drain 债务可解释。
+9. production metadata 使用 typed generational slot arena；install allocator/rehash/large-destructor 计数为零，旧 slot/block id
+   在释放、整块归还、重新附着和 generation 极限下均不能 ABA；common record 内存至少降低 25%。
+
+补充 resident-read 路由矩阵：cached handle miss 但 exact CPU 副本 ready、retained 历史已驻留、authority 在其他域但已有
+ready CPU 副本，都应在受保护视图内 resolve/pin，通用 request/迁移计数为零；virtual default 绑定视图的 format/default
+revision。真正 non-resident、pending producer/访问交接才走对应慢路径；stale capability/version/provider 被拒绝，局部
+竞争不得伪装为物理缺页。非 CPU authority 可由状态机/fake provider 覆盖正确性，但不作为 GPU/UMA 性能证据。
+上述读侧规则不能放宽 writer handoff、COW 或 write-plan 证明；CPU-only 无 GPU 交接时 GPU binding/submit/ownership 计数应为零。
+
+免全局锁与零分配断言的路径范围按 39 的 5.12 冻结，capture/release、首次 binding、scope cache 分配仍计入完整 M/E。
+generic fallback 必须有可核验原因；unsupported provider/binding miss/busy 是软件路径或竞争，不等于 swap/跨域，
+不得用扩大“缺页”分类规避 ready resident 门禁。原生与通用读写/transfer/retire/close 的协调必须有生命周期负例：
+不能仅断言 generic lease map 为空便宣布无 reader，不能在 metadata 撤销后忽略 provider 的退休失败。
+多个 allocation alias 同一 payload 时，record-local 零 reader 不授予原位写；scope/root 保护也不替代 physical pin。
+
+详细门禁和迁移顺序见
+[52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)。
+
+当前整体重构的执行门槛见 [67](archive/br1_pre_m6_20260925/documents/67_br1_target_structure_reconstruction_20260920.md)：先完成六项结构约束及真实入口回归，
+再统一运行性能资格。新增结构测试必须覆盖候选 owner/revision/单次消费/取消与不可见性、virtual-default writer 的逻辑
+before-image、native source copy 与 writer 互斥、extent 索引相对独立 manifest oracle、root 多重 retention/transaction 引用。
+补测 pending default writer 与后续旧版本物化、共享 default 跨 key/revision/cache 淘汰/guard 寿命及真实 session 零源物化；
+局部 gate 竞争须复验/恢复，不建 generic request 掩盖竞争；commit 与 retained restore 都验证 metadata 完整安装后 root 才可见。
+退休拒绝须保留 exact 身份及 last-use，预算重试、物理 pin 解除后恢复、关闭失败后再试均须通过；失败重试有界不等于整个回收已预算化。
+`synchronousWriteCopy` 仅声明复制能力，不能推导支持 native mutation；后者须显式 `nativeCpuMutation` 能力并接受相同安全测试。
+保留 legacy unlock 边界接入 native 不等于整个 iterator 已具备 operation-wide View/MutationSession。
+共享 legacy wrapper 的最终 unlock 跨线程必须单独回归；terminal seal 不得放松普通 session 的线程归属或活跃 guard 检查。
+日志中的 `SAFE ASSERT` 属于失败证据，即使 QtTest 总结和进程 exit code 为通过，也不能计入通过清单。
+应用级测试若在资源初始化崩溃，记录原始失败及堆栈；直接 iterator 实现回归不能替代完整 PaintDevice/画笔资格。
 
 ## 7. 全局状态和生命周期守卫
 
@@ -296,7 +363,7 @@ alpha-lock/wash 组合都有 CPU reference comparison。
 ### 11.2 UMA
 
 - canonical arena 的 CPU pointer 与 GPU address 访问同一 generation；
-- 稳态绘画画布像素 copy counter 严格为零；
+- 稳态绘画画布像素 domain-sync copy counter 严格为零，COW/undo/derived copy 单列；
 - coherent/non-coherent memory 的 flush/invalidate 范围正确；
 - CPU iterator 与 GPU writer 的 ownership/timeline 不出现 data race；
 - sampled display cache 可删除并从 canonical page 重建。
@@ -366,9 +433,84 @@ ReplicaDomain
 - domain-sync/COW/undo/derived/display copy bytes分项；
 - semantic class、CoverageCertificate、ghost hit和reverse migration；
 - SSD durability class、GC write amplification和disk-pressure backpressure。
+- virtual-default hit、PageKey/version/replica allocations by reason；
+- resident CPU fast/fallback hit、heap request/lease、global-map insert、provider active-lease scan；
+- generation reserves、physical COW、in-place allocation reuse、page seals 和 epoch commits per mutation/page；
+- epoch changed pages K、manifest pages N、root nodes copied、full-manifest export/sort/scan；
+- tile unlock triggered commits 和 full extent scans（硬门槛为 0）。
+- CPU-only/forced accelerator/Auto 的 end-to-end P50/P95/P99、最长停顿；
+- predicted CPU/accelerator ETA、route reason、profile freshness、risk margin、regret 与 demotion；
+- performance profile state-envelope exit、circuit-breaker trip、bucket quarantine 和 whole-operation abort/replay；
+- GPU low-power/thermal、queue contention、UMA shared-bandwidth contention 的 bucket 结果。
+- 39 的 M/K/X/E classification、paired baseline、semantic scope/additional semantics；
+- 每项指标的 MetricScope、CPU/wall 与计时边界/排除项，管理 self 和 lifecycle-inclusive 不混为一个倍率；
+- executor、physical backing/access path、memory/cache 属性、InitialState→RequiredEndpoint 和 exact valid replica set；
+- 固定资源/到达率的完成吞吐、单操作及负载尾延迟、M self 与 wait/hold、同域 direct/VT 和 RAM Tile 异构 K 比值；
+- setup/cold/warm、X 方向/字节、关键路径重叠、drained CPU/wall 与 retired backlog。
+- M required buckets、预冻结相对/绝对容差、置信水平/方法、独立配对采样/停止规则、时间及吞吐置信界与验收状态。
+- provider default-initialized、explicit source-copy、native-duplicate、adopted 页数/逻辑字节及其计量范围；
+  preclone 前后台工作、reserve 峰值与 drain 按 20 的 11.1 单列，不把 native duplicate/adoption 当作物理带宽。
+- native read 的 capture/release、首次 binding、暖 guard、完整 operation 计量边界，逻辑读结果、fallback 原因与重试次数；
+  allocation/lock 范围及最后旧 scope 回收按 20 的 11.2 保存，尚不可观测的字段标缺测。
 
-硬门槛：UI/input wait count 为零；UMA 稳态 canvas-pixel copy bytes 为零；每 dab dispatch 路径计数为零；
-validation error 为零。帧率均值不能替代交互延迟分位数、最长停顿和背压行为。
+硬门槛：UI/input wait count 为零；同一兼容驻留 shared backing 的真实 CPU↔GPU 交接中 payload migration count/bytes 为零
+（适用条件与证据范围见 39 的 5.7；非所有 copy）；每 dab dispatch 路径计数为零；
+validation error 为零。产品 Auto 相对 CPU-only 的 median/P95 不超过 1.10×，P99/最长交互停顿不超过 1.25×；route/
+fallback 开销不使直接 CPU 路径超过 1.05×，该开销配对必须从相同 valid replica set 到相同 endpoint（必要读回双方均计）。
+帧率均值不能替代交互延迟分位数、最长停顿和背压行为。
+GPU/UMA 性能资格还必须依赖 BR1-PERF upstream CPU 差分已通过；禁止以退化的 CPU 实现作分母“洗快”accelerator。
+CPU/CpuRam 同义管理必须按 39 的 5.6 独立证明不劣于主干；阶段完整操作倍率通过不代替 M 通过，证据不足不得结清。
+
+性能报告/harness 必须按 [39 的 5.6–5.9](39_virtual_texture_performance_gates.md#56-四类证据与基线配对统一定义) 校验；
+以下任一项出现，不能接受为性能结清或 AutoPreferred 证据：
+
+- 把 GPU/VRAM 对 CPU/RAM 的 K 比值称为虚拟纹理管理倍率，或缺少同域 GPU direct/VT 对照却声称已隔离寻址开销；
+- 用 K/E 加速抵消 M 的结构/CPU 主干回归，或只提供 M/no-op stress 而缺少真实像素吞吐和端到端延迟；
+- 用 CPU bridge 的 M 结果替代实际 GPU/UMA provider 管理证据，或把 shader 寻址混为 host-side 管理 self；
+- executor/domain/access path/endpoint 或共同语义不匹配，却仍计算配对倍率；新增语义用虚构零分母比较；
+- 用提交量代替完成量、logical alias bytes 代替物理带宽、1/P95 代替吞吐，或隐藏 setup/readback/GC/队列积压；
+- M/K/X/E 双计数、P95/并发时长直接相加、缺失项填零、用 UMA/fake/CPU-only 结果代替真实 dGPU 性能；
+- 未在验收前冻结管理/吞吐预算，或在看到结果后放宽 profile 以取得通过。
+- 以“无显著差异”或 1.2×/1.3×/1.5× 阶段操作上限代替 M 不劣性，required bucket 缺测或置信界不足却标 Pass；
+- 把同义操作所需内部 generation/proof/adapter 记账改称 additional semantics 后排除，或把真实新增语义从 E 扣除；
+- 由 UMA 零迁移复制推导整个 X/同步/queue/ticket 为零，或把未解释的软件残余直接归为不可优化的硬件成本。
+- 把旧源码/库版本的采样热点写成修复后实测，结构/正确性通过但未有 after 配对仍标性能 Pass，或删去失败原件掩盖成本转移。
+- 把单 manager 的零 counter 外推为全进程/全 trace 零开销，把存活终值当累计工作量或长期有界证明，或以切片诊断代替正式配对资格。
+- 以 defaultMaterializationRequests=0 证明 provider 没有默认填充，或把未拆开的 acquireWrite/provider 时间全算 M、K 或 X；
+- 预克隆只记录前台收益、不记录后台补充/占用/回收，或以复制调用数/逻辑字节推定硬件流量；
+- 新增诊断接口后不冻结兼容 harness/ABI 和两侧版本，或忽略关闭态偏移、抽样周期混叠及 sampled 单次时钟成本；
+- 未发生实际 CPU↔GPU 交接或缺少 shared backing/计数覆盖证据，却把 UMA 零迁移标为 Pass；
+- 用容差内不劣性通过宣称严格耗时相同、整条管线同构或全部软件额外成本已消失。
+- 把无迁移执行区间合成为 `0 ns`、低于分辨率记作零耗时，或仅凭 UMA/必要同步标签豁免未归因、超预算差额；
+- 仅 identity lookup 免锁便声明像素热路径免全局锁，排除 capture/release 的真实成本，或删除 retention/pin/last-use 保护换取零计数；
+- 将不同切片的性能倍率相乘生成未实测结果，或让后续工作树接线直接继承旧二进制的 Pass。
+- 仅凭 alias/adoption/commit 名称将混有 source 初始化/像素复制的操作授予纯 M 资格，或只排除候选一侧的数据准备；
+- 以“每 session/页一次 COW”为由跨已发布段沿用旧可写授权、改变中间可见性，或不记录真实 session/发布边界却声称重复工作已消除。
+- 将 payload 已驻留等同于 binding/cache 已暖，隐藏每次操作必经的 capture/setup/release，或用暖 guard 零请求宣称整个 scope 零分配；
+- 用 `tryLock`/原子计数/`call_once` 名称宣称严格 lock-free，或将未分类 native miss 一律记为硬件缺页/跨域迁移；
+- 修改 provider/guard ABI 后未经兼容性与 loader 核验即复用旧二进制，或以源码存在替代新版本构建、生命周期和性能证据。
+- 用新read facade的收益抵消未迁移legacy路径或真实写的回归，或把eager→lazy仅移出窗口的缓存建立成本写成已消除；
+  冷binding、暖读、只写/legacy控制及完整生命周期须分别保留，D8–D10反证与实际计量覆盖见62–64、20的11.2。
+- 把held-view guard的组件吞吐当含capture/release的完整session结果；或将固定cycle总时间倒数称为持续吞吐/事件尾分位。
+- 仅凭`lifecycle`/`destroy`字段名或close返回宣称全部回收完成；混用旧close端点与新容器析构端点，或以局部析构替代
+  pool/worker全后台drain、退休积压与长期有界证明。
+- 把workload/统计seed当每进程实际hash seed，用事后环境推断代替缺失记录；未经控制证据把负偏移归给噪声/布局/后台活动。
+- 为跑分改变生产hash策略、筛除不利seed，或只用固定seed/layout诊断授予生产默认配置的不劣性；测量记录变更未校准
+  关闭态偏移，或改写旧协议以制造已记录的假象。后续记录与环境对照按20的11.3落实，历史缺失明确保留。
+- 只有新facade或类名变化而没有真实生产入口迁移，仍声称native mutation/production owner完成；或将tile publish/proof、
+  操作batch和root commit混计，以原子root赋值存在证明整个发布临界区已短。结构核对及后续切片门槛见52第12节。
+- native 写段中放掉独占 backing 保护却继续复用裸可写指针，或将整段 dirty-page pin 当零成本、无大 K 预算也宣布有界；
+  失败 seal 清除较早 history 段、guard/batch 销毁遗留永久 claim，或写授权失败仍向 memcpy 返回 before-image。
+  D11 的定向测试/反证见65；零 generic request 不授予性能 Pass，尤其不能抵消已测 K1 回归。
+- 将binding局部writer或swap shared pin误当所有alias的物理写排他；用采样总refcount自签发physical claim，或将physical claim
+  当成root/capture/retention permit。D12负例覆盖见66，生产未消费claim不得宣称原位写已接通；inline引用协议变化须重编所有
+  参与路径并使用匹配runtime，不能只替换动态库后假定旧inline代码会遵守新gate。
+
+报告还须满足 39 的 5.10 证据更新规则、5.11 统一判词与 5.12 native read 分层验收；default/remove 优化检查后续 read/first-write/history/drain，
+归因残余不能隐去。
+
+上述为新增测试标准，报告器/CI 实装仍须按 52 的 P1/P6 落地；文档存在不代表自动守卫已实现。BR1 先要求 CPU 阶段
+适用证据，GPU/UMA 的 NotMeasured 不阻止隔离研究，但阻止对应硬件 profile 获得产品性能资格。
 
 ## 13. CI 分层
 
@@ -419,7 +561,7 @@ validation error 为零。帧率均值不能替代交互延迟分位数、最长
 - undo/redo/save/reopen；
 - EvalGraphIR/Layer/Flow、mask/filter/color/display；
 - 多文档、多 canvas、WSI 生命周期；
-- 性能基线和交互延迟。
+- CPU-only/forced GPU/forced UMA/Auto 性能基线、GPU 劣势 profile 和交互延迟。
 
 Vulkan 用户选项启用前全部必跑。
 
@@ -428,11 +570,11 @@ Vulkan 用户选项启用前全部必跑。
 | 阶段 | 不能缺少的机器证据 |
 |---|---|
 | BR0 | 旧符号为零、依赖无环、Vulkan 用户入口关闭、CPU/OpenGL 回归通过 |
-| BR1 | CPU canonical PageStore 与原 Krita tile/COW/undo/save 像素一致，分片/dedup/transaction 状态机 property test 通过 |
+| BR1 | CPU canonical PageStore 与原 Krita tile/COW/undo/save 像素一致；分片/dedup/transaction property test 通过；virtual default、resident guard、write-plan/条件 handoff/必要 COW、硬 backing 预算、mutation scope、persistent root 达到 52/68 的结构和 39 的 upstream 差分性能门禁 |
 | BR2 | queue API 唯一所有者、timeline/command retirement、validation/fault injection 通过 |
-| BR3 | UMA domain-copy=0、direct/local binding、dGPU deadline batch、SSD durability/GC、强制迁移与 handoff fault test 通过 |
+| BR3 | UMA 真实交接在同一兼容驻留 backing 上零 payload migration（39 的 5.7），且 shared CPU access 通过 39 的相对门限；direct/local binding、dGPU deadline batch、SSD durability/GC、强制迁移与 handoff fault test 通过 |
 | BR4 | Layer/Flow equivalent lowering、random EvalGraphIR/EvaluationEpoch、mixed executor stale publish、CoverageCertificate、semantic CLOCK/cost、bounded prediction 和图层剪枝通过 |
-| BR5 | stroke golden、COW undo、immutable save、cancel/recovery、格式矩阵通过 |
+| BR5 | stroke golden、COW undo、immutable save、cancel/recovery、格式矩阵及 39 的 CPU-relative Auto route/GPU 劣势门禁通过 |
 | BR6 | 多 canvas、WSI、display/color/filter、完整产品回归和性能门禁通过 |
 
 阶段门禁不可用“后续补测试”豁免。未通过即不进入下一阶段。
@@ -457,6 +599,7 @@ P0 结构规则没有永久例外。短期测试基础设施限制只能：
 - 第二个模块调用 queue API；
 - UI thread 新增 host wait；
 - 未校验 replica 接管 authority；
+- default read 物化页面、resident CPU 热路径创建通用 request，或 production commit 全量重建 reference manifest；
 - Vulkan backend 新建独立 swap；
 - capability 没有 golden 却返回支持；
 - 旧 global router 或 stroke-end download 重新出现。

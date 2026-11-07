@@ -1,0 +1,1947 @@
+{
+  "product_head": "75dc8fca5f006b546f5774d5b2aa4a3b99318e46",
+  "status": "uncommitted raw terminal candidate; independent-owner prototype frozen and reverted",
+  "restored_production_matches_dual_arch_raw_candidate": true,
+  "current_diff_sha256": "0ba4826e5606381c0716ee2e4256c5fabe6ddc1bfe80d98701bcdbeb084bef46",
+  "raw_candidate_diff_sha256": "9a0d989583ddfb81eaae5cd5792b8a3ad83c754b5e1abb248d7ce42663891fe1",
+  "prototype_diff_sha256": "96f68d302d28aaf639465265c0c359f47492efec457bd18df7f9e8a7b94739d8",
+  "current_numstat": [
+    "108\t128\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+    "2\t4\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+    "1\t1\tlibs/image/pagestore/KisTiles3PageReplicaProvider.cpp",
+    "4\t1\tlibs/image/tiles3/KisTilePageStoreBridge.h",
+    "9\t5\tlibs/image/tiles3/kis_tile.cc",
+    "1\t1\tlibs/image/tiles3/kis_tile.h",
+    "304\t0\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+    "10\t0\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.h"
+  ],
+  "results": {
+    "cancel-full-raw-r1-arm64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [],
+          "passed": false,
+          "exit": 28,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 47.677209583,
+          "totals": [
+            [
+              "1531",
+              "28",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "00fd2b422c354fe6e5365ddbd081d4253e397574ba799abd1345598454999ddb",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "f0d45a6a9ab0dcc7c48b0c97df5cbd04ad413027edc777bd66eb89623c1ae6cf"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {
+            "testPageStoreCancelledIteratorAdapters": 28
+          },
+          "cases": [
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure2"
+            ]
+          ]
+        }
+      },
+      "diff_sha256": "9a0d989583ddfb81eaae5cd5792b8a3ad83c754b5e1abb248d7ce42663891fe1"
+    },
+    "cancel-full-independent-r3-arm64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [],
+          "passed": false,
+          "exit": 127,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 48.902277541,
+          "totals": [
+            [
+              "1441",
+              "146",
+              "0"
+            ]
+          ]
+        },
+        {
+          "test": "KisPageStoreReferenceTest",
+          "selectors": [],
+          "passed": false,
+          "exit": 1,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 8.070173208,
+          "totals": [
+            [
+              "1018",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "8e783e447ea5476b7eb011e0a8424c021b57203064423ddfea61eccc7b005a4c",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "cfc9572bcb291b9b7c37cdae8cfb62d05ccac2e7e237330c2e10b7e26b6c6022",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "3af0036391a1d5c62d0c7b3a770c06ec173ce41547e0106160a383655424f18d",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {
+            "testPageStoreCancelledIteratorAdapters": 28,
+            "testPageStoreAbandonedBatchFinalUnlock": 4,
+            "testPageStoreOverlayExtent": 16,
+            "testPageStoreCancelledPrivateClient": 2,
+            "testPageStoreClonePublishedBounds": 16,
+            "testPageStoreFreshReadSelection": 80
+          },
+          "cases": [
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read0-foreign0-scope1"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read0-foreign1-scope1"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read1-foreign0-scope1"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read1-foreign1-scope1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed1-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed1-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed1-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed1-warm1"
+            ],
+            [
+              "testPageStoreCancelledPrivateClient",
+              "operation"
+            ],
+            [
+              "testPageStoreCancelledPrivateClient",
+              "compatibility-batch"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W1-H1"
+            ]
+          ]
+        },
+        "KisPageStoreReferenceTest": {
+          "counts": {
+            "tiles3BackendCoalescesOverlappingAnonymousLeases": 1
+          },
+          "cases": [
+            [
+              "tiles3BackendCoalescesOverlappingAnonymousLeases",
+              ""
+            ]
+          ]
+        }
+      },
+      "diff_sha256": "96f68d302d28aaf639465265c0c359f47492efec457bd18df7f9e8a7b94739d8"
+    },
+    "cancel-full-raw-r1-x86_64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [],
+          "passed": false,
+          "exit": 28,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 66.366218834,
+          "totals": [
+            [
+              "1531",
+              "28",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "f0d45a6a9ab0dcc7c48b0c97df5cbd04ad413027edc777bd66eb89623c1ae6cf",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "00fd2b422c354fe6e5365ddbd081d4253e397574ba799abd1345598454999ddb"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {
+            "testPageStoreCancelledIteratorAdapters": 28
+          },
+          "cases": [
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure2"
+            ]
+          ]
+        }
+      },
+      "diff_sha256": "9a0d989583ddfb81eaae5cd5792b8a3ad83c754b5e1abb248d7ce42663891fe1"
+    },
+    "cancel-full-independent-r3-x86_64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [],
+          "passed": false,
+          "exit": 127,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 66.356853792,
+          "totals": [
+            [
+              "1441",
+              "146",
+              "0"
+            ]
+          ]
+        },
+        {
+          "test": "KisPageStoreReferenceTest",
+          "selectors": [],
+          "passed": false,
+          "exit": 1,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 9.283629625000003,
+          "totals": [
+            [
+              "1018",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "3af0036391a1d5c62d0c7b3a770c06ec173ce41547e0106160a383655424f18d",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "8e783e447ea5476b7eb011e0a8424c021b57203064423ddfea61eccc7b005a4c",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "cfc9572bcb291b9b7c37cdae8cfb62d05ccac2e7e237330c2e10b7e26b6c6022"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {
+            "testPageStoreCancelledIteratorAdapters": 28,
+            "testPageStoreAbandonedBatchFinalUnlock": 4,
+            "testPageStoreOverlayExtent": 16,
+            "testPageStoreCancelledPrivateClient": 2,
+            "testPageStoreClonePublishedBounds": 16,
+            "testPageStoreFreshReadSelection": 80
+          },
+          "cases": [
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "1-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "4-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "8-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write0-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing0-write1-pressure2"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure0"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure1"
+            ],
+            [
+              "testPageStoreCancelledIteratorAdapters",
+              "16-existing1-write1-pressure2"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read0-foreign0-scope1"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read0-foreign1-scope1"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read1-foreign0-scope1"
+            ],
+            [
+              "testPageStoreAbandonedBatchFinalUnlock",
+              "read1-foreign1-scope1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b1-packed1-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b4-packed1-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b8-packed1-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed0-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed0-warm1"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed1-warm0"
+            ],
+            [
+              "testPageStoreOverlayExtent",
+              "b16-packed1-warm1"
+            ],
+            [
+              "testPageStoreCancelledPrivateClient",
+              "operation"
+            ],
+            [
+              "testPageStoreCancelledPrivateClient",
+              "compatibility-batch"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed0-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough0-packed1-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed0-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm0-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm0-offset1-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm1-offset0-seal1"
+            ],
+            [
+              "testPageStoreClonePublishedBounds",
+              "rough1-packed1-warm1-offset1-seal1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B1-op4-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B4-op4-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B8-op4-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op0-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op1-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op2-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op3-W1-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W0-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W0-H1"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W1-H0"
+            ],
+            [
+              "testPageStoreFreshReadSelection",
+              "B16-op4-W1-H1"
+            ]
+          ]
+        },
+        "KisPageStoreReferenceTest": {
+          "counts": {
+            "tiles3BackendCoalescesOverlappingAnonymousLeases": 1
+          },
+          "cases": [
+            [
+              "tiles3BackendCoalescesOverlappingAnonymousLeases",
+              ""
+            ]
+          ]
+        }
+      },
+      "diff_sha256": "96f68d302d28aaf639465265c0c359f47492efec457bd18df7f9e8a7b94739d8"
+    },
+    "cancel-targeted-shared-owners-r0-arm64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [
+            "testPageStoreDisjointOwnerPublication"
+          ],
+          "passed": false,
+          "exit": 8,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 1.489239958,
+          "totals": [
+            [
+              "18",
+              "8",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "c37dfabb835ea708c982c8e60e901a3303459d818d0a0a0b2d76080ba70623d0",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "9a590530ad984ae2e3459e6ce6206cd13e71d3a19744129e7d8175b37943943f"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {
+            "testPageStoreDisjointOwnerPublication": 8
+          },
+          "cases": [
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp1-warm0-ending2"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp1-warm1-ending2"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp4-warm0-ending2"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp4-warm1-ending2"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp8-warm0-ending2"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp8-warm1-ending2"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp16-warm0-ending2"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp16-warm1-ending2"
+            ]
+          ]
+        }
+      },
+      "diff_sha256": "60b35371072a6b37e44f420ffc147393fce105e30641b85ff2a5678601e26865"
+    },
+    "cancel-targeted-independent-r1-arm64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [
+            "testPageStoreDisjointOwnerPublication"
+          ],
+          "passed": false,
+          "exit": 4,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 1.463558667,
+          "totals": [
+            [
+              "22",
+              "4",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "9a590530ad984ae2e3459e6ce6206cd13e71d3a19744129e7d8175b37943943f",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "121e48f50b7e60e7f9bb25cbaff5782ccf4ec87b6b4ace3f71710d04f7ce8772",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {
+            "testPageStoreDisjointOwnerPublication": 4
+          },
+          "cases": [
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp1-warm0-ending0"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp4-warm0-ending0"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp8-warm0-ending0"
+            ],
+            [
+              "testPageStoreDisjointOwnerPublication",
+              "bpp16-warm0-ending0"
+            ]
+          ]
+        }
+      },
+      "diff_sha256": "68b9be301a8953d1de966e5c8af61cb24ec52bf857badd832cad744996dca590"
+    },
+    "cancel-targeted-independent-r2-arm64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [
+            "testPageStoreDisjointOwnerPublication"
+          ],
+          "passed": true,
+          "exit": 0,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 1.560087167,
+          "totals": [
+            [
+              "26",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        {
+          "test": "KisPageStoreReferenceTest",
+          "selectors": [],
+          "passed": false,
+          "exit": 2,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 8.550263875,
+          "totals": [
+            [
+              "1017",
+              "2",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "8e783e447ea5476b7eb011e0a8424c021b57203064423ddfea61eccc7b005a4c",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "a2b7181bff3205a995d21262ed322711062fa45fe9c44ca62aec1c35c142094a",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "9a590530ad984ae2e3459e6ce6206cd13e71d3a19744129e7d8175b37943943f"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {},
+          "cases": []
+        },
+        "KisPageStoreReferenceTest": {
+          "counts": {
+            "tiles3BackendPublishesDefaultExtentAndHistoryAtomically": 1,
+            "tiles3BackendCoalescesOverlappingAnonymousLeases": 1
+          },
+          "cases": [
+            [
+              "tiles3BackendPublishesDefaultExtentAndHistoryAtomically",
+              ""
+            ],
+            [
+              "tiles3BackendCoalescesOverlappingAnonymousLeases",
+              ""
+            ]
+          ]
+        }
+      },
+      "diff_sha256": "574159be519249eb3a93e6ccfa143f10d9122ea932c38588205be98dc4ec676d"
+    },
+    "cancel-targeted-raw-r1-arm64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [
+            "testPageStoreAbandonedBatchFinalUnlock",
+            "testPageStoreUnscopedLeaseCompletion",
+            "testPageStoreNestedTileCapabilityLifetime",
+            "testPageStoreParkedBatchReadCapability",
+            "testPageStoreClearBarrierCancelsLegacyWriter",
+            "testPageStoreCancelledPrivateClient",
+            "testPageStoreWritablePresence"
+          ],
+          "passed": true,
+          "exit": 0,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 1.46309725,
+          "totals": [
+            [
+              "53",
+              "0",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "f0d45a6a9ab0dcc7c48b0c97df5cbd04ad413027edc777bd66eb89623c1ae6cf",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "00fd2b422c354fe6e5365ddbd081d4253e397574ba799abd1345598454999ddb"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {},
+          "cases": []
+        }
+      },
+      "diff_sha256": "9a0d989583ddfb81eaae5cd5792b8a3ad83c754b5e1abb248d7ce42663891fe1"
+    },
+    "cancel-targeted-restored-r0-arm64": {
+      "rows": [
+        {
+          "test": "kis_tiled_data_manager_test",
+          "selectors": [
+            "testPageStoreAbandonedBatchFinalUnlock",
+            "testPageStoreUnscopedLeaseCompletion",
+            "testPageStoreNestedTileCapabilityLifetime",
+            "testPageStoreParkedBatchReadCapability",
+            "testPageStoreClearBarrierCancelsLegacyWriter",
+            "testPageStoreCancelledPrivateClient",
+            "testPageStoreWritablePresence"
+          ],
+          "passed": true,
+          "exit": 0,
+          "timed_out": false,
+          "reaped": true,
+          "loading_ok": true,
+          "seconds": 1.559482958,
+          "totals": [
+            [
+              "53",
+              "0",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "identity": {
+        "verified": true,
+        "hashes": {
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "8c3cc77b65d3495799ade8f51e2ff5f2d5e72496dadcafa01ff1416024a3cdcd",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "cfc9572bcb291b9b7c37cdae8cfb62d05ccac2e7e237330c2e10b7e26b6c6022"
+        }
+      },
+      "failures": {
+        "kis_tiled_data_manager_test": {
+          "counts": {},
+          "cases": []
+        }
+      },
+      "diff_sha256": "0ba4826e5606381c0716ee2e4256c5fabe6ddc1bfe80d98701bcdbeb084bef46"
+    }
+  },
+  "all_attempts": [
+    "cancel-full-independent-r3-arm64",
+    "cancel-full-independent-r3-x86_64",
+    "cancel-full-raw-r1-arm64",
+    "cancel-full-raw-r1-x86_64",
+    "cancel-full-unlock-repro-arm64",
+    "cancel-full-unscoped-repro-arm64",
+    "cancel-targeted-independent-r0-arm64",
+    "cancel-targeted-independent-r1-arm64",
+    "cancel-targeted-independent-r2-arm64",
+    "cancel-targeted-raw-r0-arm64",
+    "cancel-targeted-raw-r1-arm64",
+    "cancel-targeted-restored-r0-arm64",
+    "cancel-targeted-shared-owners-r0-arm64",
+    "cancel-targeted-unlock-r0-arm64",
+    "cancel-targeted-unlock-r1-arm64"
+  ],
+  "verified_archive_members": 147,
+  "archive_sha256": "6449a45cb7fa0ddc8f4ab5f1d2434702372cb6ef92fd9556faa6b973e779c0cd",
+  "decision": "Prefer explicit operation/iterator/history grouping. Complete current/overlay read and local adapter cancellation before accepting it; do not build a global cohort rollback ledger.",
+  "limits": "No complete passing package, timing claim, upstream performance comparison or M6 qualification. Prototype failures at seal/current/clone are unclosed visibility obligations, not merely counters to waive. Raw candidate still has 28 actual cancellation failures per architecture; prototype also exposes prior cohort assumptions."
+}

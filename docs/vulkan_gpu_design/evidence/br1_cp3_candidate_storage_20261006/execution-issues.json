@@ -1,0 +1,9 @@
+{
+  "status": "Every attempted build/test result retained; focused fixture correction does not remove failures or relax production guards",
+  "issues": [
+    {"scope": "parent-runtime-copy", "result": "Initial verification of a relative symlink preceded its target copy. Completed the two-pass copy and verified every original final-proof SHA before any rebuild."},
+    {"scope": "pre-final-probe-build", "result": "Current product/fixture and Vulkan builds exited normally. First probe stopped with FileExistsError because initial probe products remained; moved those exact products to initial-build, retained failed launcher/log and built all final probes."},
+    {"scope": "focused-candidate-lifetime-arm64", "result": "228 passed/54 failed; every failure was initial registerPage(state), before candidate preparation. Original two-page/four-shard fixture reused physical slots across pages; increasing cardinality or using one shard correctly rejected canonical collisions.", "repair": "Give every actual fixture page its own original provider/epoch physical slot identity; update the corresponding original late-writer source/target. Keep canonical collision rejection and all lifecycle/reference assertions. Final rerun and full matrix are separate."}
+  ],
+  "not_changed": "Hard budgets, ratchets, selectors, identity/revision/claim checks, original performance sample counts, confidence and stopping rules"
+}

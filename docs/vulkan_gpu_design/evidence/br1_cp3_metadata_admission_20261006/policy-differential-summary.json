@@ -1,0 +1,184 @@
+{
+  "processes": 8,
+  "generic_checks_per_process": 800000,
+  "exact_parent_current_generic_outcomes_equal": true,
+  "cache_expected_vs_cold_and_warm_comparisons_per_arch": 1200000,
+  "directed_dependency_sequence_checks_per_arch": 14,
+  "controller_layout": {
+    "arm64-parent": 1360,
+    "arm64-current": 1376,
+    "x86_64-parent": 1360,
+    "x86_64-current": 1376
+  },
+  "scope": "Actual private predicates on arbitrary/boundary states and real dependency mutations. Injected invalid states do not claim production reachability; full safety matrix covers actual consumers.",
+  "rows": [
+    {
+      "arch": "arm64",
+      "probe": "generic-policy-parent",
+      "variant": "parent",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/parent-runtime:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/generic-policy-parent-arm64/probe"
+      ],
+      "pid": 7142,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "probe": "generic-policy-current",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/generic-policy-current-arm64/probe"
+      ],
+      "pid": 7159,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "probe": "metadata-policy-differential",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/metadata-policy-differential-arm64/probe"
+      ],
+      "pid": 7160,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "METADATA_POLICY_DIFF checks=1200000 digest=c1d5892b67cfa9ec accepted=293336,0,66169,0 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "arm64",
+      "probe": "metadata-policy-sequences",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/metadata-policy-sequences-arm64/probe"
+      ],
+      "pid": 7166,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "METADATA_SEQUENCES checks=14 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "probe": "generic-policy-parent",
+      "variant": "parent",
+      "command": [
+        "arch",
+        "-x86_64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/parent-runtime:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/generic-policy-parent-x86_64/probe"
+      ],
+      "pid": 7170,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "probe": "generic-policy-current",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-x86_64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/generic-policy-current-x86_64/probe"
+      ],
+      "pid": 7186,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "POLICY_DIFF checks=800000 digest=bc98f77a53612b2b accepted=99247,136187,39102,49544 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "probe": "metadata-policy-differential",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-x86_64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/metadata-policy-differential-x86_64/probe"
+      ],
+      "pid": 7188,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "METADATA_POLICY_DIFF checks=1200000 digest=c1d5892b67cfa9ec accepted=293336,0,66169,0 process_bytes=356 all_checks_passed=1"
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "probe": "metadata-policy-sequences",
+      "variant": "current",
+      "command": [
+        "arch",
+        "-x86_64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_admission_20261006/metadata-policy-sequences-x86_64/probe"
+      ],
+      "pid": 7197,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "image_loaded": true,
+      "outcome": [
+        "METADATA_SEQUENCES checks=14 all_checks_passed=1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+positive_control_allocations=4
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+exact_index_insert allocations=0 bytes=0 frees=0
+prepare_bad_alloc_preserves_index=1
+root_metadata_descriptor_install allocations=12 bytes=2336 frees=12
+0   interposer-arm64.dylib              0x0000000100d04888 _ZL9allocatedm + 172
+1   interposer-arm64.dylib              0x0000000100d04688 _ZL13trackedMallocm + 24
+2   probe-arm64                         0x0000000100cdd71c _Znwm + 36
+3   libkritaimage.21.0.0.dylib          0x00000001029c2ab4 _ZN12QHashPrivate4DataINS_4NodeIy15QHashDummyValueEEE8detachedEPS4_m + 32
+4   libkritaimage.21.0.0.dylib          0x00000001029c7ef8 _ZNK25KisImageEpochRootSnapshot7isValidEv + 152
+5   libkritaimage.21.0.0.dylib          0x0000000102a1ff00 _ZNK29KisPagePublicationCoordinator25KisPreparedMutationCommit7isValidEv + 64
+6   libkritaimage.21.0.0.dylib          0x0000000102a1ffa4 _ZN29KisPagePublicationCoordinator25KisPreparedMutationCommit10tryInstallEv + 32
+7   libkritaimage.21.0.0.dylib          0x0000000102a249e8 _ZN29KisPagePublicationCoordinator12commitLockedERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshotPK12KisPageStoreR12QMutexLockerI6QMutexE + 6808
+8   libkritaimage.21.0.0.dylib          0x0000000102a604d4 _ZN12KisPageStore6commitERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshot + 136
+9   libkritaimage.21.0.0.dylib          0x0000000102a73ec8 _ZN35KisTiledDataManagerPageStoreBackend22finishOwnedTransactionERK18KisPageTransactionP7QString + 460
+10  libkritaimage.21.0.0.dylib          0x0000000102a7d9b4 _ZN35KisTiledDataManagerPageStoreBackend15setDefaultPixelERK10QByteArrayP7QString + 324
+11  probe-arm64                         0x0000000100cddedc _ZN25KisPageStoreReferenceTest3runEiPPc + 1908
+12  dyld                                0x000000019d87eb98 start + 6076
+root_metadata_descriptor_install allocations=12 bytes=2336 frees=12
+0   interposer-arm64.dylib              0x0000000100d04888 _ZL9allocatedm + 172
+1   interposer-arm64.dylib              0x0000000100d04688 _ZL13trackedMallocm + 24
+2   probe-arm64                         0x0000000100cdd71c _Znwm + 36
+3   libkritaimage.21.0.0.dylib          0x00000001029c2ab4 _ZN12QHashPrivate4DataINS_4NodeIy15QHashDummyValueEEE8detachedEPS4_m + 32
+4   libkritaimage.21.0.0.dylib          0x00000001029c7ef8 _ZNK25KisImageEpochRootSnapshot7isValidEv + 152
+5   libkritaimage.21.0.0.dylib          0x0000000102a1ff00 _ZNK29KisPagePublicationCoordinator25KisPreparedMutationCommit7isValidEv + 64
+6   libkritaimage.21.0.0.dylib          0x0000000102a1ffa4 _ZN29KisPagePublicationCoordinator25KisPreparedMutationCommit10tryInstallEv + 32
+7   libkritaimage.21.0.0.dylib          0x0000000102a249e8 _ZN29KisPagePublicationCoordinator12commitLockedERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshotPK12KisPageStoreR12QMutexLockerI6QMutexE + 6808
+8   libkritaimage.21.0.0.dylib          0x0000000102a604d4 _ZN12KisPageStore6commitERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshot + 136
+9   libkritaimage.21.0.0.dylib          0x0000000102a73ec8 _ZN35KisTiledDataManagerPageStoreBackend22finishOwnedTransactionERK18KisPageTransactionP7QString + 460
+10  libkritaimage.21.0.0.dylib          0x0000000102a7d9b4 _ZN35KisTiledDataManagerPageStoreBackend15setDefaultPixelERK10QByteArrayP7QString + 324
+11  probe-arm64                         0x0000000100cddf28 _ZN25KisPageStoreReferenceTest3runEiPPc + 1984
+12  dyld                                0x000000019d87eb98 start + 6076
+root_metadata_descriptor_install allocations=12 bytes=2336 frees=12
+0   interposer-arm64.dylib              0x0000000100d04888 _ZL9allocatedm + 172
+1   interposer-arm64.dylib              0x0000000100d04688 _ZL13trackedMallocm + 24
+2   probe-arm64                         0x0000000100cdd71c _Znwm + 36
+3   libkritaimage.21.0.0.dylib          0x00000001029c2ab4 _ZN12QHashPrivate4DataINS_4NodeIy15QHashDummyValueEEE8detachedEPS4_m + 32
+4   libkritaimage.21.0.0.dylib          0x00000001029c7ef8 _ZNK25KisImageEpochRootSnapshot7isValidEv + 152
+5   libkritaimage.21.0.0.dylib          0x0000000102a1ff00 _ZNK29KisPagePublicationCoordinator25KisPreparedMutationCommit7isValidEv + 64
+6   libkritaimage.21.0.0.dylib          0x0000000102a1ffa4 _ZN29KisPagePublicationCoordinator25KisPreparedMutationCommit10tryInstallEv + 32
+7   libkritaimage.21.0.0.dylib          0x0000000102a249e8 _ZN29KisPagePublicationCoordinator12commitLockedERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshotPK12KisPageStoreR12QMutexLockerI6QMutexE + 6808
+8   libkritaimage.21.0.0.dylib          0x0000000102a604d4 _ZN12KisPageStore6commitERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshot + 136
+9   libkritaimage.21.0.0.dylib          0x0000000102a73ec8 _ZN35KisTiledDataManagerPageStoreBackend22finishOwnedTransactionERK18KisPageTransactionP7QString + 460
+10  libkritaimage.21.0.0.dylib          0x0000000102a7d9b4 _ZN35KisTiledDataManagerPageStoreBackend15setDefaultPixelERK10QByteArrayP7QString + 324
+11  probe-arm64                         0x0000000100cddf74 _ZN25KisPageStoreReferenceTest3runEiPPc + 2060
+12  dyld                                0x000000019d87eb98 start + 6076
+root_metadata_descriptor_install allocations=12 bytes=2336 frees=12
+0   interposer-arm64.dylib              0x0000000100d04888 _ZL9allocatedm + 172
+1   interposer-arm64.dylib              0x0000000100d04688 _ZL13trackedMallocm + 24
+2   probe-arm64                         0x0000000100cdd71c _Znwm + 36
+3   libkritaimage.21.0.0.dylib          0x00000001029c2ab4 _ZN12QHashPrivate4DataINS_4NodeIy15QHashDummyValueEEE8detachedEPS4_m + 32
+4   libkritaimage.21.0.0.dylib          0x00000001029c7ef8 _ZNK25KisImageEpochRootSnapshot7isValidEv + 152
+5   libkritaimage.21.0.0.dylib          0x0000000102a1ff00 _ZNK29KisPagePublicationCoordinator25KisPreparedMutationCommit7isValidEv + 64
+6   libkritaimage.21.0.0.dylib          0x0000000102a1ffa4 _ZN29KisPagePublicationCoordinator25KisPreparedMutationCommit10tryInstallEv + 32
+7   libkritaimage.21.0.0.dylib          0x0000000102a249e8 _ZN29KisPagePublicationCoordinator12commitLockedERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshotPK12KisPageStoreR12QMutexLockerI6QMutexE + 6808
+8   libkritaimage.21.0.0.dylib          0x0000000102a604d4 _ZN12KisPageStore6commitERK18KisPageTransactionRK18KisPreparedPageSetP29KisRetainedImageEpochSnapshot + 136
+9   libkritaimage.21.0.0.dylib          0x0000000102a73ec8 _ZN35KisTiledDataManagerPageStoreBackend22finishOwnedTransactionERK18KisPageTransactionP7QString + 460
+10  libkritaimage.21.0.0.dylib          0x0000000102a7d9b4 _ZN35KisTiledDataManagerPageStoreBackend15setDefaultPixelERK10QByteArrayP7QString + 324
+11  probe-arm64                         0x0000000100cddfc0 _ZN25KisPageStoreReferenceTest3runEiPPc + 2136
+12  dyld                                0x000000019d87eb98 start + 6076
+pages=1 observed_installs=4

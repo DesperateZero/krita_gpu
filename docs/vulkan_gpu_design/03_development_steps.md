@@ -1,5 +1,7 @@
 # 开发步骤与验收门槛
 
+> 本文保留早期阶段摘要，其中“当前”和指向 47–91 的执行计划均为历史时点记录。当前 BR1 工作请以 [92](92_br1_m6_m8_execution_baseline.md) 和代码现实为准。
+
 > 本文是便于阅读的阶段摘要。全局唯一执行计划、进入条件、删除清单和提交顺序以
 > [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md) 为准，机器门禁以
 > [30_p0_ci_architecture_guards.md](30_p0_ci_architecture_guards.md) 为准。旧 `Phase*`、`G*` 标号只用于追溯，
@@ -9,17 +11,23 @@
 ## 当前总评
 
 - 旧 Vulkan 原型：已归档并从当前 production tree 删除；不再有可运行 Vulkan 产品路径。
-- 新 Vulkan 子系统：只有显式失败的 PageStore/backend/UI adapter 第一版 skeleton，尚不是冻结 ABI。
+- canonical storage：BR1 功能/正确性 cutover 已完成，但整体以 `BR1-PERF` 重开；PageStore 已接管 tiles3
+  identity/generation/transaction，当前补 resident CPU native guard、virtual default、mutation scope、统一 write-plan、
+  条件 backing handoff、硬 backing 预算与 persistent epoch root，计划见 52/67，写侧最终设计见 68；69 R0 已完成且无 D0，
+  R1–M5 已有实施记录，但全链路收敛尚未验收。当前按
+  [84 全性能优化链路收敛方案](archive/br1_pre_m6_20260925/documents/84_br1_full_optimization_convergence_and_cleanup_20260923.md) 清理 52 起全部增量，暂不扩展 M6/M7。
+- 新 Vulkan 子系统：backend/UI adapter 仍是保持产品入口关闭的 foundation；BR2 submission API 尚未接入产品。
 - 正常应用入口与 readiness：旧假成功入口已删除，新入口保持关闭，尚无 ready device/session/view。
-- 模块边界：旧 `kritaimagevulkan <-> kritaui` 构建环已切断；foundation target/private-public/WSI owner 尚待落实。
-- canonical storage：Krita 已有 tile/COW/undo/swap 基础，但尚未统一为 generation/lease/replica PageStore。
+- 模块边界：旧 `kritaimagevulkan <-> kritaui` 构建环已切断；foundation target/private-public 边界已落位，
+  native submission/WSI owner 仍按 BR2/BR6 推进。
 - 虚拟纹理 MVP：未完成；当前 L3 没有真实 SSD，UMA 不是 canonical pointer bypass。
 - queue/线程：新 coordinator 只有空壳，未形成 queue 唯一所有者和完整 ticket DAG，零阻塞不成立。
 - GPU stroke、撤销/保存、多层合成：旧实验仅在 archive；新树没有可运行实现。
 - device/shader/compositor/display/WSI：旧算法有提取价值，但新 foundation owner、ABI 和测试尚未落地。
 - 格式/颜色/LoD：新能力保持关闭，尚无 codec/pipeline/golden 支持矩阵。
 
-因此下一步不是“接通现有入口”，而是受控重置。
+因此当前下一步是结清 BR1-PERF；BR2 `SubmissionCoordinator` 只允许隔离协议/reference 准备，production 接线不得
+越过 BR1-PERF，也不得越过 BR2–BR5 直接接通产品入口。
 
 ## BR0：干净校正基线
 
@@ -44,10 +52,34 @@
 - 在 `kritaimage` 内建立 `SurfaceId + LogicalPageId + Generation`。
 - 吸收 `KisTileDataStore`、`KisMementoManager`、`KisSwappedDataStore`，不新建平行存储。
 - 冻结 read/write request、lease、publish/cancel 与 backend-neutral completion ticket。
-- iterator/accessor 通过 CPU access facade 保持现有语义。
+- iterator/accessor 通过 CPU access facade 保持现有语义，并以 native resident guard 保持 upstream 级热路径。
+- virtual default 不物化空白 page；write mutation 由 PageStore 私有 `KisPageWriteCoordinator` 和内联 plan 选择 pending 复用、条件 backing
+  handoff、完整 payload、必要 COW 或纯语义写；每页每个业务 mutation 至多一次必要 COW，epoch 使用 production persistent root。
+- backing ledger 精确区分 current、retained history、pending、in-flight、retiring 与 optional cache；临时/退休类有硬上限、
+  高低水位、背压和显式 `ResourcePressure`，不以无限后台 baking 作为稳态方案。
 - 建立 reference state machine、随机迁移/取消/failure property test。
 
-验收：纯 CPU 绘画、clone/COW、undo/redo、save/reopen 与 upstream 像素一致；同一 page 没有第二身份。
+验收：纯 CPU 绘画、clone/COW、undo/redo、save/reopen 与 upstream 像素一致；同一 page 没有第二身份；普通无旧值保留的
+resident write 达到零 before-image copy、零新 payload allocation、零 payload migration 且 backing 峰值不越硬上限；必要 COW、
+tiny-budget/backpressure、blank/default 和 epoch commit 达到 52/68 的结构门槛与 39 的 upstream 差分性能门禁。
+
+状态：2026-09-19 已通过功能/正确性 C1–C5；51 保留该历史证据。2026-09-20 upstream 差分发现 CPU 热路径和
+production layout 未达出口，当前以 `BR1-PERF` 推进
+[52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)，后续 write-side 实现服从
+[68](archive/br1_pre_m6_20260925/documents/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md)。当前代码仍是独立 backing/COW fallback；不得恢复第二套
+tile authority；R0 完成证据见 [72](archive/br1_pre_m6_20260925/documents/72_br1_r0_reverse_callgraph_and_closure_20260922.md)，R1 五项 service 提取已经完成，实施证据见
+[73](archive/br1_pre_m6_20260925/documents/73_br1_r1_default_storage_extraction_20260922.md)、[74](archive/br1_pre_m6_20260925/documents/74_br1_r1_retirement_queue_extraction_20260922.md) 与
+[75](archive/br1_pre_m6_20260925/documents/75_br1_r1_history_read_publication_extraction_20260922.md)；R2/M1 证据见
+[76](archive/br1_pre_m6_20260925/documents/76_br1_r2_m1_compact_metadata_records_20260922.md)，M2A 证据见
+[77](archive/br1_pre_m6_20260925/documents/77_br1_r2_m2a_shard_metadata_arenas_20260922.md)，M2B 证据见
+[78](archive/br1_pre_m6_20260925/documents/78_br1_r2_m2b_lock_external_metadata_growth_20260922.md)，M3A shard index/intrusive record 证据见
+[79](archive/br1_pre_m6_20260925/documents/79_br1_r2_m3a_shard_indexes_and_intrusive_records_20260922.md)，M3B compact page/activity 与 M3 收口证据见
+[80](archive/br1_pre_m6_20260925/documents/80_br1_r2_m3b_compact_page_activity_20260922.md)，M4 allocation-free publication install、prepared commit 与 side-map 收口证据见
+[81](archive/br1_pre_m6_20260925/documents/81_br1_r2_m4_allocation_free_publication_20260922.md)。M5A write schema、admission、budget reservation 与 fresh-only selector 证据见
+[82](archive/br1_pre_m6_20260925/documents/82_br1_r3_m5a_write_schema_admission_and_budget_20260922.md)，M5B 历史记录见
+[83](archive/br1_pre_m6_20260925/documents/83_br1_r3_m5b_store_session_write_migration_20260923.md)。当前按
+[84](archive/br1_pre_m6_20260925/documents/84_br1_full_optimization_convergence_and_cleanup_20260923.md) 执行全链路收敛；旧 gate 通过不代表当前源码已验收；
+BR2 production 接线等待 BR1-PERF 结清。
 
 ## BR2：SubmissionCoordinator
 
@@ -72,8 +104,9 @@ wait-idle 或无限 fence wait。
 - SSD 只演进 Krita 当前 swap，使用 generation record、checksum、原子 index commit 和后台 GC。
 - 统一预算、pin、in-flight、温度事件和 backpressure。
 
-验收：UMA 稳态 canvas-pixel copy 为零；小预算下 VRAM→RAM→SSD→RAM→VRAM 强制循环不丢像素；SSD
-失败/取消/损坏不改变 authority。
+验收：同一兼容驻留 shared backing 的真实 CPU↔GPU 交接中，payload migration count/bytes 为零（条件及计数覆盖见
+39 的 5.7；不等于零同步/总耗时），COW/undo/derived copy 单列；小预算下 VRAM→RAM→SSD→RAM→VRAM 强制循环不丢像素；
+SSD 失败/取消/损坏不改变 authority。
 
 ## BR4：EvalGraphIR、EvaluationEpoch 与语义温度
 
@@ -97,13 +130,16 @@ cache；Layer 与等价 Flow lowering 的 CPU reference 输出一致；剪枝前
 
 - PaintOp 从 `KisPaintExecutionContext` 获取文档 session，不访问 canvas/global router。
 - resolved dab 进入无丢失 journal，并按 page 稳定分桶；同页严格按 sequence 执行。
-- page-batched kernel 取 write lease，first-write 创建 generation COW。
+- page-batched kernel 取 write lease，first-write 消费与 CPU 相同的 PageStore write plan；合法 shared allocation handoff
+  不新建 payload，仍需旧值/取消/失败隔离时创建 generation COW。
 - stroke commit 依赖最后 publish ticket，不暂停 render thread、不下载整笔像素。
 - undo 保存旧 generation 引用；save 获取 immutable image epoch，绘画可继续下一 generation。
-- capability/format 在 begin stroke 前决定整笔 GPU 或 CPU route。
+- capability/format 先判定语义可执行性，再由 39 的 CPU-relative performance profile 在首次写入前决定整笔 GPU 或
+  CPU route；`Supported` 但不具备 `AutoPreferred` 的 bucket 仍走 CPU。
 
 验收：overlapping dab、selection、alpha lock、wash、undo/cancel/save/reopen 与 reference 一致；没有 per-dab
-submit/wait，失败只丢弃新 write generation。
+submit/wait，失败只丢弃新 write generation；CPU-only/forced GPU/UMA/Auto 在 39 的 GPU 劣势 profile 下满足 CPU-relative
+median/P95/P99 门禁。
 
 ## BR6：Vulkan UI、DisplaySurface 与产品开放
 

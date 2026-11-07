@@ -6,6 +6,10 @@
 > lease、温度、预取和 ticket 使用三类后端，且不感知物理驻留位置。
 > 虚拟纹理算法已经在 [32_virtual_texture_architecture_decisions.md](32_virtual_texture_architecture_decisions.md)
 > 冻结；PageStore、binding、UMA、dGPU、SSD、温度的具体实现分别服从 33–38，本文不定义另一套策略。
+> resident CPU 路径已冻结的 first-write、page-local pin、batch mutation 和 virtual default 也约束 GPU/UMA，见
+> [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)；写侧最终采用
+> [68](archive/br1_pre_m6_20260925/documents/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md) 的 metadata stable-slot arena、统一 coordinator、
+> 条件 COW、backing handoff 与硬预算；GPU/UMA 不得建立第二套宽松 selector。
 
 ## 1. 边界
 
@@ -46,6 +50,7 @@ Deadline
 PriorityClass
 ExpectedReuse
 PredictedNextRegion
+CpuEtaProfile / AcceleratorEtaProfile / RouteDecision
 ```
 
 每个 entry 包含：
@@ -60,6 +65,10 @@ deadline
 estimated hold duration
 ```
 
+route 必须在首次 write lease 前冻结。`GpuDirectWrite/UmaShared` capability 只证明可执行，不证明 `AutoPreferred`；若当前
+queue、residency、共享带宽或 workload bucket 没有满足 39 的 CPU-relative 收益余量，整笔使用同一 PageStore 的 CPU
+execution。MVP 不按 dab/page 混合 route。
+
 ### 2.2 Lease 获取
 
 - `acquireRead()` 返回精确 generation 的 read lease 或 future ticket。
@@ -67,6 +76,10 @@ estimated hold duration
 - lease 请求本身不要求页面已经驻留。
 - compiler 可以继续编译其他 batch；submission 等待 lease/residency ticket。
 - lease 失败必须让 batch 显式 Failed，不能降级成透明空页，除非 PageStore 确认该页本来就是规范化空白页。
+- 同一 batch 对每个 PageKey 只 acquire/reserve 一次；compiler 先把全部 dabs/jobs 按 page 聚合，再建立 immutable
+  binding snapshot。禁止 per dab request、generation reserve、submission 或 host wait。
+- 规范空白页的 read 使用共享 default binding，不因 ReadSet 中出现更多空白坐标而创建 page/replica；首次实际写才
+  分配 private output。
 
 ### 2.3 Pin
 
@@ -98,7 +111,8 @@ DependencyGenerations
 ```text
 Published G
   -> reserve Pending G+1
-  -> ensure write location and before-image
+  -> PageStore selects ReusePending / HandoffRecoverable / HandoffCommitOnly / FreshPayload / FreshDiscard / FreshCow
+  -> ensure selected write location, recoverability and backing budget
   -> submit writer waiting on LastWriterTicket
   -> signal StrokeTicket
   -> validate operation/generation
@@ -106,6 +120,13 @@ Published G
   -> atomically commit batch ImageEpoch manifest
   -> later establish Recoverable G+1 or retain journal+before-image
 ```
+
+同一 page 的全部 batch work 写同一个 pending G+1，只产生一个最终 writer completion。普通多页 GPU Prepared batch
+必须让旧 G 在 commit 前保持可读，因此只有 PageStore 已建立 exact recoverable-before backing 时才可选择
+`HandoffRecoverable`。无 before 的 `HandoffCommitOnly` 只允许全部目标、descriptor、binding、submission、completion 和
+publication 已预检，且首个 GPU write 后整条链不再出现普通取消/失败的内部路径；一般异步 batch 不满足这一条件。
+不能只因当前没有 reader/history 就覆盖 shared slot。否则 first-write 只执行一次 COW。此规则与 CPU
+`CpuMutationSession` 相同，CPU/GPU 共用 canonical selector，不能另建宽松许可。
 
 “GPU 已写”与“CPU 可读”“可淘汰”“可恢复”是不同状态，不能由一个 dirty bool 表示。
 
@@ -152,8 +173,8 @@ pin/in-flight state
 ### 4.3 轨迹预测
 
 - 根据最近输入方向、速度、笔刷 conservative bounds 和 spacing 产生有限 horizon。
-- horizon 以 materialization/scheduler P95 和 safety margin 推导；corridor由有界速度/曲率轨迹与 brush/filter halo
-  做 Minkowski sum。
+- horizon 以 request-to-consumer-ready materialization 的完整实测 P95（含 scheduler）和 safety margin 推导并限幅；
+  不累加阶段 P95，具体见 38/39。corridor 由有界速度/曲率轨迹与 brush/filter halo 做 Minkowski sum。
 - 只提交 prefetch hint，不提前创建文档 generation。
 - predictor miss 不影响正确性，只增加 residency wait。
 - predictor 不能无限 pin 沿整条延长线的页面。
@@ -202,6 +223,10 @@ CPU write lease
 ```
 
 host-coherent 不取消 execution ordering；它只减少显式 cache maintenance。
+
+shared page 已 resident 且 ownership 已在 CPU 时，CPU accessor 必须直接使用 cached slot token + page-local pin 的 native
+guard，不得重新创建异步 request、扫描 provider lease 或走像素 copy。只有 GPU ticket 未完成、generation 不匹配或
+backing 不在 shared domain 时才进入上述 request/wait 流程。
 
 ### 5.4 UMA 禁止项
 
@@ -368,8 +393,18 @@ production；SSD 工作必须演进现有 Krita swap，不得建立 reference �
 ## 11. 验收门槛
 
 - Stroke compiler/executor 不出现 bind/upload/download/SSD 具体调用。
-- UMA target canonical page 为共享映射页，stroke end 无像素 copy。
+- UMA target canonical page 为同一兼容驻留共享页时，stroke end 不为 CPU↔GPU 交接复制 payload；真实交接的 migration
+  count/bytes 为零，计量条件见 39 的 5.7。必要同步与 COW/undo/derived/display copy 单列，不宣称所有像素 copy 为零。
+- 每个 batch/page 至多一次 generation reserve、一次必要 first-write COW 和一个 writer completion；合法 handoff 分别报告
+  before-image copy、new payload allocation 和 migration bytes，不能合并为一个“zero-copy”计数；per-dab request/submit/wait 计数为零。
+- UMA/VRAM/RAM 的 current、retained history、pending、in-flight 与 retiring backing 进入同一 owner ledger 和域分桶硬预算；
+  达到上限先收割 completion、清理可重建缓存、换出 history、背压，仍无空间时显式 `ResourcePressure`，不持续 baking 新 backing。
+- virtual default CPU/GPU read 不随逻辑坐标数分配 page/slot。
+- GPU 低功耗/热降频、queue contention、tiny workload 和 UMA 共享带宽争用时，Auto 在首写前 CPU route，并满足
+  median/P95 ≤ CPU-only 1.10×、P99/最长停顿 ≤1.25×；零拷贝不能替代该门禁。
 - dGPU target 在 VRAM/RAM/SSD 间迁移后 checksum/generation 一致。
+- 管理对主干 tile、同域 direct/VT 算子、跨域交付和 RAM Tile 产品吞吐/延迟按 39 的 M/K/X/E 分别报告再整合；
+  route 使用实际 exact valid replica set 和相同 endpoint，不能假设 CPU fallback 永远 RAM-ready。
 - transfer/sparse/direct-local binding ticket 被 StrokeCompute 显式等待。
 - dirty/pinned/in-flight/最后权威 page 永不错误回收。
 - 当前目标与预测 halo 优先于非目标源页和可丢 derived cache。

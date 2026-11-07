@@ -1,0 +1,20 @@
+{
+  "scope":"B1-B3 current responsibility closure; archived documentation excluded",
+  "authored_production":{"files":1,"insertions":19,"deletions":13},
+  "authored_tests":{"files":1,"insertions":28,"deletions":4},
+  "derived_files":["baseline-source.json","reverse-callgraph.json"],
+  "new_public_api":false,
+  "new_persistent_field_or_owner":false,
+  "consumers":[
+    {"entry":"KisPageMutationSession::beginWriteImpl","retention":"Mutation::Private::provider selected by existing ledger route and held under original mutation lifetime; native page claim/admission spans unlocked plan and cleanup"},
+    {"entry":"KisPageStore::acquireWrite","retention":"Local shared provider selected from exact ledger identity/route; original pending request and generic activity retain admission across unlocked plan and cleanup"}
+  ],
+  "same_provider_proof":"prepareWritePlanLocked already validates providerId/providerEpoch against write.source; comparing before id/epoch against that same source allows borrowing parameter.get() across the entire call",
+  "registry_proof":"Existing registered id/epoch remains unique; registration rejection/epoch restart and close/abort protections remain in original owners, with no new lookup authority",
+  "foreign_provider_proof":"Different id or epoch takes original ownerLedger.provider strong reference; beforeBinding pins exact allocation, and member is destroyed only after before pin release outside owner gate",
+  "cleanup_order":"qScopeGuard unlocks if needed, resets physical candidate, resets optional cold Prepared (its destructor releases before read pin), then restores original owner gate. Exceptions have the same terminal ownership",
+  "cold_state":"optional starts empty; physical observation precedes emplace; no accounting/metadata/descriptor or before provider lifetime acquired for stable native reader refusal",
+  "necessary_remaining":["source provider/binding physical observation","unlock/cleanup/relock","final nonblocking physical exclusion for late arrivals","metadata revision/epoch/exact recovery revalidation","real Fresh work and complete retirement"],
+  "test_boundary":"Original productionRecoverableHandoff adds32 different-provider rows:4BPP x generic Preserve/Discard x commit/cancel/abort/restore; source Fresh deliberately rejected, independent before must remain readable and both payload providers close to zero",
+  "qualification_limit":"No count fraction is treated as time fraction. Actual increment, same-image gates, calibration and whole M6 qualification are separate"
+}

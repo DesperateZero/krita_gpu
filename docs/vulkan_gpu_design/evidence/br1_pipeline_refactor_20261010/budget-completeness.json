@@ -1,0 +1,1790 @@
+{
+  "date": "2026-10-12",
+  "product": "11c6895ddfeae074df727c76dcbf9e12988479ee",
+  "units": "instructions per complete case / four manager lifetimes",
+  "scope": "Original 8 cases; 4 blocks for instructions, separate 8-block frozen CPU budget",
+  "original_instruction_partition": {
+    "0": {
+      "process_mean": {
+        "current": 9961059.625,
+        "upstream": 4578918
+      },
+      "extra_mean": 5382141.625,
+      "extra_blocks": [
+        5878942.0,
+        4893373,
+        5842620.5,
+        4913631.0
+      ],
+      "pointwise_95_exact_bootstrap": [
+        4903502.0,
+        5860781.25
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 2955112.125,
+          "blocks": [
+            3503954.5,
+            2415196.0,
+            3435447,
+            2465851.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            2440523.5,
+            3469700.75
+          ]
+        },
+        "write": {
+          "extra_mean": 776182.625,
+          "blocks": [
+            762660,
+            799666,
+            772176.5,
+            770228.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            765039.125,
+            792306.5
+          ]
+        },
+        "read": {
+          "extra_mean": 110533.125,
+          "blocks": [
+            112863.5,
+            97588,
+            124754,
+            106927
+          ],
+          "pointwise_95_exact_bootstrap": [
+            101406.875,
+            120297.25
+          ]
+        },
+        "finish": {
+          "extra_mean": -22370.625,
+          "blocks": [
+            -22270.5,
+            -22364,
+            -22493.5,
+            -22354.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            -22458.75,
+            -22293.875
+          ]
+        },
+        "undo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "redo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "teardown": {
+          "extra_mean": 167385.375,
+          "blocks": [
+            157401,
+            195120.0,
+            141707,
+            175313.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            149554,
+            185690.25
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 11222.75,
+          "blocks": [
+            10538.5,
+            12105,
+            10666.5,
+            11581
+          ],
+          "pointwise_95_exact_bootstrap": [
+            10602.5,
+            11843
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 1384076.25,
+          "blocks": [
+            1353795,
+            1396062,
+            1380363.0,
+            1406085
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1364361.75,
+            1401073.5
+          ]
+        }
+      }
+    },
+    "1": {
+      "process_mean": {
+        "current": 26825765.75,
+        "upstream": 4855950.625
+      },
+      "extra_mean": 21969815.125,
+      "extra_blocks": [
+        22299230.5,
+        21698868.5,
+        22015869,
+        21865292.5
+      ],
+      "pointwise_95_exact_bootstrap": [
+        21778118.625,
+        22190746.0
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 8842071.625,
+          "blocks": [
+            9007566.5,
+            8622363.0,
+            8999986.5,
+            8738370.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            8680366.75,
+            9003776.5
+          ]
+        },
+        "write": {
+          "extra_mean": 6066385.375,
+          "blocks": [
+            6170844.0,
+            5992743.5,
+            6056479.5,
+            6045474.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            6008677.5,
+            6139501.625
+          ]
+        },
+        "read": {
+          "extra_mean": 745924.625,
+          "blocks": [
+            696460.5,
+            783903,
+            734912.5,
+            768422.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            714451.0,
+            776162.75
+          ]
+        },
+        "finish": {
+          "extra_mean": -270307.625,
+          "blocks": [
+            -276872,
+            -271775.5,
+            -261200.5,
+            -271382.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            -275499.625,
+            -263844.25
+          ]
+        },
+        "undo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "redo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "teardown": {
+          "extra_mean": 923302.875,
+          "blocks": [
+            944819.5,
+            920845.5,
+            897817,
+            929729.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            905795.125,
+            938826.0
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 14632.75,
+          "blocks": [
+            11368.5,
+            12138,
+            16542.5,
+            18482.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            11753.25,
+            17512.25
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 5647805.5,
+          "blocks": [
+            5745043.5,
+            5638651,
+            5571331.5,
+            5636196
+          ],
+          "pointwise_95_exact_bootstrap": [
+            5588161.375,
+            5717831.625
+          ]
+        }
+      }
+    },
+    "2": {
+      "process_mean": {
+        "current": 25318734.75,
+        "upstream": 3721493.875
+      },
+      "extra_mean": 21597240.875,
+      "extra_blocks": [
+        21881344,
+        21432913,
+        21665551,
+        21409155.5
+      ],
+      "pointwise_95_exact_bootstrap": [
+        21421034.25,
+        21773447.5
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 2429969.125,
+          "blocks": [
+            2469604,
+            2426681,
+            2385183,
+            2438408.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            2398489.375,
+            2458873.25
+          ]
+        },
+        "write": {
+          "extra_mean": 11833976.625,
+          "blocks": [
+            11409063.5,
+            12163583.5,
+            11558654.5,
+            12204605.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            11483859.0,
+            12184094.25
+          ]
+        },
+        "read": {
+          "extra_mean": 1816363.875,
+          "blocks": [
+            2315615,
+            1446168.5,
+            2154046.0,
+            1349626
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1397897.25,
+            2234830.5
+          ]
+        },
+        "finish": {
+          "extra_mean": -22607.625,
+          "blocks": [
+            -22272,
+            -22860,
+            -23006,
+            -22292.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            -22933,
+            -22282.25
+          ]
+        },
+        "undo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "redo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "teardown": {
+          "extra_mean": 166708.375,
+          "blocks": [
+            135976.5,
+            198803.0,
+            149636,
+            182418
+          ],
+          "pointwise_95_exact_bootstrap": [
+            142806.25,
+            190610.5
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 11636.875,
+          "blocks": [
+            11517.0,
+            12119.5,
+            11369.5,
+            11541.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            11412.5,
+            11968.875
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 5361193.625,
+          "blocks": [
+            5561840.0,
+            5208417.5,
+            5429668,
+            5244849
+          ],
+          "pointwise_95_exact_bootstrap": [
+            5226633.25,
+            5495754.0
+          ]
+        }
+      }
+    },
+    "3": {
+      "process_mean": {
+        "current": 197461756.125,
+        "upstream": 23785295.75
+      },
+      "extra_mean": 173676460.375,
+      "extra_blocks": [
+        172867883.5,
+        172275236.5,
+        175131055.5,
+        174431666
+      ],
+      "pointwise_95_exact_bootstrap": [
+        172571560.0,
+        174781360.75
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 8603322.75,
+          "blocks": [
+            8694156.0,
+            8454996,
+            8705136.5,
+            8559002.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            8506999.25,
+            8699646.25
+          ]
+        },
+        "write": {
+          "extra_mean": 96432428.625,
+          "blocks": [
+            96092471.0,
+            96336454.0,
+            97351250.5,
+            95949539.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            96021005.0,
+            97036555.625
+          ]
+        },
+        "read": {
+          "extra_mean": 11791489.0,
+          "blocks": [
+            11645631.5,
+            11381355,
+            11567299,
+            12571670.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            11447424.125,
+            12320577.625
+          ]
+        },
+        "finish": {
+          "extra_mean": -272890.875,
+          "blocks": [
+            -279148.5,
+            -271516.5,
+            -263952.5,
+            -276946
+          ],
+          "pointwise_95_exact_bootstrap": [
+            -278047.25,
+            -267200.875
+          ]
+        },
+        "undo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "redo": {
+          "extra_mean": 0,
+          "blocks": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            0,
+            0
+          ]
+        },
+        "teardown": {
+          "extra_mean": 1032277.875,
+          "blocks": [
+            1059399,
+            1017122.5,
+            1011124.5,
+            1041465.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1014123.5,
+            1050432.25
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 16883.875,
+          "blocks": [
+            13805.5,
+            16536.5,
+            23545.5,
+            13648
+          ],
+          "pointwise_95_exact_bootstrap": [
+            13726.75,
+            21110.5
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 56072949.125,
+          "blocks": [
+            55641569,
+            55340289,
+            56736652,
+            56573286.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            55490929,
+            56654969.25
+          ]
+        }
+      }
+    },
+    "4": {
+      "process_mean": {
+        "current": 7460170.875,
+        "upstream": 1529804.625
+      },
+      "extra_mean": 5930366.25,
+      "extra_blocks": [
+        5914502.5,
+        5899065.5,
+        6009357.5,
+        5898539.5
+      ],
+      "pointwise_95_exact_bootstrap": [
+        5898802.5,
+        5981784.5
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 2619831.5,
+          "blocks": [
+            2629273.0,
+            2603323.0,
+            2630681,
+            2616049
+          ],
+          "pointwise_95_exact_bootstrap": [
+            2609686.0,
+            2629977.0
+          ]
+        },
+        "write": {
+          "extra_mean": 459103.0,
+          "blocks": [
+            444756.5,
+            455797.5,
+            462590,
+            473268.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            449214.875,
+            468900.375
+          ]
+        },
+        "read": {
+          "extra_mean": 157466.0,
+          "blocks": [
+            165686.5,
+            154226,
+            156846.5,
+            153105
+          ],
+          "pointwise_95_exact_bootstrap": [
+            153665.5,
+            162821.375
+          ]
+        },
+        "finish": {
+          "extra_mean": 336394.125,
+          "blocks": [
+            339520,
+            336277.5,
+            334374,
+            335405.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            334849.875,
+            338491.25
+          ]
+        },
+        "undo": {
+          "extra_mean": 305923.875,
+          "blocks": [
+            290259.5,
+            306051,
+            327794.0,
+            299591
+          ],
+          "pointwise_95_exact_bootstrap": [
+            294207.375,
+            320743.25
+          ]
+        },
+        "redo": {
+          "extra_mean": 283350.375,
+          "blocks": [
+            291364.5,
+            276721,
+            293600.0,
+            271716
+          ],
+          "pointwise_95_exact_bootstrap": [
+            274218.5,
+            292482.25
+          ]
+        },
+        "teardown": {
+          "extra_mean": 246253.375,
+          "blocks": [
+            263637.5,
+            235319,
+            255367.0,
+            230690
+          ],
+          "pointwise_95_exact_bootstrap": [
+            233004.5,
+            259502.25
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 11702.625,
+          "blocks": [
+            11547.5,
+            12050.5,
+            11624.5,
+            11588.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            11566.75,
+            11934.875
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 1510341.375,
+          "blocks": [
+            1478457.5,
+            1519300,
+            1536480.5,
+            1507127.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1488668.125,
+            1529142.25
+          ]
+        }
+      }
+    },
+    "5": {
+      "process_mean": {
+        "current": 32994090.875,
+        "upstream": 7651765.75
+      },
+      "extra_mean": 25342325.125,
+      "extra_blocks": [
+        25579855.5,
+        25261191.5,
+        25332678,
+        25195575.5
+      ],
+      "pointwise_95_exact_bootstrap": [
+        25228383.5,
+        25500189.5
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 8869304.875,
+          "blocks": [
+            9072365.5,
+            8847109.5,
+            8831225.5,
+            8726519.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            8756666.625,
+            9012080.5
+          ]
+        },
+        "write": {
+          "extra_mean": 4057207.0,
+          "blocks": [
+            4052965.5,
+            4064971.0,
+            4060425.5,
+            4050466
+          ],
+          "pointwise_95_exact_bootstrap": [
+            4051715.75,
+            4062698.25
+          ]
+        },
+        "read": {
+          "extra_mean": 1021321.75,
+          "blocks": [
+            1017102.5,
+            1017063.0,
+            1034522,
+            1016599.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1016725.25,
+            1030157.25
+          ]
+        },
+        "finish": {
+          "extra_mean": 1686377.125,
+          "blocks": [
+            1738591.0,
+            1652671,
+            1700671,
+            1653575.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1653123.25,
+            1719631.0
+          ]
+        },
+        "undo": {
+          "extra_mean": 1147446.0,
+          "blocks": [
+            1138792.5,
+            1141406,
+            1140955.0,
+            1168630.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1139445.875,
+            1161711.625
+          ]
+        },
+        "redo": {
+          "extra_mean": 949737.5,
+          "blocks": [
+            935349.5,
+            945805,
+            962700,
+            955095.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            940286.0,
+            958897.75
+          ]
+        },
+        "teardown": {
+          "extra_mean": 1675970.5,
+          "blocks": [
+            1437962.0,
+            1758571.5,
+            1420457.0,
+            2086891.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1429209.5,
+            1924659.125
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 11724.875,
+          "blocks": [
+            11593.0,
+            12099.5,
+            11615.5,
+            11591.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            11592.25,
+            11972.875
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 5923235.5,
+          "blocks": [
+            6175134,
+            5821495.0,
+            6170106.5,
+            5526206.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            5673850.75,
+            6172620.25
+          ]
+        }
+      }
+    },
+    "6": {
+      "process_mean": {
+        "current": 22894736.875,
+        "upstream": 4051980.625
+      },
+      "extra_mean": 18842756.25,
+      "extra_blocks": [
+        18753219,
+        18818865,
+        18855059,
+        18943882.0
+      ],
+      "pointwise_95_exact_bootstrap": [
+        18778679,
+        18912627.75
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 2614665.25,
+          "blocks": [
+            2576696.0,
+            2605051.5,
+            2654757.5,
+            2622156
+          ],
+          "pointwise_95_exact_bootstrap": [
+            2588061.0,
+            2642331.0
+          ]
+        },
+        "write": {
+          "extra_mean": 8424421.125,
+          "blocks": [
+            8439375.5,
+            8448932.0,
+            8303875.5,
+            8505501.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            8340139.625,
+            8488970.0
+          ]
+        },
+        "read": {
+          "extra_mean": 1748468.125,
+          "blocks": [
+            1717569,
+            1735079,
+            1870138.5,
+            1671086
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1687084.25,
+            1831996.125
+          ]
+        },
+        "finish": {
+          "extra_mean": 384635.875,
+          "blocks": [
+            411382,
+            380266,
+            365745.5,
+            381150
+          ],
+          "pointwise_95_exact_bootstrap": [
+            369596.625,
+            403603
+          ]
+        },
+        "undo": {
+          "extra_mean": 310788.125,
+          "blocks": [
+            308021,
+            312547.5,
+            306684.5,
+            315899.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            307352.75,
+            314223.5
+          ]
+        },
+        "redo": {
+          "extra_mean": 290111.0,
+          "blocks": [
+            282522.5,
+            298911.0,
+            270060.5,
+            308950.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            276291.5,
+            303930.5
+          ]
+        },
+        "teardown": {
+          "extra_mean": 248799.5,
+          "blocks": [
+            234303.5,
+            256281,
+            261404.0,
+            243209.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            238756.5,
+            258842.5
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 11675.0,
+          "blocks": [
+            11460,
+            12111,
+            11598.5,
+            11530.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            11494.625,
+            11965.875
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 4809192.25,
+          "blocks": [
+            4771889.5,
+            4769686,
+            4810794.5,
+            4884399
+          ],
+          "pointwise_95_exact_bootstrap": [
+            4770787.75,
+            4856271.625
+          ]
+        }
+      }
+    },
+    "7": {
+      "process_mean": {
+        "current": 183129688.25,
+        "upstream": 29882726
+      },
+      "extra_mean": 153246962.25,
+      "extra_blocks": [
+        151808311.5,
+        155282279.0,
+        151104095,
+        154793163.5
+      ],
+      "pointwise_95_exact_bootstrap": [
+        151456203.25,
+        155037721.25
+      ],
+      "components": {
+        "setup": {
+          "extra_mean": 9511350.125,
+          "blocks": [
+            8702196.5,
+            10142353.5,
+            8787047,
+            10413803.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            8744621.75,
+            10278078.5
+          ]
+        },
+        "write": {
+          "extra_mean": 73659212.25,
+          "blocks": [
+            73235154.5,
+            74040712,
+            73622125,
+            73738857.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            73361080.25,
+            73936065.25
+          ]
+        },
+        "read": {
+          "extra_mean": 13420408.0,
+          "blocks": [
+            13297165,
+            13586987.5,
+            13454287.0,
+            13343192.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            13320178.75,
+            13526038.75
+          ]
+        },
+        "finish": {
+          "extra_mean": 1755174.25,
+          "blocks": [
+            1647924.5,
+            1824705.0,
+            1774722.0,
+            1773345.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1679623.875,
+            1811865.125
+          ]
+        },
+        "undo": {
+          "extra_mean": 1104150.25,
+          "blocks": [
+            1125719,
+            1081686.5,
+            1117798,
+            1091397.5
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1086542.0,
+            1121758.5
+          ]
+        },
+        "redo": {
+          "extra_mean": 954102.0,
+          "blocks": [
+            905068.5,
+            976330.0,
+            969423.5,
+            965586
+          ],
+          "pointwise_95_exact_bootstrap": [
+            921157.25,
+            973644.0
+          ]
+        },
+        "teardown": {
+          "extra_mean": 1907107.625,
+          "blocks": [
+            1189957.5,
+            1456002.5,
+            3524741.5,
+            1457729.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            1256900.375,
+            3007556.75
+          ]
+        },
+        "foreground_remainder": {
+          "extra_mean": 12934.75,
+          "blocks": [
+            11618,
+            11156.0,
+            18360,
+            10605.0
+          ],
+          "pointwise_95_exact_bootstrap": [
+            10858.25,
+            16559.0
+          ]
+        },
+        "process_minus_foreground": {
+          "extra_mean": 50922523.0,
+          "blocks": [
+            51693508,
+            52162346.0,
+            47835591.0,
+            51998647
+          ],
+          "pointwise_95_exact_bootstrap": [
+            48876355.0,
+            52080496.5
+          ]
+        }
+      }
+    }
+  },
+  "observed_scope_partition": {
+    "3:current": {
+      "process": 201224174.625,
+      "roles": [
+        {
+          "role": 0,
+          "total": 145711810.5,
+          "exclusive": 136960937.125,
+          "unscoped": 8750873.375
+        },
+        {
+          "role": 1,
+          "total": 55569276.75,
+          "exclusive": 54366482.5,
+          "unscoped": 1202794.25
+        },
+        {
+          "role": 2,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        },
+        {
+          "role": 3,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        },
+        {
+          "role": 4,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        }
+      ],
+      "exclusive": 191327419.625,
+      "unscoped": 9953667.625,
+      "signed_window_boundary": -56912.625,
+      "observer_process": 201250041.5,
+      "role_to_observer_boundary": -31045.75,
+      "observer_to_fixture_boundary": -25866.875,
+      "buckets": [
+        {
+          "role": 0,
+          "name": "cold",
+          "instructions": 53600989.5,
+          "self_instructions": 53600989.5,
+          "count": 1088
+        },
+        {
+          "role": 0,
+          "name": "commit",
+          "instructions": 31197258,
+          "self_instructions": 31197258,
+          "count": 68
+        },
+        {
+          "role": 1,
+          "name": "history_pass",
+          "instructions": 24506179.875,
+          "self_instructions": 24506179.875,
+          "count": 68
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN22KisPageRetirementQueue11prepareTaskEvE3$_1E",
+          "instructions": 20926294.5,
+          "self_instructions": 20926294.5,
+          "count": 64
+        },
+        {
+          "role": 0,
+          "name": "read",
+          "instructions": 35013323.75,
+          "self_instructions": 15999691.375,
+          "count": 128
+        },
+        {
+          "role": 0,
+          "name": "seal",
+          "instructions": 13062120.625,
+          "self_instructions": 13062120.625,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "operation",
+          "instructions": 110573385.875,
+          "self_instructions": 6103602.25,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "pixels",
+          "instructions": 60210405,
+          "self_instructions": 5520483.375,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "write",
+          "instructions": 106024981.875,
+          "self_instructions": 4572842.625,
+          "count": 64
+        },
+        {
+          "role": 1,
+          "name": "N26KisPageMetadataCoordinator19PreparedPublication4DataE",
+          "instructions": 3725543.125,
+          "self_instructions": 3725543.125,
+          "count": 68
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN24KisImageEpochTreeStorage7prepareEP26KisBackingBudgetControllerE3$_0E",
+          "instructions": 2527679.625,
+          "self_instructions": 2527679.625,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "capture",
+          "instructions": 2422457.125,
+          "self_instructions": 2422457.125,
+          "count": 132
+        },
+        {
+          "role": 0,
+          "name": "teardown",
+          "instructions": 1920890.75,
+          "self_instructions": 1920890.75,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "setup",
+          "instructions": 10952223,
+          "self_instructions": 1830976.375,
+          "count": 4
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN12KisPageStore9configureERK21KisImageEpochSnapshotRKNSt3__110shared_ptrI21KisCompletionRegistryEExP7QStringE3$_0E",
+          "instructions": 1317950,
+          "self_instructions": 1317950,
+          "count": 4
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN23KisPageHistoryCollector11prepareTaskER26KisBackingBudgetControllerE3$_1E",
+          "instructions": 25869015.25,
+          "self_instructions": 1230488.25,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "captured_release",
+          "instructions": 674405.125,
+          "self_instructions": 674405.125,
+          "count": 132
+        },
+        {
+          "role": 1,
+          "name": "retirement_process",
+          "instructions": 132347.125,
+          "self_instructions": 132347.125,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "finish",
+          "instructions": 55220,
+          "self_instructions": 55220,
+          "count": 4
+        }
+      ]
+    },
+    "3:upstream": {
+      "process": 24680067.75,
+      "roles": [
+        {
+          "role": 0,
+          "total": 24728349.25,
+          "exclusive": 16018101.125,
+          "unscoped": 8710248.125
+        },
+        {
+          "role": 1,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        },
+        {
+          "role": 2,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        },
+        {
+          "role": 3,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        },
+        {
+          "role": 4,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        }
+      ],
+      "exclusive": 16018101.125,
+      "unscoped": 8710248.125,
+      "signed_window_boundary": -48281.5,
+      "observer_process": 24704688.75,
+      "role_to_observer_boundary": -23660.5,
+      "observer_to_fixture_boundary": -24621.0,
+      "buckets": [
+        {
+          "role": 0,
+          "name": "upstream_write",
+          "instructions": 6329802.875,
+          "self_instructions": 6329802.875,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "upstream_read",
+          "instructions": 5431400,
+          "self_instructions": 5431400,
+          "count": 64
+        },
+        {
+          "role": 0,
+          "name": "setup",
+          "instructions": 1927778.25,
+          "self_instructions": 1066586.75,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "read",
+          "instructions": 6402724.375,
+          "self_instructions": 971324.375,
+          "count": 64
+        },
+        {
+          "role": 0,
+          "name": "write",
+          "instructions": 6431104.375,
+          "self_instructions": 962493,
+          "count": 64
+        },
+        {
+          "role": 0,
+          "name": "teardown",
+          "instructions": 928954.125,
+          "self_instructions": 928954.125,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "finish",
+          "instructions": 327540,
+          "self_instructions": 327540,
+          "count": 4
+        }
+      ]
+    },
+    "7:current": {
+      "process": 190400867,
+      "roles": [
+        {
+          "role": 0,
+          "total": 138033643,
+          "exclusive": 128139912.75,
+          "unscoped": 9893730.25
+        },
+        {
+          "role": 1,
+          "total": 52439874.375,
+          "exclusive": 51140241.75,
+          "unscoped": 1299632.625
+        },
+        {
+          "role": 2,
+          "total": 8491.875,
+          "exclusive": 0,
+          "unscoped": 8491.875
+        },
+        {
+          "role": 3,
+          "total": 16365.625,
+          "exclusive": 0,
+          "unscoped": 16365.625
+        },
+        {
+          "role": 4,
+          "total": 17194.25,
+          "exclusive": 0,
+          "unscoped": 17194.25
+        }
+      ],
+      "exclusive": 179280154.5,
+      "unscoped": 11235414.625,
+      "signed_window_boundary": -114702.125,
+      "observer_process": 190469025,
+      "role_to_observer_boundary": -46544.125,
+      "observer_to_fixture_boundary": -68158,
+      "buckets": [
+        {
+          "role": 0,
+          "name": "cold",
+          "instructions": 53946881.5,
+          "self_instructions": 53946881.5,
+          "count": 1088
+        },
+        {
+          "role": 1,
+          "name": "history_pass",
+          "instructions": 24860721.875,
+          "self_instructions": 24860721.875,
+          "count": 87.125
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN22KisPageRetirementQueue11prepareTaskEvE3$_1E",
+          "instructions": 20600279,
+          "self_instructions": 20600279,
+          "count": 63.125
+        },
+        {
+          "role": 0,
+          "name": "seal",
+          "instructions": 18578842.125,
+          "self_instructions": 18578842.125,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "read",
+          "instructions": 40595292.5,
+          "self_instructions": 16408856.5,
+          "count": 136
+        },
+        {
+          "role": 0,
+          "name": "operation",
+          "instructions": 88811022.375,
+          "self_instructions": 5712002.25,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "setup",
+          "instructions": 14919421.125,
+          "self_instructions": 5649386.75,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "pixels",
+          "instructions": 62718788.625,
+          "self_instructions": 5550230.5,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "capture",
+          "instructions": 5194399.375,
+          "self_instructions": 5194399.375,
+          "count": 140
+        },
+        {
+          "role": 0,
+          "name": "write",
+          "instructions": 84071144.875,
+          "self_instructions": 4530156.875,
+          "count": 64
+        },
+        {
+          "role": 0,
+          "name": "commit",
+          "instructions": 3712154.25,
+          "self_instructions": 3712154.25,
+          "count": 8
+        },
+        {
+          "role": 0,
+          "name": "captured_release",
+          "instructions": 2935954.125,
+          "self_instructions": 2935954.125,
+          "count": 140
+        },
+        {
+          "role": 1,
+          "name": "N26KisPageMetadataCoordinator19PreparedPublication4DataE",
+          "instructions": 2862072.375,
+          "self_instructions": 2862072.375,
+          "count": 76
+        },
+        {
+          "role": 0,
+          "name": "teardown",
+          "instructions": 2910332.375,
+          "self_instructions": 2580808.625,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "undo",
+          "instructions": 1968768.125,
+          "self_instructions": 1456507,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "redo",
+          "instructions": 1934781.125,
+          "self_instructions": 1409187.75,
+          "count": 4
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN12KisPageStore9configureERK21KisImageEpochSnapshotRKNSt3__110shared_ptrI21KisCompletionRegistryEExP7QStringE3$_0E",
+          "instructions": 1328411.125,
+          "self_instructions": 1328411.125,
+          "count": 4
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN23KisPageHistoryCollector11prepareTaskER26KisBackingBudgetControllerE3$_1E",
+          "instructions": 25982542.5,
+          "self_instructions": 954402.125,
+          "count": 88
+        },
+        {
+          "role": 1,
+          "name": "22KisPageReclamationTaskIZN24KisImageEpochTreeStorage7prepareEP26KisBackingBudgetControllerE3$_0E",
+          "instructions": 366936.75,
+          "self_instructions": 366936.75,
+          "count": 8
+        },
+        {
+          "role": 0,
+          "name": "history_pass",
+          "instructions": 329523.75,
+          "self_instructions": 329523.75,
+          "count": 0.875
+        },
+        {
+          "role": 1,
+          "name": "retirement_process",
+          "instructions": 167418.5,
+          "self_instructions": 167418.5,
+          "count": 87.125
+        },
+        {
+          "role": 0,
+          "name": "finish",
+          "instructions": 2055786.25,
+          "self_instructions": 145021.375,
+          "count": 4
+        }
+      ]
+    },
+    "7:upstream": {
+      "process": 30840237.875,
+      "roles": [
+        {
+          "role": 0,
+          "total": 30908650.125,
+          "exclusive": 21046127.75,
+          "unscoped": 9862522.375
+        },
+        {
+          "role": 1,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        },
+        {
+          "role": 2,
+          "total": 0,
+          "exclusive": 0,
+          "unscoped": 0
+        },
+        {
+          "role": 3,
+          "total": 16284.375,
+          "exclusive": 0,
+          "unscoped": 16284.375
+        },
+        {
+          "role": 4,
+          "total": 29227.5,
+          "exclusive": 0,
+          "unscoped": 29227.5
+        }
+      ],
+      "exclusive": 21046127.75,
+      "unscoped": 9908034.25,
+      "signed_window_boundary": -113924.125,
+      "observer_process": 30911578.125,
+      "role_to_observer_boundary": -42583.875,
+      "observer_to_fixture_boundary": -71340.25,
+      "buckets": [
+        {
+          "role": 0,
+          "name": "upstream_write",
+          "instructions": 6329037.125,
+          "self_instructions": 6329037.125,
+          "count": 68
+        },
+        {
+          "role": 0,
+          "name": "upstream_read",
+          "instructions": 6112842.25,
+          "self_instructions": 6112842.25,
+          "count": 72
+        },
+        {
+          "role": 0,
+          "name": "setup",
+          "instructions": 5189513.5,
+          "self_instructions": 4326449.25,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "read",
+          "instructions": 6405331.5,
+          "self_instructions": 971320.625,
+          "count": 64
+        },
+        {
+          "role": 0,
+          "name": "write",
+          "instructions": 6428458.875,
+          "self_instructions": 962486,
+          "count": 64
+        },
+        {
+          "role": 0,
+          "name": "teardown",
+          "instructions": 927329.125,
+          "self_instructions": 927329.125,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "redo",
+          "instructions": 944267.125,
+          "self_instructions": 604851.25,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "undo",
+          "instructions": 818590.625,
+          "self_instructions": 479175.125,
+          "count": 4
+        },
+        {
+          "role": 0,
+          "name": "finish",
+          "instructions": 332637,
+          "self_instructions": 332637,
+          "count": 4
+        }
+      ]
+    }
+  },
+  "existing_cpu_extra_ms": 11.962375000000002,
+  "threshold_model": {
+    "current_births": 1088,
+    "conditional_births": 192,
+    "conditional_saved": 896,
+    "instruction_engineering_gate": 27469453.2375,
+    "gate_net_per_saved_birth": 30657.87191685268,
+    "extra_remaining_if_only_gate_met": 125777509.0125,
+    "cpu_gate_ns_per_saved_birth": 837.0535714285714,
+    "interpretation": "Gate arithmetic only; not a price, causal bound, or prediction"
+  },
+  "legal_net_recoverable_instructions": null,
+  "legal_net_recoverable_ms": null,
+  "selected_production_design": null,
+  "sufficient_for": "Bounded comparative design and discrimination; not a net-benefit-ranked production blueprint",
+  "current_decision": {
+    "scope": "Evidence coverage summary, not a second implementation matrix or proof of universal completeness",
+    "arithmetic_closed_within_frozen_cases": true,
+    "mechanism_causality_closed": false,
+    "donor_immediate_capability": true,
+    "donor_cross_operation_implementation": false,
+    "complete_candidate_net_price": false,
+    "full_resource_and_contract_qualification": false,
+    "all_known_gaps_closed": false,
+    "independent_performance_confirmation": false,
+    "donor_processes": 8,
+    "donor_case_rows": 512,
+    "conditional_source_physical_births": [
+      {
+        "pages": 16,
+        "writes": 16,
+        "held_pages": 0,
+        "nondefault_source_physical_births": 192,
+        "baseline_births": 1088,
+        "conditional_saved": 896,
+        "per_lifetime_source_peak": 48
+      },
+      {
+        "pages": 16,
+        "writes": 16,
+        "held_pages": 1,
+        "nondefault_source_physical_births": 196,
+        "baseline_births": 1088,
+        "conditional_saved": 892,
+        "per_lifetime_source_peak": 49
+      },
+      {
+        "pages": 16,
+        "writes": 16,
+        "held_pages": 16,
+        "nondefault_source_physical_births": 256,
+        "baseline_births": 1088,
+        "conditional_saved": 832,
+        "per_lifetime_source_peak": 64
+      }
+    ],
+    "equivalent_entry_cells": 60,
+    "total_entry_cells": 64,
+    "retained_pressure_assertion_failures": 2,
+    "open_evidence": [
+      "Necessary versus avoidable mechanism work and overlapping alternative designs",
+      "Actual atomic metadata exit, retained capacity, retag and all terminal paths",
+      "Complete replacement net price including miss, pressure, retry and drain",
+      "Unobserved resources, reservations, retention time and plain peak transfer",
+      "Critical-path locks, runnable time and direct evidence for the old H1 slow event",
+      "H0 and other entry controls, bad-tail and live-copy semantics, scale/concurrency coverage"
+    ],
+    "next_decision": "Bounded complete legal replacement may be tested; no net-benefit-ranked production design",
+    "nonblocking_for_bounded_h1": "Unrelated GPU, full-platform and all-lock enumeration; keep excluded claims explicit"
+  },
+  "validation": {
+    "checks": {
+      "archive": 2,
+      "archive_members": 288,
+      "runs": 2,
+      "product_sources": 12,
+      "case_denominators": 128,
+      "original_addition": 136,
+      "saved_summary": 20,
+      "exclusive_partition": 168,
+      "cpu_raw_identity": 1,
+      "cpu_runs": 257,
+      "cpu_addition": 256,
+      "cpu_saved_components": 120,
+      "implementation_index": 3,
+      "donor_sources": 14,
+      "donor_archive": 2,
+      "donor_archive_members": 76,
+      "donor_capability": 38,
+      "donor_model": 2,
+      "coverage_scope": 2,
+      "open_net_budget": 1
+    },
+    "total": 1528,
+    "frozen_partition_checks": 1393,
+    "source_hashes": {
+      "instruction-raw-manifest.json": "0de39d54966fa67a7e7ce8d92795238142064f0bee8426154e2696af66685537",
+      "instruction-raw.tar.xz": "73b05936131cb120aa9459ed3d60ace2755d9ea4a110afcc338c85d4093a0852",
+      "instruction-summary.json": "1ff673383db5a40da3d49493efa3c3d1d5b316a8a0a244dfe60d829f977a9a8a",
+      "instruction-source-index.json": "842bbc1d259e8fb0fc31c3f5e2778a25cec15336c0cc336df49e883c0ccc3f5d",
+      "performance-budget.json": "8197987bff4746fc888f56a4138ef862520c2862c93ad27e04291c1ceff1176a",
+      "flow-ledger-audit.json": "07cc541602dca929a734b30db0c25a4e51d93e35f5cfc9cb7c4633000ff7e54c",
+      "flow-ledger-raw.tar.xz::net-ledger-r1/observations/results.json": "82d37a6de9e902bca3de57346864e3b1605f9ec739e8e249759603edd12ec5ff",
+      "donor-summary.json": "1f77d875c41623e8458b3b4009784e06a2d33378c6d10bc54f04a5ecebbeddc8",
+      "donor-model.json": "bda6f042b4ced06bb13a4e4ebd4ce87c8b35d8bc51a1b52c147549296f2c0adc",
+      "donor-source-index.json": "9da7596db02a1d642e55035af1e6db7ef26e5a4bc189708446ddc0c96e1f05dd",
+      "donor-raw-manifest.json": "e852117ac1c4086b44603be33852e51245166994f5638637aac1c82e8264d8cf",
+      "donor-raw.tar.xz": "8a5811bc18a38bc36b5a828b90906b290f550b6193fbcc439b9b0c67072cf646",
+      "budget-coverage-summary.json": "3b00c2cdecf67d783062f63d1b892d532e2d365151a54d7c610a0a44ac0d18aa",
+      "budget-pressure-summary.json": "d8f3005d625d1f42c718ee1a7eebe51bcb6bbe61194e7d634131de17971be29a"
+    },
+    "new_benchmark_processes": 0,
+    "new_product_tests": 0
+  },
+  "limits": [
+    "Foreground remainder includes frame, drain and observation boundaries; no fabricated breakdown",
+    "Process-minus-foreground is not itself a reclaimer measurement",
+    "On scopes are current gross responsibilities, not upstream extra or recoverable budgets",
+    "Nonmatching call-tree labels cannot be subtracted as equivalent mechanisms",
+    "All intervals are pointwise; arithmetic closure is not causal or coverage completeness"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "scope": "Prepared metadata install plus existing publication/restore compatibility. Does not measure provider retag, whole M6 operation or performance.",
+  "matrix_source_patch_sha256": "4f48f935f83ba1fde99e764eb6626c65ad25d6ed2d6b3a75a36bb5f705a6bd62",
+  "same_matrix_library": true,
+  "probe_results": [
+    {
+      "architecture": "arm64",
+      "kind": "final",
+      "identity": "install-arm64-final-identity.json",
+      "log": "install-arm64-final.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 32,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "cb13b30d57fd73d82760502ae91b7dc1414195bc0e7feb77d61118ac35fe3c44"
+    },
+    {
+      "architecture": "arm64",
+      "kind": "legacy",
+      "identity": "install-arm64-legacy-identity.json",
+      "log": "install-arm64-legacy.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 28,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "cb13b30d57fd73d82760502ae91b7dc1414195bc0e7feb77d61118ac35fe3c44"
+    },
+    {
+      "architecture": "x86_64",
+      "kind": "final",
+      "identity": "install-x86_64-final-identity.json",
+      "log": "install-x86_64-final.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 32,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "cb13b30d57fd73d82760502ae91b7dc1414195bc0e7feb77d61118ac35fe3c44"
+    },
+    {
+      "architecture": "x86_64",
+      "kind": "legacy",
+      "identity": "install-x86_64-legacy-identity.json",
+      "log": "install-x86_64-legacy.log",
+      "positive_control_allocations": 4,
+      "measured_intervals": 28,
+      "all_intervals_zero_allocations_and_frees": true,
+      "library_sha256": "cb13b30d57fd73d82760502ae91b7dc1414195bc0e7feb77d61118ac35fe3c44"
+    }
+  ]
+}

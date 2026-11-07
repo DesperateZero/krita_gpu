@@ -1,0 +1,18 @@
+[
+  {
+    "scope": "pre-sample evidence fixture compilation",
+    "failure": "Missing explicit KisPageStoreDiagnostics_p.h include for optional mechanism observer",
+    "log": "validation-prepare/02.log",
+    "preserved_source": "failed-probe-arm64-01/baseline.cpp",
+    "fix": "Add the original diagnostic header; no product change or samples taken",
+    "rerun": "validation-prepare-02, starting from fixture builds"
+  },
+  {
+    "scope": "first full arm64 safety",
+    "failure": "tileReadCacheLifetime terminal0 four bpp rows retried a candidate prepared while a reader was active; early rejection makes that candidate invalid",
+    "log": "safety-matrix-arm64/KisPageStorePhysicalClaimTest.log",
+    "preserved_diff": "pre-fixture-repair/product.patch",
+    "fix": "Document advisory prepare refusal and re-prepare after pin release in the existing test; retain late-arriving reader claim checks",
+    "performance_samples_started": false
+  }
+]

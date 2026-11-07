@@ -1,0 +1,459 @@
+{
+  "product_commit": "7d425255e2364339cc5f9cedf4472e1377f44053",
+  "parent_product": "4b108d316c360b2d752d788799a9fffbe07ea863",
+  "docs_parent": "6871f8cb832735a930ff7f5c97323b115e99f1fc",
+  "final_rounds": [
+    "final-03-cpu-arm64",
+    "final-03-cpu-x86_64",
+    "final-03-manager-arm64",
+    "final-03-manager-x86_64",
+    "final-03-physical-arm64",
+    "final-03-physical-x86_64",
+    "final-03-reference-arm64",
+    "final-03-reference-x86_64",
+    "final-03-resident-arm64",
+    "final-03-resident-x86_64"
+  ],
+  "final_passed": 7992,
+  "source_git_blobs_verified": true,
+  "runtime_after_verified": true,
+  "rounds": {
+    "candidate-diagnostics-arm64": {
+      "pid": 34992,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 1.1467785829445347,
+      "totals": [
+        "Totals: 49 passed, 0 failed, 0 skipped, 0 blacklisted, 59ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "candidate-parked-batch-02-arm64": {
+      "pid": 32478,
+      "exit_code": 1,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.04820491699501872,
+      "totals": [
+        "Totals: 0 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "failures": [
+        "FAIL!  : KisTiledDataManagerTest::testTileCompressorRejectedWrite() Function not found: testTileCompressorRejectedWrite"
+      ],
+      "selected_image_loaded": true
+    },
+    "candidate-parked-batch-03-arm64": {
+      "pid": 32621,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.8226396669633687,
+      "totals": [
+        "Totals: 90 passed, 0 failed, 0 skipped, 0 blacklisted, 231ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "candidate-parked-batch-arm64": {
+      "pid": 32375,
+      "exit_code": 2,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 2.0771940409904346,
+      "totals": [
+        "Totals: 0 passed, 2 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "failures": [
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreRawWriteAdmission() Function not found: testPageStoreRawWriteAdmission",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreCodecWriteAdmission() Function not found: testPageStoreCodecWriteAdmission"
+      ],
+      "selected_image_loaded": true
+    },
+    "candidate-target-arm64": {
+      "pid": 33229,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 1.7748109160456806,
+      "totals": [
+        "Totals: 91 passed, 0 failed, 0 skipped, 0 blacklisted, 359ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-cpu-arm64": {
+      "pid": 35652,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 11.313949041999876,
+      "totals": [
+        "Totals: 1394 passed, 0 failed, 0 skipped, 0 blacklisted, 10273ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-cpu-x86_64": {
+      "pid": 36793,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 11.639785625040531,
+      "totals": [
+        "Totals: 1394 passed, 0 failed, 0 skipped, 0 blacklisted, 11234ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-manager-arm64": {
+      "pid": 35025,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 82.31638683297206,
+      "totals": [
+        "Totals: 1194 passed, 0 failed, 0 skipped, 0 blacklisted, 81936ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-manager-x86_64": {
+      "pid": 35865,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 128.18250183400232,
+      "totals": [
+        "Totals: 1194 passed, 0 failed, 0 skipped, 0 blacklisted, 116326ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-physical-arm64": {
+      "pid": 35829,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 1.1831485419534147,
+      "totals": [
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 23ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-physical-x86_64": {
+      "pid": 36973,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.2567567080259323,
+      "totals": [
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 36ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-reference-arm64": {
+      "pid": 35755,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 9.112366792047396,
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 7500ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-reference-x86_64": {
+      "pid": 36893,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 9.504490499966778,
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 8346ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-resident-arm64": {
+      "pid": 35846,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.9456594589864835,
+      "totals": [
+        "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 155ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-02-resident-x86_64": {
+      "pid": 36985,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.43671491695567966,
+      "totals": [
+        "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 199ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-cpu-arm64": {
+      "pid": 38302,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 10.327262875041924,
+      "totals": [
+        "Totals: 1394 passed, 0 failed, 0 skipped, 0 blacklisted, 10265ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-cpu-x86_64": {
+      "pid": 39455,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 11.899340292089619,
+      "totals": [
+        "Totals: 1394 passed, 0 failed, 0 skipped, 0 blacklisted, 11469ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-manager-arm64": {
+      "pid": 37717,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 81.34412754199002,
+      "totals": [
+        "Totals: 1194 passed, 0 failed, 0 skipped, 0 blacklisted, 79565ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-manager-x86_64": {
+      "pid": 38477,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 129.67278737504967,
+      "totals": [
+        "Totals: 1194 passed, 0 failed, 0 skipped, 0 blacklisted, 117991ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-physical-arm64": {
+      "pid": 38454,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.08983679197262973,
+      "totals": [
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 24ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-physical-x86_64": {
+      "pid": 39628,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.25141074997372925,
+      "totals": [
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 37ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-reference-arm64": {
+      "pid": 38384,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 8.25527470803354,
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 7490ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-reference-x86_64": {
+      "pid": 39553,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 9.491726166917942,
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 8360ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-resident-arm64": {
+      "pid": 38460,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.19686345802620053,
+      "totals": [
+        "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 132ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-03-resident-x86_64": {
+      "pid": 39642,
+      "exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 0.4483013330027461,
+      "totals": [
+        "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 203ms"
+      ],
+      "failures": [],
+      "selected_image_loaded": true
+    },
+    "final-manager-arm64": {
+      "pid": 33544,
+      "exit_code": 18,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 83.66883087507449,
+      "totals": [
+        "Totals: 1176 passed, 18 failed, 0 skipped, 0 blacklisted, 83386ms"
+      ],
+      "failures": [
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreRegionWriteFailure(history0-planar1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreRegionWriteFailure(history1-planar1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp1-history0-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp1-history0-copy1-removal1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp1-history1-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp1-history1-copy1-removal1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp4-history0-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp4-history0-copy1-removal1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp4-history1-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp4-history1-copy1-removal1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp8-history0-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp8-history0-copy1-removal1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp8-history1-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp8-history1-copy1-removal1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp16-history0-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp16-history0-copy1-removal1) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp16-history1-copy1-removal0) Not all expected messages were received",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreAliasRegionFailure(bpp16-history1-copy1-removal1) Not all expected messages were received"
+      ],
+      "selected_image_loaded": true
+    },
+    "parent-parked-batch-arm64": {
+      "pid": 30539,
+      "exit_code": 8,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 1.2220493329223245,
+      "totals": [
+        "Totals: 2 passed, 8 failed, 0 skipped, 0 blacklisted, 5ms"
+      ],
+      "failures": [
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp1-history0) '!foreignLocked' returned FALSE. ()",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp1-history1) '!foreignLocked' returned FALSE. ()",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp4-history0) '!foreignLocked' returned FALSE. ()",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp4-history1) '!foreignLocked' returned FALSE. ()",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp8-history0) '!foreignLocked' returned FALSE. ()",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp8-history1) '!foreignLocked' returned FALSE. ()",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp16-history0) '!foreignLocked' returned FALSE. ()",
+        "FAIL!  : KisTiledDataManagerTest::testPageStoreParkedBatchReadCapability(bpp16-history1) '!foreignLocked' returned FALSE. ()"
+      ],
+      "selected_image_loaded": true
+    }
+  },
+  "diff": [
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "added": 13,
+      "deleted": 0,
+      "kind": "production"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.h",
+      "added": 2,
+      "deleted": 0,
+      "kind": "production"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "added": 57,
+      "deleted": 46,
+      "kind": "production"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+      "added": 1,
+      "deleted": 1,
+      "kind": "production"
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "added": 18,
+      "deleted": 18,
+      "kind": "test"
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "added": 7,
+      "deleted": 7,
+      "kind": "test"
+    },
+    {
+      "path": "libs/image/tiles3/KisTilePageStoreBridge.h",
+      "added": 2,
+      "deleted": 1,
+      "kind": "production"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile.cc",
+      "added": 21,
+      "deleted": 6,
+      "kind": "production"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "added": 150,
+      "deleted": 3,
+      "kind": "test"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.h",
+      "added": 3,
+      "deleted": 0,
+      "kind": "test"
+    }
+  ],
+  "callgraph": {
+    "sha256": "8716429ff89bdaae0c9b55ef3052ca62c0c1cc48f43d82f02873f6e7bf76604b",
+    "translation_units": 87,
+    "apis": 2176,
+    "edges": 27700,
+    "callbacks": 27,
+    "unresolved": []
+  },
+  "architecture_passed": false,
+  "architecture_remaining": [
+    "stale source checkpoint",
+    "inherited memento direct_includes 1>0",
+    "this batch kis_tile.cc identifier_occurrences 13>9"
+  ],
+  "cp1": "closed",
+  "cp2": "open",
+  "formal_m6_m7_m8": "0/3",
+  "persistent_default_enabled": false
+}

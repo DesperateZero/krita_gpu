@@ -1,0 +1,985 @@
+{
+  "active_product": "8198c36ed722030edae715b7423554036bf1bcf7",
+  "review_outer_parent": "a2837d64e",
+  "scope": "Static expanded design review; no product changes, builds, tests or performance runs. Paths relative to krita/.",
+  "blueprint": "../br1_pagestore_equivalent_pipeline_20261010/PIPELINE_PLAN.md#whole-pipeline-blueprint",
+  "source_hashes": {
+    "libs/image/kis_paint_device_strategies.h": "c47f8137379bd6d481b77f3af93f696f7541ba8e7d2fe82c7c6b8948f5367a56",
+    "libs/image/pagestore/KisCpuResidentBinding.cpp": "e0d28a6db16f23dc904fe9582a2beb8fb6488e892f6ad2c88c4df5913a156a8c",
+    "libs/image/pagestore/KisCpuResidentBinding_p.h": "48563dee8667ac904432281297c1bd5644477f714506f903df81d5889c39ea48",
+    "libs/image/pagestore/KisImageEpochReferenceModel.cpp": "1332550b428e8c96370df22e7c70e6d3a5ccbc45f79f3e73b23fb056fb4a5076",
+    "libs/image/pagestore/KisImageEpochReferenceModel.h": "da401a8fc065ff1cd8e32cc0b6dd802bdf4b85b2ce51dfbaf8e8e67c8d3b8052",
+    "libs/image/pagestore/KisPageHistoryCollector.cpp": "26d7d3210b0a9f75253e08f6950a19b7dfc992d11ed56f8f2154ffec98508d2a",
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp": "5c03cd8c48ba8c9191367579ce82c0b9fbcf535e30e99c227d91dc27322c38b9",
+    "libs/image/pagestore/KisPageOwnerLedger.cpp": "78845089bb8013b9d57818e09a9631206c8e331d1f27eb9228b14a0136a158e7",
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp": "6a2b52d5780609e28f76a5dde6570a5dd8629de84bf70a8a0fa6447ea4903c74",
+    "libs/image/pagestore/KisPagePublicationCoordinator_p.h": "1675c4451fb7e37cebb242755df6c9e96e3693c94161d56082eb657a182a9c30",
+    "libs/image/pagestore/KisPageReadCoordinator.cpp": "8cd8527a208bf45b88532cd9b0915b434480543d7fa47a667766ba264c943c2f",
+    "libs/image/pagestore/KisPageReadCoordinator_p.h": "e30ba322274c4d0bc8b2a7f023f800c848e01ebfd64addbc2b672fd0e44b9e76",
+    "libs/image/pagestore/KisPageReplicaProvider.h": "b034f8b74eb248923b8ffbf04ac42eb5676fdda96cf247809ef1d257918bd859",
+    "libs/image/pagestore/KisPageRetirementQueue.cpp": "91083e783e8c2daebe93ff28d87c6fdc588bddabed60c0024f6539cf45f447a4",
+    "libs/image/pagestore/KisPageRetirementQueue_p.h": "5b33814322bea077a2161a7fb5009e2d6d17812869323a33f9ea672eee1d17e0",
+    "libs/image/pagestore/KisPageStateMachine.cpp": "6d446c55a22cd029771b4b8608c6244aacaee2378f45287b760e41216d5f1105",
+    "libs/image/pagestore/KisPageStore.cpp": "447715516129afa0e0ac749bab607f83d08ebf737bc594ed56c433a2b50398c0",
+    "libs/image/pagestore/KisPageStore.h": "77430cea61f9fbc840b8e40719e58cf73b3c41451cdd401736b4b4776e22a685",
+    "libs/image/pagestore/KisPageStoreMementoManager.cpp": "92b3a397c87c368a58d7413e0d840bb7259e2bbcc8438c9141562b005b1531af",
+    "libs/image/pagestore/KisPageStoreMementoManager.h": "8b6dd8c92c8ae69d7bab761b693eaf22ca256bcf2596f2e812cbf911f773c724",
+    "libs/image/pagestore/KisPageStoreReclamation.cpp": "436d7665dd442689454f5f857e3e47c35669d8e458a8c0328b122ab445badd19",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "6a6b9159d4a242cb944ced6f40eb24a013821c09be69d44e370c1d05f27a448b",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "17ef9529545e4ea0b355e325a10d983147f36c66a72e87da7dcd9008c99742fa",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "d682a1c8b87b533baa91fb4d7830465943825791ab9098adc7aa8c5181ee388f",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "bbf5b77ebaf12724208708cb2c3024a275fe27bc4ce69eeaf9e4fdaae574dccb",
+    "libs/image/pagestore/KisTiles3PageReplicaProvider.cpp": "7727d912d371126c7d6f40fa88001065b20c2a1682050642adc11fc68394b252",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "29c32843bcb757996e3d2a1387bfab6fdc7737893f5b02d59456ced7f9da579f",
+    "libs/image/tests/KisPageStoreFoundationTest.cpp": "8b89a7741c6644d2547098a979a10fdf010dd0cbc9e85edb33160b9e4af6b1ed",
+    "libs/image/tests/KisPageStorePhysicalClaimTest.cpp": "0d8e48fd6145f1655cea356514ffaeb42a2014500a0984ff37a80e8692ee1b8f",
+    "libs/image/tests/KisPageStoreReadBaselineTest.cpp": "144d9a1288f822fc10b47c2ce95ccfbb011638e6d821f06ea061179ee52f1392",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp": "399885471d40357079f931f75827e1ae09752a25429cee58a22b4ae1e6825c61",
+    "libs/image/tests/KisPageStoreResidentReadTest.cpp": "80d9be005df0f0a6b8ea973d927137c2e48bf802f158353e91ceb551f9b3d9b6",
+    "libs/image/tests/kis_strokes_queue_test.cpp": "a635b51282fbf8d1ba9a360fccd22c6babde2079c6b9d193b201b3258457cb6d",
+    "libs/image/tests/pagestore/KisPageStoreCpuAccessSession.h": "c9e6deb0ce7d897b0c6c88a6c8a99d9d142a7ff20a1e77ae7e32481606a4b92f",
+    "libs/image/tiles3/KisTiledExtentManager.cpp": "270c34097b6ec385621855e58ef9d20f2b9432e30cc4c91bb510d2bd1801e68b",
+    "libs/image/tiles3/KisTiledExtentManager.h": "b72c23242f60785b1aae52ba0598c67103dba60c9fd0e8a39857e8bc8472c147",
+    "libs/image/tiles3/kis_tile_hash_table2.h": "7736ea4b57e55549be0a635431415914fc33ae9589603a1afcca016245b903b7",
+    "libs/image/tiles3/kis_tile_hash_table_p.h": "ea3b62cb126697736aedb5d3b2df10fa7c1eb5f7bf1629148b2b10a050aa3b46",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "3c4b51d952547c01833435af5baf5b24b5e4ed082e879fec5aeb9638d66ad0f4",
+    "libs/image/tiles3/kis_tiled_data_manager.h": "a798a315a7873b171ce65ec7b7513df13ef11fed9ab38188532f16b276c20563",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "f9f24d2e3303f0d6875def3d8fc10949c3204ac099359d8a0609513bd41e22f8"
+  },
+  "change_index": [
+    {
+      "index": "T01.1",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::writeBytes(",
+          "lines": [
+            2300
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T01.2",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::fillRect(",
+          "lines": [
+            1963
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::copyFrom(",
+          "lines": [
+            2426
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreWriteBatch::replaceFullTile(",
+          "lines": [
+            645
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T01.3",
+      "file": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManager::clear(QRect",
+          "lines": [
+            824,
+            1019
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManager::writeBytes(",
+          "lines": [
+            1590
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManager::writePageStoreOperation(",
+          "lines": [
+            1769
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T01.4",
+      "file": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManager::copyPageStore(",
+          "lines": [
+            1173
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManager::refreshPageStorePages(",
+          "lines": [
+            1067,
+            1084
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T02.1",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::runCpuMutationOperation(",
+          "lines": [
+            2064
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T02.2",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreWriteBatch::Private::finishClient(",
+          "lines": [
+            585
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreWriteBatch::Private::finish(",
+          "lines": [
+            611
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreWriteBatch::Private::cancelForBarrier(",
+          "lines": [
+            470
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreLease::finishBatchLease(",
+          "lines": [
+            453
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T02.3",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::finishOwnedTransaction(",
+          "lines": [
+            1040
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::commitHistory(",
+          "lines": [
+            1753
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T02.4",
+      "file": "libs/image/pagestore/KisPagePublicationCoordinator_p.h",
+      "anchors": [
+        {
+          "symbol_or_anchor": "struct CommitPreparation",
+          "lines": [
+            296
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T03.1",
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageMutationExecution::prepareWrites(",
+          "lines": [
+            1530
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPageMutationSession::beginWriteImpl(",
+          "lines": [
+            2019
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T03.2",
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisCpuWriteGuard::reset(",
+          "lines": [
+            1670
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T03.3",
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageStore::finishWrite(",
+          "lines": [
+            4642
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.1",
+      "file": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "anchors": [
+        {
+          "symbol_or_anchor": "enum class KisPageWriteInputKind",
+          "lines": [
+            51
+          ]
+        },
+        {
+          "symbol_or_anchor": "enum class KisMutationPageEntryState",
+          "lines": [
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.2",
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageMutationSession::sealImpl(",
+          "lines": [
+            2355
+          ]
+        },
+        {
+          "symbol_or_anchor": "bool prepareAliasLocked(",
+          "lines": [
+            1115
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.3",
+      "file": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPreparedOverlayUpdate::prepare(",
+          "lines": [
+            249
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPreparedOverlayUpdate::prepareSurfaceLocked(",
+          "lines": [
+            271
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPreparedOverlayUpdate::collectRetirementsLocked(",
+          "lines": [
+            451
+          ]
+        },
+        {
+          "symbol_or_anchor": "tryInstallLocked(",
+          "lines": [
+            376,
+            849
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.4",
+      "file": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPagePublicationCoordinator::transactionDeltaLocked(",
+          "lines": [
+            1468
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPagePublicationCoordinator::commitLocked(",
+          "lines": [
+            866
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.5",
+      "file": "libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisImageEpochReferenceModel::prepareImpl(",
+          "lines": [
+            997
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisImageEpochReferenceModel::prepareCommit(",
+          "lines": [
+            1138
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisImageEpochReferenceModel::installCommit(",
+          "lines": [
+            1296
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.6",
+      "file": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPagePublicationCoordinator::stageSurfaceMetadataLocked(",
+          "lines": [
+            725
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPagePublicationCoordinator::stagePageRemovalLocked(",
+          "lines": [
+            797
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.7",
+      "file": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "anchors": [
+        {
+          "symbol_or_anchor": "class PreparedTileUpdates",
+          "lines": [
+            66
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.8",
+      "file": "libs/image/pagestore/KisPageStoreMementoManager.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageStoreMementoManager::commit(",
+          "lines": [
+            280
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.9",
+      "file": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPagePublicationCoordinator::restoreRetainedEpochLocked(",
+          "lines": [
+            1178
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPreparedMutationCommit::tryInstall(",
+          "lines": [
+            523
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.10",
+      "file": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManager::tryCommit(",
+          "lines": [
+            402
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManager::checkpointStrokeMutation(",
+          "lines": [
+            1746
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManager::restoreHistory(",
+          "lines": [
+            502
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManager::setExtent(QRect",
+          "lines": [
+            1469
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManager::rebuildPageStoreIndex(",
+          "lines": [
+            1051
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T04.11",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::allocatedPages(",
+          "lines": [
+            2693
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T05.1",
+      "file": "libs/image/pagestore/KisPageOwnerLedger.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageOwnerLedger::sealPreparedPage(",
+          "lines": [
+            2129
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T05.2",
+      "file": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageWriteCoordinator::prepareWritePlanLocked(",
+          "lines": [
+            2754
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T06.1",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::captureReadView(",
+          "lines": [
+            1315
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T06.2",
+      "file": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::configureClone(",
+          "lines": [
+            767
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::pruneDefaultPreparedPages(",
+          "lines": [
+            1096
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisTiledDataManagerPageStoreBackend::historyChangedPages(",
+          "lines": [
+            1714
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T07.1",
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "void finishSegmentLocked(",
+          "lines": [
+            823
+          ]
+        },
+        {
+          "symbol_or_anchor": "bool cancelPageLocked(",
+          "lines": [
+            867
+          ]
+        },
+        {
+          "symbol_or_anchor": "bool cancelLocked(",
+          "lines": [
+            900
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T07.2",
+      "file": "libs/image/pagestore/KisPageRetirementQueue.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageRetirementQueue::retireRecord(",
+          "lines": [
+            330
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPageRetirementQueue::acceptEffect(",
+          "lines": [
+            616
+          ]
+        },
+        {
+          "symbol_or_anchor": "KisPageRetirementQueue::processAcceptedEffects(",
+          "lines": [
+            581
+          ]
+        }
+      ]
+    },
+    {
+      "index": "T07.3",
+      "file": "libs/image/pagestore/KisPageStore.cpp",
+      "anchors": [
+        {
+          "symbol_or_anchor": "KisPageStore::closeSession(",
+          "lines": [
+            3228
+          ]
+        }
+      ]
+    }
+  ],
+  "test_index": {
+    "T08.1": [
+      "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "libs/image/tests/KisPageStoreFoundationTest.cpp",
+      "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+      "libs/image/tests/KisPageStoreReadBaselineTest.cpp",
+      "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "libs/image/tests/KisPageStoreResidentReadTest.cpp",
+      "libs/image/tests/kis_strokes_queue_test.cpp",
+      "libs/image/tests/pagestore/KisPageStoreCpuAccessSession.h",
+      "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp"
+    ],
+    "T08.2": "Existing equivalent-storage and business-control protocols; no new samples."
+  },
+  "lexical_consumer_census": {
+    "command": [
+      "rg",
+      "--json",
+      "-n",
+      "\\b(preparedPages|commitAndReleasePublicationLock|prepareOverlayUpdateLocked|sealForLegacyUnlock|sealForAdapterDelivery|checkpointForRead|finishForAdapterDelivery|refreshPageStorePages|rebuildPageStoreIndex|copyPageStore|allocatedPages|writePageStoreOperation)\\s*\\(",
+      "libs",
+      "plugins",
+      "-g",
+      "*.cpp",
+      "-g",
+      "*.h",
+      "-g",
+      "*.cc"
+    ],
+    "limits": "Lexical occurrences include definitions, declarations and tests; not a parsed call graph or runtime counts. libs/ and plugins/ C++ only; does not certify indirect dispatch completeness.",
+    "symbols": {
+      "preparedPages": {
+        "libs/image/pagestore/KisPageStore.cpp": [
+          4787
+        ],
+        "libs/image/pagestore/KisPageStore.h": [
+          554
+        ],
+        "libs/image/pagestore/KisPageStoreMementoManager.cpp": [
+          290
+        ],
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": [
+          797,
+          1082,
+          1106,
+          1719,
+          2717
+        ],
+        "libs/image/tests/KisPageStoreCpuMutationTest.cpp": [
+          290,
+          301,
+          1388,
+          1413,
+          1437,
+          1477,
+          1500,
+          1569,
+          1603,
+          1606,
+          1630,
+          1652,
+          1734,
+          1771,
+          1780,
+          1891,
+          2045,
+          2092,
+          2147,
+          2190,
+          2236,
+          2249,
+          2273,
+          2864,
+          2917,
+          2956,
+          2998,
+          3090,
+          3163,
+          3184,
+          3231,
+          3233,
+          3260,
+          3263,
+          3300,
+          3369,
+          3531,
+          3551,
+          3558,
+          3578,
+          3585,
+          3657,
+          3720,
+          3831,
+          3838,
+          3914,
+          3996,
+          4059,
+          4100,
+          4114,
+          4127,
+          4293,
+          4468,
+          4496,
+          4534,
+          6657,
+          6998,
+          7026,
+          7077,
+          7139,
+          7148,
+          7205,
+          7213,
+          7250,
+          7266,
+          7332,
+          7367,
+          7382,
+          7443,
+          7472,
+          7479,
+          7600,
+          7610,
+          7717,
+          7814,
+          8174,
+          8266,
+          8276,
+          8320,
+          8421,
+          8455,
+          8585,
+          8630,
+          8668,
+          8677,
+          8713,
+          9019,
+          9042,
+          9092,
+          9134,
+          9210,
+          9278,
+          9331,
+          9375,
+          9415,
+          9478,
+          9482,
+          10533,
+          10607,
+          10685,
+          10734,
+          11036,
+          11368,
+          11473,
+          11649
+        ],
+        "libs/image/tests/KisPageStoreReadBaselineTest.cpp": [
+          76
+        ],
+        "libs/image/tests/KisPageStoreReferenceTest.cpp": [
+          187,
+          1682,
+          2019,
+          2031,
+          9827,
+          10081,
+          10579,
+          10804,
+          11165,
+          11359,
+          11379,
+          11401,
+          11495,
+          11544,
+          11553,
+          11633,
+          11644,
+          11656,
+          11747,
+          11876,
+          12013,
+          12250,
+          12348,
+          12541
+        ],
+        "libs/image/tests/KisPageStoreResidentReadTest.cpp": [
+          311,
+          529,
+          971
+        ],
+        "libs/image/tests/kis_strokes_queue_test.cpp": [
+          133
+        ],
+        "libs/image/tests/pagestore/KisPageStoreCpuAccessSession.h": [
+          114
+        ],
+        "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": [
+          1434,
+          1472
+        ]
+      },
+      "commitAndReleasePublicationLock": {
+        "libs/image/pagestore/KisPageStore.cpp": [
+          4802
+        ],
+        "libs/image/pagestore/KisPageStore.h": [
+          582
+        ],
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": [
+          1089
+        ]
+      },
+      "prepareOverlayUpdateLocked": {
+        "libs/image/pagestore/KisPagePublicationCoordinator.cpp": [
+          831,
+          1512
+        ],
+        "libs/image/pagestore/KisPagePublicationCoordinator_p.h": [
+          188,
+          195
+        ],
+        "libs/image/pagestore/KisPageStore.cpp": [
+          2560,
+          4678
+        ],
+        "libs/image/tests/KisPageStoreCpuMutationTest.cpp": [
+          5682,
+          5683,
+          5689,
+          5727,
+          5734
+        ]
+      },
+      "sealForLegacyUnlock": {
+        "libs/image/pagestore/KisPageStore.cpp": [
+          2336
+        ],
+        "libs/image/pagestore/KisPageStore.h": [
+          220
+        ],
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": [
+          230,
+          620,
+          1773
+        ]
+      },
+      "sealForAdapterDelivery": {
+        "libs/image/pagestore/KisPageStore.cpp": [
+          2341
+        ],
+        "libs/image/pagestore/KisPageStore.h": [
+          224
+        ],
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": [
+          621
+        ]
+      },
+      "checkpointForRead": {
+        "libs/image/pagestore/KisPageStore.cpp": [
+          2346
+        ],
+        "libs/image/pagestore/KisPageStore.h": [
+          213
+        ],
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": [
+          1744
+        ],
+        "libs/image/tests/KisPageStoreCpuMutationTest.cpp": [
+          8353,
+          8364,
+          8376,
+          8381,
+          8416,
+          8443,
+          8444,
+          8478,
+          8484,
+          8498,
+          8504,
+          8552,
+          8578,
+          8604,
+          8618,
+          8624,
+          8651,
+          8656
+        ],
+        "libs/image/tests/kis_strokes_queue_test.cpp": [
+          87
+        ]
+      },
+      "finishForAdapterDelivery": {
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": [
+          571,
+          2051,
+          2208
+        ],
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": [
+          75
+        ]
+      },
+      "refreshPageStorePages": {
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          410,
+          1067,
+          1072,
+          1084,
+          1224
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.h": [
+          371,
+          372
+        ]
+      },
+      "rebuildPageStoreIndex": {
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          518,
+          672,
+          1051,
+          1483
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.h": [
+          369
+        ]
+      },
+      "copyPageStore": {
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          1173,
+          1235,
+          1356
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.h": [
+          377
+        ]
+      },
+      "allocatedPages": {
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": [
+          2569,
+          2616,
+          2693
+        ],
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": [
+          238
+        ],
+        "libs/image/tests/KisPageStoreReferenceTest.cpp": [
+          12736,
+          12767,
+          12772,
+          12774
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          1055
+        ]
+      },
+      "writePageStoreOperation": {
+        "libs/image/kis_paint_device_strategies.h": [
+          304
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.cc": [
+          1742,
+          1769
+        ],
+        "libs/image/tiles3/kis_tiled_data_manager.h": [
+          110
+        ],
+        "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": [
+          1302,
+          1359,
+          1941,
+          1970,
+          2007,
+          2039,
+          2050,
+          2072,
+          2073,
+          2076,
+          2104,
+          2254,
+          2334,
+          2415,
+          2456,
+          2471,
+          2483,
+          2795,
+          2805,
+          2818,
+          2823,
+          2828,
+          2856,
+          2865,
+          2897,
+          2910,
+          2948,
+          3023,
+          3079,
+          3245,
+          3369,
+          3387,
+          5283,
+          5369
+        ]
+      }
+    }
+  }
+}

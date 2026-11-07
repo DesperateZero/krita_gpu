@@ -1,0 +1,958 @@
+{
+  "analysis_sha256": "c2493715b64cf44c9c76fb7150956e51ad1a1d5832da07f5583dd58d14a03300",
+  "safety": {
+    "processes": 12,
+    "passed": 9470,
+    "failed": 0,
+    "skipped": 0,
+    "complete": true,
+    "limits": [
+      "PaintDevice stressTestMemoryFragmentation excluded after candidate and frozen parent SIGSEGV; all other methods run, no full-group qualification"
+    ]
+  },
+  "mechanism": {
+    "observations": [
+      {
+        "index": 0,
+        "side": "parent",
+        "roles": {
+          "node.paint": {
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 2420,
+            "mutation.writablePinsReleased": 2420,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          "root.original": {
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 12,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 12,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        }
+      },
+      {
+        "index": 1,
+        "side": "candidate",
+        "roles": {
+          "node.paint": {
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          "root.original": {
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 12,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 12,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        }
+      },
+      {
+        "index": 2,
+        "side": "candidate",
+        "roles": {
+          "node.paint": {
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          "root.original": {
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 7,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 12,
+            "publication.metadataRepreparations": 1,
+            "publication.preparedMutationCommits": 12,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        }
+      },
+      {
+        "index": 3,
+        "side": "parent",
+        "roles": {
+          "node.paint": {
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 2420,
+            "mutation.writablePinsReleased": 2420,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          "root.original": {
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 2,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 13,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 13,
+            "publication.rootRebases": 0,
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        }
+      }
+    ],
+    "predicted_node_pins": [
+      2420,
+      152
+    ],
+    "deleted_pairs": 2268,
+    "pin_reduction": 0.9371900826446281,
+    "fixed_node_other_work_prediction_met": true,
+    "timing_excluded": true,
+    "root_commit_note": "Initial analyzer incorrectly treated pretrace root commits11 as invariant. Same frozen parent produces12/13; candidate12/12. Preserve observations, no resampling; no root commit deletion claimed. Node commit1, root generations/copy/init/pins and projection updates remain invariant."
+  },
+  "visits": {
+    "observations": [
+      {
+        "index": 0,
+        "side": "parent",
+        "totals": {
+          "P": 76,
+          "R": 2344,
+          "F": 5363,
+          "C": 76
+        },
+        "maximum_F": 516,
+        "maximum_P": 4
+      },
+      {
+        "index": 1,
+        "side": "candidate",
+        "totals": {
+          "P": 76,
+          "R": 76,
+          "F": 5363,
+          "C": 76
+        },
+        "maximum_F": 516,
+        "maximum_P": 4
+      },
+      {
+        "index": 2,
+        "side": "candidate",
+        "totals": {
+          "P": 76,
+          "R": 76,
+          "F": 5363,
+          "C": 76
+        },
+        "maximum_F": 516,
+        "maximum_P": 4
+      },
+      {
+        "index": 3,
+        "side": "parent",
+        "totals": {
+          "P": 76,
+          "R": 2344,
+          "F": 5363,
+          "C": 76
+        },
+        "maximum_F": 516,
+        "maximum_P": 4
+      }
+    ],
+    "E": 0,
+    "semantic_work_unchanged": true,
+    "maximum_fragment_payload_capacity_bytes": 12416,
+    "largest_four_operation_payload_capacity_sum_bytes": 45728,
+    "capacity_note": "sizeof rect24 / size_t8 for both64bit targets; payload capacity bound only, not measured concurrent physical residency/allocator overhead"
+  },
+  "holds": [
+    {
+      "persistent": 0,
+      "fixed_pins": 76,
+      "maximum_fixed_hold_ns": 62750,
+      "total_fixed_hold_ns": 2032087
+    },
+    {
+      "persistent": 1,
+      "fixed_pins": 76,
+      "maximum_fixed_hold_ns": 62625,
+      "total_fixed_hold_ns": 2139872
+    }
+  ],
+  "performance": {
+    "arm64": {
+      "stroke_to_projection_ready_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 0.997239713423701,
+        "pointwise_two_sided_95": [
+          0.9414079685006583,
+          1.0214991974219954
+        ],
+        "latency_reduction": 0.002760286576299009,
+        "latency_reduction_95": [
+          -0.021499197421995353,
+          0.05859203149934167
+        ],
+        "marginal_median_ns": {
+          "parent": 8096854.0,
+          "candidate": 8022478.5
+        },
+        "median_paired_saving_ns": 24666.5,
+        "block_log_ratios": [
+          0.020041702661310286,
+          0.06072260433900543,
+          -0.09234353618529478,
+          -0.020422021293017276,
+          -0.09136222423802041,
+          -0.297661824317188,
+          0.007562461363934536,
+          0.022500996517630288,
+          -0.02939514682056633,
+          0.22196665500241866,
+          0.002635121742975529,
+          -0.008163328127397448
+        ]
+      },
+      "pen_up_to_projection_ready_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 0.9997720130219395,
+        "pointwise_two_sided_95": [
+          0.9412219239191315,
+          1.0219741330650505
+        ],
+        "latency_reduction": 0.0002279869780604793,
+        "latency_reduction_95": [
+          -0.021974133065050472,
+          0.05877807608086849
+        ],
+        "marginal_median_ns": {
+          "parent": 8014208.0,
+          "candidate": 7934229.5
+        },
+        "median_paired_saving_ns": 21500.0,
+        "block_log_ratios": [
+          0.02056662309031775,
+          0.06285175441614191,
+          -0.09305484157386908,
+          -0.023050184739724217,
+          -0.09068569568101265,
+          -0.2990385274335136,
+          0.007971941382780394,
+          0.022905739607145082,
+          -0.030466961955953713,
+          0.22313405651107132,
+          0.005763670809914903,
+          -0.006219696751999513
+        ]
+      },
+      "undo_drain_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 1.0105120889614032,
+        "pointwise_two_sided_95": [
+          0.9414461580898232,
+          1.0524525403427087
+        ],
+        "latency_reduction": -0.01051208896140321,
+        "latency_reduction_95": [
+          -0.05245254034270874,
+          0.05855384191017676
+        ],
+        "marginal_median_ns": {
+          "parent": 522187.5,
+          "candidate": 534645.5
+        },
+        "median_paired_saving_ns": -21646.0,
+        "block_log_ratios": [
+          0.019468551794401573,
+          -0.0879344044074174,
+          0.002875331448881538,
+          0.0797760440480874,
+          -0.09187821855443946,
+          -0.11547148772382214,
+          -0.03274183537577041,
+          0.02637039334332101,
+          0.07587599315016896,
+          0.018039110823609848,
+          0.09595881465387138,
+          -0.029097911879117866
+        ]
+      },
+      "redo_drain_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 1.0096361082035405,
+        "pointwise_two_sided_95": [
+          0.9872021671196906,
+          1.0266951207570143
+        ],
+        "latency_reduction": -0.00963610820354055,
+        "latency_reduction_95": [
+          -0.0266951207570143,
+          0.012797832880309445
+        ],
+        "marginal_median_ns": {
+          "parent": 1281853.5,
+          "candidate": 1293395.5
+        },
+        "median_paired_saving_ns": -9250.5,
+        "block_log_ratios": [
+          0.027872774067398194,
+          -0.0060675681588631784,
+          0.01193128247958642,
+          0.043000198218481875,
+          0.019750471350156562,
+          0.049516445267665736,
+          -0.053035582211281955,
+          0.007248671572694355,
+          0.024817271845372177,
+          -0.01969329307100869,
+          -0.021882920274880154,
+          0.002262585079155114
+        ]
+      },
+      "owner_teardown_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 1.0160859616447406,
+        "pointwise_two_sided_95": [
+          0.9854195984311572,
+          1.0232197491299857
+        ],
+        "latency_reduction": -0.01608596164474063,
+        "latency_reduction_95": [
+          -0.0232197491299857,
+          0.014580401568842771
+        ],
+        "marginal_median_ns": {
+          "parent": 582771.0,
+          "candidate": 579604.5
+        },
+        "median_paired_saving_ns": -7874.0,
+        "block_log_ratios": [
+          0.17303267567126862,
+          0.04677728237217192,
+          0.011171921022776938,
+          0.01628224632970782,
+          -0.01621932512518221,
+          0.025417284339505793,
+          -0.013156155399425117,
+          -0.06112307938324528,
+          -0.016367587961552,
+          0.02049126053079455,
+          0.020315505749286956,
+          0.015633660660880233
+        ]
+      }
+    },
+    "x86_64": {
+      "stroke_to_projection_ready_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 0.9859992423079704,
+        "pointwise_two_sided_95": [
+          0.9765944681431467,
+          1.0149502629448597
+        ],
+        "latency_reduction": 0.014000757692029575,
+        "latency_reduction_95": [
+          -0.014950262944859682,
+          0.023405531856853345
+        ],
+        "marginal_median_ns": {
+          "parent": 13801229.5,
+          "candidate": 13656500.5
+        },
+        "median_paired_saving_ns": 210604.5,
+        "block_log_ratios": [
+          -0.019267861672804726,
+          -0.01181808451256794,
+          0.015179547568240932,
+          -0.03652356902044822,
+          -0.006015698144642674,
+          -0.03121201299808621,
+          0.04048341073993897,
+          -0.016381301147694358,
+          -0.02809972187624453,
+          0.014499670968445802,
+          0.04761026377057398,
+          -0.01747157589077916
+        ]
+      },
+      "pen_up_to_projection_ready_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 0.9889616422343591,
+        "pointwise_two_sided_95": [
+          0.9774498696000683,
+          1.0135403049759428
+        ],
+        "latency_reduction": 0.011038357765640883,
+        "latency_reduction_95": [
+          -0.01354030497594283,
+          0.0225501303999317
+        ],
+        "marginal_median_ns": {
+          "parent": 13608833.5,
+          "candidate": 13491916.5
+        },
+        "median_paired_saving_ns": 139791.0,
+        "block_log_ratios": [
+          0.007679630564739582,
+          -0.015307670772301878,
+          0.015083038678758688,
+          -0.037679444373811564,
+          -0.006891794238765328,
+          -0.030386341913105755,
+          0.040371511415029815,
+          -0.0164410013143754,
+          -0.02862907737221283,
+          0.011815869772626185,
+          0.050484961693879046,
+          -0.016987468096399137
+        ]
+      },
+      "undo_drain_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 0.996622976857133,
+        "pointwise_two_sided_95": [
+          0.947265167277732,
+          1.0147548003302855
+        ],
+        "latency_reduction": 0.0033770231428670305,
+        "latency_reduction_95": [
+          -0.014754800330285534,
+          0.05273483272226798
+        ],
+        "marginal_median_ns": {
+          "parent": 887833.0,
+          "candidate": 887458.0
+        },
+        "median_paired_saving_ns": 1479.0,
+        "block_log_ratios": [
+          -0.016720392221678065,
+          0.006470903461167271,
+          -0.13466616448163304,
+          0.020315243912965644,
+          -0.03670244497508925,
+          0.07113205758432939,
+          -0.14873703053170872,
+          -0.00667200665975025,
+          0.00897877064760641,
+          -9.3469651519823e-05,
+          0.03731834879645402,
+          -0.071649989636621
+        ]
+      },
+      "redo_drain_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 0.9795974500452909,
+        "pointwise_two_sided_95": [
+          0.9389639960016255,
+          1.0385678472041455
+        ],
+        "latency_reduction": 0.020402549954709137,
+        "latency_reduction_95": [
+          -0.03856784720414552,
+          0.0610360039983745
+        ],
+        "marginal_median_ns": {
+          "parent": 2053188.0,
+          "candidate": 2014041.5
+        },
+        "median_paired_saving_ns": 67188.5,
+        "block_log_ratios": [
+          0.06723174752863685,
+          -0.11049545104278517,
+          -0.07044744388704316,
+          0.01721620298752252,
+          -0.0021555589197302695,
+          0.005097775249687589,
+          -0.03907155500944116,
+          0.058469185262526396,
+          -0.03995969204283979,
+          0.13059551888925128,
+          -0.08774020915455566,
+          -0.05550884296345537
+        ]
+      },
+      "owner_teardown_ns": {
+        "pairs": 24,
+        "independent_blocks": 12,
+        "candidate_over_parent": 0.9975481242132451,
+        "pointwise_two_sided_95": [
+          0.966831757446435,
+          1.0230221006883515
+        ],
+        "latency_reduction": 0.0024518757867548757,
+        "latency_reduction_95": [
+          -0.023022100688351532,
+          0.033168242553564986
+        ],
+        "marginal_median_ns": {
+          "parent": 883125.0,
+          "candidate": 886374.5
+        },
+        "median_paired_saving_ns": -13480.0,
+        "block_log_ratios": [
+          0.006026672440513983,
+          -0.04447068414639467,
+          0.04559790344288324,
+          -0.06274163114500715,
+          0.03452180940537905,
+          -0.08088373923818697,
+          -0.02299088123811864,
+          0.01726681973927026,
+          0.028255361334851577,
+          -0.010936445553622626,
+          0.016835557374603263,
+          -0.013553291421892582
+        ]
+      }
+    }
+  },
+  "lowreuse": {
+    "arm64": {
+      "0": {
+        "pairs": 12,
+        "independent_blocks": 6,
+        "candidate_over_parent": 1.0459887679740203,
+        "pointwise_two_sided_95": [
+          0.9966680414484785,
+          1.070162617870828
+        ],
+        "latency_reduction": -0.045988767974020295,
+        "latency_reduction_95": [
+          -0.07016261787082789,
+          0.0033319585515214634
+        ],
+        "marginal_median_ns": {
+          "parent": 5011416.5,
+          "candidate": 5272063.0
+        },
+        "median_paired_saving_ns": -197542.0,
+        "block_log_ratios": [
+          -0.04695721772438008,
+          0.07215711151923035,
+          0.04797730318293358,
+          0.06346412097008727,
+          0.0419479518381208,
+          0.04028217395093676
+        ]
+      },
+      "1": {
+        "pairs": 12,
+        "independent_blocks": 6,
+        "candidate_over_parent": 1.0012095766696758,
+        "pointwise_two_sided_95": [
+          0.9623677228637006,
+          1.0110135755823904
+        ],
+        "latency_reduction": -0.0012095766696758048,
+        "latency_reduction_95": [
+          -0.011013575582390356,
+          0.03763227713629935
+        ],
+        "marginal_median_ns": {
+          "parent": 44768583.0,
+          "candidate": 44843583.5
+        },
+        "median_paired_saving_ns": -19250.5,
+        "block_log_ratios": [
+          -0.006855391829029393,
+          -0.06986191428223991,
+          -0.002699037032420102,
+          0.011912807221391312,
+          0.005116728474784219,
+          0.009993928426485388
+        ]
+      }
+    },
+    "x86_64": {
+      "0": {
+        "pairs": 12,
+        "independent_blocks": 6,
+        "candidate_over_parent": 0.9521703216708287,
+        "pointwise_two_sided_95": [
+          0.9211900474121363,
+          1.0411397699980283
+        ],
+        "latency_reduction": 0.04782967832917129,
+        "latency_reduction_95": [
+          -0.041139769998028264,
+          0.07880995258786372
+        ],
+        "marginal_median_ns": {
+          "parent": 9280375.0,
+          "candidate": 9248520.5
+        },
+        "median_paired_saving_ns": 110812.5,
+        "block_log_ratios": [
+          0.05390816997836707,
+          -0.10747482965008978,
+          -0.05670300041423664,
+          -0.04294141880972672,
+          -0.0550812829403489,
+          0.026723921517363185
+        ]
+      },
+      "1": {
+        "pairs": 12,
+        "independent_blocks": 6,
+        "candidate_over_parent": 0.9970018348748301,
+        "pointwise_two_sided_95": [
+          0.9702676248555955,
+          1.0159344306703517
+        ],
+        "latency_reduction": 0.002998165125169927,
+        "latency_reduction_95": [
+          -0.015934430670351718,
+          0.02973237514440452
+        ],
+        "marginal_median_ns": {
+          "parent": 71660375.0,
+          "candidate": 72233895.5
+        },
+        "median_paired_saving_ns": -305562.0,
+        "block_log_ratios": [
+          0.003051553251768321,
+          -0.04030873776221616,
+          -0.009056890503716511,
+          0.02193117142935602,
+          0.009686449234494509,
+          -0.020057949489097854
+        ]
+      }
+    }
+  },
+  "controls_fresh": {
+    "observations": [
+      {
+        "arch": "arm64",
+        "K": 1,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 25648.424718372422,
+          "current": 34887.37751888337
+        },
+        "current_over_m5_throughput": 1.3597554923957054,
+        "one_sided_9875_lower": 1.3345263833021204,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      },
+      {
+        "arch": "arm64",
+        "K": 16,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 3712.0239876916526,
+          "current": 4153.795895006037
+        },
+        "current_over_m5_throughput": 1.1172055356335708,
+        "one_sided_9875_lower": 1.0959553042826602,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      },
+      {
+        "arch": "x86_64",
+        "K": 1,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 17624.296976825142,
+          "current": 23596.850045847048
+        },
+        "current_over_m5_throughput": 1.3271592498677083,
+        "one_sided_9875_lower": 1.2964499326241636,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      },
+      {
+        "arch": "x86_64",
+        "K": 16,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 2447.9949722203355,
+          "current": 2768.7313909675368
+        },
+        "current_over_m5_throughput": 1.1339817097466123,
+        "one_sided_9875_lower": 1.1217441534130455,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      }
+    ],
+    "scoped_family_pass": true,
+    "protocol_sha256": "e6b04c3a9259b1e4f22d883209a8d37b3c98d84319aa73c9ec5f2ae3fb5bdd9c",
+    "inputs_verified": true,
+    "qualification": "Fixed5173 same-dependency protected Fresh H0 controls; original public tiles3 fixture unchanged; full M6/CP0 gates remain separate"
+  },
+  "controls_history": {
+    "observations": [
+      {
+        "arch": "arm64",
+        "K": 1,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 15449.808076905034,
+          "current": 23206.378878461997
+        },
+        "current_over_m5_throughput": 1.4976675096736811,
+        "one_sided_9875_lower": 1.4849055840392553,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      },
+      {
+        "arch": "arm64",
+        "K": 16,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 2250.0232148048844,
+          "current": 3160.5797492892657
+        },
+        "current_over_m5_throughput": 1.4050532936842994,
+        "one_sided_9875_lower": 1.3938797922047643,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      },
+      {
+        "arch": "x86_64",
+        "K": 1,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 12030.239314135706,
+          "current": 17256.280282593747
+        },
+        "current_over_m5_throughput": 1.4447195249311144,
+        "one_sided_9875_lower": 1.4181395674724182,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      },
+      {
+        "arch": "x86_64",
+        "K": 16,
+        "pairs": 40,
+        "independent_blocks": 20,
+        "median_completed_rates": {
+          "m5": 1417.2101305181736,
+          "current": 2091.1762886929955
+        },
+        "current_over_m5_throughput": 1.4669203387024736,
+        "one_sided_9875_lower": 1.4479638996192972,
+        "minimum_ratio": 0.98,
+        "passes_scoped_nonregression": true
+      }
+    ],
+    "scoped_family_pass": true,
+    "protocol_sha256": "c611be2941b5221ded5168c7f2f770868cddbe51c9e6b037c8daa5da1c0bcddb",
+    "inputs_verified": true,
+    "qualification": "Fixed5173 same-dependency public full-payload/history control; same external source on each tree; full M6/CP0 gates remain separate"
+  },
+  "qualification": {
+    "blueprint_mechanism_verified": true,
+    "M6_complete": false,
+    "remaining": [
+      "formal calibration2/20 unchanged",
+      "metadata residency pre-reconstruction equivalent denominator missing",
+      "CP0 full required qualification missing",
+      "original memory fragmentation overlapping-page stress remains unsafe; not fixed by this batch"
+    ]
+  },
+  "decision": "Candidate implemented and tested, business speedup unconfirmed; retain experiment branch and evidence, revert complete candidate on working branch. No partial const/sort patch retained.",
+  "rollback_safety": {
+    "processes": 12,
+    "passed": 9402,
+    "failed": 0,
+    "skipped": 0,
+    "complete": true,
+    "same_stress_exclusion": true
+  }
+}

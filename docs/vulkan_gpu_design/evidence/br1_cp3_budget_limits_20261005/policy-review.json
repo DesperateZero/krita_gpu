@@ -1,0 +1,79 @@
+{
+  "original_responsibility": "Complete budget capacity and earlier-waiter conflict policy",
+  "limiter_call_sites": [
+    {
+      "line": 492,
+      "source": "fitsLocked("
+    },
+    {
+      "line": 649,
+      "source": "fitsLocked(delta, aggregate, durable, true, controlBytes)) {"
+    },
+    {
+      "line": 738,
+      "source": "fitsLocked(delta, aggregate, durable, true, controlBytes)) {"
+    },
+    {
+      "line": 767,
+      "source": "fitsLocked(delta, aggregate, durable);"
+    },
+    {
+      "line": 815,
+      "source": "fitsLocked(next->requested, next->aggregateBytes, next->durableBytes)) continue;"
+    },
+    {
+      "line": 995,
+      "source": "fitsLocked(delta, aggregateBytes, durableBytes))"
+    },
+    {
+      "line": 1067,
+      "source": "fitsLocked(storageDelta, aggregate, 0)) {"
+    },
+    {
+      "line": 1375,
+      "source": "fitsLocked(delta, aggregateBytes, durableBytes))"
+    },
+    {
+      "line": 1746,
+      "source": "fitsLocked(delta, aggregate, 0)) {"
+    },
+    {
+      "line": 1864,
+      "source": "fitsLocked({}, {}, 0)) {"
+    },
+    {
+      "line": 2058,
+      "source": "fitsLocked(delta, aggregate, 0)) {"
+    }
+  ],
+  "helpers_deleted": [
+    "domainLimit(limits,class,domain)",
+    "aggregateLimit(limits,class)"
+  ],
+  "replacements": [
+    "domainLimits(limits,class) once per bucket",
+    "aggregateLimits(limits) once per call"
+  ],
+  "all_mutable_inputs_locked": "All fitsLocked/priorWaiter consumers hold original controller mutex; configureLimits and process-root limit changes hold same mutex. No cache survives call or configuration.",
+  "boundary_semantics": [
+    "Current and RetainedHistory domains keep individual limits; remaining five classes keep UINT64MAX domains",
+    "All seven aggregate limits preserve enum order; Count has no consumer in either original fixed loop",
+    "Negative requested components still refuse; non-negative addition/live/reserved subtraction checks identical",
+    "Aggregate live sum and SSD live sum still saturate; reserved aggregate and durable inputs unchanged",
+    "reserveChange prepares positive domain destinations but net signed per-class aggregate and SSD growth; overflow refusal unchanged",
+    "emptyUsage substitutes irreducible metadata and zero local pending, then adds original coherent process live/reserved snapshot",
+    "All unchanged buckets remain checked; no assumed usage invariant skips them",
+    "Earlier waiting/granted/sequence and finite shared domain/aggregate/durable overlap checks remain exact"
+  ],
+  "unchanged_state_transitions": [
+    "reserve/reserveChange/reserveSharedNonPayload/slot growth",
+    "ordinary synchronous allocation parent/local stack prepare and settle",
+    "commitRetaining/reclassify/debt CPU-to-SSD movement",
+    "releaseLive/final free/retained detach/shared child unregister",
+    "cold waiter allocation/grant/cancel/FIFO dispatch/wake",
+    "process bootstrap/root live/reserved accounting and root limit changes"
+  ],
+  "acceptance": "Parent and current actual member outcomes equal for800000 inputs per process \u00d72 architectures \u00d72 variants; original waiter/signed physical/net SSD/pressure/close tests in current complete CPU matrix",
+  "refusal_and_cleanup": "No changed allocation/free/retirement/cancel endpoint or new authority; all original failure owners retained",
+  "audit": "Both original helper consumers migrated; no surviving singular selectors; no new public API/fields/queue/owner; original ratchets unchanged"
+}

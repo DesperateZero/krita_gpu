@@ -1,0 +1,20 @@
+[
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "pid": 32658,
+    "exit_code": "still-live-after-kill",
+    "totals": [],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::domainJournalCommitsAtCapacity() '!later->registerProvider(f.provider, &f.error)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::providerAdoptionPreparationRejectsBeforePayload(binding-control) 'rejected.error.contains(QStringLiteral(\"storage\"))' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::processStorageRejectsAndRetains() Compared values are not the same"
+    ],
+    "normal_exit": false,
+    "passed": false
+  }
+]

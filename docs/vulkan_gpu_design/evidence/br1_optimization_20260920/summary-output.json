@@ -1,0 +1,265 @@
+{
+  "before": {
+    "runs": [
+      {
+        "file": "before-plain-01.log",
+        "qt_ms": 26059,
+        "real": 26.19,
+        "user": 26.08,
+        "sys": 3.53
+      },
+      {
+        "file": "before-plain-02.log",
+        "qt_ms": 26451,
+        "real": 26.56,
+        "user": 26.41,
+        "sys": 3.62
+      },
+      {
+        "file": "before-plain-03.log",
+        "qt_ms": 26789,
+        "real": 26.9,
+        "user": 26.77,
+        "sys": 3.61
+      },
+      {
+        "file": "before-plain-04.log",
+        "qt_ms": 26629,
+        "real": 26.74,
+        "user": 26.61,
+        "sys": 3.53
+      },
+      {
+        "file": "before-plain-05.log",
+        "qt_ms": 26556,
+        "real": 26.68,
+        "user": 26.57,
+        "sys": 3.63
+      }
+    ],
+    "n": 5,
+    "median_qt_ms": 26556,
+    "range_qt_ms": [
+      26059,
+      26789
+    ],
+    "sample_stddev_qt_ms": 273.9200613317688
+  },
+  "d1_first": {
+    "runs": [
+      {
+        "file": "after-plain-01.log",
+        "qt_ms": 16026,
+        "real": 16.16,
+        "user": 16.3,
+        "sys": 3.14
+      },
+      {
+        "file": "after-plain-02.log",
+        "qt_ms": 16283,
+        "real": 16.39,
+        "user": 16.52,
+        "sys": 3.18
+      },
+      {
+        "file": "after-plain-03.log",
+        "qt_ms": 16593,
+        "real": 16.7,
+        "user": 16.74,
+        "sys": 3.21
+      },
+      {
+        "file": "after-plain-04.log",
+        "qt_ms": 16586,
+        "real": 16.7,
+        "user": 16.76,
+        "sys": 3.21
+      },
+      {
+        "file": "after-plain-05.log",
+        "qt_ms": 16528,
+        "real": 16.65,
+        "user": 16.74,
+        "sys": 3.22
+      }
+    ],
+    "n": 5,
+    "median_qt_ms": 16528,
+    "range_qt_ms": [
+      16026,
+      16593
+    ],
+    "sample_stddev_qt_ms": 245.83673443974968,
+    "before_after_median_time_ratio": 0.6223828889893056
+  },
+  "d1_final": {
+    "runs": [
+      {
+        "file": "d1-final-plain-01.log",
+        "qt_ms": 16006,
+        "real": 16.13,
+        "user": 16.22,
+        "sys": 3.13
+      },
+      {
+        "file": "d1-final-plain-02.log",
+        "qt_ms": 16212,
+        "real": 16.32,
+        "user": 16.43,
+        "sys": 3.11
+      },
+      {
+        "file": "d1-final-plain-03.log",
+        "qt_ms": 16211,
+        "real": 16.32,
+        "user": 16.41,
+        "sys": 3.14
+      },
+      {
+        "file": "d1-final-plain-04.log",
+        "qt_ms": 16350,
+        "real": 16.46,
+        "user": 16.59,
+        "sys": 3.12
+      },
+      {
+        "file": "d1-final-plain-05.log",
+        "qt_ms": 16253,
+        "real": 16.37,
+        "user": 16.45,
+        "sys": 3.05
+      }
+    ],
+    "n": 5,
+    "median_qt_ms": 16212,
+    "range_qt_ms": [
+      16006,
+      16350
+    ],
+    "sample_stddev_qt_ms": 125.50418319721459,
+    "before_after_median_time_ratio": 0.6104835065521916
+  },
+  "implementation_paths": [
+    {
+      "file": "sample-d1-1ms.txt",
+      "non_waiting_samples": 15667,
+      "counts": {
+        "other/unattributed to selected implementation paths": 4536,
+        "PageStore commit remainder": 1926,
+        "PageStore adoption remainder": 1752,
+        "transition under metadata apply": 1143,
+        "full state invariant validation": 998,
+        "adapter rebuild remainder": 908,
+        "metadata snapshot/lookup": 657,
+        "provider retirement": 601,
+        "root/history reachability": 581,
+        "history collection remainder": 567,
+        "proof sealing excluding nested state validation": 533,
+        "proof revalidation excluding nested state validation": 389,
+        "epoch commit/root work": 336,
+        "epoch prepare/change-set work": 277,
+        "transition outside metadata apply (includes preflight)": 270,
+        "provider synchronous adoption": 193
+      },
+      "percent": {
+        "other/unattributed to selected implementation paths": 28.95257547711751,
+        "PageStore commit remainder": 12.293355460522116,
+        "PageStore adoption remainder": 11.18274079274909,
+        "transition under metadata apply": 7.2955894555434995,
+        "full state invariant validation": 6.370077232399311,
+        "adapter rebuild remainder": 5.7956213697580905,
+        "metadata snapshot/lookup": 4.193527797280909,
+        "provider retirement": 3.836088593859705,
+        "root/history reachability": 3.7084317354949894,
+        "history collection remainder": 3.6190719346396887,
+        "proof sealing excluding nested state validation": 3.402055275419672,
+        "proof revalidation excluding nested state validation": 2.4829258951937194,
+        "epoch commit/root work": 2.1446352205272228,
+        "epoch prepare/change-set work": 1.7680474883513118,
+        "transition outside metadata apply (includes preflight)": 1.7233675879236612,
+        "provider synchronous adoption": 1.231888683219506
+      }
+    },
+    {
+      "file": "sample-d1-5ms.txt",
+      "non_waiting_samples": 2793,
+      "counts": {
+        "other/unattributed to selected implementation paths": 810,
+        "PageStore commit remainder": 334,
+        "PageStore adoption remainder": 290,
+        "transition under metadata apply": 197,
+        "adapter rebuild remainder": 168,
+        "full state invariant validation": 167,
+        "metadata snapshot/lookup": 125,
+        "provider retirement": 112,
+        "root/history reachability": 104,
+        "proof sealing excluding nested state validation": 100,
+        "history collection remainder": 99,
+        "epoch commit/root work": 72,
+        "proof revalidation excluding nested state validation": 70,
+        "transition outside metadata apply (includes preflight)": 59,
+        "epoch prepare/change-set work": 47,
+        "provider synchronous adoption": 39
+      },
+      "percent": {
+        "other/unattributed to selected implementation paths": 29.00107411385607,
+        "PageStore commit remainder": 11.958467597565342,
+        "PageStore adoption remainder": 10.383100608664519,
+        "transition under metadata apply": 7.0533476548514145,
+        "adapter rebuild remainder": 6.015037593984962,
+        "full state invariant validation": 5.979233798782671,
+        "metadata snapshot/lookup": 4.47547440028643,
+        "provider retirement": 4.010025062656641,
+        "root/history reachability": 3.72359470103831,
+        "proof sealing excluding nested state validation": 3.5803795202291444,
+        "history collection remainder": 3.544575725026853,
+        "epoch commit/root work": 2.577873254564984,
+        "proof revalidation excluding nested state validation": 2.506265664160401,
+        "transition outside metadata apply (includes preflight)": 2.112423916935195,
+        "epoch prepare/change-set work": 1.6827783745076978,
+        "provider synchronous adoption": 1.3963480128893662
+      }
+    },
+    {
+      "file": "sample-d1-final-5ms.txt",
+      "non_waiting_samples": 2606,
+      "counts": {
+        "other/unattributed to selected implementation paths": 755,
+        "PageStore commit remainder": 312,
+        "PageStore adoption remainder": 289,
+        "transition under metadata apply": 192,
+        "full state invariant validation": 158,
+        "adapter rebuild remainder": 154,
+        "provider retirement": 106,
+        "metadata snapshot/lookup": 103,
+        "proof sealing excluding nested state validation": 101,
+        "root/history reachability": 100,
+        "history collection remainder": 72,
+        "epoch commit/root work": 62,
+        "epoch prepare/change-set work": 54,
+        "proof revalidation excluding nested state validation": 53,
+        "provider synchronous adoption": 49,
+        "transition outside metadata apply (includes preflight)": 46
+      },
+      "percent": {
+        "other/unattributed to selected implementation paths": 28.971603990790484,
+        "PageStore commit remainder": 11.97237145049885,
+        "PageStore adoption remainder": 11.08979278587874,
+        "transition under metadata apply": 7.367613200306984,
+        "full state invariant validation": 6.062931696085956,
+        "adapter rebuild remainder": 5.909439754412893,
+        "provider retirement": 4.067536454336147,
+        "metadata snapshot/lookup": 3.952417498081351,
+        "proof sealing excluding nested state validation": 3.8756715272448194,
+        "root/history reachability": 3.837298541826554,
+        "history collection remainder": 2.762854950115119,
+        "epoch commit/root work": 2.3791250959324635,
+        "epoch prepare/change-set work": 2.0721412125863394,
+        "proof revalidation excluding nested state validation": 2.0337682271680735,
+        "provider synchronous adoption": 1.8802762854950115,
+        "transition outside metadata apply (includes preflight)": 1.765157329240215
+      }
+    }
+  ],
+  "qualification": "Diagnostic only; no paired upstream M/K/E qualification"
+}

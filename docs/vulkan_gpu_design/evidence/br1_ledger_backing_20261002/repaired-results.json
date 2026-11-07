@@ -1,0 +1,92 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "ledgerBackingNodesRefusedBeforePhysicalResult",
+      "ledgerBackingRegistrationExcludesDomainMovement",
+      "retirementRecordTransfersAtCapacity",
+      "retirementRecordRefusedBeforePhysicalResult",
+      "domainJournalCommitsAtCapacity",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.823,
+    "totals": [
+      "Totals: 19 passed, 0 failed, 0 skipped, 0 blacklisted, 824ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "ledgerAliasMembershipAtCapacity",
+      "sharedHandoffDebt",
+      "handoffDebtFollowsTerminal",
+      "backingHandoffAccounting",
+      "backingHandoffAccountingAcrossIndexGrowth",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.074,
+    "totals": [
+      "Totals: 85 passed, 0 failed, 0 skipped, 0 blacklisted, 12ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "ledgerBackingNodesRefusedBeforePhysicalResult",
+      "ledgerBackingRegistrationExcludesDomainMovement",
+      "retirementRecordTransfersAtCapacity",
+      "retirementRecordRefusedBeforePhysicalResult",
+      "domainJournalCommitsAtCapacity",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.221,
+    "totals": [
+      "Totals: 19 passed, 0 failed, 0 skipped, 0 blacklisted, 838ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "ledgerAliasMembershipAtCapacity",
+      "sharedHandoffDebt",
+      "handoffDebtFollowsTerminal",
+      "backingHandoffAccounting",
+      "backingHandoffAccountingAcrossIndexGrowth",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.352,
+    "totals": [
+      "Totals: 85 passed, 0 failed, 0 skipped, 0 blacklisted, 20ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

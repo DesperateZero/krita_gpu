@@ -1,0 +1,272 @@
+[
+  {
+    "arch": "arm64",
+    "previous_round": "full-ledger-02-arm64",
+    "current_round": "reset-ledger-01-arm64",
+    "observed_unpaid_page_sites_before": 350,
+    "observed_unpaid_page_sites_after": 348,
+    "removed_reset_site": [
+      {
+        "site": {
+          "id": "11675790446435307963",
+          "image": "1",
+          "paid": "0",
+          "live": "0",
+          "peak": "374",
+          "allocations": "172",
+          "frees": "172",
+          "min": "19",
+          "max": "34",
+          "offset": "5931824",
+          "owner": "_ZN22KisPageMutationSession7Private13stageSemanticERK10KisPageKeyRKNSt3__110shared_ptrIK20KisPageReplicaSourceEEbP7QString"
+        },
+        "usable": {
+          "id": "11675790446435307963",
+          "page": "1",
+          "framework": "0",
+          "live": "0",
+          "peak": "528",
+          "cumulative": "6192",
+          "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/libkritaimage.21.0.0.dylib"
+        },
+        "frames": [
+          {
+            "id": "11675790446435307963",
+            "frame": "2",
+            "offset": "3423672",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN10QArrayData9allocate1EPPS_xNS_16AllocationOptionE"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "3",
+            "offset": "1273968",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN10QByteArrayC2EPKcx"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "4",
+            "offset": "5931824",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/libkritaimage.21.0.0.dylib",
+            "owner": "_ZN22KisPageMutationSession7Private13stageSemanticERK10KisPageKeyRKNSt3__110shared_ptrIK20KisPageReplicaSourceEEbP7QString"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "5",
+            "offset": "912368",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/libkritaimage.21.0.0.dylib",
+            "owner": "_ZN22KisPageMutationSession10removePageERK10KisPageKeyP7QString"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "6",
+            "offset": "580692",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/KisPageStoreCpuMutationTest",
+            "owner": "_ZN27KisPageStoreCpuMutationTest36mutationColdHolesAreReusedDuringSealEv"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "7",
+            "offset": "643840",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN18QMetaMethodInvoker10invokeImplE11QMetaMethodPvN2Qt14ConnectionTypeExPKPKvPKPKcPKPKN9QtPrivate18QMetaTypeInterfaceE"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "8",
+            "offset": "662868",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN11QMetaMethod10invokeImplES_PvN2Qt14ConnectionTypeExPKPKvPKPKcPKPKN9QtPrivate18QMetaTypeInterfaceE"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "9",
+            "offset": "90392",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZNK5QTest11TestMethods16invokeTestOnDataEi"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "10",
+            "offset": "93912",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZNK5QTest11TestMethods10invokeTestEi13QLatin1StringRNSt3__18optionalINS_8WatchDogEEE"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "11",
+            "offset": "97632",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZNK5QTest11TestMethods11invokeTestsEP7QObject"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "12",
+            "offset": "100448",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZN5QTest4qRunEv"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "13",
+            "offset": "98288",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZN5QTest5qExecEP7QObjectiPPc"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "14",
+            "offset": "813684",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/KisPageStoreCpuMutationTest",
+            "owner": "main"
+          },
+          {
+            "id": "11675790446435307963",
+            "frame": "15",
+            "offset": "27544",
+            "module": "/usr/lib/dyld",
+            "owner": "start"
+          }
+        ]
+      }
+    ],
+    "remaining_reset_sites": [],
+    "scope": "Original complete CPU body; exact reset-pixel allocation removed. Other observed sites and runtime/aggregate hard bounds remain independent obligations."
+  },
+  {
+    "arch": "x86_64",
+    "previous_round": "full-ledger-02-x86_64",
+    "current_round": "reset-ledger-02-x86_64",
+    "observed_unpaid_page_sites_before": 349,
+    "observed_unpaid_page_sites_after": 346,
+    "removed_reset_site": [
+      {
+        "site": {
+          "id": "11016700620746885384",
+          "image": "1",
+          "paid": "0",
+          "live": "0",
+          "peak": "374",
+          "allocations": "172",
+          "frees": "172",
+          "min": "19",
+          "max": "34",
+          "offset": "6242498",
+          "owner": "_ZN22KisPageMutationSession7Private13stageSemanticERK10KisPageKeyRKNSt3__110shared_ptrIK20KisPageReplicaSourceEEbP7QString"
+        },
+        "usable": {
+          "id": "11016700620746885384",
+          "page": "1",
+          "framework": "0",
+          "live": "0",
+          "peak": "528",
+          "cumulative": "6192",
+          "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/libkritaimage.21.0.0.dylib"
+        },
+        "frames": [
+          {
+            "id": "11016700620746885384",
+            "frame": "2",
+            "offset": "3689389",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN10QArrayData9allocate1EPPS_xNS_16AllocationOptionE"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "3",
+            "offset": "1298364",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN10QByteArrayC2EPKcx"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "4",
+            "offset": "6242498",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/libkritaimage.21.0.0.dylib",
+            "owner": "_ZN22KisPageMutationSession7Private13stageSemanticERK10KisPageKeyRKNSt3__110shared_ptrIK20KisPageReplicaSourceEEbP7QString"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "5",
+            "offset": "1030571",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/libkritaimage.21.0.0.dylib",
+            "owner": "_ZN22KisPageMutationSession10removePageERK10KisPageKeyP7QString"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "6",
+            "offset": "663936",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/KisPageStoreCpuMutationTest",
+            "owner": "_ZN27KisPageStoreCpuMutationTest36mutationColdHolesAreReusedDuringSealEv"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "7",
+            "offset": "646466",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN18QMetaMethodInvoker10invokeImplE11QMetaMethodPvN2Qt14ConnectionTypeExPKPKvPKPKcPKPKN9QtPrivate18QMetaTypeInterfaceE"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "8",
+            "offset": "665965",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore",
+            "owner": "_ZN11QMetaMethod10invokeImplES_PvN2Qt14ConnectionTypeExPKPKvPKPKcPKPKN9QtPrivate18QMetaTypeInterfaceE"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "9",
+            "offset": "94248",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZNK5QTest11TestMethods16invokeTestOnDataEi"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "10",
+            "offset": "98276",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZNK5QTest11TestMethods10invokeTestEi13QLatin1StringRNSt3__18optionalINS_8WatchDogEEE"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "11",
+            "offset": "102654",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZNK5QTest11TestMethods11invokeTestsEP7QObject"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "12",
+            "offset": "105849",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZN5QTest4qRunEv"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "13",
+            "offset": "103316",
+            "module": "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest",
+            "owner": "_ZN5QTest5qExecEP7QObjectiPPc"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "14",
+            "offset": "933835",
+            "module": "/Users/apple/krita_gpu/build/br1-cp1-physical-fault-20261004/build-02/bin/KisPageStoreCpuMutationTest",
+            "owner": "main"
+          },
+          {
+            "id": "11016700620746885384",
+            "frame": "15",
+            "offset": "25904",
+            "module": "/usr/lib/dyld",
+            "owner": "start"
+          }
+        ]
+      }
+    ],
+    "remaining_reset_sites": [],
+    "scope": "Original complete CPU body; exact reset-pixel allocation removed. Other observed sites and runtime/aggregate hard bounds remain independent obligations."
+  }
+]

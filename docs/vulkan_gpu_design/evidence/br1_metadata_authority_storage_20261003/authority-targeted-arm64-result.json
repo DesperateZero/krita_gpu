@@ -1,0 +1,27 @@
+{
+  "command": [
+    "arch",
+    "-arm64",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+    "metadataConfigurationStorageRefusal",
+    "metadataConfigurationLateCandidate",
+    "metadataReadProtectionDeferredCleanup",
+    "metadataReadCleanupAfterController",
+    "metadataDirectoryPublicationIsImmutableAndConcurrent",
+    "metadataOwningCapacityIsBudgeted",
+    "metadataPublicationStorageAtSharedCapacity",
+    "metadataPublicationHeadsAtSharedCapacity",
+    "-nocrashhandler"
+  ],
+  "pid": 90553,
+  "exit_code": 2,
+  "totals": [
+    "Totals: 0 passed, 2 failed, 0 skipped, 0 blacklisted, 1ms"
+  ],
+  "failures": [
+    "FAIL!  : KisPageStoreReferenceTest::metadataPublicationStorageAtSharedCapacity() Function not found: metadataPublicationStorageAtSharedCapacity",
+    "FAIL!  : KisPageStoreReferenceTest::metadataPublicationHeadsAtSharedCapacity() Function not found: metadataPublicationHeadsAtSharedCapacity"
+  ],
+  "normal_exit": true,
+  "passed": false
+}

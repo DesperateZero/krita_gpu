@@ -1,0 +1,808 @@
+{
+  "date": "2026-10-12",
+  "status": "design only; not implemented; no new performance samples",
+  "product_head": "d5f71573bb21c78ecb38756802c2129f5a60d68d",
+  "scope": "native read/write core rewrite, original matrix only",
+  "selection": "one operation-owned input/preparation/acceptance plus range exact-version capability",
+  "records": [
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "sha256": "06750e45ac2f272687329afd4f80eeda365903d51fbe0f4b6bc749b433c9faea",
+      "matrix_rows": [
+        "T01.1",
+        "T01.2",
+        "T02.1",
+        "T06.1"
+      ],
+      "entries": [
+        {
+          "symbol": "KisCapturedReadView KisTiledDataManagerPageStoreBackend::captureReadView(",
+          "line": 1242
+        },
+        {
+          "symbol": "bool KisTiledDataManagerPageStoreBackend::readBytes(",
+          "line": 1329
+        },
+        {
+          "symbol": "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::runCpuMutationOperation(",
+          "line": 2008
+        },
+        {
+          "symbol": "KisPageStoreWriteOperationResult KisTiledDataManagerPageStoreBackend::writeBytes(",
+          "line": 2225
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "sha256": "c3fad112dc9de603d4623fa9254be31a6abb418f8d69a7a518a32b7adc6b9bf0",
+      "matrix_rows": [
+        "T02.1",
+        "T03.1",
+        "T04.2",
+        "T06.1"
+      ],
+      "entries": [
+        {
+          "symbol": "KisPageMutationSession::Private::prepareTarget(",
+          "line": 1332
+        },
+        {
+          "symbol": "KisPageMutationExecution KisPageMutationSession::borrowExecution(",
+          "line": 1572
+        },
+        {
+          "symbol": "std::unique_ptr<KisPageStoreWriteReservation> KisPageStore::reserveManagedRange(",
+          "line": 2101
+        },
+        {
+          "symbol": "bool KisPageMutationSession::sealImpl(",
+          "line": 2600
+        },
+        {
+          "symbol": "KisCpuReadGuard KisCapturedReadView::readResidentPageImpl(",
+          "line": 3143
+        },
+        {
+          "symbol": "KisCapturedReadView KisPageStore::captureReadViewImpl(",
+          "line": 3340
+        },
+        {
+          "symbol": "KisWriteRequest KisPageStore::acquireWrite(",
+          "line": 4273
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "sha256": "e8a23b905d61e016eaea849438c5d7c08ecda83cf1032ec2234b55bc92ab1368",
+      "matrix_rows": [
+        "T03.1",
+        "T05.2"
+      ],
+      "entries": [
+        {
+          "symbol": "bool KisPageWriteCoordinator::prepareWriteBaseLocked(",
+          "line": 2668
+        },
+        {
+          "symbol": "KisPageWritePlanKind KisPageWriteCoordinator::prepareWritePlanLocked(",
+          "line": 2761
+        },
+        {
+          "symbol": "KisPageMetadataTransitionResult KisPageWriteCoordinator::preparePrivateWrite(",
+          "line": 2725
+        },
+        {
+          "symbol": "bool KisPageWriteCoordinator::transactionHasMutationActivity(",
+          "line": 3253
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "sha256": "8c1bedfcc7a6804b4dd99dfb958c42c244c8532408268fe82abc7e8147c213d4",
+      "matrix_rows": [
+        "T03.1",
+        "T05.2"
+      ],
+      "entries": [
+        {
+          "symbol": "class KRITAIMAGE_EXPORT KisMutationPageEntry final",
+          "line": 401
+        },
+        {
+          "symbol": "class KRITAIMAGE_EXPORT KisMutationWriteSet final",
+          "line": 447
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "sha256": "523182fb2791127e694a5725f675a96bad161091050a55859c987ed196779a8a",
+      "matrix_rows": [
+        "T04.2",
+        "T04.3",
+        "T06.1"
+      ],
+      "entries": [
+        {
+          "symbol": "KisPageMetadataCoordinator::preparePublicationImpl(",
+          "line": 2468
+        },
+        {
+          "symbol": "bool KisPageMetadataCoordinator::installPublicationImpl(",
+          "line": 2925
+        },
+        {
+          "symbol": "KisPageMetadataCoordinator::installCpuReadBinding(",
+          "line": 3164
+        },
+        {
+          "symbol": "bool KisPageMetadataCoordinator::queryMutationBase(",
+          "line": 3382
+        },
+        {
+          "symbol": "KisPageMetadataTransitionResult KisPageMetadataCoordinator::publishPrivateWrite(",
+          "line": 3906
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator_p.h",
+      "sha256": "086c638d34dd321d8da8f45842a8155d0253c0cbc2442ebd4cbe8e481528cb01",
+      "matrix_rows": [
+        "T03.1",
+        "T06.1",
+        "T07.2"
+      ],
+      "entries": [
+        {
+          "symbol": "struct KisVersionRecord {",
+          "line": 20
+        },
+        {
+          "symbol": "struct KisVersionFactsRecord {",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStateMachine_p.h",
+      "sha256": "d5076c6d13aaa0c8b5b9b8d4f32fdeba5a8c9a5b35b236632e91924fa4a0f618",
+      "matrix_rows": [
+        "T04.2",
+        "T04.3"
+      ],
+      "entries": [
+        {
+          "symbol": "struct KisPageWorkingState",
+          "line": 64
+        },
+        {
+          "symbol": "struct KisPageWorkingResult",
+          "line": 114
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageOwnerLedger.cpp",
+      "sha256": "7c2a30ca4d2cbe5a5177d141c4b7847f98b7554f3d9a23482b6bb2b1a2ec720c",
+      "matrix_rows": [
+        "T03.1",
+        "T05.2",
+        "T07.2"
+      ],
+      "entries": [
+        {
+          "symbol": "KisBackingHandoffReservation KisPageOwnerLedger::prepareBackingHandoff(",
+          "line": 1573
+        },
+        {
+          "symbol": "bool KisPageOwnerLedger::commitBackingHandoff(",
+          "line": 1645
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "sha256": "a2e71b95aa00364a23cb95dc123b681096b3b991d3e3b4a889fbfbb79c522ad5",
+      "matrix_rows": [
+        "T04.3",
+        "T04.6",
+        "T04.10"
+      ],
+      "entries": [
+        {
+          "symbol": "bool KisPagePublicationCoordinator::stageSurfaceMetadataLocked(",
+          "line": 792
+        },
+        {
+          "symbol": "bool KisPagePublicationCoordinator::captureDeltaLocked(",
+          "line": 1656
+        },
+        {
+          "symbol": "KisPagePublicationCoordinator::preparePagePublicationInputLocked(",
+          "line": 1695
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPagePublicationCoordinator_p.h",
+      "sha256": "0336f9f7f2a6e7ed1a6a26b6028e8cbf82e5507d6031a29d0e41b5cc39ad005a",
+      "matrix_rows": [
+        "T04.3",
+        "T04.4"
+      ],
+      "entries": [
+        {
+          "symbol": "struct KisPagePublicationDelta {",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator.cpp",
+      "sha256": "e2525db4d17ff1256fc348a7fa0d4516de5ff871fec47a17bbd1c3fa3644859f",
+      "matrix_rows": [
+        "T06.1",
+        "T07.2",
+        "T07.3"
+      ],
+      "entries": [
+        {
+          "symbol": "std::shared_ptr<KisCpuReadBindingLink> KisPageReadCoordinator::discoverCpuReadBinding(",
+          "line": 459
+        },
+        {
+          "symbol": "bool KisPageReadCoordinator::releaseCapturedView(",
+          "line": 950
+        },
+        {
+          "symbol": "bool KisPageReadCoordinator::finishCapturedReleaseLocked(",
+          "line": 989
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisCpuResidentBinding_p.h",
+      "sha256": "48563dee8667ac904432281297c1bd5644477f714506f903df81d5889c39ea48",
+      "matrix_rows": [
+        "T05.2",
+        "T06.1"
+      ],
+      "entries": [
+        {
+          "symbol": "class KisCpuReadBindingLink",
+          "line": 353
+        }
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+      "sha256": "3bc71a6c11291ccbe850cc7eae3730d7511dfb9c9a6c67d899ee64f37cf1df7f",
+      "matrix_rows": [
+        "T04.5",
+        "T04.9",
+        "T06.2"
+      ],
+      "entries": [
+        {
+          "symbol": "class KisImageEpochPageRoot",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "sha256": "a6600047892395b13a800c5c9fbae82ce68f07c8d43731fb2abafe293c33145e",
+      "matrix_rows": [
+        "T01.3",
+        "T04.7",
+        "T06.3"
+      ],
+      "entries": [
+        {
+          "symbol": "void KisTiledDataManager::writeBytes(",
+          "line": 1707
+        },
+        {
+          "symbol": "void KisTiledDataManager::readBytes(",
+          "line": 1802
+        }
+      ]
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "sha256": "3431ffc6298b80e7c430b0e3b742ee7d55144b4d0d09a02ed505c63b3d7118f6",
+      "matrix_rows": [
+        "T08.1"
+      ],
+      "entries": [
+        {
+          "symbol": "void KisPageStoreCpuMutationTest::capturedOverlayFreezesSealedDelta()",
+          "line": 1776
+        },
+        {
+          "symbol": "void KisPageStoreCpuMutationTest::capturedCutStorageRefusalAndLifetime()",
+          "line": 1902
+        },
+        {
+          "symbol": "void KisPageStoreCpuMutationTest::executionBorrowExclusionAndFailure()",
+          "line": 8416
+        }
+      ]
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreResidentReadTest.cpp",
+      "sha256": "80d9be005df0f0a6b8ea973d927137c2e48bf802f158353e91ceb551f9b3d9b6",
+      "matrix_rows": [
+        "T08.1"
+      ],
+      "entries": [
+        {
+          "symbol": "void KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding()",
+          "line": 509
+        },
+        {
+          "symbol": "void KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag()",
+          "line": 606
+        },
+        {
+          "symbol": "void KisPageStoreResidentReadTest::guardLifetimeAndHistory()",
+          "line": 1015
+        }
+      ]
+    }
+  ],
+  "upstream_source": {
+    "commit": "9a24ae0d8c070884fb013594191002e1a1b39a19",
+    "path": "libs/image/tiles3/kis_tiled_data_manager_p.h",
+    "sha256": "f52a3179efd25f12e0ce3b0889a57b95385161b92a64caa3afc3f520338884e5",
+    "packed_write_has_explicit_memcmp": false
+  },
+  "price_input": {
+    "path": "docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/read-write-r0/confirm/analysis.json",
+    "sha256": "19769a4df1be1595b13ddce6920c362f9d6eeab70c0de911aaa6c6b1eaede08f",
+    "case": 7,
+    "statistical_unit": "8 independent mirrored blocks, existing measurement"
+  },
+  "budget_arithmetic": {
+    "meaning": "illustrative engineering budgets, not forecasts or acceptance thresholds",
+    "unit": "million instructions",
+    "phases": {
+      "write": {
+        "current_M": 79.212999,
+        "upstream_M": 6.028214125,
+        "gap_M": 73.18478487499999,
+        "current_per_page_instructions": 77356.4443359375,
+        "target_two_times_upstream_M": 12.05642825,
+        "required_saving_to_two_times_M": 67.15657075,
+        "required_gap_recovery_fraction": 0.9176302268935242,
+        "illustrative_gap_recovery": [
+          {
+            "fraction": 0.5,
+            "total_M": 42.620606562499994,
+            "upstream_multiple": 7.070187899554745
+          },
+          {
+            "fraction": 0.75,
+            "total_M": 24.324410343749996,
+            "upstream_multiple": 4.035093949777372
+          },
+          {
+            "fraction": 0.9,
+            "total_M": 13.346692612499996,
+            "upstream_multiple": 2.214037579910949
+          }
+        ]
+      },
+      "read": {
+        "current_M": 17.6980133125,
+        "upstream_M": 5.987864625,
+        "gap_M": 11.710148687499998,
+        "current_per_page_instructions": 17283.21612548828,
+        "target_two_times_upstream_M": 11.97572925,
+        "required_saving_to_two_times_M": 5.722284062499998,
+        "required_gap_recovery_fraction": 0.48866023952439236
+      }
+    }
+  },
+  "matrix": {
+    "rows": 33,
+    "columns": 6,
+    "core_rows_updated": 8
+  },
+  "new_product_changes": 0,
+  "new_test_runs": 0,
+  "new_benchmark_processes": 0,
+  "remaining_cost_audit": {
+    "meaning": "existing same-batch endpoint differences; mechanism attribution and recoverable net costs remain open",
+    "input": "price_input; candidate d5f715 versus fixed upstream; case 7; no new samples",
+    "units": {
+      "extra_M": "million instructions / complete case",
+      "extra_ms": "CPU milliseconds / complete case"
+    },
+    "exclusive_rows": [
+      {
+        "endpoint": "setup",
+        "extra_M": 8.6360376875,
+        "extra_ms": 0.712093875,
+        "share_extra_instructions": 0.07610807562860003
+      },
+      {
+        "endpoint": "write",
+        "extra_M": 73.18478487499999,
+        "extra_ms": 5.01622025,
+        "share_extra_instructions": 0.6449662847339587
+      },
+      {
+        "endpoint": "read",
+        "extra_M": 11.710148687499998,
+        "extra_ms": 1.2624643125,
+        "share_extra_instructions": 0.10319974439439954
+      },
+      {
+        "endpoint": "finish",
+        "extra_M": 1.9668976875000002,
+        "extra_ms": 0.1877344375,
+        "share_extra_instructions": 0.017333967656329607
+      },
+      {
+        "endpoint": "undo",
+        "extra_M": 1.3614466875,
+        "extra_ms": 0.18956281249999998,
+        "share_extra_instructions": 0.01199822085150633
+      },
+      {
+        "endpoint": "redo",
+        "extra_M": 0.9992291249999999,
+        "extra_ms": 0.12272675000000001,
+        "share_extra_instructions": 0.008806053026595229
+      },
+      {
+        "endpoint": "teardown",
+        "extra_M": 1.8431573125,
+        "extra_ms": 0.1736070625,
+        "share_extra_instructions": 0.016243462709547976
+      },
+      {
+        "endpoint": "foreground_outer",
+        "extra_M": 0.01448725000001616,
+        "extra_ms": 0.06242643749999921,
+        "share_extra_instructions": 0.00012767391233685672
+      },
+      {
+        "endpoint": "other_threads",
+        "extra_M": 13.75452475,
+        "extra_ms": 1.5304140625,
+        "share_extra_instructions": 0.12121651708672572
+      }
+    ],
+    "groups": {
+      "write": {
+        "extra_M": 73.18478487499999,
+        "extra_ms": 5.01622025
+      },
+      "read": {
+        "extra_M": 11.710148687499998,
+        "extra_ms": 1.2624643125
+      },
+      "other_foreground": {
+        "extra_M": 14.821255750000017,
+        "extra_ms": 1.448151374999999
+      },
+      "process_minus_foreground": {
+        "extra_M": 13.75452475,
+        "extra_ms": 1.5304140625
+      }
+    },
+    "total": {
+      "extra_M": 113.47071406250001,
+      "extra_ms": 9.25725
+    },
+    "non_read_write_conditional_arithmetic": {
+      "M": {
+        "non_read_write_extra": 28.575780500000022,
+        "process_if_only_read_write_equal_upstream": 55.14400637500002,
+        "upstream_multiple": 2.07556223868486
+      },
+      "ms": {
+        "non_read_write_extra": 2.9785654375000012,
+        "process_if_only_read_write_equal_upstream": 4.372940437500001,
+        "upstream_multiple": 3.136129403854775
+      }
+    },
+    "conditional_warning": "arithmetic only, not forecast or lower bound; core changes may affect other endpoints",
+    "process_minus_foreground_warning": "signed window difference, not a reclaimer or locking mechanism price; upstream values are not clamped",
+    "upstream_process_minus_foreground": {
+      "M": -0.016652749999999772,
+      "ms": -0.00011462499999997933
+    },
+    "verification": {
+      "blocks": 8,
+      "phase_names": [
+        "setup",
+        "write",
+        "read",
+        "finish",
+        "undo",
+        "redo",
+        "teardown"
+      ],
+      "block_closure_checks": 16,
+      "max_absolute_closure_error": 2.1316282072803006e-14
+    },
+    "product_changes": 0,
+    "new_test_runs": 0,
+    "new_benchmark_processes": 0
+  },
+  "converged_protocol": {
+    "date": "2026-10-12",
+    "status": "selected implementation design; boundary/oracle tests only; production not rewritten",
+    "test_commit": "e103b5da0fe7009d69c29a8e0083161f134e81d6",
+    "production_identity_unchanged": "d5f71573bb21c78ecb38756802c2129f5a60d68d",
+    "raw_manifest": {
+      "path": "docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/read-write-design-r1-manifest.json",
+      "sha256": "ff8c6c3cdf76b6aefa85387fb36a2cbe43159abda2e03e9506b0dadd1d381a97"
+    },
+    "raw_archive": {
+      "path": "docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/read-write-design-r1-raw.tar.xz",
+      "sha256": "550c9a62ad773e7caf47431c981cafa5a1d809d4df6315a613cdadb662e27650"
+    },
+    "source_records": [
+      {
+        "path": "libs/image/pagestore/KisPageMetadataArena_p.h",
+        "sha256": "9a92d9993b10fc0e9385992abf0dd28542cb40719597cdee52b98fab40eb5cde",
+        "protection_consumer_lines": [],
+        "symbols": [
+          {
+            "symbol": "static constexpr quint32 slotsPerBlock()",
+            "line": 304
+          }
+        ]
+      },
+      {
+        "path": "libs/image/pagestore/KisPageMetadataCoordinator_p.h",
+        "sha256": "086c638d34dd321d8da8f45842a8155d0253c0cbc2442ebd4cbe8e481528cb01",
+        "protection_consumer_lines": [
+          30
+        ],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "sha256": "523182fb2791127e694a5725f675a96bad161091050a55859c987ed196779a8a",
+        "protection_consumer_lines": [
+          509,
+          989,
+          1004,
+          1078,
+          1079,
+          1143,
+          1148,
+          1337,
+          1932,
+          3042,
+          3712,
+          4194,
+          4698
+        ],
+        "symbols": [
+          {
+            "symbol": "const KisVersionRecord *readableVersion(",
+            "line": 1925
+          },
+          {
+            "symbol": "bool KisPageMetadataCoordinator::canAddTransientVersion(",
+            "line": 3585
+          },
+          {
+            "symbol": "bool KisPageMetadataCoordinator::sealCpuProof(",
+            "line": 3515
+          },
+          {
+            "symbol": "bool KisPageMetadataCoordinator::discardHistory(",
+            "line": 3683
+          }
+        ]
+      },
+      {
+        "path": "libs/image/pagestore/KisPageStateMachine.h",
+        "sha256": "91acf4925e02c98d4bb40e2ffd8bf518a986ab26a4792b82311080adc75a45ed",
+        "protection_consumer_lines": [
+          52
+        ],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisPageStateMachine_p.h",
+        "sha256": "d5076c6d13aaa0c8b5b9b8d4f32fdeba5a8c9a5b35b236632e91924fa4a0f618",
+        "protection_consumer_lines": [
+          38,
+          44
+        ],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisPageStateMachine.cpp",
+        "sha256": "6d446c55a22cd029771b4b8608c6244aacaee2378f45287b760e41216d5f1105",
+        "protection_consumer_lines": [
+          223,
+          226,
+          227,
+          880,
+          912,
+          960,
+          1080,
+          1095,
+          1096,
+          1097
+        ],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisPageStore.cpp",
+        "sha256": "c3fad112dc9de603d4623fa9254be31a6abb418f8d69a7a518a32b7adc6b9bf0",
+        "protection_consumer_lines": [],
+        "symbols": [
+          {
+            "symbol": "static bool preparePublicationAbort(",
+            "line": 284
+          },
+          {
+            "symbol": "bool KisPageMutationSession::sealImpl(",
+            "line": 2600
+          }
+        ]
+      },
+      {
+        "path": "libs/image/pagestore/KisPageReadCoordinator.cpp",
+        "sha256": "e2525db4d17ff1256fc348a7fa0d4516de5ff871fec47a17bbd1c3fa3644859f",
+        "protection_consumer_lines": [],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisPageOwnerLedger.cpp",
+        "sha256": "7c2a30ca4d2cbe5a5177d141c4b7847f98b7554f3d9a23482b6bb2b1a2ec720c",
+        "protection_consumer_lines": [],
+        "symbols": [
+          {
+            "symbol": "bool KisPageOwnerLedger::bindCpuProofs(",
+            "line": 2134
+          },
+          {
+            "symbol": "bool KisPageOwnerLedger::sealCpuPreparedPage(",
+            "line": 2173
+          },
+          {
+            "symbol": "bool KisPageOwnerLedger::commitBackingHandoff(",
+            "line": 1645
+          }
+        ]
+      },
+      {
+        "path": "libs/image/pagestore/KisPageRetirementRecord_p.h",
+        "sha256": "81254cf3166ef422666fea40d0121061399b344d1df90cd0d9e72ede97fa5144",
+        "protection_consumer_lines": [],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisPageHistoryCollector.cpp",
+        "sha256": "1cac004d52628a6f910f26323fb5fd43c584a4b36770a5c037887b8637b841e5",
+        "protection_consumer_lines": [],
+        "symbols": [
+          {
+            "symbol": "void KisPageHistoryCollector::requestKeyLocked(",
+            "line": 71
+          }
+        ]
+      },
+      {
+        "path": "libs/image/pagestore/KisCpuResidentBinding_p.h",
+        "sha256": "48563dee8667ac904432281297c1bd5644477f714506f903df81d5889c39ea48",
+        "protection_consumer_lines": [],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "sha256": "06750e45ac2f272687329afd4f80eeda365903d51fbe0f4b6bc749b433c9faea",
+        "protection_consumer_lines": [],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+        "sha256": "a2e71b95aa00364a23cb95dc123b681096b3b991d3e3b4a889fbfbb79c522ad5",
+        "protection_consumer_lines": [],
+        "symbols": []
+      },
+      {
+        "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "sha256": "926c0d5f197edb796d96b1815db470ea455e8095e22f9fbe1d052e809aad23ce",
+        "symbols": [
+          {
+            "symbol": "void KisPageStoreReferenceTest::finalAdoptionMatchesPrivateWriter()",
+            "line": 7472
+          }
+        ]
+      }
+    ],
+    "validation": {
+      "processes": 8,
+      "passed": 702,
+      "failed": 0,
+      "skipped": 0,
+      "new_reference_data_rows": 20,
+      "initial_invalid_test_input_failures": 8,
+      "bounded_success_interleavings": 495,
+      "bounded_failure_interleavings": 165,
+      "new_performance_samples": 0
+    },
+    "layout_final": [
+      {
+        "arch": "arm64",
+        "sizes": {
+          "version_record": 128,
+          "replica_record": 128,
+          "facts_record": 64,
+          "read_link": 176,
+          "proposed_facts": 96,
+          "range_entry": 16,
+          "selected_facts": 64,
+          "current_slots_per_512_block": 6,
+          "proposed_slots_per_512_block": 4,
+          "selected_slots_per_512_block": 6
+        }
+      },
+      {
+        "arch": "x86_64",
+        "sizes": {
+          "version_record": 128,
+          "replica_record": 128,
+          "facts_record": 64,
+          "read_link": 176,
+          "proposed_facts": 96,
+          "range_entry": 16,
+          "selected_facts": 64,
+          "current_slots_per_512_block": 6,
+          "proposed_slots_per_512_block": 4,
+          "selected_slots_per_512_block": 6
+        }
+      }
+    ],
+    "quantity_targets_not_measured": {
+      "private_reuse_existing_count": 896,
+      "folded_intermediate_policy_steps_upper_model": 2688,
+      "old_prepared_slot_replacement_upper_candidate": 960,
+      "internal_write_capture_target": 0,
+      "facts_bytes_before": 64,
+      "facts_bytes_target": 64,
+      "range_entry_bytes": 16
+    },
+    "unchanged_matrix": {
+      "rows": 33,
+      "columns": 6
+    },
+    "diff": {
+      "production_added": 0,
+      "production_removed": 0,
+      "test_added": 100,
+      "test_removed": 0
+    },
+    "remaining": [
+      "production migration and native-ref consumer closure",
+      "real zero-allocation install, peaks and retention",
+      "K-dependent gate tails",
+      "unobserved complete-candidate net price and controls",
+      "M6 qualification"
+    ],
+    "facts_lifecycle": {
+      "existing_version_creation_always_creates_facts": true,
+      "source_path": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "source_line": 1482,
+      "new_per_version_facts_records": 0,
+      "range_release_owner": "one move-only range responsibility; guards may share its lifetime",
+      "physical_binding_retention": "unmeasured; cannot infer total memory saving from layout"
+    }
+  }
+}

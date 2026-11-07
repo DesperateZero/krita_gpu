@@ -1,0 +1,207 @@
+{
+  "parent": {
+    "fill": {
+      "counts": [
+        60
+      ],
+      "cpu_median_ms": 0.558579,
+      "self_median_ms": 0.558579
+    },
+    "completion_allocate": {
+      "counts": [
+        264
+      ],
+      "cpu_median_ms": 0.1050765,
+      "self_median_ms": 0.1050765
+    },
+    "completion_complete": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.033962,
+      "self_median_ms": 0.033962
+    },
+    "physical_record": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.057875,
+      "self_median_ms": 0.057875
+    },
+    "private_prepare": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.320689,
+      "self_median_ms": 0.320689
+    },
+    "private_publish": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.246707,
+      "self_median_ms": 0.246707
+    },
+    "cold": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 2.3058325,
+      "self_median_ms": 0.905158
+    },
+    "overlay_input": {
+      "counts": [
+        32
+      ],
+      "cpu_median_ms": 0.0894185,
+      "self_median_ms": 0.0894185
+    },
+    "seal": {
+      "counts": [
+        32
+      ],
+      "cpu_median_ms": 0.6206235,
+      "self_median_ms": 0.2826245
+    },
+    "commit": {
+      "counts": [
+        12,
+        13,
+        14
+      ],
+      "cpu_median_ms": 0.54348,
+      "self_median_ms": 0.54348
+    },
+    "capture": {
+      "counts": [
+        49,
+        50
+      ],
+      "cpu_median_ms": 0.339497,
+      "self_median_ms": 0.339497
+    },
+    "operation": {
+      "counts": [
+        19
+      ],
+      "cpu_median_ms": 3.3189175,
+      "self_median_ms": 0.690687
+    },
+    "proj_merge": {
+      "counts": [
+        19
+      ],
+      "cpu_median_ms": 5.6732495,
+      "self_median_ms": 1.1606245
+    }
+  },
+  "candidate": {
+    "fill": {
+      "counts": [
+        60
+      ],
+      "cpu_median_ms": 0.0499995,
+      "self_median_ms": 0.0499995
+    },
+    "completion_allocate": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.053977,
+      "self_median_ms": 0.053977
+    },
+    "completion_complete": {
+      "counts": [
+        0
+      ],
+      "cpu_median_ms": 0.0,
+      "self_median_ms": 0.0
+    },
+    "physical_record": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.0377745,
+      "self_median_ms": 0.0377745
+    },
+    "private_prepare": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.257291,
+      "self_median_ms": 0.257291
+    },
+    "private_publish": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 0.179394,
+      "self_median_ms": 0.179394
+    },
+    "cold": {
+      "counts": [
+        132
+      ],
+      "cpu_median_ms": 1.5733755,
+      "self_median_ms": 0.9128715
+    },
+    "overlay_input": {
+      "counts": [
+        32
+      ],
+      "cpu_median_ms": 0.0978325,
+      "self_median_ms": 0.0978325
+    },
+    "seal": {
+      "counts": [
+        32
+      ],
+      "cpu_median_ms": 0.590669,
+      "self_median_ms": 0.31621
+    },
+    "commit": {
+      "counts": [
+        11,
+        12
+      ],
+      "cpu_median_ms": 0.5816455,
+      "self_median_ms": 0.5816455
+    },
+    "capture": {
+      "counts": [
+        49,
+        50
+      ],
+      "cpu_median_ms": 0.370086,
+      "self_median_ms": 0.370086
+    },
+    "operation": {
+      "counts": [
+        19
+      ],
+      "cpu_median_ms": 2.652918,
+      "self_median_ms": 0.7267525
+    },
+    "proj_merge": {
+      "counts": [
+        19
+      ],
+      "cpu_median_ms": 5.0680615,
+      "self_median_ms": 1.2894985
+    }
+  },
+  "outer": {
+    "parent_median_ms": 5.167187500000001,
+    "candidate_median_ms": 4.32925,
+    "upstream_median_ms": 0.4313745,
+    "paired_saving_ms": [
+      0.7647940000000002,
+      0.8012510000000006,
+      0.8005839999999997,
+      1.1025399999999994
+    ],
+    "paired_saving_median_ms": 0.8009175000000002,
+    "residual_ms": 3.8978755,
+    "descriptive_gap_closed": 0.17693635707322072
+  }
+}

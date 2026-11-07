@@ -1,0 +1,14 @@
+[
+  {
+    "stage": "initial build",
+    "result": "compile refusal",
+    "reason": "Working-state findVersion is non-const; use the original mutable alias of coordinator-owned state",
+    "repair": "Removed const on next reference; no ownership or runtime semantics changed",
+    "evidence": "initial-final-build-command-0.log"
+  },
+  {
+    "stage": "documentation staging check",
+    "result": "Raw patch context blank lines flagged as trailing whitespace by generic Git text check",
+    "resolution": "Preserved byte-exact evidence patches; reverse-apply checks pass against committed product. All other staged files checked normally."
+  }
+]

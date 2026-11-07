@@ -1,0 +1,40 @@
+{
+  "scope": "完整CP2；本包关闭clone拒绝与构造清理，不领取CP3/M6资格",
+  "closed_this_unit": [
+    "三个KisTile复制构造的raw tileData拒绝在acquire/register前转为既有std::bad_alloc",
+    "canonical manager clone拒绝不再创建空backend；legacy源继续使用legacy",
+    "canonical/extent准备与局部RAII先于manager资源交出；native hash复制不登记旧memento索引",
+    "两种hash模板部分复制失败均使用正常析构；chained重复初始化和局部未安装链删除"
+  ],
+  "next_checks": [
+    {
+      "id": "production-epoch-aba-late",
+      "status": "not-proven",
+      "current_facts": [
+        "生产captured read保持原version，A retag后从预先存在的独立B重解析",
+        "binding核对provider/epoch/slot/allocation generation；primitive两次retag与晚旧代release已有结果",
+        "production provider configure身份不可改；原Ledger对同ID只接受一个epoch，重启需新Ledger"
+      ],
+      "question": "仍需联合生产provider重启/epoch、allocation身份复用与晚completion时序的实际证明；不伪造原provider可变epoch，不以原语计数代替生产联动"
+    },
+    {
+      "id": "joint-plan-preparation",
+      "status": "not-proven",
+      "finite_sites": [
+        "原owner lookup及before binding/expected read pin",
+        "physical candidate eligibility与tryClaim",
+        "accounting reserveChange/charged candidate及原class claim",
+        "metadata recoverable candidate与严格revision安装",
+        "descriptor candidate在physical claim前准备",
+        "统一cleanup释放before pin和全部局部候选；Fresh拒绝、cancel、abort和close"
+      ],
+      "question": "列实际拒绝来源并补联合准备/失败/原Fresh/关闭证明；只有具体新生产allocator栈、父红和原owner恢复终点同时成立时重开该CP1 fault"
+    }
+  ],
+  "retained_protections": "raw refs/users、pin、Reserved及Fresh保持；未迁移caller的物理保活不提前解除",
+  "configuration_limit": "两hash模板直接实例化已测；完整另一hash/OFF配置仍归CP9",
+  "structure": "新manager类型引用超限已消除；旧checkpoint与memento/tile bridge差异留CP3正式审阅，不提高ratchet",
+  "current_same_source_results": "results.json",
+  "cp2_complete": false,
+  "product_commit": "39700f0d53f249eed4ea189fe7d0ed98635a9ee0"
+}

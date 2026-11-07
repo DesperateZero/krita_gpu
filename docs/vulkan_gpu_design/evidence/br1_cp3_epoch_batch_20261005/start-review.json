@@ -1,0 +1,15 @@
+{
+  "objective": "Continue the complete M6-M8 goal; close actual CP3 cold construction cost before formal M6 qualification",
+  "product_parent": "822456732bd02a13d128b855ed9856415544ec00",
+  "docs_parent": "98b688d3b655e432bea385185c7a5a6d503c79b2",
+  "pre_batch_candidate": "../br1_cp3_working_inline_20261005/pre-batch-production.patch",
+  "pre_batch_patch_sha256": "b5e45fa03be211995ce027dd6eaf43939b70ea23a3bd89d912a6a829d2930463",
+  "reason": "Actual failing original public Fresh N1024/K16/B4 fixture sampled repeated insertPageRoot path copying during prepareCommit. The working-array candidate reduced allocation but did not close the main performance assertions",
+  "responsibility": "Original immutable epoch page-root construction in prepareCommit: apply the accepted sorted sparse changes and removals together, share untouched subtrees, preserve AVL height/count/bounds, and use original paid node/control allocation and deferred release",
+  "consumers": ["prepareCommit ordinary/publication/retained-after callers", "immutable root lookup/export/extent", "dense initialization and dense delta construction", "conflict/revision rejection", "cold allocation refusal/cancel", "reserved root installation and tree reclamation"],
+  "delete_or_merge": ["Remove per-version insertPageRoot", "Remove general per-key removePageRoot and minimumPageRoot", "Replace their only external consumer with one sorted sparse batch construction", "Keep the original dense threshold and builders"],
+  "invariants": ["No new field/owner/queue/public API", "No full-N rebuild for fixed sparse K", "No merge of private readiness and canonical acceptance", "Same actual node/control fee and deferred physical-free owner", "New roots prepared outside the epoch gate; old roots remain immutable", "Original installation still allocates and frees nothing"],
+  "exit_conditions": ["Independent flat-manifest oracle for mixed insertion/removal/replacement, retained old roots, bounds, and balanced height", "Complete two-architecture safety matrix, original required read entry, foundation, actual installation/fault/lifetime checks", "Regenerate source graph without raising structural ratchets", "Reopen unchanged complete 40-pair Fresh/history/handoff protocols after all prerequisites", "Keep failures and report formal M6-M8 gates honestly"],
+  "previous_scope_correction": "The prior 38-process summary used the public tiles3 fixture instead of KisPageStoreReadBaselineTest: actual 10788, not 10810. Correct 45-test read runs subsequently passed on both architectures. Prior 960 performance runs remain diagnostic because the required read prerequisite was late",
+  "not_claimed": ["Formal M6/M7/M8 completion", "Common metadata used/reserved/slack >=25% pre-refactor denominator", "Complete CP0 required family or BR1-PERF", "Workday savings from allocation or node counts"]
+}

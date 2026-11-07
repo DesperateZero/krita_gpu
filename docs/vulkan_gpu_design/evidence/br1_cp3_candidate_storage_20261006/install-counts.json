@@ -1,0 +1,72 @@
+[
+  {
+    "architecture": "arm64",
+    "probe": "install",
+    "counter_lines": 31080,
+    "groups": {
+      "production_joint_install": 31080
+    },
+    "all_checks_passed": true,
+    "nonzero_installation_counters": [],
+    "positive_control": "positive_control_allocations=4"
+  },
+  {
+    "architecture": "arm64",
+    "probe": "publication",
+    "counter_lines": 28,
+    "groups": {
+      "exact_index_insert": 10,
+      "physical_index_insert_erase": 1,
+      "root_metadata_descriptor_install": 16,
+      "restore_additions_install": 1
+    },
+    "all_checks_passed": true,
+    "nonzero_installation_counters": [],
+    "positive_control": "positive_control_allocations=4"
+  },
+  {
+    "architecture": "arm64",
+    "probe": "storage",
+    "counter_lines": 0,
+    "groups": {},
+    "all_checks_passed": true,
+    "nonzero_installation_counters": [],
+    "lifecycle_boundaries": 24,
+    "registration_capacity": 64
+  },
+  {
+    "architecture": "x86_64",
+    "probe": "install",
+    "counter_lines": 31080,
+    "groups": {
+      "production_joint_install": 31080
+    },
+    "all_checks_passed": true,
+    "nonzero_installation_counters": [],
+    "positive_control": "positive_control_allocations=4"
+  },
+  {
+    "architecture": "x86_64",
+    "probe": "publication",
+    "counter_lines": 28,
+    "groups": {
+      "exact_index_insert": 10,
+      "physical_index_insert_erase": 1,
+      "root_metadata_descriptor_install": 16,
+      "restore_additions_install": 1
+    },
+    "all_checks_passed": true,
+    "nonzero_installation_counters": [],
+    "positive_control": "positive_control_allocations=4"
+  },
+  {
+    "architecture": "x86_64",
+    "probe": "storage",
+    "counter_lines": 0,
+    "groups": {},
+    "all_checks_passed": true,
+    "nonzero_installation_counters": [],
+    "lifecycle_boundaries": 24,
+    "registration_capacity": 64
+  }
+]

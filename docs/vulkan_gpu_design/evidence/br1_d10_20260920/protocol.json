@@ -1,0 +1,155 @@
+{
+  "purpose": "D10 warm/cold lookup split vs D9 and direct D8; retain D7 true-write reference; complete close/destroy endpoint measurement",
+  "pairs": 8,
+  "rate_ms": 200,
+  "fixed_cycles": 256,
+  "fixed_minimum_ns": 100000000,
+  "bootstrap_seed": 108319,
+  "bootstrap_resamples": 10000,
+  "integration_cases": [
+    "session-n16-k1-h0",
+    "session-n256-k1-h0",
+    "session-n256-k16-h0",
+    "session-n256-k1-h1",
+    "accessor-n256-k16-h0",
+    "rect-n256-k16-h0",
+    "session-n256-k1-h0-cpu-b4",
+    "rect-n256-k16-h0-cpu-b4",
+    "session-n256-k1-h0-cpu-b8",
+    "rect-n256-k16-h0-cpu-b8",
+    "session-n256-k1-h0-cpu-b16",
+    "rect-n256-k16-h0-cpu-b16",
+    "session-n256-k1-h0-tiles3-b4",
+    "rect-n256-k16-h0-tiles3-b4",
+    "session-n256-k1-h0-tiles3-b8",
+    "rect-n256-k16-h0-tiles3-b8",
+    "session-n256-k1-h0-tiles3-b16",
+    "rect-n256-k16-h0-tiles3-b16"
+  ],
+  "integration_reference_cases": [
+    "session-n16-k1-h0",
+    "session-n256-k1-h0",
+    "session-n256-k16-h0",
+    "session-n256-k1-h1",
+    "accessor-n256-k16-h0",
+    "rect-n256-k16-h0",
+    "session-n256-k1-h0-cpu-b4",
+    "rect-n256-k16-h0-cpu-b4",
+    "session-n256-k1-h0-cpu-b8",
+    "rect-n256-k16-h0-cpu-b8",
+    "session-n256-k1-h0-cpu-b16",
+    "rect-n256-k16-h0-cpu-b16",
+    "session-n256-k1-h0-tiles3-b4",
+    "rect-n256-k16-h0-tiles3-b4",
+    "session-n256-k1-h0-tiles3-b8",
+    "rect-n256-k16-h0-tiles3-b8",
+    "session-n256-k1-h0-tiles3-b16",
+    "rect-n256-k16-h0-tiles3-b16"
+  ],
+  "guard_cases": [
+    "guard-n16-k1-h0",
+    "guard-n256-k1-h0",
+    "guard-n256-k16-h0",
+    "guard-n256-k1-h1",
+    "guard-n256-k16-h0-cpu-b4",
+    "guard-n256-k16-h0-cpu-b16",
+    "guard-n256-k16-h0-tiles3-b4",
+    "guard-n256-k16-h0-tiles3-b16"
+  ],
+  "guard_reference_cases": [
+    "guard-n16-k1-h0",
+    "guard-n256-k1-h0",
+    "guard-n256-k16-h0",
+    "guard-n256-k1-h1",
+    "guard-n256-k16-h0-cpu-b4",
+    "guard-n256-k16-h0-cpu-b16",
+    "guard-n256-k16-h0-tiles3-b4",
+    "guard-n256-k16-h0-tiles3-b16"
+  ],
+  "native_cases": [
+    "guard-n64-k1-b4",
+    "read-n1024-k16-b4",
+    "write-n64-k1-b4",
+    "write-n64-k1-b16",
+    "write-n4096-k1-b4"
+  ],
+  "native_reference_cases": [
+    "guard-n64-k1-b4",
+    "read-n1024-k16-b4",
+    "write-n64-k1-b4",
+    "write-n64-k1-b16",
+    "write-n4096-k1-b4"
+  ],
+  "native_original_cases": [
+    "guard-n64-k1-b4",
+    "read-n1024-k16-b4",
+    "write-n64-k1-b4",
+    "write-n64-k1-b16",
+    "write-n4096-k1-b4"
+  ],
+  "cold_cases": [
+    "cycle-n64-k0-cpu-b4",
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k0-cpu-b16",
+    "cycle-n64-k1-cpu-b16",
+    "cycle-n64-k16-cpu-b16",
+    "cycle-n64-k0-tiles3-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b4",
+    "cycle-n64-k0-tiles3-b16",
+    "cycle-n64-k1-tiles3-b16",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_reference_cases": [
+    "cycle-n64-k0-cpu-b4",
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k0-cpu-b16",
+    "cycle-n64-k1-cpu-b16",
+    "cycle-n64-k16-cpu-b16",
+    "cycle-n64-k0-tiles3-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b4",
+    "cycle-n64-k0-tiles3-b16",
+    "cycle-n64-k1-tiles3-b16",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_profile_cases": [
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_profile_reference_cases": [
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_perturbation_cases": [
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_fixed_cases": [
+    "cycle-n64-k0-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k0-tiles3-b16",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_fixed_reference_cases": [
+    "cycle-n64-k0-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k0-tiles3-b16",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "pairing": "before=D9, after=D10; *_reference before=D8; native_original before=D7; cold_perturbation both D10 with before plain/after profiled. No multiplying prior ratios.",
+  "sampling": "Eight independent process pairs per bucket; rotating buckets/alternating order; rate >=200ms, fixed lifecycle 256 cycles and >=100ms cycle wall. No concurrent build/tests/profiler. Retain every pair; stop on errors, short windows, wrong loader/counters or changed identities.",
+  "guard": "One captured view retained outside rate window. Every timed operation pins/unpins K warm native pages and touches one byte/page. Capture/root release/close separate. Component M, not full-session resident E.",
+  "cold": "64-page write/publish to fresh generations then first read K0/1/16. CPU/tiles3 BPP4/16. Shared read/write/transfer/retire gates unchanged. Count checks and Qt correctness overhead included on both sides.",
+  "lifecycle": "Rate window stops at operation/session release; setup, close and actual facade/provider container destruction separate. lifecycle_ns now covers configure through final destructor. Global tiles3 pool/worker full drain remains NotMeasured. Fixed cycles enable equal-work destruction/whole-window comparisons; do not call inverse fixed-work time sustained throughput.",
+  "profile": "Separate cold_profile D9/D10 and D8/D10 inclusive diagnostic intervals; cold_perturbation paired D10 plain/profile calibrates clocks. Do not attribute phase sums to pure binding/lock self or single-event tails.",
+  "limitations": "Exploratory paired bootstrap only; no pre-frozen NI margin, upstream current comparison, event tails, high-H/concurrent performance or GPU/UMA qualification. Production treatment isolates warm/cold discovery and has an extra cold shard lookup. Layout/code-placement effects remain possible; no causal attribution of entire rect delta to handle initialization."
+}

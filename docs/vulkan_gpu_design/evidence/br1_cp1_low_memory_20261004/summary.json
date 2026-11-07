@@ -1,0 +1,40 @@
+{
+  "scope": "CP1 retained low-memory crash classification",
+  "product_commit": "1177fa5ecab8318fe044b071342eb0ab51654e27",
+  "product_changes": 0,
+  "stale_object": {
+    "built_at": "2026-09-25T02:48:01+08:00",
+    "manager_size_bytes": 232,
+    "architectures": ["arm64", "x86_64"]
+  },
+  "current_object": {
+    "built_at": "2026-10-04T14:12:53+08:00",
+    "manager_size_bytes": 288,
+    "architectures": ["arm64", "x86_64"]
+  },
+  "layout_delta_bytes": 56,
+  "stale_fault": {
+    "actual_exit_code": 139,
+    "reaped": true,
+    "fault_address": "0x18",
+    "pc_offset": "0x1328d0",
+    "lr_offset": "0x13207c",
+    "manager_hash_table_argument": "0x0"
+  },
+  "current_layout_validation": {
+    "arm64": "3/0/0, 10260ms, actual0/reaped",
+    "x86_64": "3/0/0, 10327ms, actual0/reaped",
+    "fault_contexts": 0,
+    "selected_product_image_loaded": true,
+    "guard_loaded": true
+  },
+  "classification": "stale test object ABI mismatch; removed from CP1 product residuals",
+  "host_unexpected_exits_retained": 28,
+  "cp1_complete": false,
+  "remaining_product_groups": [
+    "all-owned and external-native independent reserved/live/concurrent-peak/physical-free hard bound and first external span coalescence",
+    "other real node/control/task faults, other threads, read/capture/history/publication/retirement/close and late fence/caller endpoints",
+    "non-Darwin actual capacity/free implementation and platform run"
+  ],
+  "remaining_host_exits": "28 historical unexpected exits, default abort and dual-native-free failure endpoints"
+}

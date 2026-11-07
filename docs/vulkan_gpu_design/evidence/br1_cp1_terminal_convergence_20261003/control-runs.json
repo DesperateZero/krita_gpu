@@ -1,0 +1,32 @@
+[
+  {
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-arch",
+      "arm64",
+      "-g",
+      "-fsanitize=thread",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_legacy_claim_20261003/tsan-control.cpp",
+      "-o",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_terminal_convergence_20261003/control"
+    ],
+    "pid": 99630,
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_terminal_convergence_20261003/control"
+    ],
+    "pid": 99637,
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_terminal_convergence_20261003/control",
+      "race"
+    ],
+    "pid": 99650,
+    "exit_code": 66
+  }
+]

@@ -1,0 +1,12 @@
+********* Start testing of KisPageStoreReferenceTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 17.0.0 (clang-1700.6.4.2)), macos 15.7
+PASS   : KisPageStoreReferenceTest::initTestCase()
+FAIL!  : KisPageStoreReferenceTest::sharedNonPayloadBudgetBoundsStoresAndReleases() 'firstReservation.isValid()' returned FALSE. (shared non-payload process budget is exhausted)
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp(5349)]
+FAIL!  : KisPageStoreReferenceTest::mutationStorageGrowthIsStableAndCharged() Compared values are not the same
+   Actual   (live())    : 312
+   Expected (quint64(0)): 0
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp(5460)]
+PASS   : KisPageStoreReferenceTest::cleanupTestCase()
+Totals: 2 passed, 2 failed, 0 skipped, 0 blacklisted, 2ms
+********* Finished testing of KisPageStoreReferenceTest *********

@@ -1,0 +1,15 @@
+********* Start testing of KisPageStoreCpuMutationTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 17.0.0 (clang-1700.6.4.2)), macos 15.7
+PASS   : KisPageStoreCpuMutationTest::initTestCase()
+FAIL!  : KisPageStoreCpuMutationTest::budgetWaiterStateStorageIsChargedAndReleased() Compared values are not the same
+   Actual   (parent->usage().buckets[ size_t(KisBackingBudgetClass::MetadataArena)].live.cpuRam): 2016
+   Expected (registrationBytes + childControlBytes)                                             : 1704
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp(3509)]
+PASS   : KisPageStoreCpuMutationTest::budgetReservationRecyclingPreservesHeldGrants()
+FAIL!  : KisPageStoreCpuMutationTest::preparedReclamationWakeCancellation() Compared values are not the same
+   Actual   (metadataLive()): 312
+   Expected (quint64(0))    : 0
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp(3804)]
+PASS   : KisPageStoreCpuMutationTest::cleanupTestCase()
+Totals: 3 passed, 2 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of KisPageStoreCpuMutationTest *********

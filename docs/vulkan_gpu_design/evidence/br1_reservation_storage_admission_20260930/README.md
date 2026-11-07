@@ -1,0 +1,15 @@
+# Reservation 存储自身准入
+
+当前裁决见 [92 §16.27](../../92_br1_m6_m8_execution_baseline.md#reservation-storage-admission)，函数映射见 [CODE_INDEX](../../br1_modification_guide/CODE_INDEX.md)。生产改动限定原 PageStore 私有 write coordinator；没有新增上层 pressure/continuation API。
+
+内嵌冷 reservation 通过原计数协议为 slot 数组引导自身准入，父层用原组合 token 计账。数组分配/free 在 gate 外，增长时新旧共存字节均收费；安装后普通 reserve、父 reserve 与 waiter 重新核验需求，cookie/空闲链保持原语义。metadata 恰满后拒绝增长仍保留原 grant，释放后复用不需要新存储。controller 仍存活时自身 cache 继续收费，析构实际释放后才退费并注销子项。
+
+最终双架构完整 CPU mutation 结果各为 **1,246 / 0 / 0**（[arm64](cpu-arm64.log)、[x86_64](cpu-x86_64.log)），Reference 各为 **648 / 0 / 0**（[arm64](reference-arm64.log)、[x86_64](reference-x86_64.log)）。真实 Freehand 压力与取消各为 **4 / 0 / 0**（[arm64](freehand-arm64.log)、[x86_64](freehand-x86_64.log)），产品 24 MiB tile hard limit、pool/swap 为零保持原值，正常完成、慢 reader、递归 drain、undo/redo、取消及 resident 归零断言均保留。总计 3,796 / 0 / 0，包括各程序 init/cleanup；不能称为完整 M6–M8 或性能资格。
+
+执行命令为 `/usr/bin/arch -arm64` 和 `-x86_64` 运行 `_build/bin/KisPageStoreCpuMutationTest`、`KisPageStoreReferenceTest`；Freehand 只运行 `testPersistentAutoBrushStrokePressure` 和 `testPersistentAutoBrushStrokePressureCancelled`。UI 运行环境为 `QT_QPA_PLATFORM=offscreen`、`KIS_BR1_SEED=12345`、`KIS_TEST_PREFIX_PATH=/Users/apple/krita_gpu/krita/_install`、`KIS_TEST_PLUGIN_PATH=/Users/apple/krita_gpu/krita/_build/bin`。目标构建为两个 core 测试、Freehand 和 `kritadefaultpaintops`；同目录运行时另构建 `krita_shape_image`、`krita_shape_paths`、`kritalcmsengine`、`krita_colorspaces_extensions`，见 [构建](build.log)、[Freehand 构建](freehand-build.log)、[paintop](paintops-build.log)和[运行时插件](runtime-build.log)。
+
+保留全部中间失败，包括最初的 [CPU](preliminary-cpu-failures.log) 与 [Reference](preliminary-reference-failures.log) 目标检查：[core 初次回归](initial-cpu-failures.log)、[Reference](initial-reference-failures.log)揭示旧断言没有区分已释放容器和存活 controller 的收费 cache；已修正为核对实际余量、失败不改变已有 grant、最终仅保留 controller 自有收费。controller 玩具 fixture 由 1 KiB 改为 8 KiB 后按全部控制存储重新计算并填满精确剩余值，额外 1 B 仍拒绝；另有一-slot 恰满和四-slot 父额拒绝对照，未提高产品预算。Freehand 初次启动缺少 [macOS prefix](freehand-missing-prefix.log)，随后只有 default paintop 的目录缺少 image shape factory，启动阶段[崩溃](freehand-missing-shape-plugin.log)；[调试器](freehand-startup-debug.log)定位至 `KoSvgTextShape::Private::collectPaths` 的空 image factory，尚未进入测试。补齐原运行时插件后同一产品代码通过；没有修改 shape、resource 或 UI 代码。
+
+[结构门](architecture.log)通过 21 manifest / 25 ownership / 16 census / **1,834 APIs / 20,078 edges / 17 callbacks / 19 intrusion files**；[调用图](callgraph.log)、[基线刷新](architecture-baseline.log)和[diff check](diff-check.log)均绑定本批源码。[HEAD](head.txt)与[源码/测试/paintop 哈希](source-sha256.txt)、[运行时库/shape/颜色插件哈希](runtime-sha256.txt)标识真实构建；脏工作树没有提交。相对 §16.26 已保存的三份源码，[增量 patch](incremental-source.diff)和[规模](incremental-scale.json)记录生产 +164/-20、CPU 测试 +165/-19；Reference 测试未保存该批前快照，不假装这是四文件完整净增统计。新增生产具名职责只有私有冷准备汇合点与 raw-array deleter，产品方法无增长。[文档核验](document-validation.json)检查当前链接、源码/二进制身份、两架构运行日志及未完成边界。
+
+仍开放：callback capture、worker task、retry/pass/必要终结，以及 controller 退出后的 inert anchor 原始内存 owner 和硬界；其后才是跨 store 公平、原 job ownership transfer 与真实多文档进度。本段只关闭 slot 动态数组缺口，不将内嵌 bootstrap 字段或原 controller 本体自动视为已经证明全部控制存储收费。

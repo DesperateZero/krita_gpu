@@ -1,0 +1,42 @@
+{
+  "preservation": "Every failed build/test and diagnostic run is retained; none contributes to final qualified totals or statistical gates",
+  "issues": [
+    {
+      "runs": ["focused-identity-arm64", "focused-identity-arm64-02"],
+      "outcome": "Each 22 passed/4 failed; fixture's historical default generation was zero",
+      "repair": "Use valid generation1, assert the full oracle's expected acceptance explicitly and project the original 1/2/3/33 replicas through acquire/release read. Corrected focused round03:26 passed/0 failed. Original full matrix covers the same24 rows."
+    },
+    {
+      "run": "pre-test-drain-safety/qualified-matrix-arm64",
+      "outcome": "Foundation28/0,Completion87/0,CpuMutation1558/4; four post-refusal live==hard-limit assertions failed by176B",
+      "parent_control": "Unchanged pre-repair consumer with frozen parent image:6/0; loader and all library hashes retained",
+      "actual_free": "seal-refusal-free-trace-02 observes real malloc_size176 free from EpochRootRecord node_handle -> collectUnretainedRoots -> original HistoryCollector reclamation thread, before failed assertion",
+      "interpretation": "The post-refusal exact occupancy assertion forbids legitimate concurrent old-root reclamation. It is not a no-free install interval and does not diagnose a storage leak or owner loss.",
+      "incomplete_attempt": "focused-seal-drain-arm64 remains2 passed/4 failed after initial waitForRetirementIdle alone; later accepted private metadata can wake another existing reclamation pass",
+      "repair": "Keep4MiB limit. Wait initial idle, refill the exact actual charged capacity before EACH of3 attempts and assert it equals the hard limit. After refusal wait idle and assert live/peak<=same hard limit and reserved0. Preserve all rejection/active-provider/frozen-state/pagesSealed/no-new-writer/old-pixel/cancel/commit/close assertions.",
+      "repaired_controls": "focused-seal-refill-arm64 and same final consumer with frozen parent image:6/0 each; full final dual architecture matrix is required separately"
+    },
+    {
+      "run": "pre-arena-saturation-safety/qualified-matrix-arm64",
+      "outcome": "Foundation28/0,Completion87/0,CpuMutation1562/0,Reference819/2; private-replacement and write-prepare-cancel became valid allocation-free accepted sequences",
+      "interpretation": "Those cases filled the budget in the synthetic Debt callback but retained enough preallocated replica slots. Their refusal depended on the now-deleted redundant scratch hash allocation, not on a required semantic/storage boundary.",
+      "repair": "Before injecting pressure, register an unrelated page using exactly the reported spare replica slots, and assert freeSlots0. Accepted Debt must then precede actual replica-arena growth. Keep2MiB limit, all five headroom attempts, unchanged rejection/atomic-page/no-installs/effects/cookie cancel/exact-live recovery and final successful retry assertions.",
+      "repaired_controls": "focused-actual-arena-arm64:29/0 including all24 identity rows and3 genuine working/debt refusal rows. Same final generic refusal consumer with frozen parent image:5/0. Final full dual architecture matrix remains separate."
+    },
+    {
+      "run": "seal-refusal-free-trace",
+      "outcome": "Loaded symbol-level interposer produced no176-byte trace; internal same-image binding did not reach it",
+      "repair": "Audit-only free interposition with actual malloc_size176 captures the original physical release; no production instrumentation or timing used"
+    },
+    {
+      "run": "native-handoff-profile",
+      "outcome": "First diagnostic launch requested12000 repetitions; original unchanged harness rejects counts above4096 and exited1 before any sample. No completed-operation marker or profile is claimed.",
+      "repair": "Use its existing4096 bound and a2s sample after a real completed-operation marker, separately from all three original40-pair gates. Original harness source and statistical stopping rules unchanged."
+    },
+    {
+      "outcome": "A broad documentation query hit output truncation and an optional nonexistent API_LEDGER path; several optional source path guesses also failed read-only",
+      "repair": "Use actual rg file inventory, exact API_CONVERGENCE_MAP path and finite current contexts. No edits or conclusion relied on truncated/missing results."
+    }
+  ],
+  "qualification": "Production semantics and limits unchanged. Focused diagnostics do not substitute for the final full safety matrix, runtime identity or performance gates."
+}

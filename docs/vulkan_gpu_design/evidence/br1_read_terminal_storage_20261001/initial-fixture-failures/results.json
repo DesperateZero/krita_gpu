@@ -1,0 +1,154 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 4.932,
+    "totals": [
+      "Totals: 659 passed, 0 failed, 0 skipped, 0 blacklisted, 2414ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 9,
+    "duration_seconds": 6.285,
+    "totals": [
+      "Totals: 1253 passed, 9 failed, 0 skipped, 0 blacklisted, 4425ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-0) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-1) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-0) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-1) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-0) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-1) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(destroy-pending-retry) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(request-before-protection) 'f.store->configureBackingLimits(limits)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(lease-before-physical-pin) 'f.store->configureBackingLimits(limits)' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.858,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 23ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 18.773,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 438ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 5.098,
+    "totals": [
+      "Totals: 659 passed, 0 failed, 0 skipped, 0 blacklisted, 2947ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 9,
+    "duration_seconds": 6.936,
+    "totals": [
+      "Totals: 1253 passed, 9 failed, 0 skipped, 0 blacklisted, 5439ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-0) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-0-exit-1) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-0) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-1-exit-1) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-0) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(terminal-2-exit-1) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::lastUseAtMetadataCapacity(destroy-pending-retry) 'f.store->configureBackingLimits(limits, &f.error)' returned FALSE. (backing limits must be frozen before initialization)",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(request-before-protection) 'f.store->configureBackingLimits(limits)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::readStorageRefusalPreservesOriginalRequest(lease-before-physical-pin) 'f.store->configureBackingLimits(limits)' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.57,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 59ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 23.143,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 549ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

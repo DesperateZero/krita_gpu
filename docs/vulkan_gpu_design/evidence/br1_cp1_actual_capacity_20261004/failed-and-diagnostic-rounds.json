@@ -1,0 +1,365 @@
+{
+  "scope": "Retain intermediate failures and unqualified diagnostic rounds; earlier passing prototypes are separately source bound and are not final qualifications",
+  "rounds": [
+    {
+      "round": "KisPageStorePhysicalClaimTest-final-arm64",
+      "exit_code": "still-live-after-kill",
+      "reaped": false,
+      "failures": [
+        "FAIL!  : KisPageStorePhysicalClaimTest::ledgerAliasMembershipAtCapacity() Caught unhandled exception"
+      ],
+      "totals": [
+        "Totals: 394 passed, 1 failed, 0 skipped, 0 blacklisted, 27ms"
+      ],
+      "timed_out": true,
+      "diagnostic_guard": false,
+      "result_sha256": "79f6a8d0a690a4af5017be8772d0c5650ad2bf5f73d2faff87df004e2699e87d"
+    },
+    {
+      "round": "cpu-all-01-arm64",
+      "exit_code": "still-live-after-kill",
+      "reaped": false,
+      "failures": [
+        "FAIL!  : KisPageStoreCpuMutationTest::epochNativeConfigurationResumes() Caught unhandled exception"
+      ],
+      "totals": [
+        "Totals: 1 passed, 1 failed, 0 skipped, 0 blacklisted, 8ms"
+      ],
+      "timed_out": true,
+      "diagnostic_guard": false,
+      "result_sha256": "a51926794842bee7b3c7f15a740674d66fae3c05e411cf52c21a4e49e61c54ab"
+    },
+    {
+      "round": "cpu-all-02-arm64",
+      "exit_code": "still-live-after-kill",
+      "reaped": false,
+      "failures": [],
+      "totals": [],
+      "timed_out": true,
+      "diagnostic_guard": true,
+      "result_sha256": "3ef815b59a0231696d97a3ca0b8cb19e4cb20babc1d3d9c4edc6ababbb677c2a"
+    },
+    {
+      "round": "cpu-all-03-arm64",
+      "exit_code": 6,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreCpuMutationTest::budgetWaiterStateStorageIsChargedAndReleased() Compared values are not the same",
+        "FAIL!  : KisPageStoreCpuMutationTest::budgetReservationRecyclingPreservesHeldGrants() Compared values are not the same",
+        "FAIL!  : KisPageStoreCpuMutationTest::preparedReclamationWakeCancellation() Compared values are not the same",
+        "FAIL!  : KisPageStoreCpuMutationTest::capturedReleaseKeepsOriginalFacts(automatic) Compared values are not the same",
+        "FAIL!  : KisPageStoreCpuMutationTest::capturedReleaseKeepsOriginalFacts(cancel-close) Compared values are not the same",
+        "FAIL!  : KisPageStoreCpuMutationTest::capturedReleaseKeepsOriginalFacts(stop-and-drain) Compared values are not the same"
+      ],
+      "totals": [
+        "Totals: 1380 passed, 6 failed, 0 skipped, 0 blacklisted, 15807ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "62a07a666a7e8fd1085638f5331cc493b0a5c06e74b56af97f08936202691663"
+    },
+    {
+      "round": "final-tsan-01-KisPageStoreReferenceTest",
+      "exit_code": "still-live-after-kill",
+      "reaped": false,
+      "failures": [
+        "QFATAL : KisPageStoreReferenceTest::indexedHistorySlices(4095) Test function timed out",
+        "FAIL!  : KisPageStoreReferenceTest::indexedHistorySlices(4095) Received a fatal error."
+      ],
+      "totals": [
+        "Totals: 6 passed, 1 failed, 0 skipped, 0 blacklisted, 120476ms"
+      ],
+      "timed_out": true,
+      "diagnostic_guard": false,
+      "result_sha256": "e41e71fcfb5f1be9c4192f0b719f44e0ec8c35ae073f1fcb7d737639d5bdc2e2"
+    },
+    {
+      "round": "final-tsan-02-KisPageStoreCpuMutationTest",
+      "exit_code": 1,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreCpuMutationTest::budgetWaiterStateStorageIsChargedAndReleased() Compared values are not the same"
+      ],
+      "totals": [
+        "Totals: 1385 passed, 1 failed, 0 skipped, 0 blacklisted, 76506ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": false,
+      "result_sha256": "ecac9049f95ccc2fd9aefe628a4a21b059c5b0eb281db86f4eb0df82c4eab3af"
+    },
+    {
+      "round": "freehand-business-01-testPersistentAutoBrushStrokePressureCancelled-arm64",
+      "exit_code": "still-live-after-kill",
+      "reaped": false,
+      "failures": [
+        "QFATAL : FreehandStrokeTest::testPersistentAutoBrushStrokePressureCancelled(cancel-admitted-visible-input) Test function timed out",
+        "FAIL!  : FreehandStrokeTest::testPersistentAutoBrushStrokePressureCancelled(cancel-admitted-visible-input) Received a fatal error."
+      ],
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 120024ms"
+      ],
+      "timed_out": true,
+      "diagnostic_guard": false,
+      "result_sha256": "b305a97878a5671c45b4f37da9d99ddcb2f090c55fa3ea8591ed5129fbc39bbb"
+    },
+    {
+      "round": "freehand-capacity-diagnostic-02-arm64",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 375ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "866a0ce3fce1d5525fe8a2c0609bcba0478ae56101566c7021f52442d5cb7566"
+    },
+    {
+      "round": "freehand-final-01-testPersistentAutoBrushStrokePressureCancelled-arm64",
+      "exit_code": -9,
+      "reaped": true,
+      "failures": [],
+      "totals": [],
+      "timed_out": false,
+      "diagnostic_guard": false,
+      "result_sha256": "ead51d6413f19e6404600642257ec2b37c1f8dd64f8300c6ec8882096ff4eb25"
+    },
+    {
+      "round": "freehand-mapping-business-diagnostic-01",
+      "exit_code": 1,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : FreehandStrokeTest::testPersistentMutationCancelAfterAdmission() Function not found: testPersistentMutationCancelAfterAdmission"
+      ],
+      "totals": [
+        "Totals: 0 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "1f497a1dbb2388c341fb45cf852e81f53b2efc68f344f7e8eab2095d84fcfc5f"
+    },
+    {
+      "round": "freehand-mapping-business-diagnostic-02",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 78ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "85074938f5e253bad525bc57947d15217e9a5b6cba864073df07e1390e14c717"
+    },
+    {
+      "round": "mapping-cpu-all-diagnostic-01",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 1386 passed, 0 failed, 0 skipped, 0 blacklisted, 9786ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "72713c72217aeba776ada1f0d87525d584014455e88c3e2d5f8bb1e93702c085"
+    },
+    {
+      "round": "mapping-process-storage-diagnostic-01",
+      "exit_code": 1,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreCpuMutationTest::processStorageRejectsAndRetains() Compared values are not the same"
+      ],
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 3ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "e77d84dde66f06c9f7ad067075c5c607e529e5e745ba5d9e43c938ac7c34d173"
+    },
+    {
+      "round": "mapping-reference-all-diagnostic-01",
+      "exit_code": 86,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreReferenceTest::reclamationTaskStorageBeforeOwnerRelease() Caught unhandled exception"
+      ],
+      "totals": [
+        "Totals: 109 passed, 1 failed, 0 skipped, 0 blacklisted, 4905ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "4f0112801cc0c58fb1d6c5cb7d2dd97b64aaff32f8ae98eeef99cb8c4530b9b0"
+    },
+    {
+      "round": "mapping-reference-diagnostic-01",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 174ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "f411fadf3746349f4da5c5a711353e1ff2cf1285df3a2c44d340ba7368a4cddc"
+    },
+    {
+      "round": "native-final-01-KisPageStoreReferenceTest-arm64",
+      "exit_code": "still-live-after-kill",
+      "reaped": false,
+      "failures": [
+        "FAIL!  : KisPageStoreReferenceTest::indexedMutationBaseLookup() Caught unhandled exception"
+      ],
+      "totals": [
+        "Totals: 194 passed, 1 failed, 0 skipped, 0 blacklisted, 7206ms"
+      ],
+      "timed_out": true,
+      "diagnostic_guard": false,
+      "result_sha256": "cbf894453146bdc4a3f0c0626b49193e44bea1453ba8cef4f081962ffed7d4d9"
+    },
+    {
+      "round": "native-final-reference-diagnostic-01",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 7803ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "b93735dc6cde6527d736d015e8a53f8bbc1535e534089d4910fceed8896f0dbc"
+    },
+    {
+      "round": "native-reference-lookup-255-diagnostic-01",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "ed261096f99a3c1b7f42855a22d2612b5e924ee4b8d54b25a4f47c2dc770def4"
+    },
+    {
+      "round": "native-reference-lookup-31-diagnostic-02",
+      "exit_code": 1,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreReferenceTest::indexedMutationBaseLookup() Data tag not found: 31"
+      ],
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "94632b02c4fc43f1379859b006d92b48601ef701569f1b23b04ed1ea70dbf3b7"
+    },
+    {
+      "round": "native-reference-lookup-4095-diagnostic-01",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 157ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "3d802d7d60939df84d3e744a725d18e74c984488c6fe96bf2433afa71a375780"
+    },
+    {
+      "round": "native-reference-lookup-all-diagnostic-02",
+      "exit_code": 86,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreReferenceTest::indexedMutationBaseLookup() Caught unhandled exception"
+      ],
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "c388ccbaabb692b9aadde4f316c85f313d0c1a7fed4d9d3e56f2c7505bc33eb3"
+    },
+    {
+      "round": "native-reference-lookup-diagnostic-01",
+      "exit_code": 86,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreReferenceTest::indexedMutationBaseLookup() Caught unhandled exception"
+      ],
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "04de398ec95d24ddec0d739ce6ca84103229446ddd36ecd68b72fc87e2990bb4"
+    },
+    {
+      "round": "physical-all-02-arm64",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 25ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "868ae1e6e3db0879ba2063b9c960d705289f1c246b1db19cd035a03afc9ecd36"
+    },
+    {
+      "round": "reference-all-01-arm64",
+      "exit_code": "still-live-after-kill",
+      "reaped": false,
+      "failures": [
+        "FAIL!  : KisPageStoreReferenceTest::metadataArenaDirectoryGrowthAtCapacity() Caught unhandled exception"
+      ],
+      "totals": [
+        "Totals: 10 passed, 1 failed, 0 skipped, 0 blacklisted, 4238ms"
+      ],
+      "timed_out": true,
+      "diagnostic_guard": null,
+      "result_sha256": "c3393156c0f9e9aedddaae16bb4729172301fbf5ce0aa069e8265ad4c4b31fc6"
+    },
+    {
+      "round": "reference-all-02-arm64",
+      "exit_code": 4,
+      "reaped": true,
+      "failures": [
+        "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome0) Compared values are not the same",
+        "FAIL!  : KisPageStoreReferenceTest::mutationCandidateStorageAtSharedCapacity(cancel) 'candidate.isValid()' returned FALSE. ()",
+        "FAIL!  : KisPageStoreReferenceTest::mutationCandidateStorageAtSharedCapacity(install) 'candidate.isValid()' returned FALSE. ()",
+        "FAIL!  : KisPageStoreReferenceTest::epochTransactionPreparationRevalidatesConcurrentRevision() 'live() - before >= bytes && live() - before < bytes + 512' returned FALSE. ()"
+      ],
+      "totals": [
+        "Totals: 786 passed, 4 failed, 0 skipped, 0 blacklisted, 7205ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "d638123d332657fd4f121a86cdee420c0777b898d82b08eb8cd3406af1cce770"
+    },
+    {
+      "round": "reference-all-03-arm64",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 7181ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "a45b635d32204087ae73d8ce9eb8369e340a8de6f6d1112455697a676fe5adc3"
+    },
+    {
+      "round": "registry-all-01-arm64",
+      "exit_code": 0,
+      "reaped": true,
+      "failures": [],
+      "totals": [
+        "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 375ms"
+      ],
+      "timed_out": false,
+      "diagnostic_guard": true,
+      "result_sha256": "7ce61c8640d472e800f5bb47432eca0cf13dd4915ca13d89db00a5f3e1049b41"
+    }
+  ]
+}

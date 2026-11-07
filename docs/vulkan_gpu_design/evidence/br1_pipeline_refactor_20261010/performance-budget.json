@@ -1,0 +1,1347 @@
+{
+  "product": "11c6895ddfeae074df727c76dcbf9e12988479ee",
+  "product_library_sha256": "91e962c2c43379697b13f37a2ee388d408440c67f3e21458e75c70dab4b21b38",
+  "upstream": "9a24ae0d8c070884fb013594191002e1a1b39a19",
+  "main_batch": "net-ledger-r1; 32 mode0 timing processes, 8 blocks; immediate drain included",
+  "units": "ms / complete case / four manager lifetimes; current minus upstream; arithmetic mean for addition",
+  "cases": {
+    "0": {
+      "pages": 1,
+      "writes": 1,
+      "history": false,
+      "process_mean_ms": {
+        "current": 1.3115625,
+        "upstream": 0.5348125
+      },
+      "foreground_mean_ms": {
+        "current": 1.1022969375,
+        "upstream": 0.5135911875
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 0.9359712499999999,
+          "write": 0.090960875,
+          "read": 0.018349375,
+          "finish": 0.0019245,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.0376093125,
+          "case_frame": 0.0133123125,
+          "tail_foreground": 0.0017213125,
+          "observer_boundary_foreground": 0.002448,
+          "reclaimer": 0.184125,
+          "monitor": 0.002375,
+          "pooler": 0.006625,
+          "swapper": 0.0066875,
+          "unregistered_boundary": 0.0094530625
+        },
+        "upstream": {
+          "setup": 0.483291625,
+          "write": 0.0053228125,
+          "read": 0.0027499374999999998,
+          "finish": 0.002844,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.0078203125,
+          "case_frame": 0.00919525,
+          "tail_foreground": 0.000348875,
+          "observer_boundary_foreground": 0.002018375,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0046875,
+          "swapper": 0.00775,
+          "unregistered_boundary": 0.0087838125
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.4526796249999999,
+        "write": 0.0856380625,
+        "read": 0.0155994375,
+        "finish": -0.0009195000000000002,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.029789,
+        "case_frame": 0.004117062499999999,
+        "tail_foreground": 0.0013724375,
+        "observer_boundary_foreground": 0.0004296249999999999,
+        "reclaimer": 0.184125,
+        "monitor": 0.002375,
+        "pooler": 0.0019375,
+        "swapper": -0.0010625,
+        "unregistered_boundary": 0.0006692499999999997
+      },
+      "process_extra_mean_ms": 0.77675,
+      "foreground_extra_mean_ms": 0.58870575,
+      "diagram_components_ms": {
+        "write": 0.0856380625,
+        "read": 0.0155994375,
+        "other_foreground": 0.48746825,
+        "reclaimer": 0.184125,
+        "other_threads_and_boundary": 0.003919250000000013
+      },
+      "extra_shares_percent": {
+        "write": 11.025177019633086,
+        "read": 2.008295783714194,
+        "reclaimer": 23.704538139684583,
+        "other_foreground": 62.75741873189571,
+        "other_threads_and_boundary": 0.5045703250724187
+      },
+      "major_three_share_percent": 36.73801094303186,
+      "process_extra_paired": {
+        "median": 0.6755,
+        "mean": 0.7767499999999999,
+        "ci95": [
+          0.4195,
+          0.996
+        ],
+        "blocks": [
+          0.9344999999999999,
+          0.473,
+          0.996,
+          0.414,
+          0.8780000000000001,
+          0.44800000000000006,
+          1.6509999999999998,
+          0.4195
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 0.49114599999999986,
+        "mean": 0.58870575,
+        "ci95": [
+          0.268458,
+          0.7851874999999999
+        ],
+        "blocks": [
+          0.742583,
+          0.309,
+          0.7851874999999999,
+          0.2675835,
+          0.6732919999999998,
+          0.29479200000000005,
+          1.3687500000000001,
+          0.268458
+        ]
+      }
+    },
+    "1": {
+      "pages": 16,
+      "writes": 1,
+      "history": false,
+      "process_mean_ms": {
+        "current": 2.1635625,
+        "upstream": 0.2644375
+      },
+      "foreground_mean_ms": {
+        "current": 1.6109089375,
+        "upstream": 0.264822875
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 0.81306,
+          "write": 0.4988410625,
+          "read": 0.140122875,
+          "finish": 0.002218875,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.1208515625,
+          "case_frame": 0.0322469375,
+          "tail_foreground": 0.0019581875,
+          "observer_boundary_foreground": 0.0016094375,
+          "reclaimer": 0.552875,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.0002214375
+        },
+        "upstream": {
+          "setup": 0.10355475,
+          "write": 0.052677062499999996,
+          "read": 0.02449775,
+          "finish": 0.0137475625,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.0431169375,
+          "case_frame": 0.025614249999999998,
+          "tail_foreground": 0.000328,
+          "observer_boundary_foreground": 0.0012865625,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.000385375
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.70950525,
+        "write": 0.446164,
+        "read": 0.11562512500000001,
+        "finish": -0.011528687499999999,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.077734625,
+        "case_frame": 0.006632687500000005,
+        "tail_foreground": 0.0016301875,
+        "observer_boundary_foreground": 0.00032287500000000003,
+        "reclaimer": 0.552875,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 0.00016393749999999997
+      },
+      "process_extra_mean_ms": 1.8991249999999997,
+      "foreground_extra_mean_ms": 1.3460860624999997,
+      "diagram_components_ms": {
+        "write": 0.446164,
+        "read": 0.11562512500000001,
+        "other_foreground": 0.7842969374999997,
+        "reclaimer": 0.552875,
+        "other_threads_and_boundary": 0.00016393749999998875
+      },
+      "extra_shares_percent": {
+        "write": 23.493134996379915,
+        "read": 6.088336734022248,
+        "reclaimer": 29.112091094583036,
+        "other_foreground": 41.29780491015598,
+        "other_threads_and_boundary": 0.008632264858815969
+      },
+      "major_three_share_percent": 58.6935628249852,
+      "process_extra_paired": {
+        "median": 1.82425,
+        "mean": 1.899125,
+        "ci95": [
+          1.5559999999999998,
+          2.009
+        ],
+        "blocks": [
+          1.7795,
+          1.901,
+          1.8689999999999998,
+          1.545,
+          2.009,
+          1.5895,
+          2.944,
+          1.5559999999999998
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 1.27795875,
+        "mean": 1.3460860625,
+        "ci95": [
+          1.07225,
+          1.4519585000000002
+        ],
+        "blocks": [
+          1.257209,
+          1.2987085,
+          1.3103125,
+          1.07225,
+          1.4519585000000002,
+          1.1059165,
+          2.2075,
+          1.0648335000000002
+        ]
+      }
+    },
+    "2": {
+      "pages": 1,
+      "writes": 16,
+      "history": false,
+      "process_mean_ms": {
+        "current": 2.11325,
+        "upstream": 0.17756249999999998
+      },
+      "foreground_mean_ms": {
+        "current": 1.5208698125,
+        "upstream": 0.1779168125
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 0.2564035,
+          "write": 0.9025283749999999,
+          "read": 0.230542125,
+          "finish": 0.001797,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.039294375,
+          "case_frame": 0.087234,
+          "tail_foreground": 0.0015705625,
+          "observer_boundary_foreground": 0.001499875,
+          "reclaimer": 0.59275,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.0003698125
+        },
+        "upstream": {
+          "setup": 0.0381563125,
+          "write": 0.03455,
+          "read": 0.033010375,
+          "finish": 0.0024974375,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.0059661875,
+          "case_frame": 0.0621633125,
+          "tail_foreground": 0.000320125,
+          "observer_boundary_foreground": 0.0012530625,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.00035431249999999997
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.2182471875,
+        "write": 0.867978375,
+        "read": 0.19753174999999998,
+        "finish": -0.0007004375000000001,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.0333281875,
+        "case_frame": 0.025070687500000008,
+        "tail_foreground": 0.0012504374999999998,
+        "observer_boundary_foreground": 0.00024681249999999985,
+        "reclaimer": 0.59275,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": -1.550000000000005e-05
+      },
+      "process_extra_mean_ms": 1.9356874999999998,
+      "foreground_extra_mean_ms": 1.3429529999999998,
+      "diagram_components_ms": {
+        "write": 0.867978375,
+        "read": 0.19753174999999998,
+        "other_foreground": 0.27744287499999987,
+        "reclaimer": 0.59275,
+        "other_threads_and_boundary": -1.5500000000057135e-05
+      },
+      "extra_shares_percent": {
+        "write": 44.84083174582674,
+        "read": 10.20473346033386,
+        "reclaimer": 30.62219495657228,
+        "other_foreground": 14.333040586354972,
+        "other_threads_and_boundary": -0.0008007490878593335
+      },
+      "major_three_share_percent": 85.66776016273289,
+      "process_extra_paired": {
+        "median": 1.8170000000000002,
+        "mean": 1.9356875000000002,
+        "ci95": [
+          1.677,
+          2.2095000000000002
+        ],
+        "blocks": [
+          1.7990000000000002,
+          1.835,
+          2.5695,
+          1.656,
+          2.0385000000000004,
+          1.701,
+          2.2095000000000002,
+          1.677
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 1.242979,
+        "mean": 1.342953,
+        "ci95": [
+          1.1381459999999999,
+          1.5282505
+        ],
+        "blocks": [
+          1.231979,
+          1.2539790000000002,
+          1.8809369999999999,
+          1.13325,
+          1.41427,
+          1.1628125,
+          1.5282505,
+          1.1381459999999999
+        ]
+      }
+    },
+    "3": {
+      "pages": 16,
+      "writes": 16,
+      "history": false,
+      "process_mean_ms": {
+        "current": 15.0656875,
+        "upstream": 1.253375
+      },
+      "foreground_mean_ms": {
+        "current": 10.1705131875,
+        "upstream": 1.2536456875
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 0.770856625,
+          "write": 6.6659455,
+          "read": 2.1122819375,
+          "finish": 0.0022866875,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.2374425625,
+          "case_frame": 0.3780355625,
+          "tail_foreground": 0.0020571875,
+          "observer_boundary_foreground": 0.001607125,
+          "reclaimer": 4.895375,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.0002006875
+        },
+        "upstream": {
+          "setup": 0.10315387499999999,
+          "write": 0.3703238125,
+          "read": 0.3824044375,
+          "finish": 0.01414575,
+          "undo": 0.0,
+          "redo": 0.0,
+          "teardown": 0.042950625,
+          "case_frame": 0.3390448125,
+          "tail_foreground": 0.0003385625,
+          "observer_boundary_foreground": 0.0012838125,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.0002706875
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.66770275,
+        "write": 6.295621687500001,
+        "read": 1.7298775000000002,
+        "finish": -0.0118590625,
+        "undo": 0.0,
+        "redo": 0.0,
+        "teardown": 0.19449193750000002,
+        "case_frame": 0.03899074999999996,
+        "tail_foreground": 0.001718625,
+        "observer_boundary_foreground": 0.00032331250000000003,
+        "reclaimer": 4.895375,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 7e-05
+      },
+      "process_extra_mean_ms": 13.812312500000003,
+      "foreground_extra_mean_ms": 8.916867500000004,
+      "diagram_components_ms": {
+        "write": 6.295621687500001,
+        "read": 1.7298775000000002,
+        "other_foreground": 0.8913683125000031,
+        "reclaimer": 4.895375,
+        "other_threads_and_boundary": 6.999999999912632e-05
+      },
+      "extra_shares_percent": {
+        "write": 45.579780268510426,
+        "read": 12.524170011357619,
+        "reclaimer": 35.442110073892394,
+        "other_foreground": 6.453432852029688,
+        "other_threads_and_boundary": 0.0005067942098698267
+      },
+      "major_three_share_percent": 93.54606035376045,
+      "process_extra_paired": {
+        "median": 13.70375,
+        "mean": 13.8123125,
+        "ci95": [
+          13.1305,
+          13.957
+        ],
+        "blocks": [
+          13.713,
+          13.694500000000001,
+          13.957,
+          13.1305,
+          13.9305,
+          13.1495,
+          15.837499999999999,
+          13.086
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 8.72780275,
+        "mean": 8.9168675,
+        "ci95": [
+          8.376666,
+          9.0621045
+        ],
+        "blocks": [
+          8.767709,
+          8.6878965,
+          9.0621045,
+          8.376666,
+          8.926459,
+          8.393208999999999,
+          10.789104499999999,
+          8.3317915
+        ]
+      }
+    },
+    "4": {
+      "pages": 1,
+      "writes": 1,
+      "history": true,
+      "process_mean_ms": {
+        "current": 0.6540625,
+        "upstream": 0.0805
+      },
+      "foreground_mean_ms": {
+        "current": 0.481635375,
+        "upstream": 0.08094275
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 0.264291875,
+          "write": 0.0408465625,
+          "read": 0.0151903125,
+          "finish": 0.0307554375,
+          "undo": 0.0404141875,
+          "redo": 0.0334268125,
+          "teardown": 0.036138375,
+          "case_frame": 0.017347875,
+          "tail_foreground": 0.001627375,
+          "observer_boundary_foreground": 0.0015965624999999999,
+          "reclaimer": 0.1726875,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.000260375
+        },
+        "upstream": {
+          "setup": 0.039249875,
+          "write": 0.0045053125,
+          "read": 0.0023618125,
+          "finish": 0.0026041875,
+          "undo": 0.0054348125,
+          "redo": 0.0053363125,
+          "teardown": 0.0067375625,
+          "case_frame": 0.013100875,
+          "tail_foreground": 0.0003331875,
+          "observer_boundary_foreground": 0.0012788125,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.00044275
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.22504200000000002,
+        "write": 0.036341250000000005,
+        "read": 0.0128285,
+        "finish": 0.02815125,
+        "undo": 0.03497937499999999,
+        "redo": 0.0280905,
+        "teardown": 0.0294008125,
+        "case_frame": 0.004246999999999999,
+        "tail_foreground": 0.0012941875,
+        "observer_boundary_foreground": 0.0003177499999999999,
+        "reclaimer": 0.1726875,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 0.00018237499999999997
+      },
+      "process_extra_mean_ms": 0.5735625,
+      "foreground_extra_mean_ms": 0.400692625,
+      "diagram_components_ms": {
+        "write": 0.036341250000000005,
+        "read": 0.0128285,
+        "other_foreground": 0.351522875,
+        "reclaimer": 0.1726875,
+        "other_threads_and_boundary": 0.00018237499999995688
+      },
+      "extra_shares_percent": {
+        "write": 6.336057535142205,
+        "read": 2.2366350659256837,
+        "reclaimer": 30.107878391631253,
+        "other_foreground": 61.28763212378774,
+        "other_threads_and_boundary": 0.03179688351312314
+      },
+      "major_three_share_percent": 38.680570992699145,
+      "process_extra_paired": {
+        "median": 0.5595000000000001,
+        "mean": 0.5735625,
+        "ci95": [
+          0.5175,
+          0.616
+        ],
+        "blocks": [
+          0.616,
+          0.5175,
+          0.5655,
+          0.525,
+          0.6115,
+          0.5535000000000001,
+          0.6865,
+          0.513
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 0.38997875000000004,
+        "mean": 0.400692625,
+        "ci95": [
+          0.36504099999999995,
+          0.43245849999999997
+        ],
+        "blocks": [
+          0.43245849999999997,
+          0.36504099999999995,
+          0.39452050000000005,
+          0.36622999999999994,
+          0.4282085,
+          0.38543700000000003,
+          0.48304150000000007,
+          0.35060399999999997
+        ]
+      }
+    },
+    "5": {
+      "pages": 16,
+      "writes": 1,
+      "history": true,
+      "process_mean_ms": {
+        "current": 2.3451874999999998,
+        "upstream": 0.39725
+      },
+      "foreground_mean_ms": {
+        "current": 1.82039075,
+        "upstream": 0.3978255
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 0.7392445625,
+          "write": 0.29203925,
+          "read": 0.0914949375,
+          "finish": 0.1313076875,
+          "undo": 0.1743464375,
+          "redo": 0.1423746875,
+          "teardown": 0.175187375,
+          "case_frame": 0.07104125,
+          "tail_foreground": 0.0017735,
+          "observer_boundary_foreground": 0.0015810625,
+          "reclaimer": 0.525125,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.00032825
+        },
+        "upstream": {
+          "setup": 0.1031534375,
+          "write": 0.0523958125,
+          "read": 0.025309875,
+          "finish": 0.014286437499999999,
+          "undo": 0.041578000000000004,
+          "redo": 0.0473518125,
+          "teardown": 0.0477344375,
+          "case_frame": 0.0643908125,
+          "tail_foreground": 0.00033875,
+          "observer_boundary_foreground": 0.001286125,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.0005755
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.6360911250000001,
+        "write": 0.23964343749999997,
+        "read": 0.0661850625,
+        "finish": 0.11702125,
+        "undo": 0.1327684375,
+        "redo": 0.095022875,
+        "teardown": 0.1274529375,
+        "case_frame": 0.006650437499999995,
+        "tail_foreground": 0.0014347499999999998,
+        "observer_boundary_foreground": 0.00029493750000000006,
+        "reclaimer": 0.525125,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 0.00024724999999999997
+      },
+      "process_extra_mean_ms": 1.9479374999999999,
+      "foreground_extra_mean_ms": 1.4225652500000001,
+      "diagram_components_ms": {
+        "write": 0.23964343749999997,
+        "read": 0.0661850625,
+        "other_foreground": 1.11673675,
+        "reclaimer": 0.525125,
+        "other_threads_and_boundary": 0.0002472499999998101
+      },
+      "extra_shares_percent": {
+        "write": 12.302419225462828,
+        "read": 3.397699489845029,
+        "reclaimer": 26.958000449193054,
+        "other_foreground": 57.329187923123825,
+        "other_threads_and_boundary": 0.012692912375258965
+      },
+      "major_three_share_percent": 42.65811916450091,
+      "process_extra_paired": {
+        "median": 1.8952499999999999,
+        "mean": 1.9479374999999999,
+        "ci95": [
+          1.8695,
+          2.0679999999999996
+        ],
+        "blocks": [
+          1.887,
+          1.8319999999999999,
+          1.9699999999999998,
+          1.8695,
+          1.875,
+          2.1785,
+          2.0679999999999996,
+          1.9034999999999997
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 1.3903439999999998,
+        "mean": 1.42256525,
+        "ci95": [
+          1.324834,
+          1.4725625
+        ],
+        "blocks": [
+          1.3975214999999999,
+          1.324834,
+          1.444229,
+          1.3831665,
+          1.3195625,
+          1.6589585,
+          1.4725625,
+          1.3796875000000002
+        ]
+      }
+    },
+    "6": {
+      "pages": 1,
+      "writes": 16,
+      "history": true,
+      "process_mean_ms": {
+        "current": 1.96225,
+        "upstream": 0.19743750000000002
+      },
+      "foreground_mean_ms": {
+        "current": 1.3905466875,
+        "upstream": 0.1979400625
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 0.273981875,
+          "write": 0.70117975,
+          "read": 0.1609095625,
+          "finish": 0.0415803125,
+          "undo": 0.041651125,
+          "redo": 0.035648374999999996,
+          "teardown": 0.0385938125,
+          "case_frame": 0.0935176875,
+          "tail_foreground": 0.0018489375,
+          "observer_boundary_foreground": 0.00163525,
+          "reclaimer": 0.572125,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.0004216875
+        },
+        "upstream": {
+          "setup": 0.0398228125,
+          "write": 0.035328437500000004,
+          "read": 0.0333876875,
+          "finish": 0.00270075,
+          "undo": 0.0049448125,
+          "redo": 0.0051119375,
+          "teardown": 0.0068259375,
+          "case_frame": 0.06818231250000001,
+          "tail_foreground": 0.0003255,
+          "observer_boundary_foreground": 0.001309875,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0,
+          "swapper": 0.0,
+          "unregistered_boundary": -0.0005025625
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.2341590625,
+        "write": 0.6658513125,
+        "read": 0.127521875,
+        "finish": 0.0388795625,
+        "undo": 0.0367063125,
+        "redo": 0.030536437499999996,
+        "teardown": 0.031767875,
+        "case_frame": 0.025335374999999993,
+        "tail_foreground": 0.0015234375,
+        "observer_boundary_foreground": 0.0003253749999999999,
+        "reclaimer": 0.572125,
+        "monitor": 0.0,
+        "pooler": 0.0,
+        "swapper": 0.0,
+        "unregistered_boundary": 8.087499999999995e-05
+      },
+      "process_extra_mean_ms": 1.7648125,
+      "foreground_extra_mean_ms": 1.1926066249999998,
+      "diagram_components_ms": {
+        "write": 0.6658513125,
+        "read": 0.127521875,
+        "other_foreground": 0.39923343749999984,
+        "reclaimer": 0.572125,
+        "other_threads_and_boundary": 8.087500000009129e-05
+      },
+      "extra_shares_percent": {
+        "write": 37.72929489676665,
+        "read": 7.2258030244006095,
+        "reclaimer": 32.41845805149272,
+        "other_foreground": 22.621861387541163,
+        "other_threads_and_boundary": 0.0045826397988506596
+      },
+      "major_three_share_percent": 77.37355597265999,
+      "process_extra_paired": {
+        "median": 1.7447500000000002,
+        "mean": 1.7648125000000001,
+        "ci95": [
+          1.6400000000000001,
+          1.839
+        ],
+        "blocks": [
+          1.6400000000000001,
+          1.6950000000000003,
+          1.7105000000000001,
+          1.839,
+          1.7790000000000001,
+          2.0069999999999997,
+          1.6149999999999998,
+          1.8330000000000002
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 1.1744789999999998,
+        "mean": 1.192606625,
+        "ci95": [
+          1.101604,
+          1.248979
+        ],
+        "blocks": [
+          1.101604,
+          1.1634995,
+          1.1514165,
+          1.248979,
+          1.1854585,
+          1.3724585,
+          1.0769790000000001,
+          1.2404579999999998
+        ]
+      }
+    },
+    "7": {
+      "pages": 16,
+      "writes": 16,
+      "history": true,
+      "process_mean_ms": {
+        "current": 13.8304375,
+        "upstream": 1.8680625
+      },
+      "foreground_mean_ms": {
+        "current": 9.6212085,
+        "upstream": 1.848541625
+      },
+      "component_mean_ms": {
+        "current": {
+          "setup": 1.3755986875,
+          "write": 5.038342625,
+          "read": 2.0887396875,
+          "finish": 0.17657818749999998,
+          "undo": 0.177645875,
+          "redo": 0.1507345,
+          "teardown": 0.2012293125,
+          "case_frame": 0.408037375,
+          "tail_foreground": 0.001791625,
+          "observer_boundary_foreground": 0.002510625,
+          "reclaimer": 4.1899375,
+          "monitor": 0.0023125,
+          "pooler": 0.0045,
+          "swapper": 0.0048125,
+          "unregistered_boundary": 0.0076665
+        },
+        "upstream": {
+          "setup": 0.5326663125,
+          "write": 0.3889919375,
+          "read": 0.3901450625,
+          "finish": 0.0150263125,
+          "undo": 0.044088749999999996,
+          "redo": 0.048015812500000005,
+          "teardown": 0.0500076875,
+          "case_frame": 0.3772169375,
+          "tail_foreground": 0.000343625,
+          "observer_boundary_foreground": 0.0020391874999999998,
+          "reclaimer": 0.0,
+          "monitor": 0.0,
+          "pooler": 0.0045,
+          "swapper": 0.0076875,
+          "unregistered_boundary": 0.007333375
+        }
+      },
+      "extra_mean_ms": {
+        "setup": 0.842932375,
+        "write": 4.6493506875,
+        "read": 1.698594625,
+        "finish": 0.16155187499999998,
+        "undo": 0.133557125,
+        "redo": 0.10271868749999999,
+        "teardown": 0.151221625,
+        "case_frame": 0.030820437499999964,
+        "tail_foreground": 0.001448,
+        "observer_boundary_foreground": 0.00047143750000000007,
+        "reclaimer": 4.1899375,
+        "monitor": 0.0023125,
+        "pooler": 0.0,
+        "swapper": -0.002875,
+        "unregistered_boundary": 0.0003331250000000001
+      },
+      "process_extra_mean_ms": 11.962375000000002,
+      "foreground_extra_mean_ms": 7.7726668750000005,
+      "diagram_components_ms": {
+        "write": 4.6493506875,
+        "read": 1.698594625,
+        "other_foreground": 1.4247215625000005,
+        "reclaimer": 4.1899375,
+        "other_threads_and_boundary": -0.00022937499999908795
+      },
+      "extra_shares_percent": {
+        "write": 38.86645158256617,
+        "read": 14.199476483557818,
+        "reclaimer": 35.02596683350923,
+        "other_foreground": 11.910022570768767,
+        "other_threads_and_boundary": -0.001917470401981947
+      },
+      "major_three_share_percent": 88.09189489963323,
+      "process_extra_paired": {
+        "median": 11.87075,
+        "mean": 11.962375,
+        "ci95": [
+          11.3505,
+          12.619499999999999
+        ],
+        "blocks": [
+          11.3505,
+          12.619499999999999,
+          11.320999999999998,
+          12.486,
+          11.409,
+          12.055499999999999,
+          11.686,
+          12.7715
+        ]
+      },
+      "foreground_extra_paired": {
+        "median": 7.6526565,
+        "mean": 7.7726668750000005,
+        "ci95": [
+          7.317229500000001,
+          8.3413125
+        ],
+        "blocks": [
+          7.317229500000001,
+          8.3413125,
+          7.339625,
+          8.206917,
+          7.2741875,
+          7.869416999999999,
+          7.4358960000000005,
+          8.3967505
+        ]
+      }
+    }
+  },
+  "lifecycle_counts": {
+    "current": {
+      "alloc": 4,
+      "pending_ticket_issued": 1096,
+      "descriptor_prepared": 1152,
+      "metadata_default_created": 64,
+      "descriptor_installed": 1152,
+      "binding_created": 1088,
+      "rows": 1088,
+      "provider_physical_registered": 1088,
+      "provider_adopted": 1088,
+      "owner_physical_installed": 1088,
+      "owner_backing_installed": 1088,
+      "metadata_version_created": 1088,
+      "fresh_accepted": 1088,
+      "proof_installed": 1088,
+      "proof_revoked": 1088,
+      "provider_retire": 1088,
+      "provider_physical_released": 1088,
+      "provider_allocation_removed": 1088,
+      "free": 1092,
+      "owner_backing_removed": 1088,
+      "owner_physical_removed": 1088,
+      "binding_destroyed": 1088,
+      "metadata_version_removed": 1024,
+      "descriptor_removed": 1088,
+      "metadata_default_removed": 64,
+      "publication_destroy": 4,
+      "descriptor_final_nodes": 64,
+      "metadata_destroy": 4,
+      "metadata_final_versions": 64,
+      "metadata_final_replicas": 64,
+      "owner_destroy": 4,
+      "provider_destroy": 4
+    },
+    "upstream": {
+      "alloc": 4,
+      "duplicate": 128,
+      "free": 132
+    }
+  },
+  "separate_evidence": {
+    "repeated_work": {
+      "comparison": "7 minus 5",
+      "extra_frees": 960,
+      "extra_cpu_ms": {
+        "process": {
+          "median": 9.747499999999999,
+          "mean": 10.0144375,
+          "ci95": [
+            9.4635,
+            10.787499999999998
+          ],
+          "blocks": [
+            9.4635,
+            10.787499999999998,
+            9.350999999999999,
+            10.6165,
+            9.534,
+            9.876999999999999,
+            9.618,
+            10.868
+          ]
+        },
+        "foreground": {
+          "median": 6.086896,
+          "mean": 6.350101625000001,
+          "ci95": [
+            5.919708000000001,
+            7.016478500000001
+          ],
+          "blocks": [
+            5.919708000000001,
+            7.016478500000001,
+            5.895396,
+            6.823750500000001,
+            5.954625,
+            6.2104585,
+            5.963333500000001,
+            7.017062999999999
+          ]
+        },
+        "other_threads": {
+          "median": 3.660604,
+          "mean": 3.664335875,
+          "ci95": [
+            3.5437919999999994,
+            3.7927495
+          ],
+          "blocks": [
+            3.5437919999999994,
+            3.7710215,
+            3.455604,
+            3.7927495,
+            3.5793749999999998,
+            3.6665415,
+            3.6546665000000003,
+            3.850936999999999
+          ]
+        },
+        "reclaimer": {
+          "median": 3.6614999999999998,
+          "mean": 3.6648125,
+          "ci95": [
+            3.5460000000000003,
+            3.7920000000000007
+          ],
+          "blocks": [
+            3.5460000000000003,
+            3.768,
+            3.456,
+            3.7920000000000007,
+            3.5805,
+            3.667,
+            3.6559999999999997,
+            3.8529999999999998
+          ]
+        }
+      },
+      "limitation": "15 extra write+read cycles, not isolated Fresh/retire deletion. No causal unit price."
+    },
+    "completion_candidate_savings_ms": {
+      "median": -0.015499999999999403,
+      "mean": 0.20950000000000024,
+      "ci95": [
+        -0.26500000000000057,
+        1.028500000000001
+      ],
+      "blocks": [
+        0.7310000000000016,
+        1.1084999999999994,
+        1.028500000000001,
+        -0.14150000000000063,
+        -0.7545000000000002,
+        0.06300000000000239,
+        -0.26500000000000057,
+        -0.0940000000000012
+      ]
+    },
+    "direct_retirement_candidate_savings_ms": {
+      "median": -1.6212500000000016,
+      "mean": -1.0160624999999999,
+      "ci95": [
+        -2.7929999999999993,
+        -0.8379999999999974
+      ],
+      "blocks": [
+        -1.6730000000000018,
+        -0.8379999999999974,
+        6.474,
+        -1.8120000000000012,
+        -2.7929999999999993,
+        -0.9289999999999985,
+        -4.9879999999999995,
+        -1.5695000000000014
+      ]
+    },
+    "prior_package_storage": {
+      "case_thread_cpu_ns": {
+        "block_means_ms": {
+          "current": [
+            9.473854,
+            10.810853999999999,
+            9.074604,
+            11.636542,
+            9.1015415,
+            12.016208500000001,
+            9.376083000000001,
+            11.699188
+          ],
+          "parent": [
+            10.7022495,
+            13.492937,
+            11.4116875,
+            13.9764585,
+            11.114396,
+            12.2025415,
+            10.892646,
+            14.1671455
+          ],
+          "upstream": [
+            1.3539795,
+            2.271688,
+            1.4154375,
+            2.353104,
+            1.4787085,
+            2.6176459999999997,
+            1.366979,
+            2.1985
+          ]
+        },
+        "side_median_ms": {
+          "current": 10.142354,
+          "parent": 11.8071145,
+          "upstream": 1.83860425
+        },
+        "saving_parent_ms": {
+          "point": 2.174968999999999,
+          "ci95": [
+            1.2283955000000013,
+            2.4679575000000007
+          ]
+        },
+        "extra_upstream_ms": {
+          "point": 8.329520249999998,
+          "ci95": [
+            7.659166500000001,
+            9.3985625
+          ]
+        },
+        "saving_parent_percent": {
+          "point": 17.081064477315547,
+          "ci95": [
+            11.477918731010721,
+            19.87768118979582
+          ]
+        },
+        "ratio_upstream": {
+          "point": 5.738251153981141,
+          "ci95": [
+            4.758951933540168,
+            6.858981008486598
+          ]
+        }
+      },
+      "case_cpu_ns": {
+        "block_means_ms": {
+          "current": [
+            13.9905,
+            15.282,
+            13.372,
+            16.483,
+            13.4345,
+            17.1405,
+            13.970500000000001,
+            16.5585
+          ],
+          "parent": [
+            15.7635,
+            19.2455,
+            17.0215,
+            19.990499999999997,
+            16.597,
+            17.179499999999997,
+            16.159,
+            20.032
+          ],
+          "upstream": [
+            1.3535,
+            2.3125,
+            1.416,
+            2.3945,
+            1.4785,
+            2.6645000000000003,
+            1.3675,
+            2.235
+          ]
+        },
+        "side_median_ms": {
+          "current": 14.63625,
+          "parent": 17.100499999999997,
+          "upstream": 1.85675
+        },
+        "saving_parent_ms": {
+          "point": 3.3180000000000014,
+          "ci95": [
+            1.7729999999999997,
+            3.6494999999999997
+          ]
+        },
+        "extra_upstream_ms": {
+          "point": 12.80325,
+          "ci95": [
+            11.956,
+            14.3235
+          ]
+        },
+        "saving_parent_percent": {
+          "point": 17.442795330527602,
+          "ci95": [
+            11.247502141021979,
+            20.594424670702242
+          ]
+        },
+        "ratio_upstream": {
+          "point": 8.247649531426964,
+          "ci95": [
+            6.608432432432433,
+            10.216087751371116
+          ]
+        }
+      }
+    },
+    "prior_package_business_stroke": {
+      "block_means_ms": {
+        "current": [
+          15.791500000000001,
+          15.645,
+          15.6655,
+          15.4775,
+          15.518,
+          15.759,
+          15.988499999999998,
+          15.7355
+        ],
+        "parent": [
+          17.011,
+          18.8215,
+          16.69,
+          15.897499999999999,
+          16.316,
+          16.1595,
+          15.985500000000002,
+          16.108999999999998
+        ],
+        "upstream": [
+          8.634,
+          8.6645,
+          8.563500000000001,
+          8.43,
+          8.928,
+          8.9955,
+          9.0365,
+          8.731000000000002
+        ]
+      },
+      "side_median_ms": {
+        "current": 15.7005,
+        "parent": 16.23775,
+        "upstream": 8.697750000000001
+      },
+      "saving_parent_ms": {
+        "point": 0.6089999999999991,
+        "ci95": [
+          0.37349999999999817,
+          1.2194999999999983
+        ]
+      },
+      "extra_upstream_ms": {
+        "point": 6.992499999999999,
+        "ci95": [
+          6.7635000000000005,
+          7.1019999999999985
+        ]
+      },
+      "saving_parent_percent": {
+        "point": 3.7664147322184265,
+        "ci95": [
+          2.3185796759575283,
+          7.168890717770844
+        ]
+      },
+      "ratio_upstream": {
+        "point": 1.8039500233242673,
+        "ci95": [
+          1.7518759379689846,
+          1.829333800432066
+        ]
+      }
+    }
+  },
+  "legal_net_recoverable_ms": null,
+  "selected_design": null,
+  "validation": {
+    "raw_and_block_closure_checks": 576,
+    "main_processes": 32,
+    "case_count": 8,
+    "source_hashes": {
+      "flow-ledger-audit.json": "07cc541602dca929a734b30db0c25a4e51d93e35f5cfc9cb7c4633000ff7e54c",
+      "net-ledger-summary.json": "087a713f46b4a7cea113e2c3d2b0ef512030d0012ec71cb8469d8076213727bc",
+      "net-counts-summary.json": "4feacfd3640ad462507d92a77f50e8cc31184d311ac8ddb3dba0c8b3ef7979ac",
+      "execution-summary.json": "23fbb92ef5aedc622703fc4b02af6df4b565ad8c765b3751d8c67a12d90628bc",
+      "completion-summary.json": "e1be1346eca9f9faca82f547563fed82fb593548eca746ff7dd6b9fd9f6a433d",
+      "detach-summary.json": "27587cff72c2de313ade74239c10c2fab2296b7bd81f26ed2cc741f32f3b71de",
+      "cost-ledger-storage-summary.json": "d017d30d20c6f3975fb8050e9eb23478cbe087bbfd0886f95379393c783a6d31",
+      "cost-ledger-business-summary.json": "711f295fc04de4b12a7dcc1078bc8e37523f32b9df02c3a28f48ac2881864ec9",
+      "flow-ledger-raw.tar.xz::net-ledger-r1/observations/results.json": "82d37a6de9e902bca3de57346864e3b1605f9ec739e8e249759603edd12ec5ff"
+    }
+  },
+  "limits": [
+    "No new samples",
+    "Mode0 is a diagnostic derivative, not a completely uninstrumented product",
+    "Current and upstream totals are observations, not algorithmic lower bounds",
+    "Coarse responsibility shares are not recoverable shares",
+    "Sidecar batches are never added to the main budget"
+  ]
+}

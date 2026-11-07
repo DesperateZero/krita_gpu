@@ -1,0 +1,561 @@
+{
+  "product_parent": "b10b2913a69604d42b51cac83ba81214d30d43de",
+  "product_commit": "a36e1b0ad090fb24e7cd43c22833b6026ab7c14f",
+  "outer_parent": "467c471c8f1e9ca8206a939b5c406215b6e08af2",
+  "scope": "Finite CP1 candidate results; complete CP1 remains open",
+  "verified": true,
+  "cp1_complete": false,
+  "sources": {
+    "build-tools/ci-scripts/check-pagestore-architecture.py": "d2f8d07fe2ef6c83528cca170fdbc9e6fd3128bb8b2bab01f95712b8c09a87cd",
+    "libs/image/kis_repeat_iterators_pixel.h": "09f8b6d879e247f0357ab029ab4abf91f5470ed2eaeb1b670607db03d234f504",
+    "libs/image/kis_wrapped_hline_iterator.h": "2f06a883ea5a5722978dd7c68ba97176205a516a693aec5d0505766678cec834",
+    "libs/image/kis_wrapped_vline_iterator.h": "c18477d9677796a6f2c330e86ed7323c055e7caef12c17511776d5eaf5780d4e",
+    "libs/image/pagestore/KisBackendServiceRegistry.cpp": "92e1c3b1706865f354188ace094302bb3ee50707231e3398326ede1c668df703",
+    "libs/image/pagestore/KisBackendServiceRegistry.h": "995496b2a8c7f1f94e6dd45d471902b4f0b911965a8f6ccc532b6f860109b338",
+    "libs/image/pagestore/KisCompletionRegistry.cpp": "7d2211e6468068300fc60a0a3217537b237c8d7fb947322fce38a3ac1dbd913b",
+    "libs/image/pagestore/KisCompletionRegistry.h": "9751474a9e5fe57aa211913148c24baa267cb0b09c64397111a024d2d8bb0da2",
+    "libs/image/pagestore/KisCompositeTypes.h": "6c037b159970eeaf6a2c16b9cba39b79a8f09d177b03fe4418e14da5c8e58a2d",
+    "libs/image/pagestore/KisCpuResidentBinding.cpp": "165bd2b44ba853d6d9a1ae4ba2b2f4a7d99f17fa2f47f254e6828794e907d1b7",
+    "libs/image/pagestore/KisCpuResidentBinding_p.h": "3bae360bba61f9d1ab2c7ae6248f2b7a0c49f8b5fa8afdc3c3ab702c7e7f162b",
+    "libs/image/pagestore/KisDeferredMetadataCleanup_p.h": "cd0dee4c5d0092f4267066ce4793de47e702abcc71df33b51d8f90abbeb39a75",
+    "libs/image/pagestore/KisDerivedSurfaceCache.cpp": "6bf539a25ce3e754c1f4a0e0adddbe7970780b2d6861c83793afa677a6fe9af2",
+    "libs/image/pagestore/KisDerivedSurfaceCache.h": "61269e10961845c8b10c62cc5a2482836413446696a074fe00ed3b5af73643fb",
+    "libs/image/pagestore/KisDocumentGpuSession.cpp": "6018d7a6e338947d9e4bca47c09d454f67221bb4cc200ed031ab0b37b0fb696a",
+    "libs/image/pagestore/KisDocumentGpuSession.h": "bf5935ef8de8867a74c76174063cabd09d08a2137a585325e7187184b721fb9f",
+    "libs/image/pagestore/KisEvaluationGraphLowerer.cpp": "b920c196496d964b54f077fc37fdc3a20a1027568ec6907e85fc6d1ae3652a4d",
+    "libs/image/pagestore/KisEvaluationGraphLowerer.h": "bc493b18284d3d31ef55b98ccba51142d15b680d596a0db59f4cae0c510224a0",
+    "libs/image/pagestore/KisEvaluationGraphTypes.cpp": "37ea3041332c49fe821c258d70c426de848f19f4dcbec6412ca2d2c15d53aee1",
+    "libs/image/pagestore/KisEvaluationGraphTypes.h": "09e57a3d72e0ca829b84d6e8ce1f62108212902bc33cbae516f7a6c33731eb62",
+    "libs/image/pagestore/KisEvaluationPlanner.cpp": "e3831e26e45f8fc69c919ac9943c8982e0b17b0f46f531a8c7f51f29e7bbea78",
+    "libs/image/pagestore/KisEvaluationPlanner.h": "8ce3ab449989086e33f834b7d7dcd68e8f69e3d44a2a516a33a8796f9dbd7bb0",
+    "libs/image/pagestore/KisImageEpochReferenceModel.cpp": "d7d3874fa51a1c3d6597b31a265bdedba7bad8492853e79672651840e99ac4bf",
+    "libs/image/pagestore/KisImageEpochReferenceModel.h": "8318682bf38c9dea7fae1684c1741efed36ceec89defcb2d14a879bcf6739a06",
+    "libs/image/pagestore/KisMutationStorage_p.h": "802b63f507f978973028447331ce6c0c188e9061adb0408b63271ceec27bd228",
+    "libs/image/pagestore/KisPageByteArray_p.h": "f80a2431058b0fd668f4b5c5dddad34f64439019bc9eb59b4f569de69c84d878",
+    "libs/image/pagestore/KisPageDefaultStorage.cpp": "6b7a821c78c3940d9922bda8983e2988ea7ffce0b3d7342e28a284b1b5d3b013",
+    "libs/image/pagestore/KisPageDefaultStorage_p.h": "d7f54d4f07f2891a8bde18763cb34adbc1ddd1aa3c5e10cc6bc1efc7fed02e6f",
+    "libs/image/pagestore/KisPageHistoryCollector.cpp": "5524a8be727ec8b4a5ad5cbaf0465daad280e94044b0bb2a8f83995c5b8c5192",
+    "libs/image/pagestore/KisPageHistoryCollector_p.h": "99d23ecaa41853bc32c9eb543d12502df083541a674ceb695d2662d1f521eb06",
+    "libs/image/pagestore/KisPageMetadataArena_p.h": "acd1febeff5877a2ad004cb84a760a0920185a3fb3f8495073532fd9554bd7f6",
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp": "ead048a4ea09c1b68847116fe79379bfda65268d2764da4ea0c4b1632d5c9aa8",
+    "libs/image/pagestore/KisPageMetadataCoordinator.h": "c593e96a11cffb1eeab4048c30a718b808caec3882ba44e487f497ab1938fb7d",
+    "libs/image/pagestore/KisPageMetadataCoordinator_p.h": "c01ed443253d3a98ba2f9b14f548910f82bcf1d04b54357e632b716461255b06",
+    "libs/image/pagestore/KisPageMetadataIndex_p.h": "d3f0e6b4cb772ee724033f453849864c75c3315a9ad572666a49be67ec7a0cfb",
+    "libs/image/pagestore/KisPageMetadataReservation_p.h": "0cac3570f50bed2e161033299d980a68f052bb054e134eb5c43f06e9d1419145",
+    "libs/image/pagestore/KisPageOwnerLedger.cpp": "231f4234f99d388f0c99081236689a136774b8ed57c7cf146450f4713395aac7",
+    "libs/image/pagestore/KisPageOwnerLedger.h": "ae492d938c50ca317d6bd8abcfa10677db2083cea17b28113db534df267bc32c",
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp": "05f79c90e694f2cb0844e797df16f9ff757fe2f8d89fce2919c425c536459fec",
+    "libs/image/pagestore/KisPagePublicationCoordinator_p.h": "c91966919dffdad88a5b9be3f794e5527e8a40ee31676495768270fb4f22e5cf",
+    "libs/image/pagestore/KisPageReadCoordinator.cpp": "f38bbc4d6c97df0ffaca4f7cc83be9850e69b5ef3f1d4d706797f82c408bb428",
+    "libs/image/pagestore/KisPageReadCoordinator_p.h": "e30ba322274c4d0bc8b2a7f023f800c848e01ebfd64addbc2b672fd0e44b9e76",
+    "libs/image/pagestore/KisPageReadiness.cpp": "0cd7f3791af90c660adfcc3283b1a65b0b06049e1b246fc126014f0a5e9fa40e",
+    "libs/image/pagestore/KisPageReadiness_p.h": "df1377dee07040a451cdf7dd2b923aa78c70f534b4ac3108fa58abd61ce03b9b",
+    "libs/image/pagestore/KisPageReplicaProvider.cpp": "5b72841639e61e9d499c30be3ae550ac2ef637ea3b8fea5deb53e7289673f100",
+    "libs/image/pagestore/KisPageReplicaProvider.h": "b034f8b74eb248923b8ffbf04ac42eb5676fdda96cf247809ef1d257918bd859",
+    "libs/image/pagestore/KisPageRetirementQueue.cpp": "933bc5563b2f5a5b8471872457bcfc0ba7d5347e79d37a6267078d4ba43f4ee4",
+    "libs/image/pagestore/KisPageRetirementQueue_p.h": "8d5ad81b535c46c02c3aa52c8bf5996e0e925d37122afd512b3fd79825786dfe",
+    "libs/image/pagestore/KisPageRetirementRecord_p.h": "81254cf3166ef422666fea40d0121061399b344d1df90cd0d9e72ede97fa5144",
+    "libs/image/pagestore/KisPageRetirementStorage_p.h": "5edd6e6796b5096dcafe086bd0547c63408234dc7df765d0ed5e7fb83f597f30",
+    "libs/image/pagestore/KisPageSnapshotArray_p.h": "8495a0eb9e9d78ddcf6405578b239f976c4cd4ec7bce0a26a10625fd30fe5278",
+    "libs/image/pagestore/KisPageStateMachine.cpp": "3ec61c33b5b52ba08099b356abb546481cf281324fc64dad2dc9ec6ac0dbd491",
+    "libs/image/pagestore/KisPageStateMachine.h": "3e874a7e1e0d157acf08be98e3614deb6b46c281f76b3fa91cd5f060dbadb845",
+    "libs/image/pagestore/KisPageStateMachine_p.h": "383fdb39fafaf396093dfbbb05862d21fab4dd26086333e2847226d252563db0",
+    "libs/image/pagestore/KisPageStore.cpp": "83fe6c841387178e93848f31777d01c7e02823ddee758c72860e42d8a4f71516",
+    "libs/image/pagestore/KisPageStore.h": "b0fb995992790e65ca6bcde123eb5c833f695929fb95b607af54d6888f94113d",
+    "libs/image/pagestore/KisPageStoreDiagnostics.cpp": "e072a119214cabdb975fa1f9c7421ed407a597dd61e2e87724c10aefeafaf18d",
+    "libs/image/pagestore/KisPageStoreDiagnostics_p.h": "ee5b7326cd572396cabce9fb33712ae8fb82ece64373809d9ee3694682747ad2",
+    "libs/image/pagestore/KisPageStoreIteratorReadScope.cpp": "5cf2ab59b970e637ed9fbaf9ab3f446417030e1e86c437079024cf2fdb931c6a",
+    "libs/image/pagestore/KisPageStoreIteratorReadScope_p.h": "af4ffb3aead2b494a62a8a7917dec875bdcc506850a8fff323394a998b4a123b",
+    "libs/image/pagestore/KisPageStoreMementoManager.cpp": "0a86c25ffd6987abd591044e0a07bb4d8d656059821c33d8da63b23513cd1bab",
+    "libs/image/pagestore/KisPageStoreMementoManager.h": "8b6dd8c92c8ae69d7bab761b693eaf22ca256bcf2596f2e812cbf911f773c724",
+    "libs/image/pagestore/KisPageStoreReclamation.cpp": "0f610d3af1f9a9217d0f63841a19decfd81ae03e08523abb5978eeb5b63fd9bf",
+    "libs/image/pagestore/KisPageStoreReclamation_p.h": "1b7054e7bda52ce426d4c8d8769b2ad4ffa352ed4efe8597cc72dddc00492154",
+    "libs/image/pagestore/KisPageStoreTypes.h": "18ff97d0f763d7cbc9122b48ba042f11e102a484f4d0a5664a59dace8c834ae2",
+    "libs/image/pagestore/KisPageStoreWriteOperation_p.h": "5370759e9e895da6147509a41ec1bd808df778e5e7a72929698f8261138d5364",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "42f0351ea6cdf0593370c6881a2036563701621caf9b1f4da52d0588c72f8cc9",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "1479f81aa582e5e5be1d4de3c75ccdaaf2028f64b701b0bc41ad996a7c0ff881",
+    "libs/image/pagestore/KisPaintExecutionContext.h": "4c9ce6ca338ba19e2152ea68453e942f9734396fd3b2266cf231690923577071",
+    "libs/image/pagestore/KisResidencyController.cpp": "732d7eb9d2069b654ab5428d4eb8904631b9935eb3821d17b1167c541688ff11",
+    "libs/image/pagestore/KisResidencyController.h": "5d299dca2949a372ef13b8038759c1fbbab3b2f715047c02ce31c2cc366cba1c",
+    "libs/image/pagestore/KisSurfaceCodecRegistry.cpp": "2ebbe9f77cafb8fb073d96dd1de475d916a9bd7a788fac6eb83608d4b0ff2a81",
+    "libs/image/pagestore/KisSurfaceCodecRegistry.h": "45f328dc935804030a96ce78926ecfbe2c3956eef80ccfc3e9f39a1a922e0a49",
+    "libs/image/pagestore/KisSurfaceRegistry.cpp": "aa5bf7439e389666e6e916dc1f33ba185efe0d69837f4373ca42aa3732c4536c",
+    "libs/image/pagestore/KisSurfaceRegistry.h": "098c4d4793e8368ed3ddedfdac71d456270be72a414153a770a4260a387a4cf0",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "7ce660df7c9a23f4898b0f1d31d533092d260466b75646e62adf5cfa66fefdfd",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "d2c14025d902be14f371170bff782779c81977870b0e8232ca0c23b9b674906f",
+    "libs/image/pagestore/KisTiles3PageReplicaProvider.cpp": "1ee1a8ed12f2ba2948f9068d48cd5310b004b7cc7728175f164647fa36dd13fb",
+    "libs/image/pagestore/KisTiles3PageReplicaProvider.h": "32a0ba7109d49029c71f4981d59ef38e2113c91f074d5ff6c6181533b864d0f3",
+    "libs/image/pagestore/KisUnifiedSsdPageStore.cpp": "d07f8f1903e7210a053d3774e1ae67d36dbd976934c65d6fa7028aecce0b7a3f",
+    "libs/image/pagestore/KisUnifiedSsdPageStore.h": "964996a0407c3c028afe412b2a893b5dd1887317c20045e7100643a1db618b48",
+    "libs/image/tests/KisCompletionRegistryTest.cpp": "48690976e41f6776718b6752fda9ca88acc94ee0ff411d9a9a87fa9a78192d50",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "60034cb0e85c5436c4d04c32426d2537ed8a9ce9add5099b225948dacfcaedb4",
+    "libs/image/tests/KisPageStoreFoundationTest.cpp": "8b89a7741c6644d2547098a979a10fdf010dd0cbc9e85edb33160b9e4af6b1ed",
+    "libs/image/tests/KisPageStorePhysicalClaimTest.cpp": "57fb33c2a97ab9e31a85ef7c5e6a869380864a2ddc8efc596b0b5aa70b1b6eb4",
+    "libs/image/tests/KisPageStoreReadBaselineTest.cpp": "144d9a1288f822fc10b47c2ce95ccfbb011638e6d821f06ea061179ee52f1392",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp": "f46b3665db00642ab6bd1538fa6d848813256d047e7b0b660e829bac45ef2edd",
+    "libs/image/tests/KisPageStoreResidentReadTest.cpp": "f1b869fa26f8182e2d2515bf0a1ad4441cd8c3f3fa0fd2039f3c4fbe7f5aff8f",
+    "libs/image/tests/kis_transaction_test.cpp": "7bd77959ff46b4159911d8fe9edd341411589953f6bffae13118d6190d7fa68c",
+    "libs/image/tests/pagestore/KisCpuPageReplicaProvider.cpp": "b329ff9e6f6593e5065c2ec481b52b63d6c3688f807985b02883ad62660d7217",
+    "libs/image/tests/pagestore/KisCpuPageReplicaProvider.h": "b6b0b772552d258e96124c34bbf05c8a43629abf5424e0742d274d1b22d98027",
+    "libs/image/tests/pagestore/KisPageStoreCheckpoint.cpp": "fcc54b4da8e74935cea231346db3db8cfacd693bb774193a5efd091fbff7b163",
+    "libs/image/tests/pagestore/KisPageStoreCheckpoint.h": "cbbfa10592c24b120e522af39e0821bc3dda1a3bfa86e3b47642a517039b597c",
+    "libs/image/tiles3/KisTiledExtentManager.cpp": "4e12fa80424825c122797280f62dcc7704b15ff3507641b5076dd63008079dc8",
+    "libs/image/tiles3/KisTiledExtentManager.h": "b72c23242f60785b1aae52ba0598c67103dba60c9fd0e8a39857e8bc8472c147",
+    "libs/image/tiles3/kis_base_iterator.h": "08340eed2241cdf84ed194f9ab881647ad02896b39fe1d53f763ce99946898f2",
+    "libs/image/tiles3/kis_hline_iterator.cpp": "7fd6a78855dc0f798593bf8bdbb46aa1abb60cb40ae81804c0137425005ae8ff",
+    "libs/image/tiles3/kis_hline_iterator.h": "d2d44c9fca27fe7ead23becfeaa5ff3d6990554b6b174896c2328ffce569d9a7",
+    "libs/image/tiles3/kis_random_accessor.cc": "e1cf60f8ea6a15fac2536ce65897f98688677fd5f7ff9326dd22608d7b74b9ca",
+    "libs/image/tiles3/kis_tile_data_store.cc": "f3a94143def6e4d9c46fbe839f4f5c44fb281a3cddbd2ab77f0b82e91577dca1",
+    "libs/image/tiles3/kis_tile_data_store.h": "b8136281a5b614f2d77e0be49ed9167ed6d453b08740ca2edd2b73020c867d54",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "560aa7ddac6840976a7d4770579e4fbcfc4981f9ff5fc07ff321ef0654ca0aff",
+    "libs/image/tiles3/kis_tiled_data_manager.h": "7f587e42201e59f0b4d8e5e26d7a62c52e7175d28be89d17d46bde0593250b26",
+    "libs/image/tiles3/kis_vline_iterator.cpp": "60d37e7ec03c3dd29eafcc6f584bceee62862d3a6c3e0c5ac9b5e3183e6d75aa",
+    "libs/image/tiles3/kis_vline_iterator.h": "fcc3c9fea03b6f7c0e13271f33ee9adf6d7bc7d5ecd2cc2f0f1a1ae38c4f21f2",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "1c18323683e3e34e35ee3632501c533dbbcd160e95f158eef42a9671e5d6f30f",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.h": "8be10aafc9ae380212938a23ccaa48b415f0b7a28c79ee5e62f05a001aed9b8b",
+    "libs/ui/tests/freehand_stroke_test.cpp": "57387f67212e33250b83014f8590af32532348da36b801a8f140e58519fa8fc5",
+    "libs/ui/tests/matched_freehand_baseline_test.cpp": "0a5408f683dba6a71e7db70eb898e26644822cf56b11c26e47e5ceeadf809a71",
+    "libs/vulkanbackend/KisVulkanPageReplicaProvider.cpp": "02740f726b2e36a5d22330bdf109b5f158147fedda911db95387b5797cbdfd26",
+    "libs/vulkanbackend/KisVulkanSubmissionCoordinator.cpp": "2049ca3efa0711b161bb916a55cc820c70f35a81bf7138cb3e23b5e8c94ebc52",
+    "libs/vulkanbackend/KisVulkanSubmissionCoordinator.h": "aad4c3f95e37d827c9bef4d1afa99a8c6e49375829ae09bfa8e9a4d82211f16c",
+    "libs/vulkanbackend/tests/KisVulkanFoundationContractsTest.cpp": "8a2061454b5b1d6513ff7fd3c625049d086ae711759b7f8752af6bb40ee10386",
+    "sdk/tests/matched_freehand_baseline.h": "deacfdc9e6853c7b66b2fd9c5b05af51b1aeb7a9a70155353501e743fe212f9d",
+    "sdk/tests/stroke_testing_utils.cpp": "8de12fd941dc0233a5089ddeca4dadd5231e458cbb166842c45b9f9d0d839b54"
+  },
+  "runtime": {
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest": "32c27e4a5f760613ad0899d2e1702bfde9a047224c7932da010291d713ce08ed",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest": "f8d00ca55b17572b2c14a1b7e2b5574bde4afbfd10a85e8349dbbe92b62842c6",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "8e8fa9f1f031c98fd57885d00c396954bb7533e77b4419ef0d8a897c26e9c643",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest": "880463722ab84dd513305059706419530cc5777bb54d316db0668bd689cb6f46",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "c6f836501f79bedc141ae27bce4148362db45e1dba275b2f8bc9989bfdd0a4d0",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReadBaselineTest": "2b22c946f74cfc730f7f091c57e3bd6c1295aac0fe36b91eb8d047342a7ddc2e",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest": "de69fefd3ba799cce7a42bbed872a31b13ba856d54c9d4ac7ffe756eb20cc5f9",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "0f861f24510c359e9983913fa556713ebc2c4c343f86a6fe6c34046f02b4b5d8",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest": "65f4986b0a02203808bcf1269f76dc1701f97f5d9a6bf033e0034d83bd3dd86c",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "1438c7ade64710e9e22c55fc271bb2fcdc9aaf5e2ee5a1ad7ec05938dd496f10",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_transaction_test": "c0e632409f1de1b4efedcf9252f6935c5adc7ea73c0d386bfd3fe21b5aef6c3a",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/krita_colorspaces_extensions.so": "d093d396d5a4c18591bfa92f88ff0ca114b12e2cf34e7d3f0126dc746854db94",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritadefaultpaintops.so": "472fb69eea891e31ee0812c24974128b2eedbd0894056e870e98c9f440871237",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kritalcmsengine.so": "12b1c221ad6e3f9e3f924a0c31320980d85f3c30cb9f971d50d691350b230ffb",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritacommand.21.0.0.dylib": "4fe95cb2ee66cb9cad4c878f058acb37f0d198a2d00a6df5e9b6150a068268a3",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaflake.21.0.0.dylib": "a541b441dd2da683163402f0ade530e68c696cf88244039a796b6f1367788e06",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaglobal.21.0.0.dylib": "19cd6d6ace0fe09ac16fbdee9dee76bc93ff71a0327d90ca3b1489e14da124ca",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "1a377355c768d5c392e187f8aaf1fd82ed4468a8458449af959f5bd7450e48b2",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimpex.21.0.0.dylib": "8c8fa1288c6e4feeeadab471e0f56ef6f4a6dd2678a0312415ad4a1381af2055",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritalibbrush.21.0.0.dylib": "92f496d49168b999ef7faddd63dcfaa0b162f37e0dc20d1a59898c0f80011b32",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritalibpaintop.21.0.0.dylib": "2090e08a7d014340b61203eea6d66e37bd5b707ad78b893b76bc40528445c4c2",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamacosutils.21.0.0.dylib": "e5964681416cc88883aa3b0a1ef3684caf4029b7fea081334b9ab1b10f1e92b9",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritametadata.21.0.0.dylib": "92942ccc3feb0faaf358995ae7640d2e4909bdc737fc3baa991a33ca3cbbf961",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamultiarch.21.0.0.dylib": "b8adcf8275eade99beac58d76a5e2de261953bb1ef109e14aa6d6c5e6048e25e",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapigment.21.0.0.dylib": "0c5363b4bd9ab1237a7679a1f3f4ecee5c55aeb2383c20260dba5059bffff6ba",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaplugin.21.0.0.dylib": "1180f53891132beedc2bc2ad603b31ab0d6b0ee862d56793038e6309ed6723fe",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapsdutils.21.0.0.dylib": "70aa0870bfa4468c50ec5253f2deb7dc87c4980f67a8f055c4dc5b0989fb05e5",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresources.21.0.0.dylib": "89009c2e9cba00afa36cae994efba1b5333773751fb47fb1261cb8c4464baf2d",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresourcewidgets.21.0.0.dylib": "2d4bde81c42a5f14edd24c5b8391d6d28a45f9230574b874495e1720f171b653",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritastore.21.0.0.dylib": "229514294d6eebb7777821a94254f8719bc63ddbbf5e9fb5ad0f86d7df5c07e0",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaui.21.0.0.dylib": "02b01ef5d24aacd2174f67a782278c286f0f2590461ab023c67860cec702492f",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaversion.21.0.0.dylib": "b9e737709499c41866bdf1b443872eb6c8894dd88860725f9d0a3fdae26d51f9",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgets.21.0.0.dylib": "e60f4a1a6f70d6577937a6529952af1ef0888d97232641ffcf9a562d94beb495",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgetutils.21.0.0.dylib": "53e7ff60e840f5e4b88ad502dcd5c9dd807d5e866d9afa29cbd8b2233c1c7ad3",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtConcurrent.framework/Versions/A/QtConcurrent": "a5832725aa72e37d64299e8248b4eef9364af1cd284b6eb25155f81c887d6fdb",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Versions/A/QtCore5Compat": "6d2fd4e23668c385e3a10fda088246cf1f3e03dce272a7ba154251cc6be8bcee",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Versions/A/QtGui": "696b8b068c854b2248d06c383a42488dd380d997ec7263e0bfaee28301915d64",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtNetwork.framework/Versions/A/QtNetwork": "44e2760636ff0cc102ef1d201352caf3bf2a23840e62d7be56ab044738f39a75",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Versions/A/QtOpenGL": "fc679fb3dd862c9666f6c4a70ec38367eda49e26453936d44663c97d06d9b518",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets": "38947912b141913c60b2f0d0c09f4f39111b9c8906b4af2f9a514fbe51bd4957",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Versions/A/QtPrintSupport": "7b7bb861da56d9a78df54bfdcf1ea0cfb94f876fe05a007daf957bf23ef6c40b",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Versions/A/QtSql": "b58338f7c91be76b56e878b21acf974611a80ecec01e0a7ed4163c451b3c6127",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Versions/A/QtSvg": "ea8e26a18f25e00a213fa3abe36737d966995d5620093bc2fb2ebad55e3a1d20",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtSvgWidgets.framework/Versions/A/QtSvgWidgets": "daf18bdfa7faad133821ece919daae939d9e79bc62d75554cd4bd0fa8ce8325b",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest": "06b88fe8a8396e095a1eae6ea8c1ab6ecf78f3ada3d288d8bf3a92b4d986e92d",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Versions/A/QtWidgets": "b42b88fdeea4a8372a08477dad3bd208ae51ff66b3d84e517cca1331c15de33e",
+    "/Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Versions/A/QtXml": "fb29d57096668771a05ae89d0163fa1ad967accfc76d53aafd8d2b15975d0343",
+    "/Users/apple/krita_gpu/krita/_install/lib/libHalf-2_5.25.0.7.dylib": "11eec6d588cd21ca673edc98420b3ce45207906f7be5e830128e58c96157487d",
+    "/Users/apple/krita_gpu/krita/_install/lib/libIex-2_5.25.0.7.dylib": "249642c3babd270a1a9b58f836fde4de6ce0f11fa5ec7fbaef66001b256c0589",
+    "/Users/apple/krita_gpu/krita/_install/lib/libIexMath-2_5.25.0.7.dylib": "de9817f5b43df10eb4662c58feb594a1e08ef6b79ddd5a79f99ac3fc7598c603",
+    "/Users/apple/krita_gpu/krita/_install/lib/libIlmImf-2_5.26.0.0.dylib": "8f6324662ffbb35f35c60f28000749d41b77c865510b48a383cacdedffd707a1",
+    "/Users/apple/krita_gpu/krita/_install/lib/libIlmThread-2_5.25.0.7.dylib": "1a5076131207ba05d4e6b962f045c42c828363a16ee4efa2597952bba141e828",
+    "/Users/apple/krita_gpu/krita/_install/lib/libImath-2_5.25.0.7.dylib": "393f57e33139793c2314c7b54b5a147e6c3ff772083eb7d8ad74f1b081a8f15d",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6Archive.6.7.0.dylib": "bac8563ff98ce582637dfaf938ec60d1f2aa89c181c98fe1bd37e3514447aa1f",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6Codecs.6.7.0.dylib": "eedb2ddc6d6b7d2ebe734610258a90cd29b9eb8ad235da25e64a6be92dae6629",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6ColorScheme.6.7.0.dylib": "923cf937f6b139bb94f477d7e5afc85d169695924bc5d9ddff079b5c92efa84f",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6Completion.6.7.0.dylib": "0db6af80207e318c9db0391968935c12e96ac89dca7331f580f24c0f27b46830",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigCore.6.7.0.dylib": "e2db46d081487f1c4499f6cdd947ba0f901b51441f4f726fbe4aef2e23bbf900",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigGui.6.7.0.dylib": "7874d60335f3c9e12abb81153e7b060869e123aa4e0300030d171425f3d159f5",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6CoreAddons.6.7.0.dylib": "89e7cd197f46b2ff8215dbe84da7bf279a91ebeedd26a9a5d84fa2bf1135f8ab",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6GuiAddons.6.7.0.dylib": "c4d3976e0925cb61eae8fea3dddbd72b7fc03524f74ba78a35e5a270de8189f7",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6I18n.6.7.0.dylib": "1d94fbcfd6e2245c2b9a5dc0fd8f66abfab93175ba687e4a2e71b1eb7d2d20ab",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6ItemViews.6.7.0.dylib": "8d5cad67629ec5eef7c4f733b57ff38627142c7a2979f9bf4ee84fba5ef9b4f6",
+    "/Users/apple/krita_gpu/krita/_install/lib/libKF6WidgetsAddons.6.7.0.dylib": "dbcd0ea8096165f0718212e3fda8dcdabd63603bc6efa86201fc008b25e86e63",
+    "/Users/apple/krita_gpu/krita/_install/lib/libSDL2-2.0.0.dylib": "2479aef4ad661a858440c4153e4399dd56453eff63be262311b05b01eabbd764",
+    "/Users/apple/krita_gpu/krita/_install/lib/libexpat.1.8.8.dylib": "2f50ed3a34ec650ceff0663d7db8e1107e1934d8e99bacfe65b8bf03277d1ebf",
+    "/Users/apple/krita_gpu/krita/_install/lib/libfftw3.3.dylib": "f0e7faf61df13481b1f67e0f4ca48ace70eaaf0658b2eecab0f90be2c7e46238",
+    "/Users/apple/krita_gpu/krita/_install/lib/libfontconfig.1.dylib": "822c81ae2cce24c9f55bf774ee69522f98c5174802426d3c40f05f6cd12a534e",
+    "/Users/apple/krita_gpu/krita/_install/lib/libfreetype.6.18.3.dylib": "8687c146500e3fcb4b6f4819e4eb9365e42e0f5ec0ca50e281dc7d2ef8cf45d5",
+    "/Users/apple/krita_gpu/krita/_install/lib/libfribidi.0.dylib": "5e99aa07f5b9f75132fe5b55691e06432297edf43d3c710c8b6b952dbdc6ac66",
+    "/Users/apple/krita_gpu/krita/_install/lib/libgsl.dylib": "5ade92bcd56d0a837087f4dc97ff83d1797ff2449ec3943894a833fcb81617dd",
+    "/Users/apple/krita_gpu/krita/_install/lib/libgslcblas.dylib": "7e7df8ee3abc256088b09ac0857258d4768a0fb9d65c93fdd597e97f02bce483",
+    "/Users/apple/krita_gpu/krita/_install/lib/libharfbuzz.0.dylib": "223f85f420de9d14fe95cadc59bf811ad83b83bf33e540dcc2f4415c2ccad4ad",
+    "/Users/apple/krita_gpu/krita/_install/lib/libicudata.72.dylib": "b6ea871dc90f4ae58d92d6352483cafdde2eb9d50fbc46696030e62890b8eaa6",
+    "/Users/apple/krita_gpu/krita/_install/lib/libicui18n.72.dylib": "c2bf58e9638e2f9de001cc8a9a96cf739583abf8ad0c4d6d65fc83b68b518678",
+    "/Users/apple/krita_gpu/krita/_install/lib/libicuuc.72.dylib": "0c9e9af333b5ec91d5a2f4cc4e76fc7140b06bbf2434e2c6cdd7513ede7b2931",
+    "/Users/apple/krita_gpu/krita/_install/lib/libintl.8.dylib": "14b2139031e618fa2325b01e9943843686efd1a232818adb62a56b3e38c3086e",
+    "/Users/apple/krita_gpu/krita/_install/lib/libjpeg.62.3.0.dylib": "0a232056b3d6f858b1752ae8cfcf802c62c53a803fba0eda81e4e75bcb385506",
+    "/Users/apple/krita_gpu/krita/_install/lib/liblcms2.2.12.dylib": "94a3968fed31cdf942b5adbc0548c8e6facf9047525a5262cfcc23e181e01b1d",
+    "/Users/apple/krita_gpu/krita/_install/lib/liblcms2_fast_float.2.12.dylib": "dcbfeea3be3ac9881fc73f2fd32dfa96d836647ad0c68f4bcdfaf054b8354eac",
+    "/Users/apple/krita_gpu/krita/_install/lib/libmlt++-7.7.28.0.dylib": "f2e6fc820775eb25b2af865847dc004915b664118402083d37dde4c4977b78c6",
+    "/Users/apple/krita_gpu/krita/_install/lib/libmlt-7.7.28.0.dylib": "c8f43c47a70c07495a260297d596d468de2c08061e6bd7dc52c6c5b59c690d4f",
+    "/Users/apple/krita_gpu/krita/_install/lib/libpng16.16.51.0.dylib": "3467973a082023e9ac02723a65ee12fcd0297b9cf7ae1209f4679e20f0764e52",
+    "/Users/apple/krita_gpu/krita/_install/lib/libquazip1-qt6.1.4.dylib": "2faf1fcc4bd8b20e9520ea8b93e2cc5d93aeb9c43d65c155c6b03ef2aee1d6ca",
+    "/Users/apple/krita_gpu/krita/_install/lib/libz.1.3.1.dylib": "002f9b2efb64eac916c424d158058da4443d79c9c7720c71f3804c2034b88a5c",
+    "/Users/apple/krita_gpu/krita/_install/lib/png.framework/Versions/1.6.51/png": "88b63245f58cbe3e9d02236ad46aa3bf0c365f409466272befa1881c9a7971b2",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ani.dylib": "2e403a7e63806d4c0bbae8d85c5f11ccdc6f095d720aade7d03a0d9f020986c4",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_eps.dylib": "47ca5ec5777066c8791b6c50c91b4a45cc372e3cbecf93c90539f0bc689b859f",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_hdr.dylib": "8acf6891dfa64b962a021284284ee417c4ee07daacf0ce2d3535ea8ebd6decf9",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_kra.dylib": "286c9d91f3589c2e402a09c7a9ac226bec0bea4b5b793be229cdf5e5a616b811",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ora.dylib": "ba39e310e4ba43bafc09c10043ee90026975e946e48e8725ba81261a68b2631a",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pcx.dylib": "074e62dbc6d97600ed1eead60a6a651c423d2533cf136fa5e56c40b626c9f287",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pfm.dylib": "d1ae3fff2baef047326672cd14654b779eb2327f6f2d9343079b3292d3c9c363",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pic.dylib": "72037fec76dccfd485eaee0fb2599856ba0203d751783522260f908818cb3a1a",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_psd.dylib": "0bebad6addf8f41f26a97dbd15dad6aad6c6174bf23f621ea6078605902296ff",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_pxr.dylib": "24b1d1c8587e341d43033012f4fbede17779a3807cdae57013b5fb406df507a1",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_qoi.dylib": "1d9134df083df5be089cf373e9f0b998fce0d7104fee49b7396c4e51d74246cb",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_ras.dylib": "07ef4099da64049a3eea9b05bb2f7882e967f00a4f83adf82c9249b0e5ae0568",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_rgb.dylib": "f98609ce14c7e4f77c6fce552af93ba11dd7cb22ead37aa8cf646d03d5e167de",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_tga.dylib": "2d472fbcba409b276b1d398dab6d3226cbaaecc0fb1eae844054bc62beb5bd40",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/kimg_xcf.dylib": "cc1f1a602eb4f664eb806faf85e075ef19552794effe7b4cf0bdb038f51a19c1",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqgif.dylib": "20b6d4367703fd29740dc8e8ab38b73c2f4c6b859bb08ded3f0b494cd2ec24e6",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqicns.dylib": "e0b08a10346630689091ae2f15c4d58d8a8a6e555fb3db5db88d66a01c758ddc",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqico.dylib": "8813e67728d45b94c686d5c966987932ecf48749858a185adf5f2bfa7591229d",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqjpeg.dylib": "8f3118105cee5865d4e5dd39e5444f1764952f5af8833aa930ca383e783ae672",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacheif.dylib": "20ea84aaeda0aaa19e5197d28e97253a8cf7119513599f611e3f90164bd0a66e",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqmacjp2.dylib": "5a9b845d38d291b4cf53255389f991d18af7ded6936bb5edb7209a4db69d7ac5",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqsvg.dylib": "f3754bc2d6170fa62e5056d63c50d10c7cfdde4cdb17baf2b1386eb46b95c3b6",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqtiff.dylib": "067d8be03a9349062dbdedad2ec4290b74867865345f37bbb5f6783127227cdf",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwbmp.dylib": "3422e28eebfae6457bb3e280643c8f8fd22339bd1ceeab99dc59c148425ba6a2",
+    "/Users/apple/krita_gpu/krita/_install/plugins/imageformats/libqwebp.dylib": "5575c2bd0860d3c38fcccbe3d329180a57aab13c5ceb0b97a94570883be25d4f",
+    "/Users/apple/krita_gpu/krita/_install/plugins/platforms/libqoffscreen.dylib": "eed8ec727309e2f102c9f148a58f8e4eb6a5788c562bb8e46f8320f50295b5a3"
+  },
+  "configs": {
+    "CMakeCache.txt": "c6f57b7ee68b26347b76a8b225e9e1576e88d23740b4845c103f343b20fac806",
+    "compile_commands.json": "8267c136ef35c2f744c148cae1ca507b9c3895c2de142d3e4a39159f32659cbe",
+    "KoTestConfig.h": "59b4f22d0aeb9fbddbf8fe932470226ad83a941d19c38355b5d51afae8a9ae69",
+    "config-limit-long-tests.h": "9f73ca46b8b76a34dc91d5bf36fee1048fcaed3f9ed6b4b9417a67c373bec1c3"
+  },
+  "audit": {
+    "intrusion-manifest.json": "c02c33e287cd6624a4c9a8150896736009a144158e737e5e3af7de0221072ce9",
+    "state-ownership.json": "ec47403afd0778a8b8f2a5621c35bd089334fb41a8beddcce255501b8f1bd7ea",
+    "runtime-census.json": "860616934e3f5ef80b3d730078ad8e28f66bad6c8ee0f5e6b52dabddd8a02051",
+    "baseline-source.json": "05b1ddcbd7438edae7a1b6bc15d9ab8c02bd07ebd058a9744069bcd986aa4e66",
+    "reverse-callgraph.json": "980807141af340f28277040f145152142fd11d544f94233e4bec17c8e56d5902"
+  },
+  "results": {
+    "matrix-03": {
+      "processes": 22,
+      "passed": 8086
+    },
+    "matrix-pressure-01": {
+      "processes": 6,
+      "passed": 72
+    },
+    "probe-07-arm64": {
+      "exit_code": 0,
+      "result_lines": [
+        "LEDGER_TOTAL label=cold-root live=1456 reserved=0 sum_bucket_peaks=1456",
+        "HEAP label=cold-root live=132053 paid_live=1400 peak=143197 paid_peak=1400 nodes=189 paid_nodes=1 peak_nodes=388 allocations=1296 frees=1107 overflow=0",
+        "HEAP label=positive-control-live live=144398 paid_live=1400 peak=144398 paid_peak=1400 nodes=190 paid_nodes=1 peak_nodes=388 allocations=1297 frees=1107 overflow=0",
+        "HEAP label=positive-control-free live=132053 paid_live=1400 peak=144398 paid_peak=1400 nodes=189 paid_nodes=1 peak_nodes=388 allocations=1297 frees=1108 overflow=0",
+        "CONTINUOUS family=cow attempt=0 injected=1 refused=1",
+        "CONTINUOUS family=cow attempt=1 injected=1 refused=1",
+        "CONTINUOUS family=cow attempt=2 injected=1 refused=1",
+        "LEDGER_TOTAL label=cow-live live=1626 reserved=0 sum_bucket_peaks=1626",
+        "HEAP label=cow-live live=132239 paid_live=1570 peak=144398 paid_peak=1570 nodes=194 paid_nodes=5 peak_nodes=388 allocations=1308 frees=1114 overflow=0",
+        "LEDGER_TOTAL label=last-weak-live live=2050 reserved=0 sum_bucket_peaks=2050",
+        "HEAP label=last-weak-live live=132663 paid_live=1994 peak=144398 paid_peak=1994 nodes=197 paid_nodes=8 peak_nodes=388 allocations=1311 frees=1114 overflow=0",
+        "LEDGER_TOTAL label=last-weak-free live=2002 reserved=0 sum_bucket_peaks=2050",
+        "HEAP label=last-weak-free live=132615 paid_live=1946 peak=144398 paid_peak=1994 nodes=196 paid_nodes=7 peak_nodes=388 allocations=1311 frees=1115 overflow=0",
+        "LEDGER_TOTAL label=after-operation-sweep live=1101400 reserved=0 sum_bucket_peaks=6435451",
+        "HEAP label=after-operation-sweep live=1294501 paid_live=1051568 peak=6919307 paid_peak=2186875 nodes=288 paid_nodes=7 peak_nodes=3040 allocations=721309 frees=721021 overflow=0",
+        "SWEEP faults=224 positive_controls=3 absent_sites=1",
+        "LEDGER_TOTAL label=runtime-live live=1101608 reserved=0 sum_bucket_peaks=6435451",
+        "HEAP label=runtime-live live=1294709 paid_live=1051776 peak=6919307 paid_peak=2186875 nodes=290 paid_nodes=9 peak_nodes=3040 allocations=721311 frees=721021 overflow=0",
+        "LEDGER_TOTAL label=runtime-stopped-late-delay live=3816 reserved=0 sum_bucket_peaks=6435451",
+        "HEAP label=runtime-stopped-late-delay live=246069 paid_live=3136 peak=6919307 paid_peak=2186875 nodes=287 paid_nodes=6 peak_nodes=3040 allocations=721315 frees=721028 overflow=0",
+        "LEDGER_TOTAL label=runtime-stopped live=3440 reserved=0 sum_bucket_peaks=6435451",
+        "HEAP label=runtime-stopped live=245693 paid_live=2760 peak=6919307 paid_peak=2186875 nodes=285 paid_nodes=4 peak_nodes=3040 allocations=721315 frees=721030 overflow=0",
+        "HEAP label=before-app-and-static-destruction live=242981 paid_live=48 peak=6919307 paid_peak=2186875 nodes=282 paid_nodes=1 peak_nodes=3040 allocations=721315 frees=721033 overflow=0",
+        "HEAP label=after-static-destructors live=245758 paid_live=0 peak=6919307 paid_peak=2186875 nodes=129 paid_nodes=0 peak_nodes=3040 allocations=721320 frees=721191 overflow=0"
+      ]
+    },
+    "probe-07-x86_64": {
+      "exit_code": 0,
+      "result_lines": [
+        "LEDGER_TOTAL label=cold-root live=1456 reserved=0 sum_bucket_peaks=1456",
+        "HEAP label=cold-root live=130902 paid_live=1400 peak=142046 paid_peak=1400 nodes=186 paid_nodes=1 peak_nodes=385 allocations=1293 frees=1107 overflow=0",
+        "HEAP label=positive-control-live live=143247 paid_live=1400 peak=143247 paid_peak=1400 nodes=187 paid_nodes=1 peak_nodes=385 allocations=1294 frees=1107 overflow=0",
+        "HEAP label=positive-control-free live=130902 paid_live=1400 peak=143247 paid_peak=1400 nodes=186 paid_nodes=1 peak_nodes=385 allocations=1294 frees=1108 overflow=0",
+        "CONTINUOUS family=cow attempt=0 injected=1 refused=1",
+        "CONTINUOUS family=cow attempt=1 injected=1 refused=1",
+        "CONTINUOUS family=cow attempt=2 injected=1 refused=1",
+        "LEDGER_TOTAL label=cow-live live=1626 reserved=0 sum_bucket_peaks=1626",
+        "HEAP label=cow-live live=131088 paid_live=1570 peak=143247 paid_peak=1570 nodes=191 paid_nodes=5 peak_nodes=385 allocations=1305 frees=1114 overflow=0",
+        "LEDGER_TOTAL label=last-weak-live live=2050 reserved=0 sum_bucket_peaks=2050",
+        "HEAP label=last-weak-live live=131512 paid_live=1994 peak=143247 paid_peak=1994 nodes=194 paid_nodes=8 peak_nodes=385 allocations=1308 frees=1114 overflow=0",
+        "LEDGER_TOTAL label=last-weak-free live=2002 reserved=0 sum_bucket_peaks=2050",
+        "HEAP label=last-weak-free live=131464 paid_live=1946 peak=143247 paid_peak=1994 nodes=193 paid_nodes=7 peak_nodes=385 allocations=1308 frees=1115 overflow=0",
+        "LEDGER_TOTAL label=after-operation-sweep live=1068640 reserved=0 sum_bucket_peaks=6402627",
+        "HEAP label=after-operation-sweep live=1324635 paid_live=1051568 peak=6949457 paid_peak=2186795 nodes=276 paid_nodes=7 peak_nodes=3028 allocations=719889 frees=719613 overflow=0",
+        "SWEEP faults=224 positive_controls=3 absent_sites=1",
+        "LEDGER_TOTAL label=runtime-live live=1068848 reserved=0 sum_bucket_peaks=6402627",
+        "HEAP label=runtime-live live=1324843 paid_live=1051776 peak=6949457 paid_peak=2186795 nodes=278 paid_nodes=9 peak_nodes=3028 allocations=719891 frees=719613 overflow=0",
+        "LEDGER_TOTAL label=runtime-stopped-late-delay live=3824 reserved=0 sum_bucket_peaks=6402627",
+        "HEAP label=runtime-stopped-late-delay live=276203 paid_live=3136 peak=6949457 paid_peak=2186795 nodes=275 paid_nodes=6 peak_nodes=3028 allocations=719895 frees=719620 overflow=0",
+        "LEDGER_TOTAL label=runtime-stopped live=3448 reserved=0 sum_bucket_peaks=6402627",
+        "HEAP label=runtime-stopped live=275827 paid_live=2760 peak=6949457 paid_peak=2186795 nodes=273 paid_nodes=4 peak_nodes=3028 allocations=719895 frees=719622 overflow=0",
+        "HEAP label=before-app-and-static-destruction live=273115 paid_live=48 peak=6949457 paid_peak=2186795 nodes=270 paid_nodes=1 peak_nodes=3028 allocations=719895 frees=719625 overflow=0",
+        "HEAP label=after-static-destructors live=275883 paid_live=0 peak=6949457 paid_peak=2186795 nodes=117 paid_nodes=0 peak_nodes=3028 allocations=719900 frees=719783 overflow=0"
+      ]
+    },
+    "probe-cold-02-arm64": {
+      "exit_code": 0,
+      "result_lines": [
+        "HEAP label=cold-preparations-complete live=1182202 paid_live=1050832 peak=1182410 paid_peak=1051040 nodes=195 paid_nodes=5 peak_nodes=388 allocations=1410 frees=1215 overflow=0",
+        "HEAP label=cold-stopped-before-static live=131370 paid_live=0 peak=1182410 paid_peak=1051040 nodes=190 paid_nodes=0 peak_nodes=388 allocations=1410 frees=1220 overflow=0",
+        "COLD_RESULT failures=16 controls=3",
+        "HEAP label=after-static-destructors live=110107 paid_live=0 peak=1182410 paid_peak=1051040 nodes=77 paid_nodes=0 peak_nodes=388 allocations=1410 frees=1333 overflow=0"
+      ]
+    },
+    "probe-cold-02-x86_64": {
+      "exit_code": 0,
+      "result_lines": [
+        "HEAP label=cold-preparations-complete live=1181059 paid_live=1050832 peak=1181267 paid_peak=1051040 nodes=192 paid_nodes=5 peak_nodes=385 allocations=1407 frees=1215 overflow=0",
+        "HEAP label=cold-stopped-before-static live=130227 paid_live=0 peak=1181267 paid_peak=1051040 nodes=187 paid_nodes=0 peak_nodes=385 allocations=1407 frees=1220 overflow=0",
+        "COLD_RESULT failures=16 controls=3",
+        "HEAP label=after-static-destructors live=108939 paid_live=0 peak=1181267 paid_peak=1051040 nodes=74 paid_nodes=0 peak_nodes=385 allocations=1407 frees=1333 overflow=0"
+      ]
+    },
+    "tsan-04": {
+      "runs": [
+        {
+          "name": "control-build",
+          "command": [
+            "clang++",
+            "-std=c++17",
+            "-arch",
+            "arm64",
+            "-g",
+            "-fsanitize=thread",
+            "-fno-omit-frame-pointer",
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-control.cpp",
+            "-o",
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-04/control"
+          ],
+          "pid": 2001,
+          "exit_code": 0,
+          "totals": [],
+          "reports": []
+        },
+        {
+          "name": "control-clean",
+          "command": [
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-04/control"
+          ],
+          "pid": 2009,
+          "exit_code": 0,
+          "totals": [],
+          "reports": []
+        },
+        {
+          "name": "control-race",
+          "command": [
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-04/control",
+            "race"
+          ],
+          "pid": 2028,
+          "exit_code": 66,
+          "totals": [],
+          "reports": [
+            "WARNING: ThreadSanitizer: data race (pid=2028)",
+            "SUMMARY: ThreadSanitizer: data race tsan-control.cpp:12 in main::$_0::operator()() const"
+          ]
+        },
+        {
+          "name": "KisPageStoreReferenceTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStoreReferenceTest",
+            "preparedMetadataClaimsDoNotLoseConcurrentReaders",
+            "concurrentRetirementDebtRefusalPreservesPage",
+            "-nocrashhandler"
+          ],
+          "pid": 2039,
+          "exit_code": 0,
+          "totals": [
+            "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 943ms"
+          ],
+          "reports": []
+        }
+      ],
+      "global_verdict": "Inconclusive"
+    },
+    "tsan-05": {
+      "runs": [
+        {
+          "name": "control-build",
+          "command": [
+            "clang++",
+            "-std=c++17",
+            "-arch",
+            "arm64",
+            "-g",
+            "-fsanitize=thread",
+            "-fno-omit-frame-pointer",
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-control.cpp",
+            "-o",
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-05/control"
+          ],
+          "pid": 3220,
+          "exit_code": 0,
+          "totals": [],
+          "reports": []
+        },
+        {
+          "name": "control-clean",
+          "command": [
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-05/control"
+          ],
+          "pid": 3234,
+          "exit_code": 0,
+          "totals": [],
+          "reports": []
+        },
+        {
+          "name": "control-race",
+          "command": [
+            "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-05/control",
+            "race"
+          ],
+          "pid": 3238,
+          "exit_code": 66,
+          "totals": [],
+          "reports": [
+            "WARNING: ThreadSanitizer: data race (pid=3238)",
+            "SUMMARY: ThreadSanitizer: data race tsan-control.cpp:12 in main::$_0::operator()() const"
+          ]
+        },
+        {
+          "name": "KisCompletionRegistryTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisCompletionRegistryTest",
+            "-nocrashhandler"
+          ],
+          "pid": 3261,
+          "exit_code": 0,
+          "totals": [
+            "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 12395ms"
+          ],
+          "reports": []
+        },
+        {
+          "name": "KisPageStoreFoundationTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStoreFoundationTest",
+            "-nocrashhandler"
+          ],
+          "pid": 3388,
+          "exit_code": 0,
+          "totals": [
+            "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 72ms"
+          ],
+          "reports": []
+        },
+        {
+          "name": "KisPageStorePhysicalClaimTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStorePhysicalClaimTest",
+            "-nocrashhandler"
+          ],
+          "pid": 3413,
+          "exit_code": 0,
+          "totals": [
+            "Totals: 393 passed, 0 failed, 0 skipped, 0 blacklisted, 888ms"
+          ],
+          "reports": []
+        },
+        {
+          "name": "KisPageStoreResidentReadTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStoreResidentReadTest",
+            "-nocrashhandler"
+          ],
+          "pid": 3441,
+          "exit_code": 66,
+          "totals": [],
+          "reports": [
+            "WARNING: ThreadSanitizer: double lock of a mutex (pid=3441)",
+            "SUMMARY: ThreadSanitizer: double lock of a mutex KisPageRetirementQueue.cpp:553 in KisPageRetirementQueue::retireBatch(KisPageRetirementRecords&)"
+          ]
+        },
+        {
+          "name": "KisPageStoreReadBaselineTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStoreReadBaselineTest",
+            "-nocrashhandler"
+          ],
+          "pid": 3470,
+          "exit_code": 66,
+          "totals": [],
+          "reports": [
+            "WARNING: ThreadSanitizer: double lock of a mutex (pid=3470)",
+            "SUMMARY: ThreadSanitizer: double lock of a mutex KisPageHistoryCollector.cpp:254 in KisPageHistoryCollector::prepareTask(KisBackingBudgetController&)::$_2::__invoke(void*)"
+          ]
+        },
+        {
+          "name": "KisPageStoreReferenceTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStoreReferenceTest",
+            "-nocrashhandler"
+          ],
+          "pid": 3758,
+          "exit_code": 66,
+          "totals": [],
+          "reports": [
+            "WARNING: ThreadSanitizer: double lock of a mutex (pid=3758)",
+            "SUMMARY: ThreadSanitizer: double lock of a mutex KisPageStoreReclamation_p.h:50 in KisPageReclamationTask<KisPageHistoryCollector::prepareTask(KisBackingBudgetController&)::$_1>::invoke()"
+          ]
+        },
+        {
+          "name": "KisPageStoreCpuMutationTest",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStoreCpuMutationTest",
+            "-nocrashhandler"
+          ],
+          "pid": 5560,
+          "exit_code": 66,
+          "totals": [],
+          "reports": [
+            "WARNING: ThreadSanitizer: double lock of a mutex (pid=5560)",
+            "SUMMARY: ThreadSanitizer: double lock of a mutex KisPageRetirementQueue.cpp:553 in KisPageRetirementQueue::retireBatch(KisPageRetirementRecords&)"
+          ]
+        },
+        {
+          "name": "kis_tiled_data_manager_test",
+          "command": [
+            "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/kis_tiled_data_manager_test",
+            "-nocrashhandler"
+          ],
+          "pid": 5571,
+          "exit_code": 66,
+          "totals": [],
+          "reports": [
+            "WARNING: ThreadSanitizer: double lock of a mutex (pid=5571)",
+            "SUMMARY: ThreadSanitizer: double lock of a mutex KisPageStoreReclamation_p.h:50 in KisPageReclamationTask<KisPageRetirementQueue::prepareTask()::$_1>::invoke()"
+          ]
+        }
+      ],
+      "global_verdict": "Inconclusive"
+    }
+  },
+  "tsan_build_cache": "975f68a0bcb4ec2caee052f053e2c20138f146cb5d35895bcdfeeaba8a687044",
+  "tsan_compile_commands": "082345e3e01209a2f0e2219eb9b9881a070496c67c6de4f243319f43343b1636"
+}

@@ -1,0 +1,16 @@
+{
+  "effective_ceilings_not_raised": true,
+  "reviewed_ceilings_unchanged": true,
+  "tile_fields_unchanged": true,
+  "duplicate_state_unchanged": true,
+  "observed_changes": [
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "field": "identifier_occurrences",
+      "previous_observed": 20,
+      "current_observed": 21,
+      "existing_reviewed_ceiling": 21
+    }
+  ],
+  "note": "The extra enum reference for the explicit Borrowed/Unavailable fallback rule remains within the already reviewed ceiling 21; raw observed census is not identical. No ceiling or manifest was edited."
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "pid": 36236,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 1333 passed, 0 failed, 0 skipped, 0 blacklisted, 5850ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "pid": 36302,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 393 passed, 0 failed, 0 skipped, 0 blacklisted, 23ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "pid": 36317,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 125ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "pid": 36325,
+    "exit_code": 5,
+    "totals": [
+      "Totals: 778 passed, 5 failed, 0 skipped, 0 blacklisted, 7453ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted() Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome2) Compared values are not the same"
+    ],
+    "normal_exit": true,
+    "passed": false
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testAutoBrushStroke",
+      "testPersistentAutoBrushStroke",
+      "testPersistentAutoBrushStrokeCancelled",
+      "testPersistentAutoBrushStrokeFailure",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "pid": 36400,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 338ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest",
+      "-nocrashhandler"
+    ],
+    "pid": 36532,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 425ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true,
+    "workload_record": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 532291,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 11559334,
+      "projection_updates": 18,
+      "redo_drain_ns": 2022292,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 373482916,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 11665542,
+      "total_fixture_ns": 424481291,
+      "undo_drain_ns": 909292,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+      "-nocrashhandler"
+    ],
+    "pid": 36534,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 1057 passed, 0 failed, 0 skipped, 0 blacklisted, 69875ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37038,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 413ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37063,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 3ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReadBaselineTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37071,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 45 passed, 0 failed, 0 skipped, 0 blacklisted, 787ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_transaction_test",
+      "-nocrashhandler"
+    ],
+    "pid": 37085,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 80 passed, 0 failed, 0 skipped, 0 blacklisted, 475ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37107,
+    "exit_code": 1,
+    "totals": [
+      "Totals: 1332 passed, 1 failed, 0 skipped, 0 blacklisted, 6404ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::capturedReleaseKeepsOriginalFacts(cancel-close) Compared values are not the same"
+    ],
+    "normal_exit": true,
+    "passed": false
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37181,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 393 passed, 0 failed, 0 skipped, 0 blacklisted, 36ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37184,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 215ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37194,
+    "exit_code": 5,
+    "totals": [
+      "Totals: 778 passed, 5 failed, 0 skipped, 0 blacklisted, 8214ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted() Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome0) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome2) Compared values are not the same",
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome2) Compared values are not the same"
+    ],
+    "normal_exit": true,
+    "passed": false
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testAutoBrushStroke",
+      "testPersistentAutoBrushStroke",
+      "testPersistentAutoBrushStrokeCancelled",
+      "testPersistentAutoBrushStrokeFailure",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "pid": 37260,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 532ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/MatchedFreehandBaselineTest",
+      "-nocrashhandler"
+    ],
+    "pid": 37400,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 1109ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true,
+    "workload_record": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 837709,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 21277583,
+      "projection_updates": 17,
+      "redo_drain_ns": 3587916,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 1023888750,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 21453458,
+      "total_fixture_ns": 1107898709,
+      "undo_drain_ns": 1669792,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+      "-nocrashhandler"
+    ],
+    "pid": 37413,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 1057 passed, 0 failed, 0 skipped, 0 blacklisted, 116087ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "pid": 38222,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 652ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "pid": 38235,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 6ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReadBaselineTest",
+      "-nocrashhandler"
+    ],
+    "pid": 38246,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 45 passed, 0 failed, 0 skipped, 0 blacklisted, 1331ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  },
+  {
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_transaction_test",
+      "-nocrashhandler"
+    ],
+    "pid": 38268,
+    "exit_code": 0,
+    "totals": [
+      "Totals: 80 passed, 0 failed, 0 skipped, 0 blacklisted, 1170ms"
+    ],
+    "failures": [],
+    "normal_exit": true,
+    "passed": true
+  }
+]

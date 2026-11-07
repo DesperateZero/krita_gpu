@@ -1,0 +1,770 @@
+{
+  "product_commit": "25ae0dbf8149e8c6620fc5a42d3b15b957bc37b3",
+  "source_git_blob_count": 171,
+  "runtime_count": 96,
+  "processes": 10,
+  "passed": 8562,
+  "current_inputs_match": true,
+  "parent_negative_runs_verified": 2,
+  "graph_source_fingerprints_verified": 1200,
+  "graph_lossless": true,
+  "structure_gate_passed": false,
+  "cp2_requirements": [
+    {
+      "id": "legacy-expected-exact-raw-batch",
+      "status": "proved",
+      "code": "KisTile raw准入、backend acquireTile的expected和原batch borrow、getOldTile的原G0只读存储交接、manager/hash clone正常构造失败；未解除refs/users、raw pin或Reserved保护",
+      "evidence": "§16.109–16.112父红与修复；当前完整manager及PhysicalClaim/ResidentRead再次运行，原G不改选current；当前生产source哈希匹配Git blobs",
+      "remaining_outside_cp2": "idle强引用及其他业务族迁移属于CP6–CP9，继续保守阻止非法handoff，不提前豁免物理保护"
+    },
+    {
+      "id": "production-epoch-aba-late",
+      "status": "proved",
+      "test": "productionHandoffEpochAndLateCompletion",
+      "cases_per_arch": 48,
+      "trigger_and_control": "真实epoch1/2 provider与各自Store/Ledger，共用completion registry、provider ID及numeric slot/allocation token；旧provider不可原地改epoch。两次真实handoff，旧epoch handle和旧terminal proof在新owner准备前/安装后拒绝；旧proof不能释放新pending ticket，完成新ticket后可进展",
+      "terminal": "旧captured G1经独立B保持0x31，新current为0x82；两个Store close后payload及全部reservation归零",
+      "identity_limit": "只证明numeric token重用及epoch隔离；不声称跨provider重启的物理地址或完整allocationIdentity相同"
+    },
+    {
+      "id": "joint-plan-before-provider-binding-pin",
+      "status": "proved",
+      "code": "KisPageWriteCoordinator.cpp:2691–2710；lookup按provider/epoch，binding按完整expected取resident pin；任何缺失按原Fresh选择，全部临时引用/pin由gate外同一cleanup归还",
+      "tests": [
+        "productionHandoffFallback",
+        "productionHandoffEpochAndLateCompletion",
+        "capturedReadRetriesStaleBinding",
+        "retainedVersionRediscoveryAfterRetag"
+      ],
+      "proof": "无独立B、B binding拒绝、错误epoch与retag后旧expected拒绝；Busy/NonResident不改选current，旧captured重新解析同一version"
+    },
+    {
+      "id": "joint-plan-physical-eligibility-claim",
+      "status": "proved",
+      "code": "KisCpuBackingHandoff及Tiles3ResidentBinding；physical tryClaim在全部候选/descriptor准备后且metadata安装前",
+      "tests": [
+        "productionHandoffFallback",
+        "productionHandoffConcurrentConsumers",
+        "physicalBackingHandoffGuards",
+        "physicalBackingHandoffRejectsWrongIdentity"
+      ],
+      "proof": "真实native/generic reader、pending last-use、raw ref、多个owner和swap排斥；consumer先到及安装先到两次序；拒绝保留旧identity/字节，允许Fresh控制；原语补充完整provider/epoch/slot/generation/layout及claim移动/取消"
+    },
+    {
+      "id": "joint-plan-accounting-reserve-storage-class-claim",
+      "status": "proved",
+      "code": "KisPageOwnerLedger.cpp:399–462、1491–1551；reserveChange先于charged candidate；slot/free-slot容量先准备；原rollback scope覆盖实际physicals/index/key节点插入，全部key成功后才发布physical classClaim",
+      "tests": [
+        "productionHandoffPreparationCapacity",
+        "retirementPreparationRollsBackAtCapacity",
+        "backingHandoffAccountingGuards",
+        "backingHandoffAccountingAcrossIndexGrowth",
+        "productionHandoffConcurrentConsumers"
+      ],
+      "proof": "共同生产plan真实136B candidate拒绝、ActivePending实满、实际cancelled payload形成Debt实满；解除压力后原Store重试成功且所有reserved为零。共享storePreparedChange由原冷Ledger的0–4096B/64B实际容量扫描验证scratch/slot/claim-node部分失败后同backing重试；共同计划准备后classClaim阻止domain move。handoff额外target key处于同rollback scope，失败不发布classClaim；不是为每个分配新增故障框架"
+    },
+    {
+      "id": "joint-plan-metadata-candidate-revision",
+      "status": "proved",
+      "code": "metadata prepareRecoverableWrite/strict installRecoverableWrite；旧candidate、paid arena/index及deferred cleanup仍由原owner管理",
+      "tests": [
+        "productionHandoffPreparationCapacity",
+        "productionHandoffConcurrentConsumers",
+        "recoverableWriteGuards",
+        "preparedRecoverableWriteLifecycle",
+        "recoverableWritePreparationHonorsBudget"
+      ],
+      "proof": "准备阶段保留1024B令accounting成功而metadata拒绝，RecoverablePrepared释放压力排除descriptor后续拒绝；Fresh关闭后原source不变，pressure释放后handoff成功。已释放generic reader造成revision改变，physical claim可取得但metadata仍拒绝，随后原Fresh/取消终结保持旧G；完整oracle覆盖同一transition与候选消费"
+    },
+    {
+      "id": "joint-plan-descriptor-before-claim",
+      "status": "proved",
+      "code": "KisPageWriteCoordinator.cpp:2727，descriptor候选先于physical tryClaim；native共同plan拒绝由KisPageStore.cpp:2107接原fail，generic原catch保持",
+      "tests": [
+        "productionHandoffPreparationCapacity"
+      ],
+      "proof": "RecoverablePrepared后实满，真实80B descriptor树节点拒绝；两架父版本各24个native失败，generic controls通过。修复后两个载体均不抛出、installed0、cleanup1、A/B均能真实claim/reset，source未retag；正常cancel/abort后同Store再次handoff成功"
+    },
+    {
+      "id": "joint-plan-cleanup-fresh-terminal-close",
+      "status": "proved",
+      "code": "common plan的gate外cleanup、native discardUnprepared/fail、原generic request cleanup；原seal/publish/cancel/abort及close能力检查；preparationOnly与execution原rollback保留",
+      "tests": [
+        "productionHandoffPreparationCapacity",
+        "productionRecoverableHandoff",
+        "lastUseCloseAndLifetime",
+        "executionPreparationReusesParkedBacking",
+        "partialPreparationRollbackPumpsForegroundRetirement"
+      ],
+      "proof": "120个新场景联合五个有限压力点、native/generic和cancel+abort/seal+abort/seal+commit；拒绝不留provider activity/active lease/control page或reservation；之后真实handoff与旧G读取及close归零。原80个生产场景包含payload/discard/undo-redo。execution保留其他冷准备bad_alloc外层catch及原finishPreparedWrites，不新建恢复状态或接续队列",
+      "limit": "native Failed session先cancel/abort，再在同Store开启新transaction；不声称CP5的原job自动接续"
+    },
+    {
+      "id": "convergence-and-source-identity",
+      "status": "proved",
+      "proof": "生产仅原beginWriteImpl的common-plan catch，+10/-4净+6；没有新生产类型/字段/API/owner/队列/锁。原真实失败消费者保留，不删除execution其他冷准备catch。十个完整进程8562/0/0、actual0/reaped，171source/96runtime并集重核且source匹配产品Git blobs；不同launcher仅改变结果写出时机，明确保留ENOSPC恢复来源"
+    }
+  ],
+  "coverage": [
+    {
+      "round": "final-manager-arm64",
+      "method": "testTileRawAccessRejectedWrite",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testTileCompressionRejectedWrite",
+      "passed_rows": 16
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testPageStoreParkedBatchReadCapability",
+      "passed_rows": 8
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testPageStoreBatchCachePreparationFailure",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testPageStoreTileSelectionFailure",
+      "passed_rows": 32
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testPageStoreOldTileOwnerLifetime",
+      "passed_rows": 4
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testPageStoreCloneActiveWriteRefusal",
+      "passed_rows": 8
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testTileCloneRejectedWrite",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testHashCloneFailureCleanup",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-manager-arm64",
+      "method": "testCloneCanonicalOrLegacySource",
+      "passed_rows": 8
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "productionHandoffEpochAndLateCompletion",
+      "passed_rows": 48
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "productionHandoffPreparationCapacity",
+      "passed_rows": 120
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "productionRecoverableHandoff",
+      "passed_rows": 80
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "productionHandoffFallback",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "productionHandoffConcurrentConsumers",
+      "passed_rows": 144
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "retirementPreparationRollsBackAtCapacity",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "executionPreparationReusesParkedBacking",
+      "passed_rows": 4
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "partialPreparationRollbackPumpsForegroundRetirement",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-cpu-arm64",
+      "method": "lastUseCloseAndLifetime",
+      "passed_rows": 3
+    },
+    {
+      "round": "final-reference-arm64",
+      "method": "recoverableWriteGuards",
+      "passed_rows": 104
+    },
+    {
+      "round": "final-reference-arm64",
+      "method": "preparedRecoverableWriteLifecycle",
+      "passed_rows": 124
+    },
+    {
+      "round": "final-reference-arm64",
+      "method": "recoverableWritePreparationHonorsBudget",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-reference-arm64",
+      "method": "ownerLedgerVerifiesTerminalProviderIdentity",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-physical-arm64",
+      "method": "physicalBackingHandoffGuards",
+      "passed_rows": 60
+    },
+    {
+      "round": "final-physical-arm64",
+      "method": "physicalBackingHandoffLifecycle",
+      "passed_rows": 16
+    },
+    {
+      "round": "final-physical-arm64",
+      "method": "physicalBackingHandoffRejectsWrongIdentity",
+      "passed_rows": 44
+    },
+    {
+      "round": "final-physical-arm64",
+      "method": "backingHandoffAccountingGuards",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-physical-arm64",
+      "method": "backingHandoffAccountingAcrossIndexGrowth",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-resident-arm64",
+      "method": "capturedReadRetriesStaleBinding",
+      "passed_rows": 128
+    },
+    {
+      "round": "final-resident-arm64",
+      "method": "retainedVersionRediscoveryAfterRetag",
+      "passed_rows": 32
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "productionHandoffEpochAndLateCompletion",
+      "passed_rows": 48
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "productionHandoffPreparationCapacity",
+      "passed_rows": 120
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "productionRecoverableHandoff",
+      "passed_rows": 80
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "productionHandoffFallback",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "productionHandoffConcurrentConsumers",
+      "passed_rows": 144
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "retirementPreparationRollsBackAtCapacity",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "executionPreparationReusesParkedBacking",
+      "passed_rows": 4
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "partialPreparationRollbackPumpsForegroundRetirement",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-02-cpu-x86_64",
+      "method": "lastUseCloseAndLifetime",
+      "passed_rows": 3
+    },
+    {
+      "round": "final-02-reference-x86_64",
+      "method": "recoverableWriteGuards",
+      "passed_rows": 104
+    },
+    {
+      "round": "final-02-reference-x86_64",
+      "method": "preparedRecoverableWriteLifecycle",
+      "passed_rows": 124
+    },
+    {
+      "round": "final-02-reference-x86_64",
+      "method": "recoverableWritePreparationHonorsBudget",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-02-reference-x86_64",
+      "method": "ownerLedgerVerifiesTerminalProviderIdentity",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-02-physical-x86_64",
+      "method": "physicalBackingHandoffGuards",
+      "passed_rows": 60
+    },
+    {
+      "round": "final-02-physical-x86_64",
+      "method": "physicalBackingHandoffLifecycle",
+      "passed_rows": 16
+    },
+    {
+      "round": "final-02-physical-x86_64",
+      "method": "physicalBackingHandoffRejectsWrongIdentity",
+      "passed_rows": 44
+    },
+    {
+      "round": "final-02-physical-x86_64",
+      "method": "backingHandoffAccountingGuards",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-02-physical-x86_64",
+      "method": "backingHandoffAccountingAcrossIndexGrowth",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-02-resident-x86_64",
+      "method": "capturedReadRetriesStaleBinding",
+      "passed_rows": 128
+    },
+    {
+      "round": "final-02-resident-x86_64",
+      "method": "retainedVersionRediscoveryAfterRetag",
+      "passed_rows": 32
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testTileRawAccessRejectedWrite",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testTileCompressionRejectedWrite",
+      "passed_rows": 16
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testPageStoreParkedBatchReadCapability",
+      "passed_rows": 8
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testPageStoreBatchCachePreparationFailure",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testPageStoreTileSelectionFailure",
+      "passed_rows": 32
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testPageStoreOldTileOwnerLifetime",
+      "passed_rows": 4
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testPageStoreCloneActiveWriteRefusal",
+      "passed_rows": 8
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testTileCloneRejectedWrite",
+      "passed_rows": 64
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testHashCloneFailureCleanup",
+      "passed_rows": 1
+    },
+    {
+      "round": "final-03-manager-x86_64",
+      "method": "testCloneCanonicalOrLegacySource",
+      "passed_rows": 8
+    }
+  ],
+  "local_added_links_checked": 89,
+  "links": [
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "92_br1_m6_m8_execution_baseline.md#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "br1_modification_guide/CODE_INDEX.md#cp2-epoch-preparation-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "92_br1_m6_m8_execution_baseline.md#cp2-clone-refusal-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "evidence/br1_cp2_clone_refusal_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "br1_modification_guide/CODE_INDEX.md#cp2-clone-refusal-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "92_br1_m6_m8_execution_baseline.md#cp2-tile-selection-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "evidence/br1_cp2_tile_selection_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "br1_modification_guide/CODE_INDEX.md#cp2-tile-selection-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "92_br1_m6_m8_execution_baseline.md#cp2-batch-read-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "evidence/br1_cp2_batch_read_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "br1_modification_guide/CODE_INDEX.md#cp2-batch-read-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "92_br1_m6_m8_execution_baseline.md#cp2-raw-access-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "evidence/br1_cp2_raw_access_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/README.md",
+      "target": "br1_modification_guide/CODE_INDEX.md#cp2-raw-access-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "br1_modification_guide/03b_legacy_cache_migration.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/convergence.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/architecture.log"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/92_br1_m6_m8_execution_baseline.md",
+      "target": "evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/NEXT_EDITS.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/NEXT_EDITS.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/NEXT_EDITS.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#br1-closure-schedule"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/NEXT_EDITS.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#m6-m8-completion-matrix"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/results.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp:2650"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisCpuResidentBinding.cpp:148"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisTiles3PageReplicaProvider.cpp:1098"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/tiles3/kis_tile.cc:349"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "#cp2-epoch-preparation-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp:2650"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:2107"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:1583"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageOwnerLedger.cpp:399"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp:11170"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp:11350"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CODE_INDEX.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/API_CONVERGENCE_MAP.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/API_CONVERGENCE_MAP.md",
+      "target": "CODE_INDEX.md#cp2-epoch-preparation-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/API_CONVERGENCE_MAP.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#br1-closure-schedule"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#m6-m8-completion-matrix"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "#closure-package-checklist"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#closure-work-packages"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "CODE_INDEX.md#closure-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "API_CONVERGENCE_MAP.md#closure-api-actions"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CONVERGENCE_CHECKLIST.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/README.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CHANGE_MAP.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CHANGE_MAP.md",
+      "target": "CODE_INDEX.md#cp2-epoch-preparation-code-index"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CHANGE_MAP.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/CHANGE_MAP.md",
+      "target": "03b_legacy_cache_migration.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp:2553"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp:2650"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp:2839"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPagePublicationCoordinator_p.h:181"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:1983"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:2109"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:3925"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:4034"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03a_handoff_implementation_map.md",
+      "target": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/br1_modification_guide/03b_legacy_cache_migration.md"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03b_legacy_cache_migration.md",
+      "target": "../92_br1_m6_m8_execution_baseline.md#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/br1_modification_guide/03b_legacy_cache_migration.md",
+      "target": "../evidence/br1_cp2_epoch_completion_20261004/cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "../../92_br1_m6_m8_execution_baseline.md#cp2-epoch-preparation-delivery"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "cp2-audit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "candidate.patch"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "delivery.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "convergence.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "parent-final-test.cpp"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "parent-stack-native-point0.log"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "parent-stack-native-point2.log"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "results.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "verification.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "verify_delivery.py"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "observed-manager-result.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "recover_final_evidence.py"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "initial-host-exit.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "reverse-callgraph.json.gz"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "callgraph-summary.json"
+    },
+    {
+      "document": "docs/vulkan_gpu_design/evidence/br1_cp2_epoch_completion_20261004/README.md",
+      "target": "architecture.log"
+    }
+  ],
+  "scope": "CP2代码/安全交付；CP3/M6正式资格未验收"
+}

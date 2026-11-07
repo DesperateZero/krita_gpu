@@ -1,0 +1,1606 @@
+{"app_name":"kis_paint_device_test","timestamp":"2026-10-07 20:56:08.00 +0800","app_version":"","slice_uuid":"19fe8209-96a7-3ac6-9e36-31596cb6935b","build_version":"","platform":1,"share_with_app_devs":0,"is_first_party":1,"bug_type":"309","os_version":"macOS 15.7.3 (24G419)","roots_installed":0,"incident_id":"56AC03A8-8951-4B63-8E7B-6E0F8D2848DC","name":"kis_paint_device_test"}
+{
+  "uptime" : 1200000,
+  "procRole" : "Unspecified",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac16,10",
+  "coalitionID" : 85468,
+  "osVersion" : {
+    "train" : "macOS 15.7.3",
+    "build" : "24G419",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2026-10-07 20:56:02.4537 +0800",
+  "codeSigningMonitor" : 2,
+  "incident" : "56AC03A8-8951-4B63-8E7B-6E0F8D2848DC",
+  "pid" : 63093,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2026-10-07 20:55:42.2524 +0800",
+  "procStartAbsTime" : 29879869627791,
+  "procExitAbsTime" : 29880354441758,
+  "procName" : "kis_paint_device_test",
+  "procPath" : "\/Users\/USER\/*\/kis_paint_device_test",
+  "parentProc" : "Python",
+  "parentPid" : 62502,
+  "coalitionName" : "com.openai.codex",
+  "crashReporterKey" : "F77BB2EB-6385-6ACB-0C8C-87732DA35FEB",
+  "appleIntelligenceStatus" : {"reasons":["selectedSiriLanguageIneligible","countryBillingIneligible","regionIneligible","countryLocationIneligible"],"state":"unavailable"},
+  "responsiblePid" : 71476,
+  "responsibleProc" : "ChatGPT",
+  "codeSigningID" : "kis_paint_device_test",
+  "codeSigningTeamID" : "",
+  "codeSigningFlags" : 570556929,
+  "codeSigningValidationCategory" : 10,
+  "codeSigningTrustLevel" : 4294967295,
+  "codeSigningAuxiliaryInfo" : 0,
+  "instructionByteStream" : {"beforePC":"YwACi2IMAa3AA1\/WJoRA+GaEAPhCIADxov\/\/VEIgALGgAABUJhRAOA==","atPC":"ZhQAOEIEAPGh\/\/9UwANf1qMHALQEAAKLIQACi18AAfEjBgBUXxBA8Q=="},
+  "bootSessionUUID" : "E1E74110-3D7B-453A-8741-C44C76209115",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0 is not in any region.  Bytes before following region: 4362092544\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      104004000-104048000    [  272K] r-x\/r-x SM=COW  \/Users\/USER\/*\/kis_paint_device_test",
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000000","rawCodes":[1,0],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000000"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":63093},
+  "vmregioninfo" : "0 is not in any region.  Bytes before following region: 4362092544\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      104004000-104048000    [  272K] r-x\/r-x SM=COW  \/Users\/USER\/*\/kis_paint_device_test",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":1804,"task_for_pid":139},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 19,
+  "threads" : [{"id":113085994,"threadState":{"x":[{"value":15534603969034813568},{"value":4382852608},{"value":4798639024},{"value":3},{"value":5798498512},{"value":4},{"value":2},{"value":0},{"value":48},{"value":4798283776},{"value":14972},{"value":4798300284},{"value":8786775528,"symbolLocation":0,"symbol":"malloc_entropy"},{"value":4382852640},{"value":6},{"value":4294965251},{"value":15534603969034813568},{"value":0},{"value":0},{"value":4798638976},{"value":3},{"value":4382852608},{"value":4373708928},{"value":6},{"value":6},{"value":5},{"value":26},{"value":2592},{"value":8786764576,"symbolLocation":224,"symbol":"_main_thread"}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6939613824},"cpsr":{"value":0},"fp":{"value":6104783792},"sp":{"value":6104783680},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6939613896},"far":{"value":0}},"queue":"com.apple.main-thread","frames":[{"imageOffset":15048,"symbol":"tiny_malloc_from_free_list","symbolLocation":1444,"imageIndex":156},{"imageOffset":11716,"symbol":"tiny_malloc_should_clear","symbolLocation":272,"imageIndex":156},{"imageOffset":7144,"symbol":"szone_malloc_should_clear","symbolLocation":84,"imageIndex":156},{"imageOffset":107488,"symbol":"operator new(unsigned long)","symbolLocation":52,"imageIndex":157},{"imageOffset":167540,"sourceLine":2461,"sourceFile":"kis_paint_device_test.cpp","symbol":"KisPaintDeviceTest::stressTestMemoryFragmentation()","imageIndex":0,"symbolLocation":512},{"imageOffset":643840,"symbol":"QMetaMethodInvoker::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*)","symbolLocation":1024,"imageIndex":41},{"imageOffset":662868,"symbol":"QMetaMethod::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*)","symbolLocation":84,"imageIndex":41},{"imageOffset":90392,"symbol":"QTest::TestMethods::invokeTestOnData(int) const","symbolLocation":392,"imageIndex":40},{"imageOffset":93912,"symbol":"QTest::TestMethods::invokeTest(int, QLatin1String, std::__1::optional<QTest::WatchDog>&) const","symbolLocation":1268,"imageIndex":40},{"imageOffset":97632,"symbol":"QTest::TestMethods::invokeTests(QObject*) const","symbolLocation":560,"imageIndex":40},{"imageOffset":100448,"symbol":"QTest::qRun()","symbolLocation":1624,"imageIndex":40},{"imageOffset":98288,"symbol":"QTest::qExec(QObject*, int, char**)","symbolLocation":20,"imageIndex":40},{"imageOffset":168676,"sourceLine":2484,"sourceFile":"kis_paint_device_test.cpp","symbol":"main","imageIndex":0,"symbolLocation":296},{"imageOffset":27544,"symbol":"start","symbolLocation":6076,"imageIndex":158}]},{"id":113086020,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":160}],"threadState":{"x":[{"value":6105919488},{"value":5379},{"value":6105382912},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":0},"fp":{"value":0},"sp":{"value":6105919488},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941682540},"far":{"value":0}}},{"id":113086227,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":1310720},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999999000},{"value":6106492296},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8803898624},{"value":0},{"value":4979484912},{"value":4979484976},{"value":6106493152},{"value":999999000},{"value":29},{"value":1310720},{"value":1310721},{"value":1310976},{"value":1},{"value":4979482656}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":6106492416},"sp":{"value":6106492272},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":2240072,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":216,"imageIndex":41},{"imageOffset":2239752,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":41},{"imageOffset":2216528,"symbol":"QThreadPoolThread::run()","symbolLocation":928,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086228,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":1317632},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999998000},{"value":6107065736},{"value":0},{"value":512},{"value":2199023256066},{"value":2199023256066},{"value":512},{"value":0},{"value":2199023256064},{"value":305},{"value":8803898624},{"value":0},{"value":4979530016},{"value":4979530080},{"value":6107066592},{"value":999998000},{"value":29},{"value":1317632},{"value":1317633},{"value":1317888},{"value":1},{"value":4979482656}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":6107065856},"sp":{"value":6107065712},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":2240072,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":216,"imageIndex":41},{"imageOffset":2239752,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":41},{"imageOffset":2216528,"symbol":"QThreadPoolThread::run()","symbolLocation":928,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086229,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":1317120},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999989000},{"value":6107639176},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8803898624},{"value":0},{"value":4979530848},{"value":4979530912},{"value":6107640032},{"value":999989000},{"value":29},{"value":1317120},{"value":1317121},{"value":1317376},{"value":1},{"value":4979482656}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":6107639296},"sp":{"value":6107639152},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":2240072,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":216,"imageIndex":41},{"imageOffset":2239752,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":41},{"imageOffset":2216528,"symbol":"QThreadPoolThread::run()","symbolLocation":928,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086230,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":1317120},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999999000},{"value":6108212616},{"value":0},{"value":256},{"value":1099511628034},{"value":1099511628034},{"value":256},{"value":0},{"value":1099511628032},{"value":305},{"value":8803898624},{"value":0},{"value":4979531712},{"value":4979531776},{"value":6108213472},{"value":999999000},{"value":29},{"value":1317120},{"value":1317121},{"value":1317376},{"value":1},{"value":4979482656}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":6108212736},"sp":{"value":6108212592},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":2240072,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":216,"imageIndex":41},{"imageOffset":2239752,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":41},{"imageOffset":2216528,"symbol":"QThreadPoolThread::run()","symbolLocation":928,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086237,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":1160448},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999999000},{"value":6108786056},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8803898624},{"value":0},{"value":4553736320},{"value":4553736384},{"value":6108786912},{"value":999999000},{"value":29},{"value":1160448},{"value":1160449},{"value":1160704},{"value":1},{"value":4979482656}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":6108786176},"sp":{"value":6108786032},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":2240072,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":216,"imageIndex":41},{"imageOffset":2239752,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":41},{"imageOffset":2216528,"symbol":"QThreadPoolThread::run()","symbolLocation":928,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086312,"name":"QtTest Watchdog","threadState":{"x":[{"value":260},{"value":0},{"value":21248},{"value":0},{"value":0},{"value":160},{"value":299},{"value":999998959},{"value":15032937960},{"value":0},{"value":1536},{"value":6597069768194},{"value":6597069768194},{"value":1536},{"value":0},{"value":6597069768192},{"value":305},{"value":8803898624},{"value":0},{"value":6104785968},{"value":6104786032},{"value":15032938720},{"value":999998959},{"value":299},{"value":21248},{"value":21249},{"value":21504},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":15032938080},"sp":{"value":15032937936},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":123648,"symbol":"std::__1::condition_variable::__do_timed_wait(std::__1::unique_lock<std::__1::mutex>&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l>>>)","symbolLocation":104,"imageIndex":162},{"imageOffset":128056,"symbol":"std::__1::cv_status std::__1::condition_variable::wait_until[abi:fqe210106]<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l>>>(std::__1::unique_lock<std::__1::mutex>&, std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l>>> const&)","symbolLocation":204,"imageIndex":40},{"imageOffset":127744,"symbol":"QTest::WatchDog::waitFor(std::__1::unique_lock<std::__1::mutex>&, QTest::WatchDog::Expectation)","symbolLocation":180,"imageIndex":40},{"imageOffset":127416,"symbol":"QTest::WatchDog::run()","symbolLocation":124,"imageIndex":40},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086314,"name":"KisTileDataSwapper","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":2147483648},{"value":0},{"value":0},{"value":18},{"value":0},{"value":0},{"value":18445499066990330116},{"value":719221500},{"value":1000000000},{"value":15034085542},{"value":5797577068},{"value":402654212},{"value":402654212},{"value":402654212},{"value":544},{"value":8803900376},{"value":0},{"value":15008246928},{"value":1},{"value":2147483648},{"value":1},{"value":2147483648},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430382940},"cpsr":{"value":2147483648},"fp":{"value":15034085056},"sp":{"value":15034084960},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2213724,"symbol":"QSemaphore::acquire(int)","symbolLocation":280,"imageIndex":41},{"imageOffset":2214416,"symbol":"QSemaphore::tryAcquire(int, QDeadlineTimer)","symbolLocation":80,"imageIndex":41},{"symbol":"QSemaphore::tryAcquire(int, int)","inline":true,"imageIndex":1,"imageOffset":1472144,"symbolLocation":32,"sourceLine":62,"sourceFile":"qsemaphore.h"},{"symbol":"KisTileDataSwapper::waitForWork()","inline":true,"imageIndex":1,"imageOffset":1472144,"symbolLocation":36,"sourceLine":79,"sourceFile":"kis_tile_data_swapper.cpp"},{"imageOffset":1472144,"sourceLine":85,"sourceFile":"kis_tile_data_swapper.cpp","symbol":"KisTileDataSwapper::run()","imageIndex":1,"symbolLocation":56},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086315,"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":123496,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":32,"imageIndex":162},{"symbol":"void std::__1::condition_variable::wait<(anonymous namespace)::ReclamationExecutor::runJobs()::'lambda'()>(std::__1::unique_lock<std::__1::mutex>&, (anonymous namespace)::ReclamationExecutor::runJobs()::'lambda'())","inline":true,"imageIndex":1,"imageOffset":1090864,"symbolLocation":28,"sourceLine":147,"sourceFile":"condition_variable.h"},{"symbol":"(anonymous namespace)::ReclamationExecutor::runJobs()","inline":true,"imageIndex":1,"imageOffset":1090864,"symbolLocation":152,"sourceLine":378,"sourceFile":"KisPageStoreReclamation.cpp"},{"symbol":"(anonymous namespace)::ReclamationExecutor::ReclamationExecutor()::'lambda'(void*)::operator()(void*) const","inline":true,"imageIndex":1,"imageOffset":1090864,"symbolLocation":152,"sourceLine":234,"sourceFile":"KisPageStoreReclamation.cpp"},{"imageOffset":1090864,"sourceLine":234,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationExecutor::ReclamationExecutor()::'lambda'(void*)::__invoke(void*)","imageIndex":1,"symbolLocation":188},{"imageOffset":1090492,"sourceLine":209,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationThread::invoke(void*)","imageIndex":1,"symbolLocation":112},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}],"threadState":{"x":[{"value":260},{"value":0},{"value":572416},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":15033499224},{"value":0},{"value":512},{"value":2199023256066},{"value":2199023256066},{"value":512},{"value":0},{"value":2199023256064},{"value":305},{"value":8803898624},{"value":0},{"value":15030336352},{"value":15030336416},{"value":15023833312},{"value":0},{"value":0},{"value":572416},{"value":572417},{"value":572672},{"value":4400135864,"symbolLocation":0,"symbol":"(anonymous namespace)::reclaimerThread (.0)"},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":15033499344},"sp":{"value":15033499200},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}}},{"id":113086316,"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":123496,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":32,"imageIndex":162},{"symbol":"(anonymous namespace)::ReclamationExecutor::ensureClockLocked()::'lambda'(void*)::operator()(void*) const","inline":true,"imageIndex":1,"imageOffset":1093268,"symbolLocation":60,"sourceLine":434,"sourceFile":"KisPageStoreReclamation.cpp"},{"imageOffset":1093268,"sourceLine":416,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationExecutor::ensureClockLocked()::'lambda'(void*)::__invoke(void*)","imageIndex":1,"symbolLocation":224},{"imageOffset":1090492,"sourceLine":209,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationThread::invoke(void*)","imageIndex":1,"symbolLocation":112},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}],"threadState":{"x":[{"value":260},{"value":0},{"value":1586432},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":15034646120},{"value":0},{"value":1280},{"value":5497558140162},{"value":5497558140162},{"value":1280},{"value":0},{"value":5497558140160},{"value":305},{"value":8803898624},{"value":0},{"value":15030338392},{"value":15030338456},{"value":15023849696},{"value":0},{"value":0},{"value":1586432},{"value":1586433},{"value":1586688},{"value":16},{"value":4294967295}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":15034646240},"sp":{"value":15034646096},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}}},{"id":113086706,"name":"Thread (pooled)","threadState":{"x":[{"value":9},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1},{"value":18445499059032730450},{"value":676821166},{"value":1000000000},{"value":28587302328834},{"value":1},{"value":1201928},{"value":1075489450},{"value":1075489450},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4552963904},{"value":15035214584},{"value":15035214584},{"value":4552373616},{"value":1},{"value":4553466672},{"value":4553530688},{"value":15035215088}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15035214240},"sp":{"value":15035214176},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":220,"sourceFile":"qmutex.h"},{"imageOffset":940520,"sourceLine":1743,"sourceFile":"KisPageStore.cpp","symbol":"KisPageStore::beginMutation(KisPageTransaction const&, QString*)","imageIndex":1,"symbolLocation":92},{"imageOffset":1131504,"sourceLine":996,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginMutationBatch(QString*)","imageIndex":1,"symbolLocation":396},{"imageOffset":1134208,"sourceLine":1040,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginIteratorMutationScope(QString*)","imageIndex":1,"symbolLocation":840},{"imageOffset":1435208,"sourceLine":31,"sourceFile":"kis_base_iterator.h","symbol":"KisBaseIterator::KisBaseIterator(KisTiledDataManager*, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":104},{"imageOffset":1437116,"sourceLine":13,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":144},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086707,"name":"Thread (pooled)","threadState":{"x":[{"value":5241589912},{"value":4553680256},{"value":4},{"value":5241589912},{"value":4669901248},{"value":11},{"value":0},{"value":0},{"value":4},{"value":13575},{"value":1548097},{"value":4078512},{"value":4669325136},{"value":4382855200},{"value":4669325440},{"value":388720},{"value":4399964160},{"value":4669714160},{"value":0},{"value":4552486320},{"value":4553680256},{"value":5241589912},{"value":3034},{"value":0},{"value":0},{"value":15040275136},{"value":15040273496},{"value":15040275680},{"value":15040274512}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4394386680},"cpsr":{"value":536870912},"fp":{"value":15040272960},"sp":{"value":15040272928},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":4399164172},"far":{"value":0}},"frames":[{"imageOffset":6023948,"symbol":"DYLD-STUB$$memcpy","symbolLocation":4,"imageIndex":1},{"symbol":"KisTileData::fillWithPixel(unsigned char const*)","inline":true,"imageIndex":1,"imageOffset":1246456,"symbolLocation":24,"sourceLine":123,"sourceFile":"kis_tile_data.cc"},{"symbol":"KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)","inline":true,"imageIndex":1,"imageOffset":1246456,"symbolLocation":88,"sourceLine":69,"sourceFile":"kis_tile_data.cc"},{"imageOffset":1246456,"sourceLine":63,"sourceFile":"kis_tile_data.cc","symbol":"KisTileData::KisTileData(int, unsigned char const*, KisTileDataStore*, bool)","imageIndex":1,"symbolLocation":112},{"symbol":"std::__1::unique_ptr<KisTileData, std::__1::default_delete<KisTileData>> std::__1::make_unique[abi:ne200100]<KisTileData, int&, unsigned char const*&, KisTileDataStore*, 0>(int&, unsigned char const*&, KisTileDataStore*&&)","inline":true,"imageIndex":1,"imageOffset":1255608,"symbolLocation":32,"sourceLine":767,"sourceFile":"unique_ptr.h"},{"imageOffset":1255608,"sourceLine":259,"sourceFile":"kis_tile_data_store.cc","symbol":"KisTileDataStore::allocTileData(int, unsigned char const*)","imageIndex":1,"symbolLocation":92},{"symbol":"KisTileDataStore::createDefaultTileData(int, unsigned char const*)","inline":true,"imageIndex":1,"imageOffset":173396,"symbolLocation":4,"sourceLine":165,"sourceFile":"kis_tile_data_store.h"},{"imageOffset":173396,"sourceLine":833,"sourceFile":"KisTiles3PageReplicaProvider.cpp","symbol":"KisTiles3PageReplicaProvider::Private::allocate(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisTileData*, KisCpuPagePayload const*)","imageIndex":1,"symbolLocation":1384},{"symbol":"KisTiles3PageReplicaProvider::requestReplica(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisPageAccessMode, KisPagePriority)","inline":true,"imageIndex":1,"imageOffset":174176,"symbolLocation":76,"sourceLine":964,"sourceFile":"KisTiles3PageReplicaProvider.cpp"},{"imageOffset":174176,"sourceLine":976,"sourceFile":"KisTiles3PageReplicaProvider.cpp","symbol":"KisTiles3PageReplicaProvider::prepareWrite(KisPageOperationId, KisPageVersion const&, KisPageAllocationDescriptor const&, KisPageAccessDomain, KisPageWriteMode, KisPagePriority)","imageIndex":1,"symbolLocation":124},{"imageOffset":890088,"sourceLine":3005,"sourceFile":"KisPageWriteCoordinator.cpp","symbol":"KisPageWriteCoordinator::prepareFreshReplica(KisPageWriteIntent const&, KisPageReplicaProvider&, KisPageTransition const&, KisPageAllocationDescriptor const&, KisPageAccessRequirement, KisPagePriority, KisCpuPagePayload const*, std::__1::shared_ptr<KisPageReplicaSource const> const&, bool*) const","imageIndex":1,"symbolLocation":268},{"imageOffset":934776,"sourceLine":2171,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)","imageIndex":1,"symbolLocation":4956},{"symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, KisPageWriteMode, QString*)","inline":true,"imageIndex":1,"imageOffset":947064,"symbolLocation":24,"sourceLine":1989,"sourceFile":"KisPageStore.cpp"},{"imageOffset":947064,"sourceLine":1984,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, QString*)","imageIndex":1,"symbolLocation":44},{"imageOffset":1146444,"sourceLine":1682,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::acquireTile(int, int, KisTilePageStoreBridge::Access, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>*)","imageIndex":1,"symbolLocation":1264},{"symbol":"KisTile::acquirePageStoreLease(bool, bool) const","inline":true,"imageIndex":1,"imageOffset":1239004,"symbolLocation":64,"sourceLine":120,"sourceFile":"kis_tile.cc"},{"imageOffset":1239004,"sourceLine":441,"sourceFile":"kis_tile.cc","symbol":"KisTile::ensurePageStoreWriteAccess() const","imageIndex":1,"symbolLocation":312},{"symbol":"KisTile::markPageStoreWriteDirty() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":161,"sourceFile":"kis_tile.h"},{"symbol":"KisTile::data() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":113,"sourceFile":"kis_tile.h"},{"imageOffset":1239616,"sourceLine":478,"sourceFile":"kis_tile.cc","symbol":"KisTile::tryWriteData() const","imageIndex":1,"symbolLocation":80},{"imageOffset":1440600,"symbol":"<deduplicated_symbol>","symbolLocation":292,"imageIndex":1},{"imageOffset":1436056,"sourceLine":136,"sourceFile":"kis_base_iterator.h","symbol":"bool KisBaseIterator::populateTileCache<KisHLineIterator2::KisTileInfo>(std::__1::vector<KisHLineIterator2::KisTileInfo, std::__1::allocator<KisHLineIterator2::KisTileInfo>>&, long long, int, int, int, int)","imageIndex":1,"symbolLocation":376},{"imageOffset":1437520,"sourceLine":47,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":548},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086708,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18445499059032734158},{"value":676817458},{"value":1000000000},{"value":1},{"value":1},{"value":16},{"value":65536},{"value":122896},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":0},{"value":15058101960},{"value":15058101344},{"value":4552463752},{"value":15058101792},{"value":0},{"value":15058100240},{"value":15058100304}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15058099664},"sp":{"value":15058099600},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":948452,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::relock()","inline":true,"imageIndex":1,"imageOffset":948452,"symbolLocation":32,"sourceLine":257,"sourceFile":"qmutex.h"},{"symbol":"KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)::$_3::operator()() const","inline":true,"imageIndex":1,"imageOffset":948452,"symbolLocation":36,"sourceLine":2148,"sourceFile":"KisPageStore.cpp"},{"symbol":"QScopeGuard<KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)::$_3>::~QScopeGuard()","inline":true,"imageIndex":1,"imageOffset":948452,"symbolLocation":48,"sourceLine":41,"sourceFile":"qscopeguard.h"},{"imageOffset":948452,"sourceLine":39,"sourceFile":"qscopeguard.h","symbol":"QScopeGuard<KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)::$_3>::~QScopeGuard()","imageIndex":1,"symbolLocation":64},{"imageOffset":934520,"sourceLine":2151,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)","imageIndex":1,"symbolLocation":4700},{"symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, KisPageWriteMode, QString*)","inline":true,"imageIndex":1,"imageOffset":947064,"symbolLocation":24,"sourceLine":1989,"sourceFile":"KisPageStore.cpp"},{"imageOffset":947064,"sourceLine":1984,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, QString*)","imageIndex":1,"symbolLocation":44},{"imageOffset":1146444,"sourceLine":1682,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::acquireTile(int, int, KisTilePageStoreBridge::Access, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>*)","imageIndex":1,"symbolLocation":1264},{"symbol":"KisTile::acquirePageStoreLease(bool, bool) const","inline":true,"imageIndex":1,"imageOffset":1239004,"symbolLocation":64,"sourceLine":120,"sourceFile":"kis_tile.cc"},{"imageOffset":1239004,"sourceLine":441,"sourceFile":"kis_tile.cc","symbol":"KisTile::ensurePageStoreWriteAccess() const","imageIndex":1,"symbolLocation":312},{"symbol":"KisTile::markPageStoreWriteDirty() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":161,"sourceFile":"kis_tile.h"},{"symbol":"KisTile::data() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":113,"sourceFile":"kis_tile.h"},{"imageOffset":1239616,"sourceLine":478,"sourceFile":"kis_tile.cc","symbol":"KisTile::tryWriteData() const","imageIndex":1,"symbolLocation":80},{"imageOffset":1440600,"symbol":"<deduplicated_symbol>","symbolLocation":292,"imageIndex":1},{"imageOffset":1436056,"sourceLine":136,"sourceFile":"kis_base_iterator.h","symbol":"bool KisBaseIterator::populateTileCache<KisHLineIterator2::KisTileInfo>(std::__1::vector<KisHLineIterator2::KisTileInfo, std::__1::allocator<KisHLineIterator2::KisTileInfo>>&, long long, int, int, int, int)","imageIndex":1,"symbolLocation":376},{"imageOffset":1437520,"sourceLine":47,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":548},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086709,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1},{"value":18445499059032731658},{"value":676819958},{"value":1000000000},{"value":4399997064,"symbolLocation":16,"symbol":"vtable for std::__1::__shared_ptr_pointer<KisPageMutationSession::Private*, void (*)(KisPageMutationSession::Private*), KisPageStore::Private::MutationAllocator<KisPageMutationSession::Private>>"},{"value":17},{"value":997045976},{"value":997045976},{"value":997045976},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4552963904},{"value":15058676472},{"value":0},{"value":1},{"value":1},{"value":4553466672},{"value":4553530688},{"value":15058676976}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15058676128},"sp":{"value":15058676064},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":941148,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::relock()","inline":true,"imageIndex":1,"imageOffset":941148,"symbolLocation":32,"sourceLine":257,"sourceFile":"qmutex.h"},{"imageOffset":941148,"sourceLine":1774,"sourceFile":"KisPageStore.cpp","symbol":"KisPageStore::beginMutation(KisPageTransaction const&, QString*)","imageIndex":1,"symbolLocation":720},{"imageOffset":1131504,"sourceLine":996,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginMutationBatch(QString*)","imageIndex":1,"symbolLocation":396},{"imageOffset":1134208,"sourceLine":1040,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginIteratorMutationScope(QString*)","imageIndex":1,"symbolLocation":840},{"imageOffset":1435208,"sourceLine":31,"sourceFile":"kis_base_iterator.h","symbol":"KisBaseIterator::KisBaseIterator(KisTiledDataManager*, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":104},{"imageOffset":1437116,"sourceLine":13,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":144},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086710,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18445499059032558283},{"value":676993333},{"value":1000000000},{"value":0},{"value":63},{"value":63},{"value":1},{"value":8},{"value":544},{"value":8803900376},{"value":0},{"value":4553159784},{"value":3},{"value":15059248752},{"value":4553199208},{"value":1},{"value":4979387608},{"value":5},{"value":4553450240},{"value":4552963904},{"value":15059249192}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15059248432},"sp":{"value":15059248368},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":179660,"symbolLocation":32,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":179660,"symbolLocation":32,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":179660,"symbolLocation":32,"sourceLine":220,"sourceFile":"qmutex.h"},{"imageOffset":179660,"sourceLine":1103,"sourceFile":"KisTiles3PageReplicaProvider.cpp","symbol":"KisTiles3PageReplicaProvider::prepareTileReadCache(KisCpuWriteGuard const&, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>) const","imageIndex":1,"symbolLocation":164},{"imageOffset":1147088,"sourceLine":1697,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::acquireTile(int, int, KisTilePageStoreBridge::Access, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>*)","imageIndex":1,"symbolLocation":1908},{"symbol":"KisTile::acquirePageStoreLease(bool, bool) const","inline":true,"imageIndex":1,"imageOffset":1239004,"symbolLocation":64,"sourceLine":120,"sourceFile":"kis_tile.cc"},{"imageOffset":1239004,"sourceLine":441,"sourceFile":"kis_tile.cc","symbol":"KisTile::ensurePageStoreWriteAccess() const","imageIndex":1,"symbolLocation":312},{"symbol":"KisTile::markPageStoreWriteDirty() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":161,"sourceFile":"kis_tile.h"},{"symbol":"KisTile::data() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":113,"sourceFile":"kis_tile.h"},{"imageOffset":1239616,"sourceLine":478,"sourceFile":"kis_tile.cc","symbol":"KisTile::tryWriteData() const","imageIndex":1,"symbolLocation":80},{"imageOffset":1440600,"symbol":"<deduplicated_symbol>","symbolLocation":292,"imageIndex":1},{"imageOffset":1436056,"sourceLine":136,"sourceFile":"kis_base_iterator.h","symbol":"bool KisBaseIterator::populateTileCache<KisHLineIterator2::KisTileInfo>(std::__1::vector<KisHLineIterator2::KisTileInfo, std::__1::allocator<KisHLineIterator2::KisTileInfo>>&, long long, int, int, int, int)","imageIndex":1,"symbolLocation":376},{"imageOffset":1437520,"sourceLine":47,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":548},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086711,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18445499059032640908},{"value":676910708},{"value":1000000000},{"value":1},{"value":4611686018427388078},{"value":1},{"value":0},{"value":0},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":0},{"value":15059822280},{"value":1},{"value":4979113448},{"value":15059822112},{"value":0},{"value":15059821792},{"value":15059820624}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15059820016},"sp":{"value":15059819952},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":935196,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::relock()","inline":true,"imageIndex":1,"imageOffset":935196,"symbolLocation":32,"sourceLine":257,"sourceFile":"qmutex.h"},{"imageOffset":935196,"sourceLine":2186,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)","imageIndex":1,"symbolLocation":5376},{"symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, KisPageWriteMode, QString*)","inline":true,"imageIndex":1,"imageOffset":947064,"symbolLocation":24,"sourceLine":1989,"sourceFile":"KisPageStore.cpp"},{"imageOffset":947064,"sourceLine":1984,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, QString*)","imageIndex":1,"symbolLocation":44},{"imageOffset":1146444,"sourceLine":1682,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::acquireTile(int, int, KisTilePageStoreBridge::Access, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>*)","imageIndex":1,"symbolLocation":1264},{"symbol":"KisTile::acquirePageStoreLease(bool, bool) const","inline":true,"imageIndex":1,"imageOffset":1239004,"symbolLocation":64,"sourceLine":120,"sourceFile":"kis_tile.cc"},{"imageOffset":1239004,"sourceLine":441,"sourceFile":"kis_tile.cc","symbol":"KisTile::ensurePageStoreWriteAccess() const","imageIndex":1,"symbolLocation":312},{"symbol":"KisTile::markPageStoreWriteDirty() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":161,"sourceFile":"kis_tile.h"},{"symbol":"KisTile::data() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":113,"sourceFile":"kis_tile.h"},{"imageOffset":1239616,"sourceLine":478,"sourceFile":"kis_tile.cc","symbol":"KisTile::tryWriteData() const","imageIndex":1,"symbolLocation":80},{"imageOffset":1440600,"symbol":"<deduplicated_symbol>","symbolLocation":292,"imageIndex":1},{"imageOffset":1436056,"sourceLine":136,"sourceFile":"kis_base_iterator.h","symbol":"bool KisBaseIterator::populateTileCache<KisHLineIterator2::KisTileInfo>(std::__1::vector<KisHLineIterator2::KisTileInfo, std::__1::allocator<KisHLineIterator2::KisTileInfo>>&, long long, int, int, int, int)","imageIndex":1,"symbolLocation":376},{"imageOffset":1437520,"sourceLine":47,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":548},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086712,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1},{"value":18445499059032732241},{"value":676819375},{"value":1000000000},{"value":30786325584898},{"value":1},{"value":1202044},{"value":805713920},{"value":805713920},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4552963904},{"value":15060396792},{"value":15060396792},{"value":4979351888},{"value":1},{"value":4553466672},{"value":4553530688},{"value":15060397296}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15060396448},"sp":{"value":15060396384},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":220,"sourceFile":"qmutex.h"},{"imageOffset":940520,"sourceLine":1743,"sourceFile":"KisPageStore.cpp","symbol":"KisPageStore::beginMutation(KisPageTransaction const&, QString*)","imageIndex":1,"symbolLocation":92},{"imageOffset":1131504,"sourceLine":996,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginMutationBatch(QString*)","imageIndex":1,"symbolLocation":396},{"imageOffset":1134208,"sourceLine":1040,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginIteratorMutationScope(QString*)","imageIndex":1,"symbolLocation":840},{"imageOffset":1435208,"sourceLine":31,"sourceFile":"kis_base_iterator.h","symbol":"KisBaseIterator::KisBaseIterator(KisTiledDataManager*, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":104},{"imageOffset":1437116,"sourceLine":13,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":144},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086713,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":15062296096},{"value":0},{"value":1},{"value":18445499059032729241},{"value":676822375},{"value":1000000000},{"value":1},{"value":16},{"value":4990619936},{"value":0},{"value":6520832},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4990618128},{"value":15062296264},{"value":0},{"value":4979263000},{"value":15062296096},{"value":0},{"value":15062296600},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15062294000},"sp":{"value":15062293936},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":931412,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":931412,"symbolLocation":36,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":931412,"symbolLocation":36,"sourceLine":220,"sourceFile":"qmutex.h"},{"imageOffset":931412,"sourceLine":2062,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWriteImpl(KisPageKey const&, KisPageWriteMode, KisCpuPagePayload const*, QString*, std::__1::shared_ptr<KisPageMutationExecution::Private> const&, bool)","imageIndex":1,"symbolLocation":1592},{"symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, KisPageWriteMode, QString*)","inline":true,"imageIndex":1,"imageOffset":947064,"symbolLocation":24,"sourceLine":1989,"sourceFile":"KisPageStore.cpp"},{"imageOffset":947064,"sourceLine":1984,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::beginWrite(KisPageKey const&, QString*)","imageIndex":1,"symbolLocation":44},{"imageOffset":1146444,"sourceLine":1682,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::acquireTile(int, int, KisTilePageStoreBridge::Access, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>*)","imageIndex":1,"symbolLocation":1264},{"symbol":"KisTile::acquirePageStoreLease(bool, bool) const","inline":true,"imageIndex":1,"imageOffset":1239004,"symbolLocation":64,"sourceLine":120,"sourceFile":"kis_tile.cc"},{"imageOffset":1239004,"sourceLine":441,"sourceFile":"kis_tile.cc","symbol":"KisTile::ensurePageStoreWriteAccess() const","imageIndex":1,"symbolLocation":312},{"symbol":"KisTile::markPageStoreWriteDirty() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":161,"sourceFile":"kis_tile.h"},{"symbol":"KisTile::data() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":113,"sourceFile":"kis_tile.h"},{"imageOffset":1239616,"sourceLine":478,"sourceFile":"kis_tile.cc","symbol":"KisTile::tryWriteData() const","imageIndex":1,"symbolLocation":80},{"imageOffset":1440600,"symbol":"<deduplicated_symbol>","symbolLocation":292,"imageIndex":1},{"imageOffset":1436056,"sourceLine":136,"sourceFile":"kis_base_iterator.h","symbol":"bool KisBaseIterator::populateTileCache<KisHLineIterator2::KisTileInfo>(std::__1::vector<KisHLineIterator2::KisTileInfo, std::__1::allocator<KisHLineIterator2::KisTileInfo>>&, long long, int, int, int, int)","imageIndex":1,"symbolLocation":376},{"imageOffset":1437520,"sourceLine":47,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":548},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"triggered":true,"id":113086714,"name":"Thread (pooled)","threadState":{"x":[{"value":0},{"value":15062871665},{"value":4},{"value":0},{"value":1},{"value":6},{"value":0},{"value":0},{"value":0},{"value":0},{"value":4394580020,"sourceFile":"kis_hline_iterator.cpp","symbol":"virtual thunk to KisHLineIterator2::y() const","symbolLocation":0},{"value":0},{"value":1},{"value":1202306},{"value":4669325440},{"value":800992},{"value":6941938368,"symbolLocation":0,"symbol":"_platform_memmove"},{"value":8803908216},{"value":0},{"value":4},{"value":15062871656},{"value":4},{"value":1},{"value":17637793694318126108},{"value":4106618858},{"value":144},{"value":2147483647},{"value":1},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4362281428},"cpsr":{"value":536870912},"fp":{"value":15062871760},"sp":{"value":15062871584},"esr":{"value":2449473606,"description":"(Data Abort) byte write Translation fault"},"pc":{"value":6941938816,"matchesCrashFrame":1},"far":{"value":0}},"frames":[{"imageOffset":13440,"symbol":"_platform_memmove","symbolLocation":448,"imageIndex":163},{"imageOffset":188884,"sourceLine":2415,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":344},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086715,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":18445499059032611741},{"value":676939875},{"value":1000000000},{"value":1},{"value":24},{"value":1},{"value":12297829382473034411},{"value":0},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4979527880},{"value":0},{"value":2},{"value":4294967295},{"value":0},{"value":64},{"value":12},{"value":1}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15063441008},"sp":{"value":15063440944},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":952848,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":952848,"symbolLocation":36,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":952848,"symbolLocation":36,"sourceLine":220,"sourceFile":"qmutex.h"},{"imageOffset":952848,"sourceLine":2382,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::sealImpl(QString*, bool, KisCapturedReadView*, bool)","imageIndex":1,"symbolLocation":800},{"imageOffset":1120032,"sourceLine":676,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreWriteBatch::Private::finish(QString*, bool)","imageIndex":1,"symbolLocation":304},{"imageOffset":5995064,"sourceLine":663,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreWriteBatch::Private::finishClient(bool, QString*, bool)","imageIndex":1,"symbolLocation":348},{"symbol":"std::__1::__function::__value_func<bool (QString*)>::operator()[abi:ne200100](QString*&&) const","inline":true,"imageIndex":1,"imageOffset":1373388,"symbolLocation":24,"sourceLine":436,"sourceFile":"function.h"},{"symbol":"std::__1::function<bool (QString*)>::operator()(QString*) const","inline":true,"imageIndex":1,"imageOffset":1373388,"symbolLocation":24,"sourceLine":995,"sourceFile":"function.h"},{"symbol":"KisTiledDataManager::clear(QRect, unsigned char const*)::$_1::operator()(std::__1::function<bool (QString*)> const&, QString*) const","inline":true,"imageIndex":1,"imageOffset":1373388,"symbolLocation":64,"sourceLine":874,"sourceFile":"kis_tiled_data_manager.cc"},{"symbol":"decltype(std::declval<KisTiledDataManager::clear(QRect, unsigned char const*)::$_1&>()(std::declval<std::__1::function<bool (QString*)> const&>(), std::declval<QString*>())) std::__1::__invoke[abi:ne200100]<KisTiledDataManager::clear(QRect, unsigned char const*)::$_1&, std::__1::function<bool (QString*)> const&, QString*>(KisTiledDataManager::clear(QRect, unsigned char const*)::$_1&, std::__1::function<bool (QString*)> const&, QString*&&)","inline":true,"imageIndex":1,"imageOffset":1373388,"symbolLocation":72,"sourceLine":179,"sourceFile":"invoke.h"},{"symbol":"bool std::__1::__invoke_void_return_wrapper<bool, false>::__call[abi:ne200100]<KisTiledDataManager::clear(QRect, unsigned char const*)::$_1&, std::__1::function<bool (QString*)> const&, QString*>(KisTiledDataManager::clear(QRect, unsigned char const*)::$_1&, std::__1::function<bool (QString*)> const&, QString*&&)","inline":true,"imageIndex":1,"imageOffset":1373388,"symbolLocation":72,"sourceLine":243,"sourceFile":"invoke.h"},{"symbol":"bool std::__1::__invoke_r[abi:ne200100]<bool, KisTiledDataManager::clear(QRect, unsigned char const*)::$_1&, std::__1::function<bool (QString*)> const&, QString*>(KisTiledDataManager::clear(QRect, unsigned char const*)::$_1&, std::__1::function<bool (QString*)> const&, QString*&&)","inline":true,"imageIndex":1,"imageOffset":1373388,"symbolLocation":72,"sourceLine":273,"sourceFile":"invoke.h"},{"symbol":"std::__1::__function::__alloc_func<KisTiledDataManager::clear(QRect, unsigned char const*)::$_1, std::__1::allocator<KisTiledDataManager::clear(QRect, unsigned char const*)::$_1>, bool (std::__1::function<bool (QString*)> const&, QString*)>::operator()[abi:ne200100](std::__1::function<bool (QString*)> const&, QString*&&)","inline":true,"imageIndex":1,"imageOffset":1373388,"symbolLocation":72,"sourceLine":167,"sourceFile":"function.h"},{"imageOffset":1373388,"sourceLine":319,"sourceFile":"function.h","symbol":"std::__1::__function::__func<KisTiledDataManager::clear(QRect, unsigned char const*)::$_1, std::__1::allocator<KisTiledDataManager::clear(QRect, unsigned char const*)::$_1>, bool (std::__1::function<bool (QString*)> const&, QString*)>::operator()(std::__1::function<bool (QString*)> const&, QString*&&)","imageIndex":1,"symbolLocation":104},{"symbol":"std::__1::__function::__value_func<bool (std::__1::function<bool (QString*)> const&, QString*)>::operator()[abi:ne200100](std::__1::function<bool (QString*)> const&, QString*&&) const","inline":true,"imageIndex":1,"imageOffset":1160152,"symbolLocation":20,"sourceLine":436,"sourceFile":"function.h"},{"symbol":"std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)>::operator()(std::__1::function<bool (QString*)> const&, QString*) const","inline":true,"imageIndex":1,"imageOffset":1160152,"symbolLocation":20,"sourceLine":995,"sourceFile":"function.h"},{"imageOffset":1160152,"sourceLine":2108,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::fillRect(QRect const&, QByteArray const&, QString*, QList<KisLogicalPageId>*, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)","imageIndex":1,"symbolLocation":1336},{"imageOffset":1314900,"sourceLine":864,"sourceFile":"kis_tiled_data_manager.cc","symbol":"KisTiledDataManager::clear(QRect, unsigned char const*)","imageIndex":1,"symbolLocation":2960},{"symbol":"KisDataManager::clear(int, int, int, int, unsigned char const*)","inline":true,"imageIndex":1,"imageOffset":4558204,"symbolLocation":8,"sourceLine":191,"sourceFile":"kis_datamanager.h"},{"imageOffset":4558204,"sourceLine":129,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::clear(QRect const&)","imageIndex":1,"symbolLocation":264},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086716,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1},{"value":18445499059032727575},{"value":676824041},{"value":1000000000},{"value":30786325584898},{"value":1},{"value":1202056},{"value":50364269},{"value":50364269},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4552963904},{"value":15064017656},{"value":15064017656},{"value":13792931536},{"value":1},{"value":4553466672},{"value":4553530688},{"value":15064018160}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15064017312},"sp":{"value":15064017248},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":220,"sourceFile":"qmutex.h"},{"imageOffset":940520,"sourceLine":1743,"sourceFile":"KisPageStore.cpp","symbol":"KisPageStore::beginMutation(KisPageTransaction const&, QString*)","imageIndex":1,"symbolLocation":92},{"imageOffset":1131504,"sourceLine":996,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginMutationBatch(QString*)","imageIndex":1,"symbolLocation":396},{"imageOffset":1134208,"sourceLine":1040,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginIteratorMutationScope(QString*)","imageIndex":1,"symbolLocation":840},{"imageOffset":1435208,"sourceLine":31,"sourceFile":"kis_base_iterator.h","symbol":"KisBaseIterator::KisBaseIterator(KisTiledDataManager*, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":104},{"imageOffset":1437116,"sourceLine":13,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":144},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086717,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":10},{"value":2},{"value":0},{"value":18445499059032613658},{"value":676937958},{"value":1000000000},{"value":4078320},{"value":4669325132},{"value":4382855200},{"value":4669325440},{"value":769408},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4990619872},{"value":15049935304},{"value":15064591552},{"value":0},{"value":4553449632},{"value":2147483647},{"value":1},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15064590800},"sp":{"value":15064590736},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":872096,"symbolLocation":32,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":872096,"symbolLocation":36,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":872096,"symbolLocation":36,"sourceLine":220,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>* std::__1::__construct_at[abi:ne200100]<QMutexLocker<QMutex>, QMutex*&, QMutexLocker<QMutex>*>(QMutexLocker<QMutex>*, QMutex*&)","inline":true,"imageIndex":1,"imageOffset":872096,"symbolLocation":40,"sourceLine":51,"sourceFile":"construct_at.h"},{"symbol":"void std::__1::__optional_storage_base<QMutexLocker<QMutex>, false>::__construct[abi:ne200100]<QMutex*&>(QMutex*&)","inline":true,"imageIndex":1,"imageOffset":872096,"symbolLocation":40,"sourceLine":370,"sourceFile":"optional"},{"symbol":"QMutexLocker<QMutex>& std::__1::optional<QMutexLocker<QMutex>>::emplace[abi:ne200100]<QMutex*&, void>(QMutex*&)","inline":true,"imageIndex":1,"imageOffset":872096,"symbolLocation":40,"sourceLine":767,"sourceFile":"optional"},{"imageOffset":872096,"sourceLine":2630,"sourceFile":"KisPageWriteCoordinator.cpp","symbol":"KisPageWriteAdmission::release(KisPageWriteAdmission::ClaimSet&, bool)","imageIndex":1,"symbolLocation":88},{"symbol":"KisPageWriteAdmission::ClaimSet::releaseImpl(bool)","inline":true,"imageIndex":1,"imageOffset":871640,"symbolLocation":20,"sourceLine":2390,"sourceFile":"KisPageWriteCoordinator.cpp"},{"symbol":"KisPageWriteAdmission::ClaimSet::release()","inline":true,"imageIndex":1,"imageOffset":871640,"symbolLocation":20,"sourceLine":2379,"sourceFile":"KisPageWriteCoordinator.cpp"},{"symbol":"KisPageWriteAdmission::ClaimSet::~ClaimSet()","inline":true,"imageIndex":1,"imageOffset":871640,"symbolLocation":20,"sourceLine":2353,"sourceFile":"KisPageWriteCoordinator.cpp"},{"imageOffset":871640,"sourceLine":2352,"sourceFile":"KisPageWriteCoordinator.cpp","symbol":"KisPageWriteAdmission::ClaimSet::~ClaimSet()","imageIndex":1,"symbolLocation":36},{"imageOffset":1038056,"sourceLine":748,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::Private::~Private()","imageIndex":1,"symbolLocation":28},{"symbol":"KisPageMutationSession::Private::~Private()","inline":true,"imageIndex":1,"imageOffset":942248,"symbolLocation":8,"sourceLine":748,"sourceFile":"KisPageStore.cpp"},{"symbol":"KisPageMutationSession::Private::destroy(KisPageMutationSession::Private*)","inline":true,"imageIndex":1,"imageOffset":942248,"symbolLocation":12,"sourceLine":753,"sourceFile":"KisPageStore.cpp"},{"imageOffset":942248,"sourceLine":775,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::Private::releaseOrRetain(KisPageMutationSession::Private*)","imageIndex":1,"symbolLocation":188},{"imageOffset":1060208,"sourceLine":122,"sourceFile":"shared_ptr.h","symbol":"std::__1::__shared_ptr_pointer<KisPageMutationSession::Private*, void (*)(KisPageMutationSession::Private*), KisPageStore::Private::MutationAllocator<KisPageMutationSession::Private>>::__on_zero_shared()","imageIndex":1,"symbolLocation":16},{"symbol":"std::__1::__shared_count::__release_shared[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":937592,"symbolLocation":36,"sourceLine":91,"sourceFile":"shared_count.h"},{"symbol":"std::__1::__shared_weak_count::__release_shared[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":937592,"symbolLocation":36,"sourceLine":120,"sourceFile":"shared_count.h"},{"symbol":"std::__1::shared_ptr<KisPageMutationSession::Private>::~shared_ptr[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":937592,"symbolLocation":44,"sourceLine":558,"sourceFile":"shared_ptr.h"},{"symbol":"std::__1::shared_ptr<KisPageMutationSession::Private>::~shared_ptr[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":937592,"symbolLocation":44,"sourceLine":556,"sourceFile":"shared_ptr.h"},{"symbol":"KisPageMutationSession::~KisPageMutationSession()","inline":true,"imageIndex":1,"imageOffset":937592,"symbolLocation":44,"sourceLine":1654,"sourceFile":"KisPageStore.cpp"},{"imageOffset":937592,"sourceLine":1654,"sourceFile":"KisPageStore.cpp","symbol":"KisPageMutationSession::~KisPageMutationSession()","imageIndex":1,"symbolLocation":56},{"imageOffset":1190288,"sourceLine":467,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreWriteBatch::Private::~Private()","imageIndex":1,"symbolLocation":80},{"symbol":"std::__1::__shared_count::__release_shared[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":1119648,"symbolLocation":36,"sourceLine":91,"sourceFile":"shared_count.h"},{"symbol":"std::__1::__shared_weak_count::__release_shared[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":1119648,"symbolLocation":36,"sourceLine":120,"sourceFile":"shared_count.h"},{"symbol":"std::__1::shared_ptr<KisTiledDataManagerPageStoreWriteBatch::Private>::~shared_ptr[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":1119648,"symbolLocation":44,"sourceLine":558,"sourceFile":"shared_ptr.h"},{"symbol":"std::__1::shared_ptr<KisTiledDataManagerPageStoreWriteBatch::Private>::~shared_ptr[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":1119648,"symbolLocation":44,"sourceLine":556,"sourceFile":"shared_ptr.h"},{"symbol":"KisTiledDataManagerPageStoreWriteBatch::~KisTiledDataManagerPageStoreWriteBatch()","inline":true,"imageIndex":1,"imageOffset":1119648,"symbolLocation":96,"sourceLine":617,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp"},{"imageOffset":1119648,"sourceLine":615,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreWriteBatch::~KisTiledDataManagerPageStoreWriteBatch()","imageIndex":1,"symbolLocation":108},{"imageOffset":1315816,"inline":true,"symbol":"std::__1::default_delete<KisTiledDataManagerPageStoreWriteBatch>::operator()[abi:ne200100](KisTiledDataManagerPageStoreWriteBatch*) const","symbolLocation":4,"imageIndex":1},{"symbol":"std::__1::unique_ptr<KisTiledDataManagerPageStoreWriteBatch, std::__1::default_delete<KisTiledDataManagerPageStoreWriteBatch>>::reset[abi:ne200100](KisTiledDataManagerPageStoreWriteBatch*)","inline":true,"imageIndex":1,"imageOffset":1315816,"symbolLocation":32,"sourceLine":300,"sourceFile":"unique_ptr.h"},{"symbol":"std::__1::unique_ptr<KisTiledDataManagerPageStoreWriteBatch, std::__1::default_delete<KisTiledDataManagerPageStoreWriteBatch>>::~unique_ptr[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":1315816,"symbolLocation":32,"sourceLine":269,"sourceFile":"unique_ptr.h"},{"symbol":"std::__1::unique_ptr<KisTiledDataManagerPageStoreWriteBatch, std::__1::default_delete<KisTiledDataManagerPageStoreWriteBatch>>::~unique_ptr[abi:ne200100]()","inline":true,"imageIndex":1,"imageOffset":1315816,"symbolLocation":32,"sourceLine":269,"sourceFile":"unique_ptr.h"},{"symbol":"KisTiledDataManagerPageStoreBackend::OperationDelivery::~OperationDelivery()","inline":true,"imageIndex":1,"imageOffset":1315816,"symbolLocation":32,"sourceLine":96,"sourceFile":"KisTiledDataManagerPageStoreBackend.h"},{"imageOffset":1315816,"sourceLine":96,"sourceFile":"KisTiledDataManagerPageStoreBackend.h","symbol":"<deduplicated_symbol>","imageIndex":1,"symbolLocation":36},{"imageOffset":1315064,"sourceLine":881,"sourceFile":"kis_tiled_data_manager.cc","symbol":"KisTiledDataManager::clear(QRect, unsigned char const*)","imageIndex":1,"symbolLocation":3124},{"symbol":"KisDataManager::clear(int, int, int, int, unsigned char const*)","inline":true,"imageIndex":1,"imageOffset":4558204,"symbolLocation":8,"sourceLine":191,"sourceFile":"kis_datamanager.h"},{"imageOffset":4558204,"sourceLine":129,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::clear(QRect const&)","imageIndex":1,"symbolLocation":264},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086719,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":15065736744},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8803898624},{"value":0},{"value":15050001088},{"value":15050001008},{"value":15065739488},{"value":0},{"value":0},{"value":0},{"value":1},{"value":256},{"value":17},{"value":16}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":15065736864},"sp":{"value":15065736720},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":161},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":160},{"imageOffset":123496,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":32,"imageIndex":162},{"imageOffset":2209888,"symbol":"QReadWriteLockPrivate::lockForRead(std::__1::unique_lock<std::__1::mutex>&, QDeadlineTimer)","symbolLocation":112,"imageIndex":41},{"imageOffset":2207932,"symbol":"contendedTryLockForRead(QAtomicPointer<QReadWriteLockPrivate>&, QDeadlineTimer, QReadWriteLockPrivate*)","symbolLocation":268,"imageIndex":41},{"symbol":"QReadWriteLock::lockForRead()","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":16,"sourceLine":68,"sourceFile":"qreadwritelock.h"},{"symbol":"QReadLocker::relock()","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":20,"sourceLine":115,"sourceFile":"qreadwritelock.h"},{"symbol":"QReadLocker::QReadLocker(QReadWriteLock*)","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":24,"sourceLine":134,"sourceFile":"qreadwritelock.h"},{"symbol":"QReadLocker::QReadLocker(QReadWriteLock*)","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":24,"sourceLine":131,"sourceFile":"qreadwritelock.h"},{"symbol":"KisTiledDataManager::clear(QRect, unsigned char const*)::$_0::operator()(QString*) const","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":340,"sourceLine":870,"sourceFile":"kis_tiled_data_manager.cc"},{"symbol":"decltype(std::declval<KisTiledDataManager::clear(QRect, unsigned char const*)::$_0&>()(std::declval<QString*>())) std::__1::__invoke[abi:ne200100]<KisTiledDataManager::clear(QRect, unsigned char const*)::$_0&, QString*>(KisTiledDataManager::clear(QRect, unsigned char const*)::$_0&, QString*&&)","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":348,"sourceLine":179,"sourceFile":"invoke.h"},{"symbol":"bool std::__1::__invoke_void_return_wrapper<bool, false>::__call[abi:ne200100]<KisTiledDataManager::clear(QRect, unsigned char const*)::$_0&, QString*>(KisTiledDataManager::clear(QRect, unsigned char const*)::$_0&, QString*&&)","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":348,"sourceLine":243,"sourceFile":"invoke.h"},{"symbol":"bool std::__1::__invoke_r[abi:ne200100]<bool, KisTiledDataManager::clear(QRect, unsigned char const*)::$_0&, QString*>(KisTiledDataManager::clear(QRect, unsigned char const*)::$_0&, QString*&&)","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":348,"sourceLine":273,"sourceFile":"invoke.h"},{"symbol":"std::__1::__function::__alloc_func<KisTiledDataManager::clear(QRect, unsigned char const*)::$_0, std::__1::allocator<KisTiledDataManager::clear(QRect, unsigned char const*)::$_0>, bool (QString*)>::operator()[abi:ne200100](QString*&&)","inline":true,"imageIndex":1,"imageOffset":1363856,"symbolLocation":348,"sourceLine":167,"sourceFile":"function.h"},{"imageOffset":1363856,"sourceLine":319,"sourceFile":"function.h","symbol":"std::__1::__function::__func<KisTiledDataManager::clear(QRect, unsigned char const*)::$_0, std::__1::allocator<KisTiledDataManager::clear(QRect, unsigned char const*)::$_0>, bool (QString*)>::operator()(QString*&&)","imageIndex":1,"symbolLocation":376},{"symbol":"std::__1::__function::__value_func<bool (QString*)>::operator()[abi:ne200100](QString*&&) const","inline":true,"imageIndex":1,"imageOffset":1159804,"symbolLocation":16,"sourceLine":436,"sourceFile":"function.h"},{"symbol":"std::__1::function<bool (QString*)>::operator()(QString*) const","inline":true,"imageIndex":1,"imageOffset":1159804,"symbolLocation":16,"sourceLine":995,"sourceFile":"function.h"},{"imageOffset":1159804,"sourceLine":2050,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::fillRect(QRect const&, QByteArray const&, QString*, QList<KisLogicalPageId>*, KisTiledDataManagerPageStoreBackend::OperationDelivery*, std::__1::function<bool (QString*)> const&, std::__1::function<bool (std::__1::function<bool (QString*)> const&, QString*)> const&)","imageIndex":1,"symbolLocation":988},{"imageOffset":1314900,"sourceLine":864,"sourceFile":"kis_tiled_data_manager.cc","symbol":"KisTiledDataManager::clear(QRect, unsigned char const*)","imageIndex":1,"symbolLocation":2960},{"symbol":"KisDataManager::clear(int, int, int, int, unsigned char const*)","inline":true,"imageIndex":1,"imageOffset":4558204,"symbolLocation":8,"sourceLine":191,"sourceFile":"kis_datamanager.h"},{"imageOffset":4558204,"sourceLine":129,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::clear(QRect const&)","imageIndex":1,"symbolLocation":264},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086720,"name":"Thread (pooled)","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":3},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1},{"value":18445499059032644825},{"value":676906791},{"value":1000000000},{"value":19791209304578},{"value":1},{"value":1201868},{"value":167772160},{"value":167772160},{"value":544},{"value":8803900376},{"value":0},{"value":4990618128},{"value":3},{"value":4552963904},{"value":15070685944},{"value":15070685944},{"value":5797610032},{"value":1},{"value":4553466672},{"value":4553530688},{"value":15070686448}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430371468},"cpsr":{"value":2147483648},"fp":{"value":15070685600},"sp":{"value":15070685536},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":161},{"imageOffset":2202252,"symbol":"QBasicMutex::lockInternal()","symbolLocation":168,"imageIndex":41},{"symbol":"QBasicMutex::lock()","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":28,"sourceLine":41,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":223,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::QMutexLocker(QMutex*)","inline":true,"imageIndex":1,"imageOffset":940520,"symbolLocation":36,"sourceLine":220,"sourceFile":"qmutex.h"},{"imageOffset":940520,"sourceLine":1743,"sourceFile":"KisPageStore.cpp","symbol":"KisPageStore::beginMutation(KisPageTransaction const&, QString*)","imageIndex":1,"symbolLocation":92},{"imageOffset":1131504,"sourceLine":996,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginMutationBatch(QString*)","imageIndex":1,"symbolLocation":396},{"imageOffset":1134208,"sourceLine":1040,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::beginIteratorMutationScope(QString*)","imageIndex":1,"symbolLocation":840},{"imageOffset":1435208,"sourceLine":31,"sourceFile":"kis_base_iterator.h","symbol":"KisBaseIterator::KisBaseIterator(KisTiledDataManager*, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":104},{"imageOffset":1437116,"sourceLine":13,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":144},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]},{"id":113086721,"name":"Thread (pooled)","threadState":{"x":[{"value":0},{"value":0},{"value":0},{"value":1},{"value":0},{"value":0},{"value":0},{"value":0},{"value":6941489740,"symbolLocation":0,"symbol":"__ulock_wait2"},{"value":18446744073709551615},{"value":1},{"value":30786325584898},{"value":1},{"value":1202310},{"value":2147574064},{"value":2147574064},{"value":516},{"value":8803908216},{"value":0},{"value":3},{"value":4552824256},{"value":15071258224},{"value":4553199208},{"value":4552861216},{"value":4553160432},{"value":4553159760},{"value":4553450240},{"value":4552963904},{"value":15071258664}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4430374540},"cpsr":{"value":0},"fp":{"value":15071257904},"sp":{"value":15071257888},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":4430374540},"far":{"value":0}},"frames":[{"imageOffset":2205324,"symbol":"QBasicMutex::unlockInternal()","symbolLocation":128,"imageIndex":41},{"symbol":"QBasicMutex::unlock()","inline":true,"imageIndex":1,"imageOffset":180060,"symbolLocation":20,"sourceLine":53,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::unlock()","inline":true,"imageIndex":1,"imageOffset":180060,"symbolLocation":20,"sourceLine":250,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::~QMutexLocker()","inline":true,"imageIndex":1,"imageOffset":180060,"symbolLocation":20,"sourceLine":239,"sourceFile":"qmutex.h"},{"symbol":"QMutexLocker<QMutex>::~QMutexLocker()","inline":true,"imageIndex":1,"imageOffset":180060,"symbolLocation":20,"sourceLine":237,"sourceFile":"qmutex.h"},{"imageOffset":180060,"sourceLine":1108,"sourceFile":"KisTiles3PageReplicaProvider.cpp","symbol":"KisTiles3PageReplicaProvider::prepareTileReadCache(KisCpuWriteGuard const&, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>) const","imageIndex":1,"symbolLocation":564},{"imageOffset":1147088,"sourceLine":1697,"sourceFile":"KisTiledDataManagerPageStoreBackend.cpp","symbol":"KisTiledDataManagerPageStoreBackend::acquireTile(int, int, KisTilePageStoreBridge::Access, std::__1::unique_ptr<KisTilePageStoreLease, std::__1::default_delete<KisTilePageStoreLease>>*)","imageIndex":1,"symbolLocation":1908},{"symbol":"KisTile::acquirePageStoreLease(bool, bool) const","inline":true,"imageIndex":1,"imageOffset":1239004,"symbolLocation":64,"sourceLine":120,"sourceFile":"kis_tile.cc"},{"imageOffset":1239004,"sourceLine":441,"sourceFile":"kis_tile.cc","symbol":"KisTile::ensurePageStoreWriteAccess() const","imageIndex":1,"symbolLocation":312},{"symbol":"KisTile::markPageStoreWriteDirty() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":161,"sourceFile":"kis_tile.h"},{"symbol":"KisTile::data() const","inline":true,"imageIndex":1,"imageOffset":1239616,"symbolLocation":8,"sourceLine":113,"sourceFile":"kis_tile.h"},{"imageOffset":1239616,"sourceLine":478,"sourceFile":"kis_tile.cc","symbol":"KisTile::tryWriteData() const","imageIndex":1,"symbolLocation":80},{"imageOffset":1440600,"symbol":"<deduplicated_symbol>","symbolLocation":292,"imageIndex":1},{"imageOffset":1436056,"sourceLine":136,"sourceFile":"kis_base_iterator.h","symbol":"bool KisBaseIterator::populateTileCache<KisHLineIterator2::KisTileInfo>(std::__1::vector<KisHLineIterator2::KisTileInfo, std::__1::allocator<KisHLineIterator2::KisTileInfo>>&, long long, int, int, int, int)","imageIndex":1,"symbolLocation":376},{"imageOffset":1437520,"sourceLine":47,"sourceFile":"kis_hline_iterator.cpp","symbol":"KisHLineIterator2::KisHLineIterator2(KisDataManager*, int, int, int, int, int, bool, KisIteratorCompleteListener*, std::__1::shared_ptr<KisPageStoreIteratorReadScope const>)","imageIndex":1,"symbolLocation":548},{"imageOffset":4559276,"sourceLine":146,"sourceFile":"kis_paint_device_strategies.h","symbol":"KisPaintDevice::Private::KisPaintDeviceStrategy::createHLineIteratorNG(KisDataManager*, int, int, int, int, int)","imageIndex":1,"symbolLocation":180},{"imageOffset":4530808,"sourceLine":1845,"sourceFile":"kis_paint_device.cc","symbol":"KisPaintDevice::createHLineIteratorNG(int, int, int)","imageIndex":1,"symbolLocation":472},{"symbol":"DevicePolicy::createIterator(QRect const&)","inline":true,"imageIndex":0,"imageOffset":222720,"symbolLocation":16,"sourceLine":28,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222720,"sourceLine":71,"sourceFile":"kis_sequential_iterator.h","symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","imageIndex":0,"symbolLocation":84},{"symbol":"WritableIteratorPolicy<DevicePolicy>::WritableIteratorPolicy(DevicePolicy, QRect const&)","inline":true,"imageIndex":0,"imageOffset":222228,"symbolLocation":16,"sourceLine":70,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":222228,"sourceLine":181,"sourceFile":"kis_sequential_iterator.h","symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","imageIndex":0,"symbolLocation":72},{"symbol":"KisSequentialIteratorBase<WritableIteratorPolicy<DevicePolicy>, DevicePolicy, NoProgressPolicy>::KisSequentialIteratorBase(DevicePolicy, QRect const&, NoProgressPolicy)","inline":true,"imageIndex":0,"imageOffset":188760,"symbolLocation":4,"sourceLine":189,"sourceFile":"kis_sequential_iterator.h"},{"imageOffset":188760,"sourceLine":2413,"sourceFile":"kis_paint_device_test.cpp","symbol":"FillWorker::run()","imageIndex":0,"symbolLocation":220},{"imageOffset":2215832,"symbol":"QThreadPoolThread::run()","symbolLocation":232,"imageIndex":41},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":160},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":160}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4362092544,
+    "size" : 278528,
+    "uuid" : "19fe8209-96a7-3ac6-9e36-31596cb6935b",
+    "path" : "\/Users\/USER\/*\/kis_paint_device_test",
+    "name" : "kis_paint_device_test"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4393140224,
+    "size" : 6815744,
+    "uuid" : "8fc1b7e6-abd2-3dd8-aeaf-ea3fe966340f",
+    "path" : "\/Users\/USER\/*\/libkritaimage.21.0.0.dylib",
+    "name" : "libkritaimage.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4366974976,
+    "size" : 737280,
+    "uuid" : "76b029f2-5d9e-300b-8d60-e65cca73dd46",
+    "path" : "\/Users\/USER\/*\/libkritawidgets.21.0.0.dylib",
+    "name" : "libkritawidgets.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4363436032,
+    "size" : 212992,
+    "uuid" : "e690c711-73e5-366a-905d-b34719785741",
+    "path" : "\/Users\/USER\/*\/libkritaresourcewidgets.21.0.0.dylib",
+    "name" : "libkritaresourcewidgets.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4363911168,
+    "size" : 147456,
+    "uuid" : "6d5f095f-9f53-3d1d-a2a2-fbee5a1f47b8",
+    "path" : "\/Users\/USER\/*\/libKF6Completion.6.7.0.dylib",
+    "name" : "libKF6Completion.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4364255232,
+    "size" : 983040,
+    "uuid" : "8f393364-6540-3231-a735-c8e84cc4f3a7",
+    "path" : "\/Users\/USER\/*\/libkritapsdutils.21.0.0.dylib",
+    "name" : "libkritapsdutils.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382916608,
+    "size" : 3817472,
+    "uuid" : "e86c3ca7-5420-36cc-86ce-3bf06fb599c5",
+    "path" : "\/Users\/USER\/*\/libkritaflake.21.0.0.dylib",
+    "name" : "libkritaflake.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4362534912,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtSvg",
+    "size" : 294912,
+    "uuid" : "93afd7db-c303-3eb6-9785-42c99a56956a",
+    "path" : "\/Users\/USER\/*\/QtSvg.framework\/Versions\/A\/QtSvg",
+    "name" : "QtSvg",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4365582336,
+    "size" : 573440,
+    "uuid" : "f8b3f46f-02a5-3ad8-ad62-82809b702e22",
+    "path" : "\/Users\/USER\/*\/libfreetype.6.18.3.dylib",
+    "name" : "libfreetype.6.18.3.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4371283968,
+    "size" : 851968,
+    "uuid" : "42aa83f0-7d8c-3f7d-8748-e66a373ac9ec",
+    "path" : "\/Users\/USER\/*\/libharfbuzz.0.dylib",
+    "name" : "libharfbuzz.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4406525952,
+    "size" : 2605056,
+    "uuid" : "847a5b05-0e3a-3c83-96b9-9abf6bf438fb",
+    "path" : "\/Users\/USER\/*\/libkritapigment.21.0.0.dylib",
+    "name" : "libkritapigment.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4368547840,
+    "size" : 81920,
+    "uuid" : "9e47472d-ccb8-3550-b154-fa7f7b961e56",
+    "path" : "\/Users\/USER\/*\/libkritacommand.21.0.0.dylib",
+    "name" : "libkritacommand.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4363026432,
+    "size" : 180224,
+    "uuid" : "09c5ed49-23b9-31de-a004-0180dbded852",
+    "path" : "\/Users\/USER\/*\/libkritametadata.21.0.0.dylib",
+    "name" : "libkritametadata.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4368760832,
+    "size" : 1015808,
+    "uuid" : "6d22a502-134c-3c51-8d08-109db4c66ecb",
+    "path" : "\/Users\/USER\/*\/libkritawidgetutils.21.0.0.dylib",
+    "name" : "libkritawidgetutils.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4373757952,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtPrintSupport",
+    "size" : 278528,
+    "uuid" : "809d6bf8-509f-359a-9343-ef721573c4d2",
+    "path" : "\/Users\/USER\/*\/QtPrintSupport.framework\/Versions\/A\/QtPrintSupport",
+    "name" : "QtPrintSupport",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4374315008,
+    "size" : 3948544,
+    "uuid" : "330503f0-9d88-3223-a353-5f2c739a1ada",
+    "path" : "\/Users\/USER\/*\/libKF6WidgetsAddons.6.7.0.dylib",
+    "name" : "libKF6WidgetsAddons.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4370776064,
+    "size" : 163840,
+    "uuid" : "ec3f2599-45d9-30e7-bf9c-43dc292fbb22",
+    "path" : "\/Users\/USER\/*\/libKF6ItemViews.6.7.0.dylib",
+    "name" : "libKF6ItemViews.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4373233664,
+    "size" : 114688,
+    "uuid" : "70e3c836-f6a3-3a83-8a73-2c12ff0af557",
+    "path" : "\/Users\/USER\/*\/libKF6ConfigGui.6.7.0.dylib",
+    "name" : "libKF6ConfigGui.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4372660224,
+    "size" : 114688,
+    "uuid" : "e0db8d97-a10d-3108-9e7d-7c01eeb8c410",
+    "path" : "\/Users\/USER\/*\/libKF6GuiAddons.6.7.0.dylib",
+    "name" : "libKF6GuiAddons.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4390060032,
+    "size" : 950272,
+    "uuid" : "05c5ecb7-dafa-385b-8994-ad5baf926866",
+    "path" : "\/Users\/USER\/*\/libkritaresources.21.0.0.dylib",
+    "name" : "libkritaresources.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4372971520,
+    "size" : 131072,
+    "uuid" : "4b28773b-d3bf-3c6a-bd81-0740dc72a25c",
+    "path" : "\/Users\/USER\/*\/libkritaplugin.21.0.0.dylib",
+    "name" : "libkritaplugin.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4381736960,
+    "size" : 606208,
+    "uuid" : "c8a82f49-3149-3f18-bf15-ce910ae02c2c",
+    "path" : "\/Users\/USER\/*\/libKF6CoreAddons.6.7.0.dylib",
+    "name" : "libKF6CoreAddons.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4366385152,
+    "size" : 81920,
+    "uuid" : "1367274f-9c32-32ca-a613-0876b8c294aa",
+    "path" : "\/Users\/USER\/*\/libkritastore.21.0.0.dylib",
+    "name" : "libkritastore.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4380278784,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtSql",
+    "size" : 196608,
+    "uuid" : "417b1c3f-0363-3d63-87a8-20dea12fa3cd",
+    "path" : "\/Users\/USER\/*\/QtSql.framework\/Versions\/A\/QtSql",
+    "name" : "QtSql",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4417142784,
+    "size" : 2523136,
+    "uuid" : "0550f07e-48b2-3fb5-8f3d-978438ea6bf4",
+    "path" : "\/Users\/USER\/*\/libIlmImf-2_5.26.0.0.dylib",
+    "name" : "libIlmImf-2_5.26.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4379607040,
+    "size" : 49152,
+    "uuid" : "472dfff4-854d-320a-8928-9dfd4ff040a4",
+    "path" : "\/Users\/USER\/*\/libImath-2_5.25.0.7.dylib",
+    "name" : "libImath-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4379738112,
+    "size" : 278528,
+    "uuid" : "e22acbcc-8636-3188-8f67-0108c56732d5",
+    "path" : "\/Users\/USER\/*\/libHalf-2_5.25.0.7.dylib",
+    "name" : "libHalf-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4363370496,
+    "size" : 16384,
+    "uuid" : "d62af6c5-0f7e-3624-93f0-8c66ca262723",
+    "path" : "\/Users\/USER\/*\/libIexMath-2_5.25.0.7.dylib",
+    "name" : "libIexMath-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4371202048,
+    "size" : 16384,
+    "uuid" : "d232f6da-0609-3662-b641-4a212e4d7fee",
+    "path" : "\/Users\/USER\/*\/libIlmThread-2_5.25.0.7.dylib",
+    "name" : "libIlmThread-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4380622848,
+    "size" : 294912,
+    "uuid" : "9d29bbfa-30f8-3f1d-b28c-0590c67859f4",
+    "path" : "\/Users\/USER\/*\/libIex-2_5.25.0.7.dylib",
+    "name" : "libIex-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4380049408,
+    "size" : 32768,
+    "uuid" : "17a6f188-451b-3eb7-9664-2ead0ff4ffd5",
+    "path" : "\/Users\/USER\/*\/libkritamultiarch.21.0.0.dylib",
+    "name" : "libkritamultiarch.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4410818560,
+    "size" : 425984,
+    "uuid" : "97b5b2b3-09f8-35e2-936a-2d65c0b19824",
+    "path" : "\/Users\/USER\/*\/libkritaglobal.21.0.0.dylib",
+    "name" : "libkritaglobal.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4373626880,
+    "size" : 16384,
+    "uuid" : "7c0e59d9-c25b-37cc-83d4-a061807a5d5d",
+    "path" : "\/Users\/USER\/*\/libkritaversion.21.0.0.dylib",
+    "name" : "libkritaversion.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4381507584,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtXml",
+    "size" : 114688,
+    "uuid" : "03f6f5a0-5c51-3218-839e-7ffa36409098",
+    "path" : "\/Users\/USER\/*\/QtXml.framework\/Versions\/A\/QtXml",
+    "name" : "QtXml",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4392386560,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtCore5Compat",
+    "size" : 262144,
+    "uuid" : "10a6e7c3-61c7-39e2-abff-9f1c08033a32",
+    "path" : "\/Users\/USER\/*\/QtCore5Compat.framework\/Versions\/A\/QtCore5Compat",
+    "name" : "QtCore5Compat",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4391583744,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtOpenGL",
+    "size" : 409600,
+    "uuid" : "6c19c970-1d68-347f-927a-f546da4e37d7",
+    "path" : "\/Users\/USER\/*\/QtOpenGL.framework\/Versions\/A\/QtOpenGL",
+    "name" : "QtOpenGL",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4413145088,
+    "size" : 311296,
+    "uuid" : "2a07c2c5-11ea-3918-a958-0cd75704a8f7",
+    "path" : "\/Users\/USER\/*\/libKF6ConfigCore.6.7.0.dylib",
+    "name" : "libKF6ConfigCore.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4435066880,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtWidgets",
+    "size" : 4571136,
+    "uuid" : "0664c36c-d545-3e61-ab51-6aafe8572cee",
+    "path" : "\/Users\/USER\/*\/QtWidgets.framework\/Versions\/A\/QtWidgets",
+    "name" : "QtWidgets",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4420255744,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtGui",
+    "size" : 5390336,
+    "uuid" : "577c9144-0a01-3557-b7c6-0a7808e3c6ca",
+    "path" : "\/Users\/USER\/*\/QtGui.framework\/Versions\/A\/QtGui",
+    "name" : "QtGui",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4412456960,
+    "size" : 294912,
+    "uuid" : "4e65fc57-fc87-3b36-adff-c373163199da",
+    "path" : "\/Users\/USER\/*\/libKF6I18n.6.7.0.dylib",
+    "name" : "libKF6I18n.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4411523072,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtTest",
+    "size" : 311296,
+    "uuid" : "35b43927-50b5-361f-bbd4-245b112b9539",
+    "path" : "\/Users\/USER\/*\/QtTest.framework\/Versions\/A\/QtTest",
+    "name" : "QtTest",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4428169216,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtCore",
+    "size" : 4751360,
+    "uuid" : "7244edf8-5ffb-33e2-ba5a-ed3dab7efc9e",
+    "path" : "\/Users\/USER\/*\/QtCore.framework\/Versions\/A\/QtCore",
+    "name" : "QtCore",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4442243072,
+    "size" : 589824,
+    "uuid" : "b97fd69d-6c06-3f6a-91a0-09c570c6f0e6",
+    "path" : "\/Users\/USER\/*\/libfftw3.3.dylib",
+    "name" : "libfftw3.3.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4413964288,
+    "size" : 2048000,
+    "uuid" : "6d5f7b8b-62be-34d4-8c44-0bb4eca7c423",
+    "path" : "\/Users\/USER\/*\/libgsl.dylib",
+    "name" : "libgsl.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4380131328,
+    "size" : 49152,
+    "uuid" : "2b6515c0-961d-3da2-8d41-9b420bc24bad",
+    "path" : "\/Users\/USER\/*\/libkritamacosutils.21.0.0.dylib",
+    "name" : "libkritamacosutils.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4392779776,
+    "size" : 262144,
+    "uuid" : "b35034dd-f228-3301-b5fd-11959d073e55",
+    "path" : "\/Users\/USER\/*\/libgslcblas.dylib",
+    "name" : "libgslcblas.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4412030976,
+    "size" : 245760,
+    "uuid" : "57d6f191-d853-37a0-8d43-e8e42c18fb34",
+    "path" : "\/Users\/USER\/*\/libfontconfig.1.dylib",
+    "name" : "libfontconfig.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4373528576,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtOpenGLWidgets",
+    "size" : 32768,
+    "uuid" : "5cbb52c1-2334-332c-855f-8db23fc243b2",
+    "path" : "\/Users\/USER\/*\/QtOpenGLWidgets.framework\/Versions\/A\/QtOpenGLWidgets",
+    "name" : "QtOpenGLWidgets",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4412915712,
+    "size" : 131072,
+    "uuid" : "5d882703-800b-3592-8f73-85e0df931f95",
+    "path" : "\/Users\/USER\/*\/libfribidi.0.dylib",
+    "name" : "libfribidi.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4443504640,
+    "size" : 65536,
+    "uuid" : "e2e4596d-c706-3a14-9d5d-6d8dc7fe085b",
+    "path" : "\/Users\/USER\/*\/libKF6ColorScheme.6.7.0.dylib",
+    "name" : "libKF6ColorScheme.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4443668480,
+    "size" : 114688,
+    "uuid" : "2fbbc06b-6e87-37ef-95dc-d7f84c9d8ee9",
+    "path" : "\/Users\/USER\/*\/libz.1.3.1.dylib",
+    "name" : "libz.1.3.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4443209728,
+    "CFBundleShortVersionString" : "1.6",
+    "CFBundleIdentifier" : "org.libpng.libpng",
+    "size" : 180224,
+    "uuid" : "6488b550-213f-3469-9b04-30234b75a774",
+    "path" : "\/Users\/USER\/*\/png.framework\/Versions\/1.6.51\/png",
+    "name" : "png",
+    "CFBundleVersion" : "1.6.51"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4451581952,
+    "size" : 1916928,
+    "uuid" : "a7c5c6c1-b3bc-3fed-8840-608e53c2c6f2",
+    "path" : "\/Users\/USER\/*\/libicui18n.72.dylib",
+    "name" : "libicui18n.72.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4448403456,
+    "size" : 1392640,
+    "uuid" : "002776ac-fef9-34d6-9783-138a48aa6933",
+    "path" : "\/Users\/USER\/*\/libicuuc.72.dylib",
+    "name" : "libicuuc.72.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4518248448,
+    "size" : 31260672,
+    "uuid" : "881774df-da94-386e-baf1-9cba61e3639a",
+    "path" : "\/Users\/USER\/*\/libicudata.72.dylib",
+    "name" : "libicudata.72.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4444356608,
+    "size" : 180224,
+    "uuid" : "2870042a-12e8-3c53-8c74-b011434e0e61",
+    "path" : "\/Users\/USER\/*\/libpng16.16.51.0.dylib",
+    "name" : "libpng16.16.51.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4443815936,
+    "size" : 163840,
+    "uuid" : "410de580-d0cb-384b-a7ce-772daa6882ea",
+    "path" : "\/Users\/USER\/*\/libquazip1-qt6.1.4.dylib",
+    "name" : "libquazip1-qt6.1.4.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4392271872,
+    "size" : 65536,
+    "uuid" : "15621d5b-2739-34b8-a2c0-1401214f01ca",
+    "path" : "\/Users\/USER\/*\/libintl.8.dylib",
+    "name" : "libintl.8.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4444127232,
+    "size" : 131072,
+    "uuid" : "298e1690-fb50-36b0-91cb-6cc2f53a3335",
+    "path" : "\/Users\/USER\/*\/libexpat.1.8.8.dylib",
+    "name" : "libexpat.1.8.8.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4445224960,
+    "size" : 163840,
+    "uuid" : "34cee0b7-ce11-3e93-837c-e7c6936a8ba0",
+    "path" : "\/Users\/USER\/*\/libKF6Codecs.6.7.0.dylib",
+    "name" : "libKF6Codecs.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4445978624,
+    "CFBundleShortVersionString" : "3.0",
+    "CFBundleIdentifier" : "com.apple.security.csparser",
+    "size" : 131072,
+    "uuid" : "58f759bc-cd52-3491-8dd0-7f34f32cfc35",
+    "path" : "\/System\/Library\/Frameworks\/Security.framework\/Versions\/A\/PlugIns\/csparser.bundle\/Contents\/MacOS\/csparser",
+    "name" : "csparser",
+    "CFBundleVersion" : "61439.140.12.700.1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4446224384,
+    "size" : 65536,
+    "uuid" : "07cce845-0da2-3a74-8994-cd127ea674d1",
+    "path" : "\/Users\/USER\/*\/libqoffscreen.dylib",
+    "name" : "libqoffscreen.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4445110272,
+    "size" : 32768,
+    "uuid" : "dc1f615b-3cb2-3996-86b3-9078f7819945",
+    "path" : "\/Users\/USER\/*\/kimg_pcx.dylib",
+    "name" : "kimg_pcx.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4445765632,
+    "size" : 65536,
+    "uuid" : "dc2f2c55-6d07-3c06-bc58-3e0d38a6e164",
+    "path" : "\/Users\/USER\/*\/kimg_psd.dylib",
+    "name" : "kimg_psd.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4446388224,
+    "size" : 32768,
+    "uuid" : "df2f63cc-ee39-33c4-94ee-6b7d985e8dd3",
+    "path" : "\/Users\/USER\/*\/kimg_pfm.dylib",
+    "name" : "kimg_pfm.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4445683712,
+    "size" : 32768,
+    "uuid" : "2f51c8e2-252d-36d1-af5c-60634c567fe2",
+    "path" : "\/Users\/USER\/*\/libqgif.dylib",
+    "name" : "libqgif.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4445896704,
+    "size" : 32768,
+    "uuid" : "76db98fe-05c9-3c2d-b476-136c3adedf00",
+    "path" : "\/Users\/USER\/*\/libqwbmp.dylib",
+    "name" : "libqwbmp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4447272960,
+    "size" : 458752,
+    "uuid" : "a47272ac-95d4-322b-ab3b-046653e29730",
+    "path" : "\/Users\/USER\/*\/libqwebp.dylib",
+    "name" : "libqwebp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4445536256,
+    "size" : 49152,
+    "uuid" : "b4a5c073-462c-3935-b955-3ca019e9876c",
+    "path" : "\/Users\/USER\/*\/kimg_eps.dylib",
+    "name" : "kimg_eps.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4450697216,
+    "size" : 131072,
+    "uuid" : "5156c3a0-f350-3266-b813-dfe73f23a082",
+    "path" : "\/Users\/USER\/*\/kimg_xcf.dylib",
+    "name" : "kimg_xcf.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4446486528,
+    "size" : 32768,
+    "uuid" : "0cc9a6fc-3fc3-3b48-802c-f303c76790e7",
+    "path" : "\/Users\/USER\/*\/libqico.dylib",
+    "name" : "libqico.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4447977472,
+    "size" : 32768,
+    "uuid" : "084e741d-8fb2-3499-ada5-207a153aadc0",
+    "path" : "\/Users\/USER\/*\/kimg_pic.dylib",
+    "name" : "kimg_pic.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4447830016,
+    "size" : 49152,
+    "uuid" : "159b1924-6bfa-3505-93be-a8b534ec8fcd",
+    "path" : "\/Users\/USER\/*\/kimg_rgb.dylib",
+    "name" : "kimg_rgb.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4448206848,
+    "size" : 32768,
+    "uuid" : "b3c4c4bc-8334-3771-b3d8-50ef3c45607e",
+    "path" : "\/Users\/USER\/*\/libqmacheif.dylib",
+    "name" : "libqmacheif.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4448288768,
+    "size" : 32768,
+    "uuid" : "2fefb175-e78b-3f7d-8f8c-12b426b2331d",
+    "path" : "\/Users\/USER\/*\/kimg_kra.dylib",
+    "name" : "kimg_kra.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4489428992,
+    "size" : 114688,
+    "uuid" : "d0b68bd7-01a0-37f3-973d-5f8780c376f6",
+    "path" : "\/Users\/USER\/*\/libKF6Archive.6.7.0.dylib",
+    "name" : "libKF6Archive.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4450942976,
+    "size" : 32768,
+    "uuid" : "f04535a9-0ef0-30df-89a1-06b10f483315",
+    "path" : "\/Users\/USER\/*\/kimg_pxr.dylib",
+    "name" : "kimg_pxr.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4451041280,
+    "size" : 32768,
+    "uuid" : "7abc2ae4-ccfd-3940-b87a-e16d11fd7257",
+    "path" : "\/Users\/USER\/*\/kimg_ani.dylib",
+    "name" : "kimg_ani.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4448059392,
+    "size" : 49152,
+    "uuid" : "194bbd10-d49b-3dba-8ed8-0cf50274d784",
+    "path" : "\/Users\/USER\/*\/libqjpeg.dylib",
+    "name" : "libqjpeg.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4451123200,
+    "size" : 327680,
+    "uuid" : "bf8e03dc-554b-39f6-831f-2338928fbf07",
+    "path" : "\/Users\/USER\/*\/libjpeg.62.3.0.dylib",
+    "name" : "libjpeg.62.3.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4489805824,
+    "size" : 32768,
+    "uuid" : "0fa0e59c-305d-3ace-8643-32f586f703c4",
+    "path" : "\/Users\/USER\/*\/kimg_ora.dylib",
+    "name" : "kimg_ora.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490903552,
+    "size" : 409600,
+    "uuid" : "864e3f9b-6ed3-3a52-8f6f-f38e2838da9a",
+    "path" : "\/Users\/USER\/*\/libqtiff.dylib",
+    "name" : "libqtiff.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4489887744,
+    "size" : 32768,
+    "uuid" : "866f5e72-dcd6-3ab6-8879-aba1ff1ed039",
+    "path" : "\/Users\/USER\/*\/libqsvg.dylib",
+    "name" : "libqsvg.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4489674752,
+    "size" : 32768,
+    "uuid" : "1a139a6b-bdbd-34d2-9ed6-6098ee1123c2",
+    "path" : "\/Users\/USER\/*\/kimg_tga.dylib",
+    "name" : "kimg_tga.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490166272,
+    "size" : 49152,
+    "uuid" : "bfcf149c-d1ab-3c84-bf3e-10e52bde120b",
+    "path" : "\/Users\/USER\/*\/kimg_hdr.dylib",
+    "name" : "kimg_hdr.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490280960,
+    "size" : 32768,
+    "uuid" : "6b2eef83-7412-3346-bff0-0be1b3c192f4",
+    "path" : "\/Users\/USER\/*\/kimg_ras.dylib",
+    "name" : "kimg_ras.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490379264,
+    "size" : 32768,
+    "uuid" : "1da2ef10-05d6-3cac-8b46-6b1b47458602",
+    "path" : "\/Users\/USER\/*\/kimg_qoi.dylib",
+    "name" : "kimg_qoi.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490477568,
+    "size" : 32768,
+    "uuid" : "23d9c578-edb3-3058-933d-085384d1fae7",
+    "path" : "\/Users\/USER\/*\/libqicns.dylib",
+    "name" : "libqicns.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490559488,
+    "size" : 32768,
+    "uuid" : "58cfc19c-4b67-343d-8fb2-84217adaf15f",
+    "path" : "\/Users\/USER\/*\/libqmacjp2.dylib",
+    "name" : "libqmacjp2.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4494802944,
+    "size" : 1474560,
+    "uuid" : "b7b26254-f9fe-3493-b9f2-32ae9c990342",
+    "path" : "\/Users\/USER\/*\/libqsqlite.dylib",
+    "name" : "libqsqlite.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490641408,
+    "size" : 98304,
+    "uuid" : "088eddfa-92be-3c84-bdb9-e4b69893bd43",
+    "path" : "\/Users\/USER\/*\/krita_shape_image.so",
+    "name" : "krita_shape_image.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4493115392,
+    "size" : 180224,
+    "uuid" : "ee53fac5-686b-3eb8-8692-d88af9bc4454",
+    "path" : "\/Users\/USER\/*\/krita_shape_paths.so",
+    "name" : "krita_shape_paths.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4499947520,
+    "size" : 8126464,
+    "uuid" : "985548f6-da2b-3d71-89bd-61525d362fd4",
+    "path" : "\/Users\/USER\/*\/libkritaui.21.0.0.dylib",
+    "name" : "libkritaui.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4638900224,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtNetwork",
+    "size" : 1245184,
+    "uuid" : "b24e6759-0c69-3411-8e38-35148a5b40e7",
+    "path" : "\/Users\/USER\/*\/QtNetwork.framework\/Versions\/A\/QtNetwork",
+    "name" : "QtNetwork",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490821632,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtConcurrent",
+    "size" : 16384,
+    "uuid" : "321d3071-7336-370a-a8c0-6efb3e521530",
+    "path" : "\/Users\/USER\/*\/QtConcurrent.framework\/Versions\/A\/QtConcurrent",
+    "name" : "QtConcurrent",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4493443072,
+    "size" : 147456,
+    "uuid" : "f1c268b7-832b-36d0-a2da-5d934520e117",
+    "path" : "\/Users\/USER\/*\/libkritaimpex.21.0.0.dylib",
+    "name" : "libkritaimpex.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4492492800,
+    "size" : 311296,
+    "uuid" : "ea61b7b1-d973-3705-aba5-e81bdd1c5da8",
+    "path" : "\/Users\/USER\/*\/libkritalibbrush.21.0.0.dylib",
+    "name" : "libkritalibbrush.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4493901824,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtSvgWidgets",
+    "size" : 32768,
+    "uuid" : "01004800-3911-345f-83ba-7051091ccfd9",
+    "path" : "\/Users\/USER\/*\/QtSvgWidgets.framework\/Versions\/A\/QtSvgWidgets",
+    "name" : "QtSvgWidgets",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4516118528,
+    "size" : 1196032,
+    "uuid" : "68ef8d8c-65e8-3656-aa8c-f97f28299130",
+    "path" : "\/Users\/USER\/*\/libSDL2-2.0.0.dylib",
+    "name" : "libSDL2-2.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4494376960,
+    "size" : 81920,
+    "uuid" : "07295c60-0b2e-3c60-8dac-75827fbe1ec1",
+    "path" : "\/Users\/USER\/*\/libmlt++-7.7.28.0.dylib",
+    "name" : "libmlt++-7.7.28.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4494000128,
+    "size" : 229376,
+    "uuid" : "9937739d-f00e-312f-962f-1c4efe2e82f6",
+    "path" : "\/Users\/USER\/*\/libmlt-7.7.28.0.dylib",
+    "name" : "libmlt-7.7.28.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4687118336,
+    "size" : 11878400,
+    "uuid" : "5a91a6f1-c731-3886-826f-7433c993ae77",
+    "path" : "\/Users\/USER\/*\/kritalcmsengine.so",
+    "name" : "kritalcmsengine.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4550672384,
+    "size" : 278528,
+    "uuid" : "c2a180b4-95bc-30f1-a00c-efc32721ce12",
+    "path" : "\/Users\/USER\/*\/liblcms2.2.12.dylib",
+    "name" : "liblcms2.2.12.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4493721600,
+    "size" : 49152,
+    "uuid" : "f168fe35-caa2-3c46-8c39-97a012192090",
+    "path" : "\/Users\/USER\/*\/liblcms2_fast_float.2.12.dylib",
+    "name" : "liblcms2_fast_float.2.12.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4551131136,
+    "size" : 180224,
+    "uuid" : "e23eaad7-ecb9-3bc4-8a9e-5fb021ca24ce",
+    "path" : "\/Users\/USER\/*\/krita_colorspaces_extensions.so",
+    "name" : "krita_colorspaces_extensions.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4641046528,
+    "size" : 638976,
+    "uuid" : "c8bc6a5a-c5e9-30b7-a6a5-6c2cda9bba02",
+    "path" : "\/Users\/USER\/*\/kritacolorsmudgepaintop.so",
+    "name" : "kritacolorsmudgepaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4656398336,
+    "size" : 2621440,
+    "uuid" : "c669a366-2e6c-37f7-8ca0-a21dab0f9d60",
+    "path" : "\/Users\/USER\/*\/libkritalibpaintop.21.0.0.dylib",
+    "name" : "libkritalibpaintop.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4549771264,
+    "size" : 245760,
+    "uuid" : "79fffe38-19f5-3b67-a38f-67af625e2b2c",
+    "path" : "\/Users\/USER\/*\/kritacurvepaintop.so",
+    "name" : "kritacurvepaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4642701312,
+    "size" : 458752,
+    "uuid" : "e4b7a759-9647-3b5b-b2a2-d0a5c57e5513",
+    "path" : "\/Users\/USER\/*\/kritadefaultpaintops.so",
+    "name" : "kritadefaultpaintops.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4553965568,
+    "size" : 327680,
+    "uuid" : "01ec4477-aeb1-3c53-95bf-a8ebd7dc39a7",
+    "path" : "\/Users\/USER\/*\/kritadeformpaintop.so",
+    "name" : "kritadeformpaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4644814848,
+    "size" : 212992,
+    "uuid" : "7877f56c-4080-3dfd-88ad-2c5a2f78649a",
+    "path" : "\/Users\/USER\/*\/kritaexperimentpaintop.so",
+    "name" : "kritaexperimentpaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4551458816,
+    "size" : 180224,
+    "uuid" : "59ced174-00fe-32e8-ae0c-87a5af4fc373",
+    "path" : "\/Users\/USER\/*\/kritafilterop.so",
+    "name" : "kritafilterop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4643782656,
+    "size" : 262144,
+    "uuid" : "4e601895-b33a-3947-93c4-530df77539e1",
+    "path" : "\/Users\/USER\/*\/kritagridpaintop.so",
+    "name" : "kritagridpaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4646813696,
+    "size" : 327680,
+    "uuid" : "03ffbf63-daf3-3daf-a364-13dfb64ea315",
+    "path" : "\/Users\/USER\/*\/kritahairypaintop.so",
+    "name" : "kritahairypaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4645339136,
+    "size" : 393216,
+    "uuid" : "05eab0f4-7361-3ca7-b6c6-4098300cc206",
+    "path" : "\/Users\/USER\/*\/kritahatchingpaintop.so",
+    "name" : "kritahatchingpaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4663296000,
+    "size" : 1196032,
+    "uuid" : "8e5a2e42-4e8e-30f4-a065-7900563f8260",
+    "path" : "\/Users\/USER\/*\/kritamypaintop.so",
+    "name" : "kritamypaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4494573568,
+    "size" : 65536,
+    "uuid" : "f0b9e691-abb1-37ba-abc6-3be972caba69",
+    "path" : "\/Users\/USER\/*\/libmypaint.dylib",
+    "name" : "libmypaint.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4518068224,
+    "size" : 49152,
+    "uuid" : "1e2a77f1-3b50-34fb-95a3-2beadd9a296b",
+    "path" : "\/Users\/USER\/*\/libjson-c.5.4.0.dylib",
+    "name" : "libjson-c.5.4.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4648697856,
+    "size" : 245760,
+    "uuid" : "e0886993-2069-37d9-934c-e2ce2a4a26e1",
+    "path" : "\/Users\/USER\/*\/kritaparticlepaintop.so",
+    "name" : "kritaparticlepaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4649287680,
+    "size" : 229376,
+    "uuid" : "3ddc5033-4e6d-314f-bae7-618b5cbb7d07",
+    "path" : "\/Users\/USER\/*\/kritaroundmarkerpaintop.so",
+    "name" : "kritaroundmarkerpaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4647567360,
+    "size" : 327680,
+    "uuid" : "6ac9505e-597a-3526-a1e3-1988a939223b",
+    "path" : "\/Users\/USER\/*\/kritasketchpaintop.so",
+    "name" : "kritasketchpaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4652711936,
+    "size" : 606208,
+    "uuid" : "b74f3357-e801-3d9a-aca4-a6aff34fc1b0",
+    "path" : "\/Users\/USER\/*\/kritaspraypaintop.so",
+    "name" : "kritaspraypaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4651122688,
+    "size" : 278528,
+    "uuid" : "d3f9ec91-40f7-3623-9878-0fbbe9fd974d",
+    "path" : "\/Users\/USER\/*\/kritatangentnormalpaintop.so",
+    "name" : "kritatangentnormalpaintop.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4550393856,
+    "size" : 98304,
+    "uuid" : "0d58f701-a427-389c-b431-a473ae0a30e5",
+    "path" : "\/Users\/USER\/*\/kritaasccdl.so",
+    "name" : "kritaasccdl.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4646338560,
+    "size" : 262144,
+    "uuid" : "af8e67cc-4f9a-3318-8cd8-45b29db7c20b",
+    "path" : "\/Users\/USER\/*\/kritacolorsfilters.so",
+    "name" : "kritacolorsfilters.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4554752000,
+    "size" : 147456,
+    "uuid" : "9b98a2bb-b04f-32c1-9353-6f8f0d9d08f6",
+    "path" : "\/Users\/USER\/*\/kritaextensioncolorsfilters.so",
+    "name" : "kritaextensioncolorsfilters.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4648386560,
+    "size" : 98304,
+    "uuid" : "23facf05-b4d9-3f06-bc07-b8bdce35cb00",
+    "path" : "\/Users\/USER\/*\/kritafastcolortransferfilter.so",
+    "name" : "kritafastcolortransferfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4649828352,
+    "size" : 98304,
+    "uuid" : "8b591d9a-9e5a-3227-80ba-bb27cdaabbf3",
+    "path" : "\/Users\/USER\/*\/kritaconvertheighttonormalmap.so",
+    "name" : "kritaconvertheighttonormalmap.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4650008576,
+    "size" : 98304,
+    "uuid" : "53738262-0692-31ee-bf54-a009c7430491",
+    "path" : "\/Users\/USER\/*\/kritaconvolutionfilters.so",
+    "name" : "kritaconvolutionfilters.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4644388864,
+    "size" : 131072,
+    "uuid" : "d95510cf-265f-3747-9724-04e11fa6821d",
+    "path" : "\/Users\/USER\/*\/kritablurfilter.so",
+    "name" : "kritablurfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4644634624,
+    "size" : 81920,
+    "uuid" : "8ca6d044-182d-3f9d-b1d6-8a87fd01e84f",
+    "path" : "\/Users\/USER\/*\/kritadodgeburn.so",
+    "name" : "kritadodgeburn.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4650500096,
+    "size" : 98304,
+    "uuid" : "d7e13977-de1b-3ea0-a745-4c0194a67931",
+    "path" : "\/Users\/USER\/*\/kritaedgedetection.so",
+    "name" : "kritaedgedetection.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4650680320,
+    "size" : 81920,
+    "uuid" : "aac60909-0353-3a5b-a63e-1903f7445d8d",
+    "path" : "\/Users\/USER\/*\/kritaembossfilter.so",
+    "name" : "kritaembossfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4650172416,
+    "size" : 114688,
+    "uuid" : "6f8ceb60-8478-3723-9f36-cc9439e1c71d",
+    "path" : "\/Users\/USER\/*\/kritaimageenhancement.so",
+    "name" : "kritaimageenhancement.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4650827776,
+    "size" : 98304,
+    "uuid" : "7b9a78ea-beaf-3718-b42b-958039e77934",
+    "path" : "\/Users\/USER\/*\/kritagaussianhighpassfilter.so",
+    "name" : "kritagaussianhighpassfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4652285952,
+    "size" : 147456,
+    "uuid" : "4399d2fb-45a2-383e-bdd1-08610b484dfc",
+    "path" : "\/Users\/USER\/*\/kritagradientmap.so",
+    "name" : "kritagradientmap.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4651778048,
+    "size" : 212992,
+    "uuid" : "7262dee0-9536-3072-929b-eda34a7c90b2",
+    "path" : "\/Users\/USER\/*\/kritahalftone.so",
+    "name" : "kritahalftone.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4654465024,
+    "size" : 98304,
+    "uuid" : "3a7cd22a-beaa-3fbd-9614-687ef359bab7",
+    "path" : "\/Users\/USER\/*\/kritaunsharpfilter.so",
+    "name" : "kritaunsharpfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4654137344,
+    "size" : 114688,
+    "uuid" : "a0a4a94e-165a-3ac2-a80f-9444a8d54495",
+    "path" : "\/Users\/USER\/*\/kritaindexcolors.so",
+    "name" : "kritaindexcolors.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4652138496,
+    "size" : 81920,
+    "uuid" : "6054c09b-efe7-327f-a721-25c599a23e55",
+    "path" : "\/Users\/USER\/*\/kritaexample.so",
+    "name" : "kritaexample.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4652548096,
+    "size" : 81920,
+    "uuid" : "b4e02a10-7e80-3db5-80e6-c3fb3248d531",
+    "path" : "\/Users\/USER\/*\/kritanoisefilter.so",
+    "name" : "kritanoisefilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4655185920,
+    "size" : 98304,
+    "uuid" : "1f98e5e4-be19-3be9-ae30-2fbb7d443e4b",
+    "path" : "\/Users\/USER\/*\/kritanormalize.so",
+    "name" : "kritanormalize.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4655349760,
+    "size" : 98304,
+    "uuid" : "107d8a25-eca4-3cf0-a075-b9c9cf43f31d",
+    "path" : "\/Users\/USER\/*\/kritaoilpaintfilter.so",
+    "name" : "kritaoilpaintfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4654645248,
+    "size" : 131072,
+    "uuid" : "ce5f6295-d687-3b2d-b1c9-2c7b89365e75",
+    "path" : "\/Users\/USER\/*\/kritapalettize.so",
+    "name" : "kritapalettize.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4655955968,
+    "size" : 131072,
+    "uuid" : "7768e3ba-2c68-31a7-93f0-335177ebbe09",
+    "path" : "\/Users\/USER\/*\/kritaphongbumpmap.so",
+    "name" : "kritaphongbumpmap.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4656185344,
+    "size" : 98304,
+    "uuid" : "7f9cae11-1aa4-3a72-86d6-6628d103a08d",
+    "path" : "\/Users\/USER\/*\/kritapixelizefilter.so",
+    "name" : "kritapixelizefilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4654891008,
+    "size" : 98304,
+    "uuid" : "57fb89be-5451-3fbb-8f9f-ab3dc9813447",
+    "path" : "\/Users\/USER\/*\/kritaposterize.so",
+    "name" : "kritaposterize.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4655529984,
+    "size" : 147456,
+    "uuid" : "b72b62ba-ea30-3d1f-9095-d5edef7251ca",
+    "path" : "\/Users\/USER\/*\/kritapropagatecolors.so",
+    "name" : "kritapropagatecolors.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4655775744,
+    "size" : 81920,
+    "uuid" : "f8c390ce-af0a-37b1-83bd-65228a1cf9d1",
+    "path" : "\/Users\/USER\/*\/kritaraindropsfilter.so",
+    "name" : "kritaraindropsfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4667080704,
+    "size" : 98304,
+    "uuid" : "13d9ba17-297e-35b6-ab8b-01ea06749145",
+    "path" : "\/Users\/USER\/*\/kritarandompickfilter.so",
+    "name" : "kritarandompickfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4667260928,
+    "size" : 81920,
+    "uuid" : "15aa057f-fb89-3e27-8ef7-9e3ffeae76c3",
+    "path" : "\/Users\/USER\/*\/kritaresettransparent.so",
+    "name" : "kritaresettransparent.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4667408384,
+    "size" : 98304,
+    "uuid" : "4d601e87-9c15-3006-8e46-5122ac548185",
+    "path" : "\/Users\/USER\/*\/kritaroundcornersfilter.so",
+    "name" : "kritaroundcornersfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4667588608,
+    "size" : 98304,
+    "uuid" : "656c8ed7-3809-3380-895b-c4d50ab05345",
+    "path" : "\/Users\/USER\/*\/kritasmalltilesfilter.so",
+    "name" : "kritasmalltilesfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4666753024,
+    "size" : 98304,
+    "uuid" : "77f308ab-95b3-35f9-8f7d-344a7c2e125c",
+    "path" : "\/Users\/USER\/*\/kritathreshold.so",
+    "name" : "kritathreshold.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4668112896,
+    "size" : 114688,
+    "uuid" : "725f15e8-6554-346b-94e2-d420c76ed9d8",
+    "path" : "\/Users\/USER\/*\/kritawavefilter.so",
+    "name" : "kritawavefilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4667752448,
+    "size" : 196608,
+    "uuid" : "fc6221aa-c9ba-3e5a-bec3-a3b8222c3abf",
+    "path" : "\/Users\/USER\/*\/kritalevelfilter.so",
+    "name" : "kritalevelfilter.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6939598848,
+    "size" : 290928,
+    "uuid" : "3ce1e59c-91c8-3259-93d8-7ded66842979",
+    "path" : "\/usr\/lib\/system\/libsystem_malloc.dylib",
+    "name" : "libsystem_malloc.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6941306880,
+    "size" : 122880,
+    "uuid" : "bc670272-bf32-38ac-ae3f-f06eda80be30",
+    "path" : "\/usr\/lib\/libc++abi.dylib",
+    "name" : "libc++abi.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6937870336,
+    "size" : 636284,
+    "uuid" : "e4e5cd37-5339-3136-b2c5-0c80f0720c26",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6941675520,
+    "size" : 51832,
+    "uuid" : "022dc315-cf35-38da-939e-03800b5beff2",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6941429760,
+    "size" : 243300,
+    "uuid" : "1d4ffd44-8926-3746-924e-deef5b777588",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6940729344,
+    "size" : 577528,
+    "uuid" : "eb94c9fe-91da-3e9f-9c45-7b476feaaeae",
+    "path" : "\/usr\/lib\/libc++.1.dylib",
+    "name" : "libc++.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6941925376,
+    "size" : 32268,
+    "uuid" : "c26e58a4-34a1-3f9c-bdbc-ebc34426633a",
+    "path" : "\/usr\/lib\/system\/libsystem_platform.dylib",
+    "name" : "libsystem_platform.dylib"
+  }
+],
+  "sharedCache" : {
+  "base" : 6937034752,
+  "size" : 5039734784,
+  "uuid" : "87b95872-5e6e-3168-a703-5f00925e0ab2"
+},
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "name" : "Thread (pooled)"
+  }
+},
+  "logWritingSignature" : "0f9ea16c8758c724874c4b14e0b6834d5addd4ab",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "67648e5334a82511f4acf879",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000008
+    },
+    {
+      "rolloutId" : "5fb4245a1bbfe8005e33a1e1",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000021
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}

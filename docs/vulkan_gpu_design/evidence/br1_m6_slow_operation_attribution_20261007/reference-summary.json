@@ -1,0 +1,1100 @@
+{
+  "processes": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 0,
+      "log": "00-arm64-k1-hit-r0.log",
+      "completed": 48715,
+      "wall_ns": 512010190,
+      "median_ns": 9792,
+      "reference_median_ns": 33500.5,
+      "pearson_product_reference": 0.23831487688528527,
+      "slow_2x_median_count": 493,
+      "slow_reference_median_ns": 37771.0,
+      "typical_reference_median_ns": 33500.0,
+      "operation_endpoint_migrations": 133,
+      "reference_endpoint_migrations": 429,
+      "by_query_cpu": {
+        "7": {
+          "count": 11415,
+          "product_median_ns": 9750,
+          "reference_median_ns": 33458.5
+        },
+        "9": {
+          "count": 11744,
+          "product_median_ns": 9833.0,
+          "reference_median_ns": 33500.0
+        },
+        "6": {
+          "count": 13691,
+          "product_median_ns": 9708,
+          "reference_median_ns": 33521.0
+        },
+        "8": {
+          "count": 11404,
+          "product_median_ns": 9875.0,
+          "reference_median_ns": 33499.5
+        },
+        "2": {
+          "count": 67,
+          "product_median_ns": 31833,
+          "reference_median_ns": 37416.5
+        },
+        "3": {
+          "count": 49,
+          "product_median_ns": 31792,
+          "reference_median_ns": 38125.0
+        },
+        "1": {
+          "count": 82,
+          "product_median_ns": 32000.0,
+          "reference_median_ns": 38208.25
+        },
+        "0": {
+          "count": 74,
+          "product_median_ns": 33395.5,
+          "reference_median_ns": 38917.25
+        },
+        "4": {
+          "count": 41,
+          "product_median_ns": 32542,
+          "reference_median_ns": 37646.0
+        },
+        "5": {
+          "count": 15,
+          "product_median_ns": 33333,
+          "reference_median_ns": 37104.5
+        }
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 0,
+      "log": "01-arm64-k1-native-pin-r0.log",
+      "completed": 45224,
+      "wall_ns": 512002462,
+      "median_ns": 10750.0,
+      "reference_median_ns": 32937.0,
+      "pearson_product_reference": 0.2873230180465478,
+      "slow_2x_median_count": 182,
+      "slow_reference_median_ns": 35166.5,
+      "typical_reference_median_ns": 32917.0,
+      "operation_endpoint_migrations": 79,
+      "reference_endpoint_migrations": 228,
+      "by_query_cpu": {
+        "4": {
+          "count": 18,
+          "product_median_ns": 49854.0,
+          "reference_median_ns": 35240.0
+        },
+        "9": {
+          "count": 10905,
+          "product_median_ns": 10875,
+          "reference_median_ns": 32979.0
+        },
+        "6": {
+          "count": 12098,
+          "product_median_ns": 10667.0,
+          "reference_median_ns": 33104.0
+        },
+        "0": {
+          "count": 12,
+          "product_median_ns": 45708.0,
+          "reference_median_ns": 35875.0
+        },
+        "3": {
+          "count": 9,
+          "product_median_ns": 50250,
+          "reference_median_ns": 35042.0
+        },
+        "1": {
+          "count": 13,
+          "product_median_ns": 55583,
+          "reference_median_ns": 35041.5
+        },
+        "7": {
+          "count": 11410,
+          "product_median_ns": 10625.0,
+          "reference_median_ns": 32833.5
+        },
+        "8": {
+          "count": 10663,
+          "product_median_ns": 10792,
+          "reference_median_ns": 32771.0
+        },
+        "2": {
+          "count": 12,
+          "product_median_ns": 54688.0,
+          "reference_median_ns": 35083.5
+        },
+        "5": {
+          "count": 5,
+          "product_median_ns": 57875,
+          "reference_median_ns": 35042.0
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 0,
+      "log": "02-x86_64-k1-hit-r0.log",
+      "completed": 29683,
+      "wall_ns": 512005080,
+      "median_ns": 15667,
+      "reference_median_ns": 32125.0,
+      "pearson_product_reference": 0.6562230163749992,
+      "slow_2x_median_count": 405,
+      "slow_reference_median_ns": 49375.0,
+      "typical_reference_median_ns": 32104.0,
+      "operation_endpoint_migrations": 160,
+      "reference_endpoint_migrations": 316,
+      "by_query_cpu": {
+        "8": {
+          "count": 7675,
+          "product_median_ns": 15667,
+          "reference_median_ns": 32104.0
+        },
+        "6": {
+          "count": 8354,
+          "product_median_ns": 15417.0,
+          "reference_median_ns": 32062.0
+        },
+        "9": {
+          "count": 7735,
+          "product_median_ns": 15791,
+          "reference_median_ns": 32084.0
+        },
+        "7": {
+          "count": 5485,
+          "product_median_ns": 15750,
+          "reference_median_ns": 32167.0
+        },
+        "2": {
+          "count": 58,
+          "product_median_ns": 68521.0,
+          "reference_median_ns": 49573.0
+        },
+        "5": {
+          "count": 34,
+          "product_median_ns": 73646.0,
+          "reference_median_ns": 47896.0
+        },
+        "1": {
+          "count": 58,
+          "product_median_ns": 70812.5,
+          "reference_median_ns": 49968.5
+        },
+        "4": {
+          "count": 29,
+          "product_median_ns": 77791,
+          "reference_median_ns": 50249.5
+        },
+        "0": {
+          "count": 50,
+          "product_median_ns": 71792.0,
+          "reference_median_ns": 50916.5
+        },
+        "3": {
+          "count": 45,
+          "product_median_ns": 70875,
+          "reference_median_ns": 48895.5
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 0,
+      "log": "03-x86_64-k1-native-pin-r0.log",
+      "completed": 28292,
+      "wall_ns": 512014514,
+      "median_ns": 17250.0,
+      "reference_median_ns": 32000.0,
+      "pearson_product_reference": 0.4993072328605406,
+      "slow_2x_median_count": 113,
+      "slow_reference_median_ns": 40875.5,
+      "typical_reference_median_ns": 31999.5,
+      "operation_endpoint_migrations": 103,
+      "reference_endpoint_migrations": 228,
+      "by_query_cpu": {
+        "9": {
+          "count": 6693,
+          "product_median_ns": 17292,
+          "reference_median_ns": 32062.5
+        },
+        "8": {
+          "count": 6896,
+          "product_median_ns": 17417.0,
+          "reference_median_ns": 31895.5
+        },
+        "7": {
+          "count": 7516,
+          "product_median_ns": 17083.0,
+          "reference_median_ns": 32031.5
+        },
+        "6": {
+          "count": 7062,
+          "product_median_ns": 17166.0,
+          "reference_median_ns": 31937.0
+        },
+        "0": {
+          "count": 8,
+          "product_median_ns": 110333.5,
+          "reference_median_ns": 49864.75
+        },
+        "2": {
+          "count": 2,
+          "product_median_ns": 155958.5,
+          "reference_median_ns": 47072.75
+        },
+        "1": {
+          "count": 8,
+          "product_median_ns": 109771.0,
+          "reference_median_ns": 50729.0
+        },
+        "3": {
+          "count": 1,
+          "product_median_ns": 120583,
+          "reference_median_ns": 50854.5
+        },
+        "4": {
+          "count": 1,
+          "product_median_ns": 117583,
+          "reference_median_ns": 46771.0
+        },
+        "5": {
+          "count": 2,
+          "product_median_ns": 139687.5,
+          "reference_median_ns": 50896.0
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 1,
+      "log": "04-x86_64-k1-native-pin-r1.log",
+      "completed": 26013,
+      "wall_ns": 512012852,
+      "median_ns": 17791,
+      "reference_median_ns": 32229.5,
+      "pearson_product_reference": 0.5841923515009905,
+      "slow_2x_median_count": 403,
+      "slow_reference_median_ns": 47479.0,
+      "typical_reference_median_ns": 32209.0,
+      "operation_endpoint_migrations": 231,
+      "reference_endpoint_migrations": 449,
+      "by_query_cpu": {
+        "7": {
+          "count": 6412,
+          "product_median_ns": 17750.0,
+          "reference_median_ns": 32208.0
+        },
+        "8": {
+          "count": 6488,
+          "product_median_ns": 17875.0,
+          "reference_median_ns": 32249.5
+        },
+        "6": {
+          "count": 6526,
+          "product_median_ns": 17500.0,
+          "reference_median_ns": 32187.5
+        },
+        "9": {
+          "count": 6177,
+          "product_median_ns": 17917,
+          "reference_median_ns": 32291.5
+        },
+        "0": {
+          "count": 47,
+          "product_median_ns": 80000,
+          "reference_median_ns": 49645.5
+        },
+        "3": {
+          "count": 26,
+          "product_median_ns": 82145.5,
+          "reference_median_ns": 48562.5
+        },
+        "5": {
+          "count": 11,
+          "product_median_ns": 85375,
+          "reference_median_ns": 51042.0
+        },
+        "1": {
+          "count": 39,
+          "product_median_ns": 76209,
+          "reference_median_ns": 48583.0
+        },
+        "4": {
+          "count": 17,
+          "product_median_ns": 102458,
+          "reference_median_ns": 48437.5
+        },
+        "2": {
+          "count": 39,
+          "product_median_ns": 79709,
+          "reference_median_ns": 49104.0
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 1,
+      "log": "05-x86_64-k1-hit-r1.log",
+      "completed": 26510,
+      "wall_ns": 512003985,
+      "median_ns": 15875.0,
+      "reference_median_ns": 32291.5,
+      "pearson_product_reference": 0.030902026708595313,
+      "slow_2x_median_count": 616,
+      "slow_reference_median_ns": 47406.25,
+      "typical_reference_median_ns": 32250.0,
+      "operation_endpoint_migrations": 304,
+      "reference_endpoint_migrations": 570,
+      "by_query_cpu": {
+        "8": {
+          "count": 7119,
+          "product_median_ns": 15875,
+          "reference_median_ns": 32270.5
+        },
+        "7": {
+          "count": 5944,
+          "product_median_ns": 15875.0,
+          "reference_median_ns": 32208.5
+        },
+        "9": {
+          "count": 7117,
+          "product_median_ns": 15833,
+          "reference_median_ns": 32354.0
+        },
+        "6": {
+          "count": 5756,
+          "product_median_ns": 15792.0,
+          "reference_median_ns": 32229.0
+        },
+        "0": {
+          "count": 68,
+          "product_median_ns": 76271.0,
+          "reference_median_ns": 52645.75
+        },
+        "1": {
+          "count": 60,
+          "product_median_ns": 82041.5,
+          "reference_median_ns": 51135.25
+        },
+        "3": {
+          "count": 48,
+          "product_median_ns": 77833.5,
+          "reference_median_ns": 47802.0
+        },
+        "5": {
+          "count": 20,
+          "product_median_ns": 87771.0,
+          "reference_median_ns": 47250.0
+        },
+        "2": {
+          "count": 50,
+          "product_median_ns": 77458.5,
+          "reference_median_ns": 49458.75
+        },
+        "4": {
+          "count": 24,
+          "product_median_ns": 88895.5,
+          "reference_median_ns": 47572.75
+        }
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 1,
+      "log": "06-arm64-k1-native-pin-r1.log",
+      "completed": 43898,
+      "wall_ns": 512004702,
+      "median_ns": 10875.0,
+      "reference_median_ns": 33187.5,
+      "pearson_product_reference": 0.3355269463216182,
+      "slow_2x_median_count": 356,
+      "slow_reference_median_ns": 37833.5,
+      "typical_reference_median_ns": 33187.0,
+      "operation_endpoint_migrations": 205,
+      "reference_endpoint_migrations": 470,
+      "by_query_cpu": {
+        "6": {
+          "count": 10042,
+          "product_median_ns": 10958.0,
+          "reference_median_ns": 33208.0
+        },
+        "7": {
+          "count": 10483,
+          "product_median_ns": 10792,
+          "reference_median_ns": 33209.0
+        },
+        "8": {
+          "count": 12662,
+          "product_median_ns": 10916.0,
+          "reference_median_ns": 33166.5
+        },
+        "9": {
+          "count": 10432,
+          "product_median_ns": 10916.0,
+          "reference_median_ns": 33166.25
+        },
+        "5": {
+          "count": 11,
+          "product_median_ns": 61833,
+          "reference_median_ns": 37375.0
+        },
+        "0": {
+          "count": 15,
+          "product_median_ns": 61000,
+          "reference_median_ns": 38229.5
+        },
+        "1": {
+          "count": 13,
+          "product_median_ns": 57500,
+          "reference_median_ns": 35917.0
+        },
+        "2": {
+          "count": 17,
+          "product_median_ns": 57250,
+          "reference_median_ns": 37875.5
+        },
+        "4": {
+          "count": 9,
+          "product_median_ns": 54083,
+          "reference_median_ns": 35062.5
+        },
+        "3": {
+          "count": 9,
+          "product_median_ns": 54791,
+          "reference_median_ns": 39667.0
+        }
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 1,
+      "log": "07-arm64-k1-hit-r1.log",
+      "completed": 47003,
+      "wall_ns": 512004926,
+      "median_ns": 10375,
+      "reference_median_ns": 33292.0,
+      "pearson_product_reference": 0.26010843017285407,
+      "slow_2x_median_count": 511,
+      "slow_reference_median_ns": 35125.0,
+      "typical_reference_median_ns": 33292.0,
+      "operation_endpoint_migrations": 162,
+      "reference_endpoint_migrations": 464,
+      "by_query_cpu": {
+        "7": {
+          "count": 12747,
+          "product_median_ns": 9708,
+          "reference_median_ns": 33291.5
+        },
+        "6": {
+          "count": 11199,
+          "product_median_ns": 10708,
+          "reference_median_ns": 33312.5
+        },
+        "8": {
+          "count": 9096,
+          "product_median_ns": 10958.0,
+          "reference_median_ns": 33292.0
+        },
+        "9": {
+          "count": 13463,
+          "product_median_ns": 10875,
+          "reference_median_ns": 33292.0
+        },
+        "3": {
+          "count": 14,
+          "product_median_ns": 43937.5,
+          "reference_median_ns": 35073.0
+        },
+        "0": {
+          "count": 164,
+          "product_median_ns": 28020.5,
+          "reference_median_ns": 37020.5
+        },
+        "4": {
+          "count": 16,
+          "product_median_ns": 43854.0,
+          "reference_median_ns": 35166.5
+        },
+        "2": {
+          "count": 42,
+          "product_median_ns": 30938.0,
+          "reference_median_ns": 35063.0
+        },
+        "1": {
+          "count": 95,
+          "product_median_ns": 28084,
+          "reference_median_ns": 35083.5
+        },
+        "5": {
+          "count": 5,
+          "product_median_ns": 53500,
+          "reference_median_ns": 35041.5
+        }
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 2,
+      "log": "08-arm64-k1-native-pin-r2.log",
+      "completed": 45179,
+      "wall_ns": 512006889,
+      "median_ns": 10750,
+      "reference_median_ns": 32500.5,
+      "pearson_product_reference": 0.377118150457583,
+      "slow_2x_median_count": 362,
+      "slow_reference_median_ns": 36854.5,
+      "typical_reference_median_ns": 32500.0,
+      "operation_endpoint_migrations": 137,
+      "reference_endpoint_migrations": 299,
+      "by_query_cpu": {
+        "7": {
+          "count": 10042,
+          "product_median_ns": 10666.0,
+          "reference_median_ns": 32458.5
+        },
+        "6": {
+          "count": 13550,
+          "product_median_ns": 10584.0,
+          "reference_median_ns": 32583.5
+        },
+        "8": {
+          "count": 11516,
+          "product_median_ns": 10833.0,
+          "reference_median_ns": 32416.5
+        },
+        "9": {
+          "count": 9696,
+          "product_median_ns": 10875.0,
+          "reference_median_ns": 32458.0
+        },
+        "3": {
+          "count": 58,
+          "product_median_ns": 33250.0,
+          "reference_median_ns": 36875.0
+        },
+        "0": {
+          "count": 36,
+          "product_median_ns": 39458.5,
+          "reference_median_ns": 36948.0
+        },
+        "1": {
+          "count": 61,
+          "product_median_ns": 36708,
+          "reference_median_ns": 36896.0
+        },
+        "4": {
+          "count": 14,
+          "product_median_ns": 44896.0,
+          "reference_median_ns": 37604.0
+        },
+        "5": {
+          "count": 7,
+          "product_median_ns": 48000,
+          "reference_median_ns": 35916.5
+        },
+        "2": {
+          "count": 62,
+          "product_median_ns": 31958.5,
+          "reference_median_ns": 36916.25
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 2,
+      "log": "09-x86_64-k1-hit-r2.log",
+      "completed": 31286,
+      "wall_ns": 512011566,
+      "median_ns": 15417.0,
+      "reference_median_ns": 31812.5,
+      "pearson_product_reference": 0.6270046269592585,
+      "slow_2x_median_count": 189,
+      "slow_reference_median_ns": 48728.5,
+      "typical_reference_median_ns": 31812.5,
+      "operation_endpoint_migrations": 101,
+      "reference_endpoint_migrations": 196,
+      "by_query_cpu": {
+        "9": {
+          "count": 6172,
+          "product_median_ns": 15708.0,
+          "reference_median_ns": 31853.75
+        },
+        "7": {
+          "count": 8418,
+          "product_median_ns": 15333.0,
+          "reference_median_ns": 31812.0
+        },
+        "8": {
+          "count": 8514,
+          "product_median_ns": 15542.0,
+          "reference_median_ns": 31854.0
+        },
+        "6": {
+          "count": 7979,
+          "product_median_ns": 15209,
+          "reference_median_ns": 31812.0
+        },
+        "0": {
+          "count": 17,
+          "product_median_ns": 117500,
+          "reference_median_ns": 55083.5
+        },
+        "5": {
+          "count": 21,
+          "product_median_ns": 94000,
+          "reference_median_ns": 46812.5
+        },
+        "3": {
+          "count": 10,
+          "product_median_ns": 106271.0,
+          "reference_median_ns": 46844.0
+        },
+        "4": {
+          "count": 15,
+          "product_median_ns": 97000,
+          "reference_median_ns": 49541.5
+        },
+        "1": {
+          "count": 18,
+          "product_median_ns": 103104.0,
+          "reference_median_ns": 48927.0
+        },
+        "2": {
+          "count": 21,
+          "product_median_ns": 82000,
+          "reference_median_ns": 47437.5
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 2,
+      "log": "10-x86_64-k1-native-pin-r2.log",
+      "completed": 28011,
+      "wall_ns": 512005059,
+      "median_ns": 17291,
+      "reference_median_ns": 32104.0,
+      "pearson_product_reference": 0.6763026020813874,
+      "slow_2x_median_count": 202,
+      "slow_reference_median_ns": 50052.25,
+      "typical_reference_median_ns": 32104.0,
+      "operation_endpoint_migrations": 84,
+      "reference_endpoint_migrations": 193,
+      "by_query_cpu": {
+        "6": {
+          "count": 6971,
+          "product_median_ns": 17042,
+          "reference_median_ns": 32042.0
+        },
+        "9": {
+          "count": 6924,
+          "product_median_ns": 17333.0,
+          "reference_median_ns": 32083.5
+        },
+        "7": {
+          "count": 7112,
+          "product_median_ns": 17208.0,
+          "reference_median_ns": 32145.5
+        },
+        "8": {
+          "count": 6798,
+          "product_median_ns": 17500.0,
+          "reference_median_ns": 32104.5
+        },
+        "0": {
+          "count": 36,
+          "product_median_ns": 64250.5,
+          "reference_median_ns": 50906.25
+        },
+        "3": {
+          "count": 18,
+          "product_median_ns": 79041.5,
+          "reference_median_ns": 47895.75
+        },
+        "5": {
+          "count": 7,
+          "product_median_ns": 80709,
+          "reference_median_ns": 48416.5
+        },
+        "1": {
+          "count": 31,
+          "product_median_ns": 69666,
+          "reference_median_ns": 51708.0
+        },
+        "2": {
+          "count": 22,
+          "product_median_ns": 64979.0,
+          "reference_median_ns": 50531.25
+        },
+        "4": {
+          "count": 8,
+          "product_median_ns": 78250.5,
+          "reference_median_ns": 49625.25
+        }
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 2,
+      "log": "11-arm64-k1-hit-r2.log",
+      "completed": 50360,
+      "wall_ns": 512008065,
+      "median_ns": 9667.0,
+      "reference_median_ns": 33271.0,
+      "pearson_product_reference": 0.2548180762129142,
+      "slow_2x_median_count": 265,
+      "slow_reference_median_ns": 36875.0,
+      "typical_reference_median_ns": 33271.0,
+      "operation_endpoint_migrations": 65,
+      "reference_endpoint_migrations": 162,
+      "by_query_cpu": {
+        "6": {
+          "count": 29371,
+          "product_median_ns": 9625,
+          "reference_median_ns": 33375.0
+        },
+        "7": {
+          "count": 8146,
+          "product_median_ns": 9666.0,
+          "reference_median_ns": 33146.0
+        },
+        "8": {
+          "count": 8068,
+          "product_median_ns": 9667.0,
+          "reference_median_ns": 33083.5
+        },
+        "9": {
+          "count": 4512,
+          "product_median_ns": 9959.0,
+          "reference_median_ns": 33000.0
+        },
+        "0": {
+          "count": 50,
+          "product_median_ns": 33541.5,
+          "reference_median_ns": 37041.75
+        },
+        "3": {
+          "count": 31,
+          "product_median_ns": 32166,
+          "reference_median_ns": 36646.0
+        },
+        "1": {
+          "count": 49,
+          "product_median_ns": 32000,
+          "reference_median_ns": 37062.5
+        },
+        "2": {
+          "count": 43,
+          "product_median_ns": 30250,
+          "reference_median_ns": 37375.0
+        },
+        "5": {
+          "count": 6,
+          "product_median_ns": 46875.0,
+          "reference_median_ns": 36750.0
+        },
+        "4": {
+          "count": 19,
+          "product_median_ns": 34875,
+          "reference_median_ns": 37229.0
+        }
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 3,
+      "log": "12-arm64-k1-hit-r3.log",
+      "completed": 47870,
+      "wall_ns": 512000076,
+      "median_ns": 9875.0,
+      "reference_median_ns": 33250.0,
+      "pearson_product_reference": 0.21305491562497283,
+      "slow_2x_median_count": 268,
+      "slow_reference_median_ns": 35083.0,
+      "typical_reference_median_ns": 33250.0,
+      "operation_endpoint_migrations": 103,
+      "reference_endpoint_migrations": 279,
+      "by_query_cpu": {
+        "7": {
+          "count": 7840,
+          "product_median_ns": 9792.0,
+          "reference_median_ns": 32729.0
+        },
+        "8": {
+          "count": 6435,
+          "product_median_ns": 10000,
+          "reference_median_ns": 32541.5
+        },
+        "9": {
+          "count": 5613,
+          "product_median_ns": 10166,
+          "reference_median_ns": 32979.0
+        },
+        "6": {
+          "count": 27753,
+          "product_median_ns": 9792,
+          "reference_median_ns": 33437.5
+        },
+        "1": {
+          "count": 20,
+          "product_median_ns": 62396.0,
+          "reference_median_ns": 35072.75
+        },
+        "0": {
+          "count": 33,
+          "product_median_ns": 61042,
+          "reference_median_ns": 37020.5
+        },
+        "3": {
+          "count": 11,
+          "product_median_ns": 67875,
+          "reference_median_ns": 35062.0
+        },
+        "2": {
+          "count": 31,
+          "product_median_ns": 43417,
+          "reference_median_ns": 35041.0
+        },
+        "4": {
+          "count": 18,
+          "product_median_ns": 58458.5,
+          "reference_median_ns": 35073.0
+        },
+        "5": {
+          "count": 13,
+          "product_median_ns": 57375,
+          "reference_median_ns": 35083.0
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 3,
+      "log": "13-x86_64-k1-native-pin-r3.log",
+      "completed": 26672,
+      "wall_ns": 512012899,
+      "median_ns": 17833.0,
+      "reference_median_ns": 32770.5,
+      "pearson_product_reference": 0.69325009654236,
+      "slow_2x_median_count": 237,
+      "slow_reference_median_ns": 49292.0,
+      "typical_reference_median_ns": 32728.5,
+      "operation_endpoint_migrations": 83,
+      "reference_endpoint_migrations": 148,
+      "by_query_cpu": {
+        "9": {
+          "count": 8401,
+          "product_median_ns": 17917,
+          "reference_median_ns": 33104.0
+        },
+        "8": {
+          "count": 8102,
+          "product_median_ns": 17875.0,
+          "reference_median_ns": 32437.5
+        },
+        "7": {
+          "count": 8538,
+          "product_median_ns": 17542.0,
+          "reference_median_ns": 32687.25
+        },
+        "6": {
+          "count": 1386,
+          "product_median_ns": 17979.5,
+          "reference_median_ns": 33271.0
+        },
+        "1": {
+          "count": 33,
+          "product_median_ns": 82458,
+          "reference_median_ns": 49521.0
+        },
+        "2": {
+          "count": 34,
+          "product_median_ns": 82208.5,
+          "reference_median_ns": 48708.25
+        },
+        "3": {
+          "count": 39,
+          "product_median_ns": 95292,
+          "reference_median_ns": 49687.5
+        },
+        "4": {
+          "count": 11,
+          "product_median_ns": 88916,
+          "reference_median_ns": 48146.0
+        },
+        "0": {
+          "count": 34,
+          "product_median_ns": 77791.0,
+          "reference_median_ns": 53052.0
+        },
+        "5": {
+          "count": 11,
+          "product_median_ns": 113875,
+          "reference_median_ns": 48479.0
+        }
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "repeat": 3,
+      "log": "14-x86_64-k1-hit-r3.log",
+      "completed": 31807,
+      "wall_ns": 512013062,
+      "median_ns": 15625,
+      "reference_median_ns": 31833.5,
+      "pearson_product_reference": 0.49255763877569575,
+      "slow_2x_median_count": 36,
+      "slow_reference_median_ns": 40104.25,
+      "typical_reference_median_ns": 31833.5,
+      "operation_endpoint_migrations": 39,
+      "reference_endpoint_migrations": 74,
+      "by_query_cpu": {
+        "7": {
+          "count": 5990,
+          "product_median_ns": 15583.0,
+          "reference_median_ns": 31833.0
+        },
+        "8": {
+          "count": 8112,
+          "product_median_ns": 15750.0,
+          "reference_median_ns": 32083.5
+        },
+        "9": {
+          "count": 7959,
+          "product_median_ns": 15709,
+          "reference_median_ns": 32042.0
+        },
+        "6": {
+          "count": 9695,
+          "product_median_ns": 15375,
+          "reference_median_ns": 31791.5
+        },
+        "0": {
+          "count": 2,
+          "product_median_ns": 114145.5,
+          "reference_median_ns": 48020.25
+        },
+        "1": {
+          "count": 7,
+          "product_median_ns": 67291,
+          "reference_median_ns": 48479.0
+        },
+        "5": {
+          "count": 2,
+          "product_median_ns": 72208.5,
+          "reference_median_ns": 48145.75
+        },
+        "3": {
+          "count": 1,
+          "product_median_ns": 91375,
+          "reference_median_ns": 46750.5
+        }
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "repeat": 3,
+      "log": "15-arm64-k1-native-pin-r3.log",
+      "completed": 44886,
+      "wall_ns": 512000484,
+      "median_ns": 10833.0,
+      "reference_median_ns": 32896.0,
+      "pearson_product_reference": 0.30759493657993425,
+      "slow_2x_median_count": 282,
+      "slow_reference_median_ns": 35885.5,
+      "typical_reference_median_ns": 32875.0,
+      "operation_endpoint_migrations": 87,
+      "reference_endpoint_migrations": 228,
+      "by_query_cpu": {
+        "7": {
+          "count": 10250,
+          "product_median_ns": 10792.0,
+          "reference_median_ns": 32625.0
+        },
+        "6": {
+          "count": 17127,
+          "product_median_ns": 10708,
+          "reference_median_ns": 33208.0
+        },
+        "8": {
+          "count": 8393,
+          "product_median_ns": 10875,
+          "reference_median_ns": 32625.0
+        },
+        "9": {
+          "count": 8851,
+          "product_median_ns": 10958,
+          "reference_median_ns": 32771.0
+        },
+        "3": {
+          "count": 35,
+          "product_median_ns": 34125,
+          "reference_median_ns": 37250.0
+        },
+        "1": {
+          "count": 28,
+          "product_median_ns": 42916.5,
+          "reference_median_ns": 35875.25
+        },
+        "2": {
+          "count": 33,
+          "product_median_ns": 39334,
+          "reference_median_ns": 35771.0
+        },
+        "4": {
+          "count": 42,
+          "product_median_ns": 36333.5,
+          "reference_median_ns": 35791.75
+        },
+        "0": {
+          "count": 24,
+          "product_median_ns": 44270.5,
+          "reference_median_ns": 39021.0
+        },
+        "5": {
+          "count": 16,
+          "product_median_ns": 55250.0,
+          "reference_median_ns": 35041.5
+        }
+      }
+    }
+  ],
+  "scope": "Fixed reference is observational; changes environment and cannot normalize original performance. CPU ids are query snapshots, not residency proof or core type.",
+  "verified": true
+}

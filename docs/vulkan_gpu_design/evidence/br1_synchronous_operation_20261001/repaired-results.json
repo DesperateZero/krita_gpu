@@ -1,0 +1,80 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "synchronousProviderResultsAtCapacity",
+      "writeTransferRejectsMismatchedOperation",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.731,
+    "totals": [
+      "Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 468ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "ownerLedgerVerifiesTerminalProviderIdentity",
+      "ownerLedgerSeparatesDetachedRetirement",
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.078,
+    "totals": [
+      "Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "synchronousProviderResultsAtCapacity",
+      "writeTransferRejectsMismatchedOperation",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.146,
+    "totals": [
+      "Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 475ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "ownerLedgerVerifiesTerminalProviderIdentity",
+      "ownerLedgerSeparatesDetachedRetirement",
+      "ownerLedgerSealsPreparedPageBeforeEpochCommit"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.682,
+    "totals": [
+      "Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 4ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

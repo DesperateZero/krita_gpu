@@ -1,0 +1,1236 @@
+{
+  "schema": 1,
+  "requirement_groups": [
+    {
+      "id": "M6-S01",
+      "stage": "M6",
+      "contract": "92 §2/§3/§6",
+      "obligation": "exact旧值、复用、seal/commit/cancel/abort与oracle一致",
+      "axes": "1/4/8/16 BPP；native/guard/generic/discard/undo；same/foreign provider；foreign仅既有generic routes",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "productionRecoverableHandoff"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "preparedRecoverableWriteLifecycle"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "生产数据行是受约束组合，不扩成无意义全笛卡尔积；不得授予非驻留before能力",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::productionRecoverableHandoff",
+          "line": 10870,
+          "frozen_pass_rows": {
+            "arm64": 112,
+            "x86_64": 112
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::preparedRecoverableWriteLifecycle",
+          "line": 7382,
+          "frozen_pass_rows": {
+            "arm64": 124,
+            "x86_64": 124
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-S02",
+      "stage": "M6",
+      "contract": "92 §3/§6",
+      "obligation": "拒绝与Fresh保持旧值",
+      "axes": "1/4/8/16 BPP × native/generic × 8 blockers",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "productionHandoffFallback"
+        ],
+        [
+          "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "physicalBackingHandoffGuards"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "四种miss计时原因不能替代全部八类语义拒绝、资源拒绝与unsupported恢复域",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::productionHandoffFallback",
+          "line": 10989,
+          "frozen_pass_rows": {
+            "arm64": 64,
+            "x86_64": 64
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "symbol": "KisPageStorePhysicalClaimTest::physicalBackingHandoffGuards",
+          "line": 1134,
+          "frozen_pass_rows": {
+            "arm64": 60,
+            "x86_64": 60
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-S03",
+      "stage": "M6",
+      "contract": "92 §2/§3/§6",
+      "obligation": "捕获/读者/pin/last-use/claim的两种先后顺序",
+      "axes": "native/generic/legacy/raw/source/alias/swap/preclone/retire/last-use；consumer先到与handoff先到",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "productionHandoffConcurrentConsumers"
+        ],
+        [
+          "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "physicalBackingHandoffConcurrentConsumers"
+        ],
+        [
+          "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "sourceConsumersRespectWriter"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "TSAN未取得全量资格；正常单次PASS不代替全部并发时序",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::productionHandoffConcurrentConsumers",
+          "line": 11094,
+          "frozen_pass_rows": {
+            "arm64": 144,
+            "x86_64": 144
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "symbol": "KisPageStorePhysicalClaimTest::physicalBackingHandoffConcurrentConsumers",
+          "line": 1320,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "symbol": "KisPageStorePhysicalClaimTest::sourceConsumersRespectWriter",
+          "line": 1055,
+          "frozen_pass_rows": {
+            "arm64": 5,
+            "x86_64": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-S04",
+      "stage": "M6",
+      "contract": "92 §3/§6",
+      "obligation": "provider epoch、allocation ABA、迟到completion不能释放新工作",
+      "axes": "四BPP、两provider epoch、两次真实handoff、旧proof前/后到达",
+      "consumer": "libs/image/pagestore/KisPageStore.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "productionHandoffEpochAndLateCompletion"
+        ],
+        [
+          "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "physicalBackingHandoffRejectsWrongIdentity"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "numeric token复用不等于两个provider具有相同物理地址",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::productionHandoffEpochAndLateCompletion",
+          "line": 11234,
+          "frozen_pass_rows": {
+            "arm64": 48,
+            "x86_64": 48
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+          "symbol": "KisPageStorePhysicalClaimTest::physicalBackingHandoffRejectsWrongIdentity",
+          "line": 1375,
+          "frozen_pass_rows": {
+            "arm64": 44,
+            "x86_64": 44
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-S05",
+      "stage": "M6",
+      "contract": "92 §2/§6",
+      "obligation": "首字节前失败与原owner终结",
+      "axes": "四BPP × native/generic × candidate/metadata/descriptor/ActivePending/Debt × cancel+abort/seal+abort/seal+commit",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "productionHandoffPreparationCapacity"
+        ],
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "publicationDescriptorStorageAtCapacity"
+        ],
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "storeRootStorageRefusal"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "实际失败点应保留独立拒绝证据；本测试不代表CP5 job continuation",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::productionHandoffPreparationCapacity",
+          "line": 11414,
+          "frozen_pass_rows": {
+            "arm64": 120,
+            "x86_64": 120
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::publicationDescriptorStorageAtCapacity",
+          "line": 5470,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::storeRootStorageRefusal",
+          "line": 10088,
+          "frozen_pass_rows": {
+            "arm64": 2,
+            "x86_64": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-S06",
+      "stage": "M6",
+      "contract": "92 §6",
+      "obligation": "多个页冲突、部分准备rollback、claim取消",
+      "axes": "第二页冲突、并存prepare、cancel/retry、整组准入失败",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "writeAdmissionClaimsWholeSetsAtomically"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "writeAdmissionBudgetFailureIsAtomic"
+        ],
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "partialPreparationRollbackPumpsForegroundRetirement"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "M7首字节后不可失败fence仍独立未实现/未验收",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::writeAdmissionClaimsWholeSetsAtomically",
+          "line": 8063,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::writeAdmissionBudgetFailureIsAtomic",
+          "line": 8278,
+          "frozen_pass_rows": {
+            "arm64": 3,
+            "x86_64": 3
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::partialPreparationRollbackPumpsForegroundRetirement",
+          "line": 9477,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-S07",
+      "stage": "M6",
+      "contract": "92 §6",
+      "obligation": "full/partial/no-op/default/removal/alias及capture/save/active base语义",
+      "axes": "1/4/8/16 BPP、负坐标/边界、旧current/exact、default revision",
+      "consumer": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "virtualDefaultRemovalPreservesReaderAndDefaultRevision"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "sparseDefaultPageFirstWriteAndUndoStayVersioned"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "cpuSurfaceOpsPreserveRectCopyAndSparseClear"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "整个stroke/save端点与细分required性能不由原语断言自动覆盖",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::virtualDefaultRemovalPreservesReaderAndDefaultRevision",
+          "line": 11540,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::sparseDefaultPageFirstWriteAndUndoStayVersioned",
+          "line": 11354,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::cpuSurfaceOpsPreserveRectCopyAndSparseClear",
+          "line": 11262,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-S08",
+      "stage": "M6",
+      "contract": "92 §6/39 §10.1",
+      "obligation": "index/arena安装零分配及碰撞/删除/ABA",
+      "axes": "实际allocator正控制；arena/index tiers；additions/restore；准备竞争与晚cleanup",
+      "consumer": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "mutationStorageReclaimsBlocksAndRejectsABA"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "metadataDirectoryPublicationIsImmutableAndConcurrent"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "六个resource探针是继承证据；malloc请求下降不等于驻留下降",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::mutationStorageReclaimsBlocksAndRejectsABA",
+          "line": 7799,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::metadataDirectoryPublicationIsImmutableAndConcurrent",
+          "line": 9000,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-R01",
+      "stage": "M6",
+      "contract": "92 §6/§6.1",
+      "obligation": "真实capacity/硬预算/晚handle/最终释放",
+      "axes": "normal/tiny；live/reserved/peak；一副本Fresh/两副本Fresh/handoff；每域、每类",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "finiteBackingLimitMatrix"
+        ],
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "processStorageReportsReservationSeparately"
+        ],
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "lastUseCloseAndLifetime"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "metadata结构比较分母单独未取得；资源安全不能抵消局部时间失败",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::finiteBackingLimitMatrix",
+          "line": 10427,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::processStorageReportsReservationSeparately",
+          "line": 1142,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::lastUseCloseAndLifetime",
+          "line": 2424,
+          "frozen_pass_rows": {
+            "arm64": 3,
+            "x86_64": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-R02",
+      "stage": "M6",
+      "contract": "92 §5/§6",
+      "obligation": "长期history/慢consumer/持续写/多doc/后台进度与drain",
+      "axes": "H增长、旧View、last-use、retire拒绝、连续产生与清理",
+      "consumer": "libs/image/pagestore/KisPageStore.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "longHistoryUsesVersionBudget"
+        ],
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "rejectedRetirementsPreserveDebtAndBudget"
+        ],
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "autonomousRetirementRetries"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "tiles3BackendsShareProcessResidentLimit"
+        ]
+      ],
+      "status": "已冻结当前安全证据；本轮只核身份/方法/实际PASS行，不重跑，不自动证明列出的全部交叉组合",
+      "gap": "CP1已结算包不重领；完整业务公平性、长运行和峰值按适用生产consumer补证",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget",
+          "line": 2071,
+          "frozen_pass_rows": {
+            "arm64": 8,
+            "x86_64": 8
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::rejectedRetirementsPreserveDebtAndBudget",
+          "line": 4501,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::autonomousRetirementRetries",
+          "line": 6564,
+          "frozen_pass_rows": {
+            "arm64": 4,
+            "x86_64": 4
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::tiles3BackendsShareProcessResidentLimit",
+          "line": 12716,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-R03",
+      "stage": "M6",
+      "contract": "92 §6.1/§17",
+      "obligation": "SSD耗尽/换入失败/恢复拒绝安全；不能因无SSD alternate producer删除",
+      "axes": "SSD byte budget满、真实swap拒绝/恢复、archive失败、current/old保留与退出",
+      "consumer": "libs/image/pagestore/KisUnifiedSsdPageStore.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "swapInFailurePreservesDomainState"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "exactGenerationArchivePreservesPublishedAuthorityOnFailure"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "asyncArchiveCompletionCancellationAndShutdownAreFailClosed"
+        ]
+      ],
+      "status": "本批补齐四BPP真实archive byteBudget耗尽/forget后同owner恢复；其余沿冻结证据",
+      "gap": "新增不是物理磁盘满、全进程统一SSD压力或非驻留handoff producer资格；完整SSD压力组合仍需按实际consumer补证",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::swapInFailurePreservesDomainState",
+          "line": 10628,
+          "frozen_pass_rows": {
+            "arm64": 3,
+            "x86_64": 3
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::exactGenerationArchivePreservesPublishedAuthorityOnFailure",
+          "line": 11749,
+          "frozen_pass_rows": {
+            "arm64": 5,
+            "x86_64": 5
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::asyncArchiveCompletionCancellationAndShutdownAreFailClosed",
+          "line": 11911,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-R04",
+      "stage": "M6",
+      "contract": "92 §6/§17/CP1平台出口",
+      "obligation": "默认abort与宿主退出前置",
+      "axes": "物理free双失败fail-fast；正常close；宿主可回收性",
+      "consumer": "libs/image/pagestore/KisPagePlatformStorage_p.h",
+      "tests": [],
+      "status": "产品fail-fast合同已结算；宿主健康仍有独立限制",
+      "gap": "旧UE尝试不能被本批正常退出抹掉；不重复默认abort制造新UE",
+      "test_traceability": []
+    },
+    {
+      "id": "M6-P01",
+      "stage": "M6",
+      "contract": "92 §6.1",
+      "obligation": "合格命中局部正收益",
+      "axes": "arm64/x86_64(Rosetta) × K1/K16，N=K/H0/B4/Preserve/两个独立Ready exact",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [],
+      "status": "旧数值4/4；联合校准0/4",
+      "gap": "独立完整校准后匹配新hit family；不挪用旧20%/30%或调宽门",
+      "test_traceability": []
+    },
+    {
+      "id": "M6-P02",
+      "stage": "M6",
+      "contract": "92 §6.1",
+      "obligation": "miss完成吞吐不劣性下界≥0.98",
+      "axes": "两架 × K1/K16 × single/native-pin/generic-lease/last-use",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [],
+      "status": "旧数值16/16；联合校准2/16",
+      "gap": "未覆盖原因另按安全/同等拒绝恢复端点；不能以成功吞吐丢掉失败工作",
+      "test_traceability": []
+    },
+    {
+      "id": "M6-P03",
+      "stage": "M6",
+      "contract": "92 §6.1",
+      "obligation": "selector关闭态/映像效应校准±2%",
+      "axes": "两架 × K1/K16 × hit/single/native-pin/generic-lease/last-use",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [],
+      "status": "正式2/20，18 Inconclusive",
+      "gap": "执行条件尚未稳定；512ms/ABBA/CPU分组诊断不授资格；不删尾/归一化/延样",
+      "test_traceability": []
+    },
+    {
+      "id": "M6-P04",
+      "stage": "M6",
+      "contract": "92 §6.1",
+      "obligation": "固定M5 Fresh/H4吞吐下界≥0.98",
+      "axes": "两架 × K1/K16 × Fresh/H4；两个独立family",
+      "consumer": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "tests": [],
+      "status": "冻结当前源码8/8",
+      "gap": "不与hit/miss合并为更强family；后续受影响修改必须再绑定",
+      "test_traceability": []
+    },
+    {
+      "id": "M6-P05",
+      "stage": "M6",
+      "contract": "92 §6.1",
+      "obligation": "common metadata实际同义驻留下降≥25%",
+      "axes": "真实重构前后；页/版本/replica规模；used/reserved/slack/peak/released；同生命周期",
+      "consumer": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "tests": [
+        [
+          "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "metadataArenaBudgetTracksAllocator"
+        ],
+        [
+          "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "metadataOwningCapacityIsBudgeted"
+        ]
+      ],
+      "status": "未取得合格分母",
+      "gap": "footprint字段覆盖不全且部分重叠；sizeof、request和已重构M5/空upstream不能替代",
+      "test_traceability": [
+        {
+          "file": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+          "symbol": "KisPageStoreCpuMutationTest::metadataArenaBudgetTracksAllocator",
+          "line": 10350,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        },
+        {
+          "file": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+          "symbol": "KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted",
+          "line": 4927,
+          "frozen_pass_rows": {
+            "arm64": 1,
+            "x86_64": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6-B01",
+      "stage": "M6",
+      "contract": "92 §6",
+      "obligation": "同源CPU/业务两架构及Vulkan foundation兼容",
+      "axes": "RelWithDebInfo、Qt6、lock-free hash、BUILD_VULKAN_FOUNDATION OFF CPU + ON foundation；arm64/native和x86_64/Rosetta",
+      "consumer": "libs/image/tests/CMakeLists.txt",
+      "tests": [],
+      "status": "38 QTest过程11180/0/0、六resource继承身份；本批普通freehand另测",
+      "gap": "完整OFF/另一hash/其他平台与长矩阵不能由当前默认配置外推；TSAN亦独立",
+      "test_traceability": []
+    },
+    {
+      "id": "M6-B02",
+      "stage": "M6",
+      "contract": "92 §2/§6",
+      "obligation": "结构/caller/ownership/census/工具自测与运行物一致",
+      "axes": "87TU/2211API/28983edges/27callbacks/6tool tests的冻结检查点",
+      "consumer": "build-tools/ci-scripts/check-pagestore-architecture.py",
+      "tests": [],
+      "status": "沿匹配输入继承；本轮无生产改动",
+      "gap": "新增消费者必须更新原结构账，不能以静态unreached直接删owner",
+      "test_traceability": []
+    },
+    {
+      "id": "M7-01",
+      "stage": "M7",
+      "contract": "92 §4",
+      "obligation": "commit-only fence可达性/两次序/全准备/不可失败",
+      "axes": "K≤8、payload≤256KiB、hold P99≤100us；capture两顺序、第二页冲突；内部完整预检consumer",
+      "consumer": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "tests": [],
+      "status": "M6前置未通过，后继required保留",
+      "gap": "不是当前M6必建功能；不可授权普通mutable span/可失败callback/异步GPU",
+      "test_traceability": []
+    },
+    {
+      "id": "M8-01",
+      "stage": "M8",
+      "contract": "92 §5/§14.1",
+      "obligation": "同段重复dab只保留必要pending/COW/undo起点",
+      "axes": "1/10/1000 dab × K1/K16 × BPP1/4/8/16；无freeze/真实freeze",
+      "consumer": "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "tests": [],
+      "status": "首条opt-in安全有证据，完整迁移/性能开放",
+      "gap": "实际业务路径和显示节奏不得由合成固定Store fixture代替",
+      "test_traceability": []
+    },
+    {
+      "id": "M8-02",
+      "stage": "M8",
+      "contract": "92 §5/§14.1",
+      "obligation": "真实brush和大brush完整成本",
+      "axes": "opaque/alpha/texture/scatter/smudge/source；K增长、cold/warm、稀疏坐标、W上限",
+      "consumer": "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "tests": [],
+      "status": "required未完整实例化",
+      "gap": "每种实际模式须固定输入/像素、setup/kernel/source/mask、pen-up/drain；不能只改preset名",
+      "test_traceability": []
+    },
+    {
+      "id": "M8-03",
+      "stage": "M8",
+      "contract": "92 §5/§14.1",
+      "obligation": "显示/exact consumer冻结边界",
+      "axes": "正常更新/慢projection/save/旧View；input-to-visible/P95/P99",
+      "consumer": "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "tests": [],
+      "status": "本批仅projection-ready；canvas-visible未测",
+      "gap": "derived display与canonical history分账，首dab/展示/完整drain不可互代",
+      "test_traceability": []
+    },
+    {
+      "id": "M8-04",
+      "stage": "M8",
+      "contract": "92 §5/§14.1",
+      "obligation": "全模式与多worker接线",
+      "axes": "multipainter/async/mask/indirect/wrap/repeat/LoD；重叠/独立页；worker迁移；cancel/suspend",
+      "consumer": "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "tests": [],
+      "status": "CP6–CP9后继required",
+      "gap": "首条direct入口不代表全模式，不提前启用persistent默认",
+      "test_traceability": []
+    },
+    {
+      "id": "M8-05",
+      "stage": "M8",
+      "contract": "92 §5/§14.2",
+      "obligation": "undo/context和失败恢复",
+      "axes": "K1/16/大delta独立增N/H；删除/default/冷history/redo/purge/save；A→B→A、FG/BG、frame/profile/interstroke",
+      "consumer": "libs/image/pagestore/KisPageStoreMementoManager.cpp",
+      "tests": [],
+      "status": "低层部分安全已覆盖，完整业务/性能开放",
+      "gap": "首次/重复准备、UI切换、首dab与visible分开；callback半写、晚guard、freeze中cancel保留",
+      "test_traceability": []
+    },
+    {
+      "id": "M8-06",
+      "stage": "M8",
+      "contract": "92 §5/§14.1",
+      "obligation": "长history、多文档、常驻与资源生命周期",
+      "axes": "tiny/正常budget、慢reader/retirement、后台purge/save、连续写、最后handle/owner退出",
+      "consumer": "libs/image/pagestore/KisPageStore.cpp",
+      "tests": [],
+      "status": "CP1局部资格不替代全业务场景",
+      "gap": "全参与者实际peak/drain、公平和背压；不把队列空当物理释放",
+      "test_traceability": []
+    },
+    {
+      "id": "PERF-01",
+      "stage": "CP10",
+      "contract": "92 §6/39 §5.6/§10.1",
+      "obligation": "CPU M不劣性与resident E操作上限分别验收",
+      "axes": "blank/default/resident read≤1.2、无history write≤1.3、COW/undo/stress两项≤1.5；冷暖/native/generic/N/K/H",
+      "consumer": "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "tests": [],
+      "status": "正式required family/epsilon_M未齐",
+      "gap": "至少100ms分辨率控制，独立吞吐/固定工作延迟/尾；不得用操作上限作M容差或由延迟倒算吞吐",
+      "test_traceability": []
+    },
+    {
+      "id": "PERF-02",
+      "stage": "CP10",
+      "contract": "92 §14/39 §5.8/§5.9",
+      "obligation": "产品相同输入至相同端点M/K/X/E联合报告",
+      "axes": "固定M5增量 + 固定upstream；setup/首dab/steady/pen-up/drain、completed work、尾、资源",
+      "consumer": "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "tests": [],
+      "status": "本批普通freehand 24对/架为诊断；其他正式样本开放",
+      "gap": "两对顺序块为独立单位；自然alternate来源/维护成本p·d−(1−p)·e−q未建立；persistent默认off",
+      "test_traceability": []
+    },
+    {
+      "id": "GPU-01",
+      "stage": "GPU/BR2+",
+      "contract": "39 §5.6/§5.7/§10.1.1",
+      "obligation": "设备/访问路径与同域direct/VT控制",
+      "axes": "CPU/CpuRam；CPU/UmaShared；GPU/UmaShared；GPU/VRAM；GPU/host remote；CPU/BAR；4/8/16BPP",
+      "consumer": "libs/vulkanbackend",
+      "tests": [],
+      "status": "后继required，当前无native GPU执行资格",
+      "gap": "CPU-only X不适用仅指没有交接；不能记为GPU/UMA Pass",
+      "test_traceability": []
+    },
+    {
+      "id": "GPU-02",
+      "stage": "GPU/BR2+",
+      "contract": "39 §5.7/§5.8/§10.1.1",
+      "obligation": "真实恢复与依赖/容量/完成端点",
+      "axes": "独立exact/单副本/alias/未Ready/旧generation × 空闲/真实last-use × RMW/full/partial/多发布 × normal/受限预算",
+      "consumer": "libs/vulkanbackend",
+      "tests": [],
+      "status": "后继profile未实例化/未测",
+      "gap": "每个支持consumer事前约束交叉组合；同allocation的双映射不是独立before；禁止凭CPU预测GPU30%",
+      "test_traceability": []
+    },
+    {
+      "id": "GPU-03",
+      "stage": "GPU/BR2+",
+      "contract": "39 §10.2",
+      "obligation": "CPU-only/forced/Auto产品门与回退",
+      "axes": "W0–W8/格式文档矩阵；同外部trace；Auto median/P95≤1.10、P99≤1.25、fallback≤1.05等原门",
+      "consumer": "libs/vulkanbackend",
+      "tests": [],
+      "status": "后继required；CPU正式门未过",
+      "gap": "必须真实硬件profile/依赖关键路径、绝对交互预算；容量优先不能抵消等待回退",
+      "test_traceability": []
+    }
+  ],
+  "frozen_numeric_buckets": [
+    {
+      "id": "M6-CAL-arm64-K1-hit",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-HIT-arm64-K1",
+      "family": "hit",
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "gate": "latency reduction lower>0"
+    },
+    {
+      "id": "M6-CAL-arm64-K1-single",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 1,
+      "case": "single",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-SINGLE-arm64-K1",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 1,
+      "case": "single",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-arm64-K1-native-pin",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-NATIVE-PIN-arm64-K1",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-arm64-K1-generic-lease",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 1,
+      "case": "generic-lease",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-GENERIC-LEASE-arm64-K1",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 1,
+      "case": "generic-lease",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-arm64-K1-last-use",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 1,
+      "case": "last-use",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-LAST-USE-arm64-K1",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 1,
+      "case": "last-use",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-arm64-K16-hit",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-HIT-arm64-K16",
+      "family": "hit",
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "gate": "latency reduction lower>0"
+    },
+    {
+      "id": "M6-CAL-arm64-K16-single",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 16,
+      "case": "single",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-SINGLE-arm64-K16",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 16,
+      "case": "single",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-arm64-K16-native-pin",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-NATIVE-PIN-arm64-K16",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-arm64-K16-generic-lease",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 16,
+      "case": "generic-lease",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-GENERIC-LEASE-arm64-K16",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 16,
+      "case": "generic-lease",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-arm64-K16-last-use",
+      "family": "calibration",
+      "arch": "arm64",
+      "K": 16,
+      "case": "last-use",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-LAST-USE-arm64-K16",
+      "family": "miss",
+      "arch": "arm64",
+      "K": 16,
+      "case": "last-use",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K1-hit",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-HIT-x86_64-K1",
+      "family": "hit",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "gate": "latency reduction lower>0"
+    },
+    {
+      "id": "M6-CAL-x86_64-K1-single",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "single",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-SINGLE-x86_64-K1",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "single",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K1-native-pin",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-NATIVE-PIN-x86_64-K1",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K1-generic-lease",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "generic-lease",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-GENERIC-LEASE-x86_64-K1",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "generic-lease",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K1-last-use",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "last-use",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-LAST-USE-x86_64-K1",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "last-use",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K16-hit",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-HIT-x86_64-K16",
+      "family": "hit",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "gate": "latency reduction lower>0"
+    },
+    {
+      "id": "M6-CAL-x86_64-K16-single",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "single",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-SINGLE-x86_64-K16",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "single",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K16-native-pin",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-NATIVE-PIN-x86_64-K16",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K16-generic-lease",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "generic-lease",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-GENERIC-LEASE-x86_64-K16",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "generic-lease",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-CAL-x86_64-K16-last-use",
+      "family": "calibration",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "last-use",
+      "gate": "[0.98,1.02]"
+    },
+    {
+      "id": "M6-LAST-USE-x86_64-K16",
+      "family": "miss",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "last-use",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-arm64-K1-Fresh",
+      "family": "Fresh",
+      "arch": "arm64",
+      "K": 1,
+      "case": "Fresh",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-arm64-K1-H4",
+      "family": "H4",
+      "arch": "arm64",
+      "K": 1,
+      "case": "H4",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-arm64-K16-Fresh",
+      "family": "Fresh",
+      "arch": "arm64",
+      "K": 16,
+      "case": "Fresh",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-arm64-K16-H4",
+      "family": "H4",
+      "arch": "arm64",
+      "K": 16,
+      "case": "H4",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-x86_64-K1-Fresh",
+      "family": "Fresh",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "Fresh",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-x86_64-K1-H4",
+      "family": "H4",
+      "arch": "x86_64",
+      "K": 1,
+      "case": "H4",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-x86_64-K16-Fresh",
+      "family": "Fresh",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "Fresh",
+      "gate": "completed-throughput lower>=0.98"
+    },
+    {
+      "id": "M6-M5-x86_64-K16-H4",
+      "family": "H4",
+      "arch": "x86_64",
+      "K": 16,
+      "case": "H4",
+      "gate": "completed-throughput lower>=0.98"
+    }
+  ],
+  "source_hashes": {
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "ca839a949f274d6b3ec921d4ad28896ce8d33996e26dfc72b85a56cca82ec176",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp": "5e11bd445e694c2318e507d140b637f8003b92efa86e18da64a532beb75253fc",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "12c5326aa6ef07b39f75325a43ad68f7ec88aa6a30358177f63d24dc5a0577eb",
+    "libs/image/tests/KisPageStorePhysicalClaimTest.cpp": "0d8e48fd6145f1655cea356514ffaeb42a2014500a0984ff37a80e8692ee1b8f",
+    "libs/image/pagestore/KisPageStore.cpp": "b6aa0d668e37637331a66d4a5dcfbafc7ff3831d51fac2fc250c1fd2268395ea",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "1e4b1634033a33d0ee1c7dcd2db309533ba8aafc37824e7f18bd02c0758510dd",
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp": "a6e28fbd766ecc9d37f716cdc43871b9d73e4d639f949142f38b7d718af67389",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "ce7ee07a30c1bbf3e135dea21466b1d0e6ef4381b7958caffa836eac9f2ba8ec",
+    "libs/image/pagestore/KisUnifiedSsdPageStore.cpp": "d07f8f1903e7210a053d3774e1ae67d36dbd976934c65d6fa7028aecce0b7a3f",
+    "libs/image/pagestore/KisPagePlatformStorage_p.h": "a6e48369cd85db0e4564a09abb7198479c269082a332208ed2691c1f4dd3f7a3",
+    "libs/image/tests/CMakeLists.txt": "f7eb50c4583ffc4e84b6421716bd4abbe717c10aac009c3ce9fe03b68822f2b1",
+    "build-tools/ci-scripts/check-pagestore-architecture.py": "e4625552e2217a1787c2cebeafb8ba1e74e0cad698848f0ce23d19b3ca3cd0a1",
+    "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp": "987149b80dd997c603e18eba9a5284e0a92867a77e72a4c4657a36cdee559e71",
+    "libs/image/pagestore/KisPageStoreMementoManager.cpp": "92b3a397c87c368a58d7413e0d840bb7259e2bbcc8438c9141562b005b1531af",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "e1e6cbf08a43a377e227b2f3b69ee5a75e9f95e6c1cd97433e2c374329c7bf75"
+  },
+  "inspected_evidence_hashes": {
+    "docs/vulkan_gpu_design/evidence/br1_m6_provider_borrow_20261006/safety01-matrix-arm64/KisPageStoreCpuMutationTest.log": "7cb72e951eed6bdfe3ae98695dc4a4c5c613283835f27bd6d3917219f1c94e0d",
+    "docs/vulkan_gpu_design/evidence/br1_m6_provider_borrow_20261006/safety01-matrix-x86_64/KisPageStoreCpuMutationTest.log": "d819b3fca7b46fff893635bcaadbe5040bb07bcd308195867e3ff21d18f42b1a",
+    "docs/vulkan_gpu_design/evidence/br1_m6_provider_borrow_20261006/safety01-matrix-arm64/KisPageStoreReferenceTest.log": "84e02f9abe8149c5d8752c9d4d98f8cb5366e1f4f1d28808fa9005e5ddc68ee7",
+    "docs/vulkan_gpu_design/evidence/br1_m6_provider_borrow_20261006/safety01-matrix-x86_64/KisPageStoreReferenceTest.log": "5fb0bdd6a916e11407a84d30857c25db84ead32ce6bf16ec1b3a3f25574ec210",
+    "docs/vulkan_gpu_design/evidence/br1_m6_provider_borrow_20261006/safety01-matrix-arm64/KisPageStorePhysicalClaimTest.log": "fc739786bf2f5b88f74b71c3ac2b90a109b3fce35b0b59a4380b76dac62b5ee9",
+    "docs/vulkan_gpu_design/evidence/br1_m6_provider_borrow_20261006/safety01-matrix-x86_64/KisPageStorePhysicalClaimTest.log": "09e5e2b7b6538c18d8765165886ee2d7413803c65ce8de98aa28497bba5521ba",
+    "docs/vulkan_gpu_design/evidence/br1_cp0_current_applicability_20261007/ssd-safety-arm64/KisPageStoreReferenceTest.log": "7c6f5aebcb3107e88c82e0985794c2d83d248330a9f897c7076f7b0e1207edd4",
+    "docs/vulkan_gpu_design/evidence/br1_cp0_current_applicability_20261007/ssd-safety-x86_64/KisPageStoreReferenceTest.log": "ad7dc454e6127763ac1efadc5223e46cb1ce09b9acf6313d785ea7ca7f2230a2"
+  },
+  "meaning": "合同组与当前实际consumer/测试的执行清单；不是完整笛卡尔积覆盖证明，未替代每个formal family预注册",
+  "cp0_complete": false,
+  "m6_complete": false,
+  "production_changed": false,
+  "product_test_changed": true,
+  "numeric_bucket_count": 48
+}

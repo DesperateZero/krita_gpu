@@ -1,0 +1,16 @@
+[
+  {
+    "command": [
+      "python3",
+      "build-tools/ci-scripts/check-pagestore-architecture.py"
+    ],
+    "exit_code": 1
+  },
+  {
+    "command": [
+      "python3",
+      "build-tools/ci-scripts/tests/test_pagestore_reachability.py"
+    ],
+    "exit_code": 0
+  }
+]

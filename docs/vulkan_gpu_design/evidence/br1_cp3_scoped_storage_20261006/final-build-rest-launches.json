@@ -1,0 +1,310 @@
+[
+  {
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/ninja",
+      "-C",
+      "/Users/apple/krita_gpu/krita/_build",
+      "-j6",
+      "KisVulkanFoundationContractsTest"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 15.1444375,
+    "log": "final-build-rest-command-0.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "final-install",
+      "--source",
+      "joint-install-allocation-probe.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 2.766256499999999,
+    "log": "final-build-rest-command-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "final-publication",
+      "--source",
+      "publication-install.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 3.049765208,
+    "log": "final-build-rest-command-2.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "final-storage",
+      "--source",
+      "storage-lifecycle.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.605472791999997,
+    "log": "final-build-rest-command-3.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "final-latency-final",
+      "--source",
+      "handoff-latency.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 2.389309000000001,
+    "log": "final-build-rest-command-4.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "control-history-current",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--root",
+      "/Users/apple/krita_gpu/krita",
+      "--build",
+      "_build-br0-cpu"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.993161624999999,
+    "log": "final-build-rest-command-5.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "control-history-m5",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--root",
+      "/Users/apple/krita_gpu/build/br1-fixed-m5-20261005/source",
+      "--build",
+      "../build"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.9691899580000012,
+    "log": "final-build-rest-command-6.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "final-install",
+      "--source",
+      "joint-install-allocation-probe.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 2.6626706250000005,
+    "log": "final-build-rest-command-7.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "final-publication",
+      "--source",
+      "publication-install.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 3.2650785000000013,
+    "log": "final-build-rest-command-8.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "final-storage",
+      "--source",
+      "storage-lifecycle.cpp",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.4621324999999956,
+    "log": "final-build-rest-command-9.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "final-latency-final",
+      "--source",
+      "handoff-latency.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 2.3827735419999954,
+    "log": "final-build-rest-command-10.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_control_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "control-history-current",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--root",
+      "/Users/apple/krita_gpu/krita",
+      "--build",
+      "_build-br0-cpu"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 2.1879882909999964,
+    "log": "final-build-rest-command-11.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_control_probe.py",
+      "--arch",
+      "x86_64",
+      "--name",
+      "control-history-m5",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--root",
+      "/Users/apple/krita_gpu/build/br1-fixed-m5-20261005/source",
+      "--build",
+      "../build"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 2.198832541999998,
+    "log": "final-build-rest-command-12.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/prepare_trace.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.040248874999996076,
+    "log": "final-build-rest-command-13.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_diagnostic_image.py"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 8.202381958000004,
+    "log": "final-build-rest-command-14.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "public",
+      "--source",
+      "public-lifetime.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.480089417000002,
+    "log": "final-build-rest-command-15.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_scoped_storage_20261006/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--name",
+      "native",
+      "--source",
+      "native-lifetime.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.513647750000004,
+    "log": "final-build-rest-command-16.log"
+  }
+]

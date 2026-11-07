@@ -1,0 +1,102 @@
+[
+  {
+    "block": 0,
+    "mode": "control",
+    "row": [
+      1024,
+      1,
+      4,
+      1
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "reaped": true,
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_management_attribution_20261006/counts-arm64/probe",
+      "1024",
+      "1",
+      "4",
+      "1",
+      "250",
+      "0",
+      "public"
+    ],
+    "library": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib",
+    "image_loaded": false,
+    "checks_passed": true,
+    "data": [
+      {
+        "N": 1024,
+        "K": 1,
+        "B": 4,
+        "height": 1,
+        "mode": "public",
+        "diagnostic": 0,
+        "completed": 6528,
+        "logical_bytes_per_op": 256,
+        "wall_ns": 251386084,
+        "thread_cpu_ns": 200663583,
+        "process_cpu_ns": 296824000,
+        "first_ns": 78041,
+        "first_counts": {
+          "duplicate_pages": 1,
+          "duplicate_bytes": 16384,
+          "foreground_copy_bytes": 16384,
+          "preclone_hits": 0,
+          "payload_pages": 0,
+          "payload_bytes": 0,
+          "default_bytes": 0,
+          "generations": 1,
+          "sessions": 1,
+          "sealed_pages": 1,
+          "commits": 1
+        },
+        "steady_counts": {
+          "duplicate_pages": 6528,
+          "duplicate_bytes": 106954752,
+          "foreground_copy_bytes": 106954752,
+          "preclone_hits": 0,
+          "payload_pages": 0,
+          "payload_bytes": 0,
+          "default_bytes": 0,
+          "generations": 6528,
+          "sessions": 6528,
+          "sealed_pages": 6528,
+          "commits": 6528
+        },
+        "phases": [],
+        "management_counter_active": 0,
+        "first_management": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "steady_management": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+]

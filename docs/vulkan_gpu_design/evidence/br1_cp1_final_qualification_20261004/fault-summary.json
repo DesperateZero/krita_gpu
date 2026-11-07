@@ -1,0 +1,96 @@
+{
+  "rows": [
+    {
+      "round": "probe-provider-final-01-arm64",
+      "arch": "arm64",
+      "family": "provider",
+      "faults": 32,
+      "controls": 12,
+      "absent": 0,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "9730b890e5ec1e51b14ded44e8b0f89ee7f3173f591e565c05392e598c2f9f1a"
+    },
+    {
+      "round": "probe-operation-final-01-arm64",
+      "arch": "arm64",
+      "family": "operation",
+      "faults": 234,
+      "controls": 3,
+      "absent": 1,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "176c52d5ba61823b6ef36156a7a5ccd10444e6cce589a41eb829d43fa0215451"
+    },
+    {
+      "round": "probe-native-fault-final-01-arm64",
+      "arch": "arm64",
+      "family": "worker",
+      "faults": 3,
+      "controls": 1,
+      "absent": 0,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "2d4fff8a2364a53ed39fe49de8c4ef076a807d6570c382db11caddfb8a98df51"
+    },
+    {
+      "round": "native-monitor-final-01-arm64",
+      "arch": "arm64",
+      "family": "monitor",
+      "faults": 3,
+      "controls": 1,
+      "absent": 0,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "18586de92b76364c597c5dafd16d5a593c0073bac960c5b63f8b66f7f17c947e"
+    },
+    {
+      "round": "probe-provider-final-01-x86_64",
+      "arch": "x86_64",
+      "family": "provider",
+      "faults": 32,
+      "controls": 12,
+      "absent": 0,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "35c1be8f351535abc297b9f74d4ec897b5df08ee52adcb99cc762063e47aaacf"
+    },
+    {
+      "round": "probe-operation-final-01-x86_64",
+      "arch": "x86_64",
+      "family": "operation",
+      "faults": 234,
+      "controls": 3,
+      "absent": 1,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "c8a9d756137ed16ea8435bfb55a6408c4b8fcacfee3c85082aac72d728d617f9"
+    },
+    {
+      "round": "probe-native-fault-final-01-x86_64",
+      "arch": "x86_64",
+      "family": "worker",
+      "faults": 3,
+      "controls": 1,
+      "absent": 0,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "cee772b7c510bdd5f0cc43239ce797bae6266c0c88ff22db573046589f8e2ccc"
+    },
+    {
+      "round": "native-monitor-final-01-x86_64",
+      "arch": "x86_64",
+      "family": "monitor",
+      "faults": 3,
+      "controls": 1,
+      "absent": 0,
+      "exit_code": 0,
+      "fatal_substitution": false,
+      "log_sha256": "81025871b2e2c46798c1dc5306510593b31852b1649a0b1baf35ce2996d1237e"
+    }
+  ],
+  "faults": 544,
+  "controls": 34,
+  "actual_exit_zero": 8,
+  "scope": "original finite provider/operation/EAGAIN families under default termination; absent targets remain absent"
+}

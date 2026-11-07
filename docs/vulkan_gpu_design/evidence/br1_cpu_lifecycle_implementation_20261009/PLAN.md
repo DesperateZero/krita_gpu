@@ -1,0 +1,37 @@
+# 实施记录与设计偏离
+
+事前产品704d96e81c，文档e333942d9，固定范围03j的28行。源码变更和开发失败在本包保留，最终hunk归属/原owner证明在此结算。
+
+## E1：复用现有共享策略，省去新的三组guards接口
+
+原计划提取Fresh/private/canonical三个共享纯策略。代码审查确认现有applyKnownValid已经是reference和production唯一的转换政策；限定Fresh/Adopt、Prepare/Begin及同步Begin+Publish后，它们只读取版本身份/publication/authority、replica身份/validity/activeOperation/pin、writer/header和physical碰撞事实，不读取lease/last-use/capture链。普通Commit/Default/Restore也不消费保护链。
+
+因此目标调整为原records.project的编译期最小事实投影，复用原WorkingState内联存储和原完整guards；Fresh只增加真实target，现存record仅安装scalar变化，保护节点不复制/替换。普通publication由原政策在变化时直接写原candidate.deltas，退出“保存旧字段全集→求差分”，真正addition仍转移原installRecords。recoverable和任意有effects/multistep序列保持完整输入，不将薄事实传入它们。
+
+薄事实仍有必要的栈上版本/replica值，不能把它们的数量宣称为0。删除的是完整保护镜像、临时保护数组/节点、旧record重装及重复求差分；较多replica或相关版本仍可能spill且实际收费。没有第二状态机、新owner、永久fast-path状态或权限表。影响LP01.1–LP03.2与数量账，原oracle/固定反例共同验证。
+
+## E2：原候选数组承担分组与准备暂存
+
+Entry增加inputOrdinal与stableShardIndex，ShardArenaGrowth增加firstEntry/entryCount；原根统一收费，原shardOwner保活。先填原entries并排序、相邻去重，再用原Publication.installRecords暂存标量事实，锁外复用policy；原数组最后只留实际addition。没有第二候选数组。facts/demand/activity/claim/install按同分片≤16页run共锁，growth容量仍整分片接纳并复验该分片范围；不持多把分片锁。
+
+成功统计复用demand/activity锁。失败仅结算尚未记录的已成功policy前缀，并撤回预记的prepared页数；policy拒绝中途的partial delta不称为准备成功。取消/同步/后台cleanup都用原Data活动归还；payload先门外析构，再同分片归还，原Entry保活至归还后。后台每页检查原1ms界，每轮≤16，最终pendingUnits和pendingCandidates同一次idle锁结算。
+
+## E3：后台消费原事实，不增调度状态
+
+job enqueue仅原队列idle→work通知，finished后与下一取头共锁，worker identity按线程寿命写；delay仅最早deadline变化通知，ready仅空→非空通知。stop、generation、temporary reference、fairness保持。read producer只在retryScheduled时cancel；jobScheduled时由同锁下finished检查ready链接续。epoch在原链一次摘≤remaining128节点，门外free，child仍追加原链。
+
+descriptor以精确base身份在原map查共享值，再完整比较descriptor；借用shared_ptr地址只在原owner锁/同步调用内使用。native/alias/generic/recoverable四类冷写迁移，无hint/值不等/initial/default走原查找。既有导出两参数入口保留ABI，三参数入口仅传base意图，不增加缓存/owner。
+
+## 条件项的具体裁决
+
+LP08.4保留effects/任意sequence的完整工作图：Fail/Cancel/Abort可能先产生物理退役、captured历史或CancelPending；Debt准备可拒绝且解锁，必须保留全部结果至revision复验后一次安装。ReplacePrivatePreparedBacking还会转移旧backing，AcquireRead要增真实lease并检查重复，AttachHistoricalDefault/MaterializeDefault要创建实际version/replica；authority handoff有双端pin/外部完成。仅替换其中一字段不能替代原原子序列；本包无新effects delta计划/接纳证明，不授权删除。单独Prepare/Begin已纳入直接header路径，不以“generic保留”遗漏可删部分。
+
+LP10.1保留真实scope与读cut：operation-start/current/G0/oldData/source选择不同，capture后可见性与晚reader是实际消费者。当前96 bound冷页和132代际存在真实中间cut；没有稳定scope跨cut同义证据，不能用减少读选择次数伪装减少工作。旧pin实验不重复领取。
+
+LP03.3/08.2/08.5分别保留recoverable真实retag、history/root世代/retirement retry/预算inFlight接续、最后task/capture/free前的root寿命。它们仍消费同一优化执行器，完整安全组与原拒绝/late-owner用例复验，不把保留写成零成本。
+
+## 验证记录
+
+dev-01：2541通过；dev-02：2541通过；dev-03含新增边界：2614通过，均零失败/跳过。build-04因新增测试误用不存在descriptor字段失败，修成layoutRevision后通过，原失败保留。冻结库da4304d429134da577087e15004b4d98d93b7fc5c97a1bf6d8da4f4a615d66d1；双架16组9370通过/0失败/0跳过。
+
+structure-1因索引期间源码改变失败；structure-2旧规则硬编码逐页releaseActivity并全文件误禁归还标志失败；规则迁移到同分片releaseActivities，install范围强化禁止清理消费活动保护。structure-3索引、架构审计、工具自测全部通过。静态规则变化不影响冻结image。diagnostic-v2编排锚点未全部核验，主动中止；v3经全锚点核验后重建，所有旧输出保留。

@@ -1,0 +1,16 @@
+Indexing 87 PageStore-reachable translation units with 4 workers...
+PageStore call graph generation failed: 2 translation units failed IndexStore parsing:
+[libs/image/tests/KisPageStoreCpuMutationTest.cpp]
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp:1437:22: error: 'configureSharedNonPayloadBudget' is a private member of 'KisPageStore'
+ 1437 |     QVERIFY(f.store->configureSharedNonPayloadBudget(parent, &f.error));
+      |                      ^
+/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.h:577:10: note: declared private here
+  577 |     bool configureSharedNonPayloadBudget(
+      |          ^
+1 error generated.
+
+[libs/image/tests/KisPageStoreResidentReadTest.cpp]
+/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp:1280:10: fatal error: 'KisPageStoreResidentReadTest.moc' file not found
+ 1280 | #include "KisPageStoreResidentReadTest.moc"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.

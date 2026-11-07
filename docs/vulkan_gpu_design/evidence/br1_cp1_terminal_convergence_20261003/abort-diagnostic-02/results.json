@@ -1,0 +1,20 @@
+[
+  {
+    "label": "KisPageStoreCpuMutationTest-arm64-00",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br1-tsan/bin/KisPageStoreCpuMutationTest",
+      "consumedGenericLeaseCanRetryAbort",
+      "-nocrashhandler"
+    ],
+    "pid": 92192,
+    "exit_code": 1,
+    "totals": [
+      "Totals: 4 passed, 1 failed, 0 skipped, 0 blacklisted, 37ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::consumedGenericLeaseCanRetryAbort(proof-rejected-after-publish) 'f.store->abort(tx)' returned FALSE. ()"
+    ]
+  }
+]

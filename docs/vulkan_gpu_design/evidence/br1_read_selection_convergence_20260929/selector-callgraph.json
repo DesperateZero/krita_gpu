@@ -1,0 +1,84 @@
+{
+  "callback-registrations": [],
+  "codegen-name": "",
+  "declarations": [],
+  "definitions": [
+    {
+      "column": 21,
+      "line": 315,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    }
+  ],
+  "kind": "instance-method",
+  "name": "selectReadViewLocked",
+  "non-call-references": [],
+  "production-callers": [
+    {
+      "caller": "KisTiledDataManagerPageStoreBackend::captureIteratorReadScope",
+      "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@captureIteratorReadScope#b#*$@S@QString#$@S@QSharedPointer>#1$@S@KisPageStoreIteratorReadScope#1",
+      "column": 22,
+      "dynamic": false,
+      "implicit": false,
+      "line": 1179,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    },
+    {
+      "caller": "KisTiledDataManagerPageStoreBackend::captureIteratorReadScope",
+      "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@captureIteratorReadScope#b#*$@S@QString#$@S@QSharedPointer>#1$@S@KisPageStoreIteratorReadScope#1",
+      "column": 40,
+      "dynamic": false,
+      "implicit": false,
+      "line": 1181,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    },
+    {
+      "caller": "KisTiledDataManagerPageStoreBackend::captureReadView",
+      "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@captureReadView#b#*$@S@QString#1",
+      "column": 23,
+      "dynamic": false,
+      "implicit": false,
+      "line": 1218,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    },
+    {
+      "caller": "KisTiledDataManagerPageStoreBackend::resolveCurrentPagePresenceInto",
+      "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@resolveCurrentPagePresenceInto#&1$@S@QList>#$@S@KisLogicalPageId#*c#K#*$@S@QString#1",
+      "column": 23,
+      "dynamic": false,
+      "implicit": false,
+      "line": 1278,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    },
+    {
+      "caller": "KisTiledDataManagerPageStoreBackend::selectCurrentReadTile",
+      "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@selectCurrentReadTile#&$@S@KisTiledDataManager#$@S@KisSharedPtr>#$@S@KisTile#*b#",
+      "column": 27,
+      "dynamic": false,
+      "implicit": false,
+      "line": 1373,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    },
+    {
+      "caller": "KisTiledDataManagerPageStoreBackend::acquireTile",
+      "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@acquireTile#I#I#b#b#*$@N@std@N@__1@S@unique_ptr>#$@S@KisTilePageStoreLease#$@N@std@N@__1@S@default_delete>#S2_#",
+      "column": 23,
+      "dynamic": false,
+      "implicit": false,
+      "line": 1482,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    },
+    {
+      "caller": "KisTiledDataManagerPageStoreBackend::pageAllocated",
+      "caller-usr": "c:@S@KisTiledDataManagerPageStoreBackend@F@pageAllocated#I#I#b#1",
+      "column": 19,
+      "dynamic": false,
+      "implicit": false,
+      "line": 2532,
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+    }
+  ],
+  "qualified-name": "KisTiledDataManagerPageStoreBackend::Private::selectReadViewLocked",
+  "specializations-and-overrides": [],
+  "test-callers": [],
+  "usr": "c:@S@KisTiledDataManagerPageStoreBackend@S@Private@F@selectReadViewLocked#b#1"
+}

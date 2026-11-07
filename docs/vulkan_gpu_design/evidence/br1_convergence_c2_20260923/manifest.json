@@ -1,0 +1,267 @@
+{
+  "schema": 1,
+  "checkpoint": "BR1 convergence C2 partial 2026-09-23",
+  "scope": "current uncommitted worktree; not BR1-PERF qualification",
+  "counts": {
+    "production": {
+      "added": 189,
+      "deleted": 265
+    },
+    "tests": {
+      "added": 134,
+      "deleted": 0
+    }
+  },
+  "production_changes": [
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "before": {
+        "sha256": "9dad7689d25cb5da44f339a150755960ad4cf5af74c0653b7fec85f7ed6e2087",
+        "bytes": 160205
+      },
+      "after": {
+        "sha256": "bdc403ce8c30552482df5892609d721e1d64f81e428878a6736ec3b39af1e84a",
+        "bytes": 160448
+      },
+      "added_lines": 6,
+      "deleted_lines": 1
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.h",
+      "before": {
+        "sha256": "d951348c3d6614b9239988dd562971276875085dacf3949767d42cbdaec56ef1",
+        "bytes": 22525
+      },
+      "after": {
+        "sha256": "dbd1598368958e008395d6bab9bfa65a9430b0b233444464ec738e0fd1f968d7",
+        "bytes": 22818
+      },
+      "added_lines": 5,
+      "deleted_lines": 0
+    },
+    {
+      "path": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "before": {
+        "sha256": "e0eb64872392a1a5baf62025e405c179815f4d6b0e4aca4d534634d93f908d90",
+        "bytes": 64535
+      },
+      "after": {
+        "sha256": "2df7a0c7f39a92c6e9e52fb0bb61f0dfd44a6d4e5c444159afbbf32350894c02",
+        "bytes": 65147
+      },
+      "added_lines": 22,
+      "deleted_lines": 19
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "before": {
+        "sha256": "92ed084f0c8835373eb1bca2b642e381c90d7f2abcaa6da9fdbbf78ca2f5cde5",
+        "bytes": 196683
+      },
+      "after": {
+        "sha256": "444040b4041fcb0a1a40b4876c8efd059eddc359877bcb867786a44b31e5e89f",
+        "bytes": 191394
+      },
+      "added_lines": 128,
+      "deleted_lines": 243
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.h",
+      "before": {
+        "sha256": "a459a738eff4f66252356a0dbb8148d7295955cf6c3b47c2c2b792f42bbf4526",
+        "bytes": 29216
+      },
+      "after": {
+        "sha256": "fc9c90d168db3721b2311d55611aa8ccf9f7799e2d601d3e6f7f7f20602c3423",
+        "bytes": 29313
+      },
+      "added_lines": 1,
+      "deleted_lines": 0
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "before": {
+        "sha256": "dbebf0038fd836c0d1326574d9b2db1614bc62aa6fed5e35f7b836b1a52d6930",
+        "bytes": 49019
+      },
+      "after": {
+        "sha256": "4da33f873eb215e5ec78d07b58bdec57a3d41928dced3922ce8339a6a6b2a7ca",
+        "bytes": 49857
+      },
+      "added_lines": 17,
+      "deleted_lines": 0
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "before": {
+        "sha256": "d589e98a3f48141c9370bd529b564abfa230253b819e8c4a2ea1a551d585bc8a",
+        "bytes": 20107
+      },
+      "after": {
+        "sha256": "9bc48808154d1019c029df9dff2a34fc8ffc9f16365d9efea3d55f28c426a8ef",
+        "bytes": 20392
+      },
+      "added_lines": 6,
+      "deleted_lines": 0
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "before": {
+        "sha256": "c0c85ce63b8467fe523be896a4f5da326e7d8ee690ae33d2f91d095c884fda46",
+        "bytes": 53059
+      },
+      "after": {
+        "sha256": "0005ef4b6c02112779bab48ccfbe19b23ec987eb0451c8023fb93e1accb9c9f4",
+        "bytes": 53136
+      },
+      "added_lines": 4,
+      "deleted_lines": 2
+    }
+  ],
+  "test_changes": [
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "before": {
+        "sha256": "7153c871382ac1bce1f1a0812af4a5cda23f8bf7bf0f6eb7f9a991fc7fa02445",
+        "bytes": 206762
+      },
+      "after": {
+        "sha256": "7419349541711e1191f0affd03a84965922a466d8b54ce5cf4521f438cbb01ff",
+        "bytes": 212857
+      },
+      "added_lines": 133,
+      "deleted_lines": 0
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "before": {
+        "sha256": "6821c0667020424b536ac4bbeb697058a9e4ca2db7ea400d572adb210fdf03ec",
+        "bytes": 152234
+      },
+      "after": {
+        "sha256": "c6bd3cb5a3ea085f8cd03f85c7894c74a03e4ec1e0bab69a0830f4e0c188816a",
+        "bytes": 152315
+      },
+      "added_lines": 1,
+      "deleted_lines": 0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "sha256": "82d7bd09960e8b529c32473f38ee5da80f1e8cd2e9a3e7c4f554071e4fde8188",
+      "bytes": 6712320
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+      "sha256": "6e67b3476857840f5a0d98b202901c490ff26bdafc4dea2cc057e334aaebdf6c",
+      "bytes": 121823
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/pagestore-audit/convergence-start-source.json",
+      "sha256": "7313b87dd3775b600fc45abaeb59738330b5daebb0b33714b223cb96f32dfef2",
+      "bytes": 121828
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/compile_commands.json",
+      "sha256": "d099f9e30d18227616de18ba58307ff8ae2ee046774768ced0543eb60c45f92e",
+      "bytes": 23968899
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib",
+      "sha256": "8d0141ffdd3153db024be198197e1e44c8f0d32cf863c4e0031f80690645c5be",
+      "bytes": 25160664
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "sha256": "9bfa0e1fbc9949d473105bc9752fe2ecd0f55caf5932a8a50a7cd24323432589",
+      "bytes": 655880
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "sha256": "c6d756ed810e55a44fa456dbfb956d73de2821a9885b8c3b84d03223e2f45ca4",
+      "bytes": 279928
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "sha256": "ddd6f2938b34c51450ccb83531f59b12825fb2c5ae18160618eecc563e7fad2a",
+      "bytes": 2242280
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReadBaselineTest",
+      "sha256": "7c6a4c6a4aeaafd17f70bc27551bb0e570790cc971e0bc779dea1bbd47a0155f",
+      "bytes": 322144
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "sha256": "04d934a841812193c5251fb07d74e1889bc049b0ee8622c8b6950f520616f70d",
+      "bytes": 424272
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "sha256": "23b568994f9dbc645ac526102b09a3f0214188683c40bd05919ae9cf01e67673",
+      "bytes": 1446712
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "sha256": "1ef5c2415d6bd4963003827470d2b17fc81778d034ae10b86a08718171b1c150",
+      "bytes": 343440
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+      "sha256": "081997052d4904612f59509d98681d9c277269a8637d5c42ecd5aa5e32183000",
+      "bytes": 1142552
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_painter_test",
+      "sha256": "1c7317ae2b248df95a8473472ee70a4512c88207634fd6816f4b8dbbc4caa793",
+      "bytes": 655488
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/README.md",
+      "sha256": "cb93294aac888ee0c673dfe7bcbe4563a2427ae01c78efd4fda22e3a4926b0bd",
+      "bytes": 3543
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/architecture.txt",
+      "sha256": "a4112d14c523c54347145e38b202892a162aa95ee52b837862645ed24787bff5",
+      "bytes": 785
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/ctest.txt",
+      "sha256": "0e9646b3ec3e1fc2bd9f4beb3aae649fe9f53b39ed0c916d48dfeb7cfc7b5af8",
+      "bytes": 1196
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/final-regressions.txt",
+      "sha256": "fccab157b11770a41cd62ef02ebcb49d3058527f99bd93784ec1a6a5efbd5354",
+      "bytes": 1382
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/pagestore-ctest.log",
+      "sha256": "eca552ff472eede2b0f70becf9cc94f97ba0a60f0d59e422cf64eb00e5c3acd9",
+      "bytes": 122097
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/painter.txt",
+      "sha256": "a51c8ce5cc44fa7582c9dcd01b2437f4844878553bcbb1a61f48c49aecd6aa71",
+      "bytes": 8657
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/stress-diagnostic-excerpt.txt",
+      "sha256": "cd40148a5c6e44602ed6e7baaf217f4659d3b603c8bff8c1e239969b7042d3ff",
+      "bytes": 2428
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/stress-retry-8.txt",
+      "sha256": "c11b54dbec2fa41161fbb5f2d59b5b5ff9485336ac91adfbda96637bfbc6c7b7",
+      "bytes": 764
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c2_20260923/tiles3-full.txt",
+      "sha256": "8e3b921269bc610cb89f320b611542d658c9cf8b811e134be97852fa891780a9",
+      "bytes": 30530
+    }
+  ],
+  "note": "stress-diagnostic-excerpt is intermediate instrumentation, removed before final build. stress-retry-8 predates final cleanup; tiles3-full, core, painter and final-regressions bind the final binaries."
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "preparedCompletionsAtCapacity",
+      "registryStorageReturnsToProcessOwner",
+      "compactStorage",
+      "pendingGapsAndTerminalBoundaries",
+      "shuffledCompletionMatchesOracle"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.879,
+    "totals": [
+      "Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 310ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "providerRetirementUsesPreparedCompletion",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.003,
+    "totals": [
+      "Totals: 10 passed, 0 failed, 0 skipped, 0 blacklisted, 458ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "preparedCompletionsAtCapacity",
+      "registryStorageReturnsToProcessOwner",
+      "compactStorage",
+      "pendingGapsAndTerminalBoundaries",
+      "shuffledCompletionMatchesOracle"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.693,
+    "totals": [
+      "Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 487ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "providerRetirementUsesPreparedCompletion",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordTransfersAtCapacity"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.703,
+    "totals": [
+      "Totals: 10 passed, 0 failed, 0 skipped, 0 blacklisted, 461ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

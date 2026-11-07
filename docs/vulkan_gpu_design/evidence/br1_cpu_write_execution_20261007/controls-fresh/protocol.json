@@ -1,0 +1,39 @@
+{
+  "scope": "Fixed5173 same-dependency protected Fresh H0 controls; original public tiles3 fixture unchanged",
+  "buckets": [
+    [
+      "arm64",
+      64,
+      1
+    ],
+    [
+      "arm64",
+      1024,
+      16
+    ],
+    [
+      "x86_64",
+      64,
+      1
+    ],
+    [
+      "x86_64",
+      1024,
+      16
+    ]
+  ],
+  "H": 0,
+  "B": 4,
+  "pairs": 40,
+  "rate_ms": 250,
+  "completed_rate_check_interval": 64,
+  "loops": 4,
+  "endpoint": "Original write-mode CpuReadable: one scanline through public manager writeBytes; setup/validation/destruction outside",
+  "independent_unit": "process pair; adjacent even/odd pairs form20 predeclared order-balanced blocks",
+  "order": "rotate four buckets and alternate m5/current order per pair; sequential processes; no concurrent builds or benchmarks",
+  "statistic": "median block geometric mean of two completed-work throughput ratios; 50000 bootstrap blocks seed260926",
+  "confidence": "one-sided98.75% per bucket, family at least95% across four buckets",
+  "minimum_throughput_ratio": 0.98,
+  "stopping": "exactly40 pairs; stop only for correctness/process/identity failure, preserve all failures; no trimming or extension",
+  "limits": "Original H0 scanline controls only, not H4 history, full-payload/native handoff latency, upstream/stroke E, tails or full M6"
+}

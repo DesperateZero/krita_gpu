@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "purpose": "fixed-upstream shared-harness diagnostic; not full BR1-PERF qualification",
+  "upstream_revision": "9a24ae0d8c070884fb013594191002e1a1b39a19",
+  "current_base_revision": "f5fbbde618df6fb4e1068ace7381c339a70dd4c0",
+  "pairs": 12,
+  "fixed_work_minimum_ns": 100000000,
+  "calibration_target_ns": 200000000,
+  "calibration_repeats": 3,
+  "calibration_initial_loops": 1024,
+  "maximum_loops": 100000000,
+  "rate_duration_ms": 200,
+  "order": "rotate cases by pair; alternate upstream/current order and time/rate order",
+  "clocks": "whole fixed-work or completed-rate window wall and calling-thread CPU; no phase profiler",
+  "bootstrap": {"seed": 591137, "resamples": 20000, "interval": "exploratory paired-process median 95%; no NI Pass"},
+  "qualification_limits": [
+    "No pre-approved M non-inferiority margin: do not infer equivalence from a CI crossing 1",
+    "H=0, single thread and fixed in-flight=1; no per-event tails, pressure or product replay",
+    "No full metadata/allocation/background-drain counters; manager destruction is not complete retirement",
+    "Alias includes native operation management/content decisions but excludes prebuilt source initialization; label lifecycle operation, not pure M",
+    "K is a common memcpy control with ready read pins, not a production brush/SIMD kernel qualification",
+    "Rate is independently measured completed work; fixed-loop aggregate is not a single-event latency distribution"
+  ],
+  "cases": [
+    "guard-n1024-k16-b4",
+    "lookup-n1024-k16-b4",
+    "blank-n64-k1-b4",
+    "intent-n64-k1-b4",
+    "alias-n1024-k16-b4",
+    "write-n4096-k1-b4",
+    "write-n1024-k16-b4",
+    "write-n64-k1-b8",
+    "write-n64-k1-b16",
+    "kernel-n1024-k16-b4"
+  ]
+}

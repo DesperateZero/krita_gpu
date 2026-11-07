@@ -1,0 +1,5430 @@
+{
+  "product": "f0c40a5d195f1c20a0f915faaef18b1f3ee5b575",
+  "families": {
+    "calibration": {
+      "processes": 640,
+      "passed": false,
+      "rows": [
+        {
+          "arch": "arm64",
+          "K": 1,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 1.002752145202689,
+          "lower": 0.9841177782015167,
+          "upper": 1.0217269730831655,
+          "passes": false,
+          "baseline_marginal_median_us": 11.61475,
+          "candidate_marginal_median_us": 11.6145,
+          "paired_median_saving_us": 0.052,
+          "observed_hits": [
+            1
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 1,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.9945287445295883,
+          "lower": 0.9832892436712408,
+          "upper": 1.008867585592538,
+          "passes": true,
+          "baseline_marginal_median_us": 11.96875,
+          "candidate_marginal_median_us": 11.948,
+          "paired_median_saving_us": -0.0205,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.9968659732433299,
+          "lower": 0.9652970273039063,
+          "upper": 1.0306732331215036,
+          "passes": false,
+          "baseline_marginal_median_us": 97.927,
+          "candidate_marginal_median_us": 98.75,
+          "paired_median_saving_us": -0.771,
+          "observed_hits": [
+            16
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 1.0022032468027107,
+          "lower": 0.9709835489165325,
+          "upper": 1.0254720096202126,
+          "passes": false,
+          "baseline_marginal_median_us": 111.5835,
+          "candidate_marginal_median_us": 111.6875,
+          "paired_median_saving_us": 0.10425,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.9969739799077483,
+          "lower": 0.9680793861572139,
+          "upper": 1.0157139404438627,
+          "passes": false,
+          "baseline_marginal_median_us": 18.12475,
+          "candidate_marginal_median_us": 18.302,
+          "paired_median_saving_us": -0.125,
+          "observed_hits": [
+            1
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 1.003257718008447,
+          "lower": 0.9718106616024298,
+          "upper": 1.026243206923562,
+          "passes": false,
+          "baseline_marginal_median_us": 18.94775,
+          "candidate_marginal_median_us": 18.87475,
+          "paired_median_saving_us": 0.04175,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.9788668069124488,
+          "lower": 0.9238554211227583,
+          "upper": 1.0086537408141507,
+          "passes": false,
+          "baseline_marginal_median_us": 158.865,
+          "candidate_marginal_median_us": 160.9685,
+          "paired_median_saving_us": -2.8025,
+          "observed_hits": [
+            16
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.9864726900115326,
+          "lower": 0.9287510479377273,
+          "upper": 1.009519503657167,
+          "passes": false,
+          "baseline_marginal_median_us": 184.29175,
+          "candidate_marginal_median_us": 186.51025,
+          "paired_median_saving_us": -2.323,
+          "observed_hits": [
+            0
+          ]
+        }
+      ]
+    },
+    "hit": {
+      "processes": 320,
+      "passed": true,
+      "rows": [
+        {
+          "arch": "arm64",
+          "K": 1,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 40,
+          "metric": "latency_reduction",
+          "point": 0.08934534652891202,
+          "lower": 0.07938214709247349,
+          "upper": 0.0980392156862745,
+          "passes": true,
+          "baseline_marginal_median_us": 12.67725,
+          "candidate_marginal_median_us": 11.55225,
+          "paired_median_saving_us": 1.114,
+          "observed_hits": [
+            0,
+            1
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 40,
+          "metric": "latency_reduction",
+          "point": 0.18798110540599022,
+          "lower": 0.17263454861111116,
+          "upper": 0.20135963118415778,
+          "passes": true,
+          "baseline_marginal_median_us": 123.9685,
+          "candidate_marginal_median_us": 100.43725,
+          "paired_median_saving_us": 23.677,
+          "observed_hits": [
+            0,
+            16
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 40,
+          "metric": "latency_reduction",
+          "point": 0.07824656143069952,
+          "lower": 0.05627381928698916,
+          "upper": 0.09816191808387931,
+          "passes": true,
+          "baseline_marginal_median_us": 20.229,
+          "candidate_marginal_median_us": 18.42725,
+          "paired_median_saving_us": 1.53125,
+          "observed_hits": [
+            0,
+            1
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "case": "hit",
+          "pairs": 40,
+          "statistical_units": 40,
+          "metric": "latency_reduction",
+          "point": 0.1889819498149674,
+          "lower": 0.18357925354578264,
+          "upper": 0.1995559614263992,
+          "passes": true,
+          "baseline_marginal_median_us": 201.90625,
+          "candidate_marginal_median_us": 162.85425,
+          "paired_median_saving_us": 38.177,
+          "observed_hits": [
+            0,
+            16
+          ]
+        }
+      ]
+    },
+    "miss": {
+      "processes": 1280,
+      "passed": false,
+      "rows": [
+        {
+          "arch": "arm64",
+          "K": 1,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 1.010831551693867,
+          "lower": 0.9980979988583221,
+          "upper": 1.038146904576716,
+          "passes": true,
+          "baseline_marginal_median_us": 11.9685,
+          "candidate_marginal_median_us": 11.90625,
+          "paired_median_saving_us": 0.12475,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 1,
+          "case": "native-pin",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8411011747864972,
+          "lower": 0.8236202927733617,
+          "upper": 0.8639826501667281,
+          "passes": false,
+          "baseline_marginal_median_us": 12.59425,
+          "candidate_marginal_median_us": 14.75,
+          "paired_median_saving_us": -2.1665,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 1,
+          "case": "generic-lease",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8983857582334505,
+          "lower": 0.8639050184768675,
+          "upper": 0.9227778068804215,
+          "passes": false,
+          "baseline_marginal_median_us": 12.96925,
+          "candidate_marginal_median_us": 14.354,
+          "paired_median_saving_us": -1.42725,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 1,
+          "case": "last-use",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.9042647735157848,
+          "lower": 0.8788325701523698,
+          "upper": 0.9200384721773808,
+          "passes": false,
+          "baseline_marginal_median_us": 13.07275,
+          "candidate_marginal_median_us": 14.52075,
+          "paired_median_saving_us": -1.49975,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 1.0017886095427226,
+          "lower": 0.9856926070322787,
+          "upper": 1.0092937811903835,
+          "passes": true,
+          "baseline_marginal_median_us": 116.698,
+          "candidate_marginal_median_us": 115.86475,
+          "paired_median_saving_us": -0.125,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "case": "native-pin",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8137240337263498,
+          "lower": 0.7817487228662813,
+          "upper": 0.8333845435776064,
+          "passes": false,
+          "baseline_marginal_median_us": 126.68775,
+          "candidate_marginal_median_us": 155.292,
+          "paired_median_saving_us": -28.06275,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "case": "generic-lease",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8818577460273885,
+          "lower": 0.8682455428661356,
+          "upper": 0.8917381887296949,
+          "passes": false,
+          "baseline_marginal_median_us": 128.396,
+          "candidate_marginal_median_us": 147.104,
+          "paired_median_saving_us": -18.4375,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "case": "last-use",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8878310233419479,
+          "lower": 0.854386389967585,
+          "upper": 0.9127001851818618,
+          "passes": false,
+          "baseline_marginal_median_us": 128.927,
+          "candidate_marginal_median_us": 146.28125,
+          "paired_median_saving_us": -16.8745,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 1.0008153768777608,
+          "lower": 0.9726646904024998,
+          "upper": 1.0365769159514786,
+          "passes": false,
+          "baseline_marginal_median_us": 18.8335,
+          "candidate_marginal_median_us": 18.85425,
+          "paired_median_saving_us": -0.00025,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "case": "native-pin",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8732203522315101,
+          "lower": 0.8463883700324986,
+          "upper": 0.8960635345438999,
+          "passes": false,
+          "baseline_marginal_median_us": 20.0835,
+          "candidate_marginal_median_us": 23.094,
+          "paired_median_saving_us": -2.886,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "case": "generic-lease",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8870528693217312,
+          "lower": 0.8628733354972958,
+          "upper": 0.902728432043013,
+          "passes": false,
+          "baseline_marginal_median_us": 20.344,
+          "candidate_marginal_median_us": 22.8955,
+          "paired_median_saving_us": -2.51075,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "case": "last-use",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8820555140301439,
+          "lower": 0.8528221454871434,
+          "upper": 0.9350121049403858,
+          "passes": false,
+          "baseline_marginal_median_us": 20.1455,
+          "candidate_marginal_median_us": 23.2395,
+          "paired_median_saving_us": -2.896,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "case": "single",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 1.0105146749258123,
+          "lower": 0.994250601254426,
+          "upper": 1.0496304368256564,
+          "passes": true,
+          "baseline_marginal_median_us": 193.31225,
+          "candidate_marginal_median_us": 192.77075,
+          "paired_median_saving_us": 1.56225,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "case": "native-pin",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8285960837534071,
+          "lower": 0.7964773105862162,
+          "upper": 0.8536510872453743,
+          "passes": false,
+          "baseline_marginal_median_us": 203.16675,
+          "candidate_marginal_median_us": 247.2605,
+          "paired_median_saving_us": -44.7395,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "case": "generic-lease",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.8673922135606499,
+          "lower": 0.8366077502821343,
+          "upper": 0.8824228150977039,
+          "passes": false,
+          "baseline_marginal_median_us": 209.281,
+          "candidate_marginal_median_us": 241.95825,
+          "paired_median_saving_us": -31.98975,
+          "observed_hits": [
+            0
+          ]
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "case": "last-use",
+          "pairs": 40,
+          "statistical_units": 20,
+          "metric": "completed_operation_throughput_ratio",
+          "point": 0.884368753411317,
+          "lower": 0.8693327419219553,
+          "upper": 0.9076541506645593,
+          "passes": false,
+          "baseline_marginal_median_us": 214.8855,
+          "candidate_marginal_median_us": 244.45825,
+          "paired_median_saving_us": -28.9785,
+          "observed_hits": [
+            0
+          ]
+        }
+      ]
+    },
+    "fixed-m5-fresh": {
+      "observations": [
+        {
+          "arch": "arm64",
+          "K": 1,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 25671.029186777254,
+            "current": 34031.62441947639
+          },
+          "current_over_m5_throughput": 1.326973723069657,
+          "one_sided_9875_lower": 1.3126517328861016,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 3739.7197182532773,
+            "current": 4167.015475562266
+          },
+          "current_over_m5_throughput": 1.1157673647645565,
+          "one_sided_9875_lower": 1.1015729277001085,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 17689.321203030635,
+            "current": 24348.321075028456
+          },
+          "current_over_m5_throughput": 1.377992975905814,
+          "one_sided_9875_lower": 1.3529867860983007,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 2446.1483905246905,
+            "current": 2778.721047845067
+          },
+          "current_over_m5_throughput": 1.1421035662702246,
+          "one_sided_9875_lower": 1.1209897848170192,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        }
+      ],
+      "scoped_family_pass": true,
+      "protocol_sha256": "e6b04c3a9259b1e4f22d883209a8d37b3c98d84319aa73c9ec5f2ae3fb5bdd9c",
+      "inputs_verified": true,
+      "qualification": "Fixed5173 same-dependency protected Fresh H0 controls; original public tiles3 fixture unchanged; full M6/CP0 gates remain separate"
+    },
+    "fixed-m5-history": {
+      "observations": [
+        {
+          "arch": "arm64",
+          "K": 1,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 15462.257744587847,
+            "current": 22876.28441614737
+          },
+          "current_over_m5_throughput": 1.4791825620532284,
+          "one_sided_9875_lower": 1.4661836464667175,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        },
+        {
+          "arch": "arm64",
+          "K": 16,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 2280.8907761815176,
+            "current": 3187.9443305836694
+          },
+          "current_over_m5_throughput": 1.4120663740147854,
+          "one_sided_9875_lower": 1.3970067406780682,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        },
+        {
+          "arch": "x86_64",
+          "K": 1,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 12028.266415999276,
+            "current": 17271.149402420764
+          },
+          "current_over_m5_throughput": 1.4236120929012976,
+          "one_sided_9875_lower": 1.397874106412987,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        },
+        {
+          "arch": "x86_64",
+          "K": 16,
+          "pairs": 40,
+          "independent_blocks": 20,
+          "median_completed_rates": {
+            "m5": 1444.7553539920632,
+            "current": 2024.890263591025
+          },
+          "current_over_m5_throughput": 1.4077992474464378,
+          "one_sided_9875_lower": 1.3981432262957612,
+          "minimum_ratio": 0.98,
+          "passes_scoped_nonregression": true
+        }
+      ],
+      "scoped_family_pass": true,
+      "protocol_sha256": "c611be2941b5221ded5168c7f2f770868cddbe51c9e6b037c8daa5da1c0bcddb",
+      "inputs_verified": true,
+      "qualification": "Fixed5173 same-dependency public full-payload/history control; same external source on each tree; full M6/CP0 gates remain separate"
+    }
+  },
+  "analysis_sha256": "08089e4865f3345067c7c1a869e37996745cb3ebf889787dd563750e960666b1",
+  "preflight": {
+    "processes": 62,
+    "safety": [
+      {
+        "arch": "arm64",
+        "image": "production",
+        "totals": [
+          "Totals: 458 passed, 0 failed, 0 skipped, 0 blacklisted, 302ms"
+        ],
+        "exit_code": 0
+      },
+      {
+        "arch": "arm64",
+        "image": "selection",
+        "totals": [
+          "Totals: 458 passed, 0 failed, 0 skipped, 0 blacklisted, 195ms"
+        ],
+        "exit_code": 0
+      },
+      {
+        "arch": "x86_64",
+        "image": "production",
+        "totals": [
+          "Totals: 458 passed, 0 failed, 0 skipped, 0 blacklisted, 263ms"
+        ],
+        "exit_code": 0
+      },
+      {
+        "arch": "x86_64",
+        "image": "selection",
+        "totals": [
+          "Totals: 458 passed, 0 failed, 0 skipped, 0 blacklisted, 307ms"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "capacity": [
+      {
+        "arch": "arm64",
+        "case": "single",
+        "variant": "off",
+        "samples": [
+          {
+            "case": "single",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 1623750,
+            "validation_close_ns": 251542,
+            "drain_ns": 23500,
+            "complete_ns": 2088250,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                254400,
+                0,
+                375584
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 189458,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 262144,
+                "after": 524288,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    276736,
+                    0,
+                    276736
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    372000,
+                    0,
+                    375584
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "single",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 279625,
+            "validation_close_ns": 253791,
+            "drain_ns": 17459,
+            "complete_ns": 743000,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                254400,
+                0,
+                374384
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 192125,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 262144,
+                "after": 524288,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    276736,
+                    0,
+                    276736
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    334400,
+                    0,
+                    374384
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "arm64",
+        "case": "hit",
+        "variant": "off",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 1952167,
+            "validation_close_ns": 193791,
+            "drain_ns": 20750,
+            "complete_ns": 2178458,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                251616,
+                0,
+                299456
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 11750,
+                "completed": 0,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    298144,
+                    0,
+                    299456
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 366875,
+            "validation_close_ns": 186458,
+            "drain_ns": 15625,
+            "complete_ns": 572708,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                251616,
+                0,
+                299456
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 3750,
+                "completed": 0,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    298144,
+                    0,
+                    299456
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "arm64",
+        "case": "hit",
+        "variant": "on",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 1835833,
+            "validation_close_ns": 264084,
+            "drain_ns": 16625,
+            "complete_ns": 2286250,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264336,
+                0,
+                386576
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 169708,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    384096,
+                    0,
+                    386576
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 373291,
+            "validation_close_ns": 278583,
+            "drain_ns": 17792,
+            "complete_ns": 817583,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264336,
+                0,
+                386000
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 147917,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    383856,
+                    0,
+                    386000
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "x86_64",
+        "case": "single",
+        "variant": "off",
+        "samples": [
+          {
+            "case": "single",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 2397542,
+            "validation_close_ns": 745166,
+            "drain_ns": 38834,
+            "complete_ns": 4030334,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                254400,
+                0,
+                358976
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 848792,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 262144,
+                "after": 524288,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    276736,
+                    0,
+                    276736
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    334400,
+                    0,
+                    358976
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "single",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 397416,
+            "validation_close_ns": 266917,
+            "drain_ns": 19917,
+            "complete_ns": 953125,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                254400,
+                0,
+                358976
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 268875,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 262144,
+                "after": 524288,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    276736,
+                    0,
+                    276736
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    334400,
+                    0,
+                    358976
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "x86_64",
+        "case": "hit",
+        "variant": "off",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 2644042,
+            "validation_close_ns": 672625,
+            "drain_ns": 43167,
+            "complete_ns": 3475792,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                251616,
+                0,
+                299456
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 115958,
+                "completed": 0,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    298144,
+                    0,
+                    299456
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 637125,
+            "validation_close_ns": 221833,
+            "drain_ns": 20000,
+            "complete_ns": 886708,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16384
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                251616,
+                0,
+                299456
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 7750,
+                "completed": 0,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    298144,
+                    0,
+                    299456
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "x86_64",
+        "case": "hit",
+        "variant": "on",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 2865000,
+            "validation_close_ns": 736583,
+            "drain_ns": 40083,
+            "complete_ns": 4597208,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264336,
+                0,
+                373488
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 955542,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    344336,
+                    0,
+                    373488
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 1,
+            "rounds": 1,
+            "switch_loaded": 1,
+            "setup_ns": 565834,
+            "validation_close_ns": 302166,
+            "drain_ns": 23209,
+            "complete_ns": 1082584,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264336,
+                0,
+                384176
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 191375,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    381600,
+                    0,
+                    384176
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "generations": [
+      {
+        "arch": "arm64",
+        "case": "hit",
+        "variant": "on",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 1706542,
+            "validation_close_ns": 387000,
+            "drain_ns": 21084,
+            "complete_ns": 3360584,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264736,
+                0,
+                487552
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 204917,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    382320,
+                    0,
+                    385520
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 237000,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    348144,
+                    0,
+                    385520
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    414944,
+                    0,
+                    428256
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 160500,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    377792,
+                    0,
+                    428256
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    442816,
+                    0,
+                    457904
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 143875,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    407440,
+                    0,
+                    457904
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    474240,
+                    0,
+                    487552
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 424417,
+            "validation_close_ns": 364959,
+            "drain_ns": 18625,
+            "complete_ns": 1934042,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264736,
+                0,
+                487552
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 163458,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    344336,
+                    0,
+                    375056
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 171833,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    348144,
+                    0,
+                    375056
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    373984,
+                    0,
+                    428256
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 152250,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    377792,
+                    0,
+                    428256
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    435632,
+                    0,
+                    457904
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 143791,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    407440,
+                    0,
+                    457904
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    470544,
+                    0,
+                    487552
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "arm64",
+        "case": "hit",
+        "variant": "off",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 1840000,
+            "validation_close_ns": 416542,
+            "drain_ns": 18458,
+            "complete_ns": 3412500,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1310720
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                254528,
+                0,
+                497328
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 199542,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    392576,
+                    0,
+                    396112
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 163500,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    357920,
+                    0,
+                    396112
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    415760,
+                    0,
+                    438032
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 149750,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    387568,
+                    0,
+                    438032
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    450912,
+                    0,
+                    467680
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 149166,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1310720,
+                "after": 1572864,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    417216,
+                    0,
+                    467680
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    475056,
+                    0,
+                    497328
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 390417,
+            "validation_close_ns": 383583,
+            "drain_ns": 14500,
+            "complete_ns": 1817750,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1310720
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                255792,
+                0,
+                497328
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 139583,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    354112,
+                    0,
+                    380224
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 137625,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    357920,
+                    0,
+                    380224
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    384528,
+                    0,
+                    438032
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 131584,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    387568,
+                    0,
+                    438032
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    451008,
+                    0,
+                    467680
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 151292,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1310720,
+                "after": 1572864,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    417216,
+                    0,
+                    467680
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    443056,
+                    0,
+                    497328
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "x86_64",
+        "case": "hit",
+        "variant": "on",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 2883667,
+            "validation_close_ns": 519917,
+            "drain_ns": 41375,
+            "complete_ns": 6053750,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264736,
+                0,
+                487552
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 946375,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    344336,
+                    0,
+                    373488
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 271167,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    348144,
+                    0,
+                    373488
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    373984,
+                    0,
+                    428256
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 265208,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    377792,
+                    0,
+                    428256
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    441952,
+                    0,
+                    457904
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 266291,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    407440,
+                    0,
+                    457904
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    470400,
+                    0,
+                    487552
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 0,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 588458,
+            "validation_close_ns": 443333,
+            "drain_ns": 21875,
+            "complete_ns": 2396041,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                264736,
+                0,
+                487552
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 218167,
+                "completed": 1,
+                "handoffs": 16,
+                "before": 524288,
+                "after": 524288,
+                "copy_bytes": 0,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    344336,
+                    0,
+                    382064
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 246333,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    348144,
+                    0,
+                    382064
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    413984,
+                    0,
+                    428256
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 210542,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    377792,
+                    0,
+                    428256
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    443296,
+                    0,
+                    457904
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 206708,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    407440,
+                    0,
+                    457904
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    262144,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    474000,
+                    0,
+                    487552
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "arch": "x86_64",
+        "case": "hit",
+        "variant": "off",
+        "samples": [
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 2948125,
+            "validation_close_ns": 679583,
+            "drain_ns": 46958,
+            "complete_ns": 6513208,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1310720
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                255792,
+                0,
+                497328
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 914833,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    354112,
+                    0,
+                    378688
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 303542,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    357920,
+                    0,
+                    378688
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    421024,
+                    0,
+                    438032
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 273458,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    387568,
+                    0,
+                    438032
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    454368,
+                    0,
+                    467680
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 378584,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1310720,
+                "after": 1572864,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    417216,
+                    0,
+                    467680
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    484016,
+                    0,
+                    497328
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "case": "hit",
+            "K": 16,
+            "disabled": 1,
+            "tight": 0,
+            "rounds": 4,
+            "switch_loaded": 1,
+            "setup_ns": 682250,
+            "validation_close_ns": 544416,
+            "drain_ns": 43459,
+            "complete_ns": 3028375,
+            "provider_after_close": 0,
+            "closed_budget": [
+              [
+                0,
+                0,
+                524288
+              ],
+              [
+                0,
+                0,
+                1048576
+              ],
+              [
+                0,
+                0,
+                262144
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1310720
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                255792,
+                0,
+                497328
+              ]
+            ],
+            "operations": [
+              {
+                "wall_ns": 324625,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 524288,
+                "after": 786432,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    296448,
+                    0,
+                    296448
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    395072,
+                    0,
+                    396352
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 326125,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 786432,
+                "after": 1048576,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    262144,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    357920,
+                    0,
+                    396528
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    383760,
+                    0,
+                    438032
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 264500,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1048576,
+                "after": 1310720,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    387568,
+                    0,
+                    438032
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    454368,
+                    0,
+                    467680
+                  ]
+                ]
+              },
+              {
+                "wall_ns": 317792,
+                "completed": 1,
+                "handoffs": 0,
+                "before": 1310720,
+                "after": 1572864,
+                "copy_bytes": 262144,
+                "budget_before": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    786432,
+                    0,
+                    786432
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    417216,
+                    0,
+                    467680
+                  ]
+                ],
+                "budget_after": [
+                  [
+                    524288,
+                    0,
+                    524288
+                  ],
+                  [
+                    1048576,
+                    0,
+                    1048576
+                  ],
+                  [
+                    0,
+                    0,
+                    262144
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    16384
+                  ],
+                  [
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    483056,
+                    0,
+                    497328
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "qualification": {
+    "same_image_hit": true,
+    "same_image_miss": false,
+    "selection_image_equivalence": false,
+    "M6_complete": false,
+    "remaining": [
+      "Metadata >=25% comparable pre-reconstruction used/reserved/slack denominator is not supplied by these performance samples.",
+      "CP0 complete required inventory/build qualification and real natural producer/trace coverage remain separately audited.",
+      "No GPU performance, M7/M8 or business default qualification."
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "base": "4dc89bada34d746364a5eb3ed04c40f962d1c274",
+  "commit": "7c36dceb858b06b0dbb3ed66adc7ef21a1c34a58",
+  "source_diff_sha256": "e29aa542503f8e81f7d7f1de69f1d61900a907a94f7055013b49c868e588d5c3",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ]
+    }
+  },
+  "identities": {
+    "arm64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "c193b259c3eb7679958b65dd7bb2d54b515eda16215d4d854dadbfe3c8bc4ea7",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "8be417564ac81da60e21594c1fbf847263cad88a9f106e2bda82c0f2fabf616a",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "390ea24f376c81177aaeb2a94718c337be9260b814197d6ed9877e0462baecfa",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "803df7b85ee74ed33ff9183f9f97c2909f980ddcc940b7b52d08e7d75de0ceda",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72"
+      }
+    },
+    "x86_64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "8be417564ac81da60e21594c1fbf847263cad88a9f106e2bda82c0f2fabf616a",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "390ea24f376c81177aaeb2a94718c337be9260b814197d6ed9877e0462baecfa",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "803df7b85ee74ed33ff9183f9f97c2909f980ddcc940b7b52d08e7d75de0ceda",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "c193b259c3eb7679958b65dd7bb2d54b515eda16215d4d854dadbfe3c8bc4ea7"
+      }
+    }
+  },
+  "passed_total": 7270,
+  "old_symbols_absent": "legacyFinalUnlock|privateCancelled",
+  "numstat": [
+    "11\t10\tlibs/image/pagestore/KisPageStore.cpp",
+    "2\t2\tlibs/image/pagestore/KisPageStore.h",
+    "36\t46\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+    "3\t0\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.h"
+  ],
+  "source_hashes": {
+    "libs/image/pagestore/KisPageStore.cpp": "2db3ce32e5ae83451066d5b5f6d97d4d977c432123c0b5db3d0518f30830124c",
+    "libs/image/pagestore/KisPageStore.h": "caaeba47bb4b1030698a092343882e7f8997745333721ddfe902a5de82af2fdd",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "b39e0e73ffe737be6fc5c8577ef36af57254ed4e6360da15e293453258310245",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "4cce85e6871729b6a7b866ff52bd60c8c980520fa09a6d1ae4de97c715462070"
+  },
+  "audit_arguments": {
+    "package": "operation",
+    "base": "4dc89bada34d746364a5eb3ed04c40f962d1c274",
+    "commit": "7c36dceb858b06b0dbb3ed66adc7ef21a1c34a58",
+    "batch": "operation-full-r0",
+    "absent": "legacyFinalUnlock|privateCancelled"
+  },
+  "limits": "Safety and source audit only; no time benefit claim."
+}

@@ -1,0 +1,344 @@
+[
+  {
+    "side": "parent",
+    "index": 0,
+    "capability": true,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/capacity-v2-parent:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fixture-current/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "library_sha256": "b3c07c77d88901a3cd76d1423a50014ce84f7d77b97d44ba8ee65f54fe0b397d",
+    "capacity": [
+      {
+        "stage": 2,
+        "metadata_live": 4435364,
+        "metadata_peak": 4510516,
+        "metadata_reserved": 0,
+        "process_bytes": 1160612
+      },
+      {
+        "stage": 5,
+        "process_bytes": 1149780
+      }
+    ],
+    "physical_charge_values": [
+      160
+    ],
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 589416,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 8232750,
+      "projection_updates": 19,
+      "redo_drain_ns": 1546750,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 579101458,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 8723084,
+      "total_fixture_ns": 626026917,
+      "undo_drain_ns": 569625,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  },
+  {
+    "side": "candidate",
+    "index": 1,
+    "capability": true,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/capacity-v2-candidate:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fixture-current/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "library_sha256": "37b4e7efcea39ba677d495461d6a23f40d77176fefa51711af318150facf2cac",
+    "capacity": [
+      {
+        "stage": 2,
+        "metadata_live": 4442724,
+        "metadata_peak": 4509732,
+        "metadata_reserved": 0,
+        "process_bytes": 1160612
+      },
+      {
+        "stage": 5,
+        "process_bytes": 1150276
+      }
+    ],
+    "physical_charge_values": [
+      144
+    ],
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 578000,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 7810792,
+      "projection_updates": 19,
+      "redo_drain_ns": 967000,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 375017166,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 7893125,
+      "total_fixture_ns": 420494708,
+      "undo_drain_ns": 565167,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  },
+  {
+    "side": "parent",
+    "index": 2,
+    "capability": false,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/capacity-v2-parent:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fixture-current/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "library_sha256": "b3c07c77d88901a3cd76d1423a50014ce84f7d77b97d44ba8ee65f54fe0b397d",
+    "capacity": [
+      {
+        "stage": 2,
+        "metadata_live": 4515108,
+        "metadata_peak": 4583412,
+        "metadata_reserved": 0,
+        "process_bytes": 1160612
+      },
+      {
+        "stage": 5,
+        "process_bytes": 1149988
+      }
+    ],
+    "physical_charge_values": [
+      160
+    ],
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 594750,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 8932208,
+      "projection_updates": 19,
+      "redo_drain_ns": 1434083,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 375064292,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 9014250,
+      "total_fixture_ns": 421156458,
+      "undo_drain_ns": 461792,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  },
+  {
+    "side": "candidate",
+    "index": 3,
+    "capability": false,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/capacity-v2-candidate:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fixture-current/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "library_sha256": "37b4e7efcea39ba677d495461d6a23f40d77176fefa51711af318150facf2cac",
+    "capacity": [
+      {
+        "stage": 2,
+        "metadata_live": 4440676,
+        "metadata_peak": 4507684,
+        "metadata_reserved": 0,
+        "process_bytes": 1160612
+      },
+      {
+        "stage": 5,
+        "process_bytes": 1149860
+      }
+    ],
+    "physical_charge_values": [
+      144
+    ],
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 547333,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 7444500,
+      "projection_updates": 19,
+      "redo_drain_ns": 919333,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 371424875,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 7519458,
+      "total_fixture_ns": 416152167,
+      "undo_drain_ns": 496958,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  },
+  {
+    "side": "candidate",
+    "index": 4,
+    "capability": false,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/capacity-v2-candidate:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fixture-current/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "library_sha256": "37b4e7efcea39ba677d495461d6a23f40d77176fefa51711af318150facf2cac",
+    "capacity": [
+      {
+        "stage": 2,
+        "metadata_live": 4440164,
+        "metadata_peak": 4553764,
+        "metadata_reserved": 0,
+        "process_bytes": 1160612
+      },
+      {
+        "stage": 5,
+        "process_bytes": 1150276
+      }
+    ],
+    "physical_charge_values": [
+      144
+    ],
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 543209,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 7427000,
+      "projection_updates": 19,
+      "redo_drain_ns": 998250,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 386464542,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 7501750,
+      "total_fixture_ns": 430499042,
+      "undo_drain_ns": 569625,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  },
+  {
+    "side": "parent",
+    "index": 5,
+    "capability": false,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_projection_lifecycle_20261008/capacity-v2-parent:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/fixture-current/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "passed": true,
+    "library_sha256": "b3c07c77d88901a3cd76d1423a50014ce84f7d77b97d44ba8ee65f54fe0b397d",
+    "capacity": [
+      {
+        "stage": 2,
+        "metadata_live": 4448404,
+        "metadata_peak": 4519444,
+        "metadata_reserved": 0,
+        "process_bytes": 1160612
+      },
+      {
+        "stage": 5,
+        "process_bytes": 1150084
+      }
+    ],
+    "physical_charge_values": [
+      160
+    ],
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 628750,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 8467625,
+      "projection_updates": 19,
+      "redo_drain_ns": 1422625,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 369449500,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 8581584,
+      "total_fixture_ns": 415805750,
+      "undo_drain_ns": 564625,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    }
+  }
+]

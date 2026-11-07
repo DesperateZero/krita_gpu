@@ -90,6 +90,13 @@ epoch 不可变。下列变化创建新 epoch：
 - writable target/mutation root 改变；
 - 无法局部表达的外部编辑。
 
+`KisEvaluationGraphSnapshot` 必须绑定一个 `KisRetainedImageEpochSnapshot`，而不是只记录“当前 image”或裸 epoch
+数字。该 retained snapshot 同时冻结 exact page manifest 与 graph/default-pixel/extent/property revisions；其中
+`surfaceSnapshot.graphRevision` 必须等于 EvalGraphIR 的 `graphRevision`。planner/executor 生命周期结束前不得释放
+retention token，启动规划前还必须由 PageStore `validateRetainedEpoch()` 核对 token 与 snapshot 全量内容；结构
+`isValid()` 不能替代 owner 验证。PageStore 历史 read 也必须使用同一 token 验证 token→root→version。非 Surface value 继续由
+Value/Resource Store 的独立 version/retention 管理，不塞入 ImageEpoch manifest。
+
 纯生成、查看或导出图允许空 `MutationRootSet`。绘画 stroke 自己仍必须声明非空 `writableTargets`，lowering 时将
 对应 value 映射为 mutation roots。旧 epoch 的工作可以完成物理执行，但只有 epoch、依赖和 output reservation
 全部匹配时才能 publish。

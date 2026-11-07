@@ -1,0 +1,47 @@
+{
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "c399d717f1843d5a5ab517fab6f74d1b6d711e8e97ae4137b573ac92968f6e93",
+  "image_sha256": "f6b66bade6695db27be088ceff04b9169188fe220c9202f9441c607f9c390232",
+  "tests": {
+    "targets_per_arch": 17,
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "passed": 5964,
+    "failed": 0,
+    "skipped": 0,
+    "new_cases_per_arch": 15
+  },
+  "architecture": {
+    "apis": 1654,
+    "call_edges": 16371,
+    "callbacks": 15,
+    "manifest": 21,
+    "ownership": 24,
+    "census": 16,
+    "intrusion": 19,
+    "self_tests": 6
+  },
+  "probes": {
+    "final_runs": 16,
+    "deferred_transfer_intervals_per_arch": 42,
+    "deferred_transfer_allocations_bytes_frees": 0,
+    "clear_intervals_per_arch": 42,
+    "clear_allocations_bytes": 0,
+    "clear_freed_blocks_per_arch": 10,
+    "outer_owner_available": true,
+    "active_cleanup_at_block_free": 1,
+    "budget_charged_at_block_free": true,
+    "existing_intervals_per_arch": {
+      "budget": 96,
+      "root": 72,
+      "legacy": 28,
+      "warm": 96,
+      "joint": 31080,
+      "cleanup": 42
+    },
+    "image_identity_matches": true
+  },
+  "qualification": "CPU correctness and outer-gate empty block cleanup only; full S09/S10, M6/M7/M8 and BR1-PERF remain open"
+}

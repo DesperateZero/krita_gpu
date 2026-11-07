@@ -1,0 +1,268 @@
+{
+  "product_head": "11c6895ddfeae074df727c76dcbf9e12988479ee",
+  "files": {
+    "krita/libs/image/pagestore/KisPageStore.cpp": {
+      "sha256": "8d0d36806dae915c7442f259483c2dbed3dd5b7db14d09c3b59d42eb90638ced",
+      "matches": {
+        "prepareTarget(": [
+          1320,
+          1327,
+          1780,
+          1889,
+          2414
+        ],
+        "sealImpl(": [
+          2520,
+          2532,
+          2537,
+          2576,
+          2582,
+          2592,
+          2595
+        ],
+        "cancelAndAbort(": [
+          766,
+          802,
+          847
+        ],
+        "releaseOrRetain(": [
+          764
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp": {
+      "sha256": "02f75d03d47e948dbe2cfc06ca58f449d4894fe3536bb22a06563c3f26c88cd3",
+      "matches": {
+        "reserveBacking(": [
+          2880
+        ],
+        "prepareFreshReplica(": [
+          2981
+        ],
+        "prepareWritePlanLocked(": [
+          2761
+        ],
+        "kisAllocateMutationStorage(": [
+          1989,
+          2008,
+          2079,
+          2401
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPagePublicationCoordinator.cpp": {
+      "sha256": "12503ff721d9a95b62d6499c53243a2076e99e03056886e98cfeef1640fba184",
+      "matches": {
+        "tryAcceptLocked(": [
+          383,
+          867
+        ],
+        "finishUnlocked(": [
+          458,
+          854,
+          869
+        ],
+        "prepareDescriptorLocked(": [
+          70,
+          97,
+          1790,
+          1793,
+          1797
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisTiles3PageReplicaProvider.cpp": {
+      "sha256": "57387a800bbf4c6c8d335dc692019a0c11d5c29d833bc581cb4021aa22751a4b",
+      "matches": {
+        "prepareAdoption(": [
+          683,
+          808,
+          1173,
+          1214
+        ],
+        "retainPhysical(": [
+          708,
+          756
+        ],
+        "releasePhysical(": [
+          736,
+          759,
+          1305
+        ],
+        "::retire(": [
+          1276
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageOwnerLedger.cpp": {
+      "sha256": "a13f51963a59686283dfef03476772bbdc027d0020609f91a2eaf55f9ccb0b86",
+      "matches": {
+        "registerBacking(": [
+          968
+        ],
+        "prepareBackingHandoff(": [
+          1569
+        ],
+        "commitBackingHandoff(": [
+          1641
+        ],
+        "releaseRetiredBacking(": [
+          1769
+        ],
+        "prepareRetirementDebt(": [
+          1685
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp": {
+      "sha256": "4ebb7e971828fc88a07b7a8bf40e82e198d325face6a507bb41947b9222a7a05",
+      "matches": {
+        "applyWriteSequence(": [
+          3637,
+          3651,
+          3662,
+          3665
+        ],
+        "discardHistory(": [
+          3433
+        ],
+        "applyCapturedProtection(": [
+          3635,
+          3649,
+          3892
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageHistoryCollector.cpp": {
+      "sha256": "1cac004d52628a6f910f26323fb5fd43c584a4b36770a5c037887b8637b841e5",
+      "matches": {
+        "collectSliceLocked(": [
+          105,
+          206
+        ],
+        "collectPassLocked(": [
+          184,
+          228,
+          255
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageRetirementQueue.cpp": {
+      "sha256": "91083e783e8c2daebe93ff28d87c6fdc588bddabed60c0024f6539cf45f447a4",
+      "matches": {
+        "retireRecord(": [
+          330,
+          518,
+          531,
+          569
+        ],
+        "process(": [
+          534,
+          584
+        ],
+        "beginClose(": [
+          652
+        ],
+        "waitForIdle(": [
+          678
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageRetirementRecord_p.h": {
+      "sha256": "81254cf3166ef422666fea40d0121061399b344d1df90cd0d9e72ede97fa5144",
+      "matches": {
+        "struct KisPageRetirementRecord": [
+          85,
+          136
+        ],
+        "prepareBackingStorage": [
+          94,
+          96
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisCpuResidentBinding_p.h": {
+      "sha256": "48563dee8667ac904432281297c1bd5644477f714506f903df81d5889c39ea48",
+      "matches": {
+        "retire(": [
+          46
+        ],
+        "tryClaim": [
+          67,
+          79,
+          318,
+          322,
+          340
+        ],
+        "retag": [
+          93,
+          319
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisCpuResidentBinding.cpp": {
+      "sha256": "e0d28a6db16f23dc904fe9582a2beb8fb6488e892f6ad2c88c4df5913a156a8c",
+      "matches": {
+        "KisCpuBackingHandoff::prepare(": [
+          92
+        ],
+        "KisCpuBackingHandoff::tryClaim(": [
+          105
+        ],
+        "KisCpuBackingHandoff::commit(": [
+          111
+        ],
+        "KisCpuBackingHandoff::reset(": [
+          120
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": {
+      "sha256": "06750e45ac2f272687329afd4f80eeda365903d51fbe0f4b6bc749b433c9faea",
+      "matches": {
+        "runCpuMutationOperation(": [
+          2008,
+          2163,
+          2253
+        ],
+        "readBytes(": [
+          1329
+        ],
+        "cancel": [
+          161,
+          299,
+          306,
+          317,
+          391,
+          404,
+          411,
+          420,
+          434,
+          436,
+          495,
+          517,
+          539,
+          561,
+          571,
+          575,
+          588,
+          638,
+          649,
+          712,
+          1124,
+          1130,
+          1153,
+          1162,
+          1164,
+          1790,
+          1791,
+          1806,
+          1809,
+          2521,
+          2558,
+          2560
+        ]
+      }
+    }
+  }
+}

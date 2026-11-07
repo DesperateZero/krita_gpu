@@ -1,0 +1,89 @@
+{
+  "product_commit": "1177fa5ecab8318fe044b071342eb0ab51654e27",
+  "commands": [
+    [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-std=c++17",
+      "-arch",
+      "arm64",
+      "-arch",
+      "x86_64",
+      "-mmacosx-version-min=15.7",
+      "-dynamiclib",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-interposer.cpp",
+      "-o",
+      "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-interposer.dylib"
+    ],
+    [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-std=c++17",
+      "-arch",
+      "arm64",
+      "-arch",
+      "x86_64",
+      "-mmacosx-version-min=15.7",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-probe.cpp",
+      "-L/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+      "-lkritaimage",
+      "-Wl,-rpath,/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+      "-o",
+      "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-probe"
+    ]
+  ],
+  "results": [
+    {
+      "step": 0,
+      "exit_code": 0,
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-std=c++17",
+        "-arch",
+        "arm64",
+        "-arch",
+        "x86_64",
+        "-mmacosx-version-min=15.7",
+        "-dynamiclib",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-interposer.cpp",
+        "-o",
+        "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-interposer.dylib"
+      ]
+    },
+    {
+      "step": 1,
+      "exit_code": 0,
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-std=c++17",
+        "-arch",
+        "arm64",
+        "-arch",
+        "x86_64",
+        "-mmacosx-version-min=15.7",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-probe.cpp",
+        "-L/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+        "-lkritaimage",
+        "-Wl,-rpath,/Users/apple/krita_gpu/build/br1-cp1-tile-lifetime-20261004/candidate-03/normal/bin",
+        "-o",
+        "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-probe"
+      ]
+    }
+  ],
+  "inputs": {
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-interposer.cpp": "1ce6df1e762597f90e6177f314678f3a8573a8dd3d8d9947f9f6229b2e2db34a",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/dual-release-probe.cpp": "16f6a7c67cc58bec4c0da85af5e5f6551e94c067b863cef36aa403b537ed9b68",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_default_exit_20261004/build_and_run.py": "ef8ca1f62903d7d905b572fd120125ed13e7c12718060ee0dcd7f5e51e06fae0"
+  },
+  "outputs": {
+    "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-interposer.dylib": "5d6928f883f24e99c9a7c42d7c5829f6a6fca16b2a0aff3ef0eeac84ca05bb39",
+    "/Users/apple/krita_gpu/build/br1-cp1-default-exit-20261004/dual-release-probe": "0932777544a61376f173d8cea714b80aec2cdb8eefca0b034b7abba6cb34b739"
+  },
+  "verified": true
+}

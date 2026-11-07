@@ -1,0 +1,74 @@
+{
+  "scope": "CP1 TileData allocation, nullable candidate, pool/cache, iterator/preclone, swap transition and physical release lifecycle",
+  "product_parent": "87a8b43ae98bcf13fb437ee7fe2b941701035fe3",
+  "product_commit": "1177fa5ecab8318fe044b071342eb0ab51654e27",
+  "production_diff": {
+    "files": 5,
+    "insertions": 198,
+    "deletions": 202,
+    "net_lines": -4,
+    "public_or_protected_api_added": 0,
+    "persistent_state_or_queue_added": 0,
+    "product_test_hooks_added": 0
+  },
+  "derived_diff": {
+    "files": 2,
+    "insertions": 31,
+    "deletions": 23
+  },
+  "baseline_faults": {
+    "matrix_processes": 32,
+    "controls_passed": 16,
+    "faults_failed": 14,
+    "faults_already_safe": 2,
+    "extra_owner_failure_processes": 4
+  },
+  "candidate_faults": {
+    "processes": 36,
+    "actual_exit_zero": 36,
+    "reaped": 36
+  },
+  "validation": {
+    "cpu_normal": "2772/0/0",
+    "cpu_tsan": "1386/0/0",
+    "target_normal": "40/0/0",
+    "target_tsan": "20/0/0",
+    "freehand_pressure_cancel": "14/0/0",
+    "final_manager": {
+      "totals": "1105/0/0",
+      "seconds": 4127.357,
+      "actual_exit_code": 0,
+      "reaped": true,
+      "tsan_warnings": 0,
+      "selected_product_image_loaded": true,
+      "instrumented_qtcore_loaded": true,
+      "instrumented_kconfigcore_loaded": true,
+      "tasks": 48,
+      "threads": 16,
+      "cycles": 100000,
+      "seed": 12345
+    },
+    "old_manager_8f": "1105/0/0, 4371.97s, actual0/reaped",
+    "old_manager_2e": "1105/0/0, 4348.24s, actual0/reaped",
+    "architecture": "87 TUs / 2172 APIs / 27412 edges / 27 callbacks",
+    "structural_gates": "21 manifest / 25 ownership / 16 census / 19-file ratchet"
+  },
+  "reclassified_counterexample": {
+    "test": "KisLowMemoryTests::readWriteOnSharedTiles",
+    "parent_actual_exit_code": 101,
+    "candidate_actual_exit_code": 101,
+    "current_layout_arm64": "3/0/0, actual0/reaped",
+    "current_layout_x86_64": "3/0/0, actual0/reaped",
+    "classification": "stale 232-byte test object versus current 288-byte manager ABI; not a product fault",
+    "evidence": "../br1_cp1_low_memory_20261004/README.md"
+  },
+  "host_unexpected_exits": 28,
+  "cp1_complete": false,
+  "remaining": [
+    "all-owned and external-native independent reserved/live/concurrent-peak/physical-free hard bound and first external span coalescence",
+    "other real node/control/task faults, other threads, read/capture/history/publication/retirement/close and late fence/caller endpoints",
+    "non-Darwin actual capacity/free implementation and platform run",
+    "28 host unexpected exits, default abort and dual-native-free failure endpoints"
+  ],
+  "stage_status": "M6/M7/M8 formal 0/3; persistent default off"
+}

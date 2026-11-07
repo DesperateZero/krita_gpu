@@ -1,0 +1,198 @@
+{
+  "scope": "Final Darwin capacity candidate: seven unchanged QTest suite workloads plus the added CPU 3-byte-per-pixel inner case; same hard limits; no default abort guard. Does not qualify all-owned/native/Qt/OS/TLS/total hard bound or non-Darwin.",
+  "rows": [
+    {
+      "round": "final-01-KisCompletionRegistryTest-arm64",
+      "counts": [
+        87,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "76e6a1fdca85bdedb59cb34db2037af88ed4bf58dd9dee622169a42dccf1d446",
+      "identity_sha256": "8e7415756576ce9ddab524f2d05483aad4b1f7e73b667d3589cde1da8919b7a0",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisCompletionRegistryTest-x86_64",
+      "counts": [
+        87,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "921ef30a84e9a63ebb0b39f8fa630878cfa4e842635bf6c66cee8e924ecae3db",
+      "identity_sha256": "de99b4848402f6bfc71f66dd59588c1775358d89bc426b4af818fac324d9155c",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreCpuMutationTest-arm64",
+      "counts": [
+        1386,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "ca51f4b4ae86680c5e2d174b24866606d0d39a8ce9a764b0d9639c241501d6a8",
+      "identity_sha256": "e2b02134861c6c92b1e8e935db904a96c6ab5ad3b299395960934515ac279528",
+      "heap": [
+        "HEAP label=after-static-destructors live=40788996 paid_live=0 peak=12963008400 paid_peak=12901646000 nodes=1899 paid_nodes=0 peak_nodes=29025 allocations=2470247 frees=2468348 overflow=0",
+        "USABLE label=after-static-destructors live=55660832 peak=12977990800 paid_live=0 paid_peak=12901646000 paid_excess_peak=0"
+      ]
+    },
+    {
+      "round": "final-01-KisPageStoreCpuMutationTest-x86_64",
+      "counts": [
+        1386,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "cf809ecc47da8d46b755ef7e0b86c18c938d0df9af2f77ba7a60d889666f31d6",
+      "identity_sha256": "da74292ac794e9faae873c2c07e31cebe2272d027ae356544f8e8fcd8b894aa5",
+      "heap": [
+        "HEAP label=after-static-destructors live=40809788 paid_live=0 peak=12963084632 paid_peak=12901662384 nodes=1920 paid_nodes=0 peak_nodes=29790 allocations=2457478 frees=2455558 overflow=0",
+        "USABLE label=after-static-destructors live=55691552 peak=12978079728 paid_live=0 paid_peak=12901662384 paid_excess_peak=0"
+      ]
+    },
+    {
+      "round": "final-01-KisPageStoreFoundationTest-arm64",
+      "counts": [
+        28,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "b2d1964196e065220cd8998c967f7443957977112ccc4a9fd6d75de7949d8570",
+      "identity_sha256": "3baa15a9de451339befb3b0537f25c7e493d0f899b1da889c31e726d89055a04",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreFoundationTest-x86_64",
+      "counts": [
+        28,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "eefc8e80833f6256fc2809f246b1287852074a23769e4c3405649ff371953657",
+      "identity_sha256": "587b2f0ec936c3e4a89c45c5327188e46152bb63b95d540b9b65b9efbfdb23d7",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStorePhysicalClaimTest-arm64",
+      "counts": [
+        397,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "75cdda91c79b2501f2ea21b164553b604c86a78b60bacb3d4a1ccc033641d4db",
+      "identity_sha256": "b1a467057fe932c4cb309e7092a58baf122e1bfe36f3be2877ed70472b6741e8",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStorePhysicalClaimTest-x86_64",
+      "counts": [
+        397,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "b3191eba7de76640efb74766dbcfe75bcb705d36d0d02b721e9e382de3427939",
+      "identity_sha256": "85d38d5e82c35b984d47db266fec4ad281f75c16dd18c6e35c3da47ae3682ea6",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreReadBaselineTest-arm64",
+      "counts": [
+        45,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "e4a8c89cec86afec5744141e355319f34ffd8bdcadda51bdfc80b54111504a9f",
+      "identity_sha256": "9d312b688409699d05907116b4d0cb283f1d99f727feadd31d239132cbadb04a",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreReadBaselineTest-x86_64",
+      "counts": [
+        45,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "64f28a0d5f29d69cae2055f0ecacc8a334dbc717c76891c4aac66736aa6b75bc",
+      "identity_sha256": "d2a9518d50d6f32b1bd097eb85287895af29e11aad0a8591643a54ac57739a33",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreReferenceTest-arm64",
+      "counts": [
+        790,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "e464a1276ddbfae69c0e37779d16aaa77ec7dc6d5af38241a61ef4648364e3cf",
+      "identity_sha256": "98bded36e20f297775d940fce55194abdcf8acd73647102fe8a1fa3ada362e7d",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreReferenceTest-x86_64",
+      "counts": [
+        790,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "14a25a49439f4f14dc084cd2f7e0da5bdc5032fd0a51c2d582573111996d07d7",
+      "identity_sha256": "54fc2a491ef11e3850937cf72d56c7092fb818713952e7bf4c77620d7135b4a5",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreResidentReadTest-arm64",
+      "counts": [
+        221,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "a13a501e82c67fceb296fe164308d001a24f9a1f591a3ea44d49e5ba631c0997",
+      "identity_sha256": "87310451201f6e5c0f49126fbcf0eff785bcc038df059df5f29865d238063fb0",
+      "heap": []
+    },
+    {
+      "round": "final-01-KisPageStoreResidentReadTest-x86_64",
+      "counts": [
+        221,
+        0,
+        0
+      ],
+      "exit_code": 0,
+      "reaped": true,
+      "results_sha256": "f8869bb37915a5b78e15b39de62aecaef8a4643604d1ac1ec37705c887c178c8",
+      "identity_sha256": "12b79f082c1567d6b1ff65d3903b61cbcc83d26d7678cba0b3f194374e90773c",
+      "heap": []
+    }
+  ],
+  "total_counts": [
+    5908,
+    0,
+    0
+  ]
+}

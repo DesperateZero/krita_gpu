@@ -1,0 +1,144 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 5.946,
+    "totals": [
+      "Totals: 656 passed, 1 failed, 0 skipped, 0 blacklisted, 540ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::preparedReadinessAtCapacity() Expected exception of type std::bad_alloc to be thrown but no exception caught"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 4,
+    "duration_seconds": 8.087,
+    "totals": [
+      "Totals: 1243 passed, 4 failed, 0 skipped, 0 blacklisted, 3345ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::budgetWaiterStateStorageIsChargedAndReleased() 'error.contains(QStringLiteral(\"exceeds capacity\"))' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::budgetReservationRecyclingPreservesHeldGrants() Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::preparedReclamationWakeCancellation() Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::readProtectionBlockCleanup(automatic-acknowledge) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "completion",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisCompletionRegistryTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 5.056,
+    "totals": [
+      "Totals: 83 passed, 0 failed, 0 skipped, 0 blacklisted, 321ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": -6,
+    "duration_seconds": 4.971,
+    "totals": [],
+    "failures": [],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 2.77,
+    "totals": [
+      "Totals: 656 passed, 1 failed, 0 skipped, 0 blacklisted, 787ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::preparedReadinessAtCapacity() Expected exception of type std::bad_alloc to be thrown but no exception caught"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 4,
+    "duration_seconds": 5.206,
+    "totals": [
+      "Totals: 1243 passed, 4 failed, 0 skipped, 0 blacklisted, 3974ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::budgetWaiterStateStorageIsChargedAndReleased() 'error.contains(QStringLiteral(\"exceeds capacity\"))' returned FALSE. ()",
+      "FAIL!  : KisPageStoreCpuMutationTest::budgetReservationRecyclingPreservesHeldGrants() Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::preparedReclamationWakeCancellation() Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::readProtectionBlockCleanup(automatic-acknowledge) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "completion",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisCompletionRegistryTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.757,
+    "totals": [
+      "Totals: 83 passed, 0 failed, 0 skipped, 0 blacklisted, 518ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": -6,
+    "duration_seconds": 1.356,
+    "totals": [],
+    "failures": [],
+    "passed": false
+  }
+]

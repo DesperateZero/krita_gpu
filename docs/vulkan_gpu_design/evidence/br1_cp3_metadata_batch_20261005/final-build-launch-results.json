@@ -1,0 +1,242 @@
+[
+  {
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/ninja",
+      "-C",
+      "krita/_build-br0-cpu",
+      "-j6",
+      "KisPageStoreFoundationTest",
+      "KisCompletionRegistryTest",
+      "KisPageStoreCpuMutationTest",
+      "KisPageStoreReferenceTest",
+      "KisPageStorePhysicalClaimTest",
+      "KisPageStoreResidentReadTest",
+      "kis_tiled_data_manager_test",
+      "kis_tile_data_store_test",
+      "kis_iterators_ng_test",
+      "kis_painter_test",
+      "kis_transaction_test",
+      "KisPainterStrokeCompletionTest",
+      "kis_update_scheduler_test",
+      "kis_strokes_queue_test",
+      "kis_stroke_test",
+      "kis_simple_stroke_strategy_test",
+      "FreehandStrokeTest",
+      "KisPageStoreReadBaselineTest",
+      "kis_tiles3_cpu_baseline_test"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 23.275396292,
+    "log": "final-build-command-0.log"
+  },
+  {
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/ninja",
+      "-C",
+      "krita/_build",
+      "-j6",
+      "KisVulkanFoundationContractsTest"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 8.476287332999998,
+    "log": "final-build-command-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--source",
+      "joint-install-allocation-probe.cpp",
+      "--name",
+      "final-install",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.7211048329999983,
+    "log": "final-build-command-2.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--source",
+      "publication-install.cpp",
+      "--name",
+      "final-publication",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.708307542,
+    "log": "final-build-command-3.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--source",
+      "storage-lifecycle.cpp",
+      "--name",
+      "final-storage",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.9062185830000047,
+    "log": "final-build-command-4.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--source",
+      "handoff-latency.cpp",
+      "--name",
+      "final-latency-final"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.3089464589999977,
+    "log": "final-build-command-5.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "arm64",
+      "--source",
+      "working-allocation.cpp",
+      "--name",
+      "final-working-final",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.4171042500000013,
+    "log": "final-build-command-6.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--source",
+      "joint-install-allocation-probe.cpp",
+      "--name",
+      "final-install",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.549719207999999,
+    "log": "final-build-command-7.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--source",
+      "publication-install.cpp",
+      "--name",
+      "final-publication",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.7328559580000018,
+    "log": "final-build-command-8.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--source",
+      "storage-lifecycle.cpp",
+      "--name",
+      "final-storage",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 0.9331331659999975,
+    "log": "final-build-command-9.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--source",
+      "handoff-latency.cpp",
+      "--name",
+      "final-latency-final"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.3595749169999962,
+    "log": "final-build-command-10.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_probe.py",
+      "--arch",
+      "x86_64",
+      "--source",
+      "working-allocation.cpp",
+      "--name",
+      "final-working-final",
+      "--interpose",
+      "--interposer-source",
+      "allocation-fault-interposer.cpp"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.4063214589999973,
+    "log": "final-build-command-11.log"
+  }
+]

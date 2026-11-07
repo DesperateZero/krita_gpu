@@ -1,0 +1,290 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.256,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 474ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 23.385,
+    "totals": [
+      "Totals: 1296 passed, 1 failed, 0 skipped, 0 blacklisted, 21286ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::capturedCutStorageRefusalAndLifetime() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 20,
+    "duration_seconds": 5.164,
+    "totals": [
+      "Totals: 657 passed, 20 failed, 0 skipped, 0 blacklisted, 2398ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted() 'metadata.registerPage( initialPageState(version, replica(version, 1, 1, quint64(i + 1))), &error)' returned FALSE. (metadata arena budget is exhausted)",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position0-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position0-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position1-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position1-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position2-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position2-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position0-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position0-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position1-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position1-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position2-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position2-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position0-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position0-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position1-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position1-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position2-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position2-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::recoverableWritePreparationHonorsBudget() 'metadata.registerPage(page)' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.458,
+    "totals": [
+      "Totals: 381 passed, 0 failed, 0 skipped, 0 blacklisted, 28ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.079,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 178ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.343,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 6ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 16.994,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 150ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "registry",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.986,
+    "totals": [
+      "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 840ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 23.529,
+    "totals": [
+      "Totals: 1296 passed, 1 failed, 0 skipped, 0 blacklisted, 22351ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::capturedCutStorageRefusalAndLifetime() Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 20,
+    "duration_seconds": 4.865,
+    "totals": [
+      "Totals: 657 passed, 20 failed, 0 skipped, 0 blacklisted, 3032ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted() 'metadata.registerPage( initialPageState(version, replica(version, 1, 1, quint64(i + 1))), &error)' returned FALSE. (metadata arena budget is exhausted)",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position0-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position0-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position1-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position1-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position2-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind0-position2-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position0-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position0-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position1-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position1-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position2-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind1-position2-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position0-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position0-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position1-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position1-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position2-history0) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::metadataReadProtectionAtCapacity(kind2-position2-history257) 'coordinator.registerPage(initial)' returned FALSE. ()",
+      "FAIL!  : KisPageStoreReferenceTest::recoverableWritePreparationHonorsBudget() 'metadata.registerPage(page)' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.199,
+    "totals": [
+      "Totals: 381 passed, 0 failed, 0 skipped, 0 blacklisted, 46ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.676,
+    "totals": [
+      "Totals: 221 passed, 0 failed, 0 skipped, 0 blacklisted, 291ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.344,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 12ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 21.301,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 255ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

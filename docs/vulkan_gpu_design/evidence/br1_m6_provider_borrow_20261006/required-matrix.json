@@ -1,0 +1,24 @@
+{
+  "authority": "92 section 6.1; measured subset and remaining requirements, not complete CP0 census",
+  "product": "38834c4e26",
+  "requirements": [
+    {"id": "cold_preparation_provider_borrow", "status": "B1_B3_mechanism_predictions_complete", "evidence": "summary.json mechanism"},
+    {"id": "original_product_parent_increment", "status": "ARM_K1_native_pin_confirmed_1_76pct_others_7_inconclusive", "confidence": "8 buckets two-sided 99.375pct; family nominal 95pct", "evidence": "summary.json families.parent_comparison", "limit": "K16 time benefit not confirmed; median latency saving does not override throughput interval"},
+    {"id": "hit", "status": "4_of_4_numeric_predicate_pass_0_of_4_with_required_per_bucket_calibration", "evidence": "summary.json families.hit"},
+    {"id": "miss", "status": "16_of_16_numeric_predicate_pass_2_of_16_with_required_per_bucket_calibration", "evidence": "summary.json families.miss"},
+    {"id": "calibration", "status": "2_of_20_equivalent_18_inconclusive_0_clear_non_equivalent", "equivalent_buckets": ["arm64_K1_single", "arm64_K1_last-use"], "evidence": "summary.json families.calibration", "limit": "Intervals crossing equivalence boundaries do not establish equivalence; no subtraction or optional extension"},
+    {"id": "protected_fresh", "status": "4_of_4_pass_current_original_product", "evidence": "fixed-m5-fresh-summary.json"},
+    {"id": "protected_history", "status": "4_of_4_pass_current_original_product", "evidence": "fixed-m5-history-summary.json"},
+    {"id": "current_safety_and_resources", "status": "38_QTest_processes_11180_pass_0_fail_0_skip_and_6_resource_probes", "evidence": "verification.json", "limit": "Not new TSAN/platform/full CP0 qualification"},
+    {"id": "foreign_before_contract", "status": "32_new_rows_per_architecture_pass_candidate_full_matrix_and_parent_228_0_0_target_control", "evidence": "raw-evidence.tar.xz parent-foreign-control", "limit": "Separate semantic control, not performance evidence"},
+    {"id": "current_structure", "status": "pass_87_TUs_2211_APIs_28983_edges_27_callbacks_and_6_tool_tests", "limit": "No ratchet relaxation"},
+    {"id": "capacity_exit_generation", "status": "scoped_preflight_and_all_sample_work_checks_pass", "evidence": "raw-evidence.tar.xz preflight and formal scopes", "limit": "Store metadata retained until destruction; class maxima not simultaneous peak; no natural brush or process-RAM claim"},
+    {"id": "metadata_common_record_25pct", "status": "open_comparable_pre_reconstruction_residency_denominator_missing"},
+    {"id": "CP0_full_required_and_applicable_builds", "status": "open"},
+    {"id": "natural_producer_and_business_distribution", "status": "prior_census_no_natural_positive_trace_established"},
+    {"id": "GPU_M7_M8_business_default", "status": "not_qualified"}
+  ],
+  "finite_B1_B3_V1_V2_package_complete": true,
+  "M6_complete": false,
+  "persistent_default_enabled": false
+}

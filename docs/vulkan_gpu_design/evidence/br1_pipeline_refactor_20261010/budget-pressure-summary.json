@@ -1,0 +1,1482 @@
+{
+  "processes": 12,
+  "qt_passed": 682,
+  "qt_failed": 2,
+  "rows": [
+    {
+      "group": "capacity",
+      "mode": "plain",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "storeRootStorageRetained",
+        "metadataArenaBudgetTracksAllocator",
+        "finiteBackingLimitMatrix"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "6",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {},
+      "errors": [],
+      "seconds": 0.247969708
+    },
+    {
+      "group": "capacity",
+      "mode": "resource",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/current:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "storeRootStorageRetained",
+        "metadataArenaBudgetTracksAllocator",
+        "finiteBackingLimitMatrix"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "BR1_RESOURCE": "1"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "6",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {
+        "paired_checks": 1556,
+        "remaining_by_kind": {
+          "payload_pool_slot": 3
+        },
+        "aggregate_remaining": {
+          "descriptor_installed": 0,
+          "metadata_version": 0
+        }
+      },
+      "errors": [],
+      "seconds": 0.205798916
+    },
+    {
+      "group": "failure",
+      "mode": "plain",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "swapInFailurePreservesDomainState",
+        "partialPreparationRollbackPumpsForegroundRetirement",
+        "partialCancellationRetiresBeforeRetry",
+        "initialReplicaImportFailure"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "46",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {},
+      "errors": [],
+      "seconds": 0.19258541700000004
+    },
+    {
+      "group": "failure",
+      "mode": "resource",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/current:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "swapInFailurePreservesDomainState",
+        "partialPreparationRollbackPumpsForegroundRetirement",
+        "partialCancellationRetiresBeforeRetry",
+        "initialReplicaImportFailure"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "BR1_RESOURCE": "1"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "46",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {
+        "paired_checks": 24494,
+        "remaining_by_kind": {
+          "payload_pool_slot": 201
+        },
+        "aggregate_remaining": {
+          "metadata_version": 0,
+          "descriptor_installed": 0
+        }
+      },
+      "errors": [],
+      "seconds": 0.376102708
+    },
+    {
+      "group": "native",
+      "mode": "plain",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "productionHandoffPreparationCapacity",
+        "productionHandoffConcurrentConsumers"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "266",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {},
+      "errors": [],
+      "seconds": 0.197096916
+    },
+    {
+      "group": "native",
+      "mode": "resource",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/current:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "productionHandoffPreparationCapacity",
+        "productionHandoffConcurrentConsumers"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "BR1_RESOURCE": "1"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "266",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {
+        "paired_checks": 54563,
+        "remaining_by_kind": {
+          "payload_pool_slot": 9
+        },
+        "aggregate_remaining": {
+          "metadata_version": 0,
+          "descriptor_installed": 0
+        }
+      },
+      "errors": [],
+      "seconds": 0.673817125
+    },
+    {
+      "group": "process",
+      "mode": "plain",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "processStorageRejectsAndRetains",
+        "tiles3ReadCaptureStorageRefusalIsRecoverable"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+      },
+      "exit": 1,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "3",
+          "1",
+          "0"
+        ]
+      ],
+      "passed": false,
+      "resource": {},
+      "errors": [],
+      "seconds": 0.17703049999999987
+    },
+    {
+      "group": "process",
+      "mode": "resource",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/current:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "processStorageRejectsAndRetains",
+        "tiles3ReadCaptureStorageRefusalIsRecoverable"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "BR1_RESOURCE": "1"
+      },
+      "exit": 1,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "3",
+          "1",
+          "0"
+        ]
+      ],
+      "passed": false,
+      "resource": {
+        "paired_checks": 506,
+        "remaining_by_kind": {
+          "payload_pool_slot": 2
+        },
+        "aggregate_remaining": {
+          "metadata_version": 0,
+          "descriptor_installed": 0
+        }
+      },
+      "errors": [],
+      "seconds": 0.19490395900000002
+    },
+    {
+      "group": "stop",
+      "mode": "plain",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "runtimeStopsAtCapacity"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "3",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {},
+      "errors": [],
+      "seconds": 0.18636362499999998
+    },
+    {
+      "group": "stop",
+      "mode": "resource",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/current:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+        "runtimeStopsAtCapacity"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "BR1_RESOURCE": "1"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "3",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {
+        "paired_checks": 3193,
+        "remaining_by_kind": {
+          "payload_pool_slot": 36
+        },
+        "aggregate_remaining": {
+          "metadata_version": 0,
+          "descriptor_installed": 0
+        }
+      },
+      "errors": [],
+      "seconds": 0.20031970799999999
+    },
+    {
+      "group": "reader",
+      "mode": "plain",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+        "guardLifetimeAndHistory",
+        "concurrentPinAndRetire",
+        "swapMissDoesNotMaterialize",
+        "providerRevocationKeepsExistingPin",
+        "defaultMaterializationAdmissionIsBounded"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "17",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {},
+      "errors": [],
+      "seconds": 0.18173004199999998
+    },
+    {
+      "group": "reader",
+      "mode": "resource",
+      "command": [
+        "arch",
+        "-arm64",
+        "/usr/bin/env",
+        "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/current:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "DYLD_PRINT_LIBRARIES=1",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+        "guardLifetimeAndHistory",
+        "concurrentPinAndRetire",
+        "swapMissDoesNotMaterialize",
+        "providerRevocationKeepsExistingPin",
+        "defaultMaterializationAdmissionIsBounded"
+      ],
+      "settings": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "KIS_BR1_SEED": "12345",
+        "KIS_TEST_PREFIX_PATH": "/Users/apple/krita_gpu/krita/_install",
+        "KIS_TEST_PLUGIN_PATH": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+        "BR1_RESOURCE": "1"
+      },
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "counts": [
+        [
+          "17",
+          "0",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "resource": {
+        "paired_checks": 5637,
+        "remaining_by_kind": {
+          "payload_pool_slot": 12
+        },
+        "aggregate_remaining": {
+          "metadata_version": 0,
+          "descriptor_installed": 0
+        }
+      },
+      "errors": [],
+      "seconds": 0.21167887499999993
+    }
+  ],
+  "resources": [
+    {
+      "group": "capacity",
+      "events": 4308,
+      "resources": {
+        "management_storage": {
+          "births": 1363,
+          "peak_count": 144,
+          "peak_bytes": 2167040,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 1363,
+          "closed_mean_us": 271.1305311812179,
+          "closed_max_us": 5154.416
+        },
+        "descriptor_installed": {
+          "births": 22,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "metadata_version": {
+          "births": 22,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "CompletionInterval": {
+          "births": 31,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 31,
+          "closed_mean_us": 102.88580645161291,
+          "closed_max_us": 2375.208
+        },
+        "retirement_record": {
+          "births": 11,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 11,
+          "closed_mean_us": 291.0872727272727,
+          "closed_max_us": 2384.209
+        },
+        "payload_pool_slot": {
+          "births": 3,
+          "peak_count": 3,
+          "peak_bytes": 49152,
+          "final_count": 3,
+          "final_bytes": 49152,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "payload_active": {
+          "births": 11,
+          "peak_count": 3,
+          "peak_bytes": 49152,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 11,
+          "closed_mean_us": 95.1249090909091,
+          "closed_max_us": 370.416
+        },
+        "binding": {
+          "births": 11,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 11,
+          "closed_mean_us": 82.54918181818182,
+          "closed_max_us": 375.583
+        },
+        "provider_allocation": {
+          "births": 11,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 11,
+          "closed_mean_us": 81.79918181818182,
+          "closed_max_us": 374.334
+        },
+        "owner_backing": {
+          "births": 11,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 11,
+          "closed_mean_us": 82.45063636363636,
+          "closed_max_us": 374.834
+        },
+        "sealed_proof": {
+          "births": 9,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 9,
+          "closed_mean_us": 16.36111111111111,
+          "closed_max_us": 32.708
+        },
+        "epoch_root": {
+          "births": 10,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 10,
+          "closed_mean_us": 73.3417,
+          "closed_max_us": 388.583
+        }
+      }
+    },
+    {
+      "group": "failure",
+      "events": 51450,
+      "resources": {
+        "management_storage": {
+          "births": 19085,
+          "peak_count": 1156,
+          "peak_bytes": 1673776,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 19085,
+          "closed_mean_us": 248.12009682997117,
+          "closed_max_us": 14915.416
+        },
+        "CompletionInterval": {
+          "births": 526,
+          "peak_count": 67,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 526,
+          "closed_mean_us": 393.81226996197717,
+          "closed_max_us": 2378.708
+        },
+        "metadata_version": {
+          "births": 774,
+          "peak_count": 130,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "descriptor_installed": {
+          "births": 774,
+          "peak_count": 130,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "retirement_record": {
+          "births": 442,
+          "peak_count": 67,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 442,
+          "closed_mean_us": 458.02468552036197,
+          "closed_max_us": 2383.541
+        },
+        "payload_pool_slot": {
+          "births": 309,
+          "peak_count": 203,
+          "peak_bytes": 7692288,
+          "final_count": 201,
+          "final_bytes": 7684096,
+          "closed_count": 108,
+          "closed_mean_us": 428.02080555555557,
+          "closed_max_us": 1249.375
+        },
+        "payload_active": {
+          "births": 442,
+          "peak_count": 67,
+          "peak_bytes": 4390912,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 442,
+          "closed_mean_us": 452.5742737556561,
+          "closed_max_us": 1456.292
+        },
+        "binding": {
+          "births": 438,
+          "peak_count": 67,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 438,
+          "closed_mean_us": 455.82146347031966,
+          "closed_max_us": 1455.667
+        },
+        "provider_allocation": {
+          "births": 438,
+          "peak_count": 67,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 438,
+          "closed_mean_us": 455.19444520547944,
+          "closed_max_us": 1455.208
+        },
+        "owner_backing": {
+          "births": 438,
+          "peak_count": 67,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 438,
+          "closed_mean_us": 455.10560502283107,
+          "closed_max_us": 1455.667
+        },
+        "sealed_proof": {
+          "births": 51,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 51,
+          "closed_mean_us": 12.859607843137255,
+          "closed_max_us": 43.958
+        },
+        "epoch_root": {
+          "births": 63,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 63,
+          "closed_mean_us": 294.8723492063492,
+          "closed_max_us": 1478.709
+        },
+        "active_read_record": {
+          "births": 41,
+          "peak_count": 1,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 41,
+          "closed_mean_us": 2.732707317073171,
+          "closed_max_us": 28.166
+        }
+      }
+    },
+    {
+      "group": "native",
+      "events": 137204,
+      "resources": {
+        "management_storage": {
+          "births": 47157,
+          "peak_count": 151,
+          "peak_bytes": 5320832,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 47157,
+          "closed_mean_us": 58.66764132578408,
+          "closed_max_us": 28093.834
+        },
+        "CompletionInterval": {
+          "births": 1168,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 1168,
+          "closed_mean_us": 31.80992551369863,
+          "closed_max_us": 1772.625
+        },
+        "epoch_root": {
+          "births": 304,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 304,
+          "closed_mean_us": 91.82552631578947,
+          "closed_max_us": 1848.709
+        },
+        "payload_pool_slot": {
+          "births": 167,
+          "peak_count": 12,
+          "peak_bytes": 356352,
+          "final_count": 9,
+          "final_bytes": 344064,
+          "closed_count": 158,
+          "closed_mean_us": 57.69220886075949,
+          "closed_max_us": 471.541
+        },
+        "payload_active": {
+          "births": 632,
+          "peak_count": 3,
+          "peak_bytes": 196608,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 632,
+          "closed_mean_us": 51.074164556962025,
+          "closed_max_us": 471.541
+        },
+        "binding": {
+          "births": 624,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 624,
+          "closed_mean_us": 53.54748237179487,
+          "closed_max_us": 471.75
+        },
+        "provider_allocation": {
+          "births": 624,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 624,
+          "closed_mean_us": 51.12116666666667,
+          "closed_max_us": 471.292
+        },
+        "retirement_record": {
+          "births": 648,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 648,
+          "closed_mean_us": 49.175756172839506,
+          "closed_max_us": 470.584
+        },
+        "owner_backing": {
+          "births": 624,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 624,
+          "closed_mean_us": 48.433413461538464,
+          "closed_max_us": 468.708
+        },
+        "metadata_version": {
+          "births": 624,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "descriptor_installed": {
+          "births": 624,
+          "peak_count": 3,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "active_read_record": {
+          "births": 168,
+          "peak_count": 1,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 168,
+          "closed_mean_us": 5.18477380952381,
+          "closed_max_us": 30.958
+        },
+        "sealed_proof": {
+          "births": 80,
+          "peak_count": 1,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 80,
+          "closed_mean_us": 9.037975,
+          "closed_max_us": 20.833
+        },
+        "CompletionReadinessRecord": {
+          "births": 16,
+          "peak_count": 1,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 16,
+          "closed_mean_us": 11.7915625,
+          "closed_max_us": 16.791
+        }
+      }
+    },
+    {
+      "group": "process",
+      "events": 1280,
+      "resources": {
+        "management_storage": {
+          "births": 442,
+          "peak_count": 146,
+          "peak_bytes": 67075728,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 442,
+          "closed_mean_us": 627.9736651583711,
+          "closed_max_us": 2982.958
+        },
+        "CompletionInterval": {
+          "births": 8,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 8,
+          "closed_mean_us": 357.41675,
+          "closed_max_us": 2311.5
+        },
+        "metadata_version": {
+          "births": 8,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "descriptor_installed": {
+          "births": 8,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "retirement_record": {
+          "births": 4,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4,
+          "closed_mean_us": 715.604,
+          "closed_max_us": 2321.083
+        },
+        "payload_pool_slot": {
+          "births": 2,
+          "peak_count": 2,
+          "peak_bytes": 32768,
+          "final_count": 2,
+          "final_bytes": 32768,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "payload_active": {
+          "births": 4,
+          "peak_count": 2,
+          "peak_bytes": 32768,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4,
+          "closed_mean_us": 231.33325000000002,
+          "closed_max_us": 385.333
+        },
+        "binding": {
+          "births": 4,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4,
+          "closed_mean_us": 232.521,
+          "closed_max_us": 386.0
+        },
+        "provider_allocation": {
+          "births": 4,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4,
+          "closed_mean_us": 229.09375,
+          "closed_max_us": 379.792
+        },
+        "owner_backing": {
+          "births": 4,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4,
+          "closed_mean_us": 227.91649999999998,
+          "closed_max_us": 379.666
+        },
+        "sealed_proof": {
+          "births": 4,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4,
+          "closed_mean_us": 29.1355,
+          "closed_max_us": 42.333
+        },
+        "epoch_root": {
+          "births": 4,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4,
+          "closed_mean_us": 189.2605,
+          "closed_max_us": 306.084
+        }
+      }
+    },
+    {
+      "group": "stop",
+      "events": 7088,
+      "resources": {
+        "management_storage": {
+          "births": 2597,
+          "peak_count": 1541,
+          "peak_bytes": 83852944,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 2597,
+          "closed_mean_us": 701.7755783596457,
+          "closed_max_us": 4396.458
+        },
+        "CompletionInterval": {
+          "births": 64,
+          "peak_count": 48,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 64,
+          "closed_mean_us": 819.86390625,
+          "closed_max_us": 3891.958
+        },
+        "metadata_version": {
+          "births": 72,
+          "peak_count": 52,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "descriptor_installed": {
+          "births": 72,
+          "peak_count": 52,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "retirement_record": {
+          "births": 48,
+          "peak_count": 48,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 48,
+          "closed_mean_us": 1090.5138958333334,
+          "closed_max_us": 3882.875
+        },
+        "payload_pool_slot": {
+          "births": 48,
+          "peak_count": 48,
+          "peak_bytes": 1425408,
+          "final_count": 36,
+          "final_bytes": 1376256,
+          "closed_count": 12,
+          "closed_mean_us": 1431.9965,
+          "closed_max_us": 1908.958
+        },
+        "payload_active": {
+          "births": 48,
+          "peak_count": 48,
+          "peak_bytes": 1425408,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 48,
+          "closed_mean_us": 1044.94275,
+          "closed_max_us": 1908.833
+        },
+        "binding": {
+          "births": 48,
+          "peak_count": 48,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 48,
+          "closed_mean_us": 1045.7196875,
+          "closed_max_us": 1907.792
+        },
+        "provider_allocation": {
+          "births": 48,
+          "peak_count": 48,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 48,
+          "closed_mean_us": 1041.5537916666667,
+          "closed_max_us": 1899.958
+        },
+        "owner_backing": {
+          "births": 48,
+          "peak_count": 48,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 48,
+          "closed_mean_us": 1039.032125,
+          "closed_max_us": 1889.416
+        },
+        "sealed_proof": {
+          "births": 32,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 32,
+          "closed_mean_us": 13.315,
+          "closed_max_us": 35.0
+        },
+        "epoch_root": {
+          "births": 32,
+          "peak_count": 32,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 32,
+          "closed_mean_us": 915.54425,
+          "closed_max_us": 1789.792
+        }
+      }
+    },
+    {
+      "group": "reader",
+      "events": 12415,
+      "resources": {
+        "management_storage": {
+          "births": 4622,
+          "peak_count": 883,
+          "peak_bytes": 1646880,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 4622,
+          "closed_mean_us": 614.1799846386846,
+          "closed_max_us": 9840.75
+        },
+        "CompletionInterval": {
+          "births": 221,
+          "peak_count": 129,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 221,
+          "closed_mean_us": 578.5795520361991,
+          "closed_max_us": 1676.125
+        },
+        "metadata_version": {
+          "births": 116,
+          "peak_count": 65,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "descriptor_installed": {
+          "births": 116,
+          "peak_count": 65,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 0,
+          "closed_mean_us": null,
+          "closed_max_us": null
+        },
+        "retirement_record": {
+          "births": 103,
+          "peak_count": 65,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 103,
+          "closed_mean_us": 2039.763786407767,
+          "closed_max_us": 3843.125
+        },
+        "owner_backing": {
+          "births": 103,
+          "peak_count": 65,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 103,
+          "closed_mean_us": 265.26655339805825,
+          "closed_max_us": 834.833
+        },
+        "active_read_record": {
+          "births": 140,
+          "peak_count": 14,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 140,
+          "closed_mean_us": 32.11517857142857,
+          "closed_max_us": 583.75
+        },
+        "sealed_proof": {
+          "births": 33,
+          "peak_count": 2,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 33,
+          "closed_mean_us": 10.972212121212122,
+          "closed_max_us": 36.792
+        },
+        "epoch_root": {
+          "births": 33,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 33,
+          "closed_mean_us": 67.08839393939394,
+          "closed_max_us": 424.208
+        },
+        "payload_pool_slot": {
+          "births": 16,
+          "peak_count": 12,
+          "peak_bytes": 458752,
+          "final_count": 12,
+          "final_bytes": 458752,
+          "closed_count": 4,
+          "closed_mean_us": 105.82275,
+          "closed_max_us": 140.708
+        },
+        "payload_active": {
+          "births": 20,
+          "peak_count": 4,
+          "peak_bytes": 262144,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 20,
+          "closed_mean_us": 95.18965,
+          "closed_max_us": 374.625
+        },
+        "binding": {
+          "births": 19,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 19,
+          "closed_mean_us": 100.93852631578947,
+          "closed_max_us": 422.292
+        },
+        "provider_allocation": {
+          "births": 19,
+          "peak_count": 4,
+          "peak_bytes": 0,
+          "final_count": 0,
+          "final_bytes": 0,
+          "closed_count": 19,
+          "closed_mean_us": 99.24110526315789,
+          "closed_max_us": 421.5
+        }
+      }
+    }
+  ],
+  "cold_tail": {
+    "baseline": 581124,
+    "final": 1154804,
+    "extra": 573680,
+    "added_physical_bytes": [
+      240,
+      557056
+    ],
+    "physical_delta": 557296,
+    "unhooked_accounting_delta": 16384,
+    "all_added_allocations_observed_freed": true,
+    "added_lifetimes": [
+      {
+        "bytes": 240,
+        "age_us": 3707.625
+      },
+      {
+        "bytes": 557056,
+        "age_us": 3702.208
+      }
+    ],
+    "conditions": [
+      {
+        "mode": "cold-resource",
+        "command": [
+          "arch",
+          "-arm64",
+          "/usr/bin/env",
+          "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/current:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+          "DYLD_PRINT_LIBRARIES=1",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/cold-tail/cold-probe",
+          "processStorageRejectsAndRetains"
+        ],
+        "exit": 1,
+        "timed_out": false,
+        "reaped": true,
+        "counts": [
+          [
+            "2",
+            "1",
+            "0"
+          ]
+        ],
+        "runtime": {
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r4/cold-tail/cold-probe": "92fc5fb6fc15555a86470fff42be002e8768d35382031b629354d3ac2f163c4d",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest": "06b88fe8a8396e095a1eae6ea8c1ab6ecf78f3ada3d288d8bf3a92b4d986e92d",
+          "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/budget-coverage-r3/current/libkritaimage.21.0.0.dylib": "cb9ada11ea0dff744c883bcf4a5649b71ccbac1fc0f1e9bc2584fda9ad7064f4",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgets.21.0.0.dylib": "e60f4a1a6f70d6577937a6529952af1ef0888d97232641ffcf9a562d94beb495",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresourcewidgets.21.0.0.dylib": "2d4bde81c42a5f14edd24c5b8391d6d28a45f9230574b874495e1720f171b653",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6Completion.6.7.0.dylib": "0db6af80207e318c9db0391968935c12e96ac89dca7331f580f24c0f27b46830",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapsdutils.21.0.0.dylib": "70aa0870bfa4468c50ec5253f2deb7dc87c4980f67a8f055c4dc5b0989fb05e5",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaflake.21.0.0.dylib": "a541b441dd2da683163402f0ade530e68c696cf88244039a796b6f1367788e06",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Versions/A/QtSvg": "ea8e26a18f25e00a213fa3abe36737d966995d5620093bc2fb2ebad55e3a1d20",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfreetype.6.18.3.dylib": "8687c146500e3fcb4b6f4819e4eb9365e42e0f5ec0ca50e281dc7d2ef8cf45d5",
+          "/Users/apple/krita_gpu/krita/_install/lib/libharfbuzz.0.dylib": "223f85f420de9d14fe95cadc59bf811ad83b83bf33e540dcc2f4415c2ccad4ad",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapigment.21.0.0.dylib": "e6a4c0074ca8bd74bac4dad3c9534e1c7f78311036ce00f8d55662d3d4259d7d",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritacommand.21.0.0.dylib": "4fe95cb2ee66cb9cad4c878f058acb37f0d198a2d00a6df5e9b6150a068268a3",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritametadata.21.0.0.dylib": "92942ccc3feb0faaf358995ae7640d2e4909bdc737fc3baa991a33ca3cbbf961",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgetutils.21.0.0.dylib": "53e7ff60e840f5e4b88ad502dcd5c9dd807d5e866d9afa29cbd8b2233c1c7ad3",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Versions/A/QtPrintSupport": "7b7bb861da56d9a78df54bfdcf1ea0cfb94f876fe05a007daf957bf23ef6c40b",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6WidgetsAddons.6.7.0.dylib": "dbcd0ea8096165f0718212e3fda8dcdabd63603bc6efa86201fc008b25e86e63",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ItemViews.6.7.0.dylib": "8d5cad67629ec5eef7c4f733b57ff38627142c7a2979f9bf4ee84fba5ef9b4f6",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigGui.6.7.0.dylib": "7874d60335f3c9e12abb81153e7b060869e123aa4e0300030d171425f3d159f5",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6GuiAddons.6.7.0.dylib": "c4d3976e0925cb61eae8fea3dddbd72b7fc03524f74ba78a35e5a270de8189f7",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresources.21.0.0.dylib": "89009c2e9cba00afa36cae994efba1b5333773751fb47fb1261cb8c4464baf2d",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaplugin.21.0.0.dylib": "1180f53891132beedc2bc2ad603b31ab0d6b0ee862d56793038e6309ed6723fe",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6CoreAddons.6.7.0.dylib": "89e7cd197f46b2ff8215dbe84da7bf279a91ebeedd26a9a5d84fa2bf1135f8ab",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritastore.21.0.0.dylib": "229514294d6eebb7777821a94254f8719bc63ddbbf5e9fb5ad0f86d7df5c07e0",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Versions/A/QtSql": "b58338f7c91be76b56e878b21acf974611a80ecec01e0a7ed4163c451b3c6127",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIlmImf-2_5.26.0.0.dylib": "8f6324662ffbb35f35c60f28000749d41b77c865510b48a383cacdedffd707a1",
+          "/Users/apple/krita_gpu/krita/_install/lib/libImath-2_5.25.0.7.dylib": "393f57e33139793c2314c7b54b5a147e6c3ff772083eb7d8ad74f1b081a8f15d",
+          "/Users/apple/krita_gpu/krita/_install/lib/libHalf-2_5.25.0.7.dylib": "11eec6d588cd21ca673edc98420b3ce45207906f7be5e830128e58c96157487d",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIexMath-2_5.25.0.7.dylib": "de9817f5b43df10eb4662c58feb594a1e08ef6b79ddd5a79f99ac3fc7598c603",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIlmThread-2_5.25.0.7.dylib": "1a5076131207ba05d4e6b962f045c42c828363a16ee4efa2597952bba141e828",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIex-2_5.25.0.7.dylib": "249642c3babd270a1a9b58f836fde4de6ce0f11fa5ec7fbaef66001b256c0589",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamultiarch.21.0.0.dylib": "b8adcf8275eade99beac58d76a5e2de261953bb1ef109e14aa6d6c5e6048e25e",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaglobal.21.0.0.dylib": "19cd6d6ace0fe09ac16fbdee9dee76bc93ff71a0327d90ca3b1489e14da124ca",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaversion.21.0.0.dylib": "f47231fa02659ed2265e5577e4156397d700264712814af1b18814c6a3f6c3e8",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Versions/A/QtXml": "fb29d57096668771a05ae89d0163fa1ad967accfc76d53aafd8d2b15975d0343",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Versions/A/QtCore5Compat": "6d2fd4e23668c385e3a10fda088246cf1f3e03dce272a7ba154251cc6be8bcee",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Versions/A/QtOpenGL": "fc679fb3dd862c9666f6c4a70ec38367eda49e26453936d44663c97d06d9b518",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigCore.6.7.0.dylib": "e2db46d081487f1c4499f6cdd947ba0f901b51441f4f726fbe4aef2e23bbf900",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Versions/A/QtWidgets": "b42b88fdeea4a8372a08477dad3bd208ae51ff66b3d84e517cca1331c15de33e",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Versions/A/QtGui": "696b8b068c854b2248d06c383a42488dd380d997ec7263e0bfaee28301915d64",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6I18n.6.7.0.dylib": "1d94fbcfd6e2245c2b9a5dc0fd8f66abfab93175ba687e4a2e71b1eb7d2d20ab",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434",
+          "/Users/apple/krita_gpu/krita/_install/lib/libicui18n.72.dylib": "c2bf58e9638e2f9de001cc8a9a96cf739583abf8ad0c4d6d65fc83b68b518678",
+          "/Users/apple/krita_gpu/krita/_install/lib/libicuuc.72.dylib": "0c9e9af333b5ec91d5a2f4cc4e76fc7140b06bbf2434e2c6cdd7513ede7b2931",
+          "/Users/apple/krita_gpu/krita/_install/lib/libicudata.72.dylib": "b6ea871dc90f4ae58d92d6352483cafdde2eb9d50fbc46696030e62890b8eaa6",
+          "/Users/apple/krita_gpu/krita/_install/lib/libz.1.3.1.dylib": "002f9b2efb64eac916c424d158058da4443d79c9c7720c71f3804c2034b88a5c",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfftw3.3.dylib": "f0e7faf61df13481b1f67e0f4ca48ace70eaaf0658b2eecab0f90be2c7e46238",
+          "/Users/apple/krita_gpu/krita/_install/lib/libgsl.dylib": "5ade92bcd56d0a837087f4dc97ff83d1797ff2449ec3943894a833fcb81617dd",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamacosutils.21.0.0.dylib": "e5964681416cc88883aa3b0a1ef3684caf4029b7fea081334b9ab1b10f1e92b9",
+          "/Users/apple/krita_gpu/krita/_install/lib/libgslcblas.dylib": "7e7df8ee3abc256088b09ac0857258d4768a0fb9d65c93fdd597e97f02bce483",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfontconfig.1.dylib": "822c81ae2cce24c9f55bf774ee69522f98c5174802426d3c40f05f6cd12a534e",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets": "38947912b141913c60b2f0d0c09f4f39111b9c8906b4af2f9a514fbe51bd4957",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfribidi.0.dylib": "5e99aa07f5b9f75132fe5b55691e06432297edf43d3c710c8b6b952dbdc6ac66",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ColorScheme.6.7.0.dylib": "923cf937f6b139bb94f477d7e5afc85d169695924bc5d9ddff079b5c92efa84f",
+          "/Users/apple/krita_gpu/krita/_install/lib/png.framework/Versions/1.6.51/png": "88b63245f58cbe3e9d02236ad46aa3bf0c365f409466272befa1881c9a7971b2",
+          "/Users/apple/krita_gpu/krita/_install/lib/libpng16.16.51.0.dylib": "3467973a082023e9ac02723a65ee12fcd0297b9cf7ae1209f4679e20f0764e52",
+          "/Users/apple/krita_gpu/krita/_install/lib/libquazip1-qt6.1.4.dylib": "2faf1fcc4bd8b20e9520ea8b93e2cc5d93aeb9c43d65c155c6b03ef2aee1d6ca",
+          "/Users/apple/krita_gpu/krita/_install/lib/libintl.8.dylib": "14b2139031e618fa2325b01e9943843686efd1a232818adb62a56b3e38c3086e",
+          "/Users/apple/krita_gpu/krita/_install/lib/libexpat.1.8.8.dylib": "2f50ed3a34ec650ceff0663d7db8e1107e1934d8e99bacfe65b8bf03277d1ebf",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6Codecs.6.7.0.dylib": "eedb2ddc6d6b7d2ebe734610258a90cd29b9eb8ad235da25e64a6be92dae6629"
+        }
+      },
+      {
+        "mode": "warm-plain",
+        "command": [
+          "arch",
+          "-arm64",
+          "/usr/bin/env",
+          "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+          "DYLD_PRINT_LIBRARIES=1",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+          "storeRootStorageRetained",
+          "processStorageRejectsAndRetains"
+        ],
+        "exit": 0,
+        "timed_out": false,
+        "reaped": true,
+        "counts": [
+          [
+            "5",
+            "0",
+            "0"
+          ]
+        ],
+        "runtime": {
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "5cfc5f96fc0ca6caf06f28187a25baf590f96043ef9459582f0820a51ef4ad38",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Versions/A/QtTest": "06b88fe8a8396e095a1eae6ea8c1ab6ecf78f3ada3d288d8bf3a92b4d986e92d",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "91e962c2c43379697b13f37a2ee388d408440c67f3e21458e75c70dab4b21b38",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgets.21.0.0.dylib": "e60f4a1a6f70d6577937a6529952af1ef0888d97232641ffcf9a562d94beb495",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresourcewidgets.21.0.0.dylib": "2d4bde81c42a5f14edd24c5b8391d6d28a45f9230574b874495e1720f171b653",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6Completion.6.7.0.dylib": "0db6af80207e318c9db0391968935c12e96ac89dca7331f580f24c0f27b46830",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapsdutils.21.0.0.dylib": "70aa0870bfa4468c50ec5253f2deb7dc87c4980f67a8f055c4dc5b0989fb05e5",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaflake.21.0.0.dylib": "a541b441dd2da683163402f0ade530e68c696cf88244039a796b6f1367788e06",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Versions/A/QtSvg": "ea8e26a18f25e00a213fa3abe36737d966995d5620093bc2fb2ebad55e3a1d20",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfreetype.6.18.3.dylib": "8687c146500e3fcb4b6f4819e4eb9365e42e0f5ec0ca50e281dc7d2ef8cf45d5",
+          "/Users/apple/krita_gpu/krita/_install/lib/libharfbuzz.0.dylib": "223f85f420de9d14fe95cadc59bf811ad83b83bf33e540dcc2f4415c2ccad4ad",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritapigment.21.0.0.dylib": "e6a4c0074ca8bd74bac4dad3c9534e1c7f78311036ce00f8d55662d3d4259d7d",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritacommand.21.0.0.dylib": "4fe95cb2ee66cb9cad4c878f058acb37f0d198a2d00a6df5e9b6150a068268a3",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritametadata.21.0.0.dylib": "92942ccc3feb0faaf358995ae7640d2e4909bdc737fc3baa991a33ca3cbbf961",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritawidgetutils.21.0.0.dylib": "53e7ff60e840f5e4b88ad502dcd5c9dd807d5e866d9afa29cbd8b2233c1c7ad3",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Versions/A/QtPrintSupport": "7b7bb861da56d9a78df54bfdcf1ea0cfb94f876fe05a007daf957bf23ef6c40b",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6WidgetsAddons.6.7.0.dylib": "dbcd0ea8096165f0718212e3fda8dcdabd63603bc6efa86201fc008b25e86e63",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ItemViews.6.7.0.dylib": "8d5cad67629ec5eef7c4f733b57ff38627142c7a2979f9bf4ee84fba5ef9b4f6",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigGui.6.7.0.dylib": "7874d60335f3c9e12abb81153e7b060869e123aa4e0300030d171425f3d159f5",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6GuiAddons.6.7.0.dylib": "c4d3976e0925cb61eae8fea3dddbd72b7fc03524f74ba78a35e5a270de8189f7",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaresources.21.0.0.dylib": "89009c2e9cba00afa36cae994efba1b5333773751fb47fb1261cb8c4464baf2d",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaplugin.21.0.0.dylib": "1180f53891132beedc2bc2ad603b31ab0d6b0ee862d56793038e6309ed6723fe",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6CoreAddons.6.7.0.dylib": "89e7cd197f46b2ff8215dbe84da7bf279a91ebeedd26a9a5d84fa2bf1135f8ab",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritastore.21.0.0.dylib": "229514294d6eebb7777821a94254f8719bc63ddbbf5e9fb5ad0f86d7df5c07e0",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Versions/A/QtSql": "b58338f7c91be76b56e878b21acf974611a80ecec01e0a7ed4163c451b3c6127",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIlmImf-2_5.26.0.0.dylib": "8f6324662ffbb35f35c60f28000749d41b77c865510b48a383cacdedffd707a1",
+          "/Users/apple/krita_gpu/krita/_install/lib/libImath-2_5.25.0.7.dylib": "393f57e33139793c2314c7b54b5a147e6c3ff772083eb7d8ad74f1b081a8f15d",
+          "/Users/apple/krita_gpu/krita/_install/lib/libHalf-2_5.25.0.7.dylib": "11eec6d588cd21ca673edc98420b3ce45207906f7be5e830128e58c96157487d",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIexMath-2_5.25.0.7.dylib": "de9817f5b43df10eb4662c58feb594a1e08ef6b79ddd5a79f99ac3fc7598c603",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIlmThread-2_5.25.0.7.dylib": "1a5076131207ba05d4e6b962f045c42c828363a16ee4efa2597952bba141e828",
+          "/Users/apple/krita_gpu/krita/_install/lib/libIex-2_5.25.0.7.dylib": "249642c3babd270a1a9b58f836fde4de6ce0f11fa5ec7fbaef66001b256c0589",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamultiarch.21.0.0.dylib": "b8adcf8275eade99beac58d76a5e2de261953bb1ef109e14aa6d6c5e6048e25e",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaglobal.21.0.0.dylib": "19cd6d6ace0fe09ac16fbdee9dee76bc93ff71a0327d90ca3b1489e14da124ca",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaversion.21.0.0.dylib": "f47231fa02659ed2265e5577e4156397d700264712814af1b18814c6a3f6c3e8",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Versions/A/QtXml": "fb29d57096668771a05ae89d0163fa1ad967accfc76d53aafd8d2b15975d0343",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Versions/A/QtCore5Compat": "6d2fd4e23668c385e3a10fda088246cf1f3e03dce272a7ba154251cc6be8bcee",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Versions/A/QtOpenGL": "fc679fb3dd862c9666f6c4a70ec38367eda49e26453936d44663c97d06d9b518",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ConfigCore.6.7.0.dylib": "e2db46d081487f1c4499f6cdd947ba0f901b51441f4f726fbe4aef2e23bbf900",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Versions/A/QtWidgets": "b42b88fdeea4a8372a08477dad3bd208ae51ff66b3d84e517cca1331c15de33e",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Versions/A/QtGui": "696b8b068c854b2248d06c383a42488dd380d997ec7263e0bfaee28301915d64",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6I18n.6.7.0.dylib": "1d94fbcfd6e2245c2b9a5dc0fd8f66abfab93175ba687e4a2e71b1eb7d2d20ab",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Versions/A/QtCore": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434",
+          "/Users/apple/krita_gpu/krita/_install/lib/libicui18n.72.dylib": "c2bf58e9638e2f9de001cc8a9a96cf739583abf8ad0c4d6d65fc83b68b518678",
+          "/Users/apple/krita_gpu/krita/_install/lib/libicuuc.72.dylib": "0c9e9af333b5ec91d5a2f4cc4e76fc7140b06bbf2434e2c6cdd7513ede7b2931",
+          "/Users/apple/krita_gpu/krita/_install/lib/libicudata.72.dylib": "b6ea871dc90f4ae58d92d6352483cafdde2eb9d50fbc46696030e62890b8eaa6",
+          "/Users/apple/krita_gpu/krita/_install/lib/libz.1.3.1.dylib": "002f9b2efb64eac916c424d158058da4443d79c9c7720c71f3804c2034b88a5c",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfftw3.3.dylib": "f0e7faf61df13481b1f67e0f4ca48ace70eaaf0658b2eecab0f90be2c7e46238",
+          "/Users/apple/krita_gpu/krita/_install/lib/libgsl.dylib": "5ade92bcd56d0a837087f4dc97ff83d1797ff2449ec3943894a833fcb81617dd",
+          "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritamacosutils.21.0.0.dylib": "e5964681416cc88883aa3b0a1ef3684caf4029b7fea081334b9ab1b10f1e92b9",
+          "/Users/apple/krita_gpu/krita/_install/lib/libgslcblas.dylib": "7e7df8ee3abc256088b09ac0857258d4768a0fb9d65c93fdd597e97f02bce483",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfontconfig.1.dylib": "822c81ae2cce24c9f55bf774ee69522f98c5174802426d3c40f05f6cd12a534e",
+          "/Users/apple/krita_gpu/krita/_install/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets": "38947912b141913c60b2f0d0c09f4f39111b9c8906b4af2f9a514fbe51bd4957",
+          "/Users/apple/krita_gpu/krita/_install/lib/libfribidi.0.dylib": "5e99aa07f5b9f75132fe5b55691e06432297edf43d3c710c8b6b952dbdc6ac66",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6ColorScheme.6.7.0.dylib": "923cf937f6b139bb94f477d7e5afc85d169695924bc5d9ddff079b5c92efa84f",
+          "/Users/apple/krita_gpu/krita/_install/lib/png.framework/Versions/1.6.51/png": "88b63245f58cbe3e9d02236ad46aa3bf0c365f409466272befa1881c9a7971b2",
+          "/Users/apple/krita_gpu/krita/_install/lib/libpng16.16.51.0.dylib": "3467973a082023e9ac02723a65ee12fcd0297b9cf7ae1209f4679e20f0764e52",
+          "/Users/apple/krita_gpu/krita/_install/lib/libquazip1-qt6.1.4.dylib": "2faf1fcc4bd8b20e9520ea8b93e2cc5d93aeb9c43d65c155c6b03ef2aee1d6ca",
+          "/Users/apple/krita_gpu/krita/_install/lib/libintl.8.dylib": "14b2139031e618fa2325b01e9943843686efd1a232818adb62a56b3e38c3086e",
+          "/Users/apple/krita_gpu/krita/_install/lib/libexpat.1.8.8.dylib": "2f50ed3a34ec650ceff0663d7db8e1107e1934d8e99bacfe65b8bf03277d1ebf",
+          "/Users/apple/krita_gpu/krita/_install/lib/libKF6Codecs.6.7.0.dylib": "eedb2ddc6d6b7d2ebe734610258a90cd29b9eb8ad235da25e64a6be92dae6629"
+        }
+      }
+    ],
+    "interpretation": "Observed cold initialization retention, not a payload/object leak in this case. 16384 B residual matches native pthread control accounting in source; not directly tagged by physical-storage hook."
+  },
+  "limits": [
+    "Pressure controls have current-only contracts; no upstream time comparison",
+    "Original cold assertion remains failed; warm-order pass does not erase it",
+    "No product/test edit; isolated diagnostic copy retains original failure assertion"
+  ]
+}

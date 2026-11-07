@@ -1,0 +1,242 @@
+ninja: Entering directory `krita/_build-br0-cpu'
+[0/2] Re-checking globbed directories...
+[1/18] Automatic MOC for target kritaimage
+[2/17] Building CXX object libs/image/CMakeFiles/kritaimage.dir/kis_async_merger.cpp.o
+/Users/apple/krita_gpu/krita/libs/image/kis_async_merger.cpp:298:24: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+  298 |                 typeid(*currentLeaf->projectionPlane()) == typeid(KisLayerProjectionPlane)) {
+      |                        ^
+1 warning generated.
+/Users/apple/krita_gpu/krita/libs/image/kis_async_merger.cpp:298:24: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+  298 |                 typeid(*currentLeaf->projectionPlane()) == typeid(KisLayerProjectionPlane)) {
+      |                        ^
+1 warning generated.
+[3/17] Linking CXX shared library bin/libkritaimage.21.0.0.dylib
+ld: warning: -single_module is obsolete
+ld: warning: -multiply_defined is obsolete
+ld: warning: -single_module is obsolete
+ld: warning: -multiply_defined is obsolete
+[4/17] Creating library symlink bin/libkritaimage.21.dylib bin/libkritaimage.dylib
+[5/17] Automatic MOC for target kis_painter_test
+[6/16] Automatic MOC for target kis_tiled_data_manager_test
+[7/16] Automatic MOC for target kis_async_merger_test
+[8/16] Building CXX object libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test.cpp.o
+FAILED: [code=1] libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test.cpp.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DFILES_DATA_DIR=\"/Users/apple/krita_gpu/krita/libs/image/tests/data/\" -DFILES_DEFAULT_DATA_DIR=\"/Users/apple/krita_gpu/krita/sdk/tests/data/\" -DFILES_OUTPUT_DIR=\"/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tests\" -DKCOREADDONS_LIB -DKGUIADDONS_LIB -DQT_CORE5COMPAT_LIB -DQT_CORE_LIB -DQT_DISABLE_DEPRECATED_BEFORE=0x050E00 -DQT_GUI_LIB -DQT_MAC_USE_COCOA -DQT_NO_DEBUG -DQT_NO_SIGNALS_SLOTS_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING -DQT_OPENGL_LIB -DQT_PRINTSUPPORT_LIB -DQT_SQL_LIB -DQT_STRICT_ITERATORS -DQT_SVG_LIB -DQT_TESTCASE_BUILDDIR=\"/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tests\" -DQT_TESTCASE_SOURCEDIR=\"/Users/apple/krita_gpu/krita/libs/image/tests\" -DQT_TESTLIB_LIB -DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS -DQT_USE_QSTRINGBUILDER -DQT_WIDGETS_LIB -DQT_XML_LIB -DSYSTEM_RESOURCES_DATA_DIR=\"/Users/apple/krita_gpu/krita/krita/data/\" -DTRANSLATION_DOMAIN=\"krita\" -D_DARWIN_C_SOURCE -D_LARGEFILE64_SOURCE -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tests -I/Users/apple/krita_gpu/krita/libs/image/tests -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image/tests/kis_async_merger_test_autogen/include -I/Users/apple/krita_gpu/krita/_build-br0-cpu -I/Users/apple/krita_gpu/krita -I/Users/apple/krita_gpu/krita/libs/image/tests/QuaZip::QuaZip -I/Users/apple/krita_gpu/krita/libs/image/gpustroke -I/Users/apple/krita_gpu/krita/libs/image/pagestore -I/Users/apple/krita_gpu/krita/libs/image/brushengine -I/Users/apple/krita_gpu/krita/libs/image/filter -I/Users/apple/krita_gpu/krita/libs/image/generator -I/Users/apple/krita_gpu/krita/libs/image/layerstyles -I/Users/apple/krita_gpu/krita/libs/image/processing -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/image -I/Users/apple/krita_gpu/krita/libs/image -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/version -I/Users/apple/krita_gpu/krita/libs/version -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/widgets -I/Users/apple/krita_gpu/krita/libs/widgets -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/global -I/Users/apple/krita_gpu/krita/libs/global -I/Users/apple/krita_gpu/krita/libs/flake/commands -I/Users/apple/krita_gpu/krita/libs/flake/tools -I/Users/apple/krita_gpu/krita/libs/flake/svg -I/Users/apple/krita_gpu/krita/libs/flake/text -I/Users/apple/krita_gpu/krita/libs/flake/resources -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/flake -I/Users/apple/krita_gpu/krita/libs/flake -I/Users/apple/krita_gpu/krita/libs/pigment/resources -I/Users/apple/krita_gpu/krita/libs/pigment/compositeops -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/pigment -I/Users/apple/krita_gpu/krita/libs/pigment -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/koplugin -I/Users/apple/krita_gpu/krita/libs/koplugin -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/store -I/Users/apple/krita_gpu/krita/libs/store -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/resources -I/Users/apple/krita_gpu/krita/libs/resources -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/command -I/Users/apple/krita_gpu/krita/libs/command -I/Users/apple/krita_gpu/krita/libs/widgetutils/config -I/Users/apple/krita_gpu/krita/libs/widgetutils/xmlgui -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/widgetutils -I/Users/apple/krita_gpu/krita/libs/widgetutils -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/multiarch -I/Users/apple/krita_gpu/krita/libs/multiarch -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/resourcewidgets -I/Users/apple/krita_gpu/krita/libs/resourcewidgets -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/psdutils -I/Users/apple/krita_gpu/krita/libs/psdutils -I/Users/apple/krita_gpu/krita/_build-br0-cpu/libs/metadata -I/Users/apple/krita_gpu/krita/libs/metadata -I/Users/apple/krita_gpu/krita/_build-br0-cpu/sdk/tests -I/Users/apple/krita_gpu/krita/sdk/tests -isystem /Users/apple/krita_gpu/krita/_install/include -isystem /Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers -iframework /Users/apple/krita_gpu/krita/_install/lib -isystem /Users/apple/krita_gpu/krita/_install/mkspecs/macx-clang -isystem /Users/apple/krita_gpu/krita/_install/lib/QtGui.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtWidgets.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtXml.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KI18n -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KConfig -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KConfigCore -isystem /Users/apple/krita_gpu/krita/_install/lib/QtCore5Compat.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtOpenGL.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/lib/QtSql.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KItemViews -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KConfigGui -isystem /Users/apple/krita_gpu/krita/_install/include/OpenEXR -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KWidgetsAddons -isystem /Users/apple/krita_gpu/krita/_install/lib/QtSvg.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KCoreAddons -isystem /Users/apple/krita_gpu/krita/_install/include/freetype2 -isystem /Users/apple/krita_gpu/krita/_install/include/harfbuzz -isystem /Users/apple/krita_gpu/krita/_install/lib/QtPrintSupport.framework/Headers -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KGuiAddons -isystem /Users/apple/krita_gpu/krita/_install/include/KF6/KCompletion -isystem /Users/apple/krita_gpu/krita/_install/include/eigen3 -isystem /Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers -fno-operator-names -Wno-gnu-zero-variadic-macro-arguments -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Wvla -Wdate-time -fdiagnostics-color=always -fexceptions -O2 -g -DNDEBUG -std=gnu++17 -arch x86_64 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -mmacosx-version-min=12 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden   -mmacosx-version-min=12 -Wno-macro-redefined -Wno-deprecated-register -MD -MT libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test.cpp.o -MF libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test.cpp.o.d -o libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test.cpp.o -c /Users/apple/krita_gpu/krita/libs/image/tests/kis_async_merger_test.cpp
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_async_merger_test.cpp:48:93: error: only virtual member functions can be marked 'override'
+   48 |         QRect updateProjection(const QRect &rect, KisNodeSP node, KisRenderPassFlags flags) override {
+      |                                                                                             ^~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_async_merger_test.cpp:68:35: error: no matching member function for call to 'pixel'
+   68 |     QCOMPARE(image->projection()->pixel(11, 13), KoColor(Qt::red, cs));
+      |              ~~~~~~~~~~~~~~~~~~~~~^~~~~
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:83:26: note: expanded from macro 'QCOMPARE'
+   83 |     if (!QTest::qCompare(actual, expected, #actual, #expected, __FILE__, __LINE__))\
+      |                          ^~~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.h:617:13: note: candidate function not viable: requires single argument 'pos', but 2 arguments were provided
+  617 |     KoColor pixel(const QPoint &pos) const;
+      |             ^     ~~~~~~~~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.h:600:10: note: candidate function not viable: requires 3 arguments, but 2 were provided
+  600 |     bool pixel(qint32 x, qint32 y, QColor *c) const;
+      |          ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/krita_gpu/krita/libs/image/kis_paint_device.h:611:10: note: candidate function not viable: requires 3 arguments, but 2 were provided
+  611 |     bool pixel(qint32 x, qint32 y, KoColor * kc) const;
+      |          ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+[9/16] Building CXX object libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test_autogen/mocs_compilation.cpp.o
+[10/16] Building CXX object libs/image/tests/CMakeFiles/kis_async_merger_test.dir/kis_async_merger_test_autogen/mocs_compilation.cpp.o
+[11/16] Building CXX object libs/image/tests/CMakeFiles/kis_painter_test.dir/kis_painter_test.cpp.o
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:181:58: warning: loop variable 'composite' creates a copy from type 'const QString' [-Wrange-loop-construct]
+  181 |         for (int wrap : {0, 1, 2, 3}) for (const QString composite : {COMPOSITE_OVER, COMPOSITE_COPY, COMPOSITE_ALPHA_DARKEN})
+      |                                                          ^
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:181:44: note: use reference type 'const QString &' to prevent copying
+  181 |         for (int wrap : {0, 1, 2, 3}) for (const QString composite : {COMPOSITE_OVER, COMPOSITE_COPY, COMPOSITE_ALPHA_DARKEN})
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                          &
+In file included from /Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:42:
+/Users/apple/krita_gpu/krita/libs/image/KisRenderedDab.h:22:5: warning: definition of implicit copy assignment operator for 'KisRenderedDab' is deprecated because it has a user-declared copy constructor [-Wdeprecated-copy]
+   22 |     KisRenderedDab(const KisRenderedDab &/*rhs*/) = default;
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:213:18: note: in implicit copy assignment operator for 'KisRenderedDab' first required here
+  213 |         *d_first = std::move_if_noexcept(*first);
+      |                  ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:248:13: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n_left_move<KisRenderedDab *, long long>' requested here
+  248 |             q_relocate_overlap_n_left_move(first, n, d_first);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:316:20: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n<KisRenderedDab, long long>' requested here
+  316 |         QtPrivate::q_relocate_overlap_n(this->ptr, this->size, res);
+      |                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:301:9: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::relocate' requested here
+  301 |         relocate(dataStartOffset - freeAtBegin, data);
+      |         ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:202:26: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::tryReadjustFreeSpace' requested here
+  202 |             readjusted = tryReadjustFreeSpace(where, n, data);
+      |                          ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydataops.h:576:15: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::detachAndGrow' requested here
+  576 |         this->detachAndGrow(pos, 1, nullptr, nullptr);
+      |               ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:886:8: note: in instantiation of function template specialization 'QtPrivate::QGenericArrayOps<KisRenderedDab>::emplace<const KisRenderedDab &>' requested here
+  886 |     d->emplace(d->size, std::forward<Args>(args)...);
+      |        ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:460:37: note: in instantiation of function template specialization 'QList<KisRenderedDab>::emplaceBack<const KisRenderedDab &>' requested here
+  460 |     void append(parameter_type t) { emplaceBack(t); }
+      |                                     ^
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:423:14: note: in instantiation of member function 'QList<KisRenderedDab>::append' requested here
+  423 |         dabs.append(dab);
+      |              ^
+2 warnings generated.
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:181:58: warning: loop variable 'composite' creates a copy from type 'const QString' [-Wrange-loop-construct]
+  181 |         for (int wrap : {0, 1, 2, 3}) for (const QString composite : {COMPOSITE_OVER, COMPOSITE_COPY, COMPOSITE_ALPHA_DARKEN})
+      |                                                          ^
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:181:44: note: use reference type 'const QString &' to prevent copying
+  181 |         for (int wrap : {0, 1, 2, 3}) for (const QString composite : {COMPOSITE_OVER, COMPOSITE_COPY, COMPOSITE_ALPHA_DARKEN})
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                          &
+In file included from /Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:42:
+/Users/apple/krita_gpu/krita/libs/image/KisRenderedDab.h:22:5: warning: definition of implicit copy assignment operator for 'KisRenderedDab' is deprecated because it has a user-declared copy constructor [-Wdeprecated-copy]
+   22 |     KisRenderedDab(const KisRenderedDab &/*rhs*/) = default;
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:213:18: note: in implicit copy assignment operator for 'KisRenderedDab' first required here
+  213 |         *d_first = std::move_if_noexcept(*first);
+      |                  ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:248:13: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n_left_move<KisRenderedDab *, long long>' requested here
+  248 |             q_relocate_overlap_n_left_move(first, n, d_first);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:316:20: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n<KisRenderedDab, long long>' requested here
+  316 |         QtPrivate::q_relocate_overlap_n(this->ptr, this->size, res);
+      |                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:301:9: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::relocate' requested here
+  301 |         relocate(dataStartOffset - freeAtBegin, data);
+      |         ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:202:26: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::tryReadjustFreeSpace' requested here
+  202 |             readjusted = tryReadjustFreeSpace(where, n, data);
+      |                          ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydataops.h:576:15: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::detachAndGrow' requested here
+  576 |         this->detachAndGrow(pos, 1, nullptr, nullptr);
+      |               ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:886:8: note: in instantiation of function template specialization 'QtPrivate::QGenericArrayOps<KisRenderedDab>::emplace<const KisRenderedDab &>' requested here
+  886 |     d->emplace(d->size, std::forward<Args>(args)...);
+      |        ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:460:37: note: in instantiation of function template specialization 'QList<KisRenderedDab>::emplaceBack<const KisRenderedDab &>' requested here
+  460 |     void append(parameter_type t) { emplaceBack(t); }
+      |                                     ^
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:423:14: note: in instantiation of member function 'QList<KisRenderedDab>::append' requested here
+  423 |         dabs.append(dab);
+      |              ^
+2 warnings generated.
+[12/16] Building CXX object libs/image/tiles3/tests/CMakeFiles/kis_tiled_data_manager_test.dir/kis_tiled_data_manager_test.cpp.o
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:789:13: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  789 |             QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:804:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  804 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:807:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  807 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(512,
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:1282:46: warning: lambda capture 'index' is not required to be captured for this use [-Wunused-lambda-capture]
+ 1282 |         observation.reader = std::thread([&, index] {
+      |                                            ~~^~~~~
+4 warnings generated.
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:789:13: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  789 |             QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:804:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  804 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(4, pixel), std::bad_alloc);
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:807:5: warning: 'useVerifyThrowsException' is deprecated: Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, use QVERIFY_THROWS_EXCEPTION(type, expr...) instead [-Wdeprecated-declarations]
+  807 |     QVERIFY_EXCEPTION_THROWN(KisTiledDataManager(512,
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:121:52: note: expanded from macro 'QVERIFY_EXCEPTION_THROWN'
+  121 |     QVERIFY_THROWS_EXCEPTION(exceptiontype, QTest::useVerifyThrowsException(); expression)
+      |                                                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtTest.framework/Headers/qtestcase.h:116:1: note: 'useVerifyThrowsException' has been explicitly marked deprecated here
+  116 | QT_DEPRECATED_VERSION_X_6_3("Don't use QVERIFY_EXCEPTION_THROWN(expr, type) anymore, "
+      | ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:131:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_3'
+  131 | # define QT_DEPRECATED_VERSION_X_6_3(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:29:33: note: expanded from macro 'QT_DEPRECATED_X'
+   29 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcompilerdetection.h:1000:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1000 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+/Users/apple/krita_gpu/krita/libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp:1282:46: warning: lambda capture 'index' is not required to be captured for this use [-Wunused-lambda-capture]
+ 1282 |         observation.reader = std::thread([&, index] {
+      |                                            ~~^~~~~
+4 warnings generated.
+ninja: build stopped: subcommand failed.

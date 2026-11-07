@@ -1,0 +1,2776 @@
+{
+  "results": {
+    "current": {
+      "pid": 63898,
+      "rows": 27262,
+      "states": [
+        "Blocked",
+        "Idle",
+        "Interrupted",
+        "Preempted",
+        "Runnable",
+        "Running",
+        "Terminated"
+      ],
+      "cases": {
+        "0": {
+          "trace_wall_ns": 7577875,
+          "fixture_wall_ns": 7576000,
+          "fixture_foreground_ns": 2544000,
+          "fixture_process_ns": 2818000,
+          "foreground_state_ns": {
+            "Running": 2536330,
+            "Interrupted": 11293,
+            "Blocked": 4999000,
+            "Runnable": 31252
+          },
+          "all_threads_state_ns": {
+            "Idle": 15155750,
+            "Terminated": 13160541,
+            "Running": 2810748,
+            "Interrupted": 11959,
+            "Blocked": 14289042,
+            "Runnable": 46709,
+            "Preempted": 2167
+          },
+          "foreground_running_by_core_ns": {
+            "7": 2017664,
+            "8": 518666
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "1": {
+          "trace_wall_ns": 1934709,
+          "fixture_wall_ns": 1933000,
+          "fixture_foreground_ns": 1769708,
+          "fixture_process_ns": 2441000,
+          "foreground_state_ns": {
+            "Running": 1769504,
+            "Interrupted": 959,
+            "Blocked": 151748,
+            "Runnable": 12498
+          },
+          "all_threads_state_ns": {
+            "Idle": 3869418,
+            "Terminated": 3869418,
+            "Blocked": 5262835,
+            "Running": 2434879,
+            "Interrupted": 6750,
+            "Runnable": 34372
+          },
+          "foreground_running_by_core_ns": {
+            "8": 1769504
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "2": {
+          "trace_wall_ns": 2190000,
+          "fixture_wall_ns": 2189000,
+          "fixture_foreground_ns": 2046500,
+          "fixture_process_ns": 2776000,
+          "foreground_state_ns": {
+            "Running": 1983248,
+            "Blocked": 85376,
+            "Runnable": 54086,
+            "Interrupted": 65415,
+            "Preempted": 1875
+          },
+          "all_threads_state_ns": {
+            "Idle": 4380000,
+            "Terminated": 4380000,
+            "Blocked": 5834956,
+            "Running": 2696962,
+            "Runnable": 144044,
+            "Interrupted": 78664,
+            "Preempted": 5374
+          },
+          "foreground_running_by_core_ns": {
+            "8": 320624,
+            "9": 89499,
+            "6": 1124831,
+            "7": 448294
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "3": {
+          "trace_wall_ns": 13591000,
+          "fixture_wall_ns": 13588000,
+          "fixture_foreground_ns": 11773833,
+          "fixture_process_ns": 17656000,
+          "foreground_state_ns": {
+            "Running": 11676336,
+            "Blocked": 1529995,
+            "Runnable": 171835,
+            "Interrupted": 104329,
+            "Preempted": 108505
+          },
+          "all_threads_state_ns": {
+            "Idle": 27182000,
+            "Terminated": 27182000,
+            "Blocked": 36145047,
+            "Running": 17502371,
+            "Runnable": 361168,
+            "Interrupted": 170537,
+            "Preempted": 184877
+          },
+          "foreground_running_by_core_ns": {
+            "7": 4305787,
+            "9": 3586669,
+            "5": 21791,
+            "8": 144126,
+            "2": 11583,
+            "6": 3606380
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "4": {
+          "trace_wall_ns": 740042,
+          "fixture_wall_ns": 738000,
+          "fixture_foreground_ns": 685709,
+          "fixture_process_ns": 923000,
+          "foreground_state_ns": {
+            "Running": 687083,
+            "Blocked": 31249,
+            "Runnable": 21126,
+            "Interrupted": 584
+          },
+          "all_threads_state_ns": {
+            "Idle": 1480084,
+            "Terminated": 1480084,
+            "Blocked": 1977209,
+            "Running": 920458,
+            "Runnable": 59999,
+            "Interrupted": 2502
+          },
+          "foreground_running_by_core_ns": {
+            "6": 75750,
+            "8": 232624,
+            "9": 378709
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "5": {
+          "trace_wall_ns": 2788208,
+          "fixture_wall_ns": 2787000,
+          "fixture_foreground_ns": 2297875,
+          "fixture_process_ns": 2933000,
+          "foreground_state_ns": {
+            "Running": 2285125,
+            "Interrupted": 15832,
+            "Blocked": 209748,
+            "Runnable": 120250,
+            "Preempted": 157253
+          },
+          "all_threads_state_ns": {
+            "Idle": 5576416,
+            "Terminated": 5576416,
+            "Blocked": 7632996,
+            "Running": 2912709,
+            "Interrupted": 24831,
+            "Runnable": 175418,
+            "Preempted": 406878
+          },
+          "foreground_running_by_core_ns": {
+            "6": 1311751,
+            "9": 381998,
+            "8": 376752,
+            "7": 214624
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "6": {
+          "trace_wall_ns": 3360292,
+          "fixture_wall_ns": 3353000,
+          "fixture_foreground_ns": 2081125,
+          "fixture_process_ns": 2724000,
+          "foreground_state_ns": {
+            "Running": 2055168,
+            "Interrupted": 38417,
+            "Preempted": 846706,
+            "Blocked": 173209,
+            "Runnable": 246792
+          },
+          "all_threads_state_ns": {
+            "Idle": 6720584,
+            "Terminated": 6720584,
+            "Blocked": 8107458,
+            "Running": 2681995,
+            "Interrupted": 49045,
+            "Preempted": 1083873,
+            "Runnable": 1518797
+          },
+          "foreground_running_by_core_ns": {
+            "7": 459169,
+            "6": 661753,
+            "9": 610665,
+            "8": 323581
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "7": {
+          "trace_wall_ns": 15078000,
+          "fixture_wall_ns": 15075000,
+          "fixture_foreground_ns": 12274625,
+          "fixture_process_ns": 17645000,
+          "foreground_state_ns": {
+            "Running": 11548761,
+            "Interrupted": 733948,
+            "Preempted": 758465,
+            "Blocked": 1780534,
+            "Runnable": 256292
+          },
+          "all_threads_state_ns": {
+            "Idle": 30156000,
+            "Terminated": 30156000,
+            "Blocked": 40954236,
+            "Running": 16732310,
+            "Interrupted": 925489,
+            "Preempted": 1109297,
+            "Runnable": 590668
+          },
+          "foreground_running_by_core_ns": {
+            "6": 4756301,
+            "9": 3445875,
+            "3": 16292,
+            "0": 389747,
+            "7": 2708876,
+            "1": 65170,
+            "5": 28125,
+            "2": 20418,
+            "4": 117957
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "8": {
+          "trace_wall_ns": 3997542,
+          "fixture_wall_ns": 3996000,
+          "fixture_foreground_ns": 3800708,
+          "fixture_process_ns": 4439000,
+          "foreground_state_ns": {
+            "Running": 3608342,
+            "Blocked": 153833,
+            "Runnable": 17542,
+            "Interrupted": 194743,
+            "Preempted": 23082
+          },
+          "all_threads_state_ns": {
+            "Idle": 7995084,
+            "Terminated": 7995084,
+            "Blocked": 11476582,
+            "Running": 4227549,
+            "Runnable": 44043,
+            "Interrupted": 214204,
+            "Preempted": 27790
+          },
+          "foreground_running_by_core_ns": {
+            "9": 1222751,
+            "7": 824460,
+            "6": 1561131
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "9": {
+          "trace_wall_ns": 9345209,
+          "fixture_wall_ns": 9344000,
+          "fixture_foreground_ns": 9002166,
+          "fixture_process_ns": 9683000,
+          "foreground_state_ns": {
+            "Running": 8960918,
+            "Interrupted": 48457,
+            "Preempted": 179251,
+            "Blocked": 143460,
+            "Runnable": 13123
+          },
+          "all_threads_state_ns": {
+            "Idle": 18690418,
+            "Terminated": 18690418,
+            "Blocked": 27446255,
+            "Running": 9639625,
+            "Interrupted": 50332,
+            "Preempted": 208001,
+            "Runnable": 36623
+          },
+          "foreground_running_by_core_ns": {
+            "9": 7082541,
+            "8": 1089460,
+            "2": 9625,
+            "7": 329749,
+            "0": 8625,
+            "6": 440918
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "10": {
+          "trace_wall_ns": 17077625,
+          "fixture_wall_ns": 17076000,
+          "fixture_foreground_ns": 16777792,
+          "fixture_process_ns": 17388000,
+          "foreground_state_ns": {
+            "Running": 16648088,
+            "Interrupted": 132540,
+            "Preempted": 132748,
+            "Blocked": 147666,
+            "Runnable": 16583
+          },
+          "all_threads_state_ns": {
+            "Idle": 34155250,
+            "Terminated": 34155250,
+            "Blocked": 50748791,
+            "Running": 17252588,
+            "Interrupted": 135707,
+            "Preempted": 132748,
+            "Runnable": 40666
+          },
+          "foreground_running_by_core_ns": {
+            "6": 2993461,
+            "9": 9817085,
+            "0": 112418,
+            "7": 3243331,
+            "2": 50083,
+            "4": 8541,
+            "1": 10043,
+            "8": 413126
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "11": {
+          "trace_wall_ns": 31553125,
+          "fixture_wall_ns": 31551000,
+          "fixture_foreground_ns": 31361791,
+          "fixture_process_ns": 31945000,
+          "foreground_state_ns": {
+            "Running": 30996839,
+            "Blocked": 142793,
+            "Runnable": 8831,
+            "Interrupted": 368121,
+            "Preempted": 36541
+          },
+          "all_threads_state_ns": {
+            "Idle": 63106250,
+            "Terminated": 63106250,
+            "Blocked": 94200084,
+            "Running": 31577045,
+            "Runnable": 27293,
+            "Interrupted": 371537,
+            "Preempted": 36541
+          },
+          "foreground_running_by_core_ns": {
+            "8": 19037964,
+            "7": 424209,
+            "6": 3986999,
+            "9": 7541583,
+            "1": 6084
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "12": {
+          "trace_wall_ns": 3410542,
+          "fixture_wall_ns": 3408000,
+          "fixture_foreground_ns": 3196042,
+          "fixture_process_ns": 3651000,
+          "foreground_state_ns": {
+            "Running": 3185748,
+            "Interrupted": 13253,
+            "Blocked": 96124,
+            "Runnable": 25251,
+            "Preempted": 90166
+          },
+          "all_threads_state_ns": {
+            "Idle": 6821084,
+            "Terminated": 6821084,
+            "Blocked": 9708208,
+            "Running": 3628831,
+            "Interrupted": 27423,
+            "Runnable": 73249,
+            "Preempted": 204457
+          },
+          "foreground_running_by_core_ns": {
+            "9": 983333,
+            "8": 1432457,
+            "6": 731252,
+            "0": 28874,
+            "3": 4333,
+            "2": 5499
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "13": {
+          "trace_wall_ns": 8815916,
+          "fixture_wall_ns": 8814000,
+          "fixture_foreground_ns": 8724666,
+          "fixture_process_ns": 9122000,
+          "foreground_state_ns": {
+            "Running": 8481421,
+            "Blocked": 76956,
+            "Runnable": 12460,
+            "Interrupted": 245079
+          },
+          "all_threads_state_ns": {
+            "Idle": 17631832,
+            "Terminated": 17631832,
+            "Blocked": 26108787,
+            "Running": 8867003,
+            "Runnable": 28544,
+            "Interrupted": 257997,
+            "Preempted": 1333
+          },
+          "foreground_running_by_core_ns": {
+            "8": 2342875,
+            "6": 4291421,
+            "9": 1847125
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "14": {
+          "trace_wall_ns": 16233291,
+          "fixture_wall_ns": 16231000,
+          "fixture_foreground_ns": 16135708,
+          "fixture_process_ns": 16559000,
+          "foreground_state_ns": {
+            "Running": 15679697,
+            "Blocked": 65668,
+            "Runnable": 10625,
+            "Interrupted": 457799,
+            "Preempted": 19502
+          },
+          "all_threads_state_ns": {
+            "Idle": 32466582,
+            "Terminated": 32466582,
+            "Blocked": 48324790,
+            "Running": 16102571,
+            "Runnable": 28043,
+            "Interrupted": 458258,
+            "Preempted": 19502
+          },
+          "foreground_running_by_core_ns": {
+            "9": 5285081,
+            "8": 2461290,
+            "6": 7933326
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "15": {
+          "trace_wall_ns": 31009459,
+          "fixture_wall_ns": 31007000,
+          "fixture_foreground_ns": 30800333,
+          "fixture_process_ns": 31138000,
+          "foreground_state_ns": {
+            "Running": 30360047,
+            "Interrupted": 443453,
+            "Blocked": 58709,
+            "Runnable": 11167,
+            "Preempted": 136083
+          },
+          "all_threads_state_ns": {
+            "Idle": 62018918,
+            "Terminated": 62018918,
+            "Blocked": 92731963,
+            "Running": 30692001,
+            "Interrupted": 449496,
+            "Runnable": 28293,
+            "Preempted": 136083
+          },
+          "foreground_running_by_core_ns": {
+            "6": 12029463,
+            "9": 17628790,
+            "3": 11709,
+            "8": 673542,
+            "1": 12167,
+            "0": 4376
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "16": {
+          "trace_wall_ns": 2955541,
+          "fixture_wall_ns": 2954000,
+          "fixture_foreground_ns": 2896292,
+          "fixture_process_ns": 3215000,
+          "foreground_state_ns": {
+            "Running": 2895584,
+            "Blocked": 46541,
+            "Runnable": 6833,
+            "Interrupted": 2666,
+            "Preempted": 3917
+          },
+          "all_threads_state_ns": {
+            "Idle": 5911082,
+            "Terminated": 5911082,
+            "Blocked": 8567205,
+            "Running": 3212290,
+            "Runnable": 24251,
+            "Interrupted": 5001,
+            "Preempted": 13417
+          },
+          "foreground_running_by_core_ns": {
+            "9": 1411043,
+            "8": 1317625,
+            "6": 166916
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "17": {
+          "trace_wall_ns": 8809084,
+          "fixture_wall_ns": 8807000,
+          "fixture_foreground_ns": 8640291,
+          "fixture_process_ns": 8967000,
+          "foreground_state_ns": {
+            "Running": 8412786,
+            "Interrupted": 231420,
+            "Preempted": 120129,
+            "Blocked": 39333,
+            "Runnable": 5416
+          },
+          "all_threads_state_ns": {
+            "Idle": 17618168,
+            "Terminated": 17618168,
+            "Blocked": 26112667,
+            "Running": 8739122,
+            "Interrupted": 232835,
+            "Preempted": 125462,
+            "Runnable": 26250
+          },
+          "foreground_running_by_core_ns": {
+            "8": 4318288,
+            "9": 689003,
+            "6": 3374578,
+            "1": 8167,
+            "3": 22750
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "18": {
+          "trace_wall_ns": 15763416,
+          "fixture_wall_ns": 15762000,
+          "fixture_foreground_ns": 15685875,
+          "fixture_process_ns": 15971000,
+          "foreground_state_ns": {
+            "Running": 15589252,
+            "Blocked": 40044,
+            "Runnable": 5040,
+            "Interrupted": 99079,
+            "Preempted": 30001
+          },
+          "all_threads_state_ns": {
+            "Idle": 31526832,
+            "Terminated": 31526832,
+            "Blocked": 47019250,
+            "Running": 15877960,
+            "Runnable": 25124,
+            "Interrupted": 99371,
+            "Preempted": 31959
+          },
+          "foreground_running_by_core_ns": {
+            "6": 7749917,
+            "7": 3943793,
+            "8": 398210,
+            "9": 3497332
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "19": {
+          "trace_wall_ns": 31158041,
+          "fixture_wall_ns": 31155000,
+          "fixture_foreground_ns": 30741583,
+          "fixture_process_ns": 31049000,
+          "foreground_state_ns": {
+            "Running": 30656753,
+            "Blocked": 46833,
+            "Runnable": 6750,
+            "Interrupted": 87535,
+            "Preempted": 360170
+          },
+          "all_threads_state_ns": {
+            "Idle": 62316082,
+            "Terminated": 62316082,
+            "Blocked": 93199455,
+            "Running": 30962257,
+            "Runnable": 21290,
+            "Interrupted": 88992,
+            "Preempted": 360170
+          },
+          "foreground_running_by_core_ns": {
+            "8": 19846835,
+            "6": 941210,
+            "5": 14000,
+            "7": 255916,
+            "1": 14666,
+            "0": 75250,
+            "9": 9432416,
+            "2": 27335,
+            "3": 23626,
+            "4": 25499
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "20": {
+          "trace_wall_ns": 3643500,
+          "fixture_wall_ns": 3642000,
+          "fixture_foreground_ns": 3482667,
+          "fixture_process_ns": 4195000,
+          "foreground_state_ns": {
+            "Running": 3473751,
+            "Interrupted": 11541,
+            "Preempted": 8875,
+            "Blocked": 139457,
+            "Runnable": 9876
+          },
+          "all_threads_state_ns": {
+            "Idle": 7287000,
+            "Terminated": 7287000,
+            "Blocked": 10322496,
+            "Running": 4183919,
+            "Interrupted": 15414,
+            "Preempted": 17958,
+            "Runnable": 34213
+          },
+          "foreground_running_by_core_ns": {
+            "8": 1951125,
+            "7": 633500,
+            "6": 12082,
+            "9": 877044
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "21": {
+          "trace_wall_ns": 9015291,
+          "fixture_wall_ns": 9014000,
+          "fixture_foreground_ns": 8859833,
+          "fixture_process_ns": 9439000,
+          "foreground_state_ns": {
+            "Running": 8833583,
+            "Blocked": 128165,
+            "Runnable": 8626,
+            "Interrupted": 29834,
+            "Preempted": 15083
+          },
+          "all_threads_state_ns": {
+            "Idle": 18030582,
+            "Terminated": 18030582,
+            "Blocked": 26568161,
+            "Running": 9411169,
+            "Runnable": 29500,
+            "Interrupted": 33626,
+            "Preempted": 18708
+          },
+          "foreground_running_by_core_ns": {
+            "7": 5281957,
+            "9": 3551626
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "22": {
+          "trace_wall_ns": 17366375,
+          "fixture_wall_ns": 17364000,
+          "fixture_foreground_ns": 16696750,
+          "fixture_process_ns": 17426000,
+          "foreground_state_ns": {
+            "Running": 16500834,
+            "Blocked": 171748,
+            "Runnable": 27917,
+            "Interrupted": 201462,
+            "Preempted": 464414
+          },
+          "all_threads_state_ns": {
+            "Idle": 34732750,
+            "Terminated": 34732750,
+            "Blocked": 51414415,
+            "Running": 17207746,
+            "Runnable": 59166,
+            "Interrupted": 223338,
+            "Preempted": 560835
+          },
+          "foreground_running_by_core_ns": {
+            "9": 6488374,
+            "8": 3769790,
+            "2": 39625,
+            "7": 5057334,
+            "6": 918538,
+            "0": 105919,
+            "1": 94418,
+            "3": 14209,
+            "4": 8626,
+            "5": 4001
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "23": {
+          "trace_wall_ns": 30344334,
+          "fixture_wall_ns": 30340000,
+          "fixture_foreground_ns": 30064792,
+          "fixture_process_ns": 30693000,
+          "foreground_state_ns": {
+            "Running": 29963336,
+            "Blocked": 170918,
+            "Runnable": 10083,
+            "Interrupted": 105539,
+            "Preempted": 94458
+          },
+          "all_threads_state_ns": {
+            "Idle": 60688668,
+            "Terminated": 60688668,
+            "Blocked": 90534337,
+            "Running": 30590545,
+            "Runnable": 51915,
+            "Interrupted": 106081,
+            "Preempted": 94458
+          },
+          "foreground_running_by_core_ns": {
+            "8": 1176624,
+            "9": 327997,
+            "3": 14834,
+            "2": 14499,
+            "7": 28072882,
+            "6": 356500
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "24": {
+          "trace_wall_ns": 2956375,
+          "fixture_wall_ns": 2953000,
+          "fixture_foreground_ns": 2892667,
+          "fixture_process_ns": 3225000,
+          "foreground_state_ns": {
+            "Running": 2890460,
+            "Interrupted": 3917,
+            "Blocked": 47165,
+            "Runnable": 14833
+          },
+          "all_threads_state_ns": {
+            "Idle": 5912750,
+            "Terminated": 5912750,
+            "Blocked": 8532582,
+            "Running": 3219502,
+            "Runnable": 68333,
+            "Interrupted": 5083
+          },
+          "foreground_running_by_core_ns": {
+            "8": 1454500,
+            "7": 1435960
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "25": {
+          "trace_wall_ns": 7890708,
+          "fixture_wall_ns": 7889000,
+          "fixture_foreground_ns": 7811458,
+          "fixture_process_ns": 8154000,
+          "foreground_state_ns": {
+            "Running": 7799375,
+            "Interrupted": 14749,
+            "Blocked": 44207,
+            "Runnable": 11417,
+            "Preempted": 20960
+          },
+          "all_threads_state_ns": {
+            "Idle": 15781416,
+            "Terminated": 15781416,
+            "Blocked": 23323163,
+            "Running": 8137749,
+            "Interrupted": 15916,
+            "Runnable": 65044,
+            "Preempted": 20960
+          },
+          "foreground_running_by_core_ns": {
+            "7": 3594334,
+            "8": 2237583,
+            "1": 10207,
+            "9": 1957251
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "26": {
+          "trace_wall_ns": 14200250,
+          "fixture_wall_ns": 14198000,
+          "fixture_foreground_ns": 14155041,
+          "fixture_process_ns": 14454000,
+          "foreground_state_ns": {
+            "Running": 14132792,
+            "Interrupted": 23584,
+            "Blocked": 32625,
+            "Runnable": 9458,
+            "Preempted": 1791
+          },
+          "all_threads_state_ns": {
+            "Idle": 28400500,
+            "Terminated": 28400500,
+            "Blocked": 42285626,
+            "Running": 14428248,
+            "Interrupted": 24000,
+            "Runnable": 61335,
+            "Preempted": 1791
+          },
+          "foreground_running_by_core_ns": {
+            "7": 7061376,
+            "8": 5586291,
+            "6": 1485125
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "27": {
+          "trace_wall_ns": 27483542,
+          "fixture_wall_ns": 27482000,
+          "fixture_foreground_ns": 27431417,
+          "fixture_process_ns": 27740000,
+          "foreground_state_ns": {
+            "Running": 27358377,
+            "Interrupted": 75708,
+            "Blocked": 33498,
+            "Runnable": 10542,
+            "Preempted": 5417
+          },
+          "all_threads_state_ns": {
+            "Idle": 54967084,
+            "Terminated": 54967084,
+            "Blocked": 82127541,
+            "Running": 27667129,
+            "Interrupted": 75708,
+            "Runnable": 58373,
+            "Preempted": 5417
+          },
+          "foreground_running_by_core_ns": {
+            "8": 16053711,
+            "7": 4442708,
+            "9": 6861958
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "28": {
+          "trace_wall_ns": 2885000,
+          "fixture_wall_ns": 2883000,
+          "fixture_foreground_ns": 2778417,
+          "fixture_process_ns": 3309000,
+          "foreground_state_ns": {
+            "Running": 2777874,
+            "Interrupted": 2083,
+            "Blocked": 82666,
+            "Runnable": 22377
+          },
+          "all_threads_state_ns": {
+            "Idle": 5770000,
+            "Terminated": 5770000,
+            "Blocked": 8146833,
+            "Running": 3304793,
+            "Interrupted": 5916,
+            "Runnable": 69708,
+            "Preempted": 12750
+          },
+          "foreground_running_by_core_ns": {
+            "9": 830084,
+            "8": 672291,
+            "7": 781708,
+            "6": 493791
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "29": {
+          "trace_wall_ns": 7517500,
+          "fixture_wall_ns": 7516000,
+          "fixture_foreground_ns": 7383666,
+          "fixture_process_ns": 7945000,
+          "foreground_state_ns": {
+            "Running": 7381709,
+            "Interrupted": 3292,
+            "Blocked": 106666,
+            "Runnable": 25833
+          },
+          "all_threads_state_ns": {
+            "Idle": 15035000,
+            "Terminated": 15035000,
+            "Blocked": 22046461,
+            "Running": 7942081,
+            "Runnable": 77541,
+            "Interrupted": 3917
+          },
+          "foreground_running_by_core_ns": {
+            "9": 3859207,
+            "6": 3522502
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "30": {
+          "trace_wall_ns": 14101041,
+          "fixture_wall_ns": 14098000,
+          "fixture_foreground_ns": 13967500,
+          "fixture_process_ns": 14547000,
+          "foreground_state_ns": {
+            "Running": 13927164,
+            "Blocked": 107210,
+            "Runnable": 21957,
+            "Interrupted": 42960,
+            "Preempted": 1750
+          },
+          "all_threads_state_ns": {
+            "Idle": 28202082,
+            "Terminated": 28202082,
+            "Blocked": 41778126,
+            "Running": 14504330,
+            "Runnable": 76289,
+            "Interrupted": 43669,
+            "Preempted": 1750
+          },
+          "foreground_running_by_core_ns": {
+            "9": 3339125,
+            "6": 3373625,
+            "8": 287083,
+            "7": 6927331
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "31": {
+          "trace_wall_ns": 27342625,
+          "fixture_wall_ns": 27340000,
+          "fixture_foreground_ns": 27198625,
+          "fixture_process_ns": 27747000,
+          "foreground_state_ns": {
+            "Running": 27153874,
+            "Interrupted": 42670,
+            "Blocked": 112415,
+            "Runnable": 28083,
+            "Preempted": 5583
+          },
+          "all_threads_state_ns": {
+            "Idle": 54685250,
+            "Terminated": 54685250,
+            "Blocked": 81541038,
+            "Running": 27699083,
+            "Interrupted": 42670,
+            "Runnable": 82126,
+            "Preempted": 5583
+          },
+          "foreground_running_by_core_ns": {
+            "8": 2210708,
+            "7": 18481707,
+            "9": 6457167,
+            "6": 4292
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "32": {
+          "trace_wall_ns": 2682292,
+          "fixture_wall_ns": 2680000,
+          "fixture_foreground_ns": 2637959,
+          "fixture_process_ns": 2928000,
+          "foreground_state_ns": {
+            "Running": 2635041,
+            "Blocked": 35459,
+            "Runnable": 8375,
+            "Interrupted": 3417
+          },
+          "all_threads_state_ns": {
+            "Idle": 5364584,
+            "Terminated": 5364584,
+            "Blocked": 7756669,
+            "Running": 2925791,
+            "Runnable": 42833,
+            "Interrupted": 3875
+          },
+          "foreground_running_by_core_ns": {
+            "6": 835375,
+            "8": 1799666
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "33": {
+          "trace_wall_ns": 7239833,
+          "fixture_wall_ns": 7236000,
+          "fixture_foreground_ns": 7185875,
+          "fixture_process_ns": 7456000,
+          "foreground_state_ns": {
+            "Running": 7187249,
+            "Blocked": 41040,
+            "Runnable": 8792,
+            "Interrupted": 2752
+          },
+          "all_threads_state_ns": {
+            "Idle": 14479666,
+            "Terminated": 14479666,
+            "Blocked": 21452955,
+            "Running": 7456291,
+            "Runnable": 47334,
+            "Interrupted": 2752
+          },
+          "foreground_running_by_core_ns": {
+            "6": 3597750,
+            "8": 3589499
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "34": {
+          "trace_wall_ns": 13692292,
+          "fixture_wall_ns": 13690000,
+          "fixture_foreground_ns": 13620542,
+          "fixture_process_ns": 13947000,
+          "foreground_state_ns": {
+            "Running": 13569792,
+            "Blocked": 43249,
+            "Runnable": 8626,
+            "Interrupted": 53500,
+            "Preempted": 17125
+          },
+          "all_threads_state_ns": {
+            "Idle": 27384584,
+            "Terminated": 27384584,
+            "Blocked": 40752292,
+            "Running": 13893835,
+            "Runnable": 52416,
+            "Interrupted": 53500,
+            "Preempted": 17125
+          },
+          "foreground_running_by_core_ns": {
+            "8": 6761625,
+            "6": 6793501,
+            "9": 7583,
+            "5": 7083
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "35": {
+          "trace_wall_ns": 27063083,
+          "fixture_wall_ns": 27061000,
+          "fixture_foreground_ns": 27018583,
+          "fixture_process_ns": 27316000,
+          "foreground_state_ns": {
+            "Running": 26944373,
+            "Blocked": 34709,
+            "Runnable": 5375,
+            "Interrupted": 76584,
+            "Preempted": 2042
+          },
+          "all_threads_state_ns": {
+            "Idle": 54126166,
+            "Terminated": 54126166,
+            "Blocked": 80891583,
+            "Running": 27240666,
+            "Runnable": 41457,
+            "Interrupted": 76584,
+            "Preempted": 2042
+          },
+          "foreground_running_by_core_ns": {
+            "6": 193499,
+            "9": 6758709,
+            "8": 13497375,
+            "7": 6494790
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "36": {
+          "trace_wall_ns": 3966167,
+          "fixture_wall_ns": 3965000,
+          "fixture_foreground_ns": 3915084,
+          "fixture_process_ns": 4693000,
+          "foreground_state_ns": {
+            "Running": 3912835,
+            "Blocked": 37958,
+            "Runnable": 11542,
+            "Interrupted": 3832
+          },
+          "all_threads_state_ns": {
+            "Idle": 7932334,
+            "Terminated": 7932334,
+            "Blocked": 11088208,
+            "Running": 4682294,
+            "Runnable": 89876,
+            "Interrupted": 4290
+          },
+          "foreground_running_by_core_ns": {
+            "6": 2291626,
+            "9": 1621209
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "37": {
+          "trace_wall_ns": 8461333,
+          "fixture_wall_ns": 8460000,
+          "fixture_foreground_ns": 8410958,
+          "fixture_process_ns": 9190000,
+          "foreground_state_ns": {
+            "Running": 8401960,
+            "Blocked": 40291,
+            "Runnable": 8667,
+            "Interrupted": 10415
+          },
+          "all_threads_state_ns": {
+            "Idle": 16922666,
+            "Terminated": 16922666,
+            "Blocked": 24580451,
+            "Running": 9179338,
+            "Runnable": 74337,
+            "Interrupted": 11206
+          },
+          "foreground_running_by_core_ns": {
+            "6": 4105002,
+            "9": 4296958
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "38": {
+          "trace_wall_ns": 15047042,
+          "fixture_wall_ns": 15045000,
+          "fixture_foreground_ns": 14991791,
+          "fixture_process_ns": 15751000,
+          "foreground_state_ns": {
+            "Running": 14971456,
+            "Blocked": 42125,
+            "Runnable": 11334,
+            "Interrupted": 22127
+          },
+          "all_threads_state_ns": {
+            "Idle": 30094084,
+            "Terminated": 30094084,
+            "Blocked": 44356045,
+            "Running": 15729538,
+            "Runnable": 79667,
+            "Interrupted": 22918
+          },
+          "foreground_running_by_core_ns": {
+            "9": 7552584,
+            "6": 7418872
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "39": {
+          "trace_wall_ns": 28585458,
+          "fixture_wall_ns": 28583000,
+          "fixture_foreground_ns": 28526917,
+          "fixture_process_ns": 29319000,
+          "foreground_state_ns": {
+            "Running": 28469039,
+            "Blocked": 39167,
+            "Runnable": 10499,
+            "Interrupted": 60627,
+            "Preempted": 6126
+          },
+          "all_threads_state_ns": {
+            "Idle": 57170916,
+            "Terminated": 57170916,
+            "Blocked": 84927456,
+            "Running": 29260373,
+            "Runnable": 87250,
+            "Interrupted": 60627,
+            "Preempted": 6126
+          },
+          "foreground_running_by_core_ns": {
+            "6": 2610706,
+            "8": 11929709,
+            "7": 7221000,
+            "9": 6707624
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "40": {
+          "trace_wall_ns": 5850375,
+          "fixture_wall_ns": 5848000,
+          "fixture_foreground_ns": 5672709,
+          "fixture_process_ns": 6579000,
+          "foreground_state_ns": {
+            "Running": 5669541,
+            "Blocked": 149418,
+            "Runnable": 26874,
+            "Interrupted": 4542
+          },
+          "all_threads_state_ns": {
+            "Idle": 11700750,
+            "Terminated": 11700750,
+            "Blocked": 16722168,
+            "Running": 6574873,
+            "Runnable": 99625,
+            "Interrupted": 4834
+          },
+          "foreground_running_by_core_ns": {
+            "6": 2712750,
+            "9": 2956791
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "41": {
+          "trace_wall_ns": 14971916,
+          "fixture_wall_ns": 14969000,
+          "fixture_foreground_ns": 14829000,
+          "fixture_process_ns": 15648000,
+          "foreground_state_ns": {
+            "Running": 14818039,
+            "Blocked": 111670,
+            "Runnable": 26623,
+            "Interrupted": 13584,
+            "Preempted": 2000
+          },
+          "all_threads_state_ns": {
+            "Idle": 29943832,
+            "Terminated": 29943832,
+            "Blocked": 44139836,
+            "Running": 15632331,
+            "Runnable": 99288,
+            "Interrupted": 14209,
+            "Preempted": 2000
+          },
+          "foreground_running_by_core_ns": {
+            "9": 168916,
+            "6": 4518167,
+            "8": 6325207,
+            "7": 3805749
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "42": {
+          "trace_wall_ns": 28142333,
+          "fixture_wall_ns": 28140000,
+          "fixture_foreground_ns": 27965333,
+          "fixture_process_ns": 28754000,
+          "foreground_state_ns": {
+            "Running": 27949169,
+            "Blocked": 105999,
+            "Runnable": 25791,
+            "Interrupted": 18705,
+            "Preempted": 42669
+          },
+          "all_threads_state_ns": {
+            "Idle": 56284666,
+            "Terminated": 56284666,
+            "Blocked": 83684416,
+            "Running": 28738376,
+            "Runnable": 85166,
+            "Interrupted": 18705,
+            "Preempted": 42669
+          },
+          "foreground_running_by_core_ns": {
+            "7": 14026918,
+            "6": 6611418,
+            "8": 2286750,
+            "0": 9000,
+            "2": 6291,
+            "9": 5008792
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "43": {
+          "trace_wall_ns": 54229042,
+          "fixture_wall_ns": 54226000,
+          "fixture_foreground_ns": 54082291,
+          "fixture_process_ns": 54786000,
+          "foreground_state_ns": {
+            "Running": 53973669,
+            "Blocked": 110792,
+            "Runnable": 24958,
+            "Interrupted": 110998,
+            "Preempted": 8625
+          },
+          "all_threads_state_ns": {
+            "Idle": 108458084,
+            "Terminated": 108458084,
+            "Blocked": 162025296,
+            "Running": 54675919,
+            "Runnable": 95330,
+            "Interrupted": 110998,
+            "Preempted": 8625
+          },
+          "foreground_running_by_core_ns": {
+            "8": 24846748,
+            "6": 7356335,
+            "9": 8533001,
+            "7": 13237585
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "44": {
+          "trace_wall_ns": 3668208,
+          "fixture_wall_ns": 3667000,
+          "fixture_foreground_ns": 3462666,
+          "fixture_process_ns": 4184000,
+          "foreground_state_ns": {
+            "Running": 3460252,
+            "Blocked": 170165,
+            "Runnable": 31999,
+            "Interrupted": 3459,
+            "Preempted": 2333
+          },
+          "all_threads_state_ns": {
+            "Idle": 7336416,
+            "Terminated": 7336416,
+            "Blocked": 10348165,
+            "Running": 4180707,
+            "Runnable": 137793,
+            "Interrupted": 3834,
+            "Preempted": 2333
+          },
+          "foreground_running_by_core_ns": {
+            "6": 1899127,
+            "9": 1192124,
+            "7": 369001
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "45": {
+          "trace_wall_ns": 8135708,
+          "fixture_wall_ns": 8133000,
+          "fixture_foreground_ns": 7954792,
+          "fixture_process_ns": 8592000,
+          "foreground_state_ns": {
+            "Running": 7952835,
+            "Blocked": 152667,
+            "Runnable": 26832,
+            "Interrupted": 3374
+          },
+          "all_threads_state_ns": {
+            "Idle": 16271416,
+            "Terminated": 16271416,
+            "Blocked": 23816082,
+            "Running": 8586377,
+            "Runnable": 136999,
+            "Interrupted": 3374
+          },
+          "foreground_running_by_core_ns": {
+            "9": 4274043,
+            "6": 3678792
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "46": {
+          "trace_wall_ns": 14648875,
+          "fixture_wall_ns": 14647000,
+          "fixture_foreground_ns": 14454375,
+          "fixture_process_ns": 15132000,
+          "foreground_state_ns": {
+            "Running": 14437376,
+            "Blocked": 163582,
+            "Runnable": 27709,
+            "Interrupted": 18292,
+            "Preempted": 1916
+          },
+          "all_threads_state_ns": {
+            "Idle": 29297750,
+            "Terminated": 29297750,
+            "Blocked": 43321210,
+            "Running": 15112665,
+            "Runnable": 137750,
+            "Interrupted": 19167,
+            "Preempted": 4708
+          },
+          "foreground_running_by_core_ns": {
+            "6": 3830875,
+            "9": 7419333,
+            "8": 3187168
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "47": {
+          "trace_wall_ns": 27854167,
+          "fixture_wall_ns": 27853000,
+          "fixture_foreground_ns": 27620167,
+          "fixture_process_ns": 28321000,
+          "foreground_state_ns": {
+            "Running": 27567166,
+            "Interrupted": 55210,
+            "Blocked": 185793,
+            "Runnable": 34165,
+            "Preempted": 11833
+          },
+          "all_threads_state_ns": {
+            "Idle": 55708334,
+            "Terminated": 55708334,
+            "Blocked": 82944586,
+            "Running": 28266754,
+            "Interrupted": 55710,
+            "Runnable": 137785,
+            "Preempted": 11833
+          },
+          "foreground_running_by_core_ns": {
+            "6": 952333,
+            "9": 6723500,
+            "7": 14202123,
+            "8": 5689210
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "48": {
+          "trace_wall_ns": 5135417,
+          "fixture_wall_ns": 5134000,
+          "fixture_foreground_ns": 5017125,
+          "fixture_process_ns": 5928000,
+          "foreground_state_ns": {
+            "Running": 5016416,
+            "Interrupted": 2167,
+            "Blocked": 94126,
+            "Runnable": 22708
+          },
+          "all_threads_state_ns": {
+            "Idle": 10270834,
+            "Terminated": 10270834,
+            "Blocked": 14482166,
+            "Running": 5925836,
+            "Interrupted": 2167,
+            "Runnable": 131499
+          },
+          "foreground_running_by_core_ns": {
+            "9": 2476625,
+            "6": 2539791
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "49": {
+          "trace_wall_ns": 10936333,
+          "fixture_wall_ns": 10934000,
+          "fixture_foreground_ns": 10804125,
+          "fixture_process_ns": 11686000,
+          "foreground_state_ns": {
+            "Running": 10773296,
+            "Blocked": 96750,
+            "Runnable": 26958,
+            "Interrupted": 32871,
+            "Preempted": 6458
+          },
+          "all_threads_state_ns": {
+            "Idle": 21872666,
+            "Terminated": 21872666,
+            "Blocked": 31912832,
+            "Running": 11648215,
+            "Runnable": 144956,
+            "Interrupted": 32871,
+            "Preempted": 6458
+          },
+          "foreground_running_by_core_ns": {
+            "9": 4314836,
+            "6": 6458460
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "50": {
+          "trace_wall_ns": 19380583,
+          "fixture_wall_ns": 19379000,
+          "fixture_foreground_ns": 19218792,
+          "fixture_process_ns": 20199000,
+          "foreground_state_ns": {
+            "Running": 19178170,
+            "Blocked": 120373,
+            "Runnable": 30625,
+            "Interrupted": 42248,
+            "Preempted": 9167
+          },
+          "all_threads_state_ns": {
+            "Idle": 38761166,
+            "Terminated": 38761166,
+            "Blocked": 57158166,
+            "Running": 20148626,
+            "Runnable": 163667,
+            "Interrupted": 42706,
+            "Preempted": 9167
+          },
+          "foreground_running_by_core_ns": {
+            "9": 5171959,
+            "6": 9431835,
+            "8": 605625,
+            "7": 3968751
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "51": {
+          "trace_wall_ns": 35944292,
+          "fixture_wall_ns": 35942000,
+          "fixture_foreground_ns": 35798166,
+          "fixture_process_ns": 36691000,
+          "foreground_state_ns": {
+            "Running": 35739627,
+            "Interrupted": 60580,
+            "Blocked": 108417,
+            "Runnable": 26793,
+            "Preempted": 8875
+          },
+          "all_threads_state_ns": {
+            "Idle": 71888584,
+            "Terminated": 71888584,
+            "Blocked": 106925541,
+            "Running": 36628924,
+            "Runnable": 152748,
+            "Interrupted": 61080,
+            "Preempted": 8875
+          },
+          "foreground_running_by_core_ns": {
+            "6": 10311254,
+            "8": 14653791,
+            "7": 9159833,
+            "9": 1614749
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "52": {
+          "trace_wall_ns": 5016250,
+          "fixture_wall_ns": 5014000,
+          "fixture_foreground_ns": 4865833,
+          "fixture_process_ns": 5920000,
+          "foreground_state_ns": {
+            "Running": 4865416,
+            "Interrupted": 2291,
+            "Blocked": 121127,
+            "Runnable": 27416
+          },
+          "all_threads_state_ns": {
+            "Idle": 10032500,
+            "Terminated": 10032500,
+            "Blocked": 13981334,
+            "Running": 5919414,
+            "Interrupted": 2291,
+            "Runnable": 161961
+          },
+          "foreground_running_by_core_ns": {
+            "9": 2756208,
+            "7": 2109208
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "53": {
+          "trace_wall_ns": 11129000,
+          "fixture_wall_ns": 11127000,
+          "fixture_foreground_ns": 10989750,
+          "fixture_process_ns": 12045000,
+          "foreground_state_ns": {
+            "Running": 10944376,
+            "Interrupted": 47749,
+            "Blocked": 107042,
+            "Runnable": 26000,
+            "Preempted": 3833
+          },
+          "all_threads_state_ns": {
+            "Idle": 22258000,
+            "Terminated": 22258000,
+            "Blocked": 32307998,
+            "Running": 11995209,
+            "Interrupted": 47749,
+            "Runnable": 161211,
+            "Preempted": 3833
+          },
+          "foreground_running_by_core_ns": {
+            "9": 1826501,
+            "7": 7836917,
+            "8": 718083,
+            "6": 562875
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "54": {
+          "trace_wall_ns": 19183208,
+          "fixture_wall_ns": 19181000,
+          "fixture_foreground_ns": 19028917,
+          "fixture_process_ns": 20058000,
+          "foreground_state_ns": {
+            "Running": 19005793,
+            "Blocked": 114166,
+            "Runnable": 33917,
+            "Interrupted": 23832,
+            "Preempted": 5500
+          },
+          "all_threads_state_ns": {
+            "Idle": 38366416,
+            "Terminated": 38366416,
+            "Blocked": 56494208,
+            "Running": 20031710,
+            "Runnable": 176832,
+            "Interrupted": 24582,
+            "Preempted": 5500
+          },
+          "foreground_running_by_core_ns": {
+            "6": 1557749,
+            "8": 12865086,
+            "9": 162875,
+            "7": 4420083
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "55": {
+          "trace_wall_ns": 35555375,
+          "fixture_wall_ns": 35554000,
+          "fixture_foreground_ns": 35442917,
+          "fixture_process_ns": 36488000,
+          "foreground_state_ns": {
+            "Running": 35399041,
+            "Interrupted": 45291,
+            "Blocked": 89709,
+            "Runnable": 21334
+          },
+          "all_threads_state_ns": {
+            "Idle": 71110750,
+            "Terminated": 71110750,
+            "Blocked": 105571749,
+            "Running": 36435044,
+            "Runnable": 168707,
+            "Interrupted": 46000
+          },
+          "foreground_running_by_core_ns": {
+            "9": 9344914,
+            "6": 26054127
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "56": {
+          "trace_wall_ns": 2628750,
+          "fixture_wall_ns": 2626000,
+          "fixture_foreground_ns": 2577500,
+          "fixture_process_ns": 2999000,
+          "foreground_state_ns": {
+            "Running": 2578459,
+            "Blocked": 39749,
+            "Runnable": 9584,
+            "Interrupted": 958
+          },
+          "all_threads_state_ns": {
+            "Idle": 5257500,
+            "Terminated": 5257500,
+            "Blocked": 7462251,
+            "Running": 2998336,
+            "Runnable": 52872,
+            "Interrupted": 1541
+          },
+          "foreground_running_by_core_ns": {
+            "9": 647541,
+            "8": 1930918
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "57": {
+          "trace_wall_ns": 7544959,
+          "fixture_wall_ns": 7543000,
+          "fixture_foreground_ns": 7479541,
+          "fixture_process_ns": 7812000,
+          "foreground_state_ns": {
+            "Running": 7464545,
+            "Blocked": 45040,
+            "Runnable": 19124,
+            "Interrupted": 13875,
+            "Preempted": 2375
+          },
+          "all_threads_state_ns": {
+            "Idle": 15089918,
+            "Terminated": 15089918,
+            "Blocked": 22285503,
+            "Running": 7791710,
+            "Runnable": 85873,
+            "Interrupted": 14375,
+            "Preempted": 2375
+          },
+          "foreground_running_by_core_ns": {
+            "8": 177668,
+            "9": 5466252,
+            "6": 1783582,
+            "7": 37043
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "58": {
+          "trace_wall_ns": 13994875,
+          "fixture_wall_ns": 13993000,
+          "fixture_foreground_ns": 13932625,
+          "fixture_process_ns": 14298000,
+          "foreground_state_ns": {
+            "Running": 13920667,
+            "Blocked": 46249,
+            "Runnable": 14458,
+            "Interrupted": 13501
+          },
+          "all_threads_state_ns": {
+            "Idle": 27989750,
+            "Terminated": 27989750,
+            "Blocked": 41611210,
+            "Running": 14287414,
+            "Runnable": 67375,
+            "Interrupted": 13501
+          },
+          "foreground_running_by_core_ns": {
+            "7": 6966249,
+            "9": 3593085,
+            "8": 3361333
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "59": {
+          "trace_wall_ns": 27206834,
+          "fixture_wall_ns": 27204000,
+          "fixture_foreground_ns": 27131667,
+          "fixture_process_ns": 27489000,
+          "foreground_state_ns": {
+            "Running": 27105170,
+            "Blocked": 52834,
+            "Runnable": 20333,
+            "Interrupted": 28497
+          },
+          "all_threads_state_ns": {
+            "Idle": 54413668,
+            "Terminated": 54413668,
+            "Blocked": 81268628,
+            "Running": 27460751,
+            "Runnable": 69460,
+            "Interrupted": 28497
+          },
+          "foreground_running_by_core_ns": {
+            "8": 6555376,
+            "7": 13792043,
+            "9": 6757751
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "60": {
+          "trace_wall_ns": 16603583,
+          "fixture_wall_ns": 16601000,
+          "fixture_foreground_ns": 14904709,
+          "fixture_process_ns": 21699000,
+          "foreground_state_ns": {
+            "Running": 14858619,
+            "Blocked": 1374837,
+            "Runnable": 286917,
+            "Interrupted": 45252,
+            "Preempted": 37958
+          },
+          "all_threads_state_ns": {
+            "Idle": 33207166,
+            "Terminated": 33207166,
+            "Blocked": 43961092,
+            "Running": 21638412,
+            "Runnable": 684577,
+            "Interrupted": 56917,
+            "Preempted": 73334
+          },
+          "foreground_running_by_core_ns": {
+            "9": 1178040,
+            "8": 5642787,
+            "6": 5921961,
+            "7": 2099165,
+            "0": 16666
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "61": {
+          "trace_wall_ns": 26008375,
+          "fixture_wall_ns": 26005000,
+          "fixture_foreground_ns": 24393334,
+          "fixture_process_ns": 30850000,
+          "foreground_state_ns": {
+            "Running": 24343837,
+            "Blocked": 1273328,
+            "Runnable": 334086,
+            "Interrupted": 52124,
+            "Preempted": 5000
+          },
+          "all_threads_state_ns": {
+            "Idle": 52016750,
+            "Terminated": 52016750,
+            "Blocked": 72305625,
+            "Running": 30783120,
+            "Runnable": 857714,
+            "Interrupted": 68416,
+            "Preempted": 18625
+          },
+          "foreground_running_by_core_ns": {
+            "8": 17743796,
+            "7": 166417,
+            "6": 6429124,
+            "9": 4500
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "62": {
+          "trace_wall_ns": 39444416,
+          "fixture_wall_ns": 39442000,
+          "fixture_foreground_ns": 37831042,
+          "fixture_process_ns": 44128000,
+          "foreground_state_ns": {
+            "Running": 37756839,
+            "Blocked": 1222122,
+            "Runnable": 361249,
+            "Interrupted": 77623,
+            "Preempted": 26583
+          },
+          "all_threads_state_ns": {
+            "Idle": 78888832,
+            "Terminated": 78888832,
+            "Blocked": 112608999,
+            "Running": 44034961,
+            "Runnable": 988121,
+            "Interrupted": 91333,
+            "Preempted": 54250
+          },
+          "foreground_running_by_core_ns": {
+            "9": 8656539,
+            "7": 10340253,
+            "1": 9542,
+            "8": 109585,
+            "6": 18640920
+          },
+          "uncovered_foreground_ns": 0
+        },
+        "63": {
+          "trace_wall_ns": 66681583,
+          "fixture_wall_ns": 66680000,
+          "fixture_foreground_ns": 65078125,
+          "fixture_process_ns": 71387000,
+          "foreground_state_ns": {
+            "Running": 64898699,
+            "Blocked": 1190509,
+            "Runnable": 404043,
+            "Interrupted": 184706,
+            "Preempted": 3626
+          },
+          "all_threads_state_ns": {
+            "Idle": 133363166,
+            "Terminated": 133363166,
+            "Blocked": 194153298,
+            "Running": 71184873,
+            "Runnable": 1179871,
+            "Interrupted": 194248,
+            "Preempted": 14042
+          },
+          "foreground_running_by_core_ns": {
+            "9": 15366210,
+            "7": 20640413,
+            "6": 13507539,
+            "8": 15384537
+          },
+          "uncovered_foreground_ns": 0
+        }
+      },
+      "foreground_coverage_complete": true,
+      "max_uncovered_foreground_ns": 0,
+      "tool_warnings": [
+        "Timeline modification failed -- dylibs overlap by 0x130000:"
+      ],
+      "source_hashes": {
+        "toc.xml": "cea323db34449aa20aa744255114657da38d2e6f8b1ab35925f3b08c278b5d15",
+        "thread-state.xml": "2451a8c1136b73e0fcd962b0963ebb3a5ff34f3dfb16eed63e65577420e8f545",
+        "os-signpost.xml": "96c2e8adae9962822d35db9b930f593aa1d7b26f7ce646dc4e2060bb47cf11ec",
+        "stdout.log": "30cca5ba03463ac68c3ce26c54c824b61c00966b2e8efc539cfb3b0ee78b26b3",
+        "record.log": "f774bf39e477cfa9bda67e4a9f2bdc741ff2c58449675778fad2ecf3d43e1a1f"
+      }
+    },
+    "upstream": {
+      "pid": 64556,
+      "rows": 102,
+      "states": [
+        "Blocked",
+        "Idle",
+        "Interrupted",
+        "Preempted",
+        "Runnable",
+        "Running",
+        "Terminated"
+      ],
+      "cases": {
+        "0": {
+          "trace_wall_ns": 1888875,
+          "fixture_wall_ns": 1887000,
+          "fixture_foreground_ns": 1183083,
+          "fixture_process_ns": 1234000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3777750,
+            "Terminated": 2433709,
+            "Running": 51041,
+            "Blocked": 538959,
+            "Runnable": 958
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1888875
+        },
+        "1": {
+          "trace_wall_ns": 327584,
+          "fixture_wall_ns": 326000,
+          "fixture_foreground_ns": 326291,
+          "fixture_process_ns": 326000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 655168,
+            "Terminated": 655168,
+            "Blocked": 327584
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 327584
+        },
+        "2": {
+          "trace_wall_ns": 341250,
+          "fixture_wall_ns": 340000,
+          "fixture_foreground_ns": 340209,
+          "fixture_process_ns": 341000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 682500,
+            "Terminated": 682500,
+            "Blocked": 341250
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 341250
+        },
+        "3": {
+          "trace_wall_ns": 1608292,
+          "fixture_wall_ns": 1606000,
+          "fixture_foreground_ns": 1600958,
+          "fixture_process_ns": 1600000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3216584,
+            "Terminated": 3216584,
+            "Blocked": 1608292
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1608292
+        },
+        "4": {
+          "trace_wall_ns": 126875,
+          "fixture_wall_ns": 125000,
+          "fixture_foreground_ns": 125500,
+          "fixture_process_ns": 125000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 253750,
+            "Terminated": 253750,
+            "Blocked": 126875
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 126875
+        },
+        "5": {
+          "trace_wall_ns": 489041,
+          "fixture_wall_ns": 488000,
+          "fixture_foreground_ns": 487917,
+          "fixture_process_ns": 488000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 978082,
+            "Terminated": 978082,
+            "Blocked": 489041
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 489041
+        },
+        "6": {
+          "trace_wall_ns": 365500,
+          "fixture_wall_ns": 365000,
+          "fixture_foreground_ns": 364459,
+          "fixture_process_ns": 364000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 731000,
+            "Terminated": 731000,
+            "Blocked": 365500
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 365500
+        },
+        "7": {
+          "trace_wall_ns": 1519000,
+          "fixture_wall_ns": 1518000,
+          "fixture_foreground_ns": 1517916,
+          "fixture_process_ns": 1517000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3038000,
+            "Terminated": 3038000,
+            "Blocked": 1519000
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1519000
+        },
+        "8": {
+          "trace_wall_ns": 1908375,
+          "fixture_wall_ns": 1907000,
+          "fixture_foreground_ns": 1906917,
+          "fixture_process_ns": 1907000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3816750,
+            "Terminated": 3816750,
+            "Blocked": 1908375
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1908375
+        },
+        "9": {
+          "trace_wall_ns": 6929959,
+          "fixture_wall_ns": 6929000,
+          "fixture_foreground_ns": 6928917,
+          "fixture_process_ns": 6930000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 13859918,
+            "Terminated": 13859918,
+            "Blocked": 6929959
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 6929959
+        },
+        "10": {
+          "trace_wall_ns": 13917250,
+          "fixture_wall_ns": 13916000,
+          "fixture_foreground_ns": 13911792,
+          "fixture_process_ns": 13913000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27834500,
+            "Terminated": 27834500,
+            "Blocked": 13917250
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13917250
+        },
+        "11": {
+          "trace_wall_ns": 27920042,
+          "fixture_wall_ns": 27919000,
+          "fixture_foreground_ns": 27909125,
+          "fixture_process_ns": 27910000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 55840084,
+            "Terminated": 55840084,
+            "Blocked": 27920042
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27920042
+        },
+        "12": {
+          "trace_wall_ns": 1843458,
+          "fixture_wall_ns": 1843000,
+          "fixture_foreground_ns": 1842042,
+          "fixture_process_ns": 1841000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3686916,
+            "Terminated": 3686916,
+            "Blocked": 1843458
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1843458
+        },
+        "13": {
+          "trace_wall_ns": 6969666,
+          "fixture_wall_ns": 6969000,
+          "fixture_foreground_ns": 6968417,
+          "fixture_process_ns": 6969000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 13939332,
+            "Terminated": 13939332,
+            "Blocked": 6969666
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 6969666
+        },
+        "14": {
+          "trace_wall_ns": 14008959,
+          "fixture_wall_ns": 14008000,
+          "fixture_foreground_ns": 14007583,
+          "fixture_process_ns": 14007000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 28017918,
+            "Terminated": 28017918,
+            "Blocked": 14008959
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 14008959
+        },
+        "15": {
+          "trace_wall_ns": 27436333,
+          "fixture_wall_ns": 27434000,
+          "fixture_foreground_ns": 27413334,
+          "fixture_process_ns": 27413000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 54872666,
+            "Terminated": 54872666,
+            "Blocked": 27436333
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27436333
+        },
+        "16": {
+          "trace_wall_ns": 1901500,
+          "fixture_wall_ns": 1900000,
+          "fixture_foreground_ns": 1900208,
+          "fixture_process_ns": 1900000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3803000,
+            "Terminated": 3803000,
+            "Blocked": 1901500
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1901500
+        },
+        "17": {
+          "trace_wall_ns": 7004333,
+          "fixture_wall_ns": 7004000,
+          "fixture_foreground_ns": 7003167,
+          "fixture_process_ns": 7004000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 14008666,
+            "Terminated": 14008666,
+            "Blocked": 7004333
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 7004333
+        },
+        "18": {
+          "trace_wall_ns": 13771083,
+          "fixture_wall_ns": 13770000,
+          "fixture_foreground_ns": 13767042,
+          "fixture_process_ns": 13768000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27542166,
+            "Terminated": 27542166,
+            "Blocked": 13771083
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13771083
+        },
+        "19": {
+          "trace_wall_ns": 27465084,
+          "fixture_wall_ns": 27464000,
+          "fixture_foreground_ns": 27459125,
+          "fixture_process_ns": 27459000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 54930168,
+            "Terminated": 54930168,
+            "Blocked": 27465084
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27465084
+        },
+        "20": {
+          "trace_wall_ns": 1922083,
+          "fixture_wall_ns": 1921000,
+          "fixture_foreground_ns": 1920625,
+          "fixture_process_ns": 1921000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3844166,
+            "Terminated": 3844166,
+            "Blocked": 1922083
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1922083
+        },
+        "21": {
+          "trace_wall_ns": 6977625,
+          "fixture_wall_ns": 6977000,
+          "fixture_foreground_ns": 6976458,
+          "fixture_process_ns": 8416000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 12508667,
+            "Terminated": 13955250,
+            "Blocked": 6977625,
+            "Runnable": 8208,
+            "Running": 1438000,
+            "Interrupted": 375
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 6977625
+        },
+        "22": {
+          "trace_wall_ns": 13905375,
+          "fixture_wall_ns": 13904000,
+          "fixture_foreground_ns": 13904250,
+          "fixture_process_ns": 13905000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27810750,
+            "Terminated": 27810750,
+            "Blocked": 13905375
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13905375
+        },
+        "23": {
+          "trace_wall_ns": 27500667,
+          "fixture_wall_ns": 27499000,
+          "fixture_foreground_ns": 27496292,
+          "fixture_process_ns": 27496000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 55001334,
+            "Terminated": 55001334,
+            "Blocked": 27500667
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27500667
+        },
+        "24": {
+          "trace_wall_ns": 1887375,
+          "fixture_wall_ns": 1886000,
+          "fixture_foreground_ns": 1886083,
+          "fixture_process_ns": 1886000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3774750,
+            "Terminated": 3774750,
+            "Blocked": 1887375
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1887375
+        },
+        "25": {
+          "trace_wall_ns": 7039500,
+          "fixture_wall_ns": 7039000,
+          "fixture_foreground_ns": 7033875,
+          "fixture_process_ns": 7034000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 14079000,
+            "Terminated": 14079000,
+            "Blocked": 7039500
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 7039500
+        },
+        "26": {
+          "trace_wall_ns": 13862959,
+          "fixture_wall_ns": 13862000,
+          "fixture_foreground_ns": 13861792,
+          "fixture_process_ns": 13861000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27725918,
+            "Terminated": 27725918,
+            "Blocked": 13862959
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13862959
+        },
+        "27": {
+          "trace_wall_ns": 28044750,
+          "fixture_wall_ns": 28043000,
+          "fixture_foreground_ns": 28043292,
+          "fixture_process_ns": 28044000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 56089500,
+            "Terminated": 56089500,
+            "Blocked": 28044750
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 28044750
+        },
+        "28": {
+          "trace_wall_ns": 1972917,
+          "fixture_wall_ns": 1972000,
+          "fixture_foreground_ns": 1971583,
+          "fixture_process_ns": 1972000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3945834,
+            "Terminated": 3945834,
+            "Blocked": 1972917
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1972917
+        },
+        "29": {
+          "trace_wall_ns": 7194667,
+          "fixture_wall_ns": 7193000,
+          "fixture_foreground_ns": 7187709,
+          "fixture_process_ns": 7188000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 14389334,
+            "Terminated": 14389334,
+            "Blocked": 7194667
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 7194667
+        },
+        "30": {
+          "trace_wall_ns": 13629500,
+          "fixture_wall_ns": 13628000,
+          "fixture_foreground_ns": 13628292,
+          "fixture_process_ns": 13628000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27259000,
+            "Terminated": 27259000,
+            "Blocked": 13629500
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13629500
+        },
+        "31": {
+          "trace_wall_ns": 27925833,
+          "fixture_wall_ns": 27924000,
+          "fixture_foreground_ns": 27873291,
+          "fixture_process_ns": 27874000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 55851666,
+            "Terminated": 55851666,
+            "Blocked": 27925833
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27925833
+        },
+        "32": {
+          "trace_wall_ns": 1904166,
+          "fixture_wall_ns": 1903000,
+          "fixture_foreground_ns": 1902875,
+          "fixture_process_ns": 1902000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3808332,
+            "Terminated": 3808332,
+            "Blocked": 1904166
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1904166
+        },
+        "33": {
+          "trace_wall_ns": 7161250,
+          "fixture_wall_ns": 7158000,
+          "fixture_foreground_ns": 7158208,
+          "fixture_process_ns": 7158000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 14322500,
+            "Terminated": 14322500,
+            "Blocked": 7161250
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 7161250
+        },
+        "34": {
+          "trace_wall_ns": 13902625,
+          "fixture_wall_ns": 13901000,
+          "fixture_foreground_ns": 13893250,
+          "fixture_process_ns": 13894000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27805250,
+            "Terminated": 27805250,
+            "Blocked": 13902625
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13902625
+        },
+        "35": {
+          "trace_wall_ns": 27138625,
+          "fixture_wall_ns": 27138000,
+          "fixture_foreground_ns": 27137208,
+          "fixture_process_ns": 27137000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 54277250,
+            "Terminated": 54277250,
+            "Blocked": 27138625
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27138625
+        },
+        "36": {
+          "trace_wall_ns": 1980792,
+          "fixture_wall_ns": 1980000,
+          "fixture_foreground_ns": 1979709,
+          "fixture_process_ns": 1979000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3961584,
+            "Terminated": 3961584,
+            "Blocked": 1980792
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1980792
+        },
+        "37": {
+          "trace_wall_ns": 7024000,
+          "fixture_wall_ns": 7023000,
+          "fixture_foreground_ns": 7020458,
+          "fixture_process_ns": 7020000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 14048000,
+            "Terminated": 14048000,
+            "Blocked": 7024000
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 7024000
+        },
+        "38": {
+          "trace_wall_ns": 13996125,
+          "fixture_wall_ns": 13994000,
+          "fixture_foreground_ns": 13994667,
+          "fixture_process_ns": 13994000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27992250,
+            "Terminated": 27992250,
+            "Blocked": 13996125
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13996125
+        },
+        "39": {
+          "trace_wall_ns": 27550125,
+          "fixture_wall_ns": 27548000,
+          "fixture_foreground_ns": 27545916,
+          "fixture_process_ns": 27546000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 55100250,
+            "Terminated": 55100250,
+            "Blocked": 27550125
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27550125
+        },
+        "40": {
+          "trace_wall_ns": 3609125,
+          "fixture_wall_ns": 3608000,
+          "fixture_foreground_ns": 3605458,
+          "fixture_process_ns": 3606000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 7218250,
+            "Terminated": 7218250,
+            "Blocked": 3609125
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 3609125
+        },
+        "41": {
+          "trace_wall_ns": 13795416,
+          "fixture_wall_ns": 13791000,
+          "fixture_foreground_ns": 13791666,
+          "fixture_process_ns": 13791000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27590832,
+            "Terminated": 27590832,
+            "Blocked": 13795416
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13795416
+        },
+        "42": {
+          "trace_wall_ns": 27238500,
+          "fixture_wall_ns": 27237000,
+          "fixture_foreground_ns": 27231792,
+          "fixture_process_ns": 27232000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 54477000,
+            "Terminated": 54477000,
+            "Blocked": 27238500
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27238500
+        },
+        "43": {
+          "trace_wall_ns": 54487875,
+          "fixture_wall_ns": 54486000,
+          "fixture_foreground_ns": 54477375,
+          "fixture_process_ns": 54478000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 108975750,
+            "Terminated": 108975750,
+            "Blocked": 54487875
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 54487875
+        },
+        "44": {
+          "trace_wall_ns": 1990125,
+          "fixture_wall_ns": 1989000,
+          "fixture_foreground_ns": 1988917,
+          "fixture_process_ns": 1990000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3980250,
+            "Terminated": 3980250,
+            "Blocked": 1990125
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1990125
+        },
+        "45": {
+          "trace_wall_ns": 6930334,
+          "fixture_wall_ns": 6928000,
+          "fixture_foreground_ns": 6925333,
+          "fixture_process_ns": 6925000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 13860668,
+            "Terminated": 13860668,
+            "Blocked": 6930334
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 6930334
+        },
+        "46": {
+          "trace_wall_ns": 13704125,
+          "fixture_wall_ns": 13703000,
+          "fixture_foreground_ns": 13696917,
+          "fixture_process_ns": 13697000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27408250,
+            "Terminated": 27408250,
+            "Blocked": 13704125
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13704125
+        },
+        "47": {
+          "trace_wall_ns": 27700583,
+          "fixture_wall_ns": 27698000,
+          "fixture_foreground_ns": 27689208,
+          "fixture_process_ns": 27690000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 55401166,
+            "Terminated": 55401166,
+            "Blocked": 27700583
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27700583
+        },
+        "48": {
+          "trace_wall_ns": 3149500,
+          "fixture_wall_ns": 3148000,
+          "fixture_foreground_ns": 3146792,
+          "fixture_process_ns": 3147000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 6299000,
+            "Terminated": 6299000,
+            "Blocked": 3149500
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 3149500
+        },
+        "49": {
+          "trace_wall_ns": 9105375,
+          "fixture_wall_ns": 9105000,
+          "fixture_foreground_ns": 9104333,
+          "fixture_process_ns": 9103000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 18210750,
+            "Terminated": 18210750,
+            "Blocked": 9105375
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 9105375
+        },
+        "50": {
+          "trace_wall_ns": 17891459,
+          "fixture_wall_ns": 17890000,
+          "fixture_foreground_ns": 17887375,
+          "fixture_process_ns": 17887000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 35782918,
+            "Terminated": 35782918,
+            "Blocked": 17891459
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 17891459
+        },
+        "51": {
+          "trace_wall_ns": 35194666,
+          "fixture_wall_ns": 35193000,
+          "fixture_foreground_ns": 35169000,
+          "fixture_process_ns": 35169000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 70389332,
+            "Terminated": 70389332,
+            "Blocked": 35194666
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 35194666
+        },
+        "52": {
+          "trace_wall_ns": 2794541,
+          "fixture_wall_ns": 2793000,
+          "fixture_foreground_ns": 2790834,
+          "fixture_process_ns": 2791000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 5589082,
+            "Terminated": 5589082,
+            "Blocked": 2794541
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 2794541
+        },
+        "53": {
+          "trace_wall_ns": 8901875,
+          "fixture_wall_ns": 8901000,
+          "fixture_foreground_ns": 8900584,
+          "fixture_process_ns": 8901000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 17803750,
+            "Terminated": 17803750,
+            "Blocked": 8901875
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 8901875
+        },
+        "54": {
+          "trace_wall_ns": 17733917,
+          "fixture_wall_ns": 17732000,
+          "fixture_foreground_ns": 17732625,
+          "fixture_process_ns": 17733000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 35467834,
+            "Terminated": 35467834,
+            "Blocked": 17733917
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 17733917
+        },
+        "55": {
+          "trace_wall_ns": 35442417,
+          "fixture_wall_ns": 35441000,
+          "fixture_foreground_ns": 35434334,
+          "fixture_process_ns": 35435000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 70884834,
+            "Terminated": 70884834,
+            "Blocked": 35442417
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 35442417
+        },
+        "56": {
+          "trace_wall_ns": 1869083,
+          "fixture_wall_ns": 1865000,
+          "fixture_foreground_ns": 1865208,
+          "fixture_process_ns": 1866000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 3738166,
+            "Terminated": 3738166,
+            "Blocked": 1869083
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 1869083
+        },
+        "57": {
+          "trace_wall_ns": 6923459,
+          "fixture_wall_ns": 6922000,
+          "fixture_foreground_ns": 6914917,
+          "fixture_process_ns": 6924000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 13846918,
+            "Terminated": 13846918,
+            "Blocked": 6910042,
+            "Runnable": 4459,
+            "Running": 8958
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 6923459
+        },
+        "58": {
+          "trace_wall_ns": 13687958,
+          "fixture_wall_ns": 13687000,
+          "fixture_foreground_ns": 13677458,
+          "fixture_process_ns": 13677000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27375916,
+            "Terminated": 27375916,
+            "Blocked": 13687958
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13687958
+        },
+        "59": {
+          "trace_wall_ns": 27154250,
+          "fixture_wall_ns": 27153000,
+          "fixture_foreground_ns": 27153000,
+          "fixture_process_ns": 27154000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 54308500,
+            "Terminated": 54308500,
+            "Blocked": 27154250
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27154250
+        },
+        "60": {
+          "trace_wall_ns": 3779375,
+          "fixture_wall_ns": 3778000,
+          "fixture_foreground_ns": 3776250,
+          "fixture_process_ns": 3776000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 7558750,
+            "Terminated": 7558750,
+            "Blocked": 3779375
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 3779375
+        },
+        "61": {
+          "trace_wall_ns": 13855917,
+          "fixture_wall_ns": 13855000,
+          "fixture_foreground_ns": 13854250,
+          "fixture_process_ns": 13855000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 27711834,
+            "Terminated": 27711834,
+            "Blocked": 13855917
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 13855917
+        },
+        "62": {
+          "trace_wall_ns": 27541333,
+          "fixture_wall_ns": 27540000,
+          "fixture_foreground_ns": 27537375,
+          "fixture_process_ns": 27537000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 55082666,
+            "Terminated": 55082666,
+            "Blocked": 27541333
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 27541333
+        },
+        "63": {
+          "trace_wall_ns": 55374084,
+          "fixture_wall_ns": 55370000,
+          "fixture_foreground_ns": 55364958,
+          "fixture_process_ns": 55366000,
+          "foreground_state_ns": {},
+          "all_threads_state_ns": {
+            "Idle": 110748168,
+            "Terminated": 110748168,
+            "Blocked": 55374084
+          },
+          "foreground_running_by_core_ns": {},
+          "uncovered_foreground_ns": 55374084
+        }
+      },
+      "foreground_coverage_complete": false,
+      "max_uncovered_foreground_ns": 55374084,
+      "tool_warnings": [],
+      "source_hashes": {
+        "toc.xml": "34ff9cdf284d504c90bd208d9e61193e7e1ad9c8c590f0a01a2d13a06025d4d6",
+        "thread-state.xml": "57a617b34cdb5a08667227a8eb9f23d448345d45dde45601bf9f49176ad3c1ba",
+        "os-signpost.xml": "175096900ea26a52a1728344b6ccc3dab9cd9a8720339d2456f73287d7ca0153",
+        "stdout.log": "81ab4268f202ca422b081696ebdde8731a3b39fad305f83d8bc503947b2f5fb4",
+        "record.log": "0cb0366051fefbbf4f06551542e6e232f794bd8af48d18bea7e9ece5eab83294"
+      }
+    }
+  },
+  "limits": [
+    "Two traced processes; not the slow untraced process",
+    "External signposts bracket fixture cases; no product hooks",
+    "System Trace instrumentation can change scheduling",
+    "Dylib overlap warning retained; no stack/address attribution used",
+    "Core numbers are identities, not evidence of core class/frequency"
+  ]
+}

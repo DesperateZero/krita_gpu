@@ -1,0 +1,23 @@
+{
+  "question": "Whole-path algorithm workload and scaling, independent of choosing an optimization",
+  "product": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "m5": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "arch": "arm64",
+  "workload": "Unchanged public partial/full write, N-page setup and warm read, alternating bytes, first and steady separate. Only CLI K validation extended in copied helper. Not original gate fixture or native handoff.",
+  "metadata": "Also read existing metadata metrics before/after first/steady outside clocks. Non-reclamation totals subtract only the explicit reclamation subset; not asserted to be caller-thread exclusive. Compare source-defined version/projection/publication work, retain all fields and snapshot debt.",
+  "N": [64,1024],
+  "K": [1,2,4,8,16,32],
+  "base_B_h": [4,1],
+  "additional_rows": [[1024,16,16,1],[1024,16,4,64]],
+  "duration_ms": 250,
+  "timing_blocks": 3,
+  "timing_orders": [["m5","current"],["current","m5"],["m5","current"]],
+  "row_orders": ["ascending","descending","ascending"],
+  "count_blocks": 1,
+  "count_library": "Reuse exact isolated budget TU counter library ba154b06b69a433bd65a7d19ef35a7e6bc30c8c68df92061083b387297b57115 from management attribution; same product; no per-entry clocks",
+  "total_processes": 98,
+  "analysis_before_measurement": "Report every row median/range. For primary rows fit least-squares a+b*K, report every residual and worst residual. Counter fits train on K1,2,4,16, hold out K8,32 and test N effect; report all field prediction errors, never interpret two-point slope as proof. CPU/wall fits are descriptive, not causal coefficients or formal confidence. Additional B/h rows assess byte sensitivity and full-initialization switch, not direct subtraction of pure management.",
+  "theoretical_layers": "Semantic lower bound; frozen Fresh/page-granularity required work; current representation/protocol overhead. All work families covered in one responsibility ledger; unknown coefficients and scheduling/background residual stay explicit.",
+  "stopping": "Exactly 84 timing processes then 14 counts, sequential; no concurrent build/profiler. Stop and retain on any correctness, identity, loaded-library or bounded-exit failure. No adaptive points, no gate threshold change.",
+  "limits": "K/N/pixel tests diagnose this hot first-K-page shape, not all key distributions, retained histories, background drain or actual brush. Algorithm operation counts alone cannot determine ideal microseconds or certify all bottlenecks are closed."
+}

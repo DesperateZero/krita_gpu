@@ -1,0 +1,650 @@
+{
+  "range": {
+    "command": [
+      "rg",
+      "-n",
+      "--glob",
+      "*.cpp",
+      "--glob",
+      "*.h",
+      "reserveManagedRange\\(|adoptReservation\\(|borrowExecution\\(",
+      "krita/libs/image/pagestore"
+    ],
+    "matches": [
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1367,
+        "text": "KisPageMutationExecution KisPageMutationSession::borrowExecution(",
+        "tracking_ids": [
+          "MP01.1",
+          "MP02.1",
+          "MP04.2",
+          "MP05.1"
+        ],
+        "disposition": "public borrow and shared entry binding"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1787,
+        "text": "std::unique_ptr<KisPageStoreWriteReservation> KisPageStore::reserveManagedRange(",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "unique producer and reservation transfer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1867,
+        "text": "bool KisPageMutationSession::adoptReservation(",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "unique producer and reservation transfer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.h",
+        "line": 180,
+        "text": "    KisPageMutationExecution borrowExecution(KisSurfaceId,",
+        "tracking_ids": [
+          "MP01.1",
+          "MP04.2"
+        ],
+        "disposition": "declaration must match migrated consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.h",
+        "line": 229,
+        "text": "    bool adoptReservation(std::unique_ptr<KisPageStoreWriteReservation> range,",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "declaration must match migrated consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.h",
+        "line": 594,
+        "text": "    std::unique_ptr<KisPageStoreWriteReservation> reserveManagedRange(",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "declaration must match migrated consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 1991,
+        "text": "    auto range = store()->reserveManagedRange(d->surface, targets, false, nullptr, error);",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "fillRect transfer without execution"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 1994,
+        "text": "    if (!batch || !batch->d->mutation.adoptReservation(std::move(range), error)) return false;",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "fillRect transfer without execution"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2130,
+        "text": "        execution = d->historyMutation.borrowExecution(d->surface, targets, error);",
+        "tracking_ids": [
+          "MP01.1",
+          "MP02.1",
+          "MP05.1",
+          "R01"
+        ],
+        "disposition": "history incrementally borrows generic range"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2133,
+        "text": "        auto range = store()->reserveManagedRange(d->surface, targets, legacyIntent,",
+        "tracking_ids": [
+          "MP04.1",
+          "MP04.2"
+        ],
+        "disposition": "standalone transfer-and-bind consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2138,
+        "text": "        if (!batch || !batch->d->mutation.adoptReservation(std::move(range), error)) return Result::Failed;",
+        "tracking_ids": [
+          "MP04.1",
+          "MP04.2"
+        ],
+        "disposition": "standalone transfer-and-bind consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2140,
+        "text": "        execution = batch->d->mutation.borrowExecution(d->surface, targets, error);",
+        "tracking_ids": [
+          "MP04.1",
+          "MP04.2"
+        ],
+        "disposition": "standalone transfer-and-bind consumer"
+      }
+    ]
+  },
+  "claim": {
+    "command": [
+      "rg",
+      "-n",
+      "--glob",
+      "*.cpp",
+      "--glob",
+      "*.h",
+      "ownsClaimSetLocked\\(|claimRange\\(|claimEntryLocked\\(|claimsHeldLocked\\(|rebindClaimSetLocked\\(|validateClaims\\(",
+      "krita/libs/image/pagestore"
+    ],
+    "matches": [
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1000,
+        "text": "    bool claimEntryLocked(const KisPageWriteIntent &intent, QMutexLocker<QMutex> &lock,",
+        "tracking_ids": [
+          "R01"
+        ],
+        "disposition": "initial/new-key claim remains; shared helper not deleted"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1079,
+        "text": "        if (!claimEntryLocked(intent, lock, KisPageWriteAdmission::ClaimOrigin::NativeSession, error)) {",
+        "tracking_ids": [
+          "R01"
+        ],
+        "disposition": "initial/new-key claim remains; shared helper not deleted"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1102,
+        "text": "    bool claimsHeldLocked() const",
+        "tracking_ids": [
+          "MP09.1"
+        ],
+        "disposition": "separate first complete scan from later dynamic checks"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1111,
+        "text": "        return writes.size() == 0 || owner->writeAdmission.ownsClaimSetLocked(admission);",
+        "tracking_ids": [
+          "MP09.1"
+        ],
+        "disposition": "separate first complete scan from later dynamic checks"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1442,
+        "text": "    if (!d->owner->writeAdmission.claimRange(d->admission, surface, pages, ownerLock, error))",
+        "tracking_ids": [
+          "MP04.2",
+          "R01"
+        ],
+        "disposition": "reserved path bypass; public/history range still admitted"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1881,
+        "text": "    if (!d->owner->writeAdmission.ownsClaimSetLocked(range->admission)) {",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "unique producer and reservation transfer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1887,
+        "text": "    d->owner->writeAdmission.rebindClaimSetLocked(d->admission, d->writes);",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "unique producer and reservation transfer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1906,
+        "text": "        const bool held = d->owner->writeAdmission.ownsClaimSetLocked(d->admission);",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "existing legacy entry single-key proof"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1934,
+        "text": "    const bool claimed = d->claimEntryLocked(",
+        "tracking_ids": [
+          "R01"
+        ],
+        "disposition": "initial/new-key claim remains; shared helper not deleted"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1948,
+        "text": "    return d->owner->writeAdmission.ownsClaimSetLocked(d->admission)",
+        "tracking_ids": [
+          "MP10.1"
+        ],
+        "disposition": "single-page version query"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2068,
+        "text": "        if (!d->claimEntryLocked(intent, lock, KisPageWriteAdmission::ClaimOrigin::NativeSession, &claimError)) {",
+        "tracking_ids": [
+          "MP06.1"
+        ],
+        "disposition": "bound cold path consumes accepted claim"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2420,
+        "text": "        if (!d->claimsHeldLocked()) {",
+        "tracking_ids": [
+          "MP09.1"
+        ],
+        "disposition": "separate first complete scan from later dynamic checks"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2446,
+        "text": "    validateClaims();",
+        "tracking_ids": [
+          "MP09.1"
+        ],
+        "disposition": "separate first complete scan from later dynamic checks"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2495,
+        "text": "    validateClaims();",
+        "tracking_ids": [
+          "MP09.1"
+        ],
+        "disposition": "separate first complete scan from later dynamic checks"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2556,
+        "text": "    validateClaims();",
+        "tracking_ids": [
+          "MP09.1"
+        ],
+        "disposition": "separate first complete scan from later dynamic checks"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator_p.h",
+        "line": 551,
+        "text": "    bool claimRange(ClaimSet &, KisSurfaceId, const KisPageSnapshotArray<KisLogicalPageId> &,",
+        "tracking_ids": [
+          "MP04.1",
+          "MP04.2",
+          "MP09.1",
+          "MP10.1",
+          "MP10.2"
+        ],
+        "disposition": "admission declarations; no second permission authority"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator_p.h",
+        "line": 553,
+        "text": "    bool ownsClaimSetLocked(const ClaimSet &) const;",
+        "tracking_ids": [
+          "MP04.1",
+          "MP04.2",
+          "MP09.1",
+          "MP10.1",
+          "MP10.2"
+        ],
+        "disposition": "admission declarations; no second permission authority"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator_p.h",
+        "line": 554,
+        "text": "    void rebindClaimSetLocked(ClaimSet &, const KisMutationWriteSet &) noexcept;",
+        "tracking_ids": [
+          "MP04.1",
+          "MP04.2",
+          "MP09.1",
+          "MP10.1",
+          "MP10.2"
+        ],
+        "disposition": "admission declarations; no second permission authority"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2569,
+        "text": "bool KisPageWriteAdmission::claimRange(ClaimSet &claims, KisSurfaceId surface,",
+        "tracking_ids": [
+          "MP04.2",
+          "R01"
+        ],
+        "disposition": "generic claimRange remains for new permissions"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2606,
+        "text": "bool KisPageWriteAdmission::ownsClaimSetLocked(const ClaimSet &claims) const",
+        "tracking_ids": [
+          "MP04.1",
+          "MP09.1",
+          "MP10.1",
+          "MP10.2"
+        ],
+        "disposition": "full-set proof consumers must split by validity"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2616,
+        "text": "void KisPageWriteAdmission::rebindClaimSetLocked(ClaimSet &claims, const KisMutationWriteSet &writeSet) noexcept",
+        "tracking_ids": [
+          "MP04.1"
+        ],
+        "disposition": "original token/writeSet rebind; debug work not priced as Release"
+      }
+    ]
+  },
+  "legacy": {
+    "command": [
+      "rg",
+      "-n",
+      "--glob",
+      "*.cpp",
+      "--glob",
+      "*.h",
+      "reserveLegacyMutationPage\\(|legacyMutationPageVersion\\(",
+      "krita/libs/image/pagestore"
+    ],
+    "matches": [
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1892,
+        "text": "bool KisPageMutationSession::reserveLegacyMutationPage(",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "existing legacy entry single-key proof"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1939,
+        "text": "KisPageVersion KisPageMutationSession::legacyMutationPageVersion(const KisPageKey &key) const",
+        "tracking_ids": [
+          "MP10.1"
+        ],
+        "disposition": "single-page version query"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 658,
+        "text": "    bool staged = d->mutation.reserveLegacyMutationPage(key, error);",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "all legacy reserve production callers"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 1600,
+        "text": "                readCache->get(), mutation->legacyMutationPageVersion(key))) return {};",
+        "tracking_ids": [
+          "MP10.1"
+        ],
+        "disposition": "read-cache identity-only consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 1623,
+        "text": "    if (access == Access::Write && !mutation->reserveLegacyMutationPage(key, &transactionError)) {",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "all legacy reserve production callers"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2032,
+        "text": "                    if (!batch->d->mutation.reserveLegacyMutationPage(key, error) ||",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "all legacy reserve production callers"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2475,
+        "text": "                    if (!backing || !batch->d->mutation.reserveLegacyMutationPage(to, error) ||",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "all legacy reserve production callers"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2497,
+        "text": "                if (!backing || !batch->d->mutation.reserveLegacyMutationPage(to, error) ||",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "all legacy reserve production callers"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.h",
+        "line": 231,
+        "text": "    bool reserveLegacyMutationPage(const KisPageKey &key, QString *error);",
+        "tracking_ids": [
+          "MP10.2"
+        ],
+        "disposition": "declaration must match migrated consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.h",
+        "line": 233,
+        "text": "    KisPageVersion legacyMutationPageVersion(const KisPageKey &key) const;",
+        "tracking_ids": [
+          "MP10.1"
+        ],
+        "disposition": "declaration must match migrated consumer"
+      }
+    ]
+  },
+  "execution": {
+    "command": [
+      "rg",
+      "-n",
+      "--glob",
+      "*.cpp",
+      "--glob",
+      "*.h",
+      "targets.contains\\(|std::sort\\(range|static auto order\\(|for \\(const auto &page : pages\\)",
+      "krita/libs/image/pagestore"
+    ],
+    "matches": [
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1320,
+        "text": "    static auto order(const KisPageKey &key)",
+        "tracking_ids": [
+          "MP02.1"
+        ],
+        "disposition": "operation-domain order"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1403,
+        "text": "        for (const auto &page : pages)",
+        "tracking_ids": [
+          "MP01.1"
+        ],
+        "disposition": "read-only range iteration"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1421,
+        "text": "    for (const auto &page : pages) {",
+        "tracking_ids": [
+          "MP01.1"
+        ],
+        "disposition": "read-only range iteration"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1444,
+        "text": "    std::sort(range, range + candidate->count, &KisPageMutationExecution::Private::less);",
+        "tracking_ids": [
+          "MP02.2"
+        ],
+        "disposition": "remove sorted BoundEntry second sort"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPaintExecutionContext.h",
+        "line": 37,
+        "text": "            if (!target.isValid() || targets.contains(target.value)) return false;",
+        "tracking_ids": [
+          "R01"
+        ],
+        "disposition": "capability input target-uniqueness validation; not execution membership"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 1798,
+        "text": "    for (const auto &page : pages) {",
+        "tracking_ids": [
+          "R07"
+        ],
+        "disposition": "pages is already const; not another detach deletion"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2255,
+        "text": "                if (!targets.contains(next)) { failed = true; failure = QStringLiteral(\"pixel operation left its reserved pages\"); return; }",
+        "tracking_ids": [
+          "MP03.1"
+        ],
+        "disposition": "cursor redundant linear membership"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2351,
+        "text": "        for (const auto &page : pages) {",
+        "tracking_ids": [
+          "MP01.2"
+        ],
+        "disposition": "packed body read-only consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+        "line": 2621,
+        "text": "    for (const auto &page : pages) {",
+        "tracking_ids": [
+          "R07"
+        ],
+        "disposition": "pages is already const; not another detach deletion"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2579,
+        "text": "        for (const auto &page : pages) {",
+        "tracking_ids": [
+          "MP04.2",
+          "R01"
+        ],
+        "disposition": "generic claimRange remains for new permissions"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2595,
+        "text": "        for (const auto &page : pages) {",
+        "tracking_ids": [
+          "MP04.2",
+          "R01"
+        ],
+        "disposition": "generic claimRange remains for new permissions"
+      }
+    ]
+  },
+  "cleanup": {
+    "command": [
+      "rg",
+      "-n",
+      "--glob",
+      "*.cpp",
+      "--glob",
+      "*.h",
+      "const auto discardDescriptors|const auto discardTerminals|void finishSegmentLocked|void releaseStorageLocked",
+      "krita/libs/image/pagestore"
+    ],
+    "matches": [
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 823,
+        "text": "    void finishSegmentLocked(QMutexLocker<QMutex> &lock, bool terminal, bool retainAdmission = false)",
+        "tracking_ids": [
+          "MP08.4"
+        ],
+        "disposition": "terminal retainAdmission empty cleanup"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 883,
+        "text": "    void releaseStorageLocked(QMutexLocker<QMutex> &lock,",
+        "tracking_ids": [
+          "R07"
+        ],
+        "disposition": "already skips empty storage / terminal vector retains capacity"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 1151,
+        "text": "        const auto discardDescriptors = qScopeGuard([&] {",
+        "tracking_ids": [
+          "MP08.3"
+        ],
+        "disposition": "descriptor cleanup consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2124,
+        "text": "            const auto discardDescriptors = qScopeGuard([&] {",
+        "tracking_ids": [
+          "MP08.2"
+        ],
+        "disposition": "descriptor cleanup consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 3511,
+        "text": "    const auto discardDescriptors = qScopeGuard([&] {",
+        "tracking_ids": [
+          "MP08.6"
+        ],
+        "disposition": "descriptor cleanup consumer"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 3524,
+        "text": "    const auto discardTerminals = qScopeGuard([&] {",
+        "tracking_ids": [
+          "R07"
+        ],
+        "disposition": "already skips empty storage / terminal vector retains capacity"
+      },
+      {
+        "file": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 4083,
+        "text": "    const auto discardDescriptors = qScopeGuard([&] {",
+        "tracking_ids": [
+          "MP08.5"
+        ],
+        "disposition": "descriptor cleanup consumer"
+      }
+    ]
+  }
+}

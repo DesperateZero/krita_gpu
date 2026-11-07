@@ -1,0 +1,22 @@
+{
+  "command": [
+    "arch",
+    "-arm64",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+    "-nocrashhandler"
+  ],
+  "pid": 36325,
+  "exit_code": 5,
+  "totals": [
+    "Totals: 778 passed, 5 failed, 0 skipped, 0 blacklisted, 7453ms"
+  ],
+  "failures": [
+    "FAIL!  : KisPageStoreReferenceTest::metadataOwningCapacityIsBudgeted() Compared values are not the same",
+    "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind0-outcome2) Compared values are not the same",
+    "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome0) Compared values are not the same",
+    "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind1-outcome2) Compared values are not the same",
+    "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome2) Compared values are not the same"
+  ],
+  "normal_exit": true,
+  "passed": false
+}

@@ -34,6 +34,13 @@
 | 新基线 foundation target、private/public、运行时 owner | [41_vulkan_foundation_build_architecture.md](41_vulkan_foundation_build_architecture.md) |
 | 旧 device/shader/compositor/canvas 能力提取判定 | [42_legacy_vulkan_capability_extraction_matrix.md](42_legacy_vulkan_capability_extraction_matrix.md) |
 | Foundation 施工、构建配置与 BR0 门禁 | [43_foundation_construction_sequence_and_gates.md](43_foundation_construction_sequence_and_gates.md) |
+| BR1 基线需求、API 可靠性与首个代码证据 | [46_br1_baseline_api_reliability_20260919.md](46_br1_baseline_api_reliability_20260919.md) |
+| BR1 PS-SM1 ImageEpoch、分片 metadata 与 fake CPU provider 证据 | [47_br1_ps_sm1_epoch_metadata_evidence_20260919.md](archive/br1_pre_m6_20260925/documents/47_br1_ps_sm1_epoch_metadata_evidence_20260919.md) |
+| BR1 CPU owner、provider 与 proof/retention API 校正 | [48_br1_cpu_owner_api_correction_20260919.md](archive/br1_pre_m6_20260925/documents/48_br1_cpu_owner_api_correction_20260919.md) |
+| BR1 同页事务链、会话关闭与 tiles3 影子映射 | [49_br1_transaction_lifecycle_tiles3_shadow_20260919.md](archive/br1_pre_m6_20260925/documents/49_br1_transaction_lifecycle_tiles3_shadow_20260919.md) |
+| BR1 CPU access session、锁外 provider 调用与历史 epoch 恢复 | [50_br1_cpu_access_and_history_restore_20260919.md](archive/br1_pre_m6_20260925/documents/50_br1_cpu_access_and_history_restore_20260919.md) |
+| BR1 canonical PageStore 功能/正确性 cutover 历史证据 | [51_br1_canonical_pagestore_closure_20260919.md](archive/br1_pre_m6_20260925/documents/51_br1_canonical_pagestore_closure_20260919.md) |
+| BR1 resident CPU 快路径、production layout 优化与最终性能门禁 | [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md) |
 | Shader/pass ABI、compositor、display、WSI/canvas 重建 | [44_shader_compositor_canvas_reconstruction.md](44_shader_compositor_canvas_reconstruction.md) |
 | BackendReadyToken、DocumentGpuSession、入口与多 canvas | [24_p0_backend_lifecycle_and_document_sessions.md](24_p0_backend_lifecycle_and_document_sessions.md) |
 | Canonical PageStore、Krita tile/COW/undo/swap 吸收 | [25_p0_canonical_pagestore_krita_tile_cow_swap.md](25_p0_canonical_pagestore_krita_tile_cow_swap.md) |
@@ -127,6 +134,7 @@ backend-neutral document acceleration session 接口/slot；`kritavulkanbackend`
 | 固定 RGBA8 | `SurfaceFormat` 保存 KoColorSpace、通道、位深、alpha 语义；GPU codec 明确声明支持矩阵 | 固定 `pixelSize=4`、原始 `readBytes()` 直接当 RGBA8 |
 | undo/save 依赖 stroke-end 回读 | 首次写页时做 generation COW；undo 保存旧 generation 引用；save 获取 immutable image epoch | `KisVulkanSyncStrokeStrategy` 回写 CPU 后再提交 transaction |
 | LoD/能力虚报 | 能力由后端 descriptor 查询；没有 mip/page pyramid 就返回不支持 | Vulkan canvas 无条件报告 LoD 支持 |
+| GPU 可用但在当前 workload/功耗/队列状态更慢 | correctness capability 与 CPU-relative performance qualification 分离；首次写前按完整 ETA 冻结整操作 route，未达 `AutoPreferred` 则走真实 CPU 产品路径 | 用设备可用、零拷贝或 GPU timestamp 强制产品 GPU route；以 scalar/退化 CPU 作分母 |
 | compositor 输出错误 | Layer planner 产生精确 derived surface，display descriptor 绑定该 surface generation | 局部变量选择 composite image、descriptor 仍绑定 sparse canvas |
 
 ## 4. PageStore 的绝对不变量
@@ -166,23 +174,32 @@ DependencyGenerations
 建议 API 固定为：
 
 ```cpp
-ReadRequest  acquireRead(PageRange, AccessDomain, Priority);
-WriteRequest acquireWrite(PageRange, AccessDomain, WriteMode, Priority);
+ReadRequest  acquireRead(PageKey, ReadView, AccessRequirement, Priority);
+WriteRequest acquireWrite(PageTransaction, PageKey, AccessRequirement, WriteMode, Priority);
 
 ReadLease  resolve(ReadRequest, CompletionTicket);
 WriteLease resolve(WriteRequest, CompletionTicket);
+bool cancel(ReadRequest);
+bool cancel(WriteRequest);
+void release(ReadLease, CompletionTicket consumerLastUse = {});
 
-GpuTicket publish(WriteLease, GpuTicket producerCompletion);
+CompletionTicket publish(WriteLease, CompletionTicket producerCompletion);
 void cancel(WriteLease);
 
 PageTransaction beginTransaction(ImageEpochId base);
 ImageEpochCommitTicket commit(PageTransaction, PreparedPageSet);
-void abort(PageTransaction);
+bool abort(PageTransaction);
 ImageEpochSnapshot captureCommittedEpoch();
+RetainedImageEpochSnapshot captureRetainedEpoch();
+bool validateRetainedEpoch(RetainedImageEpochSnapshot);
+bool releaseSnapshot(ImageEpochSnapshotToken);
 ```
 
-返回的 lease 可以包含 CPU pointer 或 opaque GPU binding handle，但消费者不得知道页面当前位于 RAM、UMA、VRAM
-还是 SSD。
+acquire/resolve 是单页原语；区域 facade 组织多个 request，多页原子性只由共享 ImageEpoch/transaction manifest
+提供。`AccessRequirement` 显式区分 domain 与 CPU-pointer/GPU-binding capability，尤其不能从 UMA domain 猜测访问
+类型；provider 只枚举实际支持的 `(domain, access kind)` 组合，不做隐式笛卡尔积。返回的 move-only lease 可以包含
+CPU pointer 或 opaque GPU binding handle，但消费者不得知道页面当前位于
+RAM、UMA、VRAM 还是 SSD。
 
 这里的 PageStore 不是与 Krita tiles3 平行的新 tile store。它是对现有逻辑 tile、tile data、COW/memento、
 swap identity 的显式 generation/lease/replica 化。现有 `KisTileDataStore`、`KisMementoManager`、
@@ -235,6 +252,8 @@ GPU stroke 的最终形态已经在以下文档完整建立，本总纲不删减
 - [19_brush_resources_and_capability_gate.md](19_brush_resources_and_capability_gate.md)
 
 它必须作为 canonical PageStore 的 lease/ticket consumer 实现，不能重新拥有 tile、swap、undo 或 display authority。
+GPU/UMA 只是可选 executor：correctness `Supported` 后仍须通过 39 的同机成熟 CPU-relative `AutoPreferred` 门禁；route 在
+首次 write lease 前按 operation 冻结，劣势设备/状态整操作走 CPU，不能逐页/逐 dab 混跑。
 
 ## 7. Evaluation Graph、MutationRootSet 与非目标图层剪枝
 
@@ -328,7 +347,8 @@ CI 增加结构检查：
 
 - 小预算下 VRAM→RAM→SSD→RAM→VRAM 随机迁移和 checksum。
 - SSD 写失败、取消、损坏恢复。
-- UMA 路径画布像素 copy 计数严格为零。
+- UMA 同一兼容驻留 shared backing 的真实 CPU↔GPU 交接中，payload migration count/bytes 严格为零；
+  COW/undo/derived copy 单列，必要同步不记零，适用条件及计数覆盖见 39 的 5.7。
 - overlapping dab 顺序 golden image。
 - selection、alpha lock、wash、撤销、立即保存/重开。
 - 多文档、多 canvas、关闭其中一个 canvas。
@@ -353,6 +373,10 @@ CI 增加结构检查：
 - 把现有 tile/COW/swap 吸收到 Surface/Page/generation/lease 模型。
 - 先证明纯 CPU 行为、undo、save 与原 Krita 像素一致。
 - 不创建第二套 tile 存储。
+
+状态：2026-09-19 已关闭功能/正确性 cutover，历史证据见 51；2026-09-20 因 resident CPU、virtual default 和
+persistent epoch production layout 未达 upstream 性能出口，以 `BR1-PERF` 重开并按 52 推进。BR2 production 接线等待
+该门禁关闭。
 
 ### BR2：SubmissionCoordinator
 

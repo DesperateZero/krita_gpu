@@ -1,0 +1,74 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordRefusedBeforePhysicalResult",
+      "retirementRecordTransfersAtCapacity",
+      "capturedReleaseKeepsOriginalFacts",
+      "captureStorageRefusalPrecedesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "oldTransactionBaseReleaseReclaimsDeferredHistory",
+      "historyReachabilityIgnoresRetiredRootBacklog",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "closePollsDetachedRetirement",
+      "publicationWhileCapturedReadersChange"
+    ],
+    "exit_code": 6,
+    "duration_seconds": 2.622,
+    "totals": [
+      "Totals: 51 passed, 6 failed, 0 skipped, 0 blacklisted, 685ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(work-storage) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)",
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(detach-debt) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(automatic) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(close) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp4-history257) Compared values are not the same",
+      "FAIL!  : KisPageStoreCpuMutationTest::longHistoryUsesVersionBudget(bpp8-history257) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "historyRefusalPreservesOriginalWork",
+      "retirementResultBindsAtCapacity",
+      "retirementRecordRefusedBeforePhysicalResult",
+      "retirementRecordTransfersAtCapacity",
+      "capturedReleaseKeepsOriginalFacts",
+      "captureStorageRefusalPrecedesProtection",
+      "longHistoryUsesVersionBudget",
+      "multiPageHistorySharesRootBudget",
+      "historyRootSliceRevalidatesChangedKey",
+      "oldTransactionBaseReleaseReclaimsDeferredHistory",
+      "historyReachabilityIgnoresRetiredRootBacklog",
+      "firstRetirementRunsOffThreadAndCloseDrains",
+      "closePollsDetachedRetirement",
+      "publicationWhileCapturedReadersChange"
+    ],
+    "exit_code": 4,
+    "duration_seconds": 2.087,
+    "totals": [
+      "Totals: 53 passed, 4 failed, 0 skipped, 0 blacklisted, 739ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(work-storage) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)",
+      "FAIL!  : KisPageStoreCpuMutationTest::historyRefusalPreservesOriginalWork(detach-debt) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(automatic) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)",
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementResultBindsAtCapacity(close) 'f.init(nullptr, true)' returned FALSE. (initial page state is invalid: published generation is invalid)"
+    ],
+    "passed": false
+  }
+]

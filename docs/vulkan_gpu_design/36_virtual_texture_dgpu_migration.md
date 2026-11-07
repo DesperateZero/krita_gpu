@@ -49,19 +49,20 @@ MigrationRequest
 
 相同 dedup key 的请求共享物理 producer。聚合器只处理 PageStore 已预留的 operation，不自行改变 replica state。
 
-来源选择使用实时估计：
+来源选择使用当前实际副本和完成端点的条件估计，计时/性能归因统一见
+[39 的 5.6–5.9 与 8](39_virtual_texture_performance_gates.md#56-四类证据与基线配对统一定义)：
 
 ```text
-ETA(source -> target) =
-    sourceReadyP95
-  + queueDelayP95
-  + decode/encodeP95
-  + bytes / measuredBandwidth
-  + bindingPublishP95
-  + contentionPenalty
+SourceETA = calibratedCriticalPath(source -> target, {
+    sourceReady, queueDelay, codec,
+    bytes / effectiveBandwidth, bindingPublish, contention
+})
 ```
 
 同 generation 有 RAM 和 SSD 时通常选择 RAM，但不能把固定域优先级写死；拥塞或 codec 成本必须进入 ETA。
+各项是模型特征，不是可直接相加的阶段 P95；来源完成分布由真实依赖关键路径校准。X 报告迁移本身，E 包含 consumer
+交付成本；GPU remote-host 的内核访存不能冒充 resident VRAM，也不能在 K 已包含后再叠加估算传输耗时。CPU fallback
+若无适用 RAM replica 同样承担必要读回，不能以 RAM-ready 内核时间替代该状态下的 CPU route 成本。
 
 ## 4. Deadline-aware batcher
 

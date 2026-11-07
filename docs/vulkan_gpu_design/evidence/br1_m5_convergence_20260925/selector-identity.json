@@ -1,0 +1,23 @@
+{
+  "source_revision": "6ac53223efcb152253786b69ac4a92224151a12a",
+  "protocol_sha256": "9139bcfb4ac7af7e4ec4462fc499b1f11cb25606ec154995c7b5cc0a559c8b45",
+  "control_patch_sha256": "5f3cea427209b8a0db00241719a7375950bdb22800ab87b930a73ebf743ba8d6",
+  "build_cache_sha256": "b8373a77961b4db27abed73804352407a7db604994b90bf8d32d81ed1e902b56",
+  "runtimes": {
+    "candidate": {
+      "directory": "/tmp/br1-m5-convergence-selector-candidate-20260925",
+      "executable_sha256": "4b00e424fc2a0d291b367f2183e4b224d9d23c45b135e7fe4696d8aaa4e5236d",
+      "libkritaimage_sha256": "07771bc7bedf0a22c887dcec32291d2a9846776f58796b8c31b3cf8c110ebe37"
+    },
+    "control": {
+      "directory": "/tmp/br1-m5-convergence-selector-control-20260925",
+      "executable_sha256": "2c31999da1e4ad98d30025542b452362315c05c46f9c5be464c2fa9138a0987c",
+      "libkritaimage_sha256": "536134bb13172dceb41815441967537a399a325ac132ae561af854bb26773235"
+    }
+  },
+  "restored_candidate": {
+    "executable_sha256": "2c31999da1e4ad98d30025542b452362315c05c46f9c5be464c2fa9138a0987c",
+    "libkritaimage_sha256": "24e185f1b5a35d425b0a8535288667ed3939bbfd9a80213036a07effeed99b4e"
+  },
+  "fixture_policy": "Use the candidate runtime executable for both variants. Only DYLD_LIBRARY_PATH changes, so fixture bytes are identical. A relink may change Mach-O identity after source restoration; the captured candidate binary remains bound by its hash."
+}

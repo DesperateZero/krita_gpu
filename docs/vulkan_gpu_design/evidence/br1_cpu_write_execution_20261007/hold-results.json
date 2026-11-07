@@ -1,0 +1,5492 @@
+[
+  {
+    "index": 0,
+    "phase": "hold",
+    "arch": "arm64",
+    "pattern": 0,
+    "pair": 0,
+    "block": 0,
+    "side": "candidate",
+    "persistent": 0,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/diagnostic-candidate-timing:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/fixture/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "pid": 65760,
+    "actual_exit": 0,
+    "reaped": true,
+    "timed_out": false,
+    "loading_ok": true,
+    "passed": true,
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 572958,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 8337750,
+      "projection_updates": 19,
+      "redo_drain_ns": 1357125,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 379827875,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 8418541,
+      "total_fixture_ns": 427459959,
+      "undo_drain_ns": 516166,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    },
+    "visits": [
+      {
+        "C": 4,
+        "F": 150,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 0,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 440,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 1,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 148,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 2,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 472,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 3,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 36,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 4,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 134,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 5,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 49,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 6,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 7,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 8,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 9,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 10,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 18,
+        "F": 18,
+        "P": 18,
+        "R": 18,
+        "backend": "1247a2e80",
+        "declared_pages": 18,
+        "fixed": false,
+        "history": false,
+        "index": 11,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 124,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 12,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 149,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 13,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 472,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 14,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 516,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 15,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 16,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 17,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 18,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 19,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 36,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 20,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 56,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 21,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 133,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 22,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 152,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 23,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 128,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 24,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 428,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 25,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 114,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 26,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 382,
+        "P": 4,
+        "R": 4,
+        "backend": "125aa9a00",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": false,
+        "index": 27,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "1247a2e80",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 28,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 29,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 30,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 31,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 18,
+        "F": 18,
+        "P": 18,
+        "R": 18,
+        "backend": "1247a2e80",
+        "declared_pages": 18,
+        "fixed": false,
+        "history": false,
+        "index": 32,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 48,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 33,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 260,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 34,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 377,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 35,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 36,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 36,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 113,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 37,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 133,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 38,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 196,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 39,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 81,
+        "P": 2,
+        "R": 2,
+        "backend": "125aa9a00",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": false,
+        "index": 40,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 41,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 42,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 43,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "1247a2e80",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 44,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 12,
+        "F": 12,
+        "P": 12,
+        "R": 12,
+        "backend": "1247a2e80",
+        "declared_pages": 12,
+        "fixed": false,
+        "history": false,
+        "index": 45,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 56,
+        "F": 56,
+        "P": 56,
+        "R": 56,
+        "backend": "1247a2e80",
+        "declared_pages": 56,
+        "fixed": false,
+        "history": false,
+        "index": 46,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "succeeded": true
+      }
+    ],
+    "holds": [
+      {
+        "index": 0,
+        "maximum_ns": 56417,
+        "pins": 4,
+        "total_ns": 82167
+      },
+      {
+        "index": 1,
+        "maximum_ns": 53625,
+        "pins": 4,
+        "total_ns": 150876
+      },
+      {
+        "index": 2,
+        "maximum_ns": 47459,
+        "pins": 4,
+        "total_ns": 79000
+      },
+      {
+        "index": 3,
+        "maximum_ns": 58000,
+        "pins": 4,
+        "total_ns": 160708
+      },
+      {
+        "index": 4,
+        "maximum_ns": 9834,
+        "pins": 2,
+        "total_ns": 12209
+      },
+      {
+        "index": 5,
+        "maximum_ns": 11375,
+        "pins": 2,
+        "total_ns": 16625
+      },
+      {
+        "index": 6,
+        "maximum_ns": 4125,
+        "pins": 2,
+        "total_ns": 4417
+      },
+      {
+        "index": 7,
+        "maximum_ns": 1834,
+        "pins": 2,
+        "total_ns": 2292
+      },
+      {
+        "index": 8,
+        "maximum_ns": 2958,
+        "pins": 4,
+        "total_ns": 10083
+      },
+      {
+        "index": 9,
+        "maximum_ns": 2292,
+        "pins": 4,
+        "total_ns": 7751
+      },
+      {
+        "index": 10,
+        "maximum_ns": 2959,
+        "pins": 4,
+        "total_ns": 9084
+      },
+      {
+        "index": 11,
+        "maximum_ns": 2417,
+        "pins": 18,
+        "total_ns": 22834
+      },
+      {
+        "index": 12,
+        "maximum_ns": 39041,
+        "pins": 4,
+        "total_ns": 77208
+      },
+      {
+        "index": 13,
+        "maximum_ns": 34834,
+        "pins": 4,
+        "total_ns": 76125
+      },
+      {
+        "index": 14,
+        "maximum_ns": 44125,
+        "pins": 4,
+        "total_ns": 156874
+      },
+      {
+        "index": 15,
+        "maximum_ns": 43750,
+        "pins": 4,
+        "total_ns": 157918
+      },
+      {
+        "index": 16,
+        "maximum_ns": 3208,
+        "pins": 4,
+        "total_ns": 9333
+      },
+      {
+        "index": 17,
+        "maximum_ns": 3792,
+        "pins": 4,
+        "total_ns": 10584
+      },
+      {
+        "index": 18,
+        "maximum_ns": 3750,
+        "pins": 4,
+        "total_ns": 11624
+      },
+      {
+        "index": 19,
+        "maximum_ns": 6333,
+        "pins": 4,
+        "total_ns": 12375
+      },
+      {
+        "index": 20,
+        "maximum_ns": 23084,
+        "pins": 2,
+        "total_ns": 26334
+      },
+      {
+        "index": 21,
+        "maximum_ns": 23167,
+        "pins": 2,
+        "total_ns": 25209
+      },
+      {
+        "index": 22,
+        "maximum_ns": 30292,
+        "pins": 2,
+        "total_ns": 57750
+      },
+      {
+        "index": 23,
+        "maximum_ns": 26250,
+        "pins": 2,
+        "total_ns": 46541
+      },
+      {
+        "index": 24,
+        "maximum_ns": 58417,
+        "pins": 4,
+        "total_ns": 75918
+      },
+      {
+        "index": 25,
+        "maximum_ns": 62750,
+        "pins": 4,
+        "total_ns": 127957
+      },
+      {
+        "index": 26,
+        "maximum_ns": 60833,
+        "pins": 2,
+        "total_ns": 67375
+      },
+      {
+        "index": 27,
+        "maximum_ns": 54667,
+        "pins": 4,
+        "total_ns": 107167
+      },
+      {
+        "index": 28,
+        "maximum_ns": 3416,
+        "pins": 4,
+        "total_ns": 7499
+      },
+      {
+        "index": 29,
+        "maximum_ns": 3708,
+        "pins": 2,
+        "total_ns": 4874
+      },
+      {
+        "index": 30,
+        "maximum_ns": 1584,
+        "pins": 2,
+        "total_ns": 2167
+      },
+      {
+        "index": 31,
+        "maximum_ns": 2333,
+        "pins": 2,
+        "total_ns": 3041
+      },
+      {
+        "index": 32,
+        "maximum_ns": 5625,
+        "pins": 18,
+        "total_ns": 27625
+      },
+      {
+        "index": 33,
+        "maximum_ns": 55875,
+        "pins": 2,
+        "total_ns": 69917
+      },
+      {
+        "index": 34,
+        "maximum_ns": 48958,
+        "pins": 2,
+        "total_ns": 94750
+      },
+      {
+        "index": 35,
+        "maximum_ns": 45958,
+        "pins": 2,
+        "total_ns": 88667
+      },
+      {
+        "index": 36,
+        "maximum_ns": 42875,
+        "pins": 2,
+        "total_ns": 48583
+      },
+      {
+        "index": 37,
+        "maximum_ns": 34000,
+        "pins": 2,
+        "total_ns": 37333
+      },
+      {
+        "index": 38,
+        "maximum_ns": 38792,
+        "pins": 2,
+        "total_ns": 71125
+      },
+      {
+        "index": 39,
+        "maximum_ns": 46709,
+        "pins": 2,
+        "total_ns": 84417
+      },
+      {
+        "index": 40,
+        "maximum_ns": 26792,
+        "pins": 2,
+        "total_ns": 28917
+      },
+      {
+        "index": 41,
+        "maximum_ns": 2041,
+        "pins": 2,
+        "total_ns": 3207
+      },
+      {
+        "index": 42,
+        "maximum_ns": 9667,
+        "pins": 2,
+        "total_ns": 11667
+      },
+      {
+        "index": 43,
+        "maximum_ns": 3125,
+        "pins": 2,
+        "total_ns": 4708
+      },
+      {
+        "index": 44,
+        "maximum_ns": 6750,
+        "pins": 2,
+        "total_ns": 8208
+      },
+      {
+        "index": 45,
+        "maximum_ns": 1375,
+        "pins": 12,
+        "total_ns": 13083
+      },
+      {
+        "index": 46,
+        "maximum_ns": 2334,
+        "pins": 56,
+        "total_ns": 95207
+      }
+    ],
+    "snapshots": [
+      {
+        "devices": [
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": false,
+        "stage": "Setup"
+      },
+      {
+        "devices": [
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 13,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 13,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 13,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 13,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 13,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 13,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": false,
+        "stage": "Stroke"
+      },
+      {
+        "devices": [
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 2,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 2,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 2,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 2,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 2,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 2,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 33,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 14,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 14,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 33,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 14,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 14,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 33,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 14,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 14,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": false,
+        "stage": "Undo"
+      },
+      {
+        "devices": [
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 3,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 3,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 3,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 3,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "125aa9a00",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 27,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 10,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 27,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 3,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 3,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 188,
+            "mutation.operationSessionsCreated": 34,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 188,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 33,
+            "mutation.writablePinsAcquired": 340,
+            "mutation.writablePinsReleased": 340,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 15,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 15,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 1900544,
+            "work.defaultInitializedPages": 116,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 188,
+            "mutation.operationSessionsCreated": 34,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 188,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 33,
+            "mutation.writablePinsAcquired": 340,
+            "mutation.writablePinsReleased": 340,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 15,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 15,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 1900544,
+            "work.defaultInitializedPages": 116,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "1247a2e80",
+            "mutation.generationsReserved": 188,
+            "mutation.operationSessionsCreated": 34,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 188,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 33,
+            "mutation.writablePinsAcquired": 340,
+            "mutation.writablePinsReleased": 340,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 15,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 15,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 1900544,
+            "work.defaultInitializedPages": 116,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": false,
+        "stage": "Redo"
+      }
+    ],
+    "seconds": 1.58396475
+  },
+  {
+    "index": 1,
+    "phase": "hold",
+    "arch": "arm64",
+    "pattern": 0,
+    "pair": 1,
+    "block": 0,
+    "side": "candidate",
+    "persistent": 1,
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/diagnostic-candidate-timing:/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cpu_write_execution_20261007/fixture/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "pid": 65771,
+    "actual_exit": 0,
+    "reaped": true,
+    "timed_out": false,
+    "loading_ok": true,
+    "passed": true,
+    "sample": {
+      "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "canvas_visible_endpoint": false,
+      "image_destroyed": true,
+      "owner_teardown_ns": 536250,
+      "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+      "pen_up_to_projection_ready_ns": 8594959,
+      "projection_updates": 19,
+      "redo_drain_ns": 1258125,
+      "schema": 1,
+      "segment_callbacks": 8,
+      "setup_ns": 385268542,
+      "strategy": "ordinary-cpu-default",
+      "strategy_destroyed": true,
+      "stroke_to_projection_ready_ns": 8671209,
+      "total_fixture_ns": 432500792,
+      "undo_drain_ns": 497583,
+      "update_callbacks": 4,
+      "workers": 4,
+      "workload": "rgba8-buildup-over-512-8-lines-v1"
+    },
+    "visits": [
+      {
+        "C": 4,
+        "F": 150,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 0,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 148,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 1,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 472,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 2,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 440,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 3,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 36,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 4,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 134,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 5,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 49,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 6,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 7,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 8,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 9,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 10,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 18,
+        "F": 18,
+        "P": 18,
+        "R": 18,
+        "backend": "13b7badc0",
+        "declared_pages": 18,
+        "fixed": false,
+        "history": false,
+        "index": 11,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 124,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 12,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 472,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 13,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 516,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 14,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 149,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 15,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 16,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 17,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 18,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 19,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 36,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 20,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 56,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 21,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 133,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 22,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 152,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 23,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 128,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 24,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 428,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 25,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 114,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 26,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 382,
+        "P": 4,
+        "R": 4,
+        "backend": "13ca7e050",
+        "declared_pages": 4,
+        "fixed": true,
+        "history": true,
+        "index": 27,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 4,
+        "F": 4,
+        "P": 4,
+        "R": 4,
+        "backend": "13b7badc0",
+        "declared_pages": 4,
+        "fixed": false,
+        "history": false,
+        "index": 28,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 29,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 30,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 31,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 18,
+        "F": 18,
+        "P": 18,
+        "R": 18,
+        "backend": "13b7badc0",
+        "declared_pages": 18,
+        "fixed": false,
+        "history": false,
+        "index": 32,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 48,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 33,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 260,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 34,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 377,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 35,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 113,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 36,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 36,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 37,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 133,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 38,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 196,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 39,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 81,
+        "P": 2,
+        "R": 2,
+        "backend": "13ca7e050",
+        "declared_pages": 2,
+        "fixed": true,
+        "history": true,
+        "index": 40,
+        "selection": false,
+        "sequence": [
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 41,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 42,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 43,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 2,
+        "F": 2,
+        "P": 2,
+        "R": 2,
+        "backend": "13b7badc0",
+        "declared_pages": 2,
+        "fixed": false,
+        "history": false,
+        "index": 44,
+        "selection": false,
+        "sequence": [
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 12,
+        "F": 12,
+        "P": 12,
+        "R": 12,
+        "backend": "13b7badc0",
+        "declared_pages": 12,
+        "fixed": false,
+        "history": false,
+        "index": 45,
+        "selection": false,
+        "sequence": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "succeeded": true
+      },
+      {
+        "C": 56,
+        "F": 56,
+        "P": 56,
+        "R": 56,
+        "backend": "13b7badc0",
+        "declared_pages": 56,
+        "fixed": false,
+        "history": false,
+        "index": 46,
+        "selection": false,
+        "sequence": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "succeeded": true
+      }
+    ],
+    "holds": [
+      {
+        "index": 0,
+        "maximum_ns": 52167,
+        "pins": 4,
+        "total_ns": 82418
+      },
+      {
+        "index": 1,
+        "maximum_ns": 54417,
+        "pins": 4,
+        "total_ns": 93124
+      },
+      {
+        "index": 2,
+        "maximum_ns": 62625,
+        "pins": 4,
+        "total_ns": 208167
+      },
+      {
+        "index": 3,
+        "maximum_ns": 57208,
+        "pins": 4,
+        "total_ns": 166333
+      },
+      {
+        "index": 4,
+        "maximum_ns": 9417,
+        "pins": 2,
+        "total_ns": 11500
+      },
+      {
+        "index": 5,
+        "maximum_ns": 11042,
+        "pins": 2,
+        "total_ns": 16667
+      },
+      {
+        "index": 6,
+        "maximum_ns": 4417,
+        "pins": 2,
+        "total_ns": 4917
+      },
+      {
+        "index": 7,
+        "maximum_ns": 5583,
+        "pins": 4,
+        "total_ns": 11957
+      },
+      {
+        "index": 8,
+        "maximum_ns": 2125,
+        "pins": 4,
+        "total_ns": 7542
+      },
+      {
+        "index": 9,
+        "maximum_ns": 7708,
+        "pins": 4,
+        "total_ns": 14541
+      },
+      {
+        "index": 10,
+        "maximum_ns": 1875,
+        "pins": 2,
+        "total_ns": 2333
+      },
+      {
+        "index": 11,
+        "maximum_ns": 2125,
+        "pins": 18,
+        "total_ns": 21084
+      },
+      {
+        "index": 12,
+        "maximum_ns": 48709,
+        "pins": 4,
+        "total_ns": 92710
+      },
+      {
+        "index": 13,
+        "maximum_ns": 52958,
+        "pins": 4,
+        "total_ns": 169374
+      },
+      {
+        "index": 14,
+        "maximum_ns": 49250,
+        "pins": 4,
+        "total_ns": 169250
+      },
+      {
+        "index": 15,
+        "maximum_ns": 38833,
+        "pins": 4,
+        "total_ns": 84167
+      },
+      {
+        "index": 16,
+        "maximum_ns": 3208,
+        "pins": 4,
+        "total_ns": 9917
+      },
+      {
+        "index": 17,
+        "maximum_ns": 2709,
+        "pins": 4,
+        "total_ns": 8375
+      },
+      {
+        "index": 18,
+        "maximum_ns": 2708,
+        "pins": 4,
+        "total_ns": 8625
+      },
+      {
+        "index": 19,
+        "maximum_ns": 7833,
+        "pins": 4,
+        "total_ns": 15833
+      },
+      {
+        "index": 20,
+        "maximum_ns": 29291,
+        "pins": 2,
+        "total_ns": 33374
+      },
+      {
+        "index": 21,
+        "maximum_ns": 17791,
+        "pins": 2,
+        "total_ns": 19416
+      },
+      {
+        "index": 22,
+        "maximum_ns": 27875,
+        "pins": 2,
+        "total_ns": 51000
+      },
+      {
+        "index": 23,
+        "maximum_ns": 22500,
+        "pins": 2,
+        "total_ns": 40625
+      },
+      {
+        "index": 24,
+        "maximum_ns": 61583,
+        "pins": 4,
+        "total_ns": 80250
+      },
+      {
+        "index": 25,
+        "maximum_ns": 62000,
+        "pins": 4,
+        "total_ns": 133708
+      },
+      {
+        "index": 26,
+        "maximum_ns": 54291,
+        "pins": 2,
+        "total_ns": 59582
+      },
+      {
+        "index": 27,
+        "maximum_ns": 58791,
+        "pins": 4,
+        "total_ns": 112290
+      },
+      {
+        "index": 28,
+        "maximum_ns": 3416,
+        "pins": 4,
+        "total_ns": 7959
+      },
+      {
+        "index": 29,
+        "maximum_ns": 1458,
+        "pins": 2,
+        "total_ns": 2125
+      },
+      {
+        "index": 30,
+        "maximum_ns": 2083,
+        "pins": 2,
+        "total_ns": 2708
+      },
+      {
+        "index": 31,
+        "maximum_ns": 1458,
+        "pins": 2,
+        "total_ns": 1999
+      },
+      {
+        "index": 32,
+        "maximum_ns": 2833,
+        "pins": 18,
+        "total_ns": 30043
+      },
+      {
+        "index": 33,
+        "maximum_ns": 40250,
+        "pins": 2,
+        "total_ns": 45958
+      },
+      {
+        "index": 34,
+        "maximum_ns": 43792,
+        "pins": 2,
+        "total_ns": 86000
+      },
+      {
+        "index": 35,
+        "maximum_ns": 44958,
+        "pins": 2,
+        "total_ns": 89750
+      },
+      {
+        "index": 36,
+        "maximum_ns": 39958,
+        "pins": 2,
+        "total_ns": 44791
+      },
+      {
+        "index": 37,
+        "maximum_ns": 42208,
+        "pins": 2,
+        "total_ns": 47875
+      },
+      {
+        "index": 38,
+        "maximum_ns": 43250,
+        "pins": 2,
+        "total_ns": 79834
+      },
+      {
+        "index": 39,
+        "maximum_ns": 45542,
+        "pins": 2,
+        "total_ns": 82833
+      },
+      {
+        "index": 40,
+        "maximum_ns": 31709,
+        "pins": 2,
+        "total_ns": 33959
+      },
+      {
+        "index": 41,
+        "maximum_ns": 2708,
+        "pins": 2,
+        "total_ns": 3917
+      },
+      {
+        "index": 42,
+        "maximum_ns": 2708,
+        "pins": 2,
+        "total_ns": 4125
+      },
+      {
+        "index": 43,
+        "maximum_ns": 2459,
+        "pins": 2,
+        "total_ns": 4001
+      },
+      {
+        "index": 44,
+        "maximum_ns": 2541,
+        "pins": 2,
+        "total_ns": 3833
+      },
+      {
+        "index": 45,
+        "maximum_ns": 1834,
+        "pins": 12,
+        "total_ns": 17043
+      },
+      {
+        "index": 46,
+        "maximum_ns": 1959,
+        "pins": 56,
+        "total_ns": 86670
+      }
+    ],
+    "snapshots": [
+      {
+        "devices": [
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 0,
+            "mutation.operationSessionsCreated": 0,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 0,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 0,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 0,
+            "mutation.writablePinsAcquired": 0,
+            "mutation.writablePinsReleased": 0,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 0,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 0,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 0,
+            "work.defaultInitializedPages": 0,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 0,
+            "work.nativeDuplicatePages": 0,
+            "work.nativeForegroundCopyBytes": 0,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": true,
+        "stage": "Setup"
+      },
+      {
+        "devices": [
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 1,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 1,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 12,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 13,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 12,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 13,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 32,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 12,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 13,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": true,
+        "stage": "Stroke"
+      },
+      {
+        "devices": [
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 2,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 2,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 2,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 2,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 2,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 2,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 33,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 13,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 14,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 33,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 13,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 14,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 132,
+            "mutation.operationSessionsCreated": 33,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 132,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 32,
+            "mutation.writablePinsAcquired": 228,
+            "mutation.writablePinsReleased": 228,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 13,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 14,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 983040,
+            "work.defaultInitializedPages": 60,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": true,
+        "stage": "Undo"
+      },
+      {
+        "devices": [
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 3,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 3,
+            "publication.rootRebases": 0,
+            "role": "node.paint",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 3,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 3,
+            "publication.rootRebases": 0,
+            "role": "node.original",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13ca7e050",
+            "mutation.generationsReserved": 76,
+            "mutation.operationSessionsCreated": 1,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 76,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 3,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 1,
+            "mutation.writablePinsAcquired": 152,
+            "mutation.writablePinsReleased": 152,
+            "publication.cancelledMutationCommits": 0,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 3,
+            "publication.metadataRepreparations": 0,
+            "publication.preparedMutationCommits": 3,
+            "publication.rootRebases": 0,
+            "role": "node.projection",
+            "work.defaultInitializedBytes": 917504,
+            "work.defaultInitializedPages": 56,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 327680,
+            "work.nativeDuplicatePages": 20,
+            "work.nativeForegroundCopyBytes": 327680,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 188,
+            "mutation.operationSessionsCreated": 34,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 188,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 33,
+            "mutation.writablePinsAcquired": 340,
+            "mutation.writablePinsReleased": 340,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 14,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 15,
+            "publication.rootRebases": 0,
+            "role": "root.original",
+            "work.defaultInitializedBytes": 1900544,
+            "work.defaultInitializedPages": 116,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 188,
+            "mutation.operationSessionsCreated": 34,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 188,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 33,
+            "mutation.writablePinsAcquired": 340,
+            "mutation.writablePinsReleased": 340,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 14,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 15,
+            "publication.rootRebases": 0,
+            "role": "root.projection",
+            "work.defaultInitializedBytes": 1900544,
+            "work.defaultInitializedPages": 116,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          },
+          {
+            "backend": "13b7badc0",
+            "mutation.generationsReserved": 188,
+            "mutation.operationSessionsCreated": 34,
+            "mutation.pagesCancelled": 0,
+            "mutation.pagesSealed": 188,
+            "mutation.pendingDefaultResetBytes": 0,
+            "mutation.pendingPayloadCopyBytes": 0,
+            "mutation.pendingWriteMaterializations": 0,
+            "mutation.sealMetadataPreparations": 4,
+            "mutation.sealMetadataRejections": 0,
+            "mutation.sessionsCreated": 33,
+            "mutation.writablePinsAcquired": 340,
+            "mutation.writablePinsReleased": 340,
+            "publication.cancelledMutationCommits": 1,
+            "publication.directoryRepreparations": 0,
+            "publication.installedMutationCommits": 14,
+            "publication.metadataRepreparations": 2,
+            "publication.preparedMutationCommits": 15,
+            "publication.rootRebases": 0,
+            "role": "image.projection",
+            "work.defaultInitializedBytes": 1900544,
+            "work.defaultInitializedPages": 116,
+            "work.explicitCopyBytes": 0,
+            "work.explicitCopyPages": 0,
+            "work.nativeDuplicateBytes": 1179648,
+            "work.nativeDuplicatePages": 72,
+            "work.nativeForegroundCopyBytes": 1179648,
+            "work.nativePrecloneHits": 0,
+            "work.payloadInitializedBytes": 0,
+            "work.payloadInitializedPages": 0
+          }
+        ],
+        "opt_in_requested": true,
+        "stage": "Redo"
+      }
+    ],
+    "seconds": 0.7226632499999999
+  }
+]

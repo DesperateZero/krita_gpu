@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "unpaid_data_make_unique_deleted": true,
+    "data_uses_actual_retained_allocator_and_deleter": true,
+    "candidate_entries_and_growth_paid": true,
+    "qt_candidate_delta_and_authority_holders_deleted": true,
+    "authority_hash_node_allocator_present": true,
+    "nested_qt_installation_snapshots_deleted": true,
+    "nested_protection_capacity_paid": true,
+    "header_retained_qt_capacity_released": true,
+    "all_growth_holders_paid_without_default_fallback": true,
+    "postprepare_local_qset_duplicate_holder_deleted": true,
+    "single_original_assign_and_install_policy_retained": true,
+    "empty_cleanup_allocator_released": true,
+    "raw_controller_only_late_release_deleted": true,
+    "same_accounting_owner_handles_physical_and_reserved_storage": true,
+    "obsolete_fused_retirement_comments_deleted": true,
+    "real_revision_and_detach_rejections_retained": true,
+    "real_pressure_and_controller_dead_cleanup_tested": true
+  },
+  "all_passed": true,
+  "remaining_protocols": [
+    {
+      "protocol": "generic StateMachine Qt scratch and mutationBase/overlay preparation",
+      "consumers": "applyProjectedSequence / preparePublicationImpl touched projections / mutationBaseSnapshot / original overlay prepare",
+      "reason": "Candidate ownership is paid; temporary seen/included/previous sets, projections and remaining wrapper/control storage still allocate.",
+      "delete_when": "Migrate actual temporary capacity and remaining callers to the original paid preparation, then propagate any eliminated failure sources."
+    },
+    {
+      "protocol": "identity/revision/claim conflict and original DeferredPublicationCleanup",
+      "consumers": "all installPublicationImpl kinds / cancel / clearBatch",
+      "reason": "Conflicts remain legal; rejected candidates retain original activities/reservations until cleanup; cleanup is real charged storage.",
+      "delete_when": "Only a proven replacement of the actual acceptance and storage-lifetime contract can remove these consumers."
+    },
+    {
+      "protocol": "read/capture progress, Pending/subscription/Delay/Debt and Failed/cancel",
+      "consumers": "original protection terminal paths / retirement queue / generic owner transitions / scheduler jobs",
+      "reason": "Protection removal, readiness, debt/subscription admission and other preparation failures remain reachable.",
+      "delete_when": "Original admission, terminal ownership and CP5 continuation guarantees close for their real consumers."
+    }
+  ],
+  "candidate_control_capacity_paid": true,
+  "original_accounting_owner_reused": true,
+  "new_queue_or_persistent_stage": false,
+  "full_cp1_complete": false
+}

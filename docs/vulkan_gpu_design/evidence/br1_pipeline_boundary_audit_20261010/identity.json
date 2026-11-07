@@ -1,0 +1,33 @@
+{
+  "outer_parent": "d99677476d5c04304a4815a0c1c314aa89ed5d1d",
+  "product_head": "c13c44249338bf10477b9b07c65726e5933e51f9",
+  "product_tree": "05182f0ad631460934e4298e8c71cf5cc0f36c2d",
+  "upstream_comparison": "9a24ae0d8c070884fb013594191002e1a1b39a19",
+  "source_files": {
+    "libs/image/kis_update_scheduler.cpp": "0a4451562cf8dad41cea27f45bad654aedcb6ea5ebacf22bd7010af226b766a7",
+    "libs/image/kis_simple_update_queue.cpp": "db4dd7b890f246b5d6ec9f56ca8ac0bdda37a5145f7a620d088d53610cadcd3e",
+    "libs/image/kis_updater_context.cpp": "a55df66ad282953c3b1561cff59b48376fc7a1b1cbf46cac0e1491013929a4fa",
+    "libs/image/kis_async_merger.cpp": "a38c43eec43debc963cbf300133c5a061e6151f578a885cde569b92a13adc8b3",
+    "libs/image/kis_update_job_item.h": "be25355b40d3ae96309da7b1c456b67695ce9c657553966762f3ad5cdc11793b",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "3c4b51d952547c01833435af5baf5b24b5e4ed082e879fec5aeb9638d66ad0f4",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "d682a1c8b87b533baa91fb4d7830465943825791ab9098adc7aa8c5181ee388f",
+    "libs/image/pagestore/KisPageStore.cpp": "447715516129afa0e0ac749bab607f83d08ebf737bc594ed56c433a2b50398c0"
+  },
+  "same_as_upstream": {
+    "libs/image/kis_update_scheduler.cpp": false,
+    "libs/image/kis_simple_update_queue.cpp": true,
+    "libs/image/kis_updater_context.cpp": true,
+    "libs/image/kis_async_merger.cpp": true,
+    "libs/image/kis_update_job_item.h": true
+  },
+  "skill_before": {
+    "SKILL.md": "5fe3844d022b079d822bbd04c5d9ae7243f2f00d79e29c8962cd79173c92e8a0",
+    "references/candidate-selection.md": "f93bdb6d542c6b774786eeab00ca56cc0e11b7a9fb8e20ee2840dda37ac8362e",
+    "agents/openai.yaml": "1d0a7ad7bc9cbb6f480e26d2ee265cf48b303bb3776e0070cb25ba04f91eaf70"
+  },
+  "fixtures": {
+    "docs/vulkan_gpu_design/evidence/br1_upstream_cost_accounting_20261007/matched_freehand_baseline.h": "fc6d1317c436a37060c9349f275b67304fa54c960b6c42b8a8e45e4c44db1a13",
+    "docs/vulkan_gpu_design/evidence/br1_descriptor_search_trial_20261010/run.py": "a20cb25b4357079e408e35635db9cddf1833234bbfdeec7c8718cfce6bd09b28"
+  },
+  "scope": "Static code and existing-evidence audit; no new runtime or performance sample"
+}

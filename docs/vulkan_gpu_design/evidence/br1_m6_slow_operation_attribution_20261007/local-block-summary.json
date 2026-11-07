@@ -1,0 +1,335 @@
+{
+  "rows": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same",
+      "policy": "global",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0117472980524698,
+      "diagnostic_95pct_interval": [
+        0.9981393682432905,
+        1.0329868987796151
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.028813532717908836,
+      "balanced_log_units": [
+        0.04532005411803642,
+        0.009290438142931155,
+        0.019588960612988003,
+        0.014067230260908633,
+        0.008530243413052202,
+        -0.012254973177283413
+      ],
+      "between_opposite_pair_gap_seconds": [
+        42.124533292,
+        0.011681541999990941,
+        15.074831292000027,
+        28.715387292000003,
+        41.788927917000024,
+        0.011606499999970765
+      ],
+      "median_gap_seconds": 21.895109292000015,
+      "completed": 1024620,
+      "wall_ns": 12288163528
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same",
+      "policy": "local",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9892738087164918,
+      "diagnostic_95pct_interval": [
+        0.9527056360697753,
+        1.0111654124542633
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03292616147211112,
+      "balanced_log_units": [
+        -0.029642393451074476,
+        -0.05243342632446124,
+        -0.04446518246646215,
+        0.008400963070573043,
+        0.013806115668704409,
+        0.008074130321610924
+      ],
+      "between_opposite_pair_gap_seconds": [
+        0.011291499999998678,
+        0.011204499999990958,
+        0.012721290999991197,
+        0.011866709000003084,
+        0.011904332999961298,
+        0.01187862500000847
+      ],
+      "median_gap_seconds": 0.011872667000005777,
+      "completed": 1002633,
+      "wall_ns": 12288159458
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross",
+      "policy": "global",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0201808354688737,
+      "diagnostic_95pct_interval": [
+        0.986903003063268,
+        1.0348713055556666
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.02436081254653035,
+      "balanced_log_units": [
+        0.016387950787772824,
+        0.038659638589969125,
+        0.029894514465780814,
+        -0.012619959908970288,
+        -0.013747077857453875,
+        0.023571851727404863
+      ],
+      "between_opposite_pair_gap_seconds": [
+        27.066325917,
+        41.09115641700001,
+        0.003167791999999281,
+        13.454200125,
+        26.79816037500001,
+        42.09073279099994
+      ],
+      "median_gap_seconds": 26.932243146000005,
+      "completed": 118410,
+      "wall_ns": 12289075391
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross",
+      "policy": "local",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0241112767922205,
+      "diagnostic_95pct_interval": [
+        0.9784411793741274,
+        1.0567099731182068
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.060698156953690435,
+      "balanced_log_units": [
+        0.03843644018409229,
+        -0.0473593175094223,
+        0.05961618139326668,
+        0.050704383416327374,
+        0.003770103490507229,
+        0.009213938727305119
+      ],
+      "between_opposite_pair_gap_seconds": [
+        0.0030556669999981523,
+        0.0036060840000118333,
+        0.0037267499999984466,
+        0.0038632080000411406,
+        0.0038582500000075015,
+        0.003541749999953936
+      ],
+      "median_gap_seconds": 0.00366641700000514,
+      "completed": 117345,
+      "wall_ns": 12289045678
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross",
+      "policy": "global",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9934204616968954,
+      "diagnostic_95pct_interval": [
+        0.9742009558023984,
+        1.021890849852138
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.0363523861931868,
+      "balanced_log_units": [
+        -0.011457500423365468,
+        -0.0017450573360090844,
+        -0.01208346414701569,
+        0.029961647905452114,
+        -0.04019188884299682,
+        0.013347723178269558
+      ],
+      "between_opposite_pair_gap_seconds": [
+        0.007853083000000538,
+        14.830508750000007,
+        30.24963175000002,
+        43.61536099999995,
+        0.009357500000021446,
+        15.184363584000039
+      ],
+      "median_gap_seconds": 15.007436167000023,
+      "completed": 629069,
+      "wall_ns": 12288212399
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross",
+      "policy": "local",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.970256162905489,
+      "diagnostic_95pct_interval": [
+        0.963360866478859,
+        1.0066964173148156
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.036073067481342896,
+      "balanced_log_units": [
+        -0.039674143363555674,
+        -0.03498026830100121,
+        -0.020613981110047672,
+        -0.03401595149344751,
+        0.033962172921963255,
+        -0.02637436226567618
+      ],
+      "between_opposite_pair_gap_seconds": [
+        0.00783650000001046,
+        0.008141208000012057,
+        0.007965249999983826,
+        0.009428667000008772,
+        0.008220000000051186,
+        0.0088056660000575
+      ],
+      "median_gap_seconds": 0.008180604000031622,
+      "completed": 625116,
+      "wall_ns": 12288239849
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same",
+      "policy": "global",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9753488583723885,
+      "diagnostic_95pct_interval": [
+        0.9423155683576553,
+        1.0099825890398595
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.043058870800479106,
+      "balanced_log_units": [
+        -0.03905283274808055,
+        -0.06206460275569359,
+        -7.213301628727822e-05,
+        0.01993831727665852,
+        -0.010867304295564553,
+        -0.0567655217415609
+      ],
+      "between_opposite_pair_gap_seconds": [
+        13.489269624999999,
+        27.932335749999993,
+        44.22372575,
+        0.007859250000024076,
+        13.47647133299995,
+        28.664310290999993
+      ],
+      "median_gap_seconds": 20.710802687499996,
+      "completed": 630700,
+      "wall_ns": 12288222915
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same",
+      "policy": "local",
+      "processes": 24,
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.018069065668467,
+      "diagnostic_95pct_interval": [
+        0.9873009361404741,
+        1.0431301771339454
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.05380288789273123,
+      "balanced_log_units": [
+        0.03538331921091211,
+        0.049068637832875066,
+        -0.01093181782958823,
+        0.01954841886731988,
+        -0.014628954535996025,
+        0.016267101722763105
+      ],
+      "between_opposite_pair_gap_seconds": [
+        0.00890991699999688,
+        0.0077016660000026604,
+        0.008508292000044548,
+        0.008432583999990584,
+        0.008032333999949515,
+        0.007792708000010862
+      ],
+      "median_gap_seconds": 0.00823245899997005,
+      "completed": 623588,
+      "wall_ns": 12288286675
+    }
+  ],
+  "comparison": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same",
+      "paired_log_sd_relative_change": 0.14273254149242565,
+      "global_inside": false,
+      "local_inside": false
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross",
+      "paired_log_sd_relative_change": 1.4916310503910313,
+      "global_inside": false,
+      "local_inside": false
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross",
+      "paired_log_sd_relative_change": -0.007683641738386204,
+      "global_inside": false,
+      "local_inside": false
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same",
+      "paired_log_sd_relative_change": 0.24951924870571807,
+      "global_inside": false,
+      "local_inside": false
+    }
+  ],
+  "processes": 192,
+  "completed": 4771481,
+  "wall_ns": 98307405893,
+  "qualification": "Fixed192-process pilot only, unadjusted two-sided95pct; no formal family or production speed qualification",
+  "protocol_sha256": "42f66e4180db6d360ee38c47a1f174bd9bb186e64109c2130d4704a22bc7fea5"
+}

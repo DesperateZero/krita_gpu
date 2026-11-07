@@ -4,6 +4,11 @@
 > [00_status_and_mvp_contract.md](00_status_and_mvp_contract.md)，全局 P0 架构服从
 > [22_p0_vulkan_baseline_reconstruction.md](22_p0_vulkan_baseline_reconstruction.md)，唯一实施顺序服从
 > [31_p0_reset_and_execution_sequence.md](31_p0_reset_and_execution_sequence.md)。本文不表示相关代码已经实现。
+> 2026-09-20 补充：resident CPU 快路径和 production epoch layout 属于冻结架构，不是事后 micro-optimization；
+> 执行与门禁见
+> [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)；2026-09-21 起写侧条件
+> COW、backing handoff、硬预算和零冗余复制定义服从
+> [68](archive/br1_pre_m6_20260925/documents/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md)。
 
 ## 1. 决策结论
 
@@ -45,6 +50,27 @@ ResidencyController
 8. 淘汰先经过安全资格，再经过绘画语义分级，最后才使用成本与访问历史排序。
 9. native sparse resource 只能是可选 provider 优化，不得成为功能正确性、页面身份或 MVP 的前提。
 10. 所有阈值都来自 trace/benchmark；阈值不得进入 PageStore 公共 ABI。
+11. 单一 canonical 模型允许 resident native data plane 与 generic async control plane 两种执行粒度；这不是双 authority。
+12. virtual default 不按逻辑坐标物化页面；CPU/GPU 读共享 format/default-generation 匹配的只读 backing。
+13. 每个显式 mutation/batch 的同一未发布段，对同一页只做一次 first-write transition/COW/seal；per tile lock 或 per dab
+    提交被拒绝。需要中间可见性时显式分段，不能跨已发布段沿用旧可写授权，也不能把 history transaction 自动当成单一段。
+14. production epoch 使用 persistent root/changed-page delta；reference `QHash/QVector/sort` 不得成为产品布局。
+15. GPU/UMA 是可按 operation 选择的 executor，不是“硬件存在即优先”的 storage mode。Auto route 以同机成熟 CPU
+    product path 为性能基线，在首次写入前冻结，并服从 39 的 CPU-relative gate 和迟滞。
+16. 零拷贝只证明迁移字节，不证明加速；shared-memory 带宽、GPU kernel、queue 或 cache maintenance 不利时必须走 CPU。
+17. VT 管理对主干 tile 的 M 证据与 VT/RAM Tile 吞吐、延迟的 K/E 证据分别验收，再以同 workload 的 X/E 关键路径整合。
+    GPU direct/VT 必须同 executor/domain；GPU/VRAM 对 CPU/RAM 只给异构性能比，不能归因为管理成本。定义统一见 39 的 5.6–5.9。
+18. route 比较以当前 exact valid replicas 和相同交付 endpoint 为条件，产品比较以完整外部任务为边界；CPU 可用性不等于
+    RAM 已就绪。不得遗漏 fallback 读回或为 GPU 强加无用读回，也不得以阶段时长/P95 求和代替端到端实测。
+19. CPU/CpuRam 同义管理以主干 Tile 等价或更优为目标；M 独立通过 39 的预冻结容差/配对不劣性判据，不能用完整操作
+    1.2×/1.3×/1.5× 阶段上限替代。服务于同义操作的内部记账仍计入 M，真正新增语义单列预算且保留在 E。
+20. resident read 依据所需 exact generation 的 CPU-readable valid replica 是否 ready 且可安全 pin；cache miss、历史
+    标签、非 CPU authority 不单独触发通用 materialization。读侧快路径不放宽写侧 handoff/COW/permit。
+21. UMA 同一已驻留、布局兼容 backing 的 CPU↔GPU payload migration 为零，不是全部硬件/同步成本为零；无 GPU
+    交接需求的 CPU-only 路径不执行无用 GPU 协议。必要执行依赖、实际新增语义与可消除软件冗余分别计量，不互相免责。
+
+这些是设计目标与约束，不是性能通过声明；跨文档摘要和报告判词以
+[39 的 5.11](39_virtual_texture_performance_gates.md#511-统一口径速查与报告判词) 为准。M/K/X/E 不构成可相加的时间恒等式。
 
 ## 2. 方案评分和取舍
 
@@ -107,6 +133,12 @@ consumer requests exact PageVersion + AccessDomain + deadline
 
 读取不能根据 `Tier` 猜测数据是否存在，也不能把缺页当透明像素。
 
+resident CPU 是同一模型的缩短路径：operation 先捕获一次 retained root，随后以 epoch-tagged cached handle 做
+page-local pin/version validation；virtual default 返回匹配 captured view 的 format/default revision 的共享 view。
+cached handle miss 先在受保护 root 中 resolve；retained 历史或非 authority 的 ready exact CPU 副本同样可 native pin。
+只有缺少适用就绪副本、需要异步 producer/访问交接、swap-in/跨域/I/O 时才建立上面的通用 request/materialization DAG。
+无效 capability/version 显式失败，不能伪装成迁移；resident hit 不分配 heap request、不插入 global map、不扫描 provider leases。
+
 ### 3.2 Write
 
 ```text
@@ -122,6 +154,18 @@ acquireWrite(PageKey)
 ```
 
 producer 失败或取消只终结 `G+1`，不得污染 `G`。
+
+CPU/UMA/GPU mutation 都遵守 first-write 规则：同一 page/batch 的未发布段只 reserve G+1 一次并复用 writable replica。
+中途发布后开启新段并重新选择 write plan，不沿用旧授权。物理 allocation 复用由 PageStore 私有 `KisPageWriteCoordinator` 的内联 plan
+选择 `HandoffRecoverable` 或 `HandoffCommitOnly`：前者证明旧 G 有 exact recoverable backing，后者要求 old-root
+capture/read gate、完整预检和首字节后不可失败发布链。调用方/provider 不持有公共 permit；多页 Prepared batch 不能仅因
+当前无 reader 就覆盖旧 G。production metadata 先使用 shard-owned generational slot arena 和 allocation-free publication；
+handoff 不得以每 generation plan/binding 堆对象换取 payload 零分配。算法边界一次 commit，
+tile unlock/per dab completion 不是 epoch 边界。
+
+executor route 发生在 acquire write/begin mutation 前。成本模型同时估计实际 CPU product path 与完整 accelerator
+end-to-end cost；只有带风险余量仍有收益的 bucket 才 `AutoPreferred`。route 冻结后同一 stroke/operation 不按 dab/page
+混用 executor；故障通过 abort/replay 恢复。GPU 劣势设备或状态保持 CPU route，不影响 PageStore 仍拥有同一 authority。
 
 ### 3.3 Evict
 
@@ -153,6 +197,10 @@ budget crosses high water
 - `CoverageCertificate`/dependency vector；
 - UMA 零 domain-copy 的计数口径；
 - 所有资源按 last-use ticket 退休。
+- virtual default、native resident guard、two-stage write intent/guard、PageStore 私有 write-plan 与条件 backing handoff；
+- current/history/pending/in-flight/retiring/optional backing 的 owner ledger、硬预算、压力状态机与背压；
+- persistent epoch root、changed-page delta 与增量 extent；
+- CPU-relative execution profile、operation-level route freeze、risk margin/hysteresis 和 regret demotion；
 
 ### 4.2 只允许测量后调整
 
@@ -172,6 +220,8 @@ budget crosses high water
 | 文档 | 权威范围 |
 |---|---|
 | [33_virtual_texture_pagestore_state_machine.md](33_virtual_texture_pagestore_state_machine.md) | 状态、线性化、分片并发、lease、事务可见性 |
+| [68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md](archive/br1_pre_m6_20260925/documents/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md) | BR1 write-plan、条件 COW、allocation handoff、硬 backing 预算与清理顺序 |
+| [69_br1_pagestore_decomposition_and_intrusion_audit_20260921.md](archive/br1_pre_m6_20260925/documents/69_br1_pagestore_decomposition_and_intrusion_audit_20260921.md) | BR1 PageStore 类拆分、重复 owner 清理、外部侵入审计与删除门槛 |
 | [34_virtual_texture_gpu_binding_and_arenas.md](34_virtual_texture_gpu_binding_and_arenas.md) | slot/slab、PageHandle、作业级绑定、atlas/sparse |
 | [35_virtual_texture_uma_pointer_bypass.md](35_virtual_texture_uma_pointer_bypass.md) | UMA allocation、CPU/GPU ownership、cache maintenance、COW |
 | [36_virtual_texture_dgpu_migration.md](36_virtual_texture_dgpu_migration.md) | VRAM/RAM 迁移、聚合、staging、eviction、backpressure |
@@ -187,7 +237,7 @@ budget crosses high water
 | 阶段 | 虚拟纹理交付物 |
 |---|---|
 | BR0 | 删除旧 runtime/Tier/LRU/direct sparse bind；加入静态守卫 |
-| BR1 | 33 的 CPU reference、PageStore、COW、RAM/SSD identity |
+| BR1 | 33/52/68 的 CPU reference + production persistent root、PageStore、virtual default、resident guard、条件 backing handoff/必要 COW、硬 backing 预算、RAM/SSD identity |
 | BR2 | ticket DAG、completion bridge、binding/allocation retirement |
 | BR3 | 34–37 的 UMA/dGPU/SSD provider 和强制迁移闭环 |
 | BR4 | 38 的语义温度、预测、CoverageCertificate 和公平性 |
@@ -210,13 +260,17 @@ BR1 可以实现 SSD reference store，但 Vulkan provider 只能在 BR2 coordin
 - generic LRU 直接决定 dirty canonical page 淘汰；
 - 用 native sparse 不支持作为关闭虚拟纹理功能的理由；
 - 通过保留旧 runtime 形成“双轨过渡”。
+- resident CPU 每次 tile lock 走 generic request/resolve/global map；
+- production commit 重建/排序完整 reference manifest，或由 tile unlock 触发提交；
+- 仅凭 Vulkan/UMA capability 或零拷贝计数强制 GPU route，忽略同机 CPU 实际性能；
 
 ## 8. 架构完成定义
 
 只有同时满足以下条件，才能称虚拟纹理架构闭环：
 
 - 33–38 的 reference model、故障注入和 production provider 共用相同 transition 语义；
-- UMA 稳态 canvas-pixel domain-copy 为零；
+- UMA 同一兼容驻留 shared backing 的真实 CPU↔GPU 交接中 payload migration count/bytes 为零，证据与例外见 39 的 5.7；
+  不能由此推出必要同步/总耗时为零或授予 M/K/E Pass；
 - dGPU 小预算下自动完成 VRAM/RAM/SSD 往返且 generation/checksum 不变；
 - 默认页、COW、undo、save、cancel 与旧 Krita CPU 语义一致；
 - 当前目标、预测 corridor、非目标 CoverageCertificate 真实驱动 residency；

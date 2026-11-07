@@ -1,0 +1,41 @@
+{
+  "scope": "S06 ledger-owned handoff retirement headroom, domain migration and ordinary metadata terminal consumption; cumulative CPU correctness, not production selector/M6/stage/performance qualification",
+  "final_run": "checks-01",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "78d29b5641833b40f6826cd9e9446f83cf6e29303fba1f7c05cfe59a9ad6f3a7",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      2403,
+      0,
+      0
+    ],
+    "x86_64": [
+      2403,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    4806,
+    0,
+    0
+  ],
+  "new_terminal_cases_per_architecture": 64,
+  "strengthened_metadata_callback_cases_per_architecture": 32,
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 22,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1518,
+    "call_edges": 14728,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "allocator_summary": "allocator-summary.json",
+  "production_ledger_terminal_consumes_retained_headroom": true,
+  "production_selector_handoff": false,
+  "stage_or_performance_qualification": false
+}

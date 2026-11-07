@@ -1,0 +1,26 @@
+{
+  "command": [
+    "arch",
+    "-x86_64",
+    "/usr/bin/env",
+    "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+    "DYLD_PRINT_LIBRARIES=1",
+    "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+    "-nocrashhandler",
+    "testPersistentAutoBrushStroke",
+    "testPersistentAutoBrushStrokeCancelled",
+    "testPersistentAutoBrushStrokeFailure",
+    "testPersistentAutoBrushStrokePressure",
+    "testPersistentAutoBrushStrokePressureCancelled"
+  ],
+  "pid": 14664,
+  "exit_code": 0,
+  "reaped": true,
+  "timed_out": false,
+  "seconds": 15.209916707943194,
+  "totals": [
+    "Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 266ms"
+  ],
+  "failures": [],
+  "selected_image_loaded": true
+}

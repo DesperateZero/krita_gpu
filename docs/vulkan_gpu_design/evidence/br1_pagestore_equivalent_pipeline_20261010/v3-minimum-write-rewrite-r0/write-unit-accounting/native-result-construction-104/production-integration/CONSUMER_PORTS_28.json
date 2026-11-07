@@ -1,0 +1,26 @@
+[
+  {
+    "test": "testPageStoreIdentityCacheLifetime",
+    "migration": "Original 1000 nested repins, real swap, mutable reuse, detached/dead/current/history lifetime bytes retained. Direct original memento bridge used for synthetic public table replacement; no backend introduced. Active state is lifetime only, not evidence of zero services."
+  },
+  {
+    "test": "testPageStoreNestedTileCapabilityLifetime",
+    "migration": "Retain write/read versus read/write lock ordering, old before bytes, last actual lease acceptance and history; native one visibility cut replaces legacy generic counters."
+  },
+  {
+    "test": "testPageStoreWritablePresencePrecedesDataExposure",
+    "migration": "Cold getTile must establish explicit presence before mutable data exposure; lock-only intent does not publish pixels, true write installs once and final owner drains."
+  },
+  {
+    "test": "testPageStoreDefaultLifecycleDoesNotMaterialize",
+    "migration": "Original repeated history/trim/clear/default bytes retained; undo creates no new physical result. Optional idle storage is legal until close, whose real full drain must reach zero."
+  },
+  {
+    "test": "testPageStoreWholeTileFillUsesSynchronousAdoption",
+    "migration": "Real uniform full fill adopts one immutable source for four original selections, repeat is physical/logical no-op, distinct-key COW preserves other pages and retained old bytes; clear publishes absence."
+  },
+  {
+    "test": "testPageStoreBulkNoOpAndBitBltBatching",
+    "migration": "Packed no-op and one-page delta preserve complete bytes and one native cut; repeated cross-default full copy must become a true no-op, not repeated alias/factory work."
+  }
+]

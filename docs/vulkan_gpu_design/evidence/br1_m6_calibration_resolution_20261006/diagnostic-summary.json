@@ -1,0 +1,938 @@
+{
+  "protocol_sha256": "e54332fb991927e586c4ef53e422585f939c7c969a623de93aa06c294b8adcee",
+  "analysis_sha256": "bd3e209be23eddf8bd7702320e346cb2467dccdf7d698b5b3250d54ff0f76c75",
+  "processes": 768,
+  "rows": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0056041881523752,
+      "diagnostic_95pct_interval": [
+        0.9720588692713575,
+        1.083530538129157
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.07948426868690243,
+      "paired_log_median_latency_sd": 0.04696999099815709,
+      "median_latency_ratio": 1.0020971418163993,
+      "median_top1pct_fraction": 0.023206062207598528,
+      "maximum_operation_ns": 1225958,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9959638061589455,
+      "diagnostic_95pct_interval": [
+        0.9826459311273569,
+        1.0208596753440944
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.031765369639156285,
+      "paired_log_median_latency_sd": 0.0187254232728609,
+      "median_latency_ratio": 0.9896224780324812,
+      "median_top1pct_fraction": 0.016854987085148397,
+      "maximum_operation_ns": 169459,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9982422576114672,
+      "diagnostic_95pct_interval": [
+        0.9748857922984859,
+        1.0102768569730607
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03051694116174768,
+      "paired_log_median_latency_sd": 0.036602606331466274,
+      "median_latency_ratio": 1.0000491823435684,
+      "median_top1pct_fraction": 0.016388797361139573,
+      "maximum_operation_ns": 396208,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "hit",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0014222657581444,
+      "diagnostic_95pct_interval": [
+        0.9847134662563295,
+        1.011635390231049
+      ],
+      "descriptively_inside_2pct": true,
+      "paired_log_throughput_sd": 0.024642802443955593,
+      "paired_log_median_latency_sd": 0.035000253713939763,
+      "median_latency_ratio": 0.9939308249381765,
+      "median_top1pct_fraction": 0.01774288539674121,
+      "maximum_operation_ns": 342375,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9856959072618445,
+      "diagnostic_95pct_interval": [
+        0.9743872586557826,
+        1.0759971128197894
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.10998708785444394,
+      "paired_log_median_latency_sd": 0.031646563100656826,
+      "median_latency_ratio": 0.99046150321309,
+      "median_top1pct_fraction": 0.020163399162317547,
+      "maximum_operation_ns": 8903458,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9832175692641929,
+      "diagnostic_95pct_interval": [
+        0.97216765474209,
+        1.020752958127683
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03366692412091618,
+      "paired_log_median_latency_sd": 0.03191543659403933,
+      "median_latency_ratio": 0.9952372308781398,
+      "median_top1pct_fraction": 0.01786169591188808,
+      "maximum_operation_ns": 199167,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9991417993903047,
+      "diagnostic_95pct_interval": [
+        0.9765664569716558,
+        1.040325378799595
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.04087869516731062,
+      "paired_log_median_latency_sd": 0.03917689939218923,
+      "median_latency_ratio": 1.007739111224811,
+      "median_top1pct_fraction": 0.024911309901436824,
+      "maximum_operation_ns": 1826333,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9992924817315528,
+      "diagnostic_95pct_interval": [
+        0.9699918228037812,
+        1.0133526045405399
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03240129209192924,
+      "paired_log_median_latency_sd": 0.017209884083626795,
+      "median_latency_ratio": 0.9907379328438272,
+      "median_top1pct_fraction": 0.017468721637872782,
+      "maximum_operation_ns": 687292,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9973925158973606,
+      "diagnostic_95pct_interval": [
+        0.9858938910316336,
+        1.011096462570326
+      ],
+      "descriptively_inside_2pct": true,
+      "paired_log_throughput_sd": 0.02060382915145712,
+      "paired_log_median_latency_sd": 0.013087851462852688,
+      "median_latency_ratio": 0.9974493639731995,
+      "median_top1pct_fraction": 0.01958436544537516,
+      "maximum_operation_ns": 880125,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9952083721345613,
+      "diagnostic_95pct_interval": [
+        0.9898417989788038,
+        1.0169027928629322
+      ],
+      "descriptively_inside_2pct": true,
+      "paired_log_throughput_sd": 0.04399225056561089,
+      "paired_log_median_latency_sd": 0.014561028028245751,
+      "median_latency_ratio": 0.9988019938845789,
+      "median_top1pct_fraction": 0.01900974404044449,
+      "maximum_operation_ns": 2287375,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9853739576104862,
+      "diagnostic_95pct_interval": [
+        0.9538831965088478,
+        1.005342389075436
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03368848867131796,
+      "paired_log_median_latency_sd": 0.0221276248071372,
+      "median_latency_ratio": 0.99235159111204,
+      "median_top1pct_fraction": 0.016265451015293697,
+      "maximum_operation_ns": 1095000,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9796191225234598,
+      "diagnostic_95pct_interval": [
+        0.9618538236872711,
+        1.0082583572647648
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.027163496508173773,
+      "paired_log_median_latency_sd": 0.014289056320348352,
+      "median_latency_ratio": 0.9920893607314158,
+      "median_top1pct_fraction": 0.016648134211042963,
+      "maximum_operation_ns": 838083,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9975661135175176,
+      "diagnostic_95pct_interval": [
+        0.9359019666394969,
+        1.013578498062662
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.07848994353815723,
+      "paired_log_median_latency_sd": 0.030577949188848836,
+      "median_latency_ratio": 1.0044040223394053,
+      "median_top1pct_fraction": 0.018395572914742052,
+      "maximum_operation_ns": 791791,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.978347240165219,
+      "diagnostic_95pct_interval": [
+        0.9453401660038121,
+        1.0258215769787093
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.07422563922404408,
+      "paired_log_median_latency_sd": 0.024755288151018958,
+      "median_latency_ratio": 0.9801599292945116,
+      "median_top1pct_fraction": 0.01709235993660032,
+      "maximum_operation_ns": 3943000,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.999141494650204,
+      "diagnostic_95pct_interval": [
+        0.9776326404738303,
+        1.0214271825744075
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.0365330543130939,
+      "paired_log_median_latency_sd": 0.017024422307505668,
+      "median_latency_ratio": 1.0072765420914256,
+      "median_top1pct_fraction": 0.015941479483383834,
+      "maximum_operation_ns": 1462500,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.019002813726179,
+      "diagnostic_95pct_interval": [
+        0.9453522656106308,
+        1.0758367785744092
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.07786663290203902,
+      "paired_log_median_latency_sd": 0.028402801821081847,
+      "median_latency_ratio": 1.0168452608051521,
+      "median_top1pct_fraction": 0.020022386641822223,
+      "maximum_operation_ns": 2566459,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9774880059591033,
+      "diagnostic_95pct_interval": [
+        0.9613942620553035,
+        1.0051186376914911
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03171952126678902,
+      "paired_log_median_latency_sd": 0.03172224505485725,
+      "median_latency_ratio": 0.9860607305729556,
+      "median_top1pct_fraction": 0.018166934503509355,
+      "maximum_operation_ns": 515542,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.987649937781562,
+      "diagnostic_95pct_interval": [
+        0.9815635738860631,
+        0.9952361118426312
+      ],
+      "descriptively_inside_2pct": true,
+      "paired_log_throughput_sd": 0.021454353054548972,
+      "paired_log_median_latency_sd": 0.025940826905946013,
+      "median_latency_ratio": 0.9986167431911858,
+      "median_top1pct_fraction": 0.01693359339922911,
+      "maximum_operation_ns": 209416,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9906808357463174,
+      "diagnostic_95pct_interval": [
+        0.971657849788447,
+        1.0225337734034938
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.035379660847296754,
+      "paired_log_median_latency_sd": 0.045238445798143095,
+      "median_latency_ratio": 0.9848495871719265,
+      "median_top1pct_fraction": 0.01635933200045631,
+      "maximum_operation_ns": 215375,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "hit",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9955993847509691,
+      "diagnostic_95pct_interval": [
+        0.8493983205470512,
+        1.0235563889097714
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.1569933498588969,
+      "paired_log_median_latency_sd": 0.039032197968990295,
+      "median_latency_ratio": 0.9924766896415979,
+      "median_top1pct_fraction": 0.015972949989762092,
+      "maximum_operation_ns": 4294042,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0132384655316882,
+      "diagnostic_95pct_interval": [
+        0.9910196787642146,
+        1.0260214086644739
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.02603929081057331,
+      "paired_log_median_latency_sd": 0.02198429578903115,
+      "median_latency_ratio": 1.003434313647305,
+      "median_top1pct_fraction": 0.015656562080082568,
+      "maximum_operation_ns": 385666,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.985796510390779,
+      "diagnostic_95pct_interval": [
+        0.9525059225591038,
+        1.0456972966447173
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.07128256001124303,
+      "paired_log_median_latency_sd": 0.019909326413812958,
+      "median_latency_ratio": 0.9868899258456961,
+      "median_top1pct_fraction": 0.015801000186551867,
+      "maximum_operation_ns": 288667,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9984908162084002,
+      "diagnostic_95pct_interval": [
+        0.9721786030632644,
+        1.040621489847165
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.04762135608173041,
+      "paired_log_median_latency_sd": 0.03647972092386954,
+      "median_latency_ratio": 1.0011074948357026,
+      "median_top1pct_fraction": 0.01661560924308189,
+      "maximum_operation_ns": 237583,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "case": "native-pin",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9784954300912668,
+      "diagnostic_95pct_interval": [
+        0.9492130902758856,
+        1.0117424315732806
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.03820756740373525,
+      "paired_log_median_latency_sd": 0.015273337057268972,
+      "median_latency_ratio": 0.9920809314068533,
+      "median_top1pct_fraction": 0.015786572422661814,
+      "maximum_operation_ns": 253292,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0006534626963162,
+      "diagnostic_95pct_interval": [
+        0.9915668976642418,
+        1.0197291396824322
+      ],
+      "descriptively_inside_2pct": true,
+      "paired_log_throughput_sd": 0.021415702308320617,
+      "paired_log_median_latency_sd": 0.012187805685197766,
+      "median_latency_ratio": 1.0037284704940874,
+      "median_top1pct_fraction": 0.01560678547435026,
+      "maximum_operation_ns": 695291,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9950720623128938,
+      "diagnostic_95pct_interval": [
+        0.977947777678422,
+        1.005321204433144
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.016992820902327968,
+      "paired_log_median_latency_sd": 0.012390364417516482,
+      "median_latency_ratio": 0.990736018069727,
+      "median_top1pct_fraction": 0.014744933630090617,
+      "maximum_operation_ns": 897959,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.001387012602197,
+      "diagnostic_95pct_interval": [
+        0.9831305350294203,
+        1.018491072686639
+      ],
+      "descriptively_inside_2pct": true,
+      "paired_log_throughput_sd": 0.02636686503742081,
+      "paired_log_median_latency_sd": 0.018714663966865764,
+      "median_latency_ratio": 1.0014189704792327,
+      "median_top1pct_fraction": 0.015975471806517975,
+      "maximum_operation_ns": 692417,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "hit",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0002779156356778,
+      "diagnostic_95pct_interval": [
+        0.9953347469788392,
+        1.1094874831382529
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.12832991732131208,
+      "paired_log_median_latency_sd": 0.01966310786798082,
+      "median_latency_ratio": 1.0006545086518666,
+      "median_top1pct_fraction": 0.015624249025845846,
+      "maximum_operation_ns": 3491792,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9970955782723363,
+      "diagnostic_95pct_interval": [
+        0.9698516233638316,
+        1.0175166013361914
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.041499326118753906,
+      "paired_log_median_latency_sd": 0.01663509541493839,
+      "median_latency_ratio": 1.006822642213717,
+      "median_top1pct_fraction": 0.01869770736387301,
+      "maximum_operation_ns": 1100208,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-unchanged",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0088324253908425,
+      "diagnostic_95pct_interval": [
+        0.9880953385298877,
+        1.0746547388872834
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.0822981678897327,
+      "paired_log_median_latency_sd": 0.02749841573577404,
+      "median_latency_ratio": 1.0058605321757121,
+      "median_top1pct_fraction": 0.02315643124028207,
+      "maximum_operation_ns": 2466208,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        33
+      ],
+      "qos_changed_processes": 0,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "same-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 1.0089646607895977,
+      "diagnostic_95pct_interval": [
+        0.9615741766477428,
+        1.0373259798357821
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.048050996342955586,
+      "paired_log_median_latency_sd": 0.022591968265887576,
+      "median_latency_ratio": 1.000597378150866,
+      "median_top1pct_fraction": 0.01769464785913258,
+      "maximum_operation_ns": 910083,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "case": "native-pin",
+      "cell": "cross-image-user-initiated",
+      "pairs": 12,
+      "blocks": 6,
+      "throughput_ratio": 0.9824534999082334,
+      "diagnostic_95pct_interval": [
+        0.9451862739947002,
+        1.0281468903786823
+      ],
+      "descriptively_inside_2pct": false,
+      "paired_log_throughput_sd": 0.06093607918746094,
+      "paired_log_median_latency_sd": 0.029059792463166558,
+      "median_latency_ratio": 0.9984915613206512,
+      "median_top1pct_fraction": 0.018866438337626225,
+      "maximum_operation_ns": 2541625,
+      "observed_qos_before": [
+        33
+      ],
+      "observed_qos_after": [
+        25
+      ],
+      "qos_changed_processes": 24,
+      "observed_nice": [
+        0
+      ]
+    }
+  ],
+  "qualification": "Descriptive fixed D2 diagnosis only; unadjusted95pct intervals, not formal family qualification. No tail removed or normalization",
+  "product_modified": false,
+  "previous_qualification_changed": false
+}

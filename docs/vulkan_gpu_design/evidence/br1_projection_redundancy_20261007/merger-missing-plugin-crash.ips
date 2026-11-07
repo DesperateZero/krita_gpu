@@ -1,0 +1,1012 @@
+{"app_name":"kis_async_merger_test","timestamp":"2026-10-07 17:15:01.00 +0800","app_version":"","slice_uuid":"1b0401ca-6af6-3eee-9abf-cdb676e7e1bf","build_version":"","platform":1,"share_with_app_devs":0,"is_first_party":1,"bug_type":"309","os_version":"macOS 15.7.3 (24G419)","roots_installed":0,"incident_id":"D5C3294F-625B-4DE8-B2C2-E2C2C476CAAA","name":"kis_async_merger_test"}
+{
+  "uptime" : 1200000,
+  "procRole" : "Unspecified",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac16,10",
+  "coalitionID" : 85468,
+  "osVersion" : {
+    "train" : "macOS 15.7.3",
+    "build" : "24G419",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2026-10-07 17:14:51.2615 +0800",
+  "codeSigningMonitor" : 2,
+  "incident" : "D5C3294F-625B-4DE8-B2C2-E2C2C476CAAA",
+  "pid" : 19765,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2026-10-07 17:14:50.4428 +0800",
+  "procStartAbsTime" : 29561827135165,
+  "procExitAbsTime" : 29561846339383,
+  "procName" : "kis_async_merger_test",
+  "procPath" : "\/Users\/USER\/*\/kis_async_merger_test",
+  "parentProc" : "Python",
+  "parentPid" : 19607,
+  "coalitionName" : "com.openai.codex",
+  "crashReporterKey" : "F77BB2EB-6385-6ACB-0C8C-87732DA35FEB",
+  "appleIntelligenceStatus" : {"state":"unavailable","reasons":["selectedSiriLanguageIneligible","countryBillingIneligible","regionIneligible","countryLocationIneligible"]},
+  "responsiblePid" : 71476,
+  "responsibleProc" : "ChatGPT",
+  "codeSigningID" : "kis_async_merger_test",
+  "codeSigningTeamID" : "",
+  "codeSigningFlags" : 570556929,
+  "codeSigningValidationCategory" : 10,
+  "codeSigningTrustLevel" : 4294967295,
+  "codeSigningAuxiliaryInfo" : 0,
+  "instructionByteStream" : {"beforePC":"6AAAtAkAgBIIAem4HwUAcWEAAFTgA0D5S00AlLYDVPioYwPRHEwAlA==","atPC":"yAJA+QkJQPmoIwPRoWMD0eADFqogAT\/WtgNT+NYBALTIEgCRFwCAEg=="},
+  "bootSessionUUID" : "E1E74110-3D7B-453A-8741-C44C76209115",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0 is not in any region.  Bytes before following region: 4364926976\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      1042b8000-1042e0000    [  160K] r-x\/r-x SM=COW  \/Users\/USER\/*\/kis_async_merger_test",
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000000","rawCodes":[1,0],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000000"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":19765},
+  "vmregioninfo" : "0 is not in any region.  Bytes before following region: 4364926976\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      1042b8000-1042e0000    [  160K] r-x\/r-x SM=COW  \/Users\/USER\/*\/kis_async_merger_test",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":1804,"task_for_pid":139},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":111649304,"threadState":{"x":[{"value":6101948920},{"value":4412639712,"symbolLocation":0,"symbol":"_MergedGlobals"},{"value":4411654144},{"value":6939705200,"symbolLocation":0,"symbol":"szone_malloc_type_malloc"},{"value":5655045584},{"value":4},{"value":2},{"value":0},{"value":1},{"value":1},{"value":0},{"value":2},{"value":0},{"value":0},{"value":2854232106},{"value":2854232106},{"value":6941681828,"symbolLocation":0,"symbol":"pthread_mutex_unlock"},{"value":8803908216},{"value":0},{"value":5367030080},{"value":5636816640},{"value":5636840496},{"value":0},{"value":6101950504},{"value":4},{"value":1},{"value":0},{"sourceLine":136,"value":4364989216,"sourceFile":"moc_kis_async_merger_test.cpp","symbol":"KisAsyncMergerTest::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)","symbolLocation":0},{"value":4365092176,"symbolLocation":24,"symbol":"qt_incomplete_metaTypeArray<(anonymous namespace)::qt_meta_stringdata_CLASSKisAsyncMergerTestENDCLASS_t, QtPrivate::TypeAndForceComplete<KisAsyncMergerTest, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>>"}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4364990836},"cpsr":{"value":1610612736},"fp":{"value":6101949888},"sp":{"value":6101949024},"esr":{"value":2449473542,"description":"(Data Abort) byte read Translation fault"},"pc":{"value":4364990836,"matchesCrashFrame":1},"far":{"value":0}},"queue":"com.apple.main-thread","frames":[{"imageOffset":63860,"sourceLine":67,"sourceFile":"kis_async_merger_test.cpp","symbol":"KisAsyncMergerTest::testMerger()","imageIndex":0,"symbolLocation":956},{"imageOffset":643840,"symbol":"QMetaMethodInvoker::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*)","symbolLocation":1024,"imageIndex":41},{"imageOffset":662868,"symbol":"QMetaMethod::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*)","symbolLocation":84,"imageIndex":41},{"imageOffset":90392,"symbol":"QTest::TestMethods::invokeTestOnData(int) const","symbolLocation":392,"imageIndex":40},{"imageOffset":93912,"symbol":"QTest::TestMethods::invokeTest(int, QLatin1String, std::__1::optional<QTest::WatchDog>&) const","symbolLocation":1268,"imageIndex":40},{"imageOffset":97632,"symbol":"QTest::TestMethods::invokeTests(QObject*) const","symbolLocation":560,"imageIndex":40},{"imageOffset":100448,"symbol":"QTest::qRun()","symbolLocation":1624,"imageIndex":40},{"imageOffset":98288,"symbol":"QTest::qExec(QObject*, int, char**)","symbolLocation":20,"imageIndex":40},{"imageOffset":99288,"sourceLine":500,"sourceFile":"kis_async_merger_test.cpp","symbol":"main","imageIndex":0,"symbolLocation":276},{"imageOffset":27544,"symbol":"start","symbolLocation":6076,"imageIndex":93}]},{"id":111649313,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":96}],"threadState":{"x":[{"value":6103085056},{"value":6403},{"value":6102548480},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":0},"fp":{"value":0},"sp":{"value":6103085056},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941682540},"far":{"value":0}}},{"id":111649314,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":96}],"threadState":{"x":[{"value":6103658496},{"value":8451},{"value":6103121920},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":0},"fp":{"value":0},"sp":{"value":6103658496},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941682540},"far":{"value":0}}},{"id":111649318,"name":"QtTest Watchdog","threadState":{"x":[{"value":260},{"value":0},{"value":512},{"value":0},{"value":0},{"value":160},{"value":299},{"value":999999959},{"value":6104231400},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8803898624},{"value":0},{"value":6101951520},{"value":6101951584},{"value":6104232160},{"value":999999959},{"value":299},{"value":512},{"value":513},{"value":768},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":6104231520},"sp":{"value":6104231376},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":97},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":96},{"imageOffset":123648,"symbol":"std::__1::condition_variable::__do_timed_wait(std::__1::unique_lock<std::__1::mutex>&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l>>>)","symbolLocation":104,"imageIndex":98},{"imageOffset":128056,"symbol":"std::__1::cv_status std::__1::condition_variable::wait_until[abi:fqe210106]<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l>>>(std::__1::unique_lock<std::__1::mutex>&, std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l>>> const&)","symbolLocation":204,"imageIndex":40},{"imageOffset":127744,"symbol":"QTest::WatchDog::waitFor(std::__1::unique_lock<std::__1::mutex>&, QTest::WatchDog::Expectation)","symbolLocation":180,"imageIndex":40},{"imageOffset":127416,"symbol":"QTest::WatchDog::run()","symbolLocation":124,"imageIndex":40},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":96},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":96}]},{"id":111649326,"name":"KisTileDataSwapper","threadState":{"x":[{"value":18446744073709551612},{"value":0},{"value":2147483648},{"value":0},{"value":0},{"value":18},{"value":0},{"value":0},{"value":18445512330374012033},{"value":335539583},{"value":1000000000},{"value":6105378982},{"value":5654976180},{"value":67282944},{"value":32832},{"value":32832},{"value":544},{"value":8803900376},{"value":0},{"value":5367078848},{"value":1},{"value":2147483648},{"value":1},{"value":2147483648},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4432742236},"cpsr":{"value":2147483648},"fp":{"value":6105378496},"sp":{"value":6105378400},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941489748},"far":{"value":0}},"frames":[{"imageOffset":59988,"symbol":"__ulock_wait2","symbolLocation":8,"imageIndex":97},{"imageOffset":2213724,"symbol":"QSemaphore::acquire(int)","symbolLocation":280,"imageIndex":41},{"imageOffset":2214416,"symbol":"QSemaphore::tryAcquire(int, QDeadlineTimer)","symbolLocation":80,"imageIndex":41},{"symbol":"QSemaphore::tryAcquire(int, int)","inline":true,"imageIndex":1,"imageOffset":1462368,"symbolLocation":32,"sourceLine":62,"sourceFile":"qsemaphore.h"},{"symbol":"KisTileDataSwapper::waitForWork()","inline":true,"imageIndex":1,"imageOffset":1462368,"symbolLocation":36,"sourceLine":79,"sourceFile":"kis_tile_data_swapper.cpp"},{"imageOffset":1462368,"sourceLine":85,"sourceFile":"kis_tile_data_swapper.cpp","symbol":"KisTileDataSwapper::run()","imageIndex":1,"symbolLocation":56},{"imageOffset":2184356,"symbol":"QThreadPrivate::start(void*)","symbolLocation":340,"imageIndex":41},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":96},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":96}]},{"id":111649327,"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":97},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":96},{"imageOffset":123496,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":32,"imageIndex":98},{"symbol":"void std::__1::condition_variable::wait<(anonymous namespace)::ReclamationExecutor::runJobs()::'lambda'()>(std::__1::unique_lock<std::__1::mutex>&, (anonymous namespace)::ReclamationExecutor::runJobs()::'lambda'())","inline":true,"imageIndex":1,"imageOffset":1090948,"symbolLocation":28,"sourceLine":147,"sourceFile":"condition_variable.h"},{"symbol":"(anonymous namespace)::ReclamationExecutor::runJobs()","inline":true,"imageIndex":1,"imageOffset":1090948,"symbolLocation":152,"sourceLine":378,"sourceFile":"KisPageStoreReclamation.cpp"},{"symbol":"(anonymous namespace)::ReclamationExecutor::ReclamationExecutor()::'lambda'(void*)::operator()(void*) const","inline":true,"imageIndex":1,"imageOffset":1090948,"symbolLocation":152,"sourceLine":234,"sourceFile":"KisPageStoreReclamation.cpp"},{"imageOffset":1090948,"sourceLine":234,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationExecutor::ReclamationExecutor()::'lambda'(void*)::__invoke(void*)","imageIndex":1,"symbolLocation":188},{"imageOffset":1090576,"sourceLine":209,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationThread::invoke(void*)","imageIndex":1,"symbolLocation":112},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":96},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":96}],"threadState":{"x":[{"value":260},{"value":0},{"value":512},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":4511465048},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8803898624},{"value":0},{"value":5654041120},{"value":5654041184},{"value":6101958880},{"value":0},{"value":0},{"value":512},{"value":513},{"value":768},{"value":4401020600,"symbolLocation":0,"symbol":"(anonymous namespace)::reclaimerThread (.0)"},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":4511465168},"sp":{"value":4511465024},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}}},{"id":111649328,"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":97},{"imageOffset":28828,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":96},{"imageOffset":123496,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":32,"imageIndex":98},{"symbol":"(anonymous namespace)::ReclamationExecutor::ensureClockLocked()::'lambda'(void*)::operator()(void*) const","inline":true,"imageIndex":1,"imageOffset":1093352,"symbolLocation":60,"sourceLine":434,"sourceFile":"KisPageStoreReclamation.cpp"},{"imageOffset":1093352,"sourceLine":416,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationExecutor::ensureClockLocked()::'lambda'(void*)::__invoke(void*)","imageIndex":1,"symbolLocation":224},{"imageOffset":1090576,"sourceLine":209,"sourceFile":"KisPageStoreReclamation.cpp","symbol":"(anonymous namespace)::ReclamationThread::invoke(void*)","imageIndex":1,"symbolLocation":112},{"imageOffset":27592,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":96},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":96}],"threadState":{"x":[{"value":260},{"value":0},{"value":2304},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":4513152616},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8803898624},{"value":0},{"value":5654043160},{"value":5654043224},{"value":6101975264},{"value":0},{"value":0},{"value":2304},{"value":2305},{"value":2560},{"value":16},{"value":4294967295}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6941704348},"cpsr":{"value":1610612736},"fp":{"value":4513152736},"sp":{"value":4513152592},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6941447116},"far":{"value":0}}}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4364926976,
+    "size" : 163840,
+    "uuid" : "1b0401ca-6af6-3eee-9abf-cdb676e7e1bf",
+    "path" : "\/Users\/USER\/*\/kis_async_merger_test",
+    "name" : "kis_async_merger_test"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4394041344,
+    "size" : 6799360,
+    "uuid" : "6dfa1ab8-e2d2-3f51-9d73-156794feac1b",
+    "path" : "\/Users\/USER\/*\/libkritaimage.21.0.0.dylib",
+    "name" : "libkritaimage.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4365189120,
+    "size" : 737280,
+    "uuid" : "76b029f2-5d9e-300b-8d60-e65cca73dd46",
+    "path" : "\/Users\/USER\/*\/libkritawidgets.21.0.0.dylib",
+    "name" : "libkritawidgets.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4366761984,
+    "size" : 212992,
+    "uuid" : "e690c711-73e5-366a-905d-b34719785741",
+    "path" : "\/Users\/USER\/*\/libkritaresourcewidgets.21.0.0.dylib",
+    "name" : "libkritaresourcewidgets.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4367253504,
+    "size" : 147456,
+    "uuid" : "6d5f095f-9f53-3d1d-a2a2-fbee5a1f47b8",
+    "path" : "\/Users\/USER\/*\/libKF6Completion.6.7.0.dylib",
+    "name" : "libKF6Completion.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4370628608,
+    "size" : 983040,
+    "uuid" : "8f393364-6540-3231-a735-c8e84cc4f3a7",
+    "path" : "\/Users\/USER\/*\/libkritapsdutils.21.0.0.dylib",
+    "name" : "libkritapsdutils.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4386324480,
+    "size" : 3817472,
+    "uuid" : "e86c3ca7-5420-36cc-86ce-3bf06fb599c5",
+    "path" : "\/Users\/USER\/*\/libkritaflake.21.0.0.dylib",
+    "name" : "libkritaflake.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4369006592,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtSvg",
+    "size" : 294912,
+    "uuid" : "93afd7db-c303-3eb6-9785-42c99a56956a",
+    "path" : "\/Users\/USER\/*\/QtSvg.framework\/Versions\/A\/QtSvg",
+    "name" : "QtSvg",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4368007168,
+    "size" : 573440,
+    "uuid" : "f8b3f46f-02a5-3ad8-ad62-82809b702e22",
+    "path" : "\/Users\/USER\/*\/libfreetype.6.18.3.dylib",
+    "name" : "libfreetype.6.18.3.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4374691840,
+    "size" : 851968,
+    "uuid" : "42aa83f0-7d8c-3f7d-8748-e66a373ac9ec",
+    "path" : "\/Users\/USER\/*\/libharfbuzz.0.dylib",
+    "name" : "libharfbuzz.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4407361536,
+    "size" : 2605056,
+    "uuid" : "2a358026-e1c1-30fd-a12c-b6216f1a0120",
+    "path" : "\/Users\/USER\/*\/libkritapigment.21.0.0.dylib",
+    "name" : "libkritapigment.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4369891328,
+    "size" : 81920,
+    "uuid" : "9e47472d-ccb8-3550-b154-fa7f7b961e56",
+    "path" : "\/Users\/USER\/*\/libkritacommand.21.0.0.dylib",
+    "name" : "libkritacommand.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4369498112,
+    "size" : 180224,
+    "uuid" : "09c5ed49-23b9-31de-a004-0180dbded852",
+    "path" : "\/Users\/USER\/*\/libkritametadata.21.0.0.dylib",
+    "name" : "libkritametadata.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4371955712,
+    "size" : 1015808,
+    "uuid" : "6d22a502-134c-3c51-8d08-109db4c66ecb",
+    "path" : "\/Users\/USER\/*\/libkritawidgetutils.21.0.0.dylib",
+    "name" : "libkritawidgetutils.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4373970944,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtPrintSupport",
+    "size" : 278528,
+    "uuid" : "809d6bf8-509f-359a-9343-ef721573c4d2",
+    "path" : "\/Users\/USER\/*\/QtPrintSupport.framework\/Versions\/A\/QtPrintSupport",
+    "name" : "QtPrintSupport",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4376068096,
+    "size" : 3948544,
+    "uuid" : "330503f0-9d88-3223-a353-5f2c739a1ada",
+    "path" : "\/Users\/USER\/*\/libKF6WidgetsAddons.6.7.0.dylib",
+    "name" : "libKF6WidgetsAddons.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4370104320,
+    "size" : 163840,
+    "uuid" : "ec3f2599-45d9-30e7-bf9c-43dc292fbb22",
+    "path" : "\/Users\/USER\/*\/libKF6ItemViews.6.7.0.dylib",
+    "name" : "libKF6ItemViews.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4381933568,
+    "size" : 114688,
+    "uuid" : "70e3c836-f6a3-3a83-8a73-2c12ff0af557",
+    "path" : "\/Users\/USER\/*\/libKF6ConfigGui.6.7.0.dylib",
+    "name" : "libKF6ConfigGui.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4381360128,
+    "size" : 114688,
+    "uuid" : "e0db8d97-a10d-3108-9e7d-7c01eeb8c410",
+    "path" : "\/Users\/USER\/*\/libKF6GuiAddons.6.7.0.dylib",
+    "name" : "libKF6GuiAddons.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4411654144,
+    "size" : 950272,
+    "uuid" : "05c5ecb7-dafa-385b-8994-ad5baf926866",
+    "path" : "\/Users\/USER\/*\/libkritaresources.21.0.0.dylib",
+    "name" : "libkritaresources.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4381671424,
+    "size" : 131072,
+    "uuid" : "4b28773b-d3bf-3c6a-bd81-0740dc72a25c",
+    "path" : "\/Users\/USER\/*\/libkritaplugin.21.0.0.dylib",
+    "name" : "libkritaplugin.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4384358400,
+    "size" : 606208,
+    "uuid" : "c8a82f49-3149-3f18-bf15-ce910ae02c2c",
+    "path" : "\/Users\/USER\/*\/libKF6CoreAddons.6.7.0.dylib",
+    "name" : "libKF6CoreAddons.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4368809984,
+    "size" : 81920,
+    "uuid" : "1367274f-9c32-32ca-a613-0876b8c294aa",
+    "path" : "\/Users\/USER\/*\/libkritastore.21.0.0.dylib",
+    "name" : "libkritastore.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382900224,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtSql",
+    "size" : 196608,
+    "uuid" : "417b1c3f-0363-3d63-87a8-20dea12fa3cd",
+    "path" : "\/Users\/USER\/*\/QtSql.framework\/Versions\/A\/QtSql",
+    "name" : "QtSql",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4419502080,
+    "size" : 2523136,
+    "uuid" : "0550f07e-48b2-3fb5-8f3d-978438ea6bf4",
+    "path" : "\/Users\/USER\/*\/libIlmImf-2_5.26.0.0.dylib",
+    "name" : "libIlmImf-2_5.26.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4374528000,
+    "size" : 49152,
+    "uuid" : "472dfff4-854d-320a-8928-9dfd4ff040a4",
+    "path" : "\/Users\/USER\/*\/libImath-2_5.25.0.7.dylib",
+    "name" : "libImath-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4383244288,
+    "size" : 278528,
+    "uuid" : "e22acbcc-8636-3188-8f67-0108c56732d5",
+    "path" : "\/Users\/USER\/*\/libHalf-2_5.25.0.7.dylib",
+    "name" : "libHalf-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382228480,
+    "size" : 16384,
+    "uuid" : "d62af6c5-0f7e-3624-93f0-8c66ca262723",
+    "path" : "\/Users\/USER\/*\/libIexMath-2_5.25.0.7.dylib",
+    "name" : "libIexMath-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4370530304,
+    "size" : 16384,
+    "uuid" : "d232f6da-0609-3662-b641-4a212e4d7fee",
+    "path" : "\/Users\/USER\/*\/libIlmThread-2_5.25.0.7.dylib",
+    "name" : "libIlmThread-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4385439744,
+    "size" : 294912,
+    "uuid" : "9d29bbfa-30f8-3f1d-b28c-0590c67859f4",
+    "path" : "\/Users\/USER\/*\/libIex-2_5.25.0.7.dylib",
+    "name" : "libIex-2_5.25.0.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382457856,
+    "size" : 32768,
+    "uuid" : "17a6f188-451b-3eb7-9664-2ead0ff4ffd5",
+    "path" : "\/Users\/USER\/*\/libkritamultiarch.21.0.0.dylib",
+    "name" : "libkritamultiarch.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4383555584,
+    "size" : 425984,
+    "uuid" : "97b5b2b3-09f8-35e2-936a-2d65c0b19824",
+    "path" : "\/Users\/USER\/*\/libkritaglobal.21.0.0.dylib",
+    "name" : "libkritaglobal.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382392320,
+    "size" : 16384,
+    "uuid" : "7c0e59d9-c25b-37cc-83d4-a061807a5d5d",
+    "path" : "\/Users\/USER\/*\/libkritaversion.21.0.0.dylib",
+    "name" : "libkritaversion.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382539776,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtXml",
+    "size" : 114688,
+    "uuid" : "03f6f5a0-5c51-3218-839e-7ffa36409098",
+    "path" : "\/Users\/USER\/*\/QtXml.framework\/Versions\/A\/QtXml",
+    "name" : "QtXml",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4393467904,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtCore5Compat",
+    "size" : 262144,
+    "uuid" : "10a6e7c3-61c7-39e2-abff-9f1c08033a32",
+    "path" : "\/Users\/USER\/*\/QtCore5Compat.framework\/Versions\/A\/QtCore5Compat",
+    "name" : "QtCore5Compat",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4414570496,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtOpenGL",
+    "size" : 409600,
+    "uuid" : "6c19c970-1d68-347f-927a-f546da4e37d7",
+    "path" : "\/Users\/USER\/*\/QtOpenGL.framework\/Versions\/A\/QtOpenGL",
+    "name" : "QtOpenGL",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4413177856,
+    "size" : 311296,
+    "uuid" : "2a07c2c5-11ea-3918-a958-0cd75704a8f7",
+    "path" : "\/Users\/USER\/*\/libKF6ConfigCore.6.7.0.dylib",
+    "name" : "libKF6ConfigCore.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4437426176,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtWidgets",
+    "size" : 4571136,
+    "uuid" : "0664c36c-d545-3e61-ab51-6aafe8572cee",
+    "path" : "\/Users\/USER\/*\/QtWidgets.framework\/Versions\/A\/QtWidgets",
+    "name" : "QtWidgets",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4422615040,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtGui",
+    "size" : 5390336,
+    "uuid" : "577c9144-0a01-3557-b7c6-0a7808e3c6ca",
+    "path" : "\/Users\/USER\/*\/QtGui.framework\/Versions\/A\/QtGui",
+    "name" : "QtGui",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4413997056,
+    "size" : 294912,
+    "uuid" : "4e65fc57-fc87-3b36-adff-c373163199da",
+    "path" : "\/Users\/USER\/*\/libKF6I18n.6.7.0.dylib",
+    "name" : "libKF6I18n.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4416258048,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtTest",
+    "size" : 311296,
+    "uuid" : "35b43927-50b5-361f-bbd4-245b112b9539",
+    "path" : "\/Users\/USER\/*\/QtTest.framework\/Versions\/A\/QtTest",
+    "name" : "QtTest",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4430528512,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtCore",
+    "size" : 4751360,
+    "uuid" : "7244edf8-5ffb-33e2-ba5a-ed3dab7efc9e",
+    "path" : "\/Users\/USER\/*\/QtCore.framework\/Versions\/A\/QtCore",
+    "name" : "QtCore",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4415258624,
+    "size" : 589824,
+    "uuid" : "b97fd69d-6c06-3f6a-91a0-09c570c6f0e6",
+    "path" : "\/Users\/USER\/*\/libfftw3.3.dylib",
+    "name" : "libfftw3.3.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4451303424,
+    "size" : 2048000,
+    "uuid" : "6d5f7b8b-62be-34d4-8c44-0bb4eca7c423",
+    "path" : "\/Users\/USER\/*\/libgsl.dylib",
+    "name" : "libgsl.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382752768,
+    "size" : 49152,
+    "uuid" : "2b6515c0-961d-3da2-8d41-9b420bc24bad",
+    "path" : "\/Users\/USER\/*\/libkritamacosutils.21.0.0.dylib",
+    "name" : "libkritamacosutils.21.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4417519616,
+    "size" : 262144,
+    "uuid" : "b35034dd-f228-3301-b5fd-11959d073e55",
+    "path" : "\/Users\/USER\/*\/libgslcblas.dylib",
+    "name" : "libgslcblas.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4417880064,
+    "size" : 245760,
+    "uuid" : "57d6f191-d853-37a0-8d43-e8e42c18fb34",
+    "path" : "\/Users\/USER\/*\/libfontconfig.1.dylib",
+    "name" : "libfontconfig.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382294016,
+    "CFBundleShortVersionString" : "6.8",
+    "CFBundleIdentifier" : "org.qt-project.QtOpenGLWidgets",
+    "size" : 32768,
+    "uuid" : "5cbb52c1-2334-332c-855f-8db23fc243b2",
+    "path" : "\/Users\/USER\/*\/QtOpenGLWidgets.framework\/Versions\/A\/QtOpenGLWidgets",
+    "name" : "QtOpenGLWidgets",
+    "CFBundleVersion" : "6.8.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4417126400,
+    "size" : 131072,
+    "uuid" : "5d882703-800b-3592-8f73-85e0df931f95",
+    "path" : "\/Users\/USER\/*\/libfribidi.0.dylib",
+    "name" : "libfribidi.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4393861120,
+    "size" : 65536,
+    "uuid" : "e2e4596d-c706-3a14-9d5d-6d8dc7fe085b",
+    "path" : "\/Users\/USER\/*\/libKF6ColorScheme.6.7.0.dylib",
+    "name" : "libKF6ColorScheme.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4417323008,
+    "size" : 114688,
+    "uuid" : "2fbbc06b-6e87-37ef-95dc-d7f84c9d8ee9",
+    "path" : "\/Users\/USER\/*\/libz.1.3.1.dylib",
+    "name" : "libz.1.3.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4416765952,
+    "CFBundleShortVersionString" : "1.6",
+    "CFBundleIdentifier" : "org.libpng.libpng",
+    "size" : 180224,
+    "uuid" : "6488b550-213f-3469-9b04-30234b75a774",
+    "path" : "\/Users\/USER\/*\/png.framework\/Versions\/1.6.51\/png",
+    "name" : "png",
+    "CFBundleVersion" : "1.6.51"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4444602368,
+    "size" : 1916928,
+    "uuid" : "a7c5c6c1-b3bc-3fed-8840-608e53c2c6f2",
+    "path" : "\/Users\/USER\/*\/libicui18n.72.dylib",
+    "name" : "libicui18n.72.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4448468992,
+    "size" : 1392640,
+    "uuid" : "002776ac-fef9-34d6-9783-138a48aa6933",
+    "path" : "\/Users\/USER\/*\/libicuuc.72.dylib",
+    "name" : "libicuuc.72.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4517265408,
+    "size" : 31260672,
+    "uuid" : "881774df-da94-386e-baf1-9cba61e3639a",
+    "path" : "\/Users\/USER\/*\/libicudata.72.dylib",
+    "name" : "libicudata.72.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4418797568,
+    "size" : 180224,
+    "uuid" : "2870042a-12e8-3c53-8c74-b011434e0e61",
+    "path" : "\/Users\/USER\/*\/libpng16.16.51.0.dylib",
+    "name" : "libpng16.16.51.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4418256896,
+    "size" : 163840,
+    "uuid" : "410de580-d0cb-384b-a7ce-772daa6882ea",
+    "path" : "\/Users\/USER\/*\/libquazip1-qt6.1.4.dylib",
+    "name" : "libquazip1-qt6.1.4.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4414455808,
+    "size" : 65536,
+    "uuid" : "15621d5b-2739-34b8-a2c0-1401214f01ca",
+    "path" : "\/Users\/USER\/*\/libintl.8.dylib",
+    "name" : "libintl.8.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4418568192,
+    "size" : 131072,
+    "uuid" : "298e1690-fb50-36b0-91cb-6cc2f53a3335",
+    "path" : "\/Users\/USER\/*\/libexpat.1.8.8.dylib",
+    "name" : "libexpat.1.8.8.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4419076096,
+    "size" : 163840,
+    "uuid" : "34cee0b7-ce11-3e93-837c-e7c6936a8ba0",
+    "path" : "\/Users\/USER\/*\/libKF6Codecs.6.7.0.dylib",
+    "name" : "libKF6Codecs.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4454907904,
+    "CFBundleShortVersionString" : "3.0",
+    "CFBundleIdentifier" : "com.apple.security.csparser",
+    "size" : 131072,
+    "uuid" : "58f759bc-cd52-3491-8dd0-7f34f32cfc35",
+    "path" : "\/System\/Library\/Frameworks\/Security.framework\/Versions\/A\/PlugIns\/csparser.bundle\/Contents\/MacOS\/csparser",
+    "name" : "csparser",
+    "CFBundleVersion" : "61439.140.12.700.1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4451106816,
+    "size" : 65536,
+    "uuid" : "07cce845-0da2-3a74-8994-cd127ea674d1",
+    "path" : "\/Users\/USER\/*\/libqoffscreen.dylib",
+    "name" : "libqoffscreen.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4490051584,
+    "size" : 11878400,
+    "uuid" : "5a91a6f1-c731-3886-826f-7433c993ae77",
+    "path" : "\/Users\/USER\/*\/kritalcmsengine.so",
+    "name" : "kritalcmsengine.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4511825920,
+    "size" : 278528,
+    "uuid" : "c2a180b4-95bc-30f1-a00c-efc32721ce12",
+    "path" : "\/Users\/USER\/*\/liblcms2.2.12.dylib",
+    "name" : "liblcms2.2.12.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4454793216,
+    "size" : 49152,
+    "uuid" : "f168fe35-caa2-3c46-8c39-97a012192090",
+    "path" : "\/Users\/USER\/*\/liblcms2_fast_float.2.12.dylib",
+    "name" : "liblcms2_fast_float.2.12.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4512284672,
+    "size" : 180224,
+    "uuid" : "e23eaad7-ecb9-3bc4-8a9e-5fb021ca24ce",
+    "path" : "\/Users\/USER\/*\/krita_colorspaces_extensions.so",
+    "name" : "krita_colorspaces_extensions.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4489134080,
+    "size" : 32768,
+    "uuid" : "dc1f615b-3cb2-3996-86b3-9078f7819945",
+    "path" : "\/Users\/USER\/*\/kimg_pcx.dylib",
+    "name" : "kimg_pcx.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4454596608,
+    "size" : 65536,
+    "uuid" : "dc2f2c55-6d07-3c06-bc58-3e0d38a6e164",
+    "path" : "\/Users\/USER\/*\/kimg_psd.dylib",
+    "name" : "kimg_psd.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4511481856,
+    "size" : 32768,
+    "uuid" : "df2f63cc-ee39-33c4-94ee-6b7d985e8dd3",
+    "path" : "\/Users\/USER\/*\/kimg_pfm.dylib",
+    "name" : "kimg_pfm.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4511580160,
+    "size" : 32768,
+    "uuid" : "2f51c8e2-252d-36d1-af5c-60634c567fe2",
+    "path" : "\/Users\/USER\/*\/libqgif.dylib",
+    "name" : "libqgif.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4511662080,
+    "size" : 32768,
+    "uuid" : "76db98fe-05c9-3c2d-b476-136c3adedf00",
+    "path" : "\/Users\/USER\/*\/libqwbmp.dylib",
+    "name" : "libqwbmp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4514398208,
+    "size" : 458752,
+    "uuid" : "a47272ac-95d4-322b-ab3b-046653e29730",
+    "path" : "\/Users\/USER\/*\/libqwebp.dylib",
+    "name" : "libqwebp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4489232384,
+    "size" : 49152,
+    "uuid" : "b4a5c073-462c-3935-b955-3ca019e9876c",
+    "path" : "\/Users\/USER\/*\/kimg_eps.dylib",
+    "name" : "kimg_eps.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4513611776,
+    "size" : 131072,
+    "uuid" : "5156c3a0-f350-3266-b813-dfe73f23a082",
+    "path" : "\/Users\/USER\/*\/kimg_xcf.dylib",
+    "name" : "kimg_xcf.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4511744000,
+    "size" : 32768,
+    "uuid" : "0cc9a6fc-3fc3-3b48-802c-f303c76790e7",
+    "path" : "\/Users\/USER\/*\/libqico.dylib",
+    "name" : "libqico.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4513316864,
+    "size" : 32768,
+    "uuid" : "084e741d-8fb2-3499-ada5-207a153aadc0",
+    "path" : "\/Users\/USER\/*\/kimg_pic.dylib",
+    "name" : "kimg_pic.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4513169408,
+    "size" : 49152,
+    "uuid" : "159b1924-6bfa-3505-93be-a8b534ec8fcd",
+    "path" : "\/Users\/USER\/*\/kimg_rgb.dylib",
+    "name" : "kimg_rgb.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4513857536,
+    "size" : 32768,
+    "uuid" : "b3c4c4bc-8334-3771-b3d8-50ef3c45607e",
+    "path" : "\/Users\/USER\/*\/libqmacheif.dylib",
+    "name" : "libqmacheif.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4513529856,
+    "size" : 32768,
+    "uuid" : "2fefb175-e78b-3f7d-8f8c-12b426b2331d",
+    "path" : "\/Users\/USER\/*\/kimg_kra.dylib",
+    "name" : "kimg_kra.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4513939456,
+    "size" : 114688,
+    "uuid" : "d0b68bd7-01a0-37f3-973d-5f8780c376f6",
+    "path" : "\/Users\/USER\/*\/libKF6Archive.6.7.0.dylib",
+    "name" : "libKF6Archive.6.7.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4513398784,
+    "size" : 32768,
+    "uuid" : "f04535a9-0ef0-30df-89a1-06b10f483315",
+    "path" : "\/Users\/USER\/*\/kimg_pxr.dylib",
+    "name" : "kimg_pxr.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4514955264,
+    "size" : 32768,
+    "uuid" : "7abc2ae4-ccfd-3940-b87a-e16d11fd7257",
+    "path" : "\/Users\/USER\/*\/kimg_ani.dylib",
+    "name" : "kimg_ani.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4515037184,
+    "size" : 49152,
+    "uuid" : "194bbd10-d49b-3dba-8ed8-0cf50274d784",
+    "path" : "\/Users\/USER\/*\/libqjpeg.dylib",
+    "name" : "libqjpeg.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4516151296,
+    "size" : 327680,
+    "uuid" : "bf8e03dc-554b-39f6-831f-2338928fbf07",
+    "path" : "\/Users\/USER\/*\/libjpeg.62.3.0.dylib",
+    "name" : "libjpeg.62.3.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4514316288,
+    "size" : 32768,
+    "uuid" : "0fa0e59c-305d-3ace-8643-32f586f703c4",
+    "path" : "\/Users\/USER\/*\/kimg_ora.dylib",
+    "name" : "kimg_ora.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4515151872,
+    "size" : 409600,
+    "uuid" : "864e3f9b-6ed3-3a52-8f6f-f38e2838da9a",
+    "path" : "\/Users\/USER\/*\/libqtiff.dylib",
+    "name" : "libqtiff.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4515643392,
+    "size" : 32768,
+    "uuid" : "866f5e72-dcd6-3ab6-8879-aba1ff1ed039",
+    "path" : "\/Users\/USER\/*\/libqsvg.dylib",
+    "name" : "libqsvg.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4514185216,
+    "size" : 32768,
+    "uuid" : "1a139a6b-bdbd-34d2-9ed6-6098ee1123c2",
+    "path" : "\/Users\/USER\/*\/kimg_tga.dylib",
+    "name" : "kimg_tga.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4515921920,
+    "size" : 49152,
+    "uuid" : "bfcf149c-d1ab-3c84-bf3e-10e52bde120b",
+    "path" : "\/Users\/USER\/*\/kimg_hdr.dylib",
+    "name" : "kimg_hdr.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4516036608,
+    "size" : 32768,
+    "uuid" : "6b2eef83-7412-3346-bff0-0be1b3c192f4",
+    "path" : "\/Users\/USER\/*\/kimg_ras.dylib",
+    "name" : "kimg_ras.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4516577280,
+    "size" : 32768,
+    "uuid" : "1da2ef10-05d6-3cac-8b46-6b1b47458602",
+    "path" : "\/Users\/USER\/*\/kimg_qoi.dylib",
+    "name" : "kimg_qoi.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4516675584,
+    "size" : 32768,
+    "uuid" : "23d9c578-edb3-3058-933d-085384d1fae7",
+    "path" : "\/Users\/USER\/*\/libqicns.dylib",
+    "name" : "libqicns.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4516757504,
+    "size" : 32768,
+    "uuid" : "58cfc19c-4b67-343d-8fb2-84217adaf15f",
+    "path" : "\/Users\/USER\/*\/libqmacjp2.dylib",
+    "name" : "libqmacjp2.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6937870336,
+    "size" : 636284,
+    "uuid" : "e4e5cd37-5339-3136-b2c5-0c80f0720c26",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6939598848,
+    "size" : 290928,
+    "uuid" : "3ce1e59c-91c8-3259-93d8-7ded66842979",
+    "path" : "\/usr\/lib\/system\/libsystem_malloc.dylib",
+    "name" : "libsystem_malloc.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6941675520,
+    "size" : 51832,
+    "uuid" : "022dc315-cf35-38da-939e-03800b5beff2",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6941429760,
+    "size" : 243300,
+    "uuid" : "1d4ffd44-8926-3746-924e-deef5b777588",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6940729344,
+    "size" : 577528,
+    "uuid" : "eb94c9fe-91da-3e9f-9c45-7b476feaaeae",
+    "path" : "\/usr\/lib\/libc++.1.dylib",
+    "name" : "libc++.1.dylib"
+  }
+],
+  "sharedCache" : {
+  "base" : 6937034752,
+  "size" : 5039734784,
+  "uuid" : "87b95872-5e6e-3168-a703-5f00925e0ab2"
+},
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "b042d8ea2c00cc9ae7914f91c832ecb1f9668bc1",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "67648e5334a82511f4acf879",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000008
+    },
+    {
+      "rolloutId" : "5fb4245a1bbfe8005e33a1e1",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000021
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}

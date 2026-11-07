@@ -1,0 +1,386 @@
+[
+  {
+    "case": [
+      "normal",
+      "arm64",
+      "kis_tile_data_store_test",
+      []
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-arm64-kis_tile_data_store_test",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_tile_data_store_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "arm64",
+      "kis_tile_data_pooler_test",
+      []
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-arm64-kis_tile_data_pooler_test",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_tile_data_pooler_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "arm64",
+      "kis_swapped_data_store_test",
+      []
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-arm64-kis_swapped_data_store_test",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_swapped_data_store_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "arm64",
+      "kis_low_memory_tests",
+      []
+    ],
+    "runner_exit": 1,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-arm64-kis_low_memory_tests",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_low_memory_tests",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "x86_64",
+      "kis_tile_data_store_test",
+      []
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-x86_64-kis_tile_data_store_test",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "kis_tile_data_store_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "x86_64",
+      "kis_tile_data_pooler_test",
+      []
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-x86_64-kis_tile_data_pooler_test",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "kis_tile_data_pooler_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "x86_64",
+      "kis_swapped_data_store_test",
+      []
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-x86_64-kis_swapped_data_store_test",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "kis_swapped_data_store_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "x86_64",
+      "kis_low_memory_tests",
+      []
+    ],
+    "runner_exit": 1,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-x86_64-kis_low_memory_tests",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "kis_low_memory_tests",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "tsan",
+      "arm64",
+      "kis_tile_data_store_test",
+      []
+    ],
+    "runner_exit": 1,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_tsan.py",
+      "--library-round",
+      "tsan",
+      "--round",
+      "tsan-arm64-kis_tile_data_store_test",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_tile_data_store_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "tsan",
+      "arm64",
+      "kis_tile_data_pooler_test",
+      []
+    ],
+    "runner_exit": 1,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_tsan.py",
+      "--library-round",
+      "tsan",
+      "--round",
+      "tsan-arm64-kis_tile_data_pooler_test",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_tile_data_pooler_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "tsan",
+      "arm64",
+      "kis_swapped_data_store_test",
+      []
+    ],
+    "runner_exit": 1,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_tsan.py",
+      "--library-round",
+      "tsan",
+      "--round",
+      "tsan-arm64-kis_swapped_data_store_test",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_swapped_data_store_test",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "tsan",
+      "arm64",
+      "kis_low_memory_tests",
+      []
+    ],
+    "runner_exit": 1,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_tsan.py",
+      "--library-round",
+      "tsan",
+      "--round",
+      "tsan-arm64-kis_low_memory_tests",
+      "--arch",
+      "arm64",
+      "--binary",
+      "kis_low_memory_tests",
+      "--timeout",
+      "1200"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "arm64",
+      "FreehandStrokeTest",
+      [
+        "testPersistentAutoBrushStrokePressure"
+      ]
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-arm64-FreehandStrokeTest-testPersistentAutoBrushStrokePressure",
+      "--arch",
+      "arm64",
+      "--binary",
+      "FreehandStrokeTest",
+      "--timeout",
+      "1200",
+      "--methods",
+      "testPersistentAutoBrushStrokePressure"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "arm64",
+      "FreehandStrokeTest",
+      [
+        "testPersistentAutoBrushStrokePressureCancelled"
+      ]
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-arm64-FreehandStrokeTest-testPersistentAutoBrushStrokePressureCancelled",
+      "--arch",
+      "arm64",
+      "--binary",
+      "FreehandStrokeTest",
+      "--timeout",
+      "1200",
+      "--methods",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "x86_64",
+      "FreehandStrokeTest",
+      [
+        "testPersistentAutoBrushStrokePressure"
+      ]
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-x86_64-FreehandStrokeTest-testPersistentAutoBrushStrokePressure",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "FreehandStrokeTest",
+      "--timeout",
+      "1200",
+      "--methods",
+      "testPersistentAutoBrushStrokePressure"
+    ]
+  },
+  {
+    "case": [
+      "normal",
+      "x86_64",
+      "FreehandStrokeTest",
+      [
+        "testPersistentAutoBrushStrokePressureCancelled"
+      ]
+    ],
+    "runner_exit": 0,
+    "command": [
+      "/Users/apple/krita_gpu/.venv/bin/python",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_tile_lifetime_20261004/run_normal.py",
+      "--library-round",
+      "normal",
+      "--round",
+      "normal-x86_64-FreehandStrokeTest-testPersistentAutoBrushStrokePressureCancelled",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "FreehandStrokeTest",
+      "--timeout",
+      "1200",
+      "--methods",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ]
+  }
+]

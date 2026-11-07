@@ -1,0 +1,342 @@
+********* Start testing of KisPageStoreResidentReadTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisPageStoreResidentReadTest::initTestCase()
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(cpu-bpp1)
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(cpu-bpp4)
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(cpu-bpp8)
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(cpu-bpp16)
+QWARN  : KisPageStoreResidentReadTest::guardLifetimeAndHistory(tiles3-bpp1) WARNING: configured swap location is not writable, using a fall-back location "/Users/apple/Library/Application Support/KisPageStoreResidentReadTest/swap" -> "/private/var/folders/c9/1npx65jj2c92d11w_125xmsm0000gn/T"
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(tiles3-bpp1)
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(tiles3-bpp4)
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(tiles3-bpp8)
+PASS   : KisPageStoreResidentReadTest::guardLifetimeAndHistory(tiles3-bpp16)
+PASS   : KisPageStoreResidentReadTest::providerAccessTransferRetire(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::providerAccessTransferRetire(tiles3)
+PASS   : KisPageStoreResidentReadTest::sessionCacheAndFallback(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::sessionCacheAndFallback(tiles3)
+PASS   : KisPageStoreResidentReadTest::concurrentCommitAndRead(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::concurrentCommitAndRead(tiles3)
+PASS   : KisPageStoreResidentReadTest::concurrentPinAndRetire(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::concurrentPinAndRetire(tiles3)
+PASS   : KisPageStoreResidentReadTest::abortKeepsNativeBeforeImage(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::abortKeepsNativeBeforeImage(tiles3)
+PASS   : KisPageStoreResidentReadTest::providerRevocationKeepsExistingPin(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::providerRevocationKeepsExistingPin(tiles3)
+PASS   : KisPageStoreResidentReadTest::swapMissDoesNotMaterialize()
+PASS   : KisPageStoreResidentReadTest::unsupportedProviderKeepsGenericPath()
+PASS   : KisPageStoreResidentReadTest::lazyBindingsFollowNativeReaders(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::lazyBindingsFollowNativeReaders(tiles3)
+PASS   : KisPageStoreResidentReadTest::coldDefaultBindingAfterMaterialization(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::coldDefaultBindingAfterMaterialization(tiles3)
+PASS   : KisPageStoreResidentReadTest::sharedDefaultIsExactAndBounded(cpu-ram)
+PASS   : KisPageStoreResidentReadTest::sharedDefaultIsExactAndBounded(tiles3)
+PASS   : KisPageStoreResidentReadTest::defaultMaterializationAdmissionIsBounded(capacity-backpressure)
+PASS   : KisPageStoreResidentReadTest::defaultMaterializationAdmissionIsBounded(same-page-deduplication)
+PASS   : KisPageStoreResidentReadTest::defaultIdentityCannotImportArbitraryPayload()
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode0-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode0-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode0-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode0-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode1-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode1-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode1-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode1-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode2-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode2-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode2-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode2-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode3-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode3-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode3-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode3-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode4-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode4-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode4-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode4-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode5-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode5-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode5-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode5-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode6-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode6-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode6-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode6-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode7-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode7-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode7-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp1-mode7-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode0-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode0-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode0-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode0-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode1-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode1-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode1-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode1-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode2-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode2-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode2-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode2-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode3-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode3-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode3-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode3-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode4-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode4-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode4-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode4-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode5-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode5-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode5-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode5-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode6-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode6-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode6-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode6-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode7-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode7-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode7-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp4-mode7-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode0-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode0-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode0-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode0-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode1-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode1-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode1-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode1-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode2-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode2-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode2-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode2-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode3-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode3-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode3-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode3-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode4-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode4-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode4-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode4-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode5-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode5-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode5-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode5-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode6-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode6-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode6-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode6-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode7-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode7-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode7-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp8-mode7-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode0-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode0-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode0-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode0-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode1-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode1-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode1-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode1-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode2-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode2-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode2-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode2-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode3-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode3-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode3-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode3-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode4-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode4-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode4-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode4-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode5-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode5-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode5-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode5-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode6-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode6-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode6-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode6-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode7-wait0-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode7-wait0-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode7-wait1-status0) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+FAIL!  : KisPageStoreResidentReadTest::capturedReadRetriesStaleBinding(bpp16-mode7-wait1-status1) 'f.init(true, bpp, false, true)' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(303)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish0-cross0)
+PASS   : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish0-cross1)
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish1-cross0) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish1-cross1) 'metadata.applyOwner(version.key, finish).accepted' returned FALSE. ()
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreResidentReadTest.cpp(440)]
+PASS   : KisPageStoreResidentReadTest::cleanupTestCase()
+Totals: 49 passed, 144 failed, 0 skipped, 0 blacklisted, 59ms
+********* Finished testing of KisPageStoreResidentReadTest *********

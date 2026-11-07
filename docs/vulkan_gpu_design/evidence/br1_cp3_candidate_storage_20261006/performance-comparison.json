@@ -1,0 +1,169 @@
+{
+  "fixed-m5-fresh-summary.json": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "previous": {
+        "current_over_m5_throughput": 1.08811017733454,
+        "one_sided_9875_lower": 1.0696735406809477
+      },
+      "current": {
+        "current_over_m5_throughput": 1.1064488117152778,
+        "one_sided_9875_lower": 1.0907477937381174
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "previous": {
+        "current_over_m5_throughput": 0.9075373307230935,
+        "one_sided_9875_lower": 0.8872793667944737
+      },
+      "current": {
+        "current_over_m5_throughput": 0.9064067770078325,
+        "one_sided_9875_lower": 0.8634522540007923
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "previous": {
+        "current_over_m5_throughput": 1.142079486075649,
+        "one_sided_9875_lower": 1.1184953053820708
+      },
+      "current": {
+        "current_over_m5_throughput": 1.1594159705137204,
+        "one_sided_9875_lower": 1.1329367911807133
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "previous": {
+        "current_over_m5_throughput": 0.9666177630408426,
+        "one_sided_9875_lower": 0.962515400449354
+      },
+      "current": {
+        "current_over_m5_throughput": 0.9789716580319652,
+        "one_sided_9875_lower": 0.9648330483713642
+      }
+    }
+  ],
+  "fixed-m5-history-summary.json": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "previous": {
+        "current_over_m5_throughput": 1.4033906911772887,
+        "one_sided_9875_lower": 1.3844168300318687
+      },
+      "current": {
+        "current_over_m5_throughput": 1.2927637989488838,
+        "one_sided_9875_lower": 1.27313543644662
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "previous": {
+        "current_over_m5_throughput": 1.183706008072151,
+        "one_sided_9875_lower": 1.1445222917653557
+      },
+      "current": {
+        "current_over_m5_throughput": 1.197647107473106,
+        "one_sided_9875_lower": 1.1366304109592826
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "previous": {
+        "current_over_m5_throughput": 1.2144157096495296,
+        "one_sided_9875_lower": 1.1874547634625279
+      },
+      "current": {
+        "current_over_m5_throughput": 1.2303404035505514,
+        "one_sided_9875_lower": 1.2111472994464239
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "previous": {
+        "current_over_m5_throughput": 1.258235194931843,
+        "one_sided_9875_lower": 1.241723463033055
+      },
+      "current": {
+        "current_over_m5_throughput": 1.2606046891129343,
+        "one_sided_9875_lower": 1.2508427837452285
+      }
+    }
+  ],
+  "latency-summary.json": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "previous": {
+        "latency_reduction": 0.014771301377730195,
+        "one_sided_9875_lower_reduction": 0.009019305019305035,
+        "fresh_median_ns": 16197.75,
+        "handoff_median_ns": 16020.5
+      },
+      "current": {
+        "latency_reduction": 0.055372029855238036,
+        "one_sided_9875_lower_reduction": 0.04779365405078362,
+        "fresh_median_ns": 15697.75,
+        "handoff_median_ns": 14875.0
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "previous": {
+        "latency_reduction": 0.08144699278354905,
+        "one_sided_9875_lower_reduction": 0.07115637590622981,
+        "fresh_median_ns": 158750.0,
+        "handoff_median_ns": 145427.0
+      },
+      "current": {
+        "latency_reduction": 0.1260306110635696,
+        "one_sided_9875_lower_reduction": 0.1136505640820703,
+        "fresh_median_ns": 155594.0,
+        "handoff_median_ns": 136562.75
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "previous": {
+        "latency_reduction": 0.022269589973166415,
+        "one_sided_9875_lower_reduction": -0.001297194550087033,
+        "fresh_median_ns": 24208.5,
+        "handoff_median_ns": 23718.75
+      },
+      "current": {
+        "latency_reduction": 0.0479516768461028,
+        "one_sided_9875_lower_reduction": 0.03350750134873537,
+        "fresh_median_ns": 23573.5,
+        "handoff_median_ns": 22510.5
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "previous": {
+        "latency_reduction": 0.0863964771657677,
+        "one_sided_9875_lower_reduction": 0.07708576562779212,
+        "fresh_median_ns": 241250.0,
+        "handoff_median_ns": 219510.75
+      },
+      "current": {
+        "latency_reduction": 0.13475130500462684,
+        "one_sided_9875_lower_reduction": 0.1256112643450239,
+        "fresh_median_ns": 240614.5,
+        "handoff_median_ns": 207989.25
+      }
+    }
+  ],
+  "qualification": "Cross-round descriptive values only; the original within-round matched protocols decide gates. No causal commit gain inferred from independent rounds, first-operation request counts or sampled stacks."
+}

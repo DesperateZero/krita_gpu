@@ -1,0 +1,114 @@
+{
+  "scope": "Descriptive4 CPU profiles, not a new formal test; shares times6s CPU/op assume stable work mix",
+  "target_chain_rule": "leaf KisMutationStorageOwner::deref with first semantic caller starting one of target_chain_prefixes",
+  "target_chain_prefixes": [
+    "KisPageWorking",
+    "KisPageMetadataCoordinator::applyProjectedSequence",
+    "KisPageMetadataCoordinator::preparePublication",
+    "KisPageMetadataCoordinator::PreparedPublication::Data::ShardArenaGrowth"
+  ],
+  "rows": [
+    {
+      "record": "cpu-0-current",
+      "cpu_us": 238.42674214043674,
+      "loop_samples": 1999,
+      "unsymbolicated_leaf_percent": 3.1515757878939468,
+      "target_chain_deref_approx_us": 0.11927300757400537,
+      "all_owner_deref_approx_us": 1.7890951136100808,
+      "fits_approx_us": 30.653162946519384,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 46.7550189690101,
+        "physical_heap": 35.06626422675758,
+        "budget_policy_and_ledger": 32.91935009042548,
+        "metadata_and_working_state": 31.130254976815404,
+        "storage_owner_and_charge_glue": 24.21242053752309,
+        "provider_and_native_lifecycle": 19.560773242136882,
+        "owner_backing_ledger": 14.909125946750674,
+        "adapter_fixture_and_other": 12.046573764974545,
+        "pixel_copy": 10.138205643790458,
+        "read_view_and_binding": 3.6974632347941667,
+        "epoch_root_and_transaction": 2.9818251893501344,
+        "retirement_and_reclamation": 2.624006166628118,
+        "other_memory_copy": 2.3854601514801073
+      }
+    },
+    {
+      "record": "cpu-0-parent",
+      "cpu_us": 255.0212617439516,
+      "loop_samples": 2120,
+      "unsymbolicated_leaf_percent": 3.2547169811320753,
+      "target_chain_deref_approx_us": 6.3755315435987905,
+      "all_owner_deref_approx_us": 9.26256469541711,
+      "fits_approx_us": 28.148573230228624,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 51.004252348790324,
+        "physical_heap": 35.60674220575928,
+        "storage_owner_and_charge_glue": 34.403811725834984,
+        "metadata_and_working_state": 32.84000210193339,
+        "budget_policy_and_ledger": 31.637071622009092,
+        "provider_and_native_lifecycle": 19.48747377477366,
+        "owner_backing_ledger": 14.314872711099172,
+        "adapter_fixture_and_other": 12.751063087197581,
+        "pixel_copy": 9.503150791401971,
+        "read_view_and_binding": 4.93201496768963,
+        "epoch_root_and_transaction": 3.6087914397729004,
+        "retirement_and_reclamation": 2.76674010382589,
+        "other_memory_copy": 2.16527486386374
+      }
+    },
+    {
+      "record": "cpu-1-current",
+      "cpu_us": 243.46034892608358,
+      "loop_samples": 2021,
+      "unsymbolicated_leaf_percent": 3.958436417615042,
+      "target_chain_deref_approx_us": 0.0,
+      "all_owner_deref_approx_us": 1.6865140450099803,
+      "fits_approx_us": 28.55027347624038,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 48.30658086064301,
+        "physical_heap": 37.34423956807813,
+        "budget_policy_and_ledger": 32.284697433048194,
+        "metadata_and_working_state": 29.27306520981609,
+        "storage_owner_and_charge_glue": 26.020502408725413,
+        "provider_and_native_lifecycle": 19.635842095473343,
+        "owner_backing_ledger": 14.335369382584833,
+        "adapter_fixture_and_other": 10.721410714706304,
+        "pixel_copy": 9.998618981130598,
+        "read_view_and_binding": 5.30047271288851,
+        "retirement_and_reclamation": 4.095819823595667,
+        "epoch_root_and_transaction": 3.8548892457370987,
+        "other_memory_copy": 2.288840489656402
+      }
+    },
+    {
+      "record": "cpu-1-parent",
+      "cpu_us": 254.4452726310484,
+      "loop_samples": 1984,
+      "unsymbolicated_leaf_percent": 3.3266129032258065,
+      "target_chain_deref_approx_us": 6.027685389949231,
+      "all_owner_deref_approx_us": 8.592657896310605,
+      "fits_approx_us": 28.214697569975122,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 48.22148311959385,
+        "metadata_and_working_state": 39.3723279726471,
+        "physical_heap": 37.192101342239944,
+        "storage_owner_and_charge_glue": 31.67741045356298,
+        "budget_policy_and_ledger": 31.292664577608775,
+        "provider_and_native_lifecycle": 18.339553420483835,
+        "adapter_fixture_and_other": 13.979100159669493,
+        "owner_backing_ledger": 13.209608407761081,
+        "pixel_copy": 9.36214964821902,
+        "read_view_and_binding": 3.8474587595420626,
+        "retirement_and_reclamation": 3.2062156329517184,
+        "epoch_root_and_transaction": 2.6932211316794437,
+        "other_memory_copy": 2.0519780050891
+      }
+    }
+  ],
+  "timing_limitations": [
+    "Paired medians/intervals use fixed20 order-balanced blocks; marginal median differences need not equal paired estimates.",
+    "Rosetta CLOCK_THREAD_CPUTIME_ID reports only about2percent of wall time and is not calibrated to translated execution; raw counters retained but no physical CPU saving claim for x86_64. Use completed wall throughput.",
+    "Short CPU samples identify direction and remaining cost; they do not split all15.1us saving causally among deref/ref/constructors/layout/compiler effects.",
+    "Zero sampled target-chain leaf weight means below sampling resolution, not zero execution cost."
+  ]
+}

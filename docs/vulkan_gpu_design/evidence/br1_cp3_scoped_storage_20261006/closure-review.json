@@ -1,0 +1,71 @@
+{
+  "responsibility": "original metadata work/candidate/directory storage lifetimes, preserving independent mutation control lifetime",
+  "groups": {
+    "architecture_and_ownership": {
+      "added": 4,
+      "deleted": 2,
+      "files": [
+        "build-tools/ci-scripts/check-pagestore-architecture.py",
+        "build-tools/ci-scripts/pagestore-audit/state-ownership.json"
+      ],
+      "net": 2
+    },
+    "generated": {
+      "added": 10191,
+      "deleted": 9887,
+      "files": [
+        "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+        "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json"
+      ],
+      "net": 304
+    },
+    "production": {
+      "added": 72,
+      "deleted": 38,
+      "files": [
+        "libs/image/pagestore/KisMutationStorage_p.h",
+        "libs/image/pagestore/KisPageMetadataArena_p.h",
+        "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "libs/image/pagestore/KisPageStateMachine_p.h",
+        "libs/image/pagestore/KisPageStore.cpp"
+      ],
+      "net": 34
+    },
+    "tests": {
+      "added": 68,
+      "deleted": 5,
+      "files": [
+        "libs/image/tests/KisPageStoreReferenceTest.cpp"
+      ],
+      "net": 63
+    }
+  },
+  "preserved": [
+    "budget policy, full actual capacity and parent-child prepare/settle",
+    "per-allocation accounting lifetime and physical free before fee return",
+    "local revision revalidation and retry, accepted effects/debt",
+    "publication identity/claim/semantic delta and cancellation",
+    "controller detach, original worker/late free and process storage routing"
+  ],
+  "removed": [
+    "independent strong allocator copies in all working nested arrays and value factories",
+    "strong allocator copies in projection growth and prepared directories",
+    "strong allocator copies in Data-owned delta/authority/install/growth storage",
+    "shard map allocator rebind reference churn"
+  ],
+  "additional_state": "one original strong root per arena moved out of directory allocator; borrowed directory still carries routing pointer, so +sizeof(owning allocator) per arena; no new logical owner or queue",
+  "consumer_closure": [
+    "registerPage",
+    "discardHistory",
+    "applyCapturedProtection",
+    "applyProjectedSequence",
+    "preparePublicationImpl: publication/restoration/recoverable/detachment/default",
+    "Data:create/deleter/cancel/clearBatch/invoke/dispose",
+    "arena prepare/install/swap/destruction",
+    "shard maps and budgetAuthority destruction order",
+    "MutationAllocator shared control rebind retains MutationLifetime"
+  ],
+  "retained_owners": "ShardRecordStore indexes, physical allocation references, provider/retirement/completion/epoch and semantic shared handles remain independent",
+  "discovered_regression": "initial explicit base rebind was inherited by Store::MutationAllocator; raw control allocation lost Store lifetime; repaired own-family rebind and compile-time assertion; existing zero-live test unchanged",
+  "scope_limit": "S1-S7/V1-V3 complete for this optimization; quantities and paired speed gains confirmed, original FreshK16/native gates still fail; full CP3/M6 separate"
+}

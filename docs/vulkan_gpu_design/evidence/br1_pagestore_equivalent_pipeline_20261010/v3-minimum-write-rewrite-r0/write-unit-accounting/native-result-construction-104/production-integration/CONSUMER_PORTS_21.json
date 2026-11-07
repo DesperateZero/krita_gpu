@@ -1,0 +1,50 @@
+[
+  {
+    "test": "testPageStorePackedWriteNative",
+    "migration": "Preserve all packed stride/bpp/partial/history/no-op bytes, fixed-old snapshot and nonvisible target preparation; native result/epoch and real per-target observer replace deleted generic counters."
+  },
+  {
+    "test": "testPageStorePackedWritePreclaimExcludesLateWriter",
+    "migration": "Real explicit producer attempts page two during native per-target preparation; complete operation range must already exclude it, including history and partial cases."
+  },
+  {
+    "test": "testPageStorePackedWriteBorrowedAndInvalid",
+    "migration": "Public packed entry directly consumes real held raw target; invalid/no-op layouts must not alter original live result, pointer or visibility."
+  },
+  {
+    "test": "testPageStoreCompatibilityWriteFailure",
+    "migration": "Keep original real swap-in failure, earlier borrowed pointer mutation, unpublished warm/cold cancellation, complete retry and history before-image; no legacy failure shim."
+  },
+  {
+    "test": "testIteratorNestedWriteScope",
+    "migration": "Both public iterator destruction orders share one original result; first release cannot accept and final release installs both pages once; original undo remains."
+  },
+  {
+    "test": "testIteratorWriteScope",
+    "migration": "Original horizontal/vertical/random swap failure and pointer invalidation retained; original Body lifetime replaces removed backend scope registry."
+  },
+  {
+    "test": "testIteratorSwapInFailureDropsPointers",
+    "migration": "Run original swap/read-pointer failure sequence against real default native authority. Separate bare Tiles3 fixtures retain ExternalProtocol control; do not remove an active manager authority to select a path. Native fixed read cursor is lazy per visited tile: inject the failure at the actual nextPixels(64) visit instead of requiring unvisited-page prefetch; raw cache failure must not be silently retried."
+  },
+  {
+    "test": "testIteratorClearBarrier",
+    "migration": "All iterator types/bpp/history and late old release exercise original revoked result, real physical pin, replacement producer, fixed snapshot and undo/redo. Revoked held bodies remain until true last client, not zero active transactions."
+  },
+  {
+    "test": "testPageStoreClearBarrierCancelsLegacyWriter",
+    "migration": "Clear revokes same-thread raw capability while preserving its real physical pin until final unlock; late byte changes cannot republish."
+  },
+  {
+    "test": "testPageStoreHistoryClearStagesAbsence",
+    "migration": "Preserve exact absence/default/partial re-write/history replay; clear creates no new payload resources, deleting old generic default-materialization counters."
+  },
+  {
+    "test": "testPageStoreWriteBytesPinWorkingSet",
+    "migration": "All scale/bpp/history bytes retained; zero between-operation pin requirement proven by actual eviction of every output backing instead of legacy pin counters."
+  },
+  {
+    "test": "testPageStorePackedWriteBodyAllowsReader",
+    "migration": "Foreign reader must complete during real native target preparation and see old bytes; no manager-wide lock over producer."
+  }
+]

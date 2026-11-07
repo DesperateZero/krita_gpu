@@ -1,0 +1,166 @@
+[
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_selected.py",
+      "--round",
+      "read-arm64",
+      "--build",
+      "_build-br0-cpu",
+      "--target",
+      "KisPageStoreReadBaselineTest",
+      "--arch",
+      "arm64"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.417290458
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_selected.py",
+      "--round",
+      "foundation-arm64",
+      "--build",
+      "_build",
+      "--target",
+      "KisPageStoreFoundationTest",
+      "--arch",
+      "arm64"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 3.4040816670000007
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_probe.py",
+      "--round",
+      "install-arm64-run",
+      "--arch",
+      "arm64",
+      "--binary",
+      "install-arm64",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 3.2769322909999996
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_probe.py",
+      "--round",
+      "publication-arm64-run",
+      "--arch",
+      "arm64",
+      "--binary",
+      "publication-arm64",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.2761298330000006
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_probe.py",
+      "--round",
+      "storage-arm64-run",
+      "--arch",
+      "arm64",
+      "--binary",
+      "storage-arm64",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.234998709000001
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_selected.py",
+      "--round",
+      "read-x86_64",
+      "--build",
+      "_build-br0-cpu",
+      "--target",
+      "KisPageStoreReadBaselineTest",
+      "--arch",
+      "x86_64"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.6932867500000004
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_selected.py",
+      "--round",
+      "foundation-x86_64",
+      "--build",
+      "_build",
+      "--target",
+      "KisPageStoreFoundationTest",
+      "--arch",
+      "x86_64"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.6099829579999998
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_probe.py",
+      "--round",
+      "install-x86_64-run",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "install-x86_64",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 4.662267457999999
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_probe.py",
+      "--round",
+      "publication-x86_64-run",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "publication-x86_64",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.603515208000001
+  },
+  {
+    "command": [
+      "python3",
+      "docs/vulkan_gpu_design/evidence/br1_cp3_budget_limits_20261005/run_probe.py",
+      "--round",
+      "storage-x86_64-run",
+      "--arch",
+      "x86_64",
+      "--binary",
+      "storage-x86_64",
+      "--interpose"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "seconds": 1.9280745829999972
+  }
+]

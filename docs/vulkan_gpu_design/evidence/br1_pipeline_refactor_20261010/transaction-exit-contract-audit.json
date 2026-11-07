@@ -1,0 +1,318 @@
+{
+  "base": "16a4ff59eb01e87dc435afb81a305413d32223bb",
+  "commit": "cb942b6eff6d2afe19f87311e1febf2ccb98c655",
+  "verified": true,
+  "failures": {
+    "transaction-exit-repro-r0": {
+      "totals": [
+        4,
+        2,
+        0
+      ],
+      "diff_sha256": "1a2498c23aaba3d092dba3a888a37a05e64f275b83202e8a2492fc79eb69f847"
+    },
+    "transaction-exit-retained-repro-r0": {
+      "totals": [
+        10,
+        4,
+        0
+      ],
+      "diff_sha256": "bcd56f9ab3edecfca7c4651c21a2b91410cb20b66b5fd26a0d89e35b84d60875"
+    },
+    "snapshot-release-repro-r0": {
+      "totals": [
+        6,
+        2,
+        0
+      ],
+      "diff_sha256": "6497da1c4f6399af9e2e72b868405caa790610fd7a420050bd7e27d6db0aa0bb"
+    }
+  },
+  "coverage": {
+    "arm64": {
+      "transactionExitReclaimsOutsideItsOwnDelta": [
+        "background0-commit0-protection0",
+        "background0-commit0-protection1",
+        "background0-commit0-protection2",
+        "background0-commit1-protection0",
+        "background0-commit1-protection1",
+        "background0-commit1-protection2",
+        "background1-commit0-protection0",
+        "background1-commit0-protection1",
+        "background1-commit0-protection2",
+        "background1-commit1-protection0",
+        "background1-commit1-protection1",
+        "background1-commit1-protection2"
+      ],
+      "snapshotReleaseScansOnlyAfterLastProtection": [
+        "background0-protection0",
+        "background0-protection1",
+        "background0-protection2",
+        "background1-protection0",
+        "background1-protection1",
+        "background1-protection2"
+      ],
+      "historyPurgeReclaimsOutsideItsOwnDelta": [
+        "foreground",
+        "background"
+      ],
+      "lastUseCloseAndLifetime": [
+        "close-queued-event",
+        "destroy-pending",
+        "destroy-queued-event"
+      ],
+      "firstRetirementRunsOffThreadAndCloseDrains": [
+        ""
+      ],
+      "historySweepRevalidatesAndRevisits": [
+        "1",
+        "4",
+        "8",
+        "16"
+      ],
+      "longHistoryUsesVersionBudget": [
+        "bpp1-history65",
+        "bpp1-history257",
+        "bpp4-history65",
+        "bpp4-history257",
+        "bpp8-history65",
+        "bpp8-history257",
+        "bpp16-history65",
+        "bpp16-history257"
+      ],
+      "publicationCleanupUsesBoundedBackgroundPasses": [
+        ""
+      ]
+    },
+    "x86_64": {
+      "transactionExitReclaimsOutsideItsOwnDelta": [
+        "background0-commit0-protection0",
+        "background0-commit0-protection1",
+        "background0-commit0-protection2",
+        "background0-commit1-protection0",
+        "background0-commit1-protection1",
+        "background0-commit1-protection2",
+        "background1-commit0-protection0",
+        "background1-commit0-protection1",
+        "background1-commit0-protection2",
+        "background1-commit1-protection0",
+        "background1-commit1-protection1",
+        "background1-commit1-protection2"
+      ],
+      "snapshotReleaseScansOnlyAfterLastProtection": [
+        "background0-protection0",
+        "background0-protection1",
+        "background0-protection2",
+        "background1-protection0",
+        "background1-protection1",
+        "background1-protection2"
+      ],
+      "historyPurgeReclaimsOutsideItsOwnDelta": [
+        "foreground",
+        "background"
+      ],
+      "lastUseCloseAndLifetime": [
+        "close-queued-event",
+        "destroy-pending",
+        "destroy-queued-event"
+      ],
+      "firstRetirementRunsOffThreadAndCloseDrains": [
+        ""
+      ],
+      "historySweepRevalidatesAndRevisits": [
+        "1",
+        "4",
+        "8",
+        "16"
+      ],
+      "longHistoryUsesVersionBudget": [
+        "bpp1-history65",
+        "bpp1-history257",
+        "bpp4-history65",
+        "bpp4-history257",
+        "bpp8-history65",
+        "bpp8-history257",
+        "bpp16-history65",
+        "bpp16-history257"
+      ],
+      "publicationCleanupUsesBoundedBackgroundPasses": [
+        ""
+      ]
+    }
+  },
+  "preserved_deletion_patterns": [
+    [
+      "libs/image",
+      "Prepared compatibility tile is unavailable|preparedTiles[.]install[(]"
+    ],
+    [
+      "libs/image",
+      "updateSnapshotDerivedExtent"
+    ],
+    [
+      "libs/image",
+      "commitAndReleasePublicationLock|recordPrepared|PreparedTransactionState"
+    ],
+    [
+      "libs/image",
+      "pageStoreRefreshCapacity"
+    ],
+    [
+      "libs/image",
+      "refreshPageStoreIndex|refreshPageStorePage|bitBltRoughImpl"
+    ],
+    [
+      "libs/image",
+      "installPageStoreReadCache|takeIdleReadCache"
+    ],
+    [
+      "libs/image",
+      "KisPageKeyStorage visiblePages"
+    ],
+    [
+      "libs/image",
+      "pruneDefaultPreparedPages"
+    ],
+    [
+      "libs/image",
+      "historyChangedPages|refreshPageStorePages"
+    ],
+    [
+      "libs/image",
+      "pruneDefaultPreparedPages|testPageStoreWriteIntentDoesNotAllocateUntilDataExposure"
+    ],
+    [
+      "libs/image",
+      "legacyFinalUnlock|privateCancelled"
+    ],
+    [
+      "libs/image",
+      "abortOwnedTransaction"
+    ],
+    [
+      "libs/image",
+      "tilesToDelete"
+    ],
+    [
+      "libs/image",
+      "restoreRetainedEpochDelta|copyPageVersions|requiresFullPageRestore|releaseSnapshotDelta|releaseSnapshotLocked"
+    ],
+    [
+      "libs/image",
+      "prepareMissingTile"
+    ],
+    [
+      "libs/image",
+      "rebuildPageStoreIndex"
+    ],
+    [
+      "libs/image/pagestore",
+      "preparationOnly|recordPrepared|KisMutationPageEntryState::Prepared"
+    ],
+    [
+      "libs/image",
+      "tryInstallLocked|collectRetirementsLocked"
+    ],
+    [
+      "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "anonymousTransaction|anonymousClients|anonymousFailed|finishBatchLease|m_ownedMutation"
+    ]
+  ],
+  "matrix_ids": [
+    "T01.1",
+    "T01.2",
+    "T01.3",
+    "T01.4",
+    "T02.1",
+    "T02.2",
+    "T02.3",
+    "T02.4",
+    "T03.1",
+    "T03.2",
+    "T03.3",
+    "T04.1",
+    "T04.2",
+    "T04.3",
+    "T04.4",
+    "T04.5",
+    "T04.6",
+    "T04.7",
+    "T04.8",
+    "T04.9",
+    "T04.10",
+    "T04.11",
+    "T04.12",
+    "T05.1",
+    "T05.2",
+    "T06.1",
+    "T06.2",
+    "T06.3",
+    "T07.1",
+    "T07.2",
+    "T07.3",
+    "T08.1",
+    "T08.2"
+  ],
+  "diff_categories": {
+    "runtime": [
+      {
+        "path": "libs/image/pagestore/KisPageHistoryCollector.cpp",
+        "added": 6,
+        "deleted": 5
+      },
+      {
+        "path": "libs/image/pagestore/KisPageHistoryCollector_p.h",
+        "added": 4,
+        "deleted": 1
+      },
+      {
+        "path": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+        "added": 9,
+        "deleted": 5
+      },
+      {
+        "path": "libs/image/pagestore/KisPageReadCoordinator.cpp",
+        "added": 3,
+        "deleted": 5
+      }
+    ],
+    "tests": [
+      {
+        "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "added": 100,
+        "deleted": 0
+      }
+    ],
+    "reviewed_metadata": [
+      {
+        "path": "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+        "added": 1,
+        "deleted": 1
+      }
+    ],
+    "derived": [
+      {
+        "path": "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+        "added": 11,
+        "deleted": 11
+      },
+      {
+        "path": "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+        "added": 7800,
+        "deleted": 7368
+      }
+    ]
+  },
+  "graph": {
+    "api-count": 2253,
+    "call-edge-count": 30613,
+    "callback-registration-count": 26
+  },
+  "translation_units": 87,
+  "performance_qualified": false,
+  "limits": [
+    "Memory and work-count counterexamples, not net time prices.",
+    "Two separately reproduced live-copy exact-view failures remain open.",
+    "Formal M6/M7/M8 and full pipeline performance remain open."
+  ]
+}

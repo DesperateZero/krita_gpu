@@ -1,0 +1,271 @@
+{
+  "time": {
+    "exploratory_reference_ms": 0.6602499999999996,
+    "engineering_range_ms": [
+      0.2,
+      1.0
+    ],
+    "independent_point_ms": 0.45449999999999946,
+    "independent_ci_ms": [
+      -0.027999999999998693,
+      1.404
+    ],
+    "change_from_exploratory_ms": -0.2057500000000001,
+    "relative_change_from_exploratory_pct": -31.16243847027644,
+    "ci_centered_on_exploratory_reference_ms": [
+      -0.6882499999999983,
+      0.7437500000000004
+    ],
+    "reference_is_not_a_frozen_point_prediction": true,
+    "interval_width_ms": 1.4319999999999986,
+    "delta_ms": 0.1,
+    "interval_width_over_delta": 14.319999999999986,
+    "point_in_engineering_range": true,
+    "ci_wholly_in_engineering_range": false
+  },
+  "quantity": {
+    "explore_A_new": 734,
+    "explore_B_new": 212,
+    "explore_deleted": 522,
+    "confirm_A_new": 868,
+    "confirm_B_new": 212,
+    "confirm_deleted": 656,
+    "deleted_relative_change_pct": 25.670498084291182,
+    "predicted_A_range": [
+      700,
+      750
+    ],
+    "predicted_B_range": [
+      200,
+      250
+    ],
+    "implied_deleted_range": [
+      450,
+      550
+    ],
+    "actual_delete_above_upper_pct": 19.272727272727263,
+    "not_same_process_as_timing": true
+  },
+  "joint_without_setup": {
+    "cpu_ns": {
+      "blocks": [
+        {
+          "block": 0,
+          "A_ms": 18.6545,
+          "B_ms": 18.4255,
+          "saving_ms": 0.2289999999999992
+        },
+        {
+          "block": 1,
+          "A_ms": 18.134,
+          "B_ms": 18.792499999999997,
+          "saving_ms": -0.6584999999999965
+        },
+        {
+          "block": 2,
+          "A_ms": 21.606,
+          "B_ms": 19.308,
+          "saving_ms": 2.298000000000002
+        },
+        {
+          "block": 3,
+          "A_ms": 18.812,
+          "B_ms": 19.4485,
+          "saving_ms": -0.6364999999999981
+        },
+        {
+          "block": 4,
+          "A_ms": 18.643500000000003,
+          "B_ms": 18.6385,
+          "saving_ms": 0.005000000000002558
+        },
+        {
+          "block": 5,
+          "A_ms": 19.6765,
+          "B_ms": 19.4375,
+          "saving_ms": 0.23900000000000077
+        },
+        {
+          "block": 6,
+          "A_ms": 18.749000000000002,
+          "B_ms": 17.862000000000002,
+          "saving_ms": 0.8870000000000005
+        },
+        {
+          "block": 7,
+          "A_ms": 26.4115,
+          "B_ms": 17.5715,
+          "saving_ms": 8.84
+        },
+        {
+          "block": 8,
+          "A_ms": 18.5165,
+          "B_ms": 18.151,
+          "saving_ms": 0.3655000000000008
+        },
+        {
+          "block": 9,
+          "A_ms": 20.394,
+          "B_ms": 18.441000000000003,
+          "saving_ms": 1.9529999999999959
+        },
+        {
+          "block": 10,
+          "A_ms": 18.8545,
+          "B_ms": 18.167,
+          "saving_ms": 0.6875
+        },
+        {
+          "block": 11,
+          "A_ms": 26.174500000000002,
+          "B_ms": 17.814,
+          "saving_ms": 8.360500000000002
+        },
+        {
+          "block": 12,
+          "A_ms": 18.194499999999998,
+          "B_ms": 17.969,
+          "saving_ms": 0.2254999999999967
+        },
+        {
+          "block": 13,
+          "A_ms": 20.652,
+          "B_ms": 19.181,
+          "saving_ms": 1.471
+        },
+        {
+          "block": 14,
+          "A_ms": 18.195,
+          "B_ms": 18.846,
+          "saving_ms": -0.6509999999999998
+        },
+        {
+          "block": 15,
+          "A_ms": 17.9775,
+          "B_ms": 18.258,
+          "saving_ms": -0.28049999999999997
+        }
+      ],
+      "point_ms": 0.3022500000000008,
+      "ci_ms": [
+        -0.020749999999999602,
+        1.471
+      ],
+      "scope": "post-hoc descriptive joint endpoint; not a new acceptance gate"
+    },
+    "wall_ns": {
+      "blocks": [
+        {
+          "block": 0,
+          "A_ms": 9.3015,
+          "B_ms": 9.1795,
+          "saving_ms": 0.12199999999999989
+        },
+        {
+          "block": 1,
+          "A_ms": 8.7805,
+          "B_ms": 9.4845,
+          "saving_ms": -0.7040000000000006
+        },
+        {
+          "block": 2,
+          "A_ms": 10.5825,
+          "B_ms": 9.4215,
+          "saving_ms": 1.1609999999999996
+        },
+        {
+          "block": 3,
+          "A_ms": 9.112,
+          "B_ms": 9.541,
+          "saving_ms": -0.42900000000000027
+        },
+        {
+          "block": 4,
+          "A_ms": 8.891,
+          "B_ms": 9.245999999999999,
+          "saving_ms": -0.35499999999999865
+        },
+        {
+          "block": 5,
+          "A_ms": 9.323,
+          "B_ms": 9.5215,
+          "saving_ms": -0.19849999999999923
+        },
+        {
+          "block": 6,
+          "A_ms": 9.033999999999999,
+          "B_ms": 8.896,
+          "saving_ms": 0.13799999999999812
+        },
+        {
+          "block": 7,
+          "A_ms": 12.958,
+          "B_ms": 8.6355,
+          "saving_ms": 4.3225
+        },
+        {
+          "block": 8,
+          "A_ms": 8.864,
+          "B_ms": 8.8675,
+          "saving_ms": -0.0034999999999989484
+        },
+        {
+          "block": 9,
+          "A_ms": 9.8185,
+          "B_ms": 8.824,
+          "saving_ms": 0.9945000000000004
+        },
+        {
+          "block": 10,
+          "A_ms": 9.39,
+          "B_ms": 9.033,
+          "saving_ms": 0.3570000000000011
+        },
+        {
+          "block": 11,
+          "A_ms": 12.7615,
+          "B_ms": 8.7065,
+          "saving_ms": 4.055
+        },
+        {
+          "block": 12,
+          "A_ms": 8.883,
+          "B_ms": 8.826,
+          "saving_ms": 0.05699999999999861
+        },
+        {
+          "block": 13,
+          "A_ms": 9.9705,
+          "B_ms": 9.515,
+          "saving_ms": 0.4554999999999989
+        },
+        {
+          "block": 14,
+          "A_ms": 8.815999999999999,
+          "B_ms": 9.229,
+          "saving_ms": -0.41300000000000026
+        },
+        {
+          "block": 15,
+          "A_ms": 8.7725,
+          "B_ms": 8.871500000000001,
+          "saving_ms": -0.0990000000000002
+        }
+      ],
+      "point_ms": 0.08949999999999925,
+      "ci_ms": [
+        -0.19849999999999923,
+        0.5662499999999993
+      ],
+      "scope": "post-hoc descriptive joint endpoint; not a new acceptance gate"
+    }
+  },
+  "inputs": {
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_history_admission_trial_20261009/PREDICTION.md": "0a81ba36617dde581ba0cc4f55e9485957b8c6c355aa23804ab36ff17fd3d5c0",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_history_admission_trial_20261009/summary.json": "206893500aa89190155389b3b186aba48f99336402c178856032289c0219eda7",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_history_admission_trial_20261009/confirmation-summary.json": "668ca1ecf44690081505d0f86d88b6c5e7623dc6e225e99271e8c58972dd05a2",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_history_admission_trial_20261009/confirmation/results.json": "8680acc7aa87c9e124855912a68eba458d4e4b9162f9bae7367abcc30202aec3",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_history_admission_trial_20261009/product-capability/results.json": "99f5599f165b61adf838eb8a3332fc085d0ebac8afcf4f9c70cbfd45a35c6c0e",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_candidate_rank_audit_20261010/replay.py": "bf4dc53096c12f7f82e39c8db38f31f46ba69fab7e509af571e85b76f3a07e1c"
+  }
+}

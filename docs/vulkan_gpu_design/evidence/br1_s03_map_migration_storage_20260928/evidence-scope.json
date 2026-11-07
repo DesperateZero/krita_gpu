@@ -1,0 +1,362 @@
+{
+  "scope": "HX6 migration preparation and retryable allocation rejection, existing value resolution, partial migration destruction, HX8 TileDataStore candidate ownership and pre-load map preparation. Cross-job installation capacity, whole-operation publication, complete budgets and M6-M8 remain open",
+  "head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "e809ed039190e4bbc0a6b653653b67325d2761de666bb580a2dbd3e347b73830",
+  "matrix_passed": false,
+  "unresolved_failures": [
+    {
+      "name": "arm64-kis_tiled_data_manager_test",
+      "command": [
+        "arch",
+        "-arm64",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test"
+      ],
+      "started": "2026-09-28T05:36:22.692691+00:00",
+      "returncode": -6,
+      "log": "arm64-kis_tiled_data_manager_test.log",
+      "ended": "2026-09-28T05:42:12.326694+00:00",
+      "totals": [
+        806,
+        1,
+        0
+      ],
+      "passed": false
+    }
+  ],
+  "aborted_cases_not_executed": 4,
+  "new_stage_or_performance_qualification": false,
+  "matrix_totals": [
+    8891,
+    1,
+    0
+  ],
+  "matrix_records": 44,
+  "probe_records": [
+    {
+      "identity": "install-arm64-address-final-02-identity.json",
+      "identity_sha256": "3039a5b4be8a2f7f7048ae555ba7d16bfecfb950207942463abd80fd7dfa1d99",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-admission-allocation-final-02-identity.json",
+      "identity_sha256": "ee4263a0f72eea952015180dfc39ddf99cc250820b1c26298fb6a87743ceb240",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-admission-failure-final-02-identity.json",
+      "identity_sha256": "d6c1d860895d19b062bbeedc32b1c971c7b0cb8220ae165ce96ed13eebd401bc",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-admission-gate-final-02-identity.json",
+      "identity_sha256": "ae491576e171efa167bdb764723210d9d56a35164feb4a6f40c780c732d422ea",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-admission-revalidation-final-02-identity.json",
+      "identity_sha256": "85a0e9362035199d84e8bc6f1b58e651b6ae0da4d9e231e337c404085f9d51f0",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-checkpoint-allocation-final-02-identity.json",
+      "identity_sha256": "9a2e0d4ad85bf253fd86efa3caec89717a7bdf932ba9a2346149dbca34eb768f",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-execution-allocation-final-02-identity.json",
+      "identity_sha256": "07318c694629f447c70f546f5baeb6f98c9c1c9ebac0e85502b194341c895cbd",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-execution-cancel-progress-final-02-identity.json",
+      "identity_sha256": "b4f3a531c3459dd36462115f42c09cff04caf62b9837e705d2778ca668dae718",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-execution-failure-final-02-identity.json",
+      "identity_sha256": "3b39a2cffbbc23b0cd53182d8e3ead8ddd5f23c37bf4933518c4b880d528de0a",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-extent-storage-final-02-identity.json",
+      "identity_sha256": "af5b375b639f841bd0b0a91edd3c0941b218a12ead86580a1cd0a0fdfc1a83cd",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-gc-storage-final-02-identity.json",
+      "identity_sha256": "f7fdc31cfc34fe80f0584ee0c15b21727c9c67da0a938e4d88f76f918ecc19cb",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-joint-final-02-identity.json",
+      "identity_sha256": "5e563d3467f1029a3cae2d86fe412f219efda1c1891cb85485d2b1a43b2c5c3d",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-legacy-final-02-identity.json",
+      "identity_sha256": "834484422dff3a426a3d052ceae75c9069bd05d16468ec8474458ceb634d9d7e",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-map-storage-final-02-identity.json",
+      "identity_sha256": "15d9ae6447f7ad3764159f3f7311ccdfed04e30ec97b6bc87bf9d07a95e336b1",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-metadata-refresh-final-02-identity.json",
+      "identity_sha256": "0f9471952f8af87b6eef4e867e62279fb0547427049e220cbc081facce1017bf",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-mutation-cleanup-final-02-identity.json",
+      "identity_sha256": "4d8b050340ae9e1495da9246d40d35de413df270dd959dbbc5f418113d69b3d3",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-native-final-02-identity.json",
+      "identity_sha256": "5de29dd059448f34b736aec67c715d3a4c70794c3a444921769a61c739f5fd03",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-operation-storage-allocation-final-02-identity.json",
+      "identity_sha256": "c65d709de76914a1c662df5adde102744c8a1f854f1831ff23b210ed64d8856a",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-operation-storage-failure-final-02-identity.json",
+      "identity_sha256": "9bfd8fc26dcd8465695b2f154c3b92abec50075b807aae6fbb00112423feeace",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-outer-final-02-identity.json",
+      "identity_sha256": "549a5c1126c75e4acb523353e56d099759db92f5ca4700990b39b1d927eaebb0",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-presence-allocation-final-02-identity.json",
+      "identity_sha256": "e6a03dd8b783ac10451289a52c1de5e72c38880badb318237a7738b5ca696e6c",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-presence-failure-final-02-identity.json",
+      "identity_sha256": "63b717d51f888c3ee1d2bbb57c1b0a26a54e649edfd4ef8e423fbb65712a3040",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-reuse-final-02-identity.json",
+      "identity_sha256": "36b9774d2a7032578bbf59fafe577104aa7b1ecd893da9574b2f2246499591ca",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-storage-final-02-identity.json",
+      "identity_sha256": "de7749b56572262696094095c3648012a10e01f4417fab676595f827c084a26b",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-store-storage-final-02-identity.json",
+      "identity_sha256": "2cea1bced6e500d5362abe82296b56252ef2d8823ce8f21404f64065d7fd4fbb",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-warm-read-final-02-identity.json",
+      "identity_sha256": "cafc05f8f9dcdaa45537f2d9bad56f45399ca7bf1d151fd65d0591d3689e7bc2",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-arm64-write-set-final-02-identity.json",
+      "identity_sha256": "1eea5b3bca630ffb90ec010fd25c36e950ec3042d1748022107ec9499200b163",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-address-final-02-identity.json",
+      "identity_sha256": "613533fa59357a9a0eb484e87e878c739672ad6a1cfbe28566b09f49aaadd0c6",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-admission-allocation-final-02-identity.json",
+      "identity_sha256": "9c166e6f14a8745ad5253d6d54ff36e57b15c62cc5d984b1ffb8edd56f9b2598",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-admission-failure-final-02-identity.json",
+      "identity_sha256": "922ae68dfe11c207b20bb92b0dd584c51251ca094d6377318196489830120964",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-admission-gate-final-02-identity.json",
+      "identity_sha256": "809f9547a31caa3552f54d1825bd916985bff572cef226c4627170ac95acac7f",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-admission-revalidation-final-02-identity.json",
+      "identity_sha256": "12d01ec2d52aa96bbb45a62b407b3180e0446ec909348f459c94af3202f963a7",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-checkpoint-allocation-final-02-identity.json",
+      "identity_sha256": "b738e534ff1cf15077145fa47cade582cf88d4551c9d2614a595eed0ced14712",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-execution-allocation-final-02-identity.json",
+      "identity_sha256": "493363ba10339cb7ae72eae562df82f7c41fa39a63127c3d189a6e0c08977049",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-execution-cancel-progress-final-02-identity.json",
+      "identity_sha256": "97ccbd3b3067614da0c9ea9aaa026d861135e10ea8a8cb6d1cde1f1dbf691bbe",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-execution-failure-final-02-identity.json",
+      "identity_sha256": "f65d1ead3dcb3db2396a9df0ed55173a5f9c98c90766dc9464e30971e4a3f452",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-extent-storage-final-02-identity.json",
+      "identity_sha256": "52ab178f12d2dca0c5485acbe4de3e2f8592751a6f86d29f2ca5e7d584b9581a",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-gc-storage-final-02-identity.json",
+      "identity_sha256": "2dbaaa00d7da1cd6027c56cc35c07b16c5a140e72b060d10dc3b2669cbec3327",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-joint-final-02-identity.json",
+      "identity_sha256": "7e4d7e4ce3db91a1f661964b12bc6a4b5c0ec38acab48fd2f66ce5df80afa987",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-legacy-final-02-identity.json",
+      "identity_sha256": "bb11258e2bee12e5707f6a2253763e29c567e55955c3d9ef8e472c4930c6b4af",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-map-storage-final-02-identity.json",
+      "identity_sha256": "5fd2df5aea45864c9ede163812adc54bc53b7843ca19cb866c8b58f182c15114",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-metadata-refresh-final-02-identity.json",
+      "identity_sha256": "58656336ec173164700d10377622991192663e674975a59e6f520db723a5be37",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-mutation-cleanup-final-02-identity.json",
+      "identity_sha256": "91238515a99c7a94b8adbd5ba06508f422f3100380a865484b3b6af3e4850354",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-native-final-02-identity.json",
+      "identity_sha256": "2d101dac0b843d17ce6d73079a66fe45fbfe759652879fd27659fbc621879715",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-operation-storage-allocation-final-02-identity.json",
+      "identity_sha256": "2c5ce047411726a5b338ea41cd874f1027ec710e8300cfbbed5d032086ba384d",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-operation-storage-failure-final-02-identity.json",
+      "identity_sha256": "a368ce57c48bec97d59af9bf0fc9c6efd6401bf6244f1764597f6e769d134f1b",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-outer-final-02-identity.json",
+      "identity_sha256": "91fe12589d22e083fc77173a0fadf6e8e0fbc556ed797bf08ca29ad13c4002d7",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-presence-allocation-final-02-identity.json",
+      "identity_sha256": "b63ba16e5facdefcc71b2abc6a9eb38a9a4c3aad51815b10599129ca181f6013",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-presence-failure-final-02-identity.json",
+      "identity_sha256": "036161b102141fe500a2360da82a0f809d6dfc5affda05f747656d2afa70002c",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-reuse-final-02-identity.json",
+      "identity_sha256": "51c24ddd50dba923f8844cc7335594415b086d1c9099fe8d52df978fdf00da94",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-storage-final-02-identity.json",
+      "identity_sha256": "d07e15d97e035eb5391a04bf82d4a6b1402d74a3ba4635d629629bf13cb39562",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-store-storage-final-02-identity.json",
+      "identity_sha256": "fa757e59395a8d79bb4bae1e9a91338ac5cd638b1133ac90ae367e980b3a1232",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-warm-read-final-02-identity.json",
+      "identity_sha256": "28ddc2bd4abfe0d98552eaf3f2db2bcb31259993375503695904250ec73036e6",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    },
+    {
+      "identity": "install-x86_64-write-set-final-02-identity.json",
+      "identity_sha256": "86970ed35ea6a62b05a667399bd14560fb6ca761280b4a67423b1e29ec0eecd0",
+      "image_sha256": "1a0d864b99d22f1033afe4f4a4cda68655b28443ebdc52bbbd2c828aa4ce3af9",
+      "returncode": 0
+    }
+  ],
+  "source_and_binaries_unchanged": true,
+  "diff_check": true
+}

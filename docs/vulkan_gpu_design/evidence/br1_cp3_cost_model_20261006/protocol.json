@@ -1,0 +1,19 @@
+{
+  "scope": "First-principles diagnostic; no formal qualification or change to existing gates",
+  "product": "6ffe097909e23adf3afd229a2a14e93986fae00b",
+  "m5": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "public_timing": "One unprofiled first operation outside rate interval, then 250ms completed-work interval; original alternating data and 64-operation deadline checks; warm all N pages; validation/destruction excluded",
+  "public_unprofiled_cases": [[64,1,4,1,"public"],[1024,1,4,1,"public"],[64,16,4,1,"public"],[1024,16,4,1,"public"],[1024,16,4,64,"public"],[1024,16,16,1,"public"],[1024,16,4,1,"copy"],[1024,16,4,64,"copy"],[1024,16,16,1,"copy"]],
+  "public_blocks": 4,
+  "public_arch": "arm64",
+  "profiled_cases": [[64,1,4,1],[1024,16,4,1]],
+  "profiled_blocks": 2,
+  "native": "Copy of unchanged native handoff fixture; add exclusive begin/acquire/payload/page-other/seal/commit cuts and provider byte counters; compare instrumented total against cuts-disabled total",
+  "native_arch": ["arm64","x86_64"],
+  "native_blocks": 4,
+  "native_repeats_per_process": 32,
+  "order": "Sequential processes; rotate public cases and alternate current/M5 or Fresh/handoff order by block; no concurrent builds/benchmarks",
+  "stopping": "Fixed counts; correctness, exit, timeout or identity failure stops dependent work and is retained; no extension or trimming",
+  "statistics": "Descriptive medians and ranges only; no confidence-based pass decision; first/steady/provider counters do not measure DRAM traffic or resident metadata",
+  "limits": "K/N/B/height controls change workload explicitly. Prebound copy is a byte-matched pixel lower control, not a same-semantics manager and not pure-M subtraction. Recorder phases are nested inclusive: never sum parent and child. x86_64 is Rosetta on this same Mac, not independent x86 hardware. Tails, background drain, upstream and real stroke remain unmeasured."
+}

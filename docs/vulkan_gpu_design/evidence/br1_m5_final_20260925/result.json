@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "decision": "Pass",
+  "scope": "BR1 M5 final convergence only",
+  "source_revision": "a0400cf0f7484004dd520e5c03dbc71cbe6827b4",
+  "correctness": {
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "suites": {
+      "KisCompletionRegistryTest": 11,
+      "KisPageStoreFoundationTest": 28,
+      "KisPageStorePhysicalClaimTest": 14,
+      "KisPageStoreCpuMutationTest": 577,
+      "KisPageStoreResidentReadTest": 33,
+      "KisPageStoreReferenceTest": 297,
+      "KisPageStoreReadBaselineTest": 45,
+      "kis_painter_test": 99,
+      "kis_tiled_data_manager_test": 361
+    },
+    "failed_per_suite": 0,
+    "skipped_per_suite": 0,
+    "tiles3_seed": 12345,
+    "stress_resources_settled": true
+  },
+  "vulkan_foundation": {
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "passed_per_architecture": 14,
+    "failed_per_architecture": 0
+  },
+  "architecture": {
+    "indexed_apis": 1452,
+    "reverse_call_edges": 13654,
+    "single_owner_facts": 21,
+    "runtime_census_groups": 16,
+    "frozen_external_intrusion_files": 19,
+    "tool_self_tests": 6,
+    "gate": "Pass"
+  },
+  "selector_v2": {
+    "result": "Pass",
+    "pairs_per_bucket": 40,
+    "rate_ms": 750,
+    "required_lower_bound": 0.98,
+    "familywise_confidence": "at least 95%",
+    "buckets": [
+      {
+        "name": "write-n64-k1-b4",
+        "paired_median_ratio": 0.9916347665570115,
+        "one_sided_97_5_percent_lower_bound": 0.9868527676819048
+      },
+      {
+        "name": "write-n1024-k16-b4",
+        "paired_median_ratio": 1.010918347238853,
+        "one_sided_97_5_percent_lower_bound": 0.9977315205109956
+      }
+    ]
+  },
+  "tsan": {
+    "result": "Inconclusive",
+    "source_revision": "fe5da2706acfe01ca958ca44ce8bf8d806ca79b9",
+    "reason": "Mixed instrumentation cannot model the dynamically linked Qt QMutex/QWaitCondition wait unlock/relock path; reports label both accesses with the same mutex M0.",
+    "counts_as_final_revision_pass": false
+  },
+  "excluded_claims": [
+    "upstream CPU BR1-PERF",
+    "full M/K/X/E matrix",
+    "tail-latency qualification",
+    "M6/M7 handoff performance",
+    "complete BR1 optimized version"
+  ]
+}

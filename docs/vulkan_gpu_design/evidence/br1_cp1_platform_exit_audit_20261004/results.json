@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-04",
+  "product_commit": "db7930797f4661e3a030b4004bca85c8a7011d4d",
+  "product_changes": 0,
+  "fault_audit": {
+    "new_production_counterexample": false,
+    "reopen_rule": "production allocator stack plus parent-red reproduction plus original-owner recovery endpoint",
+    "source_sha256": {
+      "krita/libs/image/pagestore/KisPageStore.cpp": "c43f2426ca59171bb28dc35bce54e598f5a3772976cc42788b9aba3c4edf98c9",
+      "krita/libs/image/pagestore/KisPagePublicationCoordinator.cpp": "a33e8149e538c40ced02caec275b7932f30ddf824607b790108b311e003a81ed",
+      "krita/libs/image/pagestore/KisPageRetirementQueue.cpp": "91083e783e8c2daebe93ff28d87c6fdc588bddabed60c0024f6539cf45f447a4",
+      "krita/libs/image/pagestore/KisPageReadCoordinator.cpp": "ae67c1fd445b4cb5e77c7f5deed94c9d4e5f567e080a72c6687813e5e301c0fd",
+      "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp": "b02b6edac29354b752568dd2698bb88b086b03c649110c03af54a4cf936cee2f"
+    }
+  },
+  "default_abort_control": {
+    "os": "macOS 15.7.3 (24G419)",
+    "core_limit": 0,
+    "before_ue_count": 0,
+    "pid": 90016,
+    "wait_seconds": 30.079295542,
+    "reaped": false,
+    "state_after": "UE",
+    "sigkill_cleared": false,
+    "sample_terminal": "abort -> pthread_kill -> __pthread_kill",
+    "current_ue_count": 1
+  },
+  "non_darwin_runtime": {
+    "available": false,
+    "local_container_or_vm": false,
+    "configured_ssh_target": false
+  },
+  "long_pressure_rerun": false,
+  "remaining_cp1_exits": [
+    "non-Darwin capacity/free implementation and target-platform run",
+    "default SIGABRT reaping on a capable macOS host or contract disposition"
+  ]
+}

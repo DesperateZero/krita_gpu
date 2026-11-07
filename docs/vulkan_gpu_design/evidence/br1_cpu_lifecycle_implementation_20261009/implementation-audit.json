@@ -1,0 +1,301 @@
+{
+  "parent": "704d96e81cf29d16191bc3db8785859d79775e27",
+  "files": [
+    {
+      "path": "build-tools/ci-scripts/check-pagestore-architecture.py",
+      "ids": [
+        "LP05.1",
+        "LP05.3",
+        "LP10.2"
+      ],
+      "sha256": "d8b2409d539fd70c8bc7edea9675fb7b70ddbf664ce531bb97eb9dd29d80fdbe",
+      "hunks": [
+        "@@ -1336 +1336,2 @@ def validate_ratchet(baseline: dict[str, Any], manifest: dict[str, Any]) -> list",
+        "@@ -1367,2 +1368,8 @@ def validate_ratchet(baseline: dict[str, Any], manifest: dict[str, Any]) -> list"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+      "ids": [
+        "LP08.3"
+      ],
+      "sha256": "1332550b428e8c96370df22e7c70e6d3a5ccbc45f79f3e73b23fb056fb4a5076",
+      "hunks": [
+        "@@ -394 +394 @@ void KisImageEpochTreeStorage::drain() noexcept",
+        "@@ -399 +399,7 @@ void KisImageEpochTreeStorage::drain() noexcept",
+        "@@ -400,0 +407 @@ void KisImageEpochTreeStorage::drain() noexcept",
+        "@@ -405,3 +412,7 @@ void KisImageEpochTreeStorage::drain() noexcept"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "ids": [
+        "LP01.1",
+        "LP01.2",
+        "LP01.3",
+        "LP02.1",
+        "LP02.2",
+        "LP03.1",
+        "LP03.2",
+        "LP04.1",
+        "LP04.2",
+        "LP04.3",
+        "LP04.4",
+        "LP05.1",
+        "LP05.2",
+        "LP05.3"
+      ],
+      "sha256": "5c03cd8c48ba8c9191367579ce82c0b9fbcf535e30e99c227d91dc27322c38b9",
+      "hunks": [
+        "@@ -1103 +1103 @@ struct ShardRecordStore {",
+        "@@ -1109 +1109 @@ struct ShardRecordStore {",
+        "@@ -1128 +1128 @@ struct ShardRecordStore {",
+        "@@ -1149 +1149 @@ struct ShardRecordStore {",
+        "@@ -1158 +1158 @@ struct ShardRecordStore {",
+        "@@ -2007,0 +2008,2 @@ public:",
+        "@@ -2010,7 +2011,0 @@ public:",
+        "@@ -2041,0 +2037,2 @@ public:",
+        "@@ -2044,0 +2042,19 @@ public:",
+        "@@ -2128,2 +2144,4 @@ void KisPageMetadataCoordinator::PreparedPublication::Data::cancel() noexcept",
+        "@@ -2202,7 +2220,12 @@ qsizetype KisPageMetadataCoordinator::PreparedPublication::Data::clearBatch(qsiz",
+        "@@ -2254 +2277,12 @@ void KisPageMetadataCoordinator::PreparedPublication::Data::invoke()",
+        "@@ -2265,0 +2300,11 @@ void KisPageMetadataCoordinator::PreparedPublication::Data::invoke()",
+        "@@ -2269,8 +2313,0 @@ void KisPageMetadataCoordinator::PreparedPublication::Data::invoke()",
+        "@@ -2397,2 +2434 @@ try {",
+        "@@ -2415 +2451,5 @@ try {",
+        "@@ -2425,4 +2465 @@ try {",
+        "@@ -2433,2 +2470 @@ try {",
+        "@@ -2439,3 +2475,21 @@ try {",
+        "@@ -2444,11 +2498,8 @@ try {",
+        "@@ -2457,9 +2508,7 @@ try {",
+        "@@ -2467,8 +2516 @@ try {",
+        "@@ -2476,10 +2518,39 @@ try {",
+        "@@ -2486,0 +2558 @@ try {",
+        "@@ -2488 +2559,0 @@ try {",
+        "@@ -2491,5 +2562,12 @@ try {",
+        "@@ -2497,11 +2575,23 @@ try {",
+        "@@ -2516,5 +2606,2 @@ try {",
+        "@@ -2522,4 +2609,6 @@ try {",
+        "@@ -2565,3 +2654 @@ try {",
+        "@@ -2569,17 +2656,4 @@ try {",
+        "@@ -2588 +2661,0 @@ try {",
+        "@@ -2600 +2673 @@ try {",
+        "@@ -2603,2 +2676,9 @@ try {",
+        "@@ -2612,0 +2693,17 @@ try {",
+        "@@ -2614,21 +2711 @@ try {",
+        "@@ -2642,3 +2719,2 @@ try {",
+        "@@ -2681,15 +2757,34 @@ try {",
+        "@@ -2697 +2792 @@ try {",
+        "@@ -2702,5 +2796,0 @@ try {",
+        "@@ -2772,7 +2862,7 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2780 +2870,6 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2782,8 +2877,9 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2792,4 +2888,6 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2802,37 +2900,18 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2840,9 +2919,7 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2850,3 +2927,3 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2854,0 +2932,37 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -2856,22 +2970,9 @@ bool KisPageMetadataCoordinator::installPublicationImpl(PreparedPublication &&pr",
+        "@@ -3454,0 +3556,11 @@ namespace",
+        "@@ -3523,0 +3636,2 @@ KisPageMetadataTransitionResult KisPageMetadataCoordinator::applyOwner(const Kis",
+        "@@ -3535,0 +3650,2 @@ KisPageMetadataTransitionResult KisPageMetadataCoordinator::applyOwnerSequence(c",
+        "@@ -3538,0 +3655,181 @@ KisPageMetadataTransitionResult KisPageMetadataCoordinator::applyOwnerSequence(c"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.h",
+      "ids": [
+        "LP01.1",
+        "LP02.2"
+      ],
+      "sha256": "12c652cdf4f0590cf97897ffac349dc586a9c9a5491a9e487bf99cc1f1f63fca",
+      "hunks": [
+        "@@ -479,0 +480,3 @@ private:"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "ids": [
+        "LP09.1"
+      ],
+      "sha256": "6a2b52d5780609e28f76a5dde6570a5dd8629de84bf70a8a0fa6447ea4903c74",
+      "hunks": [
+        "@@ -1700,0 +1701,8 @@ KisPagePublicationCoordinator::prepareDescriptorLocked(const KisPageVersion &ver",
+        "@@ -1703 +1711,3 @@ KisPagePublicationCoordinator::prepareDescriptorLocked(const KisPageVersion &ver",
+        "@@ -1724 +1734,2 @@ KisPagePublicationCoordinator::DescriptorMap",
+        "@@ -1739,0 +1751,3 @@ KisPagePublicationCoordinator::prepareDescriptorAdditionsLocked(const PreparedDe",
+        "@@ -1740,0 +1755 @@ KisPagePublicationCoordinator::prepareDescriptorAdditionsLocked(const PreparedDe"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPagePublicationCoordinator_p.h",
+      "ids": [
+        "LP09.1"
+      ],
+      "sha256": "1675c4451fb7e37cebb242755df6c9e96e3693c94161d56082eb657a182a9c30",
+      "hunks": [
+        "@@ -204,0 +205,2 @@ public:",
+        "@@ -210 +212,2 @@ public:"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator.cpp",
+      "ids": [
+        "LP08.1"
+      ],
+      "sha256": "8cd8527a208bf45b88532cd9b0915b434480543d7fa47a667766ba264c943c2f",
+      "hunks": [
+        "@@ -223,2 +223,4 @@ void KisPageReadCoordinator::notifyLastUse(",
+        "@@ -227 +229,4 @@ void KisPageReadCoordinator::notifyLastUse("
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStateMachine.cpp",
+      "ids": [
+        "LP01.1",
+        "LP03.1",
+        "LP03.2"
+      ],
+      "sha256": "6d446c55a22cd029771b4b8608c6244aacaee2378f45287b760e41216d5f1105",
+      "hunks": [
+        "@@ -171 +171,4 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -197,0 +201,10 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -704 +717 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -709,2 +722 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -713,2 +725 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -789 +800 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -791 +802 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -819 +830 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -821 +832,2 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -839,2 +851,5 @@ void applyPolicy(Result &result, const KisPageTransition &transition,",
+        "@@ -1000 +1015,4 @@ void KisPageStateMachine::applyKnownValid(",
+        "@@ -1003 +1021 @@ void KisPageStateMachine::applyKnownValid("
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStateMachine.h",
+      "ids": [
+        "LP03.1",
+        "LP03.2"
+      ],
+      "sha256": "91acf4925e02c98d4bb40e2ffd8bf518a986ab26a4792b82311080adc75a45ed",
+      "hunks": [
+        "@@ -268 +268,4 @@ private:"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "ids": [
+        "LP09.1"
+      ],
+      "sha256": "447715516129afa0e0ac749bab607f83d08ebf737bc594ed56c433a2b50398c0",
+      "hunks": [
+        "@@ -1157 +1157 @@ public:",
+        "@@ -2160 +2160 @@ KisCpuWriteGuard KisPageMutationSession::beginWriteImpl(const KisPageKey &key,",
+        "@@ -4113 +4113 @@ KisWriteRequest KisPageStore::acquireWrite(const KisPageTransaction &transaction"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreReclamation.cpp",
+      "ids": [
+        "LP06.1",
+        "LP06.2",
+        "LP06.3",
+        "LP07.1",
+        "LP07.2"
+      ],
+      "sha256": "436d7665dd442689454f5f857e3e47c35669d8e458a8c0328b122ab445badd19",
+      "hunks": [
+        "@@ -98 +98 @@ void releaseWake(KisPageReclamationWakeState *wake) noexcept",
+        "@@ -255,0 +256 @@ public:",
+        "@@ -259 +260 @@ public:",
+        "@@ -369,5 +370,5 @@ private:",
+        "@@ -375,11 +376,8 @@ private:",
+        "@@ -392 +389,0 @@ private:",
+        "@@ -400,6 +397,5 @@ private:",
+        "@@ -510,0 +507 @@ void KisPageReclamationDelay::cancel()",
+        "@@ -512,0 +510,2 @@ void KisPageReclamationDelay::cancel()",
+        "@@ -519,0 +519,2 @@ void KisPageReclamationDelay::cancel()",
+        "@@ -521 +522 @@ void KisPageReclamationDelay::cancel()",
+        "@@ -528,0 +530 @@ bool KisPageReclamationDelay::arm(int delayMs)",
+        "@@ -532,0 +535,2 @@ bool KisPageReclamationDelay::arm(int delayMs)",
+        "@@ -541,0 +546 @@ bool KisPageReclamationDelay::arm(int delayMs)",
+        "@@ -543 +548 @@ bool KisPageReclamationDelay::arm(int delayMs)",
+        "@@ -583,0 +589 @@ void KisPageReclamationWake::notify() const noexcept",
+        "@@ -586,0 +593 @@ void KisPageReclamationWake::notify() const noexcept",
+        "@@ -589 +596 @@ void KisPageReclamationWake::notify() const noexcept"
+      ]
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "ids": [
+        "LP02.2",
+        "LP09.1"
+      ],
+      "sha256": "6a6b9159d4a242cb944ced6f40eb24a013821c09be69d44e370c1d05f27a448b",
+      "hunks": [
+        "@@ -2751,14 +2751 @@ KisPageMetadataTransitionResult KisPageWriteCoordinator::publishPrivateWrite(Kis",
+        "@@ -2852 +2839 @@ KisPageWritePlanKind KisPageWriteCoordinator::prepareWritePlanLocked("
+      ]
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "ids": [
+        "LP09.1",
+        "LP10.2"
+      ],
+      "sha256": "2da72b16ff96779c901e4ad355caaaabe4ab133943148d0dd429d34fa4f94763",
+      "hunks": [
+        "@@ -5552,0 +5553,9 @@ void KisPageStoreCpuMutationTest::publicationDescriptorStorageAtCapacity()"
+      ]
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "ids": [
+        "LP04.1",
+        "LP04.3",
+        "LP10.2"
+      ],
+      "sha256": "399885471d40357079f931f75827e1ae09752a25429cee58a22b4ae1e6825c61",
+      "hunks": [
+        "@@ -1127 +1127 @@ private Q_SLOTS:",
+        "@@ -1135,0 +1136 @@ private Q_SLOTS:",
+        "@@ -6981,0 +6983,67 @@ void KisPageStoreReferenceTest::mutationCandidateStorageAtSharedCapacity()"
+      ]
+    }
+  ],
+  "state_machine_kinds": [
+    "AbortPreparedVersion",
+    "AbortTransaction",
+    "AcknowledgeLastUse",
+    "AcquireRead",
+    "AcquireRecoverableWrite",
+    "AcquireWrite",
+    "AdoptPreparedWrite",
+    "AttachHistoricalDefault",
+    "BeginAuthorityHandoff",
+    "BeginMaterialize",
+    "BeginPublish",
+    "BeginRetire",
+    "CancelWrite",
+    "CommitAuthorityHandoff",
+    "CommitTransaction",
+    "CompleteMaterialize",
+    "CompleteRetire",
+    "DetachPreparedVersion",
+    "DiscardHistoricalVersions",
+    "FailAuthorityHandoff",
+    "FailMaterialize",
+    "FailRetire",
+    "FailWrite",
+    "MaterializeDefault",
+    "PrepareWrite",
+    "PublishWrite",
+    "ReleaseCapturedVersion",
+    "ReleaseRead",
+    "ReplaceDefaultPixel",
+    "ReplacePrivatePreparedBacking",
+    "RestoreCommittedVersion",
+    "RetainCapturedVersion"
+  ]
+}

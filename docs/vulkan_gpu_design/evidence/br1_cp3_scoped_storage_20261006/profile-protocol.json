@@ -1,0 +1,22 @@
+{
+  "question": "Mechanism comparison for original public N1024/K16/B4/H0; diagnostic not a performance gate",
+  "order": [
+    [
+      "parent",
+      "current"
+    ],
+    [
+      "current",
+      "parent"
+    ]
+  ],
+  "processes": 4,
+  "fixture_rate_ms": 6000,
+  "init_marker_required": true,
+  "attach_after_init_ms": 500,
+  "profile_duration_seconds": 2,
+  "template": "Time Profiler",
+  "schema": "time-profile",
+  "analysis": "Running samples only; same existing nearest mechanism/caller rules;2s proportions times6s loop threadCPU/op is an approximation",
+  "stopping": "exactly4 sequential processes after all builds/safety/performance; preserve errors, no extra samples"
+}

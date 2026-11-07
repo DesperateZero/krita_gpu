@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "purpose": "M5 repair whole-pipeline regression against the frozen pre-repair production executable text; not a selector-only attribution",
+  "source_revision": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "architecture": "arm64",
+  "candidate": "Current repair source, compiled runtime and shared CPU fixture.",
+  "control": "Retained parent matched-control runtime whose full arm64/x86_64 executable text was previously proved identical to production 095193d11a; runtime hash is verified against that proof.",
+  "required_buckets": [
+    "write-n64-k1-b4",
+    "write-n1024-k16-b4"
+  ],
+  "bucket_scope": "Resident CPU/CpuRam partial writes, H=0, one thread, one in-flight operation, diagnostics disabled. Current M5 has no handoff and therefore selects FreshCow for these PreserveContents MutableGuard writes.",
+  "pairs": 40,
+  "order_balanced_blocks": 20,
+  "rate_ms": 750,
+  "metric": "Direct completed-operation throughput reported by the fixture as completed_operations / wall_ns. This is not inferred by inverting sampled latency.",
+  "comparison": "Same fixture executable, repaired versus pre-repair runtime. Candidate/control completed-throughput ratios, combined into adjacent order-balanced blocks; median of 20 blocks with the existing familywise confidence rule.",
+  "tolerance": "Candidate throughput regression must not exceed 2% in either required bucket: candidate/control >= 0.98.",
+  "confidence": "For two required buckets, each bucket uses a one-sided 97.5% bootstrap lower bound over the 20 predeclared order-balanced blocks, giving at least 95% familywise confidence by Bonferroni. The statistic is the median block ratio.",
+  "bootstrap_seed": 260926,
+  "bootstrap_resamples": 50000,
+  "run_order": "Rotate bucket order by pair. Alternate control/candidate order on successive pairs. Adjacent even/odd pairs form one predeclared order-balanced block. Preserve all samples.",
+  "stop_rule": "Exactly 40 fresh process pairs (20 adjacent order-balanced blocks) per bucket; no optional stopping, sample deletion, reuse of the earlier failed experiment or rerun replacement. The earlier single-pair analysis remains preserved.",
+  "environment": "No build, TSAN, profiler or other benchmark runs concurrently. QT_QPA_PLATFORM=offscreen; KIS_CPU_BASELINE_LOOPS=4; KIS_CPU_BASELINE_RATE_MS=750; KIS_BR1_STAGE_PROFILE=0.",
+  "secondary_evidence": "Preserve process wall time, setup, manager destruction, correctness and loader identity. These are reported but do not replace the selector throughput gate.",
+  "limits": "Two CPU forced-COW whole-operation repair-regression buckets only. Selector source is unchanged; this comparison is not a new selector-only causal experiment and is not formal upstream BR1-PERF or M6 handoff qualification."
+}

@@ -1,0 +1,83 @@
+{
+  "product_commit": "0a00bd3fe3fe71e44c04b987f9558bcd37f00dc6",
+  "parent_commit": "57e59e6b0e53c625b0e4853985a242b5433ca618",
+  "outer_parent": "7fd29a164ea79c521ac2cae06bfc2e08d1f0bf2d",
+  "skill": "/Users/apple/.codex/skills/algorithm-cost-optimization/SKILL.md",
+  "groups": {
+    "production": {
+      "added": 81,
+      "deleted": 25,
+      "files": [
+        "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "libs/image/pagestore/KisPageWriteCoordinator_p.h"
+      ],
+      "net": 56
+    },
+    "ownership": {
+      "added": 1,
+      "deleted": 1,
+      "files": [
+        "build-tools/ci-scripts/pagestore-audit/state-ownership.json"
+      ],
+      "net": 0
+    },
+    "generated": {
+      "added": 1195,
+      "deleted": 1018,
+      "files": [
+        "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+        "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json"
+      ],
+      "net": 177
+    },
+    "tests": {
+      "added": 0,
+      "deleted": 0,
+      "files": [],
+      "net": 0
+    }
+  },
+  "safety": {
+    "qtest_processes": 38,
+    "passed": 11114,
+    "failed": 0,
+    "skipped": 0,
+    "probes": 6,
+    "policy_processes": 8
+  },
+  "quantity": {
+    "processes": 28,
+    "trace_events": 336587,
+    "Q": 988,
+    "G": 17,
+    "M": 971,
+    "R": [
+      63,
+      61
+    ],
+    "bucket_before": 6916,
+    "bucket_after": [
+      1468,
+      1456
+    ],
+    "actual_capacity_delta": 0
+  },
+  "qualification": {
+    "mechanism_goal": true,
+    "parent_incremental_speedup": true,
+    "fixed_m5_fresh_family_pass": true,
+    "fixed_m5_history_family_pass": true,
+    "native_handoff_family_pass": false,
+    "M6": false,
+    "persistent_default_enabled": false
+  },
+  "raw_evidence": {
+    "archive": "raw-evidence.tar.gz",
+    "bytes": 45951445,
+    "sha256": "99ac02b28782bc479176d0adedbbcf06718b0f0811b6549d18dd322034dc9c5c",
+    "files": 1768,
+    "content_verified": true
+  },
+  "source_verification": "final-verification.json",
+  "documentation_verification": "documentation-verification.json"
+}

@@ -1,0 +1,306 @@
+{
+  "base": "667c8d65162017f872352b19a8c4a8e3e5815521",
+  "commit": "e1a26e14d91f26db4e4f03b470842105fda00165",
+  "source_diff_sha256": "2891ebe5cb54192010185cd06a9f5d363aca0f0b4c0433c4f8947ffd1a35d646",
+  "results": {
+    "arm64": {
+      "retained_snapshots_after_each_round": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "streaming": [
+        [
+          17,
+          1,
+          16,
+          1
+        ],
+        [
+          257,
+          1,
+          256,
+          1
+        ],
+        [
+          17,
+          4,
+          16,
+          1
+        ],
+        [
+          257,
+          4,
+          256,
+          1
+        ],
+        [
+          17,
+          8,
+          16,
+          1
+        ],
+        [
+          257,
+          8,
+          256,
+          1
+        ],
+        [
+          17,
+          16,
+          16,
+          1
+        ],
+        [
+          257,
+          16,
+          256,
+          1
+        ]
+      ],
+      "totals": {
+        "kis_tiled_data_manager_test": [
+          [
+            "1793",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStoreReferenceTest": [
+          [
+            "1019",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStoreCpuMutationTest": [
+          [
+            "1721",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStorePhysicalClaimTest": [
+          [
+            "398",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStoreResidentReadTest": [
+          [
+            "221",
+            "0",
+            "0"
+          ]
+        ],
+        "kis_lockless_stack_test": [
+          [
+            "31",
+            "0",
+            "0"
+          ]
+        ]
+      }
+    },
+    "x86_64": {
+      "retained_snapshots_after_each_round": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "streaming": [
+        [
+          17,
+          1,
+          16,
+          1
+        ],
+        [
+          257,
+          1,
+          256,
+          1
+        ],
+        [
+          17,
+          4,
+          16,
+          1
+        ],
+        [
+          257,
+          4,
+          256,
+          1
+        ],
+        [
+          17,
+          8,
+          16,
+          1
+        ],
+        [
+          257,
+          8,
+          256,
+          1
+        ],
+        [
+          17,
+          16,
+          16,
+          1
+        ],
+        [
+          257,
+          16,
+          256,
+          1
+        ]
+      ],
+      "totals": {
+        "kis_tiled_data_manager_test": [
+          [
+            "1793",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStoreReferenceTest": [
+          [
+            "1019",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStoreCpuMutationTest": [
+          [
+            "1721",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStorePhysicalClaimTest": [
+          [
+            "398",
+            "0",
+            "0"
+          ]
+        ],
+        "KisPageStoreResidentReadTest": [
+          [
+            "221",
+            "0",
+            "0"
+          ]
+        ],
+        "kis_lockless_stack_test": [
+          [
+            "31",
+            "0",
+            "0"
+          ]
+        ]
+      }
+    }
+  },
+  "public_parent_observations_preserved": 42,
+  "upstream_successful_input_observations_identical": 24,
+  "upstream_all_identical": false,
+  "preserved_failure_differences": [
+    {
+      "mode": 4,
+      "stage": "read",
+      "fields": [
+        "h",
+        "pixels",
+        "w"
+      ]
+    },
+    {
+      "mode": 4,
+      "stage": "clone",
+      "fields": [
+        "h",
+        "pixels",
+        "w"
+      ]
+    },
+    {
+      "mode": 4,
+      "stage": "edit",
+      "fields": [
+        "pixels",
+        "w",
+        "x"
+      ]
+    },
+    {
+      "mode": 4,
+      "stage": "undo",
+      "fields": [
+        "h",
+        "pixels",
+        "w"
+      ]
+    },
+    {
+      "mode": 4,
+      "stage": "redo",
+      "fields": [
+        "pixels",
+        "w",
+        "x"
+      ]
+    },
+    {
+      "mode": 5,
+      "stage": "read",
+      "fields": [
+        "accepted"
+      ]
+    },
+    {
+      "mode": 5,
+      "stage": "clone",
+      "fields": [
+        "accepted"
+      ]
+    },
+    {
+      "mode": 5,
+      "stage": "edit",
+      "fields": [
+        "accepted"
+      ]
+    },
+    {
+      "mode": 5,
+      "stage": "undo",
+      "fields": [
+        "accepted"
+      ]
+    },
+    {
+      "mode": 5,
+      "stage": "redo",
+      "fields": [
+        "accepted"
+      ]
+    }
+  ],
+  "deleted_from_import": [
+    "PreparedHistoryAbort",
+    "commitHistory",
+    "abortPageStoreHistoryLocked",
+    "releaseHistoryDefaultTile"
+  ],
+  "legacy_history_preserved": true,
+  "counterexample_report_sha256": "e487f956da7f4718b3851ea123ab8d051cebd66a24e9050201fe5622bdce4a60",
+  "audit_script_sha256": "f9f4d0a2a889ad760677dbb893954e73ea72045c07a59b32a4f8b63260ba3cdf",
+  "limits": "Safety, streaming residency and token lifetime only. No upstream retained-byte or timing claim; whole pipeline and M6 remain open."
+}

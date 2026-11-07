@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "manifest_sha256": "9372515fc1d262fafb0acb7d0ea3c2ae40d458c47001094d9fa641b3a8e1916a",
+  "purpose": "supplementary shared-harness readBytes completed-throughput diagnostic; not BR1-PERF qualification",
+  "phase": "rate",
+  "runs": 24,
+  "pairs_per_case": 12,
+  "limitations": [
+    "No pre-approved M non-inferiority margin: do not infer equivalence from a CI crossing 1",
+    "H=0, single thread and fixed in-flight=1; no per-event tails, pressure or product replay",
+    "No full metadata/allocation/background-drain counters; manager destruction is not complete retirement",
+    "Alias includes native operation management/content decisions but excludes prebuilt source initialization; label lifecycle operation, not pure M",
+    "K is a common memcpy control with ready read pins, not a production brush/SIMD kernel qualification",
+    "Rate is independently measured completed work; fixed-loop aggregate is not a single-event latency distribution"
+  ],
+  "results": [
+    {
+      "fixture": "read-n1024-k16-b4",
+      "evidence_class": "E",
+      "metric_scope": "endpoint",
+      "completed_operations_per_second": {
+        "upstream_median": 2508086.2914077835,
+        "current_median": 2162311.933280801,
+        "paired_median_ratio": 0.8621219920526333,
+        "exploratory_paired_95_interval": [
+          0.8584391469936499,
+          0.8680308748477341
+        ],
+        "pair_ratios": [
+          0.8716137224270368,
+          0.8608908742487787,
+          0.8573165520316092,
+          0.8754223422150728,
+          0.8812157657495218,
+          0.8644480272684315,
+          0.8588387242692526,
+          0.8592025311732748,
+          0.8635728376447082,
+          0.8580395697180471,
+          0.8633531098564878,
+          0.844830241300394
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 398.64207667319226,
+        "current_median": 462.4301561241892,
+        "paired_median_ratio": 1.15994581666022,
+        "exploratory_paired_95_interval": [
+          1.1522498553841243,
+          1.16495155919853
+        ],
+        "pair_ratios": [
+          1.1476945795257938,
+          1.1615532941418134,
+          1.1664752517179462,
+          1.1428634489921883,
+          1.134689018313189,
+          1.1568051312424548,
+          1.164379946825972,
+          1.1638396367683517,
+          1.1582409614257603,
+          1.1655231715710883,
+          1.1583383391786262,
+          1.1836524801887873
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 398.6488886740792,
+        "current_median": 462.43988739544614,
+        "paired_median_ratio": 1.1599372182417684,
+        "exploratory_paired_95_interval": [
+          1.1522490273651567,
+          1.1649539915139675
+        ],
+        "pair_ratios": [
+          1.1476902676166991,
+          1.1615334480948414,
+          1.1664791414269282,
+          1.1428698732352611,
+          1.134700829706355,
+          1.1568077871136144,
+          1.1643763111599013,
+          1.1638578193832598,
+          1.1582436149813595,
+          1.165531671868034,
+          1.1583409883886955,
+          1.1836529777005176
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 501632,
+        "current": 432480
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 98525184,
+        "current": 144596992
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    }
+  ]
+}

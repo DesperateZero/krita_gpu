@@ -1,0 +1,3391 @@
+{
+  "qualification": "within-branch diagnostic, not isolated M/K, upstream NI or product/tail gate",
+  "uncertainty": "six independent process pairs; exploratory median bootstrap, no pre-frozen NI margin",
+  "scaffold": {
+    "status": "MeasuredDiagnostic",
+    "cases": {
+      "alias-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 17.832787811279296,
+            "after_us": 17.83946484375,
+            "ratio": 1.0003744244893937
+          },
+          {
+            "pair": 1,
+            "before_us": 17.461222320556644,
+            "after_us": 17.465951293945313,
+            "ratio": 1.0002708271678726
+          },
+          {
+            "pair": 2,
+            "before_us": 17.52258557128906,
+            "after_us": 17.56277212524414,
+            "ratio": 1.002293414621466
+          },
+          {
+            "pair": 3,
+            "before_us": 17.504066467285156,
+            "after_us": 17.40090560913086,
+            "ratio": 0.9941064632982796
+          },
+          {
+            "pair": 4,
+            "before_us": 17.355022430419922,
+            "after_us": 17.557558685302734,
+            "ratio": 1.0116701811072168
+          },
+          {
+            "pair": 5,
+            "before_us": 17.61781948852539,
+            "after_us": 17.221738189697266,
+            "ratio": 0.9775181429752929
+          }
+        ],
+        "paired_median_ratio": 1.000322625828633,
+        "bootstrap95": [
+          0.9858123031367862,
+          1.0069817978643414
+        ],
+        "before_us": 17.513326019287106,
+        "after_us": 17.511754989624023,
+        "payload_work": {
+          "original": {},
+          "before": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          }
+        },
+        "phases": {}
+      },
+      "real-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 20.37398910522461,
+            "after_us": 20.33553695678711,
+            "ratio": 0.9981126843526367
+          },
+          {
+            "pair": 1,
+            "before_us": 19.84778594970703,
+            "after_us": 20.135384857177733,
+            "ratio": 1.0144902261743178
+          },
+          {
+            "pair": 2,
+            "before_us": 20.626218139648437,
+            "after_us": 20.25749462890625,
+            "ratio": 0.982123552255398
+          },
+          {
+            "pair": 3,
+            "before_us": 19.93926873779297,
+            "after_us": 20.17822265625,
+            "ratio": 1.0119840863573957
+          },
+          {
+            "pair": 4,
+            "before_us": 19.933011383056638,
+            "after_us": 20.020281494140626,
+            "ratio": 1.0043781699316223
+          },
+          {
+            "pair": 5,
+            "before_us": 20.018463134765625,
+            "after_us": 20.05362194824219,
+            "ratio": 1.001756319315817
+          }
+        ],
+        "paired_median_ratio": 1.0030672446237197,
+        "bootstrap95": [
+          0.9901181183040173,
+          1.0132371562658569
+        ],
+        "before_us": 19.9788659362793,
+        "after_us": 20.156803756713867,
+        "payload_work": {
+          "original": {},
+          "before": {
+            "default_initialized_bytes": 3221225472,
+            "explicit_copy_bytes": 3221225472,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      }
+    }
+  },
+  "paired": {
+    "status": "MeasuredDiagnostic",
+    "cases": {
+      "alias-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 16.92874398803711,
+            "after_us": 17.08182778930664,
+            "ratio": 1.0090428327924217
+          },
+          {
+            "pair": 1,
+            "before_us": 16.85946908569336,
+            "after_us": 17.39147186279297,
+            "ratio": 1.031555132275847
+          },
+          {
+            "pair": 2,
+            "before_us": 17.07819873046875,
+            "after_us": 17.579068481445315,
+            "ratio": 1.0293280198269958
+          },
+          {
+            "pair": 3,
+            "before_us": 17.502875,
+            "after_us": 16.950136810302737,
+            "ratio": 0.9684201487071544
+          },
+          {
+            "pair": 4,
+            "before_us": 17.503351867675782,
+            "after_us": 17.201258331298828,
+            "ratio": 0.9827408179495698
+          },
+          {
+            "pair": 5,
+            "before_us": 18.15426760864258,
+            "after_us": 17.45999270629883,
+            "ratio": 0.9617569313557308
+          }
+        ],
+        "paired_median_ratio": 0.9958918253709957,
+        "bootstrap95": [
+          0.9650885400314426,
+          1.0304415760514214
+        ],
+        "before_us": 17.290536865234372,
+        "after_us": 17.2963650970459,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          }
+        },
+        "phases": {}
+      },
+      "alias-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 17.64803823852539,
+            "after_us": 17.997834533691407,
+            "ratio": 1.0198206900074829
+          },
+          {
+            "pair": 1,
+            "before_us": 17.74636584472656,
+            "after_us": 18.44978204345703,
+            "ratio": 1.0396371969836005
+          },
+          {
+            "pair": 2,
+            "before_us": 18.424760162353515,
+            "after_us": 18.284609466552734,
+            "ratio": 0.9923933503304351
+          },
+          {
+            "pair": 3,
+            "before_us": 18.246219635009766,
+            "after_us": 17.938538848876952,
+            "ratio": 0.9831372858439974
+          },
+          {
+            "pair": 4,
+            "before_us": 18.17385482788086,
+            "after_us": 18.243952423095703,
+            "ratio": 1.0038570570678986
+          },
+          {
+            "pair": 5,
+            "before_us": 18.088965087890625,
+            "after_us": 18.26748403930664,
+            "ratio": 1.0098689422279623
+          }
+        ],
+        "paired_median_ratio": 1.0068629996479306,
+        "bootstrap95": [
+          0.9877653180872162,
+          1.0297289434955417
+        ],
+        "before_us": 18.131409957885744,
+        "after_us": 18.255718231201172,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          }
+        },
+        "phases": {}
+      },
+      "alias-N4096-K16-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 84.85287475585938,
+            "after_us": 86.15327954101562,
+            "ratio": 1.0153254063447799
+          },
+          {
+            "pair": 1,
+            "before_us": 85.74513745117187,
+            "after_us": 87.1700947265625,
+            "ratio": 1.0166185199271744
+          },
+          {
+            "pair": 2,
+            "before_us": 87.22368383789063,
+            "after_us": 88.33446240234375,
+            "ratio": 1.0127348274640355
+          },
+          {
+            "pair": 3,
+            "before_us": 86.21413159179687,
+            "after_us": 86.06399536132812,
+            "ratio": 0.998258565878972
+          },
+          {
+            "pair": 4,
+            "before_us": 87.37411499023438,
+            "after_us": 86.65984106445312,
+            "ratio": 0.9918251083188531
+          },
+          {
+            "pair": 5,
+            "before_us": 86.89909863281251,
+            "after_us": 86.98612475585938,
+            "ratio": 1.0010014617460485
+          }
+        ],
+        "paired_median_ratio": 1.006868144605042,
+        "bootstrap95": [
+          0.9950418370989125,
+          1.0159719631359772
+        ],
+        "before_us": 86.55661511230468,
+        "after_us": 86.82298291015624,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 6442450944
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 6442450944
+          }
+        },
+        "phases": {}
+      },
+      "real-N1024-K16-H0-B16": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 246.546,
+            "after_us": 115.70864868164062,
+            "ratio": 0.4693187019121812
+          },
+          {
+            "pair": 1,
+            "before_us": 253.51802563476562,
+            "after_us": 116.4502666015625,
+            "ratio": 0.4593372258638849
+          },
+          {
+            "pair": 2,
+            "before_us": 253.11619067382813,
+            "after_us": 115.8951416015625,
+            "ratio": 0.45787328456956705
+          },
+          {
+            "pair": 3,
+            "before_us": 254.03746533203125,
+            "after_us": 119.83696508789063,
+            "ratio": 0.4717294944320976
+          },
+          {
+            "pair": 4,
+            "before_us": 256.08894848632815,
+            "after_us": 118.47822045898437,
+            "ratio": 0.46264480040734596
+          },
+          {
+            "pair": 5,
+            "before_us": 258.5000915527344,
+            "after_us": 118.50048828125,
+            "ratio": 0.4584156530446556
+          }
+        ],
+        "paired_median_ratio": 0.4609910131356154,
+        "bootstrap95": [
+          0.45814446880711135,
+          0.4705240981721394
+        ],
+        "before_us": 253.77774548339843,
+        "after_us": 117.46424353027344,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 25769803776,
+            "explicit_copy_bytes": 25769803776,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 25769803776,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 25769803776,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      },
+      "real-N1024-K16-H0-B8": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 220.86681103515627,
+            "after_us": 103.9682109375,
+            "ratio": 0.4707280847231998
+          },
+          {
+            "pair": 1,
+            "before_us": 223.53873706054688,
+            "after_us": 105.11929321289062,
+            "ratio": 0.4702509041393501
+          },
+          {
+            "pair": 2,
+            "before_us": 227.4208779296875,
+            "after_us": 105.33940649414063,
+            "ratio": 0.46319145125589034
+          },
+          {
+            "pair": 3,
+            "before_us": 224.6268818359375,
+            "after_us": 107.42520141601562,
+            "ratio": 0.4782384037831973
+          },
+          {
+            "pair": 4,
+            "before_us": 228.78286743164062,
+            "after_us": 105.5312705078125,
+            "ratio": 0.4612726105434657
+          },
+          {
+            "pair": 5,
+            "before_us": 226.97686767578125,
+            "after_us": 106.84916186523436,
+            "ratio": 0.4707491250511927
+          }
+        ],
+        "paired_median_ratio": 0.47048949443127497,
+        "bootstrap95": [
+          0.462232030899678,
+          0.47449376441719504
+        ],
+        "before_us": 225.8018747558594,
+        "after_us": 105.43533850097657,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 12884901888,
+            "explicit_copy_bytes": 12884901888,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 12884901888,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 12884901888,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      },
+      "real-N1024-K16-H4-B16": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 258.91632080078125,
+            "after_us": 129.0996296386719,
+            "ratio": 0.4986152639562857
+          },
+          {
+            "pair": 1,
+            "before_us": 263.24466967773435,
+            "after_us": 127.50034594726561,
+            "ratio": 0.48434160548569616
+          },
+          {
+            "pair": 2,
+            "before_us": 263.4112041015625,
+            "after_us": 127.89335107421876,
+            "ratio": 0.48552737728235507
+          },
+          {
+            "pair": 3,
+            "before_us": 267.8482666015625,
+            "after_us": 128.32249951171875,
+            "ratio": 0.47908654082352076
+          },
+          {
+            "pair": 4,
+            "before_us": 266.66971826171874,
+            "after_us": 129.82098388671875,
+            "ratio": 0.4868231186238702
+          },
+          {
+            "pair": 5,
+            "before_us": 266.79850244140624,
+            "after_us": 135.22864794921873,
+            "ratio": 0.5068568478150187
+          }
+        ],
+        "paired_median_ratio": 0.4861752479531126,
+        "bootstrap95": [
+          0.48171407315460846,
+          0.5027360558856522
+        ],
+        "before_us": 265.0404611816406,
+        "after_us": 128.71106457519534,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 25769803776,
+            "explicit_copy_bytes": 25769803776,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 25769803776,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 25769803776,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      },
+      "real-N1024-K16-H4-B8": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 232.8388466796875,
+            "after_us": 116.58324169921876,
+            "ratio": 0.5007035697080238
+          },
+          {
+            "pair": 1,
+            "before_us": 236.33222436523437,
+            "after_us": 115.32114648437499,
+            "ratio": 0.48796200684911467
+          },
+          {
+            "pair": 2,
+            "before_us": 238.02581787109375,
+            "after_us": 118.29239892578126,
+            "ratio": 0.4969729753847298
+          },
+          {
+            "pair": 3,
+            "before_us": 235.74381494140624,
+            "after_us": 118.1236064453125,
+            "ratio": 0.501067680077511
+          },
+          {
+            "pair": 4,
+            "before_us": 242.39869189453125,
+            "after_us": 117.0894267578125,
+            "ratio": 0.48304479633396136
+          },
+          {
+            "pair": 5,
+            "before_us": 239.41020703125,
+            "after_us": 119.70262646484375,
+            "ratio": 0.4999896535289286
+          }
+        ],
+        "paired_median_ratio": 0.4984813144568292,
+        "bootstrap95": [
+          0.48550340159153804,
+          0.5008856248927673
+        ],
+        "before_us": 237.17902111816406,
+        "after_us": 117.6065166015625,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 12884901888,
+            "explicit_copy_bytes": 12884901888,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 12884901888,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 12884901888,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      },
+      "real-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 19.535607666015625,
+            "after_us": 10.948163360595704,
+            "ratio": 0.5604209271483916
+          },
+          {
+            "pair": 1,
+            "before_us": 19.558191955566407,
+            "after_us": 11.061405181884766,
+            "ratio": 0.5655637907131087
+          },
+          {
+            "pair": 2,
+            "before_us": 19.571128845214844,
+            "after_us": 11.094070434570312,
+            "ratio": 0.5668589953247802
+          },
+          {
+            "pair": 3,
+            "before_us": 20.402812957763672,
+            "after_us": 11.269416809082031,
+            "ratio": 0.5523462295327173
+          },
+          {
+            "pair": 4,
+            "before_us": 20.196983337402344,
+            "after_us": 11.391357421875,
+            "ratio": 0.5640128147642524
+          },
+          {
+            "pair": 5,
+            "before_us": 20.048655181884765,
+            "after_us": 11.201374053955078,
+            "ratio": 0.5587094970876766
+          }
+        ],
+        "paired_median_ratio": 0.562216870956322,
+        "bootstrap95": [
+          0.555527863310197,
+          0.5662113930189445
+        ],
+        "before_us": 19.809892013549806,
+        "after_us": 11.147722244262695,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 3221225472,
+            "explicit_copy_bytes": 3221225472,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 3221225472,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 3221225472,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      },
+      "real-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 20.278336853027344,
+            "after_us": 12.119942962646485,
+            "ratio": 0.5976793388180207
+          },
+          {
+            "pair": 1,
+            "before_us": 20.870318115234376,
+            "after_us": 12.114012390136718,
+            "ratio": 0.5804421534568773
+          },
+          {
+            "pair": 2,
+            "before_us": 20.694988250732422,
+            "after_us": 12.222529083251953,
+            "ratio": 0.5906033352214821
+          },
+          {
+            "pair": 3,
+            "before_us": 21.005560546875,
+            "after_us": 12.50906118774414,
+            "ratio": 0.5955118959967538
+          },
+          {
+            "pair": 4,
+            "before_us": 21.052691162109376,
+            "after_us": 12.757027923583983,
+            "ratio": 0.6059571113903042
+          },
+          {
+            "pair": 5,
+            "before_us": 21.35312271118164,
+            "after_us": 12.269518524169921,
+            "ratio": 0.5746006656789802
+          }
+        ],
+        "paired_median_ratio": 0.593057615609118,
+        "bootstrap95": [
+          0.5775214095679287,
+          0.6018182251041624
+        ],
+        "before_us": 20.937939331054686,
+        "after_us": 12.246023803710937,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 3221225472,
+            "explicit_copy_bytes": 3221225472,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 3221225472,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 3221225472,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      },
+      "real-N4096-K16-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 241.431833984375,
+            "after_us": 104.386474609375,
+            "ratio": 0.43236417040236164
+          },
+          {
+            "pair": 1,
+            "before_us": 243.58420825195313,
+            "after_us": 106.86829638671875,
+            "ratio": 0.4387324496675858
+          },
+          {
+            "pair": 2,
+            "before_us": 244.55535888671875,
+            "after_us": 106.634521484375,
+            "ratio": 0.43603428675537426
+          },
+          {
+            "pair": 3,
+            "before_us": 246.46009326171875,
+            "after_us": 109.16497802734375,
+            "ratio": 0.44293165916893584
+          },
+          {
+            "pair": 4,
+            "before_us": 247.71943164062498,
+            "after_us": 108.18821215820313,
+            "ratio": 0.43673688188965104
+          },
+          {
+            "pair": 5,
+            "before_us": 247.377390625,
+            "after_us": 107.57076025390624,
+            "ratio": 0.4348447527161972
+          }
+        ],
+        "paired_median_ratio": 0.4363855843225126,
+        "bootstrap95": [
+          0.43360446155927945,
+          0.4408320544182608
+        ],
+        "before_us": 245.50772607421874,
+        "after_us": 107.21952832031249,
+        "payload_work": {
+          "before": {
+            "default_initialized_bytes": 6442450944,
+            "explicit_copy_bytes": 6442450944,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "after": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 6442450944,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 6442450944,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {}
+      }
+    }
+  },
+  "sampled-before": {
+    "status": "MeasuredDiagnostic",
+    "cases": {
+      "alias-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 17.64712777709961,
+            "after_us": 17.306723266601562,
+            "ratio": 0.9807104864430243
+          },
+          {
+            "pair": 1,
+            "before_us": 17.60269546508789,
+            "after_us": 17.266946166992188,
+            "ratio": 0.9809262565064762
+          },
+          {
+            "pair": 2,
+            "before_us": 17.348353057861328,
+            "after_us": 17.355595886230468,
+            "ratio": 1.0004174937151085
+          },
+          {
+            "pair": 3,
+            "before_us": 17.55478286743164,
+            "after_us": 17.328948974609375,
+            "ratio": 0.9871354778622046
+          },
+          {
+            "pair": 4,
+            "before_us": 18.766835540771485,
+            "after_us": 17.59952035522461,
+            "ratio": 0.9377990400666725
+          },
+          {
+            "pair": 5,
+            "before_us": 17.59864044189453,
+            "after_us": 17.365238189697266,
+            "ratio": 0.9867374839000838
+          }
+        ],
+        "paired_median_ratio": 0.98383187020328,
+        "bootstrap95": [
+          0.9592547632548484,
+          0.9937764857886565
+        ],
+        "before_us": 17.60066795349121,
+        "after_us": 17.34227243041992,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025781,
+            "cpu_ms": 0.214416,
+            "wall_us_per_sampled_operation": 0.01665439276485788
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.9262750000000002,
+            "cpu_ms": 1.1091630000000001,
+            "wall_us_per_sampled_operation": 0.5983688630490958
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.249846,
+            "cpu_ms": 0.429995,
+            "wall_us_per_sampled_operation": 0.16139922480620156
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.825165,
+            "cpu_ms": 1.0049270000000001,
+            "wall_us_per_sampled_operation": 0.5330523255813954
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.1797659999999999,
+            "cpu_ms": 1.362745,
+            "wall_us_per_sampled_operation": 0.7621227390180878
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.145882,
+            "cpu_ms": 0.334488,
+            "wall_us_per_sampled_operation": 0.0942390180878553
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.9968970000000001,
+            "cpu_ms": 1.1755039999999999,
+            "wall_us_per_sampled_operation": 0.6439903100775195
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.315437,
+            "cpu_ms": 0.496449,
+            "wall_us_per_sampled_operation": 0.20377067183462533
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.329687,
+            "cpu_ms": 0.497835,
+            "wall_us_per_sampled_operation": 0.2129760981912145
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.457325,
+            "cpu_ms": 2.624194,
+            "wall_us_per_sampled_operation": 1.5874192506459948
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.237628,
+            "cpu_ms": 0.421107,
+            "wall_us_per_sampled_operation": 0.15350645994832043
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.623111,
+            "cpu_ms": 1.805696,
+            "wall_us_per_sampled_operation": 1.0485213178294572
+          },
+          "adoption_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.029424000000000002,
+            "cpu_ms": 0.228819,
+            "wall_us_per_sampled_operation": 0.0190077519379845
+          },
+          "adoption_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.643091,
+            "cpu_ms": 0.826064,
+            "wall_us_per_sampled_operation": 0.41543346253229974
+          },
+          "adoption_provider": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.20429100000000003,
+            "cpu_ms": 0.386469,
+            "wall_us_per_sampled_operation": 0.13197093023255815
+          },
+          "adoption_metadata": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.43096100000000004,
+            "cpu_ms": 0.6135120000000001,
+            "wall_us_per_sampled_operation": 0.27839857881136953
+          },
+          "adoption_proof_seal": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.631106,
+            "cpu_ms": 0.814305,
+            "wall_us_per_sampled_operation": 0.4076912144702842
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.184252,
+            "cpu_ms": 0.366709,
+            "wall_us_per_sampled_operation": 0.11902583979328166
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.024543999999999996,
+            "cpu_ms": 0.25826899999999997,
+            "wall_us_per_sampled_operation": 0.01585529715762274
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.053789000000000003,
+            "cpu_ms": 0.23724999999999996,
+            "wall_us_per_sampled_operation": 0.034747416020671835
+          }
+        }
+      },
+      "alias-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 18.342581420898437,
+            "after_us": 17.84481430053711,
+            "ratio": 0.9728627553047576
+          },
+          {
+            "pair": 1,
+            "before_us": 18.202416748046872,
+            "after_us": 18.187850952148438,
+            "ratio": 0.9991997878029028
+          },
+          {
+            "pair": 2,
+            "before_us": 18.33094662475586,
+            "after_us": 18.338340759277344,
+            "ratio": 1.0004033689406688
+          },
+          {
+            "pair": 3,
+            "before_us": 18.490876495361327,
+            "after_us": 18.186358123779296,
+            "ratio": 0.9835314258002629
+          },
+          {
+            "pair": 4,
+            "before_us": 18.46241125488281,
+            "after_us": 18.58591714477539,
+            "ratio": 1.0066895861102605
+          },
+          {
+            "pair": 5,
+            "before_us": 18.244083404541016,
+            "after_us": 18.683474212646487,
+            "ratio": 1.0240840166295284
+          }
+        ],
+        "paired_median_ratio": 0.9998015783717857,
+        "bootstrap95": [
+          0.9781970905525103,
+          1.0153868013698943
+        ],
+        "before_us": 18.336764022827147,
+        "after_us": 18.26309585571289,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.026910999999999997,
+            "cpu_ms": 0.21313600000000002,
+            "wall_us_per_sampled_operation": 0.0173843669250646
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.927412,
+            "cpu_ms": 1.10692,
+            "wall_us_per_sampled_operation": 0.5991033591731266
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.24950599999999998,
+            "cpu_ms": 0.429952,
+            "wall_us_per_sampled_operation": 0.16117958656330747
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.654397,
+            "cpu_ms": 0.8356629999999999,
+            "wall_us_per_sampled_operation": 0.4227370801033592
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.159958,
+            "cpu_ms": 1.340742,
+            "wall_us_per_sampled_operation": 0.749326873385013
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.13759300000000002,
+            "cpu_ms": 0.318142,
+            "wall_us_per_sampled_operation": 0.08888436692506461
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.0070390000000002,
+            "cpu_ms": 1.18861,
+            "wall_us_per_sampled_operation": 0.6505419896640828
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.188835,
+            "cpu_ms": 0.369695,
+            "wall_us_per_sampled_operation": 0.12198643410852714
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.306612,
+            "cpu_ms": 0.48736100000000004,
+            "wall_us_per_sampled_operation": 0.19806976744186047
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.418704,
+            "cpu_ms": 2.605293,
+            "wall_us_per_sampled_operation": 1.5624702842377263
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.9608269999999999,
+            "cpu_ms": 2.141624,
+            "wall_us_per_sampled_operation": 1.2666841085271316
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.581749,
+            "cpu_ms": 1.763114,
+            "wall_us_per_sampled_operation": 1.0218016795865634
+          },
+          "adoption_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.027620999999999996,
+            "cpu_ms": 0.226539,
+            "wall_us_per_sampled_operation": 0.01784302325581395
+          },
+          "adoption_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.6449929999999999,
+            "cpu_ms": 0.827143,
+            "wall_us_per_sampled_operation": 0.41666214470284235
+          },
+          "adoption_provider": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.219704,
+            "cpu_ms": 0.40136,
+            "wall_us_per_sampled_operation": 0.14192764857881138
+          },
+          "adoption_metadata": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.492059,
+            "cpu_ms": 0.6726719999999999,
+            "wall_us_per_sampled_operation": 0.31786757105943153
+          },
+          "adoption_proof_seal": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.619538,
+            "cpu_ms": 0.8025749999999999,
+            "wall_us_per_sampled_operation": 0.40021834625323
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.18763,
+            "cpu_ms": 0.36995,
+            "wall_us_per_sampled_operation": 0.12120801033591731
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025664000000000003,
+            "cpu_ms": 0.233671,
+            "wall_us_per_sampled_operation": 0.016578811369509044
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.053006,
+            "cpu_ms": 0.237349,
+            "wall_us_per_sampled_operation": 0.03424160206718346
+          }
+        }
+      },
+      "alias-N4096-K16-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 87.68069458007812,
+            "after_us": 86.7971904296875,
+            "ratio": 0.9899236182534603
+          },
+          {
+            "pair": 1,
+            "before_us": 89.27589916992187,
+            "after_us": 86.272705078125,
+            "ratio": 0.9663605282083937
+          },
+          {
+            "pair": 2,
+            "before_us": 88.97951245117187,
+            "after_us": 86.36322021484375,
+            "ratio": 0.9705966894596794
+          },
+          {
+            "pair": 3,
+            "before_us": 87.929880859375,
+            "after_us": 87.27310180664062,
+            "ratio": 0.9925306500325554
+          },
+          {
+            "pair": 4,
+            "before_us": 86.6270244140625,
+            "after_us": 88.28779077148438,
+            "ratio": 1.0191714579677087
+          },
+          {
+            "pair": 5,
+            "before_us": 87.7067158203125,
+            "after_us": 87.64462280273438,
+            "ratio": 0.999292038049796
+          }
+        ],
+        "paired_median_ratio": 0.9912271341430079,
+        "bootstrap95": [
+          0.9684786088340365,
+          1.0092317480087525
+        ],
+        "before_us": 87.81829833984375,
+        "after_us": 87.03514611816406,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 6442450944
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 6442450944
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.002874,
+            "cpu_ms": 0.027423,
+            "wall_us_per_sampled_operation": 0.014891191709844558
+          },
+          "commit_proof_validation": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.0967099999999999,
+            "cpu_ms": 1.12125,
+            "wall_us_per_sampled_operation": 5.6824352331606205
+          },
+          "commit_default_removal_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.036489999999999995,
+            "cpu_ms": 0.059195000000000005,
+            "wall_us_per_sampled_operation": 0.18906735751295334
+          },
+          "commit_transition_preflight": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.6179560000000001,
+            "cpu_ms": 0.6411290000000001,
+            "wall_us_per_sampled_operation": 3.2018445595854925
+          },
+          "commit_epoch_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.5132920000000001,
+            "cpu_ms": 0.536534,
+            "wall_us_per_sampled_operation": 2.6595440414507774
+          },
+          "commit_completion": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.020745999999999997,
+            "cpu_ms": 0.043371,
+            "wall_us_per_sampled_operation": 0.1074922279792746
+          },
+          "commit_root": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.4811320000000001,
+            "cpu_ms": 1.5037889999999998,
+            "wall_us_per_sampled_operation": 7.6742590673575135
+          },
+          "commit_metadata_apply": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.21324400000000002,
+            "cpu_ms": 0.23650000000000002,
+            "wall_us_per_sampled_operation": 1.1048911917098447
+          },
+          "commit_root_publication": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.04213600000000001,
+            "cpu_ms": 0.064918,
+            "wall_us_per_sampled_operation": 0.2183212435233161
+          },
+          "commit_cleanup": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.326829,
+            "cpu_ms": 1.350209,
+            "wall_us_per_sampled_operation": 6.874761658031088
+          },
+          "commit_history_collect": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 2.5115869999999996,
+            "cpu_ms": 2.537289,
+            "wall_us_per_sampled_operation": 13.013404145077718
+          },
+          "commit_provider_retire": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.6710319999999999,
+            "cpu_ms": 1.695961,
+            "wall_us_per_sampled_operation": 8.658196891191709
+          },
+          "adoption_owner_wait": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.054197999999999996,
+            "cpu_ms": 0.42673800000000006,
+            "wall_us_per_sampled_operation": 0.2808186528497409
+          },
+          "adoption_validation": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.373119,
+            "cpu_ms": 1.742401,
+            "wall_us_per_sampled_operation": 7.11460621761658
+          },
+          "adoption_provider": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.39709999999999995,
+            "cpu_ms": 0.762724,
+            "wall_us_per_sampled_operation": 2.0575129533678753
+          },
+          "adoption_metadata": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.1682320000000002,
+            "cpu_ms": 1.5334590000000001,
+            "wall_us_per_sampled_operation": 6.053015544041452
+          },
+          "adoption_proof_seal": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.0680420000000002,
+            "cpu_ms": 1.4344929999999998,
+            "wall_us_per_sampled_operation": 5.533896373056995
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.31001,
+            "cpu_ms": 0.6786719999999999,
+            "wall_us_per_sampled_operation": 1.6062694300518134
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003297,
+            "cpu_ms": 0.034289,
+            "wall_us_per_sampled_operation": 0.017082901554404145
+          },
+          "transaction_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.008173,
+            "cpu_ms": 0.031788,
+            "wall_us_per_sampled_operation": 0.04234715025906736
+          }
+        }
+      },
+      "real-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 19.84088897705078,
+            "after_us": 20.31063586425781,
+            "ratio": 1.0236756975834282
+          },
+          {
+            "pair": 1,
+            "before_us": 19.721558868408202,
+            "after_us": 20.177223205566406,
+            "ratio": 1.0231048843653088
+          },
+          {
+            "pair": 2,
+            "before_us": 19.65815478515625,
+            "after_us": 19.83738580322266,
+            "ratio": 1.0091173876706752
+          },
+          {
+            "pair": 3,
+            "before_us": 20.089310943603518,
+            "after_us": 20.217291534423826,
+            "ratio": 1.0063705814091677
+          },
+          {
+            "pair": 4,
+            "before_us": 20.16836801147461,
+            "after_us": 20.43832272338867,
+            "ratio": 1.0133850548423389
+          },
+          {
+            "pair": 5,
+            "before_us": 20.029598236083984,
+            "after_us": 20.095511108398437,
+            "ratio": 1.0032907735610845
+          }
+        ],
+        "paired_median_ratio": 1.011251221256507,
+        "bootstrap95": [
+          1.0048306774851261,
+          1.0233902909743686
+        ],
+        "before_us": 19.935243606567383,
+        "after_us": 20.197257369995114,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 3221225472,
+            "explicit_copy_bytes": 3221225472,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "sampled": {
+            "default_initialized_bytes": 3221225472,
+            "explicit_copy_bytes": 3221225472,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.026606000000000005,
+            "cpu_ms": 0.214087,
+            "wall_us_per_sampled_operation": 0.017187338501291994
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.94381,
+            "cpu_ms": 1.125748,
+            "wall_us_per_sampled_operation": 0.6096963824289406
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.25286899999999995,
+            "cpu_ms": 0.433763,
+            "wall_us_per_sampled_operation": 0.16335206718346248
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.857607,
+            "cpu_ms": 1.03806,
+            "wall_us_per_sampled_operation": 0.5540096899224806
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.1763890000000001,
+            "cpu_ms": 1.3573659999999999,
+            "wall_us_per_sampled_operation": 0.7599412144702843
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.15530899999999997,
+            "cpu_ms": 0.336669,
+            "wall_us_per_sampled_operation": 0.10032881136950902
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.024113,
+            "cpu_ms": 1.206528,
+            "wall_us_per_sampled_operation": 0.6615717054263566
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.33151400000000003,
+            "cpu_ms": 0.5120469999999999,
+            "wall_us_per_sampled_operation": 0.214156330749354
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.308695,
+            "cpu_ms": 0.48917399999999994,
+            "wall_us_per_sampled_operation": 0.19941537467700257
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.426054,
+            "cpu_ms": 2.6117,
+            "wall_us_per_sampled_operation": 1.56721834625323
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.241388,
+            "cpu_ms": 0.42550999999999994,
+            "wall_us_per_sampled_operation": 0.15593540051679586
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.6764739999999998,
+            "cpu_ms": 1.865385,
+            "wall_us_per_sampled_operation": 1.0829935400516795
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025113,
+            "cpu_ms": 0.20908200000000002,
+            "wall_us_per_sampled_operation": 0.016222868217054265
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.048771,
+            "cpu_ms": 0.23302699999999998,
+            "wall_us_per_sampled_operation": 0.03150581395348837
+          },
+          "write_bytes_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.024826999999999995,
+            "cpu_ms": 0.25979699999999994,
+            "wall_us_per_sampled_operation": 0.016038113695090436
+          },
+          "write_bytes_batch_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.8562289999999999,
+            "cpu_ms": 1.039026,
+            "wall_us_per_sampled_operation": 0.5531195090439276
+          },
+          "write_bytes_body": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 21.546882,
+            "cpu_ms": 21.726632000000002,
+            "wall_us_per_sampled_operation": 13.919174418604651
+          },
+          "write_bytes_batch_finish": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 15.871342,
+            "cpu_ms": 16.049070999999998,
+            "wall_us_per_sampled_operation": 10.252804909560723
+          },
+          "write_acquire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 17.522852,
+            "cpu_ms": 17.702823000000002,
+            "wall_us_per_sampled_operation": 11.319671834625323
+          },
+          "write_resolve": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.5988279999999999,
+            "cpu_ms": 0.78396,
+            "wall_us_per_sampled_operation": 0.38683979328165363
+          },
+          "write_publish_host": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.883866,
+            "cpu_ms": 2.072929,
+            "wall_us_per_sampled_operation": 1.2169677002583978
+          },
+          "write_provider_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 13.025500999999998,
+            "cpu_ms": 13.208341,
+            "wall_us_per_sampled_operation": 8.414406330749353
+          },
+          "write_provider_transfer": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.978741,
+            "cpu_ms": 1.1664189999999999,
+            "wall_us_per_sampled_operation": 0.6322616279069767
+          }
+        }
+      },
+      "real-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 20.83061343383789,
+            "after_us": 21.409247070312503,
+            "ratio": 1.0277780411178223
+          },
+          {
+            "pair": 1,
+            "before_us": 21.01610565185547,
+            "after_us": 21.198654174804688,
+            "ratio": 1.0086861251067751
+          },
+          {
+            "pair": 2,
+            "before_us": 20.761634826660156,
+            "after_us": 20.90891390991211,
+            "ratio": 1.0070938095425332
+          },
+          {
+            "pair": 3,
+            "before_us": 21.21068698120117,
+            "after_us": 21.431643157958984,
+            "ratio": 1.010417209822277
+          },
+          {
+            "pair": 4,
+            "before_us": 20.896989166259765,
+            "after_us": 20.99016061401367,
+            "ratio": 1.0044586063098668
+          },
+          {
+            "pair": 5,
+            "before_us": 21.06596630859375,
+            "after_us": 21.166589111328122,
+            "ratio": 1.0047765576598935
+          }
+        ],
+        "paired_median_ratio": 1.0078899673246542,
+        "bootstrap95": [
+          1.0046175819848802,
+          1.0190976254700497
+        ],
+        "before_us": 20.956547409057617,
+        "after_us": 21.182621643066405,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 3221225472,
+            "explicit_copy_bytes": 3221225472,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "sampled": {
+            "default_initialized_bytes": 3221225472,
+            "explicit_copy_bytes": 3221225472,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025449,
+            "cpu_ms": 0.214158,
+            "wall_us_per_sampled_operation": 0.016439922480620154
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.947574,
+            "cpu_ms": 1.131,
+            "wall_us_per_sampled_operation": 0.6121279069767442
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.25399499999999997,
+            "cpu_ms": 0.43656199999999995,
+            "wall_us_per_sampled_operation": 0.16407945736434107
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.6773560000000001,
+            "cpu_ms": 0.8597480000000001,
+            "wall_us_per_sampled_operation": 0.43756847545219646
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.1561810000000001,
+            "cpu_ms": 1.340246,
+            "wall_us_per_sampled_operation": 0.7468869509043928
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.148118,
+            "cpu_ms": 0.329444,
+            "wall_us_per_sampled_operation": 0.09568346253229974
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.024735,
+            "cpu_ms": 1.208446,
+            "wall_us_per_sampled_operation": 0.6619735142118862
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.203875,
+            "cpu_ms": 0.39099900000000004,
+            "wall_us_per_sampled_operation": 0.13170219638242894
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.31266400000000005,
+            "cpu_ms": 0.49338099999999996,
+            "wall_us_per_sampled_operation": 0.2019793281653747
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.4610829999999995,
+            "cpu_ms": 2.6429340000000003,
+            "wall_us_per_sampled_operation": 1.589846899224806
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.9621289999999998,
+            "cpu_ms": 2.1446229999999997,
+            "wall_us_per_sampled_operation": 1.2675251937984493
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.6488720000000001,
+            "cpu_ms": 1.836234,
+            "wall_us_per_sampled_operation": 1.0651627906976744
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.026162,
+            "cpu_ms": 0.206346,
+            "wall_us_per_sampled_operation": 0.016900516795865635
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.05145999999999999,
+            "cpu_ms": 0.23605899999999996,
+            "wall_us_per_sampled_operation": 0.03324289405684754
+          },
+          "write_bytes_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.026542,
+            "cpu_ms": 0.23864400000000002,
+            "wall_us_per_sampled_operation": 0.017145994832041343
+          },
+          "write_bytes_batch_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.855316,
+            "cpu_ms": 1.0432819999999998,
+            "wall_us_per_sampled_operation": 0.5525297157622738
+          },
+          "write_bytes_body": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 21.643656,
+            "cpu_ms": 21.825771,
+            "wall_us_per_sampled_operation": 13.98168992248062
+          },
+          "write_bytes_batch_finish": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 17.290221,
+            "cpu_ms": 17.474345,
+            "wall_us_per_sampled_operation": 11.169393410852711
+          },
+          "write_acquire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 17.592696,
+            "cpu_ms": 17.778222,
+            "wall_us_per_sampled_operation": 11.364790697674419
+          },
+          "write_resolve": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.603702,
+            "cpu_ms": 0.7880480000000001,
+            "wall_us_per_sampled_operation": 0.38998837209302323
+          },
+          "write_publish_host": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.910166,
+            "cpu_ms": 2.0952599999999997,
+            "wall_us_per_sampled_operation": 1.2339573643410853
+          },
+          "write_provider_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 12.986556,
+            "cpu_ms": 13.174333999999998,
+            "wall_us_per_sampled_operation": 8.389248062015504
+          },
+          "write_provider_transfer": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.998559,
+            "cpu_ms": 1.186696,
+            "wall_us_per_sampled_operation": 0.6450639534883721
+          }
+        }
+      },
+      "real-N4096-K16-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 246.9520061035156,
+            "after_us": 246.29251098632812,
+            "ratio": 0.9973294603773697
+          },
+          {
+            "pair": 1,
+            "before_us": 246.05419921875,
+            "after_us": 247.3515625,
+            "ratio": 1.005272672790667
+          },
+          {
+            "pair": 2,
+            "before_us": 247.7520546875,
+            "after_us": 247.38294482421875,
+            "ratio": 0.9985101642698914
+          },
+          {
+            "pair": 3,
+            "before_us": 248.96303295898437,
+            "after_us": 246.31471752929687,
+            "ratio": 0.9893626158140362
+          },
+          {
+            "pair": 4,
+            "before_us": 249.343455078125,
+            "after_us": 248.05362939453124,
+            "ratio": 0.9948271123331085
+          },
+          {
+            "pair": 5,
+            "before_us": 249.86781811523437,
+            "after_us": 248.93768310546875,
+            "ratio": 0.996277491768321
+          }
+        ],
+        "paired_median_ratio": 0.9968034760728454,
+        "bootstrap95": [
+          0.9920948640735723,
+          1.0018914185302792
+        ],
+        "before_us": 248.35754382324217,
+        "after_us": 247.36725366210936,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 6442450944,
+            "explicit_copy_bytes": 6442450944,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          },
+          "sampled": {
+            "default_initialized_bytes": 6442450944,
+            "explicit_copy_bytes": 6442450944,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.0038339999999999997,
+            "cpu_ms": 0.027658999999999996,
+            "wall_us_per_sampled_operation": 0.01986528497409326
+          },
+          "commit_proof_validation": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.148796,
+            "cpu_ms": 1.173409,
+            "wall_us_per_sampled_operation": 5.952310880829015
+          },
+          "commit_default_removal_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.038418,
+            "cpu_ms": 0.061167000000000006,
+            "wall_us_per_sampled_operation": 0.19905699481865285
+          },
+          "commit_transition_preflight": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.9015740000000001,
+            "cpu_ms": 0.9268799999999999,
+            "wall_us_per_sampled_operation": 4.671367875647669
+          },
+          "commit_epoch_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.39716500000000005,
+            "cpu_ms": 0.420333,
+            "wall_us_per_sampled_operation": 2.0578497409326424
+          },
+          "commit_completion": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.027471,
+            "cpu_ms": 0.050283999999999995,
+            "wall_us_per_sampled_operation": 0.14233678756476684
+          },
+          "commit_root": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.57138,
+            "cpu_ms": 1.5946749999999998,
+            "wall_us_per_sampled_operation": 8.141865284974093
+          },
+          "commit_metadata_apply": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.458625,
+            "cpu_ms": 0.482664,
+            "wall_us_per_sampled_operation": 2.3762953367875648
+          },
+          "commit_root_publication": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.042323,
+            "cpu_ms": 0.064532,
+            "wall_us_per_sampled_operation": 0.2192901554404145
+          },
+          "commit_cleanup": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.3276299999999999,
+            "cpu_ms": 1.350964,
+            "wall_us_per_sampled_operation": 6.878911917098445
+          },
+          "commit_history_collect": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.030874,
+            "cpu_ms": 0.053913,
+            "wall_us_per_sampled_operation": 0.15996891191709844
+          },
+          "commit_provider_retire": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 2.007128,
+            "cpu_ms": 2.032331,
+            "wall_us_per_sampled_operation": 10.39962694300518
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003044,
+            "cpu_ms": 0.025922,
+            "wall_us_per_sampled_operation": 0.0157720207253886
+          },
+          "transaction_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.007326,
+            "cpu_ms": 0.030086999999999996,
+            "wall_us_per_sampled_operation": 0.03795854922279793
+          },
+          "write_bytes_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003376,
+            "cpu_ms": 0.048452999999999996,
+            "wall_us_per_sampled_operation": 0.017492227979274612
+          },
+          "write_bytes_batch_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.11024800000000001,
+            "cpu_ms": 0.133419,
+            "wall_us_per_sampled_operation": 0.5712331606217618
+          },
+          "write_bytes_body": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 42.920371,
+            "cpu_ms": 42.943413,
+            "wall_us_per_sampled_operation": 222.38534196891194
+          },
+          "write_bytes_batch_finish": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 9.046789,
+            "cpu_ms": 9.069699,
+            "wall_us_per_sampled_operation": 46.87455440414508
+          },
+          "write_acquire": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 34.980645,
+            "cpu_ms": 35.350061999999994,
+            "wall_us_per_sampled_operation": 181.24686528497412
+          },
+          "write_resolve": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.1539549999999998,
+            "cpu_ms": 1.52187,
+            "wall_us_per_sampled_operation": 5.979041450777202
+          },
+          "write_publish_host": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 3.745914,
+            "cpu_ms": 4.115903,
+            "wall_us_per_sampled_operation": 19.408880829015544
+          },
+          "write_provider_prepare": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 25.934622,
+            "cpu_ms": 26.307169000000002,
+            "wall_us_per_sampled_operation": 134.37627979274612
+          },
+          "write_provider_transfer": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 2.01244,
+            "cpu_ms": 2.382368,
+            "wall_us_per_sampled_operation": 10.427150259067357
+          }
+        }
+      }
+    }
+  },
+  "sampled-after": {
+    "status": "MeasuredDiagnostic",
+    "cases": {
+      "alias-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 17.450051635742188,
+            "after_us": 17.600882202148437,
+            "ratio": 1.0086435598905226
+          },
+          {
+            "pair": 1,
+            "before_us": 17.80569711303711,
+            "after_us": 17.584733337402344,
+            "ratio": 0.9875902766270814
+          },
+          {
+            "pair": 2,
+            "before_us": 17.785682678222656,
+            "after_us": 17.466018676757812,
+            "ratio": 0.9820268916719036
+          },
+          {
+            "pair": 3,
+            "before_us": 17.65397772216797,
+            "after_us": 17.32102456665039,
+            "ratio": 0.9811400489590801
+          },
+          {
+            "pair": 4,
+            "before_us": 17.30684408569336,
+            "after_us": 17.597728729248047,
+            "ratio": 1.016807492002262
+          },
+          {
+            "pair": 5,
+            "before_us": 17.492922454833984,
+            "after_us": 17.654074340820312,
+            "ratio": 1.0092124049827818
+          }
+        ],
+        "paired_median_ratio": 0.998116918258802,
+        "bootstrap95": [
+          0.9815834703154919,
+          1.013009948492522
+        ],
+        "before_us": 17.573450088500977,
+        "after_us": 17.591231033325194,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.024777,
+            "cpu_ms": 0.21325699999999997,
+            "wall_us_per_sampled_operation": 0.016005813953488372
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.9390559999999999,
+            "cpu_ms": 1.122997,
+            "wall_us_per_sampled_operation": 0.606625322997416
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.254423,
+            "cpu_ms": 0.435531,
+            "wall_us_per_sampled_operation": 0.16435594315245478
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.8329610000000001,
+            "cpu_ms": 1.015559,
+            "wall_us_per_sampled_operation": 0.5380885012919897
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.197136,
+            "cpu_ms": 1.3785470000000002,
+            "wall_us_per_sampled_operation": 0.773343669250646
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.148864,
+            "cpu_ms": 0.330787,
+            "wall_us_per_sampled_operation": 0.09616537467700259
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.02145,
+            "cpu_ms": 1.203587,
+            "wall_us_per_sampled_operation": 0.6598514211886305
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.312825,
+            "cpu_ms": 0.49453099999999994,
+            "wall_us_per_sampled_operation": 0.20208333333333336
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.316254,
+            "cpu_ms": 0.4969,
+            "wall_us_per_sampled_operation": 0.20429844961240307
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.3981749999999997,
+            "cpu_ms": 2.579335,
+            "wall_us_per_sampled_operation": 1.5492086563307492
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.23910799999999996,
+            "cpu_ms": 0.421176,
+            "wall_us_per_sampled_operation": 0.15446253229974158
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.654284,
+            "cpu_ms": 1.8390229999999999,
+            "wall_us_per_sampled_operation": 1.0686589147286822
+          },
+          "adoption_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.028084000000000005,
+            "cpu_ms": 0.22700399999999998,
+            "wall_us_per_sampled_operation": 0.018142118863049096
+          },
+          "adoption_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.648718,
+            "cpu_ms": 0.832147,
+            "wall_us_per_sampled_operation": 0.41906847545219633
+          },
+          "adoption_provider": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.19190799999999997,
+            "cpu_ms": 0.37642299999999995,
+            "wall_us_per_sampled_operation": 0.12397157622739015
+          },
+          "adoption_metadata": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.442182,
+            "cpu_ms": 0.624907,
+            "wall_us_per_sampled_operation": 0.2856472868217054
+          },
+          "adoption_proof_seal": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.633571,
+            "cpu_ms": 0.8179540000000001,
+            "wall_us_per_sampled_operation": 0.40928359173126616
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.18725500000000003,
+            "cpu_ms": 0.37292100000000006,
+            "wall_us_per_sampled_operation": 0.12096576227390182
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025366000000000003,
+            "cpu_ms": 0.257089,
+            "wall_us_per_sampled_operation": 0.016386304909560726
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.051354,
+            "cpu_ms": 0.23476999999999998,
+            "wall_us_per_sampled_operation": 0.03317441860465116
+          }
+        }
+      },
+      "alias-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 18.337947845458984,
+            "after_us": 18.546342224121094,
+            "ratio": 1.0113641057559073
+          },
+          {
+            "pair": 1,
+            "before_us": 18.156403839111327,
+            "after_us": 18.59138360595703,
+            "ratio": 1.0239573745274766
+          },
+          {
+            "pair": 2,
+            "before_us": 18.419661224365235,
+            "after_us": 18.651049285888675,
+            "ratio": 1.0125620150503833
+          },
+          {
+            "pair": 3,
+            "before_us": 18.220844268798828,
+            "after_us": 18.63467788696289,
+            "ratio": 1.0227120989598
+          },
+          {
+            "pair": 4,
+            "before_us": 18.56509146118164,
+            "after_us": 18.472126007080078,
+            "ratio": 0.9949924591378423
+          },
+          {
+            "pair": 5,
+            "before_us": 18.270693481445313,
+            "after_us": 18.26209130859375,
+            "ratio": 0.9995291819185572
+          }
+        ],
+        "paired_median_ratio": 1.0119630604031453,
+        "bootstrap95": [
+          0.9972608205281998,
+          1.0233347367436383
+        ],
+        "before_us": 18.30432066345215,
+        "after_us": 18.568862915039062,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 3221225472
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.024781000000000004,
+            "cpu_ms": 0.21674200000000002,
+            "wall_us_per_sampled_operation": 0.01600839793281654
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.947538,
+            "cpu_ms": 1.1309360000000002,
+            "wall_us_per_sampled_operation": 0.6121046511627907
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.259763,
+            "cpu_ms": 0.44134999999999996,
+            "wall_us_per_sampled_operation": 0.16780555555555557
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.665333,
+            "cpu_ms": 0.8492360000000001,
+            "wall_us_per_sampled_operation": 0.4298016795865633
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.190993,
+            "cpu_ms": 1.3741780000000001,
+            "wall_us_per_sampled_operation": 0.769375322997416
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.14271799999999998,
+            "cpu_ms": 0.32684,
+            "wall_us_per_sampled_operation": 0.09219509043927648
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.0342799999999999,
+            "cpu_ms": 1.2189409999999998,
+            "wall_us_per_sampled_operation": 0.6681395348837209
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.19499199999999997,
+            "cpu_ms": 0.376361,
+            "wall_us_per_sampled_operation": 0.12596382428940567
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.314968,
+            "cpu_ms": 0.497141,
+            "wall_us_per_sampled_operation": 0.20346770025839794
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.438137,
+            "cpu_ms": 2.6209740000000004,
+            "wall_us_per_sampled_operation": 1.5750239018087857
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.9938629999999997,
+            "cpu_ms": 2.178763,
+            "wall_us_per_sampled_operation": 1.2880251937984495
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.6344599999999998,
+            "cpu_ms": 1.819261,
+            "wall_us_per_sampled_operation": 1.0558527131782944
+          },
+          "adoption_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.028301000000000003,
+            "cpu_ms": 0.228761,
+            "wall_us_per_sampled_operation": 0.01828229974160207
+          },
+          "adoption_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.6495259999999998,
+            "cpu_ms": 0.8337600000000001,
+            "wall_us_per_sampled_operation": 0.4195904392764857
+          },
+          "adoption_provider": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.209981,
+            "cpu_ms": 0.39181,
+            "wall_us_per_sampled_operation": 0.1356466408268734
+          },
+          "adoption_metadata": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.500173,
+            "cpu_ms": 0.682979,
+            "wall_us_per_sampled_operation": 0.32310917312661497
+          },
+          "adoption_proof_seal": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.644989,
+            "cpu_ms": 0.830102,
+            "wall_us_per_sampled_operation": 0.41665956072351423
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.19043400000000002,
+            "cpu_ms": 0.379998,
+            "wall_us_per_sampled_operation": 0.12301937984496125
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.026053,
+            "cpu_ms": 0.234672,
+            "wall_us_per_sampled_operation": 0.016830103359173128
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.052919,
+            "cpu_ms": 0.239787,
+            "wall_us_per_sampled_operation": 0.03418540051679587
+          }
+        }
+      },
+      "alias-N4096-K16-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 87.32300830078125,
+            "after_us": 88.4788818359375,
+            "ratio": 1.013236758073827
+          },
+          {
+            "pair": 1,
+            "before_us": 87.79564404296875,
+            "after_us": 88.09923291015626,
+            "ratio": 1.0034579035269555
+          },
+          {
+            "pair": 2,
+            "before_us": 86.96391821289062,
+            "after_us": 88.5784912109375,
+            "ratio": 1.0185660102629501
+          },
+          {
+            "pair": 3,
+            "before_us": 87.84969091796876,
+            "after_us": 86.45455932617188,
+            "ratio": 0.9841191064280511
+          },
+          {
+            "pair": 4,
+            "before_us": 87.18098950195312,
+            "after_us": 88.01512670898437,
+            "ratio": 1.009567879554895
+          },
+          {
+            "pair": 5,
+            "before_us": 88.80474853515625,
+            "after_us": 88.27982592773438,
+            "ratio": 0.9940890254622582
+          }
+        ],
+        "paired_median_ratio": 1.0065128915409254,
+        "bootstrap95": [
+          0.9891040659451547,
+          1.0159013841683886
+        ],
+        "before_us": 87.559326171875,
+        "after_us": 88.18952941894531,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 6442450944
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 0,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 0,
+            "adopted_bytes": 6442450944
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003081,
+            "cpu_ms": 0.027405,
+            "wall_us_per_sampled_operation": 0.015963730569948185
+          },
+          "commit_proof_validation": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.100952,
+            "cpu_ms": 1.125084,
+            "wall_us_per_sampled_operation": 5.704414507772021
+          },
+          "commit_default_removal_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.038502,
+            "cpu_ms": 0.060635,
+            "wall_us_per_sampled_operation": 0.19949222797927463
+          },
+          "commit_transition_preflight": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.623487,
+            "cpu_ms": 0.6477930000000001,
+            "wall_us_per_sampled_operation": 3.230502590673575
+          },
+          "commit_epoch_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.52442,
+            "cpu_ms": 0.5472859999999999,
+            "wall_us_per_sampled_operation": 2.7172020725388597
+          },
+          "commit_completion": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.021759,
+            "cpu_ms": 0.044506,
+            "wall_us_per_sampled_operation": 0.11274093264248705
+          },
+          "commit_root": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.784796,
+            "cpu_ms": 1.782582,
+            "wall_us_per_sampled_operation": 9.247647668393782
+          },
+          "commit_metadata_apply": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.21895399999999998,
+            "cpu_ms": 0.24165599999999998,
+            "wall_us_per_sampled_operation": 1.1344766839378237
+          },
+          "commit_root_publication": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.044083,
+            "cpu_ms": 0.06679800000000001,
+            "wall_us_per_sampled_operation": 0.22840932642487047
+          },
+          "commit_cleanup": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.34145,
+            "cpu_ms": 1.364836,
+            "wall_us_per_sampled_operation": 6.950518134715026
+          },
+          "commit_history_collect": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 2.559913,
+            "cpu_ms": 2.57812,
+            "wall_us_per_sampled_operation": 13.26379792746114
+          },
+          "commit_provider_retire": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.720117,
+            "cpu_ms": 1.744248,
+            "wall_us_per_sampled_operation": 8.912523316062176
+          },
+          "adoption_owner_wait": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.057709,
+            "cpu_ms": 0.42941,
+            "wall_us_per_sampled_operation": 0.29901036269430054
+          },
+          "adoption_validation": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.3857300000000001,
+            "cpu_ms": 1.753077,
+            "wall_us_per_sampled_operation": 7.179948186528497
+          },
+          "adoption_provider": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.40404900000000005,
+            "cpu_ms": 0.7707830000000001,
+            "wall_us_per_sampled_operation": 2.0935181347150262
+          },
+          "adoption_metadata": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.1767,
+            "cpu_ms": 1.544004,
+            "wall_us_per_sampled_operation": 6.096891191709845
+          },
+          "adoption_proof_seal": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.078065,
+            "cpu_ms": 1.449148,
+            "wall_us_per_sampled_operation": 5.585829015544042
+          },
+          "adoption_superseded_cleanup": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 0.315265,
+            "cpu_ms": 0.685191,
+            "wall_us_per_sampled_operation": 1.6334974093264252
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.0032509999999999995,
+            "cpu_ms": 0.035212,
+            "wall_us_per_sampled_operation": 0.016844559585492226
+          },
+          "transaction_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.009707,
+            "cpu_ms": 0.032961,
+            "wall_us_per_sampled_operation": 0.05029533678756477
+          }
+        }
+      },
+      "real-N4096-K1-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 11.315977722167968,
+            "after_us": 11.425795227050783,
+            "ratio": 1.0097046413115218
+          },
+          {
+            "pair": 1,
+            "before_us": 11.1871884765625,
+            "after_us": 11.396021545410155,
+            "ratio": 1.0186671628251518
+          },
+          {
+            "pair": 2,
+            "before_us": 11.352876037597655,
+            "after_us": 11.627124786376953,
+            "ratio": 1.0241567641425011
+          },
+          {
+            "pair": 3,
+            "before_us": 11.214608489990235,
+            "after_us": 11.713788330078126,
+            "ratio": 1.0445115708259847
+          },
+          {
+            "pair": 4,
+            "before_us": 11.282903015136718,
+            "after_us": 11.445000976562499,
+            "ratio": 1.01436668924729
+          },
+          {
+            "pair": 5,
+            "before_us": 11.311332702636719,
+            "after_us": 11.173484802246094,
+            "ratio": 0.9878132927379555
+          }
+        ],
+        "paired_median_ratio": 1.0165169260362208,
+        "bootstrap95": [
+          0.9987589670247387,
+          1.0343341674842428
+        ],
+        "before_us": 11.297117858886718,
+        "after_us": 11.43539810180664,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 3221225472,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 3221225472,
+            "adopted_bytes": 0
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 3221225472,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 3221225472,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.026492,
+            "cpu_ms": 0.216007,
+            "wall_us_per_sampled_operation": 0.017113695090439276
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.94218,
+            "cpu_ms": 1.126227,
+            "wall_us_per_sampled_operation": 0.6086434108527132
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.25707500000000005,
+            "cpu_ms": 0.440548,
+            "wall_us_per_sampled_operation": 0.16606912144702846
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.8451940000000001,
+            "cpu_ms": 1.028084,
+            "wall_us_per_sampled_operation": 0.5459909560723515
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.168152,
+            "cpu_ms": 1.3520400000000001,
+            "wall_us_per_sampled_operation": 0.7546201550387597
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.14454599999999998,
+            "cpu_ms": 0.327545,
+            "wall_us_per_sampled_operation": 0.09337596899224805
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.042219,
+            "cpu_ms": 1.227103,
+            "wall_us_per_sampled_operation": 0.6732680878552972
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.32611,
+            "cpu_ms": 0.510138,
+            "wall_us_per_sampled_operation": 0.21066537467700258
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.312151,
+            "cpu_ms": 0.496518,
+            "wall_us_per_sampled_operation": 0.20164793281653748
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.527336,
+            "cpu_ms": 2.7114770000000004,
+            "wall_us_per_sampled_operation": 1.6326459948320415
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.24545100000000003,
+            "cpu_ms": 0.430083,
+            "wall_us_per_sampled_operation": 0.15856007751937987
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.650585,
+            "cpu_ms": 1.840919,
+            "wall_us_per_sampled_operation": 1.0662693798449612
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025621000000000005,
+            "cpu_ms": 0.20829199999999998,
+            "wall_us_per_sampled_operation": 0.01655103359173127
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.050914,
+            "cpu_ms": 0.23541299999999998,
+            "wall_us_per_sampled_operation": 0.03289018087855297
+          },
+          "write_bytes_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.026503,
+            "cpu_ms": 0.247944,
+            "wall_us_per_sampled_operation": 0.01712080103359173
+          },
+          "write_bytes_batch_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.862814,
+            "cpu_ms": 1.0451920000000001,
+            "wall_us_per_sampled_operation": 0.5573733850129199
+          },
+          "write_bytes_body": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 7.685632999999999,
+            "cpu_ms": 7.870169000000001,
+            "wall_us_per_sampled_operation": 4.964879198966408
+          },
+          "write_bytes_batch_finish": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 16.002061,
+            "cpu_ms": 16.180017,
+            "wall_us_per_sampled_operation": 10.337248708010337
+          },
+          "write_acquire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 3.647564,
+            "cpu_ms": 3.8365760000000004,
+            "wall_us_per_sampled_operation": 2.3563074935400516
+          },
+          "write_resolve": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.6103989999999999,
+            "cpu_ms": 0.797282,
+            "wall_us_per_sampled_operation": 0.3943145994832041
+          },
+          "write_publish_host": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.8712840000000002,
+            "cpu_ms": 2.060251,
+            "wall_us_per_sampled_operation": 1.208839793281654
+          },
+          "write_provider_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.131486,
+            "cpu_ms": 1.322894,
+            "wall_us_per_sampled_operation": 0.7309341085271318
+          }
+        }
+      },
+      "real-N4096-K1-H4-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 12.015364349365234,
+            "after_us": 12.683021545410156,
+            "ratio": 1.055566953829427
+          },
+          {
+            "pair": 1,
+            "before_us": 12.267336547851563,
+            "after_us": 12.44875079345703,
+            "ratio": 1.0147883972122083
+          },
+          {
+            "pair": 2,
+            "before_us": 12.216252655029297,
+            "after_us": 12.305522918701172,
+            "ratio": 1.00730749978678
+          },
+          {
+            "pair": 3,
+            "before_us": 12.544615417480468,
+            "after_us": 12.43844223022461,
+            "ratio": 0.991536353748405
+          },
+          {
+            "pair": 4,
+            "before_us": 12.20393881225586,
+            "after_us": 12.46986898803711,
+            "ratio": 1.0217905202469704
+          },
+          {
+            "pair": 5,
+            "before_us": 12.352101623535157,
+            "after_us": 12.319255828857422,
+            "ratio": 0.997340873992232
+          }
+        ],
+        "paired_median_ratio": 1.011047948499494,
+        "bootstrap95": [
+          0.9944386138703185,
+          1.0386787370381987
+        ],
+        "before_us": 12.24179460144043,
+        "after_us": 12.44359651184082,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 3221225472,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 3221225472,
+            "adopted_bytes": 0
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 3221225472,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 3221225472,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025978,
+            "cpu_ms": 0.215139,
+            "wall_us_per_sampled_operation": 0.01678165374677003
+          },
+          "commit_proof_validation": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.944986,
+            "cpu_ms": 1.1289159999999998,
+            "wall_us_per_sampled_operation": 0.6104560723514212
+          },
+          "commit_default_removal_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.254886,
+            "cpu_ms": 0.442871,
+            "wall_us_per_sampled_operation": 0.16465503875968993
+          },
+          "commit_transition_preflight": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.684557,
+            "cpu_ms": 0.869216,
+            "wall_us_per_sampled_operation": 0.44222028423772614
+          },
+          "commit_epoch_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.154588,
+            "cpu_ms": 1.336591,
+            "wall_us_per_sampled_operation": 0.7458578811369508
+          },
+          "commit_completion": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.144434,
+            "cpu_ms": 0.32757499999999995,
+            "wall_us_per_sampled_operation": 0.09330361757105943
+          },
+          "commit_root": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.0312189999999999,
+            "cpu_ms": 1.2158339999999999,
+            "wall_us_per_sampled_operation": 0.6661621447028423
+          },
+          "commit_metadata_apply": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.210452,
+            "cpu_ms": 0.39283499999999993,
+            "wall_us_per_sampled_operation": 0.13595090439276486
+          },
+          "commit_root_publication": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.3136,
+            "cpu_ms": 0.4957,
+            "wall_us_per_sampled_operation": 0.20258397932816535
+          },
+          "commit_cleanup": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 2.451296,
+            "cpu_ms": 2.6368620000000003,
+            "wall_us_per_sampled_operation": 1.5835245478036177
+          },
+          "commit_history_collect": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.989671,
+            "cpu_ms": 2.1756629999999997,
+            "wall_us_per_sampled_operation": 1.2853171834625323
+          },
+          "commit_provider_retire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.6421290000000002,
+            "cpu_ms": 1.8300969999999999,
+            "wall_us_per_sampled_operation": 1.0608068475452197
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.027181000000000004,
+            "cpu_ms": 0.20896499999999998,
+            "wall_us_per_sampled_operation": 0.017558785529715765
+          },
+          "transaction_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.05161999999999999,
+            "cpu_ms": 0.236614,
+            "wall_us_per_sampled_operation": 0.03334625322997416
+          },
+          "write_bytes_owner_wait": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.025881,
+            "cpu_ms": 0.24145800000000003,
+            "wall_us_per_sampled_operation": 0.016718992248062017
+          },
+          "write_bytes_batch_begin": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.858547,
+            "cpu_ms": 1.040533,
+            "wall_us_per_sampled_operation": 0.5546169250645995
+          },
+          "write_bytes_body": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 7.836166,
+            "cpu_ms": 8.020022,
+            "wall_us_per_sampled_operation": 5.062122739018088
+          },
+          "write_bytes_batch_finish": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 17.347725,
+            "cpu_ms": 17.532048,
+            "wall_us_per_sampled_operation": 11.20654069767442
+          },
+          "write_acquire": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 3.7116640000000003,
+            "cpu_ms": 3.8996869999999997,
+            "wall_us_per_sampled_operation": 2.397715762273902
+          },
+          "write_resolve": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 0.6158889999999999,
+            "cpu_ms": 0.802971,
+            "wall_us_per_sampled_operation": 0.39786111111111105
+          },
+          "write_publish_host": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.933279,
+            "cpu_ms": 2.1232079999999995,
+            "wall_us_per_sampled_operation": 1.2488882428940569
+          },
+          "write_provider_prepare": {
+            "samples": 1548,
+            "intervals": 1548,
+            "wall_ms": 1.141993,
+            "cpu_ms": 1.333002,
+            "wall_us_per_sampled_operation": 0.7377215762273901
+          }
+        }
+      },
+      "real-N4096-K16-H0-B4": {
+        "pairs": [
+          {
+            "pair": 0,
+            "before_us": 109.68377685546875,
+            "after_us": 109.24483227539062,
+            "ratio": 0.9959980902129535
+          },
+          {
+            "pair": 1,
+            "before_us": 108.69730639648438,
+            "after_us": 108.20099877929687,
+            "ratio": 0.9954340394105335
+          },
+          {
+            "pair": 2,
+            "before_us": 107.75289916992188,
+            "after_us": 110.94025659179688,
+            "ratio": 1.0295802474590374
+          },
+          {
+            "pair": 3,
+            "before_us": 109.54417944335937,
+            "after_us": 109.73190307617188,
+            "ratio": 1.0017136796657422
+          },
+          {
+            "pair": 4,
+            "before_us": 106.74535131835937,
+            "after_us": 108.47329711914062,
+            "ratio": 1.0161875508342073
+          },
+          {
+            "pair": 5,
+            "before_us": 108.45726513671875,
+            "after_us": 107.65016674804689,
+            "ratio": 0.9925583741425302
+          }
+        ],
+        "paired_median_ratio": 0.9988558849393478,
+        "bootstrap95": [
+          0.9939962067765319,
+          1.0228838991466223
+        ],
+        "before_us": 108.57728576660156,
+        "after_us": 108.85906469726562,
+        "payload_work": {
+          "plain": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 6442450944,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 6442450944,
+            "adopted_bytes": 0
+          },
+          "sampled": {
+            "default_initialized_bytes": 0,
+            "explicit_copy_bytes": 0,
+            "native_duplicate_bytes": 6442450944,
+            "native_preclone_hits": 0,
+            "native_foreground_copy_bytes": 6442450944,
+            "adopted_bytes": 0
+          }
+        },
+        "phases": {
+          "commit_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003289,
+            "cpu_ms": 0.027205999999999998,
+            "wall_us_per_sampled_operation": 0.01704145077720207
+          },
+          "commit_proof_validation": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.17734,
+            "cpu_ms": 1.2023700000000002,
+            "wall_us_per_sampled_operation": 6.100207253886011
+          },
+          "commit_default_removal_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.040202,
+            "cpu_ms": 0.06314499999999999,
+            "wall_us_per_sampled_operation": 0.208300518134715
+          },
+          "commit_transition_preflight": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.887544,
+            "cpu_ms": 0.912246,
+            "wall_us_per_sampled_operation": 4.598673575129534
+          },
+          "commit_epoch_prepare": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.38916500000000004,
+            "cpu_ms": 0.41350299999999995,
+            "wall_us_per_sampled_operation": 2.01639896373057
+          },
+          "commit_completion": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.023252,
+            "cpu_ms": 0.045791,
+            "wall_us_per_sampled_operation": 0.12047668393782383
+          },
+          "commit_root": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.5794169999999998,
+            "cpu_ms": 1.602625,
+            "wall_us_per_sampled_operation": 8.183507772020725
+          },
+          "commit_metadata_apply": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.45050100000000004,
+            "cpu_ms": 0.474418,
+            "wall_us_per_sampled_operation": 2.33420207253886
+          },
+          "commit_root_publication": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.043711,
+            "cpu_ms": 0.06600600000000001,
+            "wall_us_per_sampled_operation": 0.22648186528497408
+          },
+          "commit_cleanup": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.313619,
+            "cpu_ms": 1.337246,
+            "wall_us_per_sampled_operation": 6.806316062176166
+          },
+          "commit_history_collect": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.030997999999999998,
+            "cpu_ms": 0.054079999999999996,
+            "wall_us_per_sampled_operation": 0.16061139896373056
+          },
+          "commit_provider_retire": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 1.976015,
+            "cpu_ms": 2.001042,
+            "wall_us_per_sampled_operation": 10.238419689119171
+          },
+          "transaction_begin_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.0037489999999999997,
+            "cpu_ms": 0.026498999999999998,
+            "wall_us_per_sampled_operation": 0.019424870466321242
+          },
+          "transaction_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.007327000000000001,
+            "cpu_ms": 0.031048,
+            "wall_us_per_sampled_operation": 0.037963730569948194
+          },
+          "write_bytes_owner_wait": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.003496,
+            "cpu_ms": 0.05284,
+            "wall_us_per_sampled_operation": 0.0181139896373057
+          },
+          "write_bytes_batch_begin": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 0.11120100000000001,
+            "cpu_ms": 0.134205,
+            "wall_us_per_sampled_operation": 0.5761709844559586
+          },
+          "write_bytes_body": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 15.464293,
+            "cpu_ms": 15.487321999999999,
+            "wall_us_per_sampled_operation": 80.12587046632125
+          },
+          "write_bytes_batch_finish": {
+            "samples": 193,
+            "intervals": 193,
+            "wall_ms": 9.0137,
+            "cpu_ms": 9.037496,
+            "wall_us_per_sampled_operation": 46.70310880829016
+          },
+          "write_acquire": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 7.457637999999999,
+            "cpu_ms": 7.835312,
+            "wall_us_per_sampled_operation": 38.64061139896373
+          },
+          "write_resolve": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 1.1919239999999998,
+            "cpu_ms": 1.562979,
+            "wall_us_per_sampled_operation": 6.175772020725387
+          },
+          "write_publish_host": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 3.7379320000000003,
+            "cpu_ms": 4.115498,
+            "wall_us_per_sampled_operation": 19.367523316062176
+          },
+          "write_provider_prepare": {
+            "samples": 193,
+            "intervals": 3088,
+            "wall_ms": 2.395451,
+            "cpu_ms": 2.775793,
+            "wall_us_per_sampled_operation": 12.411663212435233
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "CP2完整工作包；本轮不领取CP3/M6资格",
+  "closed_this_unit": [
+    "current与G0 getter冷准备拒绝不交出wrapper",
+    "G0在有效原read pin下取得原TileData引用，presence从同一capability导出",
+    "G0 wrapper不保留backend、root或idle cache；readonly锁拒绝先于intent/pin",
+    "attachPageStoreTile和桥oldData参数/分支/所有旧实参同批删除"
+  ],
+  "next_checks": [
+    {
+      "id": "raw-clone-refusal",
+      "status": "not-proven",
+      "sources": [
+        "libs/image/tiles3/kis_tile.cc:KisTile复制构造",
+        "libs/image/tiles3/kis_tile_hash_table2.h:hash复制构造",
+        "libs/image/tiles3/kis_tiled_data_manager.cc:manager复制构造"
+      ],
+      "question": "warm raw写intent的tileData准入拒绝后，clone/hash复制是否在构造前可靠接回原失败终点；不得以refs继续阻止handoff代替此结论"
+    },
+    {
+      "id": "production-epoch-aba-late",
+      "status": "not-proven",
+      "sources": [
+        "libs/image/pagestore/KisPageWriteCoordinator.cpp:prepareWritePlanLocked",
+        "libs/image/tests/KisPageStorePhysicalClaimTest.cpp:physicalBackingHandoffLifecycle",
+        "libs/image/tests/KisPageStoreCpuMutationTest.cpp:productionHandoffConcurrentConsumers"
+      ],
+      "question": "原语错identity/两次retag/late release与生产consumer已有结果；仍需核对生产provider epoch、allocation ABA、晚completion联合时序的实际证明，不能只列测试总数"
+    },
+    {
+      "id": "joint-plan-preparation",
+      "status": "not-proven",
+      "sources": [
+        "libs/image/pagestore/KisPageWriteCoordinator.cpp:prepareWritePlanLocked"
+      ],
+      "question": "从before binding/pin、physical候选、accounting、metadata、descriptor到install列有限实际准备拒绝及原Fresh/cancel/close终点；仅有具体生产allocator栈与父红时重开CP1 fault"
+    }
+  ],
+  "structure": "沿用当前source checkpoint及memento include/bridge引用差异；未提高ratchet；正式结构冻结归CP3",
+  "product_commit": "5a3767cc6f9af6e3885c3eb634822798ed99553e",
+  "current_same_source_results": "results.json",
+  "native_original_exact_evidence": [
+    "KisPageStore.cpp:KisCapturedReadView::readResidentPageImpl保持原version及有界重解析",
+    "CPU完整组中的productionRecoverableHandoff/native-generic-四BPP-提交/取消/abort/restore",
+    "ResidentRead完整组中的capturedReadRetriesStaleBinding/retainedVersionRediscoveryAfterRetag"
+  ],
+  "cp2_complete": false
+}

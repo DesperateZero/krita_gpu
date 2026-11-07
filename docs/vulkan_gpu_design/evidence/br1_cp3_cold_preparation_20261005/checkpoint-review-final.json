@@ -1,0 +1,19 @@
+{
+  "reviewed_changed_source": [
+    "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+    "libs/image/pagestore/KisPageOwnerLedger.cpp",
+    "libs/image/tests/KisPageStoreReferenceTest.cpp"
+  ],
+  "separate_checker": {
+    "path": "build-tools/ci-scripts/check-pagestore-architecture.py",
+    "sha256": "fa157226aa6d9875f028f214eba01d4dddc51c2002fe2f946a343e1ae1b08e29",
+    "parent_blob": "afaca83c49b770743aca7c6c1255cc2415a97be0"
+  },
+  "public_api_changes": 0,
+  "new_authorities": 0,
+  "new_queues": 0,
+  "new_product_fields": 0,
+  "ratchet_raised": false,
+  "checker_migration": "Deleted consumePublicationActivity replaced by existing transient setPublicationClaim and original Entry releaseActivity. Require retained reservation calls and forbid old consumption/flag clearing during install. No layout/intrusion/ownership ceiling raised.",
+  "scope": "Common cold storage, lifecycle and original work values; parent restore/free129 counterexample. CI checker is outside dirty_source_union source roots and reviewed separately."
+}

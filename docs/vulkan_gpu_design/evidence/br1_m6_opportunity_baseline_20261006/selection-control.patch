@@ -1,0 +1,21 @@
+--- product/KisPageWriteCoordinator.cpp
++++ evidence/KisPageWriteCoordinator.cpp
+@@ -5,6 +5,9 @@
+  */
+ 
+ #include "KisPageWriteCoordinator_p.h"
++namespace { thread_local bool m6EvidenceDisableHandoff = false; }
++extern "C" __attribute__((visibility("default"))) void m6EvidenceControl(int disabled)
++{ m6EvidenceDisableHandoff = disabled; }
+ 
+ #include "KisPageMetadataCoordinator.h"
+ #include "KisPageOwnerLedger.h"
+@@ -2669,7 +2672,7 @@
+         : publication.findPreparedProofLocked(transaction.id, intent.key).authority.version;
+     const bool removed = (intent.flags & quint8(KisPageWriteIntentFlag::SemanticRemoval))
+         || publication.stagesRemovalLocked(transaction.id, intent.key);
+-    const bool discoverBefore = recoverableBefore && !pending && !removed;
++    const bool discoverBefore = recoverableBefore && !pending && !removed && !m6EvidenceDisableHandoff;
+     KisPageMetadataCoordinator::MutationBaseInfo baseInfo;
+     if (!metadata->queryMutationBase(baseVersion, sealed, discoverBefore, &baseInfo)
+         || !baseInfo.baseExists) {

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "ps",
+    "-p",
+    "32658,48549,43034,87095,59123,70089,83020",
+    "-o",
+    "pid=,ppid=,stat=,etime=,command="
+  ],
+  "code": 0,
+  "output": "32658     1 UE      01:46:09 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest -nocrashhandler\n43034     1 UE   01-03:02:16 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest ledgerBackingNodesRefusedBeforePhysicalResult ledgerBackingRegistrationExcludesDomainMovement retirementRecordTransfersAtCapacity retirementRecordRefusedBeforePhysicalResult domainJournalCommitsAtCapacity lastUseAtMetadataCapacity\n48549     1 UE      01:14:46 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest -nocrashhandler\n59123 66413 UEs     12:03:21 /Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/FreehandStrokeTest testMatchedCpuBaseline -nocrashhandler\n70089     1 UE      11:40:41 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test -nocrashhandler\n83020     1 UE      11:10:16 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test testPageStoreChangedStorage:B1-K257-owner1-outcome0 -nocrashhandler\n87095     1 UE   01-17:32:31 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest synchronousProviderResultsAtCapacity writeTransferRejectsMismatchedOperation retirementResultBindsAtCapacity retirementRecordTransfersAtCapacity\n"
+}

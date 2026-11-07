@@ -1,0 +1,232 @@
+{
+  "passed": true,
+  "product_commit": "9697196acab538329359a2d6c5bc45c2cf001a36",
+  "source_commit_blobs_checked": 32,
+  "runtime_files_checked": 12,
+  "source_records": [
+    {
+      "path": "build-tools/ci-scripts/check-pagestore-architecture.py",
+      "sha256": "61a429ff05cf2495afb13216ee571a2f0e56dea30f60f4a0ea196976603b66a0",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+      "sha256": "17adfe0052b8bc3f7654aafd2be7e8d149e8d64939eb8b9f28d146606d9f01aa",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+      "sha256": "41986b9443df0cde079e208f1f2f8b71eee5c01f93f3acc6537b0f84eac6f7f4",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "sha256": "20b04f1e06938ae6bd2f551f5e03e8fa804a96b3e3e45fe300b278100f8e2bce",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/runtime-census.json",
+      "sha256": "475dfb6cf75c0f77413719b36f37b50228ff55c04a1098086f3a0f88dc783f02",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/state-ownership.json",
+      "sha256": "6b07713f16232e88e33b164308d47fb8ec2599bc99855e2b1083320a99e05b65",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisCompletionRegistry.cpp",
+      "sha256": "15baa807ea33d2b240eb03b5fe03f7ccddf7d748aa566eb1004c4268ab4bfbe0",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisCompletionRegistry.h",
+      "sha256": "d005f3e33603cd3bcf8d84abe33a5c3863b4d0d456af563791dc9acf4307033c",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisCpuResidentBinding.cpp",
+      "sha256": "bfd8c19d960fa552395e3fc277630f7dc4cc8c887733c0a8240cb42348711741",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisCpuResidentBinding_p.h",
+      "sha256": "70da02ba7450767e1d98022602f9dba9627cc804ed8d68ee9368fcc7b952693b",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisMutationStorage_p.h",
+      "sha256": "92a6dc809a5ff8705e1dafae7b2f0e0eb825c7260e536136a3e798b4b62e11e5",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageHistoryCollector.cpp",
+      "sha256": "eb66af4e31df76ce61aa27f2a7966f1f438a94e82416b1aacadb18829b6bcdb5",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageHistoryCollector_p.h",
+      "sha256": "1acfdbf6d23d60d7321cbd03afc20881a77058ca0a92c59a224bd2bc49357fe6",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageOwnerLedger.cpp",
+      "sha256": "6f6cd2279590e0dac0a993161de8031b3efa0509cc0b7f9468bc3777f94c7dff",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageOwnerLedger.h",
+      "sha256": "9cda4443e12cbaa9920457d3b3c8374dd16291863e2f180ba0e5262a0e026542",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator.cpp",
+      "sha256": "28e2de5c450447556025459bf27072c43e8c7331d9b4cae27a5287543f918e4e",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator_p.h",
+      "sha256": "7c187e93e8184d49720bb79aa220ac222e4d48b250e8cef786c4d93f51d0f554",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadiness.cpp",
+      "sha256": "0cd7f3791af90c660adfcc3283b1a65b0b06049e1b246fc126014f0a5e9fa40e",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadiness_p.h",
+      "sha256": "df1377dee07040a451cdf7dd2b923aa78c70f534b4ac3108fa58abd61ce03b9b",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageRetirementQueue.cpp",
+      "sha256": "1b5eb5e333f22647680a577857f50d9a8ee3e7888ed62b3cdf8225d362bb07ba",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageRetirementQueue_p.h",
+      "sha256": "aa1acaa99098ed9dfef083dc36d1f364a90ef0cb100e89ac8fa1699c20981ea2",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageRetirementRecord_p.h",
+      "sha256": "aa560524c986733c5c6abe3d6233cb5cd000fef1854f95c8652b0fc05cfffedc",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageRetirementStorage_p.h",
+      "sha256": "5edd6e6796b5096dcafe086bd0547c63408234dc7df765d0ed5e7fb83f597f30",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "sha256": "23752af7a6d1cb0bcd9253f51df4861dcf06fbd89d9bee322fefeafe797527c7",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreReclamation.cpp",
+      "sha256": "70b407b82c923ef49e5eb3581c9e54e27b025bf1f3c6f3889b5e0125a585c4dc",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreReclamation_p.h",
+      "sha256": "32a7b0dad7d9da8dc5ec0f60692c8aa1c2ed6c9d073c6bd5e9aa797550e6d6f6",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "sha256": "f39695806cab8e106acb4be8f87e92d6980c39e84d0bd286c6afb3d72cdaa2bc",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "sha256": "27b14838d7d4adaa8965adb558d36ad07e3f5bd0aa6a9f29399636acab6c26a1",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/tests/KisCompletionRegistryTest.cpp",
+      "sha256": "7c471429ad91ffd9da3a43675b680de8344e08d5ca5e0e58991e6e84eb58e8e0",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "sha256": "9bd1b094de08124f53490b2c13d96f01ab18a0c5602428a38893fc996f73ea8e",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+      "sha256": "e5672a38149e76753ee887e52332c797642faefaa88b26cdc6b81b23e22334b9",
+      "matches_frozen_source": true
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "sha256": "74c21275cd05d554e7159a03353cff1ae64eb917a2dfc5ba221ebae24763dce8",
+      "matches_frozen_source": true
+    }
+  ],
+  "runtime_records": [
+    {
+      "path": "krita/_build/bin/FreehandStrokeTest",
+      "sha256": "24fccc780f96be405cb04de88f04e4f78f12be7daf4d6ececb77540d2b10126e",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/KisPageStoreCpuMutationTest",
+      "sha256": "53c876cac1338e086d56b2a13a397811bedaca5c7ddd55628cd72232d8923f2f",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/KisPageStorePhysicalClaimTest",
+      "sha256": "e444bf04b742c80fb0f1f16e771da40e584d2fa8b26ffa710359d82f7cd10ba0",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/KisPageStoreReferenceTest",
+      "sha256": "4f250c77cc8f9a8f565f77491b6030c082788578a3da01300ca06ff031e116e9",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/krita_colorspaces_extensions.so",
+      "sha256": "5ba7de1c7d3ce5a349a78e4c7c07dba0077965c40b31d2a0153a135270107e02",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/krita_shape_image.so",
+      "sha256": "0bb8af28cce82aa896fe81a0e4554d66f49b3ae06d9e445ca72f2e203bfa8d29",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/krita_shape_paths.so",
+      "sha256": "1644890e0782a9421232f7ab0089dcbe78c7d6cde8eb8e2c7d66ddd6a0dfc5d3",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/kritalcmsengine.so",
+      "sha256": "ffc2f368d293275ba202cc6a88f05c5639bf567108a1481e66e5d5144f463fb7",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/libkritaflake.21.0.0.dylib",
+      "sha256": "dc8fda5e39f8ba8f7aff9a87ca95033b8ea8c4a33d57f30b482ef378dcc4a1b0",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/libkritaimage.21.0.0.dylib",
+      "sha256": "41ce06c8ec9ece351fd5c0515c06aac4211c6a2be49660153d70f6342f5bf3d8",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/libkritapigment.21.0.0.dylib",
+      "sha256": "98232498e5107b58b4121ac9a7fcea3fd005dc32669a72f62e57946873aa8a10",
+      "matches_frozen_runtime": true
+    },
+    {
+      "path": "krita/_build/bin/libkritaui.21.0.0.dylib",
+      "sha256": "9740b0b7722183a80f473f784da2d627e29454a8cb4cfde6ac4190cde933622f",
+      "matches_frozen_runtime": true
+    }
+  ],
+  "qualification_unchanged": true,
+  "tests_rerun_for_commit": false
+}

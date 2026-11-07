@@ -1,0 +1,75 @@
+ninja: Entering directory `/Users/apple/krita_gpu/krita/_build-br0-cpu'
+[1/4] Building CXX object libs/image/tiles3/tests/CMakeFiles/kis_tile_data_store_test.dir/kis_tile_data_store_test.cpp.o
+[2/4] Linking CXX executable bin/kis_tile_data_store_test
+[3/4] Building CXX object libs/image/tests/CMakeFiles/kis_painter_test.dir/kis_painter_test.cpp.o
+In file included from /Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:750:
+/Users/apple/krita_gpu/krita/libs/image/KisRenderedDab.h:22:5: warning: definition of implicit copy assignment operator for 'KisRenderedDab' is deprecated because it has a user-declared copy constructor [-Wdeprecated-copy]
+   22 |     KisRenderedDab(const KisRenderedDab &/*rhs*/) = default;
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:213:18: note: in implicit copy assignment operator for 'KisRenderedDab' first required here
+  213 |         *d_first = std::move_if_noexcept(*first);
+      |                  ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:248:13: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n_left_move<KisRenderedDab *, long long>' requested here
+  248 |             q_relocate_overlap_n_left_move(first, n, d_first);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:316:20: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n<KisRenderedDab, long long>' requested here
+  316 |         QtPrivate::q_relocate_overlap_n(this->ptr, this->size, res);
+      |                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:301:9: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::relocate' requested here
+  301 |         relocate(dataStartOffset - freeAtBegin, data);
+      |         ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:202:26: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::tryReadjustFreeSpace' requested here
+  202 |             readjusted = tryReadjustFreeSpace(where, n, data);
+      |                          ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydataops.h:576:15: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::detachAndGrow' requested here
+  576 |         this->detachAndGrow(pos, 1, nullptr, nullptr);
+      |               ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:886:8: note: in instantiation of function template specialization 'QtPrivate::QGenericArrayOps<KisRenderedDab>::emplace<const KisRenderedDab &>' requested here
+  886 |     d->emplace(d->size, std::forward<Args>(args)...);
+      |        ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:460:37: note: in instantiation of function template specialization 'QList<KisRenderedDab>::emplaceBack<const KisRenderedDab &>' requested here
+  460 |     void append(parameter_type t) { emplaceBack(t); }
+      |                                     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:713:7: note: in instantiation of member function 'QList<KisRenderedDab>::append' requested here
+  713 |     { append(t); return *this; }
+      |       ^
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:779:17: note: in instantiation of member function 'QList<KisRenderedDab>::operator<<' requested here
+  779 |         devices << dab;
+      |                 ^
+1 warning generated.
+In file included from /Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:750:
+/Users/apple/krita_gpu/krita/libs/image/KisRenderedDab.h:22:5: warning: definition of implicit copy assignment operator for 'KisRenderedDab' is deprecated because it has a user-declared copy constructor [-Wdeprecated-copy]
+   22 |     KisRenderedDab(const KisRenderedDab &/*rhs*/) = default;
+      |     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:213:18: note: in implicit copy assignment operator for 'KisRenderedDab' first required here
+  213 |         *d_first = std::move_if_noexcept(*first);
+      |                  ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qcontainertools_impl.h:248:13: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n_left_move<KisRenderedDab *, long long>' requested here
+  248 |             q_relocate_overlap_n_left_move(first, n, d_first);
+      |             ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:316:20: note: in instantiation of function template specialization 'QtPrivate::q_relocate_overlap_n<KisRenderedDab, long long>' requested here
+  316 |         QtPrivate::q_relocate_overlap_n(this->ptr, this->size, res);
+      |                    ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:301:9: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::relocate' requested here
+  301 |         relocate(dataStartOffset - freeAtBegin, data);
+      |         ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydatapointer.h:202:26: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::tryReadjustFreeSpace' requested here
+  202 |             readjusted = tryReadjustFreeSpace(where, n, data);
+      |                          ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qarraydataops.h:576:15: note: in instantiation of member function 'QArrayDataPointer<KisRenderedDab>::detachAndGrow' requested here
+  576 |         this->detachAndGrow(pos, 1, nullptr, nullptr);
+      |               ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:886:8: note: in instantiation of function template specialization 'QtPrivate::QGenericArrayOps<KisRenderedDab>::emplace<const KisRenderedDab &>' requested here
+  886 |     d->emplace(d->size, std::forward<Args>(args)...);
+      |        ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:460:37: note: in instantiation of function template specialization 'QList<KisRenderedDab>::emplaceBack<const KisRenderedDab &>' requested here
+  460 |     void append(parameter_type t) { emplaceBack(t); }
+      |                                     ^
+/Users/apple/krita_gpu/krita/_install/lib/QtCore.framework/Headers/qlist.h:713:7: note: in instantiation of member function 'QList<KisRenderedDab>::append' requested here
+  713 |     { append(t); return *this; }
+      |       ^
+/Users/apple/krita_gpu/krita/libs/image/tests/kis_painter_test.cpp:779:17: note: in instantiation of member function 'QList<KisRenderedDab>::operator<<' requested here
+  779 |         devices << dab;
+      |                 ^
+1 warning generated.
+[4/4] Linking CXX executable bin/kis_painter_test

@@ -1,0 +1,158 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "manager",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+      "testPageStoreHistoryDirtyExtent",
+      "testUndoingNewTiles",
+      "testPurgedAndEmptyTransactions",
+      "testTransactions",
+      "testPurgeHistory",
+      "testUndoSetDefaultPixel",
+      "testPageStorePackedReadSurvivesPublication",
+      "testPageStoreIteratorLiveWriteCompatibility",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 17 passed, 0 failed, 0 skipped, 0 blacklisted, 15ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 1315 passed, 0 failed, 0 skipped, 0 blacklisted, 5280ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 762 passed, 0 failed, 0 skipped, 0 blacklisted, 2476ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testAutoBrushStroke",
+      "testPersistentAutoBrushStroke",
+      "testPersistentAutoBrushStrokeCancelled",
+      "testPersistentAutoBrushStrokeFailure",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 303ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "manager",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+      "testPageStoreHistoryDirtyExtent",
+      "testUndoingNewTiles",
+      "testPurgedAndEmptyTransactions",
+      "testTransactions",
+      "testPurgeHistory",
+      "testUndoSetDefaultPixel",
+      "testPageStorePackedReadSurvivesPublication",
+      "testPageStoreIteratorLiveWriteCompatibility",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 17 passed, 0 failed, 0 skipped, 0 blacklisted, 22ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 1315 passed, 0 failed, 0 skipped, 0 blacklisted, 5928ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 762 passed, 0 failed, 0 skipped, 0 blacklisted, 2837ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testAutoBrushStroke",
+      "testPersistentAutoBrushStroke",
+      "testPersistentAutoBrushStrokeCancelled",
+      "testPersistentAutoBrushStrokeFailure",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "totals": [
+      "Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 434ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

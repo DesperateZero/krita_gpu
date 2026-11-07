@@ -1,0 +1,40 @@
+********* Start testing of KisPageStoreCpuMutationTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 17.0.0 (clang-1700.6.4.2)), macos 15.7
+PASS   : KisPageStoreCpuMutationTest::initTestCase()
+QWARN  : KisPageStoreCpuMutationTest::checkpointCaptureRefusalKeepsAcceptedSegment() WARNING: configured swap location is not writable, using a fall-back location "/Users/apple/Library/Application Support/KisPageStoreCpuMutationTest/swap" -> "/private/var/folders/c9/1npx65jj2c92d11w_125xmsm0000gn/T"
+==================
+WARNING: ThreadSanitizer: double lock of a mutex (pid=47773)
+    #0 __tsan_mutex_post_lock <null> (libclang_rt.tsan_osx_dynamic.dylib:arm64e+0x57a10)
+    #1 KisPageRetirementQueue::retireBatch(KisPageRetirementRecords&) KisPageRetirementQueue.cpp:553 (libkritaimage.21.0.0.dylib:arm64+0x90f40)
+    #2 KisPageReclamationTask<KisPageRetirementQueue::prepareTask()::$_1>::invoke() KisPageStoreReclamation_p.h:50 (libkritaimage.21.0.0.dylib:arm64+0x967d4)
+    #3 (anonymous namespace)::ReclamationExecutor::ReclamationExecutor()::'lambda'(void*)::__invoke(void*) KisPageStoreReclamation.cpp:216 (libkritaimage.21.0.0.dylib:arm64+0x1a0a40)
+    #4 (anonymous namespace)::ReclamationThread::invoke(void*) KisPageStoreReclamation.cpp:191 (libkritaimage.21.0.0.dylib:arm64+0x1a0724)
+
+  Location is heap block of size 4496 at 0x000110c01400 allocated by main thread:
+    #0 operator new(unsigned long) <null> (libclang_rt.tsan_osx_dynamic.dylib:arm64e+0x867c4)
+    #1 kisAllocatePageProcessStorage(unsigned long, unsigned long) KisPageWriteCoordinator.cpp:1544 (libkritaimage.21.0.0.dylib:arm64+0x1468e4)
+    #2 kisAllocateMutationStorage(KisBackingBudgetController*, unsigned long, unsigned long) KisPageWriteCoordinator.cpp:1769 (libkritaimage.21.0.0.dylib:arm64+0x1482f8)
+    #3 KisPageStore::KisPageStore(KisMutationStorageAllocator<KisPageStore> const&) KisPageStore.cpp:2826 (libkritaimage.21.0.0.dylib:arm64+0x172984)
+    #4 KisPageStore::KisPageStore() KisPageStore.cpp:2819 (libkritaimage.21.0.0.dylib:arm64+0x172a68)
+    #5 (anonymous namespace)::Fixture::Fixture() KisPageStoreCpuMutationTest.cpp:218 (KisPageStoreCpuMutationTest:arm64+0x1000124b0)
+    #6 KisPageStoreCpuMutationTest::checkpointCaptureRefusalKeepsAcceptedSegment() KisPageStoreCpuMutationTest.cpp:7991 (KisPageStoreCpuMutationTest:arm64+0x1000b0024)
+    #7 KisPageStoreCpuMutationTest::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) KisPageStoreCpuMutationTest.moc:1711 (KisPageStoreCpuMutationTest:arm64+0x1000e94ac)
+    #8 QMetaMethodInvoker::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*) <null> (QtCore:arm64+0x9d2fc)
+    #9 <null> <null> (0x00019d87eb98)
+
+  Mutex M0 (0x000110c01ed0) created at:
+    #0 __tsan_mutex_post_lock <null> (libclang_rt.tsan_osx_dynamic.dylib:arm64e+0x57a10)
+    #1 KisPageRetirementQueue::processAcceptedEffects(bool) KisPageRetirementQueue.cpp:569 (libkritaimage.21.0.0.dylib:arm64+0x91284)
+    #2 KisPageMutationSession::sealImpl(QString*, bool, KisCapturedReadView*, bool) KisPageStore.cpp:2490 (libkritaimage.21.0.0.dylib:arm64+0x16c04c)
+    #3 KisPageMutationSession::seal(QString*) KisPageStore.cpp:2205 (libkritaimage.21.0.0.dylib:arm64+0x16a3e8)
+    #4 KisPageStoreCpuAccessSession::finish(QString*) KisPageStoreCpuAccessSession.cpp:346 (KisPageStoreCpuMutationTest:arm64+0x10012aee4)
+    #5 KisPageStoreRandomAccessor::finish(QString*) KisPageStoreRandomAccessor.cpp:177 (KisPageStoreCpuMutationTest:arm64+0x10012e638)
+    #6 KisPageStoreCpuSurfaceOps::fillRect(KisPageStore*, KisSurfaceId, KisPageTransaction const&, QRect const&, QByteArray const&, QString*) KisPageStoreCpuSurfaceOps.cpp:241 (KisPageStoreCpuMutationTest:arm64+0x10012ffb4)
+    #7 (anonymous namespace)::Fixture::fill(unsigned char, bool) KisPageStoreCpuMutationTest.cpp:276 (KisPageStoreCpuMutationTest:arm64+0x1000133f8)
+    #8 KisPageStoreCpuMutationTest::checkpointCaptureRefusalKeepsAcceptedSegment() KisPageStoreCpuMutationTest.cpp:7993 (KisPageStoreCpuMutationTest:arm64+0x1000b00a8)
+    #9 KisPageStoreCpuMutationTest::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) KisPageStoreCpuMutationTest.moc:1711 (KisPageStoreCpuMutationTest:arm64+0x1000e94ac)
+    #10 QMetaMethodInvoker::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*) <null> (QtCore:arm64+0x9d2fc)
+    #11 <null> <null> (0x00019d87eb98)
+
+SUMMARY: ThreadSanitizer: double lock of a mutex KisPageRetirementQueue.cpp:553 in KisPageRetirementQueue::retireBatch(KisPageRetirementRecords&)
+==================

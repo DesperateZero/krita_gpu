@@ -1,0 +1,55 @@
+{
+  "product_head": "c13c44249338bf10477b9b07c65726e5933e51f9",
+  "product_unchanged": true,
+  "build_and_all_runtime_hashes_verified": true,
+  "observer_selftests": [
+    {
+      "mode": 0,
+      "passed": true,
+      "events": 0,
+      "counts": []
+    },
+    {
+      "mode": 2,
+      "passed": true,
+      "events": 3,
+      "counts": []
+    },
+    {
+      "mode": 3,
+      "passed": true,
+      "events": 3,
+      "counts": [
+        {
+          "stage": 1,
+          "kind": 0,
+          "count": 1
+        },
+        {
+          "stage": 1,
+          "kind": 1,
+          "count": 1
+        },
+        {
+          "stage": 1,
+          "kind": 2,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "compile_command": [
+    "/usr/bin/clang++",
+    "-std=c++17",
+    "-O2",
+    "-pthread",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_candidate_rank_audit_20261010/observer_selftest.cpp",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_candidate_rank_audit_20261010/cost_observer.cpp",
+    "-o",
+    "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_candidate_rank_audit_20261010/observer_selftest"
+  ],
+  "installed_skill_sha256": "f63ac3e5130a8807298bff4ebe4e7613ca684d3a7aabda0d6ba14b7f13c65413",
+  "new_fixture_processes": 20,
+  "qtest_passes": 60,
+  "new_candidate_performance_samples": 0
+}

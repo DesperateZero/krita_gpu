@@ -1,0 +1,686 @@
+{
+  "product": "11c6895ddfeae074df727c76dcbf9e12988479ee",
+  "scope": "Proposed operation-level CPU pipeline; no implementation or new runtime evidence",
+  "source_hashes": {
+    "flow-ledger-audit.json": "07cc541602dca929a734b30db0c25a4e51d93e35f5cfc9cb7c4633000ff7e54c",
+    "donor-summary.json": "1f77d875c41623e8458b3b4009784e06a2d33378c6d10bc54f04a5ecebbeddc8",
+    "budget-completeness.json": "64a28015569d1dc4bcf997c99f010622d45a1dc332a36ee871768b2377322d33"
+  },
+  "files": {
+    "krita/libs/image/pagestore/KisCpuResidentBinding.cpp": {
+      "sha256": "e0d28a6db16f23dc904fe9582a2beb8fb6488e892f6ad2c88c4df5913a156a8c",
+      "role": "production",
+      "matches": {
+        "prepareHandoff": [
+          37,
+          99
+        ],
+        "tryClaimHandoff": [
+          43,
+          56,
+          108
+        ],
+        "finishHandoff": [
+          68,
+          115,
+          122
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisImageEpochReferenceModel.cpp": {
+      "sha256": "c9891105a5964b412865ef0232aafc038a66f2e9192f10b1d4c9c99a9db64df6",
+      "role": "production",
+      "matches": {
+        "prepareCommit(": [
+          1285,
+          1292
+        ],
+        "installCommit(": [
+          1288,
+          1489
+        ],
+        "captureCommittedRoot(": [
+          1659
+        ],
+        "beginReachabilityScan(": [
+          1875
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageHistoryCollector.cpp": {
+      "sha256": "1cac004d52628a6f910f26323fb5fd43c584a4b36770a5c037887b8637b841e5",
+      "role": "production",
+      "matches": {
+        "requestKeyLocked": [
+          71,
+          189,
+          224
+        ],
+        "collectSliceLocked": [
+          105,
+          206
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageMetadataArena_p.h": {
+      "sha256": "c6cca25f02f057f4f34d39104f3ab7977ff9caa83e021a97e1c4c81ce1965563",
+      "role": "production",
+      "matches": {
+        "struct KisGenerationalSlotId": [
+          26
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp": {
+      "sha256": "4ebb7e971828fc88a07b7a8bf40e82e198d325face6a507bb41947b9222a7a05",
+      "role": "production",
+      "matches": {
+        "preparePublicationImpl": [
+          2321,
+          2329,
+          2338,
+          2347,
+          2356,
+          2373,
+          2386
+        ],
+        "installPublicationImpl": [
+          2364,
+          2381,
+          2813,
+          2821
+        ],
+        "discardHistory": [
+          3433
+        ],
+        "queryMutationBase": [
+          3244
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageMetadataCoordinator_p.h": {
+      "sha256": "c01ed443253d3a98ba2f9b14f548910f82bcf1d04b54357e632b716461255b06",
+      "role": "production",
+      "matches": {
+        "struct KisVersionRecord": [
+          20
+        ],
+        "struct KisReplicaRecord": [
+          36
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageOwnerLedger.cpp": {
+      "sha256": "a13f51963a59686283dfef03476772bbdc027d0020609f91a2eaf55f9ccb0b86",
+      "role": "production",
+      "matches": {
+        "sealPreparedPage": [
+          2136
+        ],
+        "validatePreparedPage": [
+          2222
+        ],
+        "ownsPreparedPageProof": [
+          2126
+        ],
+        "revokePreparedPage": [
+          2277
+        ],
+        "sealedProofs": [
+          573,
+          2123,
+          2132,
+          2133,
+          2207,
+          2238,
+          2239,
+          2282,
+          2283,
+          2288
+        ],
+        "prepareBackingHandoff": [
+          1569
+        ],
+        "commitBackingHandoff": [
+          1641
+        ],
+        "prepareRetirementDebt": [
+          1685
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageOwnerLedger.h": {
+      "sha256": "e849d259c322590a8c069aa7ba936069c7d48d5b59a01d6835a29215bbe13c7f",
+      "role": "production",
+      "matches": {
+        "sealPreparedPage": [
+          193
+        ],
+        "validatePreparedPage": [
+          201
+        ],
+        "ownsPreparedPageProof": [
+          188
+        ],
+        "revokePreparedPage": [
+          205
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPagePublicationCoordinator.cpp": {
+      "sha256": "12503ff721d9a95b62d6499c53243a2076e99e03056886e98cfeef1640fba184",
+      "role": "production",
+      "matches": {
+        "descriptorLocked": [
+          1114,
+          1813
+        ],
+        "prepareDescriptorLocked": [
+          70,
+          97,
+          1790,
+          1793,
+          1797
+        ],
+        "prepareDescriptorAdditionsLocked": [
+          1154,
+          1382,
+          1803,
+          1825
+        ],
+        "removeDescriptorLocked": [
+          1807
+        ],
+        "DescriptorMap": [
+          69,
+          95,
+          137,
+          1789,
+          1796,
+          1824,
+          1828,
+          1831,
+          1833,
+          1863,
+          1874
+        ],
+        "validatePreparedPage": [
+          1042
+        ],
+        "ownsPreparedPageProof": [
+          407,
+          409,
+          1653,
+          1660
+        ],
+        "revokePreparedPage": [
+          477,
+          1249,
+          1726
+        ],
+        "findPreparedProofLocked": [
+          402,
+          1549,
+          1658
+        ],
+        "tryAcceptLocked": [
+          383,
+          867
+        ],
+        "finishUnlocked": [
+          458,
+          854,
+          869
+        ],
+        "CommitPreparation": [
+          1008,
+          1485,
+          1895
+        ],
+        "captureDeltaLocked": [
+          1575
+        ],
+        "m_preparedTransactions.extract": [
+          1251,
+          1514
+        ],
+        "proofs.erase": [
+          1728
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPagePublicationCoordinator_p.h": {
+      "sha256": "800c59f17b18aaec5db5ec5e0e2bd241218642b730d2415a9c26ce939ed649bf",
+      "role": "production",
+      "matches": {
+        "descriptorLocked": [
+          254
+        ],
+        "prepareDescriptorLocked": [
+          248,
+          249
+        ],
+        "prepareDescriptorAdditionsLocked": [
+          256
+        ],
+        "removeDescriptorLocked": [
+          251
+        ],
+        "DescriptorMap": [
+          93,
+          248,
+          249,
+          256,
+          258,
+          259,
+          335
+        ],
+        "findPreparedProofLocked": [
+          227
+        ],
+        "KisPagePublicationDelta": [
+          41,
+          50,
+          81,
+          82,
+          83,
+          269,
+          327,
+          328
+        ],
+        "ProofMap": [
+          46,
+          54,
+          82,
+          270
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageRetirementQueue.cpp": {
+      "sha256": "91083e783e8c2daebe93ff28d87c6fdc588bddabed60c0024f6539cf45f447a4",
+      "role": "production",
+      "matches": {
+        "retireRecord": [
+          330,
+          518,
+          531,
+          569
+        ],
+        "beginClose": [
+          652
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageRetirementRecord_p.h": {
+      "sha256": "81254cf3166ef422666fea40d0121061399b344d1df90cd0d9e72ede97fa5144",
+      "role": "production",
+      "matches": {
+        "KisPageBackingRecord": [
+          14,
+          21,
+          22,
+          34,
+          40,
+          46,
+          70,
+          72,
+          101,
+          103
+        ],
+        "prepareBackingStorage": [
+          94,
+          96
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageStore.cpp": {
+      "sha256": "8d0d36806dae915c7442f259483c2dbed3dd5b7db14d09c3b59d42eb90638ced",
+      "role": "production",
+      "matches": {
+        "descriptorLocked": [
+          1262,
+          1467,
+          4036,
+          4092,
+          4718,
+          4950
+        ],
+        "prepareDescriptorLocked": [
+          439,
+          493,
+          1186,
+          1191,
+          1391,
+          1395,
+          3825,
+          3829,
+          4112,
+          4395,
+          4399
+        ],
+        "removeDescriptorLocked": [
+          233,
+          406,
+          913
+        ],
+        "sealPreparedPage": [
+          2749,
+          4956
+        ],
+        "ownsPreparedPageProof": [
+          2744
+        ],
+        "revokePreparedPage": [
+          912,
+          4984
+        ],
+        "prepareTarget": [
+          1320,
+          1327,
+          1780,
+          1889,
+          2414
+        ],
+        "sealImpl": [
+          2520,
+          2532,
+          2537,
+          2576,
+          2582,
+          2592,
+          2595
+        ],
+        "prepareWrites": [
+          1730
+        ],
+        "captureReadViewImpl": [
+          2906,
+          3321,
+          3324
+        ],
+        "finishSegmentLocked": [
+          854,
+          856,
+          2900
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageStoreTypes.h": {
+      "sha256": "18ff97d0f763d7cbc9122b48ba042f11e102a484f4d0a5664a59dace8c834ae2",
+      "role": "production",
+      "matches": {
+        "class KRITAIMAGE_EXPORT KisCompletionTicket": [
+          713
+        ],
+        "struct KRITAIMAGE_EXPORT KisPreparedPageProof": [
+          1000
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp": {
+      "sha256": "02f75d03d47e948dbe2cfc06ca58f449d4894fe3536bb22a06563c3f26c88cd3",
+      "role": "production",
+      "matches": {
+        "descriptorLocked": [
+          2707
+        ],
+        "prepareDescriptorLocked": [
+          2846
+        ],
+        "DescriptorMap": [
+          2792
+        ],
+        "findPreparedProofLocked": [
+          2680
+        ],
+        "prepareWriteBaseLocked": [
+          2668
+        ],
+        "prepareWritePlanLocked": [
+          2761
+        ],
+        "preparePrivateWrite": [
+          2725
+        ],
+        "recordTarget": [
+          3086
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": {
+      "sha256": "06750e45ac2f272687329afd4f80eeda365903d51fbe0f4b6bc749b433c9faea",
+      "role": "production",
+      "matches": {
+        "runCpuMutationOperation": [
+          2008,
+          2163,
+          2253
+        ],
+        "finishOperationBatch": [
+          1985,
+          1995,
+          2139,
+          2484,
+          2593,
+          2695
+        ],
+        "writeBytes": [
+          2225
+        ],
+        "readBytes": [
+          1329
+        ]
+      }
+    },
+    "krita/libs/image/pagestore/KisTiles3PageReplicaProvider.cpp": {
+      "sha256": "57387a800bbf4c6c8d335dc692019a0c11d5c29d833bc581cb4021aa22751a4b",
+      "role": "production",
+      "matches": {
+        "tryClaimBackingHandoff": [
+          96
+        ],
+        "prepareAdoption": [
+          683,
+          808,
+          1173,
+          1214
+        ],
+        "releasePhysical": [
+          736,
+          759,
+          1305
+        ],
+        "::retire(": [
+          1276
+        ]
+      }
+    },
+    "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp": {
+      "sha256": "c454fe317028451745afc15713e3af39e94f35b620cdd53509e94c5364b2e9c1",
+      "role": "test",
+      "matches": {
+        "prepareDescriptorLocked": [
+          5881,
+          5882,
+          5893,
+          5911,
+          5918,
+          5922,
+          5938
+        ],
+        "DescriptorMap": [
+          5878
+        ],
+        "sealPreparedPage": [
+          6040
+        ],
+        "ownsPreparedPageProof": [
+          6099,
+          6111,
+          6137
+        ]
+      }
+    },
+    "krita/libs/image/tests/KisPageStoreReferenceTest.cpp": {
+      "sha256": "7fb0d37c4ec09c1554af6a2d55c1eb4b2777195ccf9f64c8bc6120f5e07068d2",
+      "role": "test",
+      "matches": {
+        "sealPreparedPage": [
+          10419,
+          10445,
+          10454
+        ],
+        "validatePreparedPage": [
+          10463,
+          10469,
+          10472,
+          10497
+        ],
+        "ownsPreparedPageProof": [
+          10462
+        ],
+        "revokePreparedPage": [
+          10464,
+          10466,
+          10498,
+          10500
+        ]
+      }
+    }
+  },
+  "quantities": [
+    {
+      "history": true,
+      "pages": 1,
+      "writes": 1,
+      "baseline_source_physical_births": 8,
+      "conditional_source_physical_births": 8,
+      "avoided_birth_and_eventual_retire": 0,
+      "superseded_prepared_logical_exits": 0,
+      "unchanged_logical_generations": 8,
+      "conditions": "Same layout, sufficient budget, no sustained external holder; original undo origin retained"
+    },
+    {
+      "history": true,
+      "pages": 1,
+      "writes": 2,
+      "baseline_source_physical_births": 12,
+      "conditional_source_physical_births": 12,
+      "avoided_birth_and_eventual_retire": 0,
+      "superseded_prepared_logical_exits": 4,
+      "unchanged_logical_generations": 12,
+      "conditions": "Same layout, sufficient budget, no sustained external holder; original undo origin retained"
+    },
+    {
+      "history": true,
+      "pages": 1,
+      "writes": 16,
+      "baseline_source_physical_births": 68,
+      "conditional_source_physical_births": 12,
+      "avoided_birth_and_eventual_retire": 56,
+      "superseded_prepared_logical_exits": 60,
+      "unchanged_logical_generations": 68,
+      "conditions": "Same layout, sufficient budget, no sustained external holder; original undo origin retained"
+    },
+    {
+      "history": true,
+      "pages": 16,
+      "writes": 1,
+      "baseline_source_physical_births": 128,
+      "conditional_source_physical_births": 128,
+      "avoided_birth_and_eventual_retire": 0,
+      "superseded_prepared_logical_exits": 0,
+      "unchanged_logical_generations": 128,
+      "conditions": "Same layout, sufficient budget, no sustained external holder; original undo origin retained"
+    },
+    {
+      "history": true,
+      "pages": 16,
+      "writes": 2,
+      "baseline_source_physical_births": 192,
+      "conditional_source_physical_births": 192,
+      "avoided_birth_and_eventual_retire": 0,
+      "superseded_prepared_logical_exits": 64,
+      "unchanged_logical_generations": 192,
+      "conditions": "Same layout, sufficient budget, no sustained external holder; original undo origin retained"
+    },
+    {
+      "history": true,
+      "pages": 16,
+      "writes": 16,
+      "baseline_source_physical_births": 1088,
+      "conditional_source_physical_births": 192,
+      "avoided_birth_and_eventual_retire": 896,
+      "superseded_prepared_logical_exits": 960,
+      "unchanged_logical_generations": 1088,
+      "conditions": "Same layout, sufficient budget, no sustained external holder; original undo origin retained"
+    }
+  ],
+  "conditional_event_targets": {
+    "h1_physical_births_and_eventual_retire": [
+      1088,
+      192
+    ],
+    "h1_unprotected_superseded_prepared_admission_to_history_scanner": [
+      960,
+      0
+    ],
+    "h1_internal_proof_standalone_node_creations": [
+      1088,
+      0
+    ],
+    "h1_nondefault_descriptor_standalone_node_creations": [
+      1088,
+      0
+    ],
+    "h0_intermediate_overlay_acceptances_for_eligible_sole_operation": [
+      68,
+      0
+    ],
+    "h0_canonical_commits": [
+      68,
+      68
+    ],
+    "h1_canonical_commits": [
+      8,
+      8
+    ],
+    "h1_logical_generations": [
+      1088,
+      1088
+    ]
+  },
+  "event_target_origins": {
+    "physical_proof_generation_descriptor_baselines": "Frozen flow census; descriptor nondefault 1088 excludes 64 defaults from total 1152",
+    "unprotected_old_prepared": "960 observed immediate donor targets; zero is conditional acceptance-time exit target",
+    "h0_intermediate_overlay_acceptances": "68 modeled traversals from 4 initial plus 64 writes through current anonymous operation path; not an independent overlay census",
+    "canonical_commits": "Frozen canonical scope counts, H0 68 and H1 8",
+    "targets": "Proposed deletion checks; no optimized product run"
+  },
+  "proposed_storage": {
+    "version_cold_fields": [
+      "shared immutable descriptor reference",
+      "original full completion ticket",
+      "owner validation stamp"
+    ],
+    "raw_field_bytes_lp64": 56,
+    "record_payload_ceiling_bytes": 64,
+    "common_version_link_bytes": 8,
+    "notes": "Layout specification, not measured sizeof or residency saving; arena slot/block occupancy, inactive capacity and retention must be charged"
+  },
+  "price": {
+    "predicted_instructions": null,
+    "predicted_ms": null,
+    "engineering_instruction_gate": 27469453.2375,
+    "current_instructions_if_only_gate_met": 155660235.0125
+  },
+  "caveats": [
+    "Event targets are proposed deletion checks, not measured counts in an optimized product",
+    "No H0 physical-reuse prediction: no new cross-transaction cache in this package",
+    "No root/GC task count or lock count prediction from per-page deltas",
+    "Default descriptors, held logical versions and generic proofs must preserve their consumers",
+    "Inline replacement storage, revalidation, retention and terminal work are charged",
+    "M7 commit-only K16 overwrite is excluded by current 8-page fence and missing qualification",
+    "Shared scopes cannot be added or multiplied by event removal ratios"
+  ]
+}

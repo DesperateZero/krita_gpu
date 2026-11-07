@@ -1,0 +1,594 @@
+{
+  "main_samples": 2535,
+  "inclusive_first_occurrence_counts": {
+    "KisTiledDataManager::writeBytes": 2533,
+    "KisPageMutationExecution::beginWrite": 959,
+    "KisPageWriteCoordinator::preparePrivateWrite": 328,
+    "KisPageMetadataCoordinator::applyProjectedSequence": 524,
+    "KisTiledDataManagerPageStoreWriteBatch::Private::finishClient": 947,
+    "KisPagePublicationCoordinator::commitLocked": 557,
+    "KisPageMetadataCoordinator::preparePublicationImpl": 191,
+    "KisImageEpochReferenceModel::prepareCommit": 37,
+    "applyPageRootDelta": 35
+  },
+  "source_lines": {
+    "KisTiledDataManager::writeBytes": [
+      {
+        "line": 36,
+        "inclusive_samples": 2491
+      },
+      {
+        "line": 3537,
+        "inclusive_samples": 35
+      },
+      {
+        "line": 3599,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 3606,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 3611,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 3615,
+        "inclusive_samples": 1
+      }
+    ],
+    "KisPageMutationExecution::beginWrite": [
+      {
+        "line": 39,
+        "inclusive_samples": 959
+      }
+    ],
+    "KisPageWriteCoordinator::preparePrivateWrite": [
+      {
+        "line": 41,
+        "inclusive_samples": 282
+      },
+      {
+        "line": 427,
+        "inclusive_samples": 17
+      },
+      {
+        "line": 461,
+        "inclusive_samples": 15
+      },
+      {
+        "line": 488,
+        "inclusive_samples": 8
+      },
+      {
+        "line": 505,
+        "inclusive_samples": 6
+      }
+    ],
+    "KisPageMetadataCoordinator::applyProjectedSequence": [
+      {
+        "line": 42,
+        "inclusive_samples": 66
+      },
+      {
+        "line": 129,
+        "inclusive_samples": 30
+      },
+      {
+        "line": 155,
+        "inclusive_samples": 28
+      },
+      {
+        "line": 196,
+        "inclusive_samples": 22
+      },
+      {
+        "line": 230,
+        "inclusive_samples": 17
+      },
+      {
+        "line": 255,
+        "inclusive_samples": 15
+      },
+      {
+        "line": 283,
+        "inclusive_samples": 14
+      },
+      {
+        "line": 303,
+        "inclusive_samples": 12
+      },
+      {
+        "line": 323,
+        "inclusive_samples": 10
+      },
+      {
+        "line": 338,
+        "inclusive_samples": 7
+      },
+      {
+        "line": 350,
+        "inclusive_samples": 7
+      },
+      {
+        "line": 352,
+        "inclusive_samples": 6
+      },
+      {
+        "line": 353,
+        "inclusive_samples": 6
+      },
+      {
+        "line": 365,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 367,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 370,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 374,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 378,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 383,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 387,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 391,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 392,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 396,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 400,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 404,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 406,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 407,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 409,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 410,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 413,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 415,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 417,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 419,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 421,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 422,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 424,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 426,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2581,
+        "inclusive_samples": 53
+      },
+      {
+        "line": 2665,
+        "inclusive_samples": 24
+      },
+      {
+        "line": 2691,
+        "inclusive_samples": 22
+      },
+      {
+        "line": 2724,
+        "inclusive_samples": 21
+      },
+      {
+        "line": 2759,
+        "inclusive_samples": 19
+      },
+      {
+        "line": 2785,
+        "inclusive_samples": 11
+      },
+      {
+        "line": 2812,
+        "inclusive_samples": 10
+      },
+      {
+        "line": 2827,
+        "inclusive_samples": 10
+      },
+      {
+        "line": 2850,
+        "inclusive_samples": 8
+      },
+      {
+        "line": 2863,
+        "inclusive_samples": 7
+      },
+      {
+        "line": 2867,
+        "inclusive_samples": 7
+      },
+      {
+        "line": 2886,
+        "inclusive_samples": 4
+      },
+      {
+        "line": 2892,
+        "inclusive_samples": 4
+      },
+      {
+        "line": 2894,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 2899,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 2904,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 2908,
+        "inclusive_samples": 3
+      },
+      {
+        "line": 2909,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2910,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2914,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2916,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2921,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2923,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2928,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2930,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2931,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2936,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2939,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2940,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2943,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2944,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2947,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2948,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2949,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2951,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2953,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2954,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2956,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2961,
+        "inclusive_samples": 1
+      }
+    ],
+    "KisTiledDataManagerPageStoreWriteBatch::Private::finishClient": [
+      {
+        "line": 1578,
+        "inclusive_samples": 947
+      }
+    ],
+    "KisPagePublicationCoordinator::commitLocked": [
+      {
+        "line": 1582,
+        "inclusive_samples": 191
+      },
+      {
+        "line": 1879,
+        "inclusive_samples": 171
+      },
+      {
+        "line": 2075,
+        "inclusive_samples": 46
+      },
+      {
+        "line": 2132,
+        "inclusive_samples": 37
+      },
+      {
+        "line": 2323,
+        "inclusive_samples": 28
+      },
+      {
+        "line": 2365,
+        "inclusive_samples": 19
+      },
+      {
+        "line": 2402,
+        "inclusive_samples": 16
+      },
+      {
+        "line": 2439,
+        "inclusive_samples": 15
+      },
+      {
+        "line": 2468,
+        "inclusive_samples": 7
+      },
+      {
+        "line": 2484,
+        "inclusive_samples": 6
+      },
+      {
+        "line": 2496,
+        "inclusive_samples": 6
+      },
+      {
+        "line": 2514,
+        "inclusive_samples": 5
+      },
+      {
+        "line": 2525,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2531,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2539,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 2541,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2544,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2547,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2553,
+        "inclusive_samples": 1
+      }
+    ],
+    "KisPageMetadataCoordinator::preparePublicationImpl": [
+      {
+        "line": 1584,
+        "inclusive_samples": 41
+      },
+      {
+        "line": 1643,
+        "inclusive_samples": 28
+      },
+      {
+        "line": 1692,
+        "inclusive_samples": 25
+      },
+      {
+        "line": 1731,
+        "inclusive_samples": 19
+      },
+      {
+        "line": 1756,
+        "inclusive_samples": 18
+      },
+      {
+        "line": 1774,
+        "inclusive_samples": 15
+      },
+      {
+        "line": 1798,
+        "inclusive_samples": 12
+      },
+      {
+        "line": 1821,
+        "inclusive_samples": 6
+      },
+      {
+        "line": 1833,
+        "inclusive_samples": 4
+      },
+      {
+        "line": 1834,
+        "inclusive_samples": 4
+      },
+      {
+        "line": 1843,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 1845,
+        "inclusive_samples": 2
+      },
+      {
+        "line": 1849,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1855,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1856,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1857,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1859,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1860,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1861,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1863,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1864,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1866,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1868,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1872,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1873,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1876,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 1878,
+        "inclusive_samples": 1
+      }
+    ],
+    "KisImageEpochReferenceModel::prepareCommit": [
+      {
+        "line": 2133,
+        "inclusive_samples": 35
+      },
+      {
+        "line": 2318,
+        "inclusive_samples": 1
+      },
+      {
+        "line": 2321,
+        "inclusive_samples": 1
+      }
+    ],
+    "applyPageRootDelta": [
+      {
+        "line": 2134,
+        "inclusive_samples": 35
+      }
+    ]
+  },
+  "sample_sha256": "ff1ce682ea8cd1e97b4017f01114ad098e4b137f475510b62347737e9085c8af",
+  "measured_operation_witness": "testSharedBaseline.cpp:227/operation lambda:207 -> public writeBytes; setup completed after actual init marker",
+  "limits": "Inclusive contextual counts overlap. Recursive descendants counted only once per target path; do not sum targets or infer causal gain from this unpaired sample",
+  "next_review": "Original private WorkingState by-value policy and its real per-transition consumers; inspect move/transfer/refusal/install responsibility before changing code"
+}

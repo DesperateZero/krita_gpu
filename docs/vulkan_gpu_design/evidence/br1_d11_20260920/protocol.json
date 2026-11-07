@@ -1,0 +1,31 @@
+{
+  "purpose": "D11 native unpublished CPU mutation segment in production writeBytes; direct D10 and frozen upstream comparisons, not formal NI",
+  "pairs": 8,
+  "rate_ms": 200,
+  "bootstrap_seed": 111319,
+  "bootstrap_resamples": 10000,
+  "native_cases": [
+    "write-n64-k1-b4", "write-n64-k1-b8", "write-n64-k1-b16",
+    "write-n1024-k16-b4", "write-n4096-k1-b4",
+    "read-n64-k1-b4", "read-n1024-k16-b4", "guard-n64-k1-b4",
+    "intent-n64-k1-b4", "kernel-n64-k1-b4", "kernel-n1024-k16-b4"
+  ],
+  "native_reference_cases": [
+    "write-n64-k1-b4", "write-n64-k1-b8", "write-n64-k1-b16",
+    "write-n1024-k16-b4", "write-n4096-k1-b4",
+    "read-n64-k1-b4", "read-n1024-k16-b4", "guard-n64-k1-b4",
+    "intent-n64-k1-b4", "kernel-n64-k1-b4", "kernel-n1024-k16-b4"
+  ],
+  "diagnostic_pairs": 4,
+  "diagnostic_loops": 8192,
+  "diagnostic_sample_period": 16,
+  "diagnostic_cases": [
+    "real-N64-K1-H0-B4", "real-N4096-K1-H0-B4",
+    "real-N1024-K16-H0-B4", "real-N1024-K16-H4-B4",
+    "real-N1024-K16-H0-B16", "real-N1024-K16-H4-B16"
+  ],
+  "endpoint": "CpuReadable production operation; setup, correctness, manager destruction and global background drain outside rate window",
+  "interpretation": "Rate throughput and per-completed-op CPU, never per-event latency. Guard/intent are management proxies, kernel is pinned CpuRam memcpy. No inference of pure M from write E subtraction. Exploratory pair bootstrap has no preregistered formal NI tolerance.",
+  "diagnostic_interpretation": "Candidate-only fixed-work plain vs sampled inclusive phase timers. Native write_acquire includes reservation/binding; write_provider_prepare is its child. write_publish_host means segment seal with dirty-page workItems. No write_resolve is expected. These are not mutex self/wait/hold measurements. No background drain or tail claim.",
+  "environment": "No builds, regressions or profilers concurrently with measurements. Record environment/hash settings; do not infer actual Qt hash seed or thermal scheduling causes. Keep all pairs; no optional stopping."
+}

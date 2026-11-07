@@ -1,0 +1,48 @@
+{
+  "observed_utc": "2026-10-03T19:30:07.029946+00:00",
+  "compiled_census_sha256": "8be65876719c13e1258c834f1f2a3034f57cf43e5eb5d315b27258744617d418",
+  "fixed_named_storage_bytes": 332,
+  "worker_start_observed_process_bytes": 332,
+  "rows": [
+    {
+      "arch": "arm64",
+      "family": "worker",
+      "faults": 3,
+      "control": 1,
+      "actual_exit": 0,
+      "log_sha256": "0b10524a3cdeb259eed4e6fb81c9b22dd9bd63533904ce0e8801fbd8637f0964",
+      "static_paid": 0
+    },
+    {
+      "arch": "arm64",
+      "family": "monitor",
+      "faults": 3,
+      "control": 1,
+      "actual_exit": 0,
+      "log_sha256": "1e5869961da163dd55454fc93dce3125ff64d392d803b06df18c4101f3b3d50b",
+      "static_paid": 0
+    },
+    {
+      "arch": "x86_64",
+      "family": "worker",
+      "faults": 3,
+      "control": 1,
+      "actual_exit": 0,
+      "log_sha256": "e011146356e66de704c0dd325a7410c707bc03112c799fab9ffdf3bb20e1248b",
+      "static_paid": 0
+    },
+    {
+      "arch": "x86_64",
+      "family": "monitor",
+      "faults": 3,
+      "control": 1,
+      "actual_exit": 0,
+      "log_sha256": "e136e67dc17ecc581e342f174391e276b04edb293532e29136c4794dcf2b414a",
+      "static_paid": 0
+    }
+  ],
+  "faults": 12,
+  "controls": 4,
+  "actual_zero_processes": 4,
+  "scope": "named PageStore fixed storage and original two native EAGAIN bodies; external Qt/OS/TLS and other ownership remain open"
+}

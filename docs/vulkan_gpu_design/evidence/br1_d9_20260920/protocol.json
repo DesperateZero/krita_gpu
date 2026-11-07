@@ -1,0 +1,74 @@
+{
+  "purpose": "D9 demand-built cache vs D8 eager cache, with fresh D7/D9 native controls; exploratory diagnostic, not upstream NI",
+  "pairs": 8,
+  "rate_ms": 200,
+  "bootstrap_seed": 973531,
+  "bootstrap_resamples": 10000,
+  "integration_cases": [
+    "session-n16-k1-h0",
+    "session-n256-k1-h0",
+    "session-n256-k16-h0",
+    "session-n256-k1-h1",
+    "accessor-n256-k16-h0",
+    "rect-n256-k16-h0",
+    "session-n256-k1-h0-cpu-b4",
+    "rect-n256-k16-h0-cpu-b4",
+    "session-n256-k1-h0-cpu-b8",
+    "rect-n256-k16-h0-cpu-b8",
+    "session-n256-k1-h0-cpu-b16",
+    "rect-n256-k16-h0-cpu-b16",
+    "session-n256-k1-h0-tiles3-b4",
+    "rect-n256-k16-h0-tiles3-b4",
+    "session-n256-k1-h0-tiles3-b8",
+    "rect-n256-k16-h0-tiles3-b8",
+    "session-n256-k1-h0-tiles3-b16",
+    "rect-n256-k16-h0-tiles3-b16"
+  ],
+  "native_cases": [
+    "guard-n64-k1-b4",
+    "read-n1024-k16-b4",
+    "write-n64-k1-b4",
+    "write-n64-k1-b16",
+    "write-n4096-k1-b4"
+  ],
+  "native_reference_cases": [
+    "guard-n64-k1-b4",
+    "read-n1024-k16-b4",
+    "write-n64-k1-b4",
+    "write-n64-k1-b16",
+    "write-n4096-k1-b4"
+  ],
+  "cold_cases": [
+    "cycle-n64-k0-cpu-b4",
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k0-cpu-b16",
+    "cycle-n64-k1-cpu-b16",
+    "cycle-n64-k16-cpu-b16",
+    "cycle-n64-k0-tiles3-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b4",
+    "cycle-n64-k0-tiles3-b16",
+    "cycle-n64-k1-tiles3-b16",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_profile_cases": [
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "cold_perturbation_cases": [
+    "cycle-n64-k1-cpu-b4",
+    "cycle-n64-k16-cpu-b4",
+    "cycle-n64-k1-tiles3-b4",
+    "cycle-n64-k16-tiles3-b16"
+  ],
+  "pairing": "before=D8/after=D9 except native_reference before=D7; cold_perturbation both D9, before=phase timer off/after=on. One common executable per phase, old public APIs only.",
+  "sampling": "8 independent process pairs per bucket, rotating buckets and alternating pair order, no profiler or concurrent build/tests. Every rate window >=200ms. All pairs retained.",
+  "warm": "Same 18 payload/binding-warm facade fixtures as D8, exact generic requests/page 0 on D8 and D9. Per-operation capture/release included.",
+  "cold": "N64 pages rewritten/published to fresh generations each cycle, K0 (no new read), K1 or K16 first read then session release. CPU/tiles3, BPP4/16. Initial configure/fill and final close separate, lifecycle CPU/wall also recorded. Old-version GC occurs during subsequent commits. Two cold stats checks/Qt correctness assertions per cycle are included on both sides.",
+  "profile": "cold_profile compares D8/D9 with phase clocks enabled; separate cold_perturbation compares plain/profile D9 in paired runs. Inclusive prepare+publish and first-read-scope sums are diagnostic, not exact binding/lock self, not additive to lifecycle elapsed time or single-event latency. K1 intervals may approach timer overhead; retain limitation.",
+  "stopping": "Stop on nonzero test exit, wrong loader, source/runtime change, counter mismatch, duplicate/missing row, or short rate window. Keep partial output. Do not alter frozen protocol after inspecting results.",
+  "limitations": "No pre-frozen NI margin, upstream current comparison, single-operation tails, high-H/concurrent performance, or full background drain. Count/byte zero does not prove UMA performance. Allocation records and shared gates unchanged; only native read-cache population policy is treated. Later structural changes require a new slice."
+}

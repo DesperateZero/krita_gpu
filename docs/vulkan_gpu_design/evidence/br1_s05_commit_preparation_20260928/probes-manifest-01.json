@@ -1,0 +1,242 @@
+[
+  {
+    "arch": "arm64",
+    "tag": "root-cursor-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "root-cursor-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s09_write_admission_20260928/root-cursor-install-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-root-cursor-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "arm64",
+    "tag": "overlay-install-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "overlay-install-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/overlay-install-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-overlay-install-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "arm64",
+    "tag": "commit-gate-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "commit-gate-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/commit-gate-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-commit-gate-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "arm64",
+    "tag": "commit-reader-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "commit-reader-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/commit-reader-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-commit-reader-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "arm64",
+    "tag": "adapter-delivery-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "adapter-delivery-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_delivery_20260928/adapter-delivery-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-adapter-delivery-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "arm64",
+    "tag": "reader-window-open-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "reader-window-open-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/reader-window-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-reader-window-open-after-01.log",
+    "meaning": "known limitation reproduction"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "commit-reader-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "commit-reader-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/commit-reader-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-commit-reader-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "commit-gate-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "commit-gate-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/commit-gate-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 1,
+    "driver_log": "driver-x86_64-commit-gate-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "root-cursor-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "root-cursor-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s09_write_admission_20260928/root-cursor-install-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-root-cursor-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "overlay-install-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "overlay-install-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/overlay-install-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-overlay-install-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "adapter-delivery-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "adapter-delivery-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_delivery_20260928/adapter-delivery-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-adapter-delivery-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "arm64",
+    "tag": "adapter-failure-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "adapter-failure-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_candidates_20260928/adapter-candidates-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-adapter-failure-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "reader-window-open-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "reader-window-open-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/reader-window-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-reader-window-open-after-01.log",
+    "meaning": "known limitation reproduction"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "adapter-failure-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "adapter-failure-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_candidates_20260928/adapter-candidates-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-adapter-failure-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "arm64",
+    "tag": "overlay-failure-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "arm64",
+      "overlay-failure-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/overlay-storage-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-overlay-failure-after-01.log",
+    "meaning": "regression assertion"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "overlay-failure-after-01",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/run_install_probe.py",
+      "x86_64",
+      "overlay-failure-after-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/overlay-storage-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-overlay-failure-after-01.log",
+    "meaning": "regression assertion"
+  }
+]

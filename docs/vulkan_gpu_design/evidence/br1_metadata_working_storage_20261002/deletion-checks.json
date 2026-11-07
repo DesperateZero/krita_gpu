@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "publication_seen_set_deleted": true,
+    "projection_included_sets_deleted": true,
+    "publication_previous_hash_deleted": true,
+    "generic_retained_set_deleted": true,
+    "old_qt_install_conversion_types_deleted": true,
+    "same_paid_version_moves_into_publication": true,
+    "public_known_valid_qt_entry_and_apply_impl_deleted": true,
+    "one_shared_transition_switch": true,
+    "original_record_projection_shared": true,
+    "generic_input_is_paid": true,
+    "working_protections_use_original_allocator": true,
+    "subsequent_steps_consume_work_without_deep_copy": true,
+    "discard_temporary_set_deleted": true,
+    "physical_batch_set_paid_and_prepared_before_install": true,
+    "caller_effect_packet_created_before_debt_and_install": true,
+    "actual_working_refusal_returns_fresh_uninstalled_result": true,
+    "original_debt_cookie_cancels_on_later_refusal": true,
+    "original_revision_claim_and_storage_revalidation_preserved": true,
+    "public_oracle_rejection_keeps_original_snapshot": true,
+    "real_capacity_pressure_and_exact_final_fee_assertions": true,
+    "existing_output_effect_consumers_remain": true,
+    "prior_read_failure_residue_stays_deleted": true,
+    "unused_const_working_state_lookup_deleted": true
+  },
+  "all_passed": true,
+  "remaining_protocols": [
+    {
+      "protocol": "Public Qt transition effects/reasons and downstream Store/publication aggregation",
+      "reason": "Actual cancel/abort/private-replacement consumers still transfer effects through Qt packets; this package prepares the producer output before Debt/install but does not pay or eliminate every downstream copy.",
+      "delete_when": "Migrate the actual producer-to-queue responsibility and original consumer aggregation together; retain identity, batch scheduling and no-loss acceptance."
+    },
+    {
+      "protocol": "Qt reference/registration/diagnostic snapshots and Transition inputs",
+      "reason": "Full external invariant validation and snapshot/oracle consumers still require their public value contract; private paid working values are not authoritative records.",
+      "delete_when": "Only after those actual consumer interfaces migrate or their bootstrap/output costs are explicitly covered."
+    },
+    {
+      "protocol": "Generic paid preparation, revision/claim/physical refusals and original Failed/cancel",
+      "reason": "Working arrays, arena/index/activity/physical-batch preparation and paid proof/overlay capacity still may refuse before install; scheduler does not yet transfer original job ownership.",
+      "delete_when": "A complete acceptance guarantee across the actual CP1/CP5 consumers removes the real failure, rather than only paying one working container."
+    },
+    {
+      "protocol": "Read/capture progress, Pending/subscription/Delay/Debt and history/epoch handoff",
+      "reason": "These represent distinct non-replayable facts and actual readiness, identity or budget refusals; no new guarantee in this package removes them.",
+      "delete_when": "Equivalent preparation and acceptance guarantees cover release/ack/cancel/close and late guards."
+    }
+  ],
+  "new_paid_working_guarantee": true,
+  "new_persistent_stage_or_queue": false,
+  "full_cp1_complete": false
+}

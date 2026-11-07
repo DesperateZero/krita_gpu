@@ -1,0 +1,32 @@
+{
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "f4564c579d730a9efd269269255136fbaa67feda9c27d995ee7330a04012ea94",
+  "image_sha256": "f0a57291b5047a53a118579f8326662cefc3755de2a3bae11cdf3b72b1bb14d8",
+  "tests": {
+    "targets_per_arch": 17,
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "passed": 6264,
+    "failed": 0,
+    "skipped": 0,
+    "new_cases_per_arch": 68
+  },
+  "architecture": {
+    "api-count": 1655,
+    "call-edge-count": 16633,
+    "callback-registration-count": 15
+  },
+  "probes": {
+    "final_runs": 36,
+    "write_request_intervals_per_arch": 4,
+    "write_request_rejections_per_arch": 2,
+    "write_resolve_intervals_per_arch": 9,
+    "write_resolve_rejections_per_arch": 7,
+    "write_post_pin_intervals_per_arch": 2,
+    "write_post_pin_allocation_attempts": 0,
+    "image_identity_matches": true
+  },
+  "qualification": "generic write record admission and bounded preparation exception recovery; not full T6/S10/M6/M7/M8 or performance"
+}

@@ -1,0 +1,19 @@
+{
+  "product_build_safety_and_performance_process_failures": [],
+  "actual_performance_gate_failures": [
+    "Fresh arm64/x86_64 K16 lower bounds below 0.98",
+    "Handoff all four lower bounds below the original 20%/30% thresholds"
+  ],
+  "verification_repairs": [
+    {
+      "action": "Load all six active documents as one JSON command output",
+      "issue": "Output was truncated; JSON parsing failed after README had already been added",
+      "resolution": "Loaded only the exact current rows and applied grouped explicit patches; no source or qualification data changed"
+    },
+    {
+      "action": "Initial document link verification",
+      "issue": "Started before final-verification.json was written; four missing-target links were reported",
+      "resolution": "Retained initial-docs-verification.json and reran sequentially after successful final verification"
+    }
+  ]
+}

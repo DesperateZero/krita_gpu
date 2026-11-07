@@ -1,0 +1,31 @@
+{
+  "purpose": "Diagnostic D7 captured-identity API and generic-read integration; not upstream NI, product/tail or GPU/UMA qualification",
+  "pairs": 8,
+  "rate_ms": 200,
+  "minimum_window_ns": 100000000,
+  "bootstrap_seed": 739127,
+  "bootstrap_resamples": 10000,
+  "component_cases": [
+    "lookup-n16-k1-h0",
+    "lookup-n256-k64-h0",
+    "scope-n16-k1-h0",
+    "scope-n256-k1-h0",
+    "scope-n256-k64-h0",
+    "scope-n256-k1-h1"
+  ],
+  "integration_cases": [
+    "session-n16-k1-h0",
+    "session-n256-k1-h0",
+    "session-n256-k16-h0",
+    "session-n256-k1-h1",
+    "accessor-n256-k16-h0",
+    "rect-n256-k16-h0"
+  ],
+  "native_cases": ["guard-n64-k1-b4", "read-n1024-k16-b4", "write-n64-k1-b16"],
+  "component_pair": "Same current binary/library. Legacy retained selector vs captured view; lookup excludes both capture/release; scope includes both. Legacy public scope exports owning manifest. No pixels timed.",
+  "integration_pair": "One new fixture executable using only stable D6 APIs/ABI, alternately loaded with archived D6 after-sparse/current libraries; stable head during timing; separate interleaved-commit correctness counterexample.",
+  "native_pair": "Unchanged shared tiles3 fixture with D6/current libraries; check native cached read and real write integration, not a new upstream comparison.",
+  "sampling": "Independent processes; rotate fixture order by pair; alternate variant order; no profiler; no concurrent build or test workloads.",
+  "limitations": "1 BPP CpuRam, single thread/in-flight, H=0/1. Completed throughput not per-operation latency. Component API comparison not total native tiles3 pipeline or upstream management. No pre-frozen NI margin. Whole-fixture history release/close reported separately, not full process/provider background drain. Rate windows can complete different work; do not compare RSS per operation.",
+  "stopping": "Stop on failure/identity mismatch/window under minimum; preserve partial manifest. Do not change protocol to pass. Analyze only complete eight-pair matrix."
+}

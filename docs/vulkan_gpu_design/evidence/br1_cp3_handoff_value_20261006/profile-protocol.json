@@ -1,0 +1,11 @@
+{
+  "reason": "The preregistered mode2 CPU clocks inflate operation time by about20-33%; add a different attribution method, not more latency pairs or resampling toward a gate.",
+  "method": "macOS Time Profiler Running CPU samples, 3 seconds attached within a 15-second operation loop. Exact timed operation is enclosed in a noinline fixture symbol; setup, validation, output, close and drain samples excluded from operation attribution and reported separately.",
+  "architecture": "arm64 only; Rosetta busy-loop threadCPU coverage2.4% failed calibration",
+  "source": "samef0c40a5d product and same evidence-only safe-Fresh selector; clock instrumentation disabled",
+  "cases": "K16/B4/preserve/one commit; fresh, handoff, matched",
+  "blocks": 2,
+  "order": [["fresh","handoff","matched"],["matched","handoff","fresh"]],
+  "statistic": "Sample share within the named timed operation, multiplied by the actual operation CPU/op over the recorded process. Two independent runs provide a descriptive range, not a formal time CI or necessary lower bound. Exclusive leaves/nearest semantic owner partition each sample once; inclusive functions are separate.",
+  "stop": "Exactly6 recordings, no extensions; preserve failures. Identity and byte/physical checks retained. No timing qualification is derived from profiled runs."
+}

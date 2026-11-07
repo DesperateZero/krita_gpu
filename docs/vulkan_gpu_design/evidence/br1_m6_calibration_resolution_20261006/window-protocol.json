@@ -1,0 +1,19 @@
+{
+  "id": "D4-prospective-window-resolution",
+  "basis": "D1 raw vectors show8-20ms individual slow operations within64ms windows. D2 unchanged same-image A/A only2/8 descriptively inside2%; D3 zero-seed does not consistently reduce native-pin variance. Test accumulation length directly; no product edit, tail deletion, or priority change.",
+  "architectures": ["arm64", "x86_64"],
+  "K": [1, 16],
+  "cases": ["hit", "native-pin"],
+  "cells": ["same-image-64ms", "cross-image-64ms", "same-image-512ms", "cross-image-512ms"],
+  "pairs": 12,
+  "processes": 768,
+  "windows": {"64ms": {"minimum_operation_ns": 64000000, "minimum_operations": 128, "warmup": 8}, "512ms": {"minimum_operation_ns": 512000000, "minimum_operations": 128, "warmup": 8}},
+  "qos": "Unchanged main-thread requested QoS, observed before/after and nice",
+  "hash_layout": "Remove inherited QT_HASH_SEED; retain default random layout and record actual QHashSeed::globalSeed(). No deterministic layout intervention.",
+  "order": "For each adjacent two-pair block rotate32 bucket/cell groups by block index. Reverse entire group order and left/right arm order on the second pair, balancing both window/image condition order and process arm order. Original current left; original current or existing normal-on selection image right.",
+  "endpoint": "Identical complete beginCurrentTransaction/beginMutation/first-write/seal/canonical commit. Per-operation valid state freshly constructed; setup, full pixel validation and close/destruction/drain separately retained. Window increases completed operations only, not an individual operation's scope.",
+  "statistic": "Twelve pairs/six adjacent balanced two-pair blocks per bucket/cell; median log throughput ratio right/left, descriptive two-sided95% bootstrap20k seed261011. All operations and tails included. No formal family qualification.",
+  "decision": "Long window is a candidate measurement fix only if variation reduces consistently in matched A/A and cross-image controls; report all8 buckets and offsets, do not select individual favorable cases. If long A/A is still wide or cross-image retains unexplained offsets, current host protocol remains unresolved and do not run a costly new formal matrix or guess production optimizations.",
+  "stop": "Exactly768 processes; any bad work/image/time/layout/input/timeout stops and preserves every attempt. No retry, trimming, merging with previous diagnostics, extending until pass, or throughput normalization. This is the final window diagnostic in this finite resolution package.",
+  "limits": "Diagnosis only; previous qualification unchanged. A new formal family must be independently frozen with full required20-case calibration and hit/miss matching, unchanged2% margins and confidence rules. Metadata residency and CP0 remain independent M6 requirements. x86_64 is Rosetta."
+}

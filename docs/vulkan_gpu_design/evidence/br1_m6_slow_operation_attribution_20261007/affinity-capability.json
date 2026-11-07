@@ -1,0 +1,8 @@
+{
+  "scope": "one disposable Python helper thread only, never benchmark/product/global policy",
+  "architecture": "arm64",
+  "api": "thread_policy_set(THREAD_AFFINITY_POLICY, tag=1)",
+  "return_code": 46,
+  "mach_error": "(os/kern) service not supported",
+  "sdk_contract": "tags express cache sharing if possible, no specific-CPU pin guarantee"
+}

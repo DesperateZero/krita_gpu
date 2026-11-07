@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "Evidence preparation",
+    "reason": "Initial tool copy referenced absent trace_runtime.cpp; actual runtime is header-only. Partial files copied, no source/performance run; resumed copying existing headers before freezing identity."
+  },
+  {
+    "kind": "New test fixture contract error",
+    "reason": "Initial test called configureLimits with live backing; API accepts only unused controller. Parent and candidate both failed before testing reuse. Preserve two logs and original test patch; replace with a real metadata pressure reservation under fixed initial limits, no production change.",
+    "evidence": [
+      "funded-arm64-parent.log",
+      "funded-arm64-current.log",
+      "funded-reuse-test.json",
+      "test-before-pressure-repair.patch"
+    ]
+  },
+  {
+    "kind": "New test fixture pressure setup",
+    "reason": "Filling metadata headroom itself needed a new reservation-slot array; the original controller correctly refused the full pressure request after growing reservation capacity. Warm two simultaneous empty reservation slots before computing remaining headroom; preserve initial refusal and test patch. Production code unchanged.",
+    "evidence": [
+      "funded02-arm64-parent.log",
+      "funded-reuse-test-02.json",
+      "test-before-reservation-warmup.patch"
+    ]
+  },
+  {
+    "kind": "Review refinement before performance",
+    "reason": "Initial complete safety run passed. Review restricted reuse to one-element changes capacity so a large previous generic batch is released at the same cold reuse boundary as the parent. No fields or workload changes. Prior safety/runtime saved in pre-cap-safety; final source rebuilt and all required safety/quantity/performance results bind the restricted candidate. No performance samples existed before refinement.",
+    "evidence": "pre-cap-safety"
+  },
+  {
+    "kind": "Existing process-pressure fixture race",
+    "reason": "Final Rosetta manager run: testPageStoreTileSelectionFailure bpp16 allocated0 abort1 writable0/1 failed at line3965 before selection, used below limit by12976/320 bytes. Owner waitForRetirementIdle does not drain detached root/task final releases or previous stores. Full safety stopped before quantity/performance. Add existing global reclamation drain at both process-pressure snapshot callers; retain all original rejection/old-new/cancel assertions and same limits. No production change. Rebuild manager and final safety to bind repaired fixture.",
+    "evidence": "pre-fixture-repair/final-qualified-matrix-x86_64/kis_tiled_data_manager_test.log"
+  },
+  {
+    "kind": "Lifetime summary overly strict assumption",
+    "reason": "All28 quantity processes passed and14 trace parses succeeded; summarize_trace stopped because a single native epoch allocation has an unobserved free before address reuse. Phase switching explicitly disables observation briefly and can miss worker frees. Retain two ambiguous160B allocation records (epoch prepare phase13 and metadata history discard phase15); do not claim their free phase. Main-thread target counts/all admissions remain usable, target ledger prepare phase11 has no ambiguity. Reanalyze same raw traces without resampling, replace global zero-ambiguity assertion with explicit uncertainty report. Public lifetime rows remain unambiguous.",
+    "evidence": "run-13-native-trace/allocation-lifetimes.json",
+    "events": [
+      3078,
+      5911
+    ],
+    "pointer": 5452724112
+  }
+]

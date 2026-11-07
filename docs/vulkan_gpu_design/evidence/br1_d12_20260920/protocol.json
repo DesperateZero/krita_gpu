@@ -1,0 +1,14 @@
+{
+  "purpose": "D12 physical exclusivity prerequisite, not an owner-issued in-place permit. Production writeBytes remains D11 safe COW. Measure inherited-path cost; no acceleration expected or claimed from an unconsumed claim API.",
+  "pairs": 8,
+  "rate_ms": 200,
+  "bootstrap_seed": 120921,
+  "bootstrap_resamples": 10000,
+  "native_cases": ["write-n64-k1-b4", "write-n64-k1-b8", "write-n64-k1-b16", "write-n1024-k16-b4", "write-n4096-k1-b4", "read-n64-k1-b4", "read-n1024-k16-b4", "guard-n64-k1-b4", "intent-n64-k1-b4", "kernel-n64-k1-b4", "kernel-n1024-k16-b4"],
+  "native_reference_cases": ["write-n64-k1-b4", "write-n64-k1-b8", "write-n64-k1-b16", "write-n1024-k16-b4", "write-n4096-k1-b4", "read-n64-k1-b4", "read-n1024-k16-b4", "guard-n64-k1-b4", "intent-n64-k1-b4", "kernel-n64-k1-b4", "kernel-n1024-k16-b4"],
+  "endpoint": "CpuReadable completed operation. Setup, correctness, manager destruction and global background drain outside rate window. Throughput is not event latency; kernel is prebound CpuRam memcpy, guard/intent are management proxies, not pure M.",
+  "comparison": "Use each revision's own compiled fixture binary AND matching runtime because inline TileData ref protocol changed. Common fixture source must remain byte-identical. Fixed upstream 9a24ae0d8c, not latest upstream.",
+  "sampling": "Rotate bucket order per pair and before/after order on odd pairs. Preserve all pairs, no optional stopping or post-hoc seed selection. Exploratory 95% pair bootstrap only, no formal NI claim.",
+  "environment": "No build, regression or profiler during rate runs. Record supplied hash/thread/instrumentation settings; actual Qt hash seed, thermals and complete background load remain unobserved.",
+  "safety": "Physical claims alone cannot authorize overwriting canonical published bytes. Validate legacy/native/generic pins, unknown alias/seed refs, swap miss, concurrent alias creation, revocation and final release. Existing mutation/version suites remain necessary. No GPU/UMA, full native concurrency, sanitizer or long-pressure qualification."
+}

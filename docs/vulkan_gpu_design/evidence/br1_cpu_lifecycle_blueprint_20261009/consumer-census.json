@@ -1,0 +1,1282 @@
+[
+  {
+    "query": "executor_and_identity_consumers",
+    "command": [
+      "rg",
+      "-n",
+      "kisEnqueuePageStoreReclamation|kisPreparePageStoreReclamation|kisSchedulePageStoreReclamation|kisOnPageStoreReclamationThread",
+      "krita/libs/image",
+      "-g",
+      "*.cpp",
+      "-g",
+      "*.h"
+    ],
+    "hits": [
+      {
+        "path": "krita/libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+        "line": 370,
+        "text": "    task = kisPreparePageStoreReclamation([this] { drain(); }, budget,",
+        "responsibility": [
+          "LP08.3",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+        "line": 383,
+        "text": "        if (!kisEnqueuePageStoreReclamation(task.get())) {",
+        "responsibility": [
+          "LP08.3",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+        "line": 409,
+        "text": "    auto &destructions = kisOnPageStoreReclamationThread()",
+        "responsibility": [
+          "LP08.3",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+        "line": 429,
+        "text": "        if (kisEnqueuePageStoreReclamation(task.get())) return;",
+        "responsibility": [
+          "LP08.3",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 188,
+        "text": "        if (!kisEnqueuePageStoreReclamation(nullptr)) throw std::bad_alloc();",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 3023,
+        "text": "        if (!owner->terminalCleanup || !owner->backgroundReclamation || kisOnPageStoreReclamationThread())",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 3027,
+        "text": "            if (kisEnqueuePageStoreReclamation(cleanup.get())) cleanup.release();",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 3211,
+        "text": "    if (kisOnPageStoreReclamationThread())",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 3230,
+        "text": "    if (kisOnPageStoreReclamationThread()) {",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 3387,
+        "text": "            d->terminalCleanup = kisPreparePageStoreReclamation(",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageReadCoordinator.cpp",
+        "line": 143,
+        "text": "    prepared->task = kisPreparePageStoreReclamation([this] {",
+        "responsibility": [
+          "LP08.1",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageReadCoordinator.cpp",
+        "line": 158,
+        "text": "    prepared->wake = kisPreparePageStoreReclamationWake(",
+        "responsibility": [
+          "LP08.1",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageReadCoordinator.cpp",
+        "line": 252,
+        "text": "    if (!kisEnqueuePageStoreReclamation(context->task.get())) {",
+        "responsibility": [
+          "LP08.1",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageReadCoordinator.cpp",
+        "line": 361,
+        "text": "        || !kisEnqueuePageStoreReclamation(nullptr)) return;",
+        "responsibility": [
+          "LP08.1",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageReadCoordinator.cpp",
+        "line": 401,
+        "text": "    if (!kisEnqueuePageStoreReclamation(nullptr)) context->accepting = false;",
+        "responsibility": [
+          "LP08.1",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 38,
+        "text": "KRITAIMAGE_EXPORT bool kisEnqueuePageStoreReclamation(KisPageReclamationJob *job);",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 65,
+        "text": "KisPageReclamationJobPointer kisPreparePageStoreReclamation(Function &&function,",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 70,
+        "text": "    if (!kisEnqueuePageStoreReclamation(nullptr)) throw std::bad_alloc();",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 89,
+        "text": "void kisSchedulePageStoreReclamation(Function &&function,",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 94,
+        "text": "    auto job = kisPreparePageStoreReclamation(std::forward<Function>(function),",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 97,
+        "text": "    if (!kisEnqueuePageStoreReclamation(job.get())) throw std::bad_alloc();",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 100,
+        "text": "KRITAIMAGE_EXPORT bool kisOnPageStoreReclamationThread();",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 159,
+        "text": "    friend KisPageReclamationWake kisPreparePageStoreReclamationWake(",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation_p.h",
+        "line": 162,
+        "text": "KRITAIMAGE_EXPORT KisPageReclamationWake kisPreparePageStoreReclamationWake(",
+        "responsibility": [
+          "LP06",
+          "LP07",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 1529,
+        "text": "    auto blocker = kisPreparePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 1530,
+        "text": "    auto probe = kisPreparePageStoreReclamation([&] {",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 1534,
+        "text": "    kisEnqueuePageStoreReclamation(blocker.release());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 1544,
+        "text": "    kisEnqueuePageStoreReclamation(probe.release());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4420,
+        "text": "            ~Capture() { marked->store(kisOnPageStoreReclamationThread()); done->release(); }",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4424,
+        "text": "        kisSchedulePageStoreReclamation([&, witness = std::make_shared<Capture>(&capture, &destroyed)] {",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4425,
+        "text": "            body.store(kisOnPageStoreReclamationThread());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4431,
+        "text": "        const bool mainMarked = kisOnPageStoreReclamationThread();",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4432,
+        "text": "        std::thread fresh([&] { outsider.store(kisOnPageStoreReclamationThread()); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4438,
+        "text": "        QVERIFY(!mainMarked && !outsider.load() && !kisOnPageStoreReclamationThread());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4461,
+        "text": "        ~Payload() { if (result) result->destroyed = kisOnPageStoreReclamationThread(); }",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4464,
+        "text": "            result->body = kisOnPageStoreReclamationThread() && bytes.back() == 42 &&",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4471,
+        "text": "    kisSchedulePageStoreReclamation([] {}, result.budget.get());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4477,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4480,
+        "text": "    kisSchedulePageStoreReclamation(Payload(&result), result.budget.get(),",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4483,
+        "text": "            result->settledBeforeRelease = result->destroyed && kisOnPageStoreReclamationThread() &&",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4505,
+        "text": "    kisSchedulePageStoreReclamation([] {}, &budget);",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4517,
+        "text": "    QVERIFY_EXCEPTION_THROWN(kisSchedulePageStoreReclamation([&] { invoked = true; }, &budget,",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4527,
+        "text": "    QVERIFY_EXCEPTION_THROWN(kisSchedulePageStoreReclamation(RejectMove{}, &budget,",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4532,
+        "text": "    kisSchedulePageStoreReclamation([&] { invoked = kisOnPageStoreReclamationThread(); }, &budget,",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4561,
+        "text": "    auto task = kisPreparePageStoreReclamation(Function(&calls, &destroyed), &budget,",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4564,
+        "text": "            if (--repeat->remaining) kisEnqueuePageStoreReclamation(repeat->task);",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4577,
+        "text": "        kisPreparePageStoreReclamation([] {}, &budget));",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4578,
+        "text": "    kisEnqueuePageStoreReclamation(task.get());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4911,
+        "text": "    auto wake = kisPreparePageStoreReclamationWake([&] {",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation.cpp",
+        "line": 253,
+        "text": "        if (m_jobsStopping && !kisOnPageStoreReclamationThread()) return false;",
+        "responsibility": [
+          "LP06",
+          "LP07"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation.cpp",
+        "line": 591,
+        "text": "KisPageReclamationWake kisPreparePageStoreReclamationWake(",
+        "responsibility": [
+          "LP06",
+          "LP07"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation.cpp",
+        "line": 600,
+        "text": "bool kisEnqueuePageStoreReclamation(KisPageReclamationJob *job)",
+        "responsibility": [
+          "LP06",
+          "LP07"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation.cpp",
+        "line": 605,
+        "text": "bool kisOnPageStoreReclamationThread()",
+        "responsibility": [
+          "LP06",
+          "LP07"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStoreReclamation.cpp",
+        "line": 613,
+        "text": "    Q_ASSERT(!kisOnPageStoreReclamationThread());",
+        "responsibility": [
+          "LP06",
+          "LP07"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 1805,
+        "text": "        if (kisOnPageStoreReclamationThread()) {",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2242,
+        "text": "    if (kisEnqueuePageStoreReclamation(data.get())) data.release();",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2267,
+        "text": "        if (!entries.empty() && kisEnqueuePageStoreReclamation(this)) return;",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 3192,
+        "text": "    if (kisOnPageStoreReclamationThread())",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 3416,
+        "text": "        if (kisOnPageStoreReclamationThread()) {",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 3571,
+        "text": "    if (kisOnPageStoreReclamationThread()) ++shard->backgroundLocalTransitionSequences;",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 3624,
+        "text": "        const bool background = kisOnPageStoreReclamationThread();",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 3769,
+        "text": "        const bool background = kisOnPageStoreReclamationThread();",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 1272,
+        "text": "        kisSchedulePageStoreReclamation([&] { workerRan.release(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 1990,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2037,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2083,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2151,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2181,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2199,
+        "text": "    kisSchedulePageStoreReclamation([&] { firstSlice.release(); continueScanning.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2224,
+        "text": "    kisSchedulePageStoreReclamation([&] { initialEntered.release(); initialResume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2407,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2444,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 2795,
+        "text": "        if (!kisOnPageStoreReclamationThread()) wrongThread = true;",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 3058,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 4860,
+        "text": "        kisSchedulePageStoreReclamation([entered, proceed] { entered->release(); proceed->acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 4877,
+        "text": "    kisSchedulePageStoreReclamation([finished] { finished->release(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 5099,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 5130,
+        "text": "    auto wake = kisPreparePageStoreReclamationWake(std::move(firstDispatch), &budget);",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 5142,
+        "text": "    auto ready = kisPreparePageStoreReclamationWake(std::move(readyDispatch), &budget);",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 5158,
+        "text": "    auto inFlight = kisPreparePageStoreReclamationWake(std::move(inFlightDispatch), &budget);",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 6613,
+        "text": "    kisSchedulePageStoreReclamation([&] { immediate.release(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 6618,
+        "text": "        wrongThread = kisOnPageStoreReclamationThread();",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 6619,
+        "text": "        kisSchedulePageStoreReclamation([&] { dispatched.release(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 6931,
+        "text": "    kisSchedulePageStoreReclamation([&] { entered.release(); resume.acquire(); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 11869,
+        "text": "    auto rejected = kisPreparePageStoreReclamation([&] { ++rejectedCalls; }, nullptr,",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 11880,
+        "text": "    auto barrier = kisPreparePageStoreReclamation([&] {",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 11883,
+        "text": "    QVERIFY(kisEnqueuePageStoreReclamation(barrier.get()));",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 11912,
+        "text": "    QVERIFY(!kisEnqueuePageStoreReclamation(rejected.get()));",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+        "line": 11915,
+        "text": "    QVERIFY_EXCEPTION_THROWN(kisSchedulePageStoreReclamation([&] { ++rejectedCalls; }), std::bad_alloc);",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 672,
+        "text": "            if (!kisEnqueuePageStoreReclamation(context->task.get())) {",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.2",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 731,
+        "text": "            preparedContext->task = kisPreparePageStoreReclamation(dispatch(raw), this,",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.2",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 742,
+        "text": "            preparedContext->wake = kisPreparePageStoreReclamationWake(",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.2",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageRetirementQueue.cpp",
+        "line": 117,
+        "text": "    if (kisEnqueuePageStoreReclamation(wait->task.get())) {",
+        "responsibility": [
+          "LP08.2",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageRetirementQueue.cpp",
+        "line": 133,
+        "text": "    state->task = kisPreparePageStoreReclamation([queue = this, wait = state.get()] {",
+        "responsibility": [
+          "LP08.2",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageRetirementQueue.cpp",
+        "line": 175,
+        "text": "                if (kisEnqueuePageStoreReclamation(wait->task.get())) return;",
+        "responsibility": [
+          "LP08.2",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageRetirementQueue.cpp",
+        "line": 422,
+        "text": "    auto task = kisPreparePageStoreReclamation([this] {",
+        "responsibility": [
+          "LP08.2",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageRetirementQueue.cpp",
+        "line": 474,
+        "text": "    if (!kisEnqueuePageStoreReclamation(m_task.get())) {",
+        "responsibility": [
+          "LP08.2",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageRetirementQueue.cpp",
+        "line": 583,
+        "text": "    if (!backgroundReclamation || kisOnPageStoreReclamationThread())",
+        "responsibility": [
+          "LP08.2",
+          "LP08.5"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageHistoryCollector.cpp",
+        "line": 146,
+        "text": "    if (!kisOnPageStoreReclamationThread()) ++m_foregroundPagesVisited;",
+        "responsibility": [
+          "LP08.2"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageHistoryCollector.cpp",
+        "line": 248,
+        "text": "    auto task = kisPreparePageStoreReclamation([this] {",
+        "responsibility": [
+          "LP08.2"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageHistoryCollector.cpp",
+        "line": 337,
+        "text": "    if (!kisEnqueuePageStoreReclamation(m_task.get())) {",
+        "responsibility": [
+          "LP08.2"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "metadata_policy_and_descriptor_callers",
+    "command": [
+      "rg",
+      "-n",
+      "applyOwnerSequence|preparePrivateWrite|publishPrivateWrite|preparePublicationImpl|prepareDescriptorAdditionsLocked",
+      "krita/libs/image",
+      "-g",
+      "*.cpp",
+      "-g",
+      "*.h"
+    ],
+    "hits": [
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2223,
+        "text": "            const auto prepared = owner->writeCoordinator.preparePrivateWrite(acquire, true);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 2460,
+        "text": "        const auto applied = owner->writeCoordinator.publishPrivateWrite(",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 4188,
+        "text": "    KisPageMetadataTransitionResult stateResult = d->writeCoordinator.preparePrivateWrite(transition, false);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageStore.cpp",
+        "line": 4667,
+        "text": "        success = d->writeCoordinator.publishPrivateWrite(",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.5",
+          "LP10"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.h",
+        "line": 320,
+        "text": "    KisPageMetadataTransitionResult applyOwnerSequence(const KisPageKey &key,",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.h",
+        "line": 423,
+        "text": "    PreparedPublication preparePublicationImpl(const KisPageTransaction &transaction,",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2284,
+        "text": "    return preparePublicationImpl(transaction, minimumEpoch, transitions.constData(), transitions.size(), false, error);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2292,
+        "text": "    return preparePublicationImpl({}, minimumEpoch, transitions.constData(), transitions.size(), true, error);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2301,
+        "text": "    return preparePublicationImpl(transaction, minimumEpoch, nullptr, count, false, error,",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2310,
+        "text": "    return preparePublicationImpl({}, minimumEpoch, nullptr, count, true, error,",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2319,
+        "text": "    return preparePublicationImpl(transaction, {}, nullptr, count, false, error, PreparationKind::Detachment, versions);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2336,
+        "text": "    return preparePublicationImpl(transaction, {}, &transition, 1, false, error, PreparationKind::RecoverableWrite);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 2349,
+        "text": "KisPageMetadataCoordinator::preparePublicationImpl(const KisPageTransaction &transaction,",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+        "line": 3527,
+        "text": "KisPageMetadataTransitionResult KisPageMetadataCoordinator::applyOwnerSequence(const KisPageKey &key,",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP03",
+          "LP04",
+          "LP05",
+          "LP08.4"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+        "line": 1059,
+        "text": "        try { preparedCommit.data->descriptorNodes = prepareDescriptorAdditionsLocked(descriptorChanges.data(), descriptorChanges.size()); }",
+        "responsibility": [
+          "LP03",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+        "line": 1300,
+        "text": "        try { preparedCommit.data->descriptorNodes = prepareDescriptorAdditionsLocked(restoredDefaultVersions.data(), restoredDefaultVersions.size()); }",
+        "responsibility": [
+          "LP03",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+        "line": 1703,
+        "text": "    return prepareDescriptorAdditionsLocked(&change, 1);",
+        "responsibility": [
+          "LP03",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+        "line": 1724,
+        "text": "KisPagePublicationCoordinator::prepareDescriptorAdditionsLocked(const PreparedDescriptorChange *changes, size_t count)",
+        "responsibility": [
+          "LP03",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator_p.h",
+        "line": 624,
+        "text": "    KisPageMetadataTransitionResult preparePrivateWrite(KisPageTransition &, bool initialized);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator_p.h",
+        "line": 636,
+        "text": "    KisPageMetadataTransitionResult publishPrivateWrite(KisPageTransition);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2725,
+        "text": "KisPageMetadataTransitionResult KisPageWriteCoordinator::preparePrivateWrite(KisPageTransition &write, bool initialized)",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.2",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2744,
+        "text": "    return metadata->applyOwnerSequence(write.version.key, transitions, 2);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.2",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2747,
+        "text": "KisPageMetadataTransitionResult KisPageWriteCoordinator::publishPrivateWrite(KisPageTransition write)",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.2",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+        "line": 2764,
+        "text": "    return metadata->applyOwnerSequence(write.version.key, transitions, 2);",
+        "responsibility": [
+          "LP01",
+          "LP02",
+          "LP08.2",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/pagestore/KisPagePublicationCoordinator_p.h",
+        "line": 210,
+        "text": "    DescriptorMap prepareDescriptorAdditionsLocked(const PreparedDescriptorChange *changes, size_t count);",
+        "responsibility": [
+          "LP03",
+          "LP09"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 4139,
+        "text": "            ? coordinator.applyOwnerSequence(initial.key, sequence.constData(), sequence.size())",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 5313,
+        "text": "    const auto result = coordinator.applyOwnerSequence(initial.key, sequence.constData(), sequence.size());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 5667,
+        "text": "            result = coordinator.applyOwnerSequence(expected.key, transitions.constData(), transitions.size());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 5840,
+        "text": "    std::thread first([&] { results[0] = coordinator.applyOwnerSequence(initial.key, transitions.constData(), transitions.size()); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 5841,
+        "text": "    std::thread second([&] { results[1] = coordinator.applyOwnerSequence(initial.key, transitions.constData(), transitions.size()); });",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 5960,
+        "text": "        const auto result = coordinator.applyOwnerSequence(initial.key, transitions.constData(), transitions.size());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      },
+      {
+        "path": "krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+        "line": 5985,
+        "text": "    const auto result = coordinator.applyOwnerSequence(initial.key, transitions.constData(), transitions.size());",
+        "responsibility": [
+          "LP10.2:test-consumer"
+        ]
+      }
+    ]
+  }
+]

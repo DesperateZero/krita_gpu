@@ -1,0 +1,212 @@
+{
+  "phase": "native_original",
+  "manifest_sha256": "d49c9051e56cb2412ebb980ec5cd281ce646de43b40e6fd51aec7c67c65be0d6",
+  "results": [
+    {
+      "fixture": "guard-n64-k1-b4",
+      "process_cpu_ns_per_completed_operation": {
+        "baseline_median": 12.000902037790624,
+        "candidate_median": 12.005427778408862,
+        "paired_median_ratio": 0.9997362852795281,
+        "exploratory_95_interval": [
+          0.9939204923318615,
+          1.0004177017685647
+        ],
+        "pair_ratios": [
+          0.999376669463991,
+          1.0027735368675668,
+          0.9983490844053511,
+          1.0004177017685647,
+          0.9939204923318615,
+          1.0000959010950652,
+          1.0001676106361623,
+          0.98663093888058
+        ]
+      },
+      "completed_operations_per_second": {
+        "baseline_median": 83255095.7245155,
+        "candidate_median": 83186723.79407337,
+        "paired_median_ratio": 1.0004436700343093,
+        "exploratory_95_interval": [
+          0.9994865226827934,
+          1.0072366838258888
+        ],
+        "pair_ratios": [
+          1.0007786717767437,
+          0.9968280601040299,
+          1.0010141173870515,
+          0.9997135015997813,
+          1.0072366838258888,
+          0.9994865226827934,
+          1.000108668291875,
+          1.0138919328834963
+        ]
+      }
+    },
+    {
+      "fixture": "read-n1024-k16-b4",
+      "process_cpu_ns_per_completed_operation": {
+        "baseline_median": 467.2644208998946,
+        "candidate_median": 468.11768841711,
+        "paired_median_ratio": 1.0023886771503232,
+        "exploratory_95_interval": [
+          0.9918101501943415,
+          1.0077208851707946
+        ],
+        "pair_ratios": [
+          0.962592561308516,
+          1.0077208851707946,
+          0.9918101501943415,
+          1.0043870732983244,
+          1.0103354063096817,
+          1.0003902810023217,
+          0.9974854468526407,
+          1.007264453383189
+        ]
+      },
+      "completed_operations_per_second": {
+        "baseline_median": 2137663.550774536,
+        "candidate_median": 2134355.2325527463,
+        "paired_median_ratio": 0.9974545817765847,
+        "exploratory_95_interval": [
+          0.9916797018328821,
+          1.0119704425479632
+        ],
+        "pair_ratios": [
+          1.0432375821701452,
+          0.9918822416525482,
+          1.0119704425479632,
+          0.994968118161181,
+          0.99068347919344,
+          0.9999410453919884,
+          1.0031632273037976,
+          0.9916797018328821
+        ]
+      }
+    },
+    {
+      "fixture": "write-n64-k1-b4",
+      "process_cpu_ns_per_completed_operation": {
+        "baseline_median": 9565.988736140036,
+        "candidate_median": 9719.241507166073,
+        "paired_median_ratio": 1.0156632875505531,
+        "exploratory_95_interval": [
+          0.9978046937960524,
+          1.0238568744000673
+        ],
+        "pair_ratios": [
+          0.9978046937960524,
+          1.0117575535369558,
+          1.0915118605525977,
+          1.021651849935341,
+          0.9925148766989605,
+          1.0004492179977886,
+          1.0195690215641504,
+          1.0238568744000673
+        ]
+      },
+      "completed_operations_per_second": {
+        "baseline_median": 104439.60944032736,
+        "candidate_median": 102826.65956480987,
+        "paired_median_ratio": 0.9843954092060688,
+        "exploratory_95_interval": [
+          0.9760500794448251,
+          1.0014953810211
+        ],
+        "pair_ratios": [
+          1.0014953810211,
+          0.9875775836291337,
+          0.9075422056555813,
+          0.9790466440335958,
+          1.0066845239494173,
+          0.9991366968702686,
+          0.9812132347830039,
+          0.9760500794448251
+        ]
+      }
+    },
+    {
+      "fixture": "write-n64-k1-b16",
+      "process_cpu_ns_per_completed_operation": {
+        "baseline_median": 10957.617636338928,
+        "candidate_median": 11079.318247551022,
+        "paired_median_ratio": 1.011556249092858,
+        "exploratory_95_interval": [
+          0.990433724783415,
+          1.0275718112888794
+        ],
+        "pair_ratios": [
+          0.990433724783415,
+          1.0151179429334836,
+          1.0275718112888794,
+          1.0048142396968738,
+          1.04629712663591,
+          0.9669479067875282,
+          1.0079945552522325,
+          1.0214541028025235
+        ]
+      },
+      "completed_operations_per_second": {
+        "baseline_median": 91165.68529133033,
+        "candidate_median": 90146.2267083734,
+        "paired_median_ratio": 0.9889572207163715,
+        "exploratory_95_interval": [
+          0.9734873831628953,
+          1.009653704675159
+        ],
+        "pair_ratios": [
+          1.009653704675159,
+          0.985027671964037,
+          0.9734873831628953,
+          1.0001125710451162,
+          0.9540415123222569,
+          1.0346012096767612,
+          0.992886769468706,
+          0.978676561637308
+        ]
+      }
+    },
+    {
+      "fixture": "write-n4096-k1-b4",
+      "process_cpu_ns_per_completed_operation": {
+        "baseline_median": 10841.606987847223,
+        "candidate_median": 10900.479094076654,
+        "paired_median_ratio": 1.0143806094818657,
+        "exploratory_95_interval": [
+          0.9981894073519949,
+          1.0372153900436616
+        ],
+        "pair_ratios": [
+          1.0149925895901517,
+          0.9981894073519949,
+          0.9642055982058297,
+          0.9990257112308013,
+          1.024047177805891,
+          1.0137686293735797,
+          1.0372153900436616,
+          1.4197367093987154
+        ]
+      },
+      "completed_operations_per_second": {
+        "baseline_median": 91965.23729726937,
+        "candidate_median": 91670.33702567485,
+        "paired_median_ratio": 0.9869959331936453,
+        "exploratory_95_interval": [
+          0.9642063926575412,
+          1.0026938197730213
+        ],
+        "pair_ratios": [
+          0.9860370280808282,
+          1.0026938197730213,
+          1.0389958429144837,
+          0.9993769905010353,
+          0.9763729204644995,
+          0.9879548383064626,
+          0.9642063926575412,
+          0.539077026747385
+        ]
+      }
+    }
+  ],
+  "qualification": "D10/D9 and direct D10/D8 diagnostic; native_original D10/D7; perturbation profiled/plain D10. Fixed-work is not sustained throughput. Not upstream NI, binding/lock self, event-tail, global background drain or GPU/UMA qualification"
+}

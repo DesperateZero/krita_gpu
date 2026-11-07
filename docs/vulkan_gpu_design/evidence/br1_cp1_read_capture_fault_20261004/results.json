@@ -1,0 +1,128 @@
+{
+  "product": "a7f0d7c537ddfbed4809136e3530ada00fd4d406",
+  "parent": "0933ea04ddbe8bb58c04dc891d864be8cd95d778",
+  "red_test": {
+    "product": "0933ea04ddbe8bb58c04dc891d864be8cd95d778",
+    "test_worktree_change": "tiles3ReadCaptureStorageRefusalIsRecoverable",
+    "command": "KisPageStoreCpuMutationTest tiles3ReadCaptureStorageRefusalIsRecoverable",
+    "totals": {
+      "passed": 2,
+      "failed": 1,
+      "skipped": 0,
+      "blacklisted": 0
+    },
+    "failure": "completed source capture leaked bad_alloc"
+  },
+  "builds": [
+    {
+      "directory": "krita/_build-br0-cpu",
+      "architecture": "arm64;x86_64",
+      "targets": [
+        "KisPageStoreCpuMutationTest",
+        "KisPageStorePhysicalClaimTest",
+        "KisPageStoreReferenceTest"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "krita/_build-br1-tsan",
+      "architecture": "arm64",
+      "targets": [
+        "KisPageStoreCpuMutationTest"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "runs": [
+    {
+      "file": "cpu-arm64.txt",
+      "sha256": "7236aa431a11dbbf9b2ad552c17d55fc42bb0a039cb453fab8e7b628a7b5ae3c",
+      "totals": {
+        "passed": 1391,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 9317
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "cpu-tsan-arm64.txt",
+      "sha256": "8cea37be5eae715bce635033d574d650ba88b821fb07dcb07c3a17f9a4f0e728",
+      "totals": {
+        "passed": 1391,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 89302
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "cpu-x86_64.txt",
+      "sha256": "15e8f5edd2e88b46de69a71efb182ddce088da6e91faa6518888fde27cba5d5b",
+      "totals": {
+        "passed": 1391,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 10770
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "physical-arm64.txt",
+      "sha256": "21409a4717bc092cc3c39ef79dd1697f3704395b8c41a78dd663d5abebc5d13d",
+      "totals": {
+        "passed": 397,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 25
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "physical-x86_64.txt",
+      "sha256": "f57c027786bc48c0740de5b4982faf0e8a06d86912f142ef31f477371ef8e5b8",
+      "totals": {
+        "passed": 397,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 40
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "reference-arm64.txt",
+      "sha256": "71be581623c969a1d9be44fa9bf9a600818d43cde29a036a24b0e84b24404d07",
+      "totals": {
+        "passed": 790,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 7688
+      },
+      "thread_sanitizer_reports": 0
+    },
+    {
+      "file": "reference-x86_64.txt",
+      "sha256": "bb2b5ce9b6b5ec9d1667eb91bd680acfedb83af3e426b5582e31a4abdf2f95f3",
+      "totals": {
+        "passed": 790,
+        "failed": 0,
+        "skipped": 0,
+        "blacklisted": 0,
+        "milliseconds": 8466
+      },
+      "thread_sanitizer_reports": 0
+    }
+  ],
+  "source_sha256": {
+    "libs/image/pagestore/KisTiles3PageReplicaProvider.cpp": "2de2d1c2beb353ffdb027a8e7e60b71ae02ce977c87b64e7cbe6ad41623c8385",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "fe493d41184148434c8523941fe825353b12dad82e8167bfe42403f7a51fc96b"
+  },
+  "diff_stat": "2 files changed, 83 insertions(+), 2 deletions(-)",
+  "pressure_rerun": false
+}

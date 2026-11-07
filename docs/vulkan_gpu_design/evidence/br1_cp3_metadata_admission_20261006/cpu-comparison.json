@@ -1,0 +1,112 @@
+{
+  "scope": "Descriptive4 CPU profiles, not a new formal test; shares times6s CPU/op assume stable work mix",
+  "combination_rule": "General fitsLocked and specialized fitsMetadataStorageLocked do not call one another; only these two disjoint admission contexts may be added.",
+  "rows": [
+    {
+      "record": "cpu-0-current",
+      "cpu_us": 200.22058881997458,
+      "loop_samples": 1985,
+      "unsymbolicated_leaf_percent": 4.030226700251889,
+      "all_owner_deref_approx_us": 2.6225366797578533,
+      "full_admission_approx_us": 0.2017335907506041,
+      "metadata_admission_approx_us": 1.4121351352542286,
+      "combined_admission_approx_us": 1.6138687260048328,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 45.188324328135316,
+        "physical_heap": 35.908579153607526,
+        "metadata_and_working_state": 26.326233592953834,
+        "storage_owner_and_charge_glue": 22.79589575481826,
+        "provider_and_native_lifecycle": 17.046488418426048,
+        "owner_backing_ledger": 13.516150580290475,
+        "adapter_fixture_and_other": 11.902281854285642,
+        "pixel_copy": 7.363276062397049,
+        "budget_policy_and_ledger": 5.547673745641613,
+        "read_view_and_binding": 4.841606178014498,
+        "other_memory_copy": 3.7320714288861754,
+        "retirement_and_reclamation": 3.0260038612590616,
+        "epoch_root_and_transaction": 3.0260038612590616
+      }
+    },
+    {
+      "record": "cpu-0-parent",
+      "cpu_us": 234.6721184161721,
+      "loop_samples": 2080,
+      "unsymbolicated_leaf_percent": 3.3173076923076925,
+      "all_owner_deref_approx_us": 2.369285810932507,
+      "full_admission_approx_us": 28.8827222666058,
+      "metadata_admission_approx_us": 0,
+      "combined_admission_approx_us": 28.8827222666058,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 46.4831311478187,
+        "physical_heap": 35.31364089627974,
+        "budget_policy_and_ledger": 32.71870881763938,
+        "metadata_and_working_state": 31.70330061295402,
+        "storage_owner_and_charge_glue": 22.22615736922399,
+        "provider_and_native_lifecycle": 18.164524550482554,
+        "owner_backing_ledger": 14.892653668718612,
+        "adapter_fixture_and_other": 10.605374582269317,
+        "pixel_copy": 9.477143243730028,
+        "read_view_and_binding": 5.189864157280729,
+        "retirement_and_reclamation": 3.0462246140560807,
+        "epoch_root_and_transaction": 3.0462246140560807,
+        "other_memory_copy": 1.8051701416628625
+      }
+    },
+    {
+      "record": "cpu-1-current",
+      "cpu_us": 206.00338781415346,
+      "loop_samples": 1999,
+      "unsymbolicated_leaf_percent": 3.9019509754877437,
+      "all_owner_deref_approx_us": 2.267170851381379,
+      "full_admission_approx_us": 0,
+      "metadata_admission_approx_us": 2.061064410346708,
+      "combined_admission_approx_us": 2.061064410346708,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 48.74417330469964,
+        "physical_heap": 37.923585150379424,
+        "metadata_and_working_state": 29.988487170544598,
+        "storage_owner_and_charge_glue": 19.88927155984573,
+        "provider_and_native_lifecycle": 17.725153928981687,
+        "owner_backing_ledger": 15.045770195530967,
+        "adapter_fixture_and_other": 9.687002728629528,
+        "pixel_copy": 7.316778656730813,
+        "budget_policy_and_ledger": 5.3587674669014405,
+        "read_view_and_binding": 4.946554584832099,
+        "retirement_and_reclamation": 4.01907560017608,
+        "epoch_root_and_transaction": 2.885490174485391,
+        "other_memory_copy": 2.4732772924160495
+      }
+    },
+    {
+      "record": "cpu-1-parent",
+      "cpu_us": 240.7510586531155,
+      "loop_samples": 2000,
+      "unsymbolicated_leaf_percent": 3.2,
+      "all_owner_deref_approx_us": 2.1667595278780394,
+      "full_admission_approx_us": 30.69575997827223,
+      "metadata_admission_approx_us": 0,
+      "combined_admission_approx_us": 30.69575997827223,
+      "exclusive_approx_us": {
+        "write_protocol_and_claims": 51.2799754931136,
+        "physical_heap": 34.307025858068954,
+        "budget_policy_and_ledger": 33.584772682109616,
+        "metadata_and_working_state": 30.575384448945666,
+        "storage_owner_and_charge_glue": 22.630599513392855,
+        "provider_and_native_lifecycle": 19.3804602215758,
+        "owner_backing_ledger": 12.519055049962006,
+        "adapter_fixture_and_other": 11.556050815349545,
+        "pixel_copy": 9.148540228818389,
+        "read_view_and_binding": 6.861405171613792,
+        "epoch_root_and_transaction": 3.370514821143617,
+        "retirement_and_reclamation": 3.2501392918170593,
+        "other_memory_copy": 2.287135057204597
+      }
+    }
+  ],
+  "timing_limitations": [
+    "Paired medians/intervals use fixed20 order-balanced blocks; marginal median differences need not equal paired estimates.",
+    "Rosetta CLOCK_THREAD_CPUTIME_ID reports only about2percent of wall time and is not calibrated to translated execution; raw counters retained but no physical CPU saving claim for x86_64. Use completed wall throughput.",
+    "Short CPU samples identify direction and remaining cost; they cannot causally split the whole paired saving among scan removal, temporary construction and compiler/layout effects.",
+    "Zero sampled weight means below sampling resolution, not zero execution cost."
+  ]
+}

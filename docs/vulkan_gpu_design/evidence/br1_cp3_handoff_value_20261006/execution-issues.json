@@ -1,0 +1,17 @@
+{
+  "analysis_failure": "math domain error: zero-resolution drain interval cannot have a log ratio",
+  "affected_process_medians": [
+    {
+      "log": "0296-timing-arm64-matched.log",
+      "field": "drain_ns",
+      "median": 0.0
+    }
+  ],
+  "resolution": "Keep every raw sample and absolute drain difference; ratio undefined when either paired value is nonpositive. No resampling.",
+  "original_analysis_sha256": "6a8e4676b62c170f64bbb9885681b861e34419e361892341a3cd4c12025bb1da",
+  "cpu_symbolization": {
+    "failure": "No named template wrapper in xctrace: debug inline symbol is the unique sample lambda operator instead.",
+    "resolution": "Match exact unique timed-operation lambda as well as wrapper; validate symbol address/source and retain all6 original recordings.",
+    "original_analyzer_sha256": "bc1358c4a2b024abf3f615d483e1791ff5ee288bb6c334fe352cddcf24eab478"
+  }
+}

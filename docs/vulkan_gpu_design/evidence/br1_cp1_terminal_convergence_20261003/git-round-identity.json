@@ -1,0 +1,77 @@
+{
+  "product_parent": "0da7ba08899344496b3528e60cb98696f5007f07",
+  "product_commit": "406bacb448997a2b63bf2d452a0a71d90587abdd",
+  "docs_parent": "0765074694bc937a62d8f93c62453a868da98ac4",
+  "product_changes": {
+    "paths": [
+      "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+      "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+      "libs/image/pagestore/KisPageHistoryCollector.cpp",
+      "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "libs/image/pagestore/KisPageReadCoordinator.cpp",
+      "libs/image/pagestore/KisPageRetirementQueue.cpp",
+      "libs/image/pagestore/KisPageStore.cpp",
+      "libs/image/pagestore/KisPageStoreReclamation.cpp",
+      "libs/image/pagestore/KisPageStoreReclamation_p.h",
+      "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+      "libs/image/tiles3/kis_tile_data.h",
+      "libs/image/tiles3/kis_tile_data_interface.h",
+      "libs/image/tiles3/kis_tile_data_pooler.cc",
+      "libs/image/tiles3/kis_tile_data_pooler.h",
+      "libs/image/tiles3/kis_tile_data_store.cc",
+      "libs/image/tiles3/swap/kis_tile_data_swapper.cpp"
+    ],
+    "numstat": [
+      "65\t34\tbuild-tools/ci-scripts/pagestore-audit/baseline-source.json",
+      "5708\t5326\tbuild-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "22\t7\tlibs/image/pagestore/KisImageEpochReferenceModel.cpp",
+      "9\t1\tlibs/image/pagestore/KisPageHistoryCollector.cpp",
+      "21\t21\tlibs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "13\t3\tlibs/image/pagestore/KisPageReadCoordinator.cpp",
+      "26\t6\tlibs/image/pagestore/KisPageRetirementQueue.cpp",
+      "6\t3\tlibs/image/pagestore/KisPageStore.cpp",
+      "6\t5\tlibs/image/pagestore/KisPageStoreReclamation.cpp",
+      "6\t3\tlibs/image/pagestore/KisPageStoreReclamation_p.h",
+      "8\t3\tlibs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "66\t0\tlibs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "40\t0\tlibs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+      "13\t3\tlibs/image/tiles3/kis_tile_data.h",
+      "4\t2\tlibs/image/tiles3/kis_tile_data_interface.h",
+      "6\t6\tlibs/image/tiles3/kis_tile_data_pooler.cc",
+      "1\t2\tlibs/image/tiles3/kis_tile_data_pooler.h",
+      "1\t1\tlibs/image/tiles3/kis_tile_data_store.cc",
+      "1\t1\tlibs/image/tiles3/swap/kis_tile_data_swapper.cpp"
+    ],
+    "groups": {
+      "generated": {
+        "files": 2,
+        "added": 5773,
+        "deleted": 5360
+      },
+      "production": {
+        "files": 15,
+        "added": 143,
+        "deleted": 67
+      },
+      "test": {
+        "files": 2,
+        "added": 106,
+        "deleted": 0
+      }
+    },
+    "patch_sha256": "c5b464eb24f7f6d33a956b8b10f1f441c329a55102c393891948693f2bec95ec",
+    "inherited_numstat": [
+      "1816\t1816\tbuild-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "40\t0\tlibs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+      "13\t3\tlibs/image/tiles3/kis_tile_data.h",
+      "4\t2\tlibs/image/tiles3/kis_tile_data_interface.h",
+      "1\t1\tlibs/image/tiles3/kis_tile_data_store.cc",
+      "1\t1\tlibs/image/tiles3/swap/kis_tile_data_swapper.cpp"
+    ]
+  },
+  "final_freeze_sha256": "a63218c33d7f0e3685a84244ed0f5e08aa81402c9b317f5b8f46eb1d9c45f90c",
+  "note": "Product commit records documentation parent/evidence path; documentation commit records this product commit. The documentation commit ID is reported after commit, never fabricated in its own tree."
+}

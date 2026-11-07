@@ -1,0 +1,756 @@
+[
+  {
+    "index": 0,
+    "side": "parent",
+    "projection": {
+      "capture": {
+        "count": 49,
+        "cpu_ns": 330167,
+        "self_cpu_ns": 330167
+      },
+      "completion_allocate": {
+        "count": 264,
+        "cpu_ns": 108956,
+        "self_cpu_ns": 108956
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 56676,
+        "self_cpu_ns": 56676
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 537125,
+        "self_cpu_ns": 537125
+      },
+      "completion_complete": {
+        "count": 132,
+        "cpu_ns": 30287,
+        "self_cpu_ns": 30287
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 1033552,
+        "self_cpu_ns": 300508
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 293992,
+        "self_cpu_ns": 293992
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 2213085,
+        "self_cpu_ns": 885541
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 239127,
+        "self_cpu_ns": 239127
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 93792,
+        "self_cpu_ns": 93792
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 621829,
+        "self_cpu_ns": 288910
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 3119581,
+        "self_cpu_ns": 659165
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 5394790,
+        "self_cpu_ns": 1070961
+      },
+      "commit": {
+        "count": 14,
+        "cpu_ns": 499583,
+        "self_cpu_ns": 499583
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 416,
+      "physical_record": 208,
+      "fill": 116,
+      "completion_complete": 298,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 50,
+      "proj_merge": 19,
+      "commit": 15
+    },
+    "updates": 19
+  },
+  {
+    "index": 1,
+    "side": "candidate",
+    "projection": {
+      "capture": {
+        "count": 50,
+        "cpu_ns": 350999,
+        "self_cpu_ns": 350999
+      },
+      "completion_allocate": {
+        "count": 132,
+        "cpu_ns": 52412,
+        "self_cpu_ns": 52412
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 37753,
+        "self_cpu_ns": 37753
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 47918,
+        "self_cpu_ns": 47918
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 418086,
+        "self_cpu_ns": 280003
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 236754,
+        "self_cpu_ns": 236754
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 1548705,
+        "self_cpu_ns": 893865
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 151202,
+        "self_cpu_ns": 151202
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 92957,
+        "self_cpu_ns": 92957
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 526460,
+        "self_cpu_ns": 282301
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 2495419,
+        "self_cpu_ns": 691549
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 4744668,
+        "self_cpu_ns": 1078706
+      },
+      "commit": {
+        "count": 12,
+        "cpu_ns": 548249,
+        "self_cpu_ns": 548249
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 208,
+      "physical_record": 208,
+      "fill": 116,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 51,
+      "proj_merge": 19,
+      "commit": 13,
+      "completion_complete": 90
+    },
+    "updates": 19
+  },
+  {
+    "index": 2,
+    "side": "candidate",
+    "projection": {
+      "capture": {
+        "count": 50,
+        "cpu_ns": 372048,
+        "self_cpu_ns": 372048
+      },
+      "completion_allocate": {
+        "count": 132,
+        "cpu_ns": 55542,
+        "self_cpu_ns": 55542
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 35296,
+        "self_cpu_ns": 35296
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 52757,
+        "self_cpu_ns": 52757
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 429748,
+        "self_cpu_ns": 286153
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 329711,
+        "self_cpu_ns": 329711
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 1767871,
+        "self_cpu_ns": 1008412
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 216038,
+        "self_cpu_ns": 216038
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 110248,
+        "self_cpu_ns": 110248
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 662956,
+        "self_cpu_ns": 336670
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 3214500,
+        "self_cpu_ns": 894418
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 5908585,
+        "self_cpu_ns": 1557957
+      },
+      "commit": {
+        "count": 12,
+        "cpu_ns": 653335,
+        "self_cpu_ns": 653335
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 208,
+      "physical_record": 208,
+      "fill": 116,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 51,
+      "proj_merge": 19,
+      "commit": 13,
+      "completion_complete": 90
+    },
+    "updates": 19
+  },
+  {
+    "index": 3,
+    "side": "parent",
+    "projection": {
+      "capture": {
+        "count": 50,
+        "cpu_ns": 334204,
+        "self_cpu_ns": 334204
+      },
+      "completion_allocate": {
+        "count": 264,
+        "cpu_ns": 100991,
+        "self_cpu_ns": 100991
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 57373,
+        "self_cpu_ns": 57373
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 565291,
+        "self_cpu_ns": 565291
+      },
+      "completion_complete": {
+        "count": 132,
+        "cpu_ns": 34790,
+        "self_cpu_ns": 34790
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 1058965,
+        "self_cpu_ns": 300520
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 326086,
+        "self_cpu_ns": 326086
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 2295539,
+        "self_cpu_ns": 910488
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 234381,
+        "self_cpu_ns": 234381
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 84164,
+        "self_cpu_ns": 84164
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 570671,
+        "self_cpu_ns": 252126
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 3229418,
+        "self_cpu_ns": 683041
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 5498335,
+        "self_cpu_ns": 1099544
+      },
+      "commit": {
+        "count": 12,
+        "cpu_ns": 515336,
+        "self_cpu_ns": 515336
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 416,
+      "physical_record": 208,
+      "fill": 116,
+      "completion_complete": 298,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 51,
+      "proj_merge": 19,
+      "commit": 13
+    },
+    "updates": 19
+  },
+  {
+    "index": 4,
+    "side": "parent",
+    "projection": {
+      "capture": {
+        "count": 49,
+        "cpu_ns": 354289,
+        "self_cpu_ns": 354289
+      },
+      "completion_allocate": {
+        "count": 264,
+        "cpu_ns": 101197,
+        "self_cpu_ns": 101197
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 60371,
+        "self_cpu_ns": 60371
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 583587,
+        "self_cpu_ns": 583587
+      },
+      "completion_complete": {
+        "count": 132,
+        "cpu_ns": 35582,
+        "self_cpu_ns": 35582
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 1092505,
+        "self_cpu_ns": 311768
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 323793,
+        "self_cpu_ns": 323793
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 2316126,
+        "self_cpu_ns": 899828
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 254287,
+        "self_cpu_ns": 254287
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 88792,
+        "self_cpu_ns": 88792
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 619418,
+        "self_cpu_ns": 276339
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 3408417,
+        "self_cpu_ns": 755001
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 5848164,
+        "self_cpu_ns": 1231706
+      },
+      "commit": {
+        "count": 13,
+        "cpu_ns": 571624,
+        "self_cpu_ns": 571624
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 416,
+      "physical_record": 208,
+      "fill": 116,
+      "completion_complete": 298,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 50,
+      "proj_merge": 19,
+      "commit": 14
+    },
+    "updates": 19
+  },
+  {
+    "index": 5,
+    "side": "candidate",
+    "projection": {
+      "capture": {
+        "count": 50,
+        "cpu_ns": 409500,
+        "self_cpu_ns": 409500
+      },
+      "completion_allocate": {
+        "count": 132,
+        "cpu_ns": 46922,
+        "self_cpu_ns": 46922
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 37796,
+        "self_cpu_ns": 37796
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 52081,
+        "self_cpu_ns": 52081
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 394622,
+        "self_cpu_ns": 257823
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 261082,
+        "self_cpu_ns": 261082
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 1493698,
+        "self_cpu_ns": 837994
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 158205,
+        "self_cpu_ns": 158205
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 102708,
+        "self_cpu_ns": 102708
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 598629,
+        "self_cpu_ns": 337716
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 2457292,
+        "self_cpu_ns": 644505
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 5010207,
+        "self_cpu_ns": 1378958
+      },
+      "commit": {
+        "count": 11,
+        "cpu_ns": 484917,
+        "self_cpu_ns": 484917
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 208,
+      "physical_record": 208,
+      "fill": 116,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 51,
+      "proj_merge": 19,
+      "commit": 12,
+      "completion_complete": 91
+    },
+    "updates": 19
+  },
+  {
+    "index": 6,
+    "side": "candidate",
+    "projection": {
+      "capture": {
+        "count": 49,
+        "cpu_ns": 368124,
+        "self_cpu_ns": 368124
+      },
+      "completion_allocate": {
+        "count": 132,
+        "cpu_ns": 63753,
+        "self_cpu_ns": 63753
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 39246,
+        "self_cpu_ns": 39246
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 45917,
+        "self_cpu_ns": 45917
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 412668,
+        "self_cpu_ns": 263752
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 253500,
+        "self_cpu_ns": 253500
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 1598046,
+        "self_cpu_ns": 931878
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 200583,
+        "self_cpu_ns": 200583
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 86376,
+        "self_cpu_ns": 86376
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 582709,
+        "self_cpu_ns": 295750
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 2810417,
+        "self_cpu_ns": 761956
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 5125916,
+        "self_cpu_ns": 1200039
+      },
+      "commit": {
+        "count": 12,
+        "cpu_ns": 615042,
+        "self_cpu_ns": 615042
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 208,
+      "physical_record": 208,
+      "fill": 116,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 50,
+      "proj_merge": 19,
+      "commit": 13,
+      "completion_complete": 90
+    },
+    "updates": 19
+  },
+  {
+    "index": 7,
+    "side": "parent",
+    "projection": {
+      "capture": {
+        "count": 49,
+        "cpu_ns": 344790,
+        "self_cpu_ns": 344790
+      },
+      "completion_allocate": {
+        "count": 264,
+        "cpu_ns": 117629,
+        "self_cpu_ns": 117629
+      },
+      "physical_record": {
+        "count": 132,
+        "cpu_ns": 58377,
+        "self_cpu_ns": 58377
+      },
+      "fill": {
+        "count": 60,
+        "cpu_ns": 551867,
+        "self_cpu_ns": 551867
+      },
+      "completion_complete": {
+        "count": 132,
+        "cpu_ns": 33134,
+        "self_cpu_ns": 33134
+      },
+      "provider_allocate": {
+        "count": 132,
+        "cpu_ns": 1073205,
+        "self_cpu_ns": 312198
+      },
+      "private_prepare": {
+        "count": 132,
+        "cpu_ns": 317585,
+        "self_cpu_ns": 317585
+      },
+      "cold": {
+        "count": 132,
+        "cpu_ns": 2389837,
+        "self_cpu_ns": 999047
+      },
+      "private_publish": {
+        "count": 132,
+        "cpu_ns": 271253,
+        "self_cpu_ns": 271253
+      },
+      "overlay_input": {
+        "count": 32,
+        "cpu_ns": 90045,
+        "self_cpu_ns": 90045
+      },
+      "seal": {
+        "count": 32,
+        "cpu_ns": 684456,
+        "self_cpu_ns": 323158
+      },
+      "commit": {
+        "count": 13,
+        "cpu_ns": 581083,
+        "self_cpu_ns": 581083
+      },
+      "operation": {
+        "count": 19,
+        "cpu_ns": 3454542,
+        "self_cpu_ns": 698333
+      },
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 5920204,
+        "self_cpu_ns": 1221705
+      }
+    },
+    "stroke_counts": {
+      "completion_allocate": 416,
+      "physical_record": 208,
+      "fill": 116,
+      "completion_complete": 298,
+      "provider_allocate": 208,
+      "private_prepare": 208,
+      "cold": 208,
+      "private_publish": 208,
+      "overlay_input": 59,
+      "seal": 59,
+      "operation": 46,
+      "capture": 50,
+      "commit": 14,
+      "proj_merge": 19
+    },
+    "updates": 19
+  },
+  {
+    "index": 8,
+    "side": "upstream",
+    "projection": {
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 492086,
+        "self_cpu_ns": 492086
+      }
+    },
+    "stroke_counts": {
+      "proj_merge": 19
+    },
+    "updates": 19
+  },
+  {
+    "index": 9,
+    "side": "upstream",
+    "projection": {
+      "proj_merge": {
+        "count": 19,
+        "cpu_ns": 434292,
+        "self_cpu_ns": 434292
+      }
+    },
+    "stroke_counts": {
+      "proj_merge": 19
+    },
+    "updates": 19
+  }
+]

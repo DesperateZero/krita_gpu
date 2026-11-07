@@ -1,0 +1,126 @@
+[
+  {
+    "name": "cpu",
+    "arch": "arm64",
+    "command": [
+      "/usr/bin/arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest",
+      "-o",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_immediate_task_convergence_20260930/cpu-arm64.log,txt"
+    ],
+    "exit_code": 0,
+    "totals": [
+      [
+        "1246",
+        "0",
+        "0"
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "name": "cpu",
+    "arch": "x86_64",
+    "command": [
+      "/usr/bin/arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreCpuMutationTest",
+      "-o",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_immediate_task_convergence_20260930/cpu-x86_64.log,txt"
+    ],
+    "exit_code": 0,
+    "totals": [
+      [
+        "1246",
+        "0",
+        "0"
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "name": "reference",
+    "arch": "arm64",
+    "command": [
+      "/usr/bin/arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest",
+      "-o",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_immediate_task_convergence_20260930/reference-arm64.log,txt"
+    ],
+    "exit_code": 0,
+    "totals": [
+      [
+        "650",
+        "0",
+        "0"
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "name": "reference",
+    "arch": "x86_64",
+    "command": [
+      "/usr/bin/arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/KisPageStoreReferenceTest",
+      "-o",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_immediate_task_convergence_20260930/reference-x86_64.log,txt"
+    ],
+    "exit_code": 0,
+    "totals": [
+      [
+        "650",
+        "0",
+        "0"
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "name": "freehand",
+    "arch": "arm64",
+    "command": [
+      "/usr/bin/arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-o",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_immediate_task_convergence_20260930/freehand-arm64.log,txt"
+    ],
+    "exit_code": 0,
+    "totals": [
+      [
+        "4",
+        "0",
+        "0"
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "name": "freehand",
+    "arch": "x86_64",
+    "command": [
+      "/usr/bin/arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled",
+      "-o",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_immediate_task_convergence_20260930/freehand-x86_64.log,txt"
+    ],
+    "exit_code": 0,
+    "totals": [
+      [
+        "4",
+        "0",
+        "0"
+      ]
+    ],
+    "passed": true
+  }
+]

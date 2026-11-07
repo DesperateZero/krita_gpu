@@ -1,0 +1,59 @@
+{
+  "primary_preserved": true,
+  "post_hoc": true,
+  "excluded_blocks": [
+    6
+  ],
+  "reason": "One candidate process index26 had18 projection updates; remove its entire ABBA block only for sensitivity",
+  "scope": "Not a replacement estimate, not a new pass, no additional processes",
+  "endpoints": {
+    "Stroke/wall_ns": {
+      "blocks": 11,
+      "reduction": 0.07634193240948961,
+      "ci_low": 0.055446286568676895,
+      "ci_high": 0.09766498286950731
+    },
+    "Stroke/cpu_ns": {
+      "blocks": 11,
+      "reduction": 0.06893617820632048,
+      "ci_low": 0.04782847425875769,
+      "ci_high": 0.09205471248964492
+    },
+    "Undo/wall_ns": {
+      "blocks": 11,
+      "reduction": 0.005934279709529755,
+      "ci_low": -0.11867581012427131,
+      "ci_high": 0.13527103378887206
+    },
+    "Undo/cpu_ns": {
+      "blocks": 11,
+      "reduction": 0.012302662402442488,
+      "ci_low": -0.10490400464535621,
+      "ci_high": 0.13269220445537666
+    },
+    "Redo/wall_ns": {
+      "blocks": 11,
+      "reduction": 0.35316102549539374,
+      "ci_low": 0.32101178097925864,
+      "ci_high": 0.39794210458877355
+    },
+    "Redo/cpu_ns": {
+      "blocks": 11,
+      "reduction": 0.32728068427552315,
+      "ci_low": 0.292492874600085,
+      "ci_high": 0.3738248263460733
+    },
+    "Teardown/wall_ns": {
+      "blocks": 11,
+      "reduction": 0.010707579326588723,
+      "ci_low": -0.027704020773051896,
+      "ci_high": 0.057990813432666766
+    },
+    "Teardown/cpu_ns": {
+      "blocks": 11,
+      "reduction": 0.02063077907988009,
+      "ci_low": -0.014801177592981496,
+      "ci_high": 0.0655038528891968
+    }
+  }
+}

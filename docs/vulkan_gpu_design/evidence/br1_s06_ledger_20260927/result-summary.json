@@ -1,0 +1,40 @@
+{
+  "scope": "S06 prepared accounting identity transfer and physical primitive integration; cumulative CPU correctness, not production selector/M6/stage/performance qualification",
+  "final_run": "checks-01",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_patch_sha256": "be41bfcc6a87e20ad79f1772796e8572ed611187d7cb7f784b10499974d3c224",
+  "test_processes": 34,
+  "by_architecture": {
+    "arm64": [
+      2179,
+      0,
+      0
+    ],
+    "x86_64": [
+      2179,
+      0,
+      0
+    ]
+  },
+  "totals": [
+    4358,
+    0,
+    0
+  ],
+  "new_physical_accounting_cases_per_architecture": 81,
+  "source_unchanged_after_matrix": true,
+  "all_required_records_passed": true,
+  "architecture": {
+    "manifest_entries": 21,
+    "ownership_facts": 22,
+    "runtime_census_groups": 16,
+    "indexed_apis": 1514,
+    "call_edges": 14484,
+    "external_intrusion_files": 19
+  },
+  "reachability_self_tests": 6,
+  "allocator_summary": "allocator-summary.json",
+  "prepared_accounting_handoff": true,
+  "production_selector_handoff": false,
+  "stage_or_performance_qualification": false
+}

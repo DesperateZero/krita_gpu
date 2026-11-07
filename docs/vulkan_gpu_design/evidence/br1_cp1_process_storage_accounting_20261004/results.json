@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-10-04",
+  "scope": "CP1 process/native storage reserved-live-peak-physical-free accounting",
+  "product_commit": "02a92eb98d4ccfa02462f59ec04999bf7873dedb",
+  "product_parent": "e1c328ce8d275f32d2a53f2b2782c09a890016ed",
+  "diff": {
+    "production_private": {
+      "insertions": 117,
+      "deletions": 16
+    },
+    "test": {
+      "insertions": 77,
+      "deletions": 12
+    },
+    "total": {
+      "insertions": 194,
+      "deletions": 28
+    }
+  },
+  "source_sha256": {
+    "libs/image/pagestore/KisMutationStorage_p.h": "48e358375777e4f2d5b5ecc47a4237fbd47d444d5ffcf4469bddd1f79cb10ca3",
+    "libs/image/pagestore/KisPageStoreReclamation.cpp": "46d4d9e8b6eb61e036e5b4985cbd11cd45338ec826844c13a74fb2926653febb",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "b02b6edac29354b752568dd2698bb88b086b03c649110c03af54a4cf936cee2f",
+    "libs/image/pagestore/KisPageWriteCoordinator_p.h": "e6786428ca53f813c534421ae1286df9230549cc2a46a65a539da6d11ca9c28e",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "038612cd29b08320cfece6cade9bcae18cc90dc904677187a6c540fed16d9eb3"
+  },
+  "binary_sha256": {
+    "_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "11c6e09ead64e6dd54b967afd445c76ca18257d28945bbc7acb4dd9c8a432c27",
+    "_build-br0-cpu/bin/KisPageStoreReferenceTest": "d9c0a8c78ed6f147f443d43094b64be5d9f3661fbbe71bdd1deb7bfe1461718d",
+    "_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "c76d963a93593f9d9906f183c952d019e12c083f02d6ec79d060261f7ccb2e54",
+    "_build-br0-cpu/bin/KisCompletionRegistryTest": "769a9bf01c82d10c2d93ef6365fa763f177f96619fdf2b47cc88bfffb0158344",
+    "_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "bdbee618c04a90a4e2f5bc7e37c7e3c62d7e43a81740aeed8b8448f561250001",
+    "_build-br1-tsan/bin/KisPageStoreCpuMutationTest": "83e732a827b367774e9f91bd218ef04ecf0b6cba73cba10d1b23d1e086b67b6d",
+    "_build-br1-tsan/bin/KisPageStoreReferenceTest": "49073aa42e7152342057481dd94fc05e7d66cdc3de702cf2504c6a8dd10ae619",
+    "_build-br1-tsan/bin/KisPageStorePhysicalClaimTest": "d73d7d7c126fd63246cf1b6e1572f33c18fb07d91bc7508d0adc20fff212bbbd",
+    "_build-br1-tsan/bin/KisCompletionRegistryTest": "758b8474e0421f6451e1ed2df1393bd9ca695f69c33085db39c0b2e70ea5b18c",
+    "_build-br1-tsan/bin/libkritaimage.21.0.0.dylib": "3488a71d7512291ce23b82080258a0dd575ce8d247df19a7256689aed789fe51"
+  },
+  "runs": {
+    "baseline-failure-arm64.log": {
+      "sha256": "fe55a9021990e56aa445179d3298612b2139cabac6991d82283e2705a566e801",
+      "totals": [
+        "Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms"
+      ],
+      "fail_marker": true,
+      "tsan_warning": false
+    },
+    "targeted-normal-arm64.log": {
+      "sha256": "f14430344ae0595fec42415baf9f007469af5c7ac8271b9a67dfcb1d9f112086",
+      "totals": [
+        "Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 7ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "targeted-normal-x86_64.log": {
+      "sha256": "ea788f51fc7c1cd7bab4b8c01cb3964d0d42ed6cdf2e7ad45d8a95334bf27835",
+      "totals": [
+        "Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 13ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "targeted-tsan-arm64.log": {
+      "sha256": "e747aeabba742ef21e9bf4ea1912f1764e6e0ee05f47af7ff1dda06e9c3ce7d0",
+      "totals": [
+        "Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 140713ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "full-normal-arm64.log": {
+      "sha256": "90197fd5f0f1deb3a860fb794225c655fc6aaac9d8455b8990ad7a229afe7595",
+      "totals": [
+        "Totals: 1389 passed, 0 failed, 0 skipped, 0 blacklisted, 9487ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "full-normal-x86_64.log": {
+      "sha256": "0fb5f28e56ee2ad1a18ae0d887d1179e11e4cab39946d4b263d0fe636ea79a1b",
+      "totals": [
+        "Totals: 1389 passed, 0 failed, 0 skipped, 0 blacklisted, 10663ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "full-tsan-arm64.log": {
+      "sha256": "5afe32f824d3d763117ceeef1e0e3d24a526cb2af731878c3f8547185716865b",
+      "totals": [
+        "Totals: 1389 passed, 0 failed, 0 skipped, 0 blacklisted, 232555ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "core-normal-arm64.log": {
+      "sha256": "b11ca520ccf61c25cdbf13c3d8a3e53f6f556d376486dc0cba1e9a9ed877ec6a",
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 7489ms",
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 38ms",
+        "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 411ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "core-normal-x86_64.log": {
+      "sha256": "2d8efcb6aa7e09c0a8a4317da6f40bc819240400856bd74ca6395b1f6da97b97",
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 8265ms",
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 46ms",
+        "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 610ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    },
+    "core-tsan-arm64.log": {
+      "sha256": "cda8816171ddb721b0fe50ab359707439f1ca4a31005480cf5dab3879cb56d51",
+      "totals": [
+        "Totals: 790 passed, 0 failed, 0 skipped, 0 blacklisted, 214632ms",
+        "Totals: 397 passed, 0 failed, 0 skipped, 0 blacklisted, 762ms",
+        "Totals: 87 passed, 0 failed, 0 skipped, 0 blacklisted, 10135ms"
+      ],
+      "fail_marker": false,
+      "tsan_warning": false
+    }
+  },
+  "commands": {
+    "targeted": "./KisPageStoreCpuMutationTest nativeControlExcludesExternalThreads processStorageReportsReservationSeparately processStorageRejectsAndRetains runtimeStopsAtCapacity",
+    "full_cpu": "./KisPageStoreCpuMutationTest",
+    "core": "KisPageStoreReferenceTest; KisPageStorePhysicalClaimTest; KisCompletionRegistryTest",
+    "architectures": [
+      "normal arm64",
+      "normal x86_64",
+      "TSAN arm64"
+    ]
+  },
+  "notes": [
+    "The baseline failure is expected and comes from the parent behavior that reported an uncommitted process reservation as live.",
+    "All final logs have zero failed tests; TSAN logs contain no ThreadSanitizer warning.",
+    "Long manager and application pressure suites were already complete for the unchanged paths and were not repeated.",
+    "This delivery closes the process/native transition, not the complete all-owned pipeline hard bound."
+  ]
+}

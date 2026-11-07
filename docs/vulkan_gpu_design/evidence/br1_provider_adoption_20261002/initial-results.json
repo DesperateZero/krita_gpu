@@ -1,0 +1,48 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "providerAdoptionPreparationRejectsBeforePayload",
+      "providerLeasePreparationPreservesOriginalPin",
+      "providerMemoryUsageWaitsForOriginalTransition",
+      "providerCompletionPreparationRejectsBeforePayload",
+      "providerRetirementUsesPreparedCompletion",
+      "domainJournalCommitsAtCapacity",
+      "immutableAliasSource"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.788,
+    "totals": [
+      "Totals: 15 passed, 0 failed, 0 skipped, 0 blacklisted, 30ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "providerAdoptionPreparationRejectsBeforePayload",
+      "providerLeasePreparationPreservesOriginalPin",
+      "providerMemoryUsageWaitsForOriginalTransition",
+      "providerCompletionPreparationRejectsBeforePayload",
+      "providerRetirementUsesPreparedCompletion",
+      "domainJournalCommitsAtCapacity",
+      "immutableAliasSource"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.366,
+    "totals": [
+      "Totals: 15 passed, 0 failed, 0 skipped, 0 blacklisted, 35ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

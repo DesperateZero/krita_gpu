@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "source_docs": "ca5ddcfc32eba733d7b1d0039517aa2b5a91a8d6",
+  "cpu": "0fd96f2fa3f24e70c1652ea17b8cc87192acf6d2",
+  "personal_docs_parent": "3b940b4f885f673c8e491a02ef561b829f92fc98",
+  "scope": "Tracked and nonignored untracked evidence paths at preflight. Logical file bytes, including duplicate content. Outside worktrees and prior archives have separate inventories.",
+  "counts_bytes": {
+    "detached": {
+      "untracked": [
+        102495,
+        17665384791
+      ],
+      "tracked": [
+        48698,
+        5483939337
+      ]
+    },
+    "retained": {
+      "tracked": [
+        3009,
+        254495745
+      ],
+      "untracked": [
+        837,
+        49340280
+      ]
+    }
+  },
+  "cold_path_index": {
+    "file": "evidence-paths-pre-native-20261107.jsonl.gz",
+    "sha256": "6fb9881be571c23f2e3d1afd496b68f8a83317e48f79e7f3f1df5b759a17d313",
+    "columns": [
+      "relative to evidence",
+      "bytes",
+      "source (git tree / untracked tar member with original repo-relative name)",
+      "Git mode",
+      "Git SHA-1 blob / member SHA-256"
+    ]
+  },
+  "cold_storage": [
+    {
+      "name": "docs-history.bundle",
+      "bytes": 2664219186,
+      "sha256": "cebcdede6c6d424ca42df241d14a5adbe3ae0f58dc30dd98431aeb2347fd008e"
+    },
+    {
+      "name": "untracked.tar.zst",
+      "bytes": 1545042114,
+      "sha256": "74148c882993bff875d3affdbe202e5bc29fd6014254ec56f17cfcceec8a1bd4"
+    }
+  ],
+  "recovery": "Docs history bundle requires the personal docs parent. Untracked tar is independently readable with zstd and tar; verified every original file and mode before detaching. Both cold objects are local.",
+  "review": "Current design and CPU replay, M5 frozen package, referenced contracts and independent topic receipts were retained. A cold path is a storage decision, not a verdict on the validity of every result in the original package. The source tree and before/after snapshot preserve full frozen reports and failures.",
+  "previous_cleanup": "cleanup-pre-m6-b1c2f6129.json"
+}

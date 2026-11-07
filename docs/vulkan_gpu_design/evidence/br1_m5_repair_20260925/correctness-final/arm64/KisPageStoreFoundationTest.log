@@ -1,0 +1,33 @@
+********* Start testing of KisPageStoreFoundationTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 21.0.0 (clang-2100.1.1.101)), macos 15.7
+PASS   : KisPageStoreFoundationTest::initTestCase()
+QINFO  : KisPageStoreFoundationTest::layoutBaselineDoesNotGrow() BR1 layout baseline: KisReplicaHandle=128/8 KisPageTransition=440/8 KisPageAllocationDescriptor=216/8 KisPreparedPageProof=176/8 KisCpuWriteGuard=48/8
+PASS   : KisPageStoreFoundationTest::layoutBaselineDoesNotGrow()
+PASS   : KisPageStoreFoundationTest::pageStoreFailsClosedAtTiles3Boundary()
+PASS   : KisPageStoreFoundationTest::requestDescriptorsRejectAmbiguousSelectors()
+PASS   : KisPageStoreFoundationTest::accessRequirementSeparatesUmaConsumers()
+PASS   : KisPageStoreFoundationTest::leaseCapabilitiesAreMoveOnly()
+PASS   : KisPageStoreFoundationTest::stateMachineCommitsPreparedGeneration()
+PASS   : KisPageStoreFoundationTest::stateMachineAdoptsSynchronousPreparedWriteAtomically()
+PASS   : KisPageStoreFoundationTest::stateMachineSeparatesCommitAndIdleHistoryRetirement()
+PASS   : KisPageStoreFoundationTest::stateMachineCommitsLatestTransactionGeneration()
+PASS   : KisPageStoreFoundationTest::stateMachineDiscardsOnlyIdleHistoricalVersions()
+PASS   : KisPageStoreFoundationTest::stateMachineRestoresHistoricalCommittedGeneration()
+PASS   : KisPageStoreFoundationTest::stateMachineVirtualDefaultRemainsExactWithoutAllocation()
+PASS   : KisPageStoreFoundationTest::stateMachineVirtualDefaultWriterHasLogicalBeforeImage()
+PASS   : KisPageStoreFoundationTest::stateMachineHistoricalDefaultDoesNotChangeWriter()
+PASS   : KisPageStoreFoundationTest::stateMachineCancelPreservesPublishedGeneration()
+PASS   : KisPageStoreFoundationTest::stateMachineRejectsStaleCompletionAndAba()
+PASS   : KisPageStoreFoundationTest::stateMachineLeaseBlocksRetirement()
+PASS   : KisPageStoreFoundationTest::stateMachineHandoffAndFailurePreserveAuthority()
+PASS   : KisPageStoreFoundationTest::stateMachineAbortDropsOnlyPreparedGeneration()
+PASS   : KisPageStoreFoundationTest::stateMachineCapturedVersionRetention()
+PASS   : KisPageStoreFoundationTest::stateMachineRandomSequencePreservesInvariants()
+PASS   : KisPageStoreFoundationTest::ssdProviderDoesNotAdvertiseDurabilityBeforeBr3()
+PASS   : KisPageStoreFoundationTest::evaluationGraphContractIsNotLayerBound()
+PASS   : KisPageStoreFoundationTest::evaluationGraphRejectsCycles()
+PASS   : KisPageStoreFoundationTest::evaluationCapabilityRequiresExactOperation()
+PASS   : KisPageStoreFoundationTest::evaluationFoundationFailsClosedBeforeBr4()
+PASS   : KisPageStoreFoundationTest::cleanupTestCase()
+Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 3ms
+********* Finished testing of KisPageStoreFoundationTest *********

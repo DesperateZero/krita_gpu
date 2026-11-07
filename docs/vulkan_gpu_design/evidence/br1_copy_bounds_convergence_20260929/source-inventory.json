@@ -1,0 +1,569 @@
+{
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "182a7d820fff8003c50fdbb23b84be44be79b4f5549eb06ed8cc40c6d46aca1a",
+  "files": [
+    {
+      "path": "build-tools/ci-scripts/check-pagestore-architecture.py",
+      "sha256": "74e22bdad3d5617cce08642d7ca62d566ade1f1c9528311b84f5c373c9507c3c"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/README.md",
+      "sha256": "5e12729d87fa77830eb25c951da4f422d436ebf779e20a39ad52dfa77d583dac"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+      "sha256": "0a53d87ae43f599ed15633246a94dc2a9e874284e712a2901d96f9682fc3a7af"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+      "sha256": "41986b9443df0cde079e208f1f2f8b71eee5c01f93f3acc6537b0f84eac6f7f4"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "sha256": "5fdb2111939fe5e36ec272591ef1caad5e1171d1df7eef4d2946bb8af02e4cbf"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/runtime-census.json",
+      "sha256": "475dfb6cf75c0f77413719b36f37b50228ff55c04a1098086f3a0f88dc783f02"
+    },
+    {
+      "path": "build-tools/ci-scripts/pagestore-audit/state-ownership.json",
+      "sha256": "58cb93d7bd4465c258b99093b0ead5c39ec5eed723391489de2fe6fdcfb68c08"
+    },
+    {
+      "path": "libs/image/3rdparty/lock_free_map/concurrent_map.h",
+      "sha256": "e1e11ade7b22be0c0ba8af1cbd8895548a54f604c4416dd9209fa6ae3f6cf224"
+    },
+    {
+      "path": "libs/image/3rdparty/lock_free_map/leapfrog.h",
+      "sha256": "30f5be74cc5224a23ae26c6a50506089e954f64ea280b8e2f9d9a53896f18d71"
+    },
+    {
+      "path": "libs/image/3rdparty/lock_free_map/qsbr.h",
+      "sha256": "037188e6c1ce12547b68be4449368958b2069c38b0161cd2835c7fd5b9217cb5"
+    },
+    {
+      "path": "libs/image/3rdparty/lock_free_map/simple_job_coordinator.h",
+      "sha256": "54567f32192c457415b043a85086c2d730a0f5483767ccac51e740d936976d59"
+    },
+    {
+      "path": "libs/image/CMakeLists.txt",
+      "sha256": "27e474bfaecdddc17df42897f54a496595be804ff69ebe63a0be772f43696157"
+    },
+    {
+      "path": "libs/image/KisStrokeJobFailureContext.cpp",
+      "sha256": "6ce9684fa7036fb41c41d00507a1addca29223505affe789b94435958a445e74"
+    },
+    {
+      "path": "libs/image/KisStrokeJobFailureContext.h",
+      "sha256": "492de5537bf693fe48bd649d4ea08efb140fd88745437b42ee8bb7a9e174c3c7"
+    },
+    {
+      "path": "libs/image/KisStrokesQueueMutatedJobInterface.h",
+      "sha256": "cc3f4673985812d4dfc80df29021450025e8353e3055805f5954561834fa98e3"
+    },
+    {
+      "path": "libs/image/brushengine/kis_paintop_utils.cpp",
+      "sha256": "28c719a5c8ca4e022dc0559d8a86560fc1ae9901a012527c1091e49f1d87b0e8"
+    },
+    {
+      "path": "libs/image/brushengine/kis_paintop_utils.h",
+      "sha256": "bdd7abb768bded56405b93403d7b0d07994f86cdda5f53f039b8e2a1eccac0d2"
+    },
+    {
+      "path": "libs/image/kis_paint_device.cc",
+      "sha256": "7b18a20867a361e3720acd0c87c333fbfcafda03783fcdd3f2b3ca099c13a523"
+    },
+    {
+      "path": "libs/image/kis_paint_device.h",
+      "sha256": "8a1396607574717a1e0d37b689a5ac3fc72c83fd2bfabfdd641b7c220b715cb7"
+    },
+    {
+      "path": "libs/image/kis_paint_device_strategies.h",
+      "sha256": "c315b214801741a5fc36c88ac51213435704671651b00f55cac13568ba295f4e"
+    },
+    {
+      "path": "libs/image/kis_painter.cc",
+      "sha256": "629772d9560199ac7f058d3acf4dbbdbb811a7921f60b9888db878046ff84be1"
+    },
+    {
+      "path": "libs/image/kis_painter.h",
+      "sha256": "be239c5a0e8ecd5cade3bdecdb8f4761c14d52b8d59149c8485e4672fc387202"
+    },
+    {
+      "path": "libs/image/kis_painter_blt_multi_fixed.cpp",
+      "sha256": "633e12d0188f05e413b21c447ac98f1eec6482716932876d23a527444a61c4c3"
+    },
+    {
+      "path": "libs/image/kis_painter_p.h",
+      "sha256": "dad8689090d01dd9667ccce4d9bc4a65f33598a3c0484dd50fe10bafe976053b"
+    },
+    {
+      "path": "libs/image/kis_simple_stroke_strategy.cpp",
+      "sha256": "142e9acf48848ddf1f6bd782f414dba581181355b8b3e7231b9700e45bb49cb3"
+    },
+    {
+      "path": "libs/image/kis_simple_stroke_strategy.h",
+      "sha256": "adbf313b67da6b02f1d40158ca62d983301bbfa214df4f61db8018f816c2c886"
+    },
+    {
+      "path": "libs/image/kis_stroke.cpp",
+      "sha256": "3606a4a3e1fdb9d953a19f279421a02ba30850c42bb43d50be460ff719894cad"
+    },
+    {
+      "path": "libs/image/kis_stroke.h",
+      "sha256": "16a01a558703785b15101e37ec8a743a3958d10b448a05fc118a58cbf12b82e1"
+    },
+    {
+      "path": "libs/image/kis_stroke_strategy.cpp",
+      "sha256": "f3f8af760c9d156f1ce529a9c8cbb76a81f0191b469220a3da9866673faab9f3"
+    },
+    {
+      "path": "libs/image/kis_stroke_strategy.h",
+      "sha256": "76883fad9356a7b2ac27435ca9683680d3f77bbac7f69f1751837ed9a819b18d"
+    },
+    {
+      "path": "libs/image/kis_strokes_queue.cpp",
+      "sha256": "371c733f80dad0fde28e6571ad18ea753ce3d20c6b5cfa9e1b1cdc05df8e3eda"
+    },
+    {
+      "path": "libs/image/kis_strokes_queue.h",
+      "sha256": "19b6f930d7fe00612de6198ac381cbc6576904db363a1baa28cd5f9e90643b14"
+    },
+    {
+      "path": "libs/image/kis_transaction.h",
+      "sha256": "0ba2c0692b650b3a62aeb5a3174cdd63eeabf7f1c664e49f4cadf7b8d5edc738"
+    },
+    {
+      "path": "libs/image/kis_transaction_data.cpp",
+      "sha256": "488ec356664c6e1e65b378f3f3276528ccebb23f240c757e496701f4267ce7cf"
+    },
+    {
+      "path": "libs/image/kis_transaction_data.h",
+      "sha256": "e3d465689634c37350011e0866b6c169d22a2ba83414ce432c62651177c315d1"
+    },
+    {
+      "path": "libs/image/kis_update_scheduler.cpp",
+      "sha256": "0a4451562cf8dad41cea27f45bad654aedcb6ea5ebacf22bd7010af226b766a7"
+    },
+    {
+      "path": "libs/image/pagestore/KisCompletionRegistry.cpp",
+      "sha256": "1d100ebfcc4ef127262f0a7b71ab7c03f84fdbaf971971d154b9bf5da92521e0"
+    },
+    {
+      "path": "libs/image/pagestore/KisCompletionRegistry.h",
+      "sha256": "5ffa6f66506898d6250edd4cebfab87a5f7c2f4d8bfeaf1e00be266819082ffb"
+    },
+    {
+      "path": "libs/image/pagestore/KisCpuResidentBinding.cpp",
+      "sha256": "dafa66a6c7a55c0b091c811368c58fa319fcea158df840365fbae840e29fe2f5"
+    },
+    {
+      "path": "libs/image/pagestore/KisCpuResidentBinding_p.h",
+      "sha256": "d8b4c0abc19b00c979f24a0b7cd2648a4ff88a2991aa43dee92d37ba54b45129"
+    },
+    {
+      "path": "libs/image/pagestore/KisImageEpochReferenceModel.cpp",
+      "sha256": "37e196780638df48221d2f6f87731291e433e27f4402daf3291aaba9f509707d"
+    },
+    {
+      "path": "libs/image/pagestore/KisImageEpochReferenceModel.h",
+      "sha256": "6954e66ac962b43e46e923fb25ccb5d0716c89a0cc23c2f7f2cae4ca1d97215a"
+    },
+    {
+      "path": "libs/image/pagestore/KisMutationStorage_p.h",
+      "sha256": "6da3e91b9124c217928fcb2b60b298a661c27651f9a34c00ce2ba39903b4e029"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageHistoryCollector.cpp",
+      "sha256": "525250eba0ea8a815cd0e9b3cd676fc18d1d561425baa08559f6da0ecfaf3cf0"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageHistoryCollector_p.h",
+      "sha256": "8f199cbf1be3119e0c8e2ed72bf1dbb4c6435b131af9aaf19c52a72bad797b81"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataArena_p.h",
+      "sha256": "71fe337aeabe6c30ad25084f65e273192d26d453c141cdcb1ba8b488d643d371"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.cpp",
+      "sha256": "48cbd35b9fddcaec44eec054718a4b1da9ea3c5baa4f9bba695846e86e36f6de"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator.h",
+      "sha256": "670340736e474675bce515ffb5227682556b8f418666dc7bb53eebfc58fb8425"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageMetadataCoordinator_p.h",
+      "sha256": "c01ed443253d3a98ba2f9b14f548910f82bcf1d04b54357e632b716461255b06"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageOwnerLedger.cpp",
+      "sha256": "614d4f6a632e3094df438cdc2baf7b1514a4443456d28e0196a4cad3616b21ef"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageOwnerLedger.h",
+      "sha256": "08bfd0d902e08b69845ca33e8b78779d108bc23587abd37a204bce80b793debd"
+    },
+    {
+      "path": "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+      "sha256": "d10088dfa04c4bb47f4d1f81963197ae89faa56d7a53f53d36b444b1ae0fec54"
+    },
+    {
+      "path": "libs/image/pagestore/KisPagePublicationCoordinator_p.h",
+      "sha256": "400f009c80f8cc8daf5e50bf82c094613ac0ee2cfdb35a0b6272383101cfeada"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator.cpp",
+      "sha256": "3c116422ae6d2d626aa3f41c73b398246b67ca228279a30d77e6df0765c34d06"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadCoordinator_p.h",
+      "sha256": "d3a963132b47d941aa860106291a9a694c70bf87b7ad75611c7446100ce1134a"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadiness.cpp",
+      "sha256": "4453232545428d44989c20c5c8c1ce4f0c394623dc2ad24fe742e1bebd0b4a23"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReadiness_p.h",
+      "sha256": "861f52f8b2601e5cc7a7b371722e154dc03465f483f9429a5643698412ef0f60"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReplicaProvider.cpp",
+      "sha256": "e1cc5facf28013bda300beda51475abc9a1c772b827ddf87d858485298c07800"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageReplicaProvider.h",
+      "sha256": "d7841533be9ea5ff1dce94f4dffa85e5efae1fb545c47f08b98498ab4b9b70b8"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageRetirementQueue.cpp",
+      "sha256": "5cf0b638494ff71e839fac1ab356af3e94b1b5c13f680bbddc092c661b75b4b2"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageRetirementQueue_p.h",
+      "sha256": "a54924d18b36cffba25a1695fa821740ac658de4b5f9a5fbf3984c59471245ac"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStateMachine.cpp",
+      "sha256": "41825c8a9582a6caa448cad34617c60013152b779c04165691bac93af1481350"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStateMachine.h",
+      "sha256": "9e3a2086cbcb763f3ded751c5f105e9503ec97c303ed34dd317b8b0204b5c4f5"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "sha256": "4f6001a24b8764653ca36913b040394df52ba62175c11415b530938173cd2cff"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStore.h",
+      "sha256": "17ca61a60e0b31db7f4b1888fcd3585275a940549744a34669c6b4ee3e63a7cd"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreDiagnostics.cpp",
+      "sha256": "e072a119214cabdb975fa1f9c7421ed407a597dd61e2e87724c10aefeafaf18d"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreDiagnostics_p.h",
+      "sha256": "ee5b7326cd572396cabce9fb33712ae8fb82ece64373809d9ee3694682747ad2"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreReclamation.cpp",
+      "sha256": "25478f25c8c947a2a6e1df49075e439e06c837b1a0d3300de280542c31e10a9e"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreReclamation_p.h",
+      "sha256": "d4facfac18f9eed8deca512a2ac8b1d2daa64627348375fba72d281cd4f208ac"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreTypes.h",
+      "sha256": "5b7907ecdb3430be9c16c88cdc6cb152d2af338534c945b3aff5f8f25b4bb3af"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "sha256": "42176e64cf8c5b831744364c1ef8fcf72896eafd56291b362011d84e6f2a3d0a"
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "sha256": "229d86d457c9951ca1db17e986a86763d87c13ef3fe6c1036c260da5b2beff1f"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "sha256": "191dda3c2da426191e63437ce4d65ad2894c41ea7e4bfeb3e9c9b03c10e3394e"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+      "sha256": "2efc53af80bbb4a1e0453eb1f927bb8a7ebe265bdb720573347ddc45e864c364"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiles3PageReplicaProvider.cpp",
+      "sha256": "d094dce6b954ab536d523366819c678b45be521f121a5698be7e5fb82f209ddf"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiles3PageReplicaProvider.h",
+      "sha256": "994721f7f5a676d73869733a9624257edebfd6addef68c171813d31d97247331"
+    },
+    {
+      "path": "libs/image/tests/KisCompletionRegistryTest.cpp",
+      "sha256": "7c471429ad91ffd9da3a43675b680de8344e08d5ca5e0e58991e6e84eb58e8e0"
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "sha256": "06c59ad33016604b939618001b9d61a5ae90d3255747e0a67cdc8148c2e23f81"
+    },
+    {
+      "path": "libs/image/tests/KisPageStorePhysicalClaimTest.cpp",
+      "sha256": "7ac666231cded987ed136d55fbafa4372af2ed4e29b82074cf788b03e903d89a"
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "sha256": "828abf0849f04a89e609e6024f1b2e7b29d9f0e6a08b06dcc69471428de8e983"
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreResidentReadTest.cpp",
+      "sha256": "148a4e04858be1d15c03fc91db22a2c6aab0d27b2b7bcad0be0987fbc7bc8741"
+    },
+    {
+      "path": "libs/image/tests/kis_paint_device_test.cpp",
+      "sha256": "495efc0aeebbaeb8678d493cfd98866b8f9a924783514e64978ed55150f516c5"
+    },
+    {
+      "path": "libs/image/tests/kis_painter_test.cpp",
+      "sha256": "404501537e36d53937e1f8938da94757460de7f94416e96e183a4b9aeaaf76ac"
+    },
+    {
+      "path": "libs/image/tests/kis_painter_test.h",
+      "sha256": "61e1b78554e111660683b9e2428b57ce66f1f1ad8a2a7c0eabd6135ff21d1340"
+    },
+    {
+      "path": "libs/image/tests/kis_simple_stroke_strategy_test.cpp",
+      "sha256": "2c6e9e42ce5cf2544cbcda19f661565164e12737b89a3f3dd6ea68a7a733ac2d"
+    },
+    {
+      "path": "libs/image/tests/kis_simple_stroke_strategy_test.h",
+      "sha256": "90317ee88f740cb45f2ffb7508e9314a609233a16d7c0750b5f16cdcc31defee"
+    },
+    {
+      "path": "libs/image/tests/kis_stroke_test.cpp",
+      "sha256": "35d24be74b3dbfacdf3cf31858d7122b881098377ce5a20e127398c6bf20f8f5"
+    },
+    {
+      "path": "libs/image/tests/kis_stroke_test.h",
+      "sha256": "ebc59439f5c5c44ce0f6a28eaf1cffab0511886e29a5f5d0361a6de3cb1e2792"
+    },
+    {
+      "path": "libs/image/tests/kis_strokes_queue_test.cpp",
+      "sha256": "a635b51282fbf8d1ba9a360fccd22c6babde2079c6b9d193b201b3258457cb6d"
+    },
+    {
+      "path": "libs/image/tests/kis_strokes_queue_test.h",
+      "sha256": "4d50704c8cac81546612fbbdfa22038229e44a228ddd07b842e14c68b315f4c3"
+    },
+    {
+      "path": "libs/image/tests/kis_transaction_test.cpp",
+      "sha256": "03c3d9362cc4d50015f98ba3d72a597b92433246541f449d68ee519814164387"
+    },
+    {
+      "path": "libs/image/tests/kis_transaction_test.h",
+      "sha256": "c0a19f01c824d4773f268b22e5d5df19bac4b1cc2aae51401f3c91cb10ecb282"
+    },
+    {
+      "path": "libs/image/tests/pagestore/KisCpuPageReplicaProvider.cpp",
+      "sha256": "1779fa0df42010d5b30077f076ebdbcb9d6aca7defdecece94c33d369f5453e6"
+    },
+    {
+      "path": "libs/image/tests/scheduler_utils.h",
+      "sha256": "4116cb8b365748863c33a0eb713a53c78623a29a9b94f4cf1ff4c269b2f4b7ad"
+    },
+    {
+      "path": "libs/image/tiles3/KisTilePageStoreBridge.h",
+      "sha256": "740d7e7e0b2123e8032e2b786cf9b0b43422e3d06f0bb001a442d4e0ae0d1869"
+    },
+    {
+      "path": "libs/image/tiles3/KisTiledExtentManager.cpp",
+      "sha256": "22fa4ab7162b585df9a71304d874d8fdcaec5aa44438df702ba2cfc90cb10fce"
+    },
+    {
+      "path": "libs/image/tiles3/KisTiledExtentManager.h",
+      "sha256": "09fcd36eaf081f5d570e36a961561de5a0666d115b5f0b038c4df7100d0bfa93"
+    },
+    {
+      "path": "libs/image/tiles3/kis_base_iterator.h",
+      "sha256": "66f11960a442e8e1db91070922b952c6c669f6a40bac3e4e7ddc77ca27c6ae2c"
+    },
+    {
+      "path": "libs/image/tiles3/kis_memento.h",
+      "sha256": "782260cd05b945961716a9c81ded443e363177a43fd6cf8102baad22a2296885"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile.cc",
+      "sha256": "4fcccf3a2d942f4155ac3605ab8dc26258ca3be8d85557e7c206b26ecc1874cc"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile.h",
+      "sha256": "1103b28aca95a5d3a12d1b857cd008e518fc05bfecb8405f638fdd41a2ac2a72"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_data_store.cc",
+      "sha256": "8790e508745fca19b437589cc419241bd4a69d5512564fb28890ee03b43b5df2"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_data_store.h",
+      "sha256": "558b6423d46a19c86eab58af1c350f261005578f238af0b9228ac4d66d53e13b"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_data_wrapper.h",
+      "sha256": "245a56578d7c7249e201369c85f18509bbe9c9125a6f1f3162cd2b22e340035d"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_hash_table.h",
+      "sha256": "358413b090a9618f55eb289fdad3335cd177e79335663a43dc5b270aa59d87de"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_hash_table2.h",
+      "sha256": "7736ea4b57e55549be0a635431415914fc33ae9589603a1afcca016245b903b7"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_hash_table_p.h",
+      "sha256": "86cd984e0661dc6ef6502fba3fdcca44627f6c3b05fffc2e5d910a081de0cc49"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "sha256": "8573f1ec40fc7c8b6fce7581ee73d910069cf76fb80a9b6b73e23272cd6aa839"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.h",
+      "sha256": "78e6bf3d1e0392afdd16e9a2fa4802f24ee6f4c0cceff864cbf9d215f1061c41"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager_p.h",
+      "sha256": "921eeb1cd06670bf3604b6f3171d4f4beaeef63d1c4a888a016ce47adc059460"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_lockless_stack_test.cpp",
+      "sha256": "7090e1919ec93c44bee5ed4549ae960f723ddf9e131887055dbedc6ab459dc90"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_lockless_stack_test.h",
+      "sha256": "c2cedb8b819b737652543eacbf679925d584cbff3e572e3d9b85060be930eeeb"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "sha256": "d9913a40f8e92f130100160e6313433b897f07020584fd292e7d067c8a4aeadd"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.h",
+      "sha256": "13efab4bfac29add77a5d331cdcb5c28fd0aea6200a3bdd24e1a02c0119aeeb7"
+    },
+    {
+      "path": "libs/pigment/CMakeLists.txt",
+      "sha256": "ea0a76f2841abcf6cc8fd9c28927e23566f874ae104fc05fd2bd2025a66f410a"
+    },
+    {
+      "path": "libs/pigment/compositeops/KoOptimizedCompositeOpAlphaDarken128.h",
+      "sha256": "8a39a80a14a94b172dfe5ea81fd63f36afe8096f819087cefe86ccab363d6916"
+    },
+    {
+      "path": "libs/pigment/compositeops/KoOptimizedCompositeOpOver128.h",
+      "sha256": "1f77e4374f23907614c76686084fe1d8126788bafc3c736ee416e768f4e7ec6e"
+    },
+    {
+      "path": "libs/pigment/compositeops/KoOptimizedCompositeOpOver32.h",
+      "sha256": "6fc4833c1119c61d003f02df3a7052cb98826ef018d73aa17669ac1c175df6b4"
+    },
+    {
+      "path": "libs/ui/tests/CMakeLists.txt",
+      "sha256": "a00912f820f1f53e0e2537d033846dfc265b511ebd7af1a9bc085e02dba678a6"
+    },
+    {
+      "path": "libs/ui/tests/KisPainterStrokeCompletionTest.cpp",
+      "sha256": "3e1e5c1772e08e58988ccb9ec7b6a4d807011e549ef99cd9c9a2953240c2a9fd"
+    },
+    {
+      "path": "libs/ui/tool/strokes/kis_painter_based_stroke_strategy.cpp",
+      "sha256": "bc13249b5b11d03d9232c1b7573feefb4606da70cb688944bf8a9150892af7e7"
+    },
+    {
+      "path": "plugins/paintops/defaultpaintops/brush/kis_brushop.cpp",
+      "sha256": "9c1bbe9dde8ff6e0a980f4a58a9287fe3b0c07c4f6239b1a0df2953091eed4eb"
+    },
+    {
+      "path": "plugins/paintops/defaultpaintops/brush/kis_brushop.h",
+      "sha256": "7b426f3ddf391ee9b5ecb8acb33f776687087226f0ae57fd01334e8facbdac63"
+    },
+    {
+      "path": "plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.cpp",
+      "sha256": "e0a1a1ddf7204d67156382f122156e3ac7b33b3af6e083f24c2787605ba6cbc9"
+    },
+    {
+      "path": "plugins/paintops/defaultpaintops/brush/tests/KisDabRenderingQueueTest.h",
+      "sha256": "5578801d9a21b99f489fa530ca99869c5221c8dea2519112d8339d568b315c9a"
+    }
+  ],
+  "changed_from_adapter_delivery": [
+    "build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+    "build-tools/ci-scripts/pagestore-audit/intrusion-manifest.json",
+    "build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+    "libs/image/kis_paint_device.cc",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+    "libs/image/tests/kis_paint_device_test.cpp",
+    "libs/image/tiles3/kis_tiled_data_manager.cc",
+    "libs/image/tiles3/kis_tiled_data_manager.h",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.h"
+  ],
+  "incremental_changes": [
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+      "added": 6,
+      "deleted": 2,
+      "category": "production"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "added": 5,
+      "deleted": 6,
+      "category": "production"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.h",
+      "added": 2,
+      "deleted": 0,
+      "category": "production"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "added": 71,
+      "deleted": 46,
+      "category": "production"
+    },
+    {
+      "path": "libs/image/kis_paint_device.cc",
+      "added": 12,
+      "deleted": 10,
+      "category": "production"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp",
+      "added": 157,
+      "deleted": 1,
+      "category": "test"
+    },
+    {
+      "path": "libs/image/tiles3/tests/kis_tiled_data_manager_test.h",
+      "added": 4,
+      "deleted": 0,
+      "category": "test"
+    },
+    {
+      "path": "libs/image/tests/kis_paint_device_test.cpp",
+      "added": 6,
+      "deleted": 5,
+      "category": "test"
+    }
+  ]
+}

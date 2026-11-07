@@ -1,0 +1,143 @@
+{
+  "results": [
+    {
+      "arch": "arm64",
+      "sites": 350,
+      "counts": {
+        "qt-post-routine": 1,
+        "exception-object": 82,
+        "exception-tls": 2,
+        "legacy-tile-store": 202,
+        "application-config": 39,
+        "diagnostic-tls": 1,
+        "error-output": 5,
+        "owned-reset-pixel": 1,
+        "caller-output": 1,
+        "format-conversion-temporary": 1,
+        "legacy-memento": 3,
+        "test-callback": 12
+      }
+    },
+    {
+      "arch": "x86_64",
+      "sites": 349,
+      "counts": {
+        "qt-post-routine": 1,
+        "exception-object": 84,
+        "exception-tls": 2,
+        "legacy-tile-store": 201,
+        "application-config": 37,
+        "diagnostic-tls": 1,
+        "error-output": 5,
+        "owned-reset-pixel": 1,
+        "caller-output": 1,
+        "format-conversion-temporary": 1,
+        "legacy-memento": 3,
+        "test-callback": 12
+      }
+    }
+  ],
+  "review_sources": {
+    "libs/image/tiles3/kis_tile_data.cc": "0228f0f05b7e1db98073f089f91ba222670266d8813b7556fdb608c175edb27e",
+    "libs/image/tiles3/kis_tile_data_interface.h": "155f4a35d054092b6931369b7f9b0ce312cbed408286c633472e8bd6cf34548e",
+    "libs/image/tiles3/kis_tile_data_store.cc": "84e607649ed9eb36b02005822703ef6990daf3bd12c7a9e697468443661672ee",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp": "33ec16fb3e5aefaeaa02b7fd1c90afa1d18a0bac3d9e1286d65484927d8c7fa4",
+    "libs/image/pagestore/KisPageStoreDiagnostics.cpp": "b60d6169ed45ee7147e979d5a2dff586853f42ce5fe9fbf8b0c5993c84daaeb1",
+    "libs/image/kis_image_config.cpp": "d0ee51f0a817dc70b737233dc9013be5b3019543bd3ff387f3f2500576a21091",
+    "libs/image/pagestore/KisPageStoreReclamation.cpp": "701ef580a2afc2f17e02e26e5265fdec6184b0f1f2d5c9007361f1ed77c740e7",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp": "e5cd0f6fa91f0574fc259967a0721fe4d8e39d96aaf5452e031fe76cd5588560",
+    "libs/image/tiles3/kis_memento.h": "8743a785d1cd5654208206630c57333406f927861473c1e5cf898a7b6347ceb6",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "947d206e54fb0163a86e69ba039bfaabbcd3111029b429f5717cf490833555b2",
+    "libs/image/pagestore/KisPageStore.cpp": "34eb9bba14299513674555af6003278c76547dd7fb4f6a522928b91802ec4d0a"
+  },
+  "contracts": {
+    "legacy-tile-store": {
+      "owner": "Existing TileData/TileDataStore, cache, pool and swap owners",
+      "evidence": [
+        "libs/image/tiles3/kis_tile_data.cc",
+        "libs/image/tiles3/kis_tile_data_interface.h",
+        "libs/image/tiles3/kis_tile_data_store.cc"
+      ],
+      "conclusion": "Identified existing payload/cache/control owner. Pool retained capacity and aggregate hard bound remain open; no new PageStore fee inferred."
+    },
+    "exception-object": {
+      "owner": "C++ exception runtime",
+      "evidence": [
+        "libs/image/pagestore/KisPageWriteCoordinator.cpp"
+      ],
+      "conclusion": "Exact __cxa_allocate_exception stack, distinct from the allocation it reports. Physical final frees observed; concurrent exception capacity/failure remains open."
+    },
+    "exception-tls": {
+      "owner": "C++ exception runtime TLS",
+      "evidence": [
+        "libs/image/pagestore/KisPageWriteCoordinator.cpp"
+      ],
+      "conclusion": "Exact __cxa_get_globals stack. Runtime/TLS hard bound and last thread exit qualification remain open."
+    },
+    "diagnostic-tls": {
+      "owner": "Enabled diagnostic recorder and dyld TLS",
+      "evidence": [
+        "libs/image/pagestore/KisPageStoreDiagnostics.cpp"
+      ],
+      "conclusion": "Exact dyld TLS allocation reached by enabled recorder. Not audit TLS; diagnostic runtime capacity/last exit remains open."
+    },
+    "application-config": {
+      "owner": "KisImageConfig and application/Qt/OS configuration services",
+      "evidence": [
+        "libs/image/kis_image_config.cpp"
+      ],
+      "conclusion": "Caller and global service identified. Shared native/framework capacity and full process boundary remain open."
+    },
+    "qt-post-routine": {
+      "owner": "Qt post routine registry",
+      "evidence": [
+        "libs/image/pagestore/KisPageStoreReclamation.cpp"
+      ],
+      "conclusion": "qAddPostRoutine array, not a second ReclamationExecutor allocation. Qt global capacity remains open."
+    },
+    "test-callback": {
+      "owner": "Original test fixture callbacks",
+      "evidence": [
+        "libs/image/tests/KisPageStoreCpuMutationTest.cpp"
+      ],
+      "conclusion": "Allocation stack enters fixture/TestProvider callback before the recorded image caller. Test storage, not production owned storage."
+    },
+    "legacy-memento": {
+      "owner": "Original KisMemento default pixel arrays",
+      "evidence": [
+        "libs/image/tiles3/kis_memento.h",
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+      ],
+      "conclusion": "saveOldDefaultPixel/saveNewDefaultPixel storage owned and freed by the original memento. Included in caller/undo boundary; no duplicate PageStore owner."
+    },
+    "caller-output": {
+      "owner": "resolvePagePresence caller QVector",
+      "evidence": [
+        "libs/image/pagestore/KisPageStore.cpp"
+      ],
+      "conclusion": "Prepared candidate becomes the output vector. No retained internal copy; caller output boundary still needs aggregate qualification."
+    },
+    "format-conversion-temporary": {
+      "owner": "configure local QByteArray::number input",
+      "evidence": [
+        "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp"
+      ],
+      "conclusion": "Copied into paid KisPageByteArray and local Qt value freed. Internal temporary Qt capacity remains in runtime ledger."
+    },
+    "error-output": {
+      "owner": "QString error construction in seal/beginWrite",
+      "evidence": [
+        "libs/image/pagestore/KisPageStore.cpp"
+      ],
+      "conclusion": "Constructed error output; not retained page metadata. Temporary/error allocation failure and runtime bound remain open."
+    },
+    "owned-reset-pixel": {
+      "owner": "Mutation Private::Page::resetPixel",
+      "evidence": [
+        "libs/image/pagestore/KisPageStore.cpp"
+      ],
+      "conclusion": "Confirmed uncharged retained QByteArray conversion from paid format. Fix shares the original KisPageByteArray; runtime validation required."
+    }
+  },
+  "complete_CP1": false
+}

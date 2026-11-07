@@ -1,0 +1,1139 @@
+{
+  "processes": 8,
+  "updates": [
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19
+  ],
+  "tables": {
+    "all_observed_stages": {
+      "claim_lock": {
+        "parent": [
+          436,
+          436,
+          450,
+          432
+        ],
+        "candidate": [
+          226,
+          233,
+          226,
+          222
+        ]
+      },
+      "cleanup_activity_lock": {
+        "parent": [
+          412,
+          418,
+          428,
+          408
+        ],
+        "candidate": [
+          225,
+          239,
+          225,
+          221
+        ]
+      },
+      "cleanup_idle_lock": {
+        "parent": [
+          36,
+          36,
+          38,
+          36
+        ],
+        "candidate": [
+          26,
+          26,
+          26,
+          26
+        ]
+      },
+      "cleanup_units": {
+        "parent": [
+          344,
+          344,
+          360,
+          340
+        ],
+        "candidate": [
+          344,
+          342,
+          344,
+          338
+        ]
+      },
+      "compact_fact_version": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          1540,
+          1572,
+          1552,
+          1540
+        ]
+      },
+      "delay_arm": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "delay_cancel": {
+        "parent": [
+          234,
+          243,
+          232,
+          238
+        ],
+        "candidate": [
+          231,
+          240,
+          236,
+          235
+        ]
+      },
+      "delay_notify": {
+        "parent": [
+          198,
+          207,
+          196,
+          202
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "descriptor_hint": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          264,
+          264,
+          264,
+          264
+        ]
+      },
+      "descriptor_search_compare": {
+        "parent": [
+          434,
+          434,
+          434,
+          430
+        ],
+        "candidate": [
+          170,
+          170,
+          170,
+          166
+        ]
+      },
+      "direct_write": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          1056,
+          1056,
+          1056,
+          1056
+        ]
+      },
+      "duplicate_compare": {
+        "parent": [
+          8482,
+          8462,
+          8558,
+          8416
+        ],
+        "candidate": [
+          404,
+          421,
+          406,
+          407
+        ]
+      },
+      "epoch_destroy": {
+        "parent": [
+          261,
+          232,
+          260,
+          214
+        ],
+        "candidate": [
+          233,
+          261,
+          251,
+          228
+        ]
+      },
+      "epoch_drain_lock": {
+        "parent": [
+          275,
+          245,
+          274,
+          225
+        ],
+        "candidate": [
+          68,
+          84,
+          82,
+          84
+        ]
+      },
+      "full_fact_version": {
+        "parent": [
+          1564,
+          1548,
+          1572,
+          1528
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "generic_sequence": {
+        "parent": [
+          1056,
+          1056,
+          1056,
+          1056
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "group_sort_compare": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          2385,
+          2342,
+          2198,
+          2262
+        ]
+      },
+      "growth_filter_compare": {
+        "parent": [
+          5988,
+          5924,
+          6132,
+          5780
+        ],
+        "candidate": [
+          404,
+          420,
+          410,
+          392
+        ]
+      },
+      "install_lock": {
+        "parent": [
+          436,
+          436,
+          436,
+          432
+        ],
+        "candidate": [
+          226,
+          226,
+          226,
+          222
+        ]
+      },
+      "job_completion_lock": {
+        "parent": [
+          173,
+          185,
+          173,
+          176
+        ],
+        "candidate": [
+          168,
+          184,
+          174,
+          177
+        ]
+      },
+      "job_enqueue": {
+        "parent": [
+          225,
+          240,
+          229,
+          231
+        ],
+        "candidate": [
+          225,
+          240,
+          229,
+          234
+        ]
+      },
+      "job_invoke": {
+        "parent": [
+          172,
+          184,
+          172,
+          175
+        ],
+        "candidate": [
+          168,
+          184,
+          174,
+          177
+        ]
+      },
+      "job_notify": {
+        "parent": [
+          177,
+          192,
+          181,
+          183
+        ],
+        "candidate": [
+          39,
+          43,
+          41,
+          44
+        ]
+      },
+      "job_pop_lock": {
+        "parent": [
+          173,
+          185,
+          173,
+          176
+        ],
+        "candidate": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "last_use_notify": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "operation": {
+        "parent": [
+          228,
+          228,
+          228,
+          228
+        ],
+        "candidate": [
+          228,
+          228,
+          228,
+          228
+        ]
+      },
+      "prepare_activity_lock": {
+        "parent": [
+          436,
+          443,
+          452,
+          432
+        ],
+        "candidate": [
+          226,
+          241,
+          226,
+          222
+        ]
+      },
+      "prepare_demand_lock": {
+        "parent": [
+          416,
+          408,
+          420,
+          396
+        ],
+        "candidate": [
+          194,
+          210,
+          200,
+          183
+        ]
+      },
+      "prepare_fact_lock": {
+        "parent": [
+          436,
+          444,
+          452,
+          432
+        ],
+        "candidate": [
+          226,
+          248,
+          226,
+          230
+        ]
+      },
+      "prepare_stat_lock": {
+        "parent": [
+          852,
+          844,
+          872,
+          828
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "private_publish": {
+        "parent": [
+          264,
+          264,
+          264,
+          264
+        ],
+        "candidate": [
+          264,
+          264,
+          264,
+          264
+        ]
+      },
+      "private_retry_snapshot": {
+        "parent": [
+          264,
+          264,
+          264,
+          264
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "protection_fact": {
+        "parent": [
+          0,
+          13,
+          1,
+          8
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "publication_pages": {
+        "parent": [
+          436,
+          444,
+          452,
+          432
+        ],
+        "candidate": [
+          436,
+          458,
+          436,
+          442
+        ]
+      },
+      "read_cut": {
+        "parent": [
+          54,
+          54,
+          53,
+          53
+        ],
+        "candidate": [
+          54,
+          54,
+          54,
+          53
+        ]
+      },
+      "record_assign": {
+        "parent": [
+          1228,
+          1228,
+          1228,
+          1224
+        ],
+        "candidate": [
+          436,
+          436,
+          436,
+          432
+        ]
+      },
+      "record_assign_existing": {
+        "parent": [
+          792,
+          792,
+          792,
+          792
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "wake_call": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "wake_notify": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "worker_identity_write": {
+        "parent": [
+          346,
+          371,
+          348,
+          353
+        ],
+        "candidate": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "projection_stroke": {
+      "claim_lock": {
+        "parent": [
+          136,
+          136,
+          150,
+          132
+        ],
+        "candidate": [
+          126,
+          133,
+          126,
+          122
+        ]
+      },
+      "cleanup_activity_lock": {
+        "parent": [
+          48,
+          54,
+          48,
+          48
+        ],
+        "candidate": [
+          48,
+          64,
+          48,
+          50
+        ]
+      },
+      "cleanup_idle_lock": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "cleanup_units": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "compact_fact_version": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          640,
+          672,
+          652,
+          640
+        ]
+      },
+      "delay_arm": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "delay_cancel": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "delay_notify": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "descriptor_hint": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          132,
+          132,
+          132,
+          132
+        ]
+      },
+      "descriptor_search_compare": {
+        "parent": [
+          191,
+          191,
+          191,
+          187
+        ],
+        "candidate": [
+          59,
+          59,
+          59,
+          55
+        ]
+      },
+      "direct_write": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          528,
+          528,
+          528,
+          528
+        ]
+      },
+      "duplicate_compare": {
+        "parent": [
+          772,
+          752,
+          848,
+          706
+        ],
+        "candidate": [
+          119,
+          136,
+          121,
+          122
+        ]
+      },
+      "epoch_destroy": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "epoch_drain_lock": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "full_fact_version": {
+        "parent": [
+          664,
+          648,
+          672,
+          628
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "generic_sequence": {
+        "parent": [
+          528,
+          528,
+          528,
+          528
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "group_sort_compare": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          413,
+          501,
+          476,
+          420
+        ]
+      },
+      "growth_filter_compare": {
+        "parent": [
+          1508,
+          1444,
+          1652,
+          1300
+        ],
+        "candidate": [
+          124,
+          140,
+          130,
+          112
+        ]
+      },
+      "install_lock": {
+        "parent": [
+          136,
+          136,
+          136,
+          132
+        ],
+        "candidate": [
+          126,
+          126,
+          126,
+          122
+        ]
+      },
+      "job_completion_lock": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "job_enqueue": {
+        "parent": [
+          38,
+          47,
+          37,
+          40
+        ],
+        "candidate": [
+          38,
+          46,
+          38,
+          44
+        ]
+      },
+      "job_invoke": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "job_notify": {
+        "parent": [
+          38,
+          47,
+          37,
+          40
+        ],
+        "candidate": [
+          21,
+          25,
+          22,
+          26
+        ]
+      },
+      "job_pop_lock": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "last_use_notify": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "operation": {
+        "parent": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "candidate": [
+          96,
+          96,
+          96,
+          96
+        ]
+      },
+      "prepare_activity_lock": {
+        "parent": [
+          136,
+          143,
+          152,
+          132
+        ],
+        "candidate": [
+          126,
+          141,
+          126,
+          122
+        ]
+      },
+      "prepare_demand_lock": {
+        "parent": [
+          136,
+          128,
+          140,
+          116
+        ],
+        "candidate": [
+          114,
+          130,
+          120,
+          103
+        ]
+      },
+      "prepare_fact_lock": {
+        "parent": [
+          136,
+          144,
+          152,
+          132
+        ],
+        "candidate": [
+          126,
+          148,
+          126,
+          130
+        ]
+      },
+      "prepare_stat_lock": {
+        "parent": [
+          272,
+          264,
+          292,
+          248
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "private_publish": {
+        "parent": [
+          132,
+          132,
+          132,
+          132
+        ],
+        "candidate": [
+          132,
+          132,
+          132,
+          132
+        ]
+      },
+      "private_retry_snapshot": {
+        "parent": [
+          132,
+          132,
+          132,
+          132
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "protection_fact": {
+        "parent": [
+          0,
+          7,
+          0,
+          4
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "publication_pages": {
+        "parent": [
+          136,
+          144,
+          152,
+          132
+        ],
+        "candidate": [
+          136,
+          158,
+          136,
+          142
+        ]
+      },
+      "read_cut": {
+        "parent": [
+          50,
+          50,
+          49,
+          49
+        ],
+        "candidate": [
+          50,
+          50,
+          50,
+          49
+        ]
+      },
+      "record_assign": {
+        "parent": [
+          588,
+          588,
+          588,
+          584
+        ],
+        "candidate": [
+          192,
+          192,
+          192,
+          188
+        ]
+      },
+      "record_assign_existing": {
+        "parent": [
+          396,
+          396,
+          396,
+          396
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "wake_call": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "wake_notify": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "worker_identity_write": {
+        "parent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "candidate": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}

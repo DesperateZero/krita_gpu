@@ -15,46 +15,23 @@
 
 禁止以提交数量、文件数量、枚举值、TODO 被删除或单元测试只覆盖 CPU 解析为“已完成”的依据。
 
-## 2. 当前事实基线
+## 2. 当前事实基线（2026-09-25）
 
-截至 2026-09-18 的 BR0 代码切换：
+BR1 的唯一当前执行入口为 [92](92_br1_m6_m8_execution_baseline.md)，生产修复检查点为 `5173c807c8`。默认像素更新与历史恢复的准备顺序、manager 构造预算拒绝，以及 metadata/index/descriptor/root 安装的资源准备已修复；以 [本轮证据](evidence/br1_m5_repair_20260925/README.md) 的同源码验证授予阶段资格。
 
-- 旧 `libs/image_vulkan`、`libs/ui/vulkan` runtime 与其旧测试已从当前 production tree 删除；删除前的原型和
-  35 个工作区修改保存在内层 Krita 仓库的 `archive/vulkan-prototype-pre-br0-20260918` 分支，归档提交为
-  `7207640968`。
-- `kritaimagevulkan` target、UI 反向链接、`useVulkanCanvas`/`VULKAN_STARTED` 入口、全局
-  `KisVulkanPaintRouter`、factory wrap 接线和 raw `KisVulkanUpdateInfo` 已从当前树删除。
-- 新 target 是单向依赖的 `kritavulkanbackend -> kritaimage`；当前 `kritaui` 不链接该 target，也不编译 Vulkan
-  canvas。产品只保留既有 CPU/OpenGL/QPainter 路径。
-- `kritaimage` 已加入 PageStore/Surface/generation/lease/ticket、state machine、document session/context、format
-  codec、unified SSD、residency、`EvalGraphIR`/lowerer/planner、derived surface cache、stroke protocol/compiler
-  的接口骨架；`kritavulkanbackend` 已加入
-  bootstrap、submission、command arena、binding table、replica provider、document session 和 stroke executor
-  骨架；独立且未接入产品的 `kritavulkanuiadapter` target 已加入 view/presenter/canvas gate 骨架。
-- 第一版空壳已升级为 Foundation 契约：Surface/Completion/BackendService registry 具备线程安全 identity、单调
-  ticket、终态和 generation 注销行为；backend 具备 device evidence、shader catalog/ABI、内存预算、pipeline、
-  submission packet、resource retirement、page binding、stroke/composite/display preparation 和 WSI view intent
-  状态机。涉及 native Vulkan allocation/command/queue/swapchain 的方法仍显式失败，不代表 BR1–BR6 已实现。
-- Krita 既有 `KisTileDataStore`、`KisMementoManager` 和 `KisSwappedDataStore` 仍承担当前 CPU tile、COW/undo 与
-  swap 语义；尚未完成 PageStore 吸收。
-- 静态架构门禁已接入 GitLab CI；当前树的 CPU-only 与 Vulkan-foundation 双架构配置/构建均通过，
-  `kritaimage`、`kritaui`、backend、offscreen smoke 和未接产品入口的 UI adapter 均有可复现构建证据。
-- Foundation 已有构建期生成并校验的 SPIR-V checksum asset、reflection/ABI manifest、真实 Vulkan 1.2 device、
-  VMA buffer、compute dispatch 和有界 timeline wait smoke；该 smoke 不链接 UI，产品 Vulkan 入口仍关闭。
-- 当前树仍没有可运行 Vulkan 产品功能，也没有页面迁移、UMA pointer bypass、业务合成、GPU stroke、swapchain、
-  撤销/保存的端到端验证证据；这些仍分别属于 BR1–BR6，不能由 foundation smoke 代替。
-- 最新未修改 `origin/master` 的 CPU/OpenGL baseline 与当前树稳定核心回归分别通过 5/5 和 6/6；额外 4 个
-  测试在两棵树上以相同方式因未安装 bundle 资源或既有 scheduler/checksum 崩溃失败，已作为 upstream parity
-  限制记录，不计为本次回归。
-- BR0 净变更已重放到目标 upstream `origin/master` `9a24ae0d8c` 之上；重放前状态保存在
-  `archive/br0-pre-upstream-replay-20260918`。最新树已重新完成 CPU-only、Vulkan foundation、真实 offscreen、
-  稳定核心回归和依赖边界验证，BR0 正式关闭。
+| 范围 | 当前状态 |
+|---|---|
+| BR0 | 已完成，生产 Vulkan 路径保持关闭 |
+| M5 修复基线 | 已通过，可进入 M6；双架构 CPU/业务 2,964 passed、Vulkan foundation 28 passed，真实 install 零分配及两桶性能回归通过 |
+| M6 | 下一实施阶段：recoverable backing handoff；尚未实现 |
+| M7 | M6 通过后：bounded commit-only handoff；尚未实现 |
+| M8 | 业务 scope、剩余迁移、资源/退出、清理与正式资格待完成 |
+| BR1 / BR1-PERF | 尚未完成；必须通过 39 的正式 upstream M/K/E、尾延迟、容量及生命周期门 |
+| BR2–BR6 production | 尚未开放；foundation 兼容不代表产品接线 |
 
-因此，当前项目应描述为：
+当前生产仍为 Fresh allocation/COW，不宣称已经实现 recoverable/commit-only handoff。TSAN 保持 Inconclusive，确定性交错、预算、失败与退出测试单独验收。
 
-> BR0 已完成：旧运行路径删除、构建环切断、foundation target/private-public 结构、shader/device/offscreen
-> 验证、CI 门禁、CPU/OpenGL 对照回归，以及在目标 upstream 上的重放后全量复验均已通过。
-> BR1–BR6 尚未开始实现可运行能力。
+47–91 共 45 篇文档已 [移入归档目录](archive/br1_pre_m6_20260925/README.md)。原始版本可从来源提交恢复，失败记录和证据保留；它们退出当前状态及执行口径，仍有效的 BR1 约束已归并到 92。旧关闭/重开判断只属于相应历史提交，不与本节并列维护。
 
 ## 3. 第一个 MVP 的不可裁剪目标
 
@@ -106,6 +83,13 @@
    - Vulkan 用户入口在 BR0–BR6 和整个 MVP 验收全部通过前保持不可用；校正期间使用 CPU/OpenGL。
    - 单层笔刷、显示、撤销/重做、保存/重开有像素一致性测试。
    - 不允许用固定大图 fallback、手工迁移或 stroke-end 整图回读冒充虚拟纹理 MVP。
+
+10. **CPU 相对的自动执行路由**
+   - GPU/UMA 的产品性能基线是同机、同质量、启用实际 SIMD/线程/COW/PageStore 的 CPU 产品路径，不是 scalar reference。
+   - correctness capability 与 `AutoPreferred` 分离；设备可用、共享映射或零拷贝都不能单独触发 GPU route。
+   - stroke/evaluation 在首次写入前按完整端到端 ETA 冻结 CPU 或 accelerator route，不允许逐 dab/逐页混跑来掩盖选择错误。
+   - GPU 劣势、低功耗/温控、queue contention、UMA 共享带宽竞争下，Auto 必须满足
+     [39_virtual_texture_performance_gates.md](39_virtual_texture_performance_gates.md) 的 CPU-relative 上限，否则前置选择 CPU。
 
 ## 4. 统一对象模型
 
@@ -209,6 +193,8 @@ fan-out 和多输出，不出现 lower/upper 或 Vulkan 类型；纯生成/显�
 - 没有 SSD 文件格式和读写实现时，不把 `L3` 称为 SSD 层。
 - 没有共享权威像素页时，不把 host-visible staging/ring buffer 称为 UMA 画布零拷贝。
 - 没有端到端 GPU 输出对照时，不把 preset 解析或资源加载测试称为笔刷端到端测试。
+- 没有与真实 CPU 产品路径对照的 CPU-only/forced accelerator/Auto 结果时，不以 GPU timestamp、零拷贝或 capability
+  supported 声明 GPU/UMA 性能完成。
 - 设计目标与当前实现必须分段书写，不能混在同一完成清单中。
 
 ## 9. 专题文档路由
@@ -217,6 +203,8 @@ fan-out 和多输出，不出现 lower/upper 或 Vulkan 类型；纯生成/显�
 - 模块/CMake：[23_p0_module_boundaries_and_build_graph.md](23_p0_module_boundaries_and_build_graph.md)
 - 后端入口/文档 session：[24_p0_backend_lifecycle_and_document_sessions.md](24_p0_backend_lifecycle_and_document_sessions.md)
 - Canonical PageStore/Krita tile/COW/swap：[25_p0_canonical_pagestore_krita_tile_cow_swap.md](25_p0_canonical_pagestore_krita_tile_cow_swap.md)
+- BR1 条件 COW/backing handoff/硬预算：[68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md](archive/br1_pre_m6_20260925/documents/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md)
+- BR1 PageStore 拆分/冗余/侵入审计：[69_br1_pagestore_decomposition_and_intrusion_audit_20260921.md](archive/br1_pre_m6_20260925/documents/69_br1_pagestore_decomposition_and_intrusion_audit_20260921.md)
 - UMA/dGPU/RAM/SSD replica：[26_p0_replica_uma_dgpu_ssd.md](26_p0_replica_uma_dgpu_ssd.md)
 - 虚拟纹理算法决策总纲：[32_virtual_texture_architecture_decisions.md](32_virtual_texture_architecture_decisions.md)
 - PageStore 状态机与并发：[33_virtual_texture_pagestore_state_machine.md](33_virtual_texture_pagestore_state_machine.md)

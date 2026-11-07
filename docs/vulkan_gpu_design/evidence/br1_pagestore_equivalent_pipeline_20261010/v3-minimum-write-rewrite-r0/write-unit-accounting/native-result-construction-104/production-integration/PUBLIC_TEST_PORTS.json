@@ -1,0 +1,68 @@
+[
+  {
+    "test": "testPageStoreCompatibilityBehavior",
+    "retired_implementation_assertions": [],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStoreCloneActiveWriteRefusal",
+    "retired_implementation_assertions": [],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStoreClonePendingPresence",
+    "retired_implementation_assertions": [
+      "generic allocatedPages duplicates real table/extent/pixel assertions"
+    ],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStoreCopyLiveWriteCompatibility",
+    "retired_implementation_assertions": [
+      "old capturedReadViewsCreated count; actual alias and pixel observations retained"
+    ],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStoreImportRetention",
+    "retired_implementation_assertions": [],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStorePlanarWriteNoOpInputs",
+    "retired_implementation_assertions": [
+      "generic session/request count replaced by actual selection epoch, resources, rows and live views"
+    ],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStoreVirtualDefaultReadStaysSparse",
+    "retired_implementation_assertions": [
+      "generic default/request counters replaced with real backing count/selection/relations; 32767 sparse coordinates unchanged"
+    ],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStoreExplicitDefaultHistory",
+    "retired_implementation_assertions": [
+      "old commit snapshot count; independent public outcome oracle unchanged"
+    ],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  },
+  {
+    "test": "testPageStoreHistoryMutation",
+    "retired_implementation_assertions": [
+      "old mutation session/generation/pin statistics; exact before/checkpoint/after and immutable retained snapshots preserved"
+    ],
+    "status": "ported_pending_execution",
+    "public_assertions": "pixel, extent, history and lifetime assertions retained"
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "publicationStorageRefusalAndLateCleanup",
+      "preparedPublicationStorageIsBound",
+      "deferredPublicationCleanupOwnsCandidate",
+      "preparedRecoverableWriteLifecycle",
+      "recoverableWritePreparationHonorsBudget",
+      "preparedMutationPreservesLateProtection",
+      "capturedProtectionAndExactQueryAtCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 1.697,
+    "totals": [
+      "Totals: 181 passed, 1 failed, 0 skipped, 0 blacklisted, 26ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome2) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "capturedCutStorageRefusalAndLifetime",
+      "capturedReleaseKeepsOriginalFacts",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.395,
+    "totals": [
+      "Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 722ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "publicationStorageRefusalAndLateCleanup",
+      "preparedPublicationStorageIsBound",
+      "deferredPublicationCleanupOwnsCandidate",
+      "preparedRecoverableWriteLifecycle",
+      "recoverableWritePreparationHonorsBudget",
+      "preparedMutationPreservesLateProtection",
+      "capturedProtectionAndExactQueryAtCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 0.991,
+    "totals": [
+      "Totals: 181 passed, 1 failed, 0 skipped, 0 blacklisted, 40ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreReferenceTest::publicationStorageRefusalAndLateCleanup(kind2-outcome2) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "capturedCutStorageRefusalAndLifetime",
+      "capturedReleaseKeepsOriginalFacts",
+      "lastUseAtMetadataCapacity",
+      "-nocrashhandler"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.698,
+    "totals": [
+      "Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 723ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

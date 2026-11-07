@@ -1,0 +1,266 @@
+{
+  "gate": "M5 selector forced-COW matched-control throughput",
+  "familywise_confidence": "at least 95% across two required buckets",
+  "result": "Fail",
+  "buckets": [
+    {
+      "bucket": "write-n64-k1-b4",
+      "paired_median_candidate_control_ratio": 0.9814870516100709,
+      "one_sided_97_5_percent_lower_bound": 0.9736373615162007,
+      "required_lower_bound": 0.98,
+      "pass": false,
+      "pairs": [
+        {
+          "pair": 0,
+          "control_ops_per_second": 24120.83749916808,
+          "candidate_ops_per_second": 23403.49661787602,
+          "ratio": 0.9702605317366446
+        },
+        {
+          "pair": 1,
+          "control_ops_per_second": 23973.691105605187,
+          "candidate_ops_per_second": 23736.444541541074,
+          "ratio": 0.9901038783298312
+        },
+        {
+          "pair": 2,
+          "control_ops_per_second": 24410.521744828467,
+          "candidate_ops_per_second": 23738.740231320942,
+          "ratio": 0.9724798379760217
+        },
+        {
+          "pair": 3,
+          "control_ops_per_second": 23678.011047072046,
+          "candidate_ops_per_second": 24591.640793215796,
+          "ratio": 1.0385855781690214
+        },
+        {
+          "pair": 4,
+          "control_ops_per_second": 24102.479390531986,
+          "candidate_ops_per_second": 23614.936881581845,
+          "ratio": 0.9797721014070586
+        },
+        {
+          "pair": 5,
+          "control_ops_per_second": 24018.52294436078,
+          "candidate_ops_per_second": 24223.958062272606,
+          "ratio": 1.0085531953146212
+        },
+        {
+          "pair": 6,
+          "control_ops_per_second": 24314.14841115848,
+          "candidate_ops_per_second": 23905.719390231414,
+          "ratio": 0.9832020018130833
+        },
+        {
+          "pair": 7,
+          "control_ops_per_second": 24090.772597171584,
+          "candidate_ops_per_second": 24029.753564172457,
+          "ratio": 0.997467120128547
+        },
+        {
+          "pair": 8,
+          "control_ops_per_second": 24248.557686914926,
+          "candidate_ops_per_second": 23637.37000319923,
+          "ratio": 0.9747948850563798
+        },
+        {
+          "pair": 9,
+          "control_ops_per_second": 23807.325490854193,
+          "candidate_ops_per_second": 23325.151878314915,
+          "ratio": 0.9797468383114051
+        },
+        {
+          "pair": 10,
+          "control_ops_per_second": 24292.26838367403,
+          "candidate_ops_per_second": 23791.97726415751,
+          "ratio": 0.9794053354089919
+        },
+        {
+          "pair": 11,
+          "control_ops_per_second": 23968.847653643745,
+          "candidate_ops_per_second": 23854.37234161427,
+          "ratio": 0.9952239960100013
+        },
+        {
+          "pair": 12,
+          "control_ops_per_second": 24679.49735592213,
+          "candidate_ops_per_second": 23770.97077028259,
+          "ratio": 0.9631869898913672
+        },
+        {
+          "pair": 13,
+          "control_ops_per_second": 23311.806105167358,
+          "candidate_ops_per_second": 24033.537491229865,
+          "ratio": 1.0309599085890873
+        },
+        {
+          "pair": 14,
+          "control_ops_per_second": 24388.445416146296,
+          "candidate_ops_per_second": 23697.038616677408,
+          "ratio": 0.9716502307682496
+        },
+        {
+          "pair": 15,
+          "control_ops_per_second": 23982.646880661414,
+          "candidate_ops_per_second": 24265.32013935286,
+          "ratio": 1.0117865746886923
+        },
+        {
+          "pair": 16,
+          "control_ops_per_second": 23835.40467673583,
+          "candidate_ops_per_second": 23840.016137587394,
+          "ratio": 1.0001934710534226
+        },
+        {
+          "pair": 17,
+          "control_ops_per_second": 23946.02192501509,
+          "candidate_ops_per_second": 22363.432076225647,
+          "ratio": 0.9339101144338217
+        },
+        {
+          "pair": 18,
+          "control_ops_per_second": 24382.417392817668,
+          "candidate_ops_per_second": 22987.736386033153,
+          "ratio": 0.9427997239028749
+        },
+        {
+          "pair": 19,
+          "control_ops_per_second": 23416.504751493125,
+          "candidate_ops_per_second": 24024.060000249585,
+          "ratio": 1.025945599277267
+        }
+      ]
+    },
+    {
+      "bucket": "write-n1024-k16-b4",
+      "paired_median_candidate_control_ratio": 0.9977909521022892,
+      "one_sided_97_5_percent_lower_bound": 0.9677052611584598,
+      "required_lower_bound": 0.98,
+      "pass": false,
+      "pairs": [
+        {
+          "pair": 0,
+          "control_ops_per_second": 3595.0987700797136,
+          "candidate_ops_per_second": 3474.622928568252,
+          "ratio": 0.9664888646414601
+        },
+        {
+          "pair": 1,
+          "control_ops_per_second": 3462.8063888484153,
+          "candidate_ops_per_second": 3551.958964535222,
+          "ratio": 1.0257457581151268
+        },
+        {
+          "pair": 2,
+          "control_ops_per_second": 3581.606290741284,
+          "candidate_ops_per_second": 3606.82030831135,
+          "ratio": 1.0070398629897557
+        },
+        {
+          "pair": 3,
+          "control_ops_per_second": 3446.154048406762,
+          "candidate_ops_per_second": 3533.2072067742247,
+          "ratio": 1.0252609596508635
+        },
+        {
+          "pair": 4,
+          "control_ops_per_second": 3580.3835190543064,
+          "candidate_ops_per_second": 3370.051060271598,
+          "ratio": 0.9412542098735099
+        },
+        {
+          "pair": 5,
+          "control_ops_per_second": 3410.4755468222384,
+          "candidate_ops_per_second": 3620.1733967481346,
+          "ratio": 1.0614863959723404
+        },
+        {
+          "pair": 6,
+          "control_ops_per_second": 3587.5103972323654,
+          "candidate_ops_per_second": 3436.109009216087,
+          "ratio": 0.9577976448143317
+        },
+        {
+          "pair": 7,
+          "control_ops_per_second": 3583.9172688537656,
+          "candidate_ops_per_second": 3576.7737295773754,
+          "ratio": 0.9980067789682336
+        },
+        {
+          "pair": 8,
+          "control_ops_per_second": 3654.5528629269943,
+          "candidate_ops_per_second": 3512.7032522237605,
+          "ratio": 0.9611855085906121
+        },
+        {
+          "pair": 9,
+          "control_ops_per_second": 3491.6383105010486,
+          "candidate_ops_per_second": 3405.8664966361403,
+          "ratio": 0.9754350805445825
+        },
+        {
+          "pair": 10,
+          "control_ops_per_second": 3630.820005909003,
+          "candidate_ops_per_second": 3511.627692011682,
+          "ratio": 0.9671720675485591
+        },
+        {
+          "pair": 11,
+          "control_ops_per_second": 3523.8684203184753,
+          "candidate_ops_per_second": 3617.384296818216,
+          "ratio": 1.0265378457267396
+        },
+        {
+          "pair": 12,
+          "control_ops_per_second": 3677.7834401859877,
+          "candidate_ops_per_second": 3585.7845643593528,
+          "ratio": 0.9749852384397102
+        },
+        {
+          "pair": 13,
+          "control_ops_per_second": 3129.505026394842,
+          "candidate_ops_per_second": 3587.5814761547404,
+          "ratio": 1.1463734507202878
+        },
+        {
+          "pair": 14,
+          "control_ops_per_second": 3607.9400948512675,
+          "candidate_ops_per_second": 3399.34147594961,
+          "ratio": 0.9421834583120325
+        },
+        {
+          "pair": 15,
+          "control_ops_per_second": 3573.493635684609,
+          "candidate_ops_per_second": 3567.7222671561003,
+          "ratio": 0.9983849506626019
+        },
+        {
+          "pair": 16,
+          "control_ops_per_second": 3549.9503529934336,
+          "candidate_ops_per_second": 3541.3421679702305,
+          "ratio": 0.9975751252363447
+        },
+        {
+          "pair": 17,
+          "control_ops_per_second": 3474.923600692333,
+          "candidate_ops_per_second": 3576.2029834453433,
+          "ratio": 1.0291457868981153
+        },
+        {
+          "pair": 18,
+          "control_ops_per_second": 3597.4125184043946,
+          "candidate_ops_per_second": 3483.153137984227,
+          "ratio": 0.9682384547683605
+        },
+        {
+          "pair": 19,
+          "control_ops_per_second": 3410.882551055908,
+          "candidate_ops_per_second": 3595.175665542125,
+          "ratio": 1.05403091772514
+        }
+      ]
+    }
+  ],
+  "limits": "This gate closes the M5 selector regression requirement only. It is not the full upstream CPU BR1-PERF, M/K/X/E matrix, tail-latency qualification or M6/M7 handoff performance."
+}

@@ -63,8 +63,8 @@ PageStore/provider 对每个输出重新做安全校验。
 
 任何打分前先排除：
 
-- active write lease；
-- active read lease 对应的唯一 physical replica；
+- active write lease/native guard 保护的 replica；
+- active read lease/native guard 所 pin 的 physical replica（即使另有 exact 副本，也不能移动/复用仍被解引用的 backing）；
 - hard pin；
 - in-flight producer/consumer；
 - 未完成 transaction 的唯一 before-image；
@@ -74,6 +74,8 @@ PageStore/provider 对每个输出重新做安全校验。
 - dependency 不完整但仍被显示/保存引用的 derived page。
 
 对于唯一 authority，策略只能提出 `HandoffThenRetire`，不能直接列为 victim。
+安全资格检查覆盖 native 与 generic 消费者及异步 last-use，不能只检查 generic lease map。候选评分不代替 owner/provider
+最终回收复验；不得先删除 metadata 再忽略 busy/retire 失败。scope retention 与 physical pin 的区别和计量见39的5.12。
 
 ## 4. 语义事件
 
@@ -160,10 +162,9 @@ CLOCK 参数按 domain 和 semantic class 分离。例如 SSD/RAM history 不能
 通过测量的 EWMA/quantile 更新成本：
 
 ```text
-RestoreCost =
-    queueDelayP95
-  + transfer/decodeP95
-  + binding/rebuildP95
+RestoreCost = calibratedCriticalPath(restore -> consumerReady, {
+    queueDelay, transfer, decode, binding, requiredRebuild
+})
 
 RetentionValue =
     reuseProbability(horizon) * RestoreCost
@@ -174,6 +175,10 @@ RetentionValue =
 
 VictimValue = RetentionValue / physicalBytesFreed
 ```
+
+RestoreCost 按 [39 的统一测量边界](39_virtual_texture_performance_gates.md#56-四类证据与基线配对统一定义) 从实际副本状态
+校准完整 restore 的完成分布，不将阶段 P95 相加。RetentionValue 是策略评分而非可观测端到端耗时；RestoreCost 已包含的
+rebuild 不再计入额外 rebuildCost，同样不得把评分倍率作为性能门禁证据。
 
 规则：
 
@@ -236,16 +241,19 @@ writeback debt
 - brush conservative bounds、spacing、rotation/scatter 上界；
 - selection/filter/neighborhood halo；
 - current MutationRootSet；
-- measured materialization P95。
+- measured request-to-consumer-ready materialization P95（包含 scheduler/queue/codec/transfer/binding）。
 
 ### 11.2 Horizon
 
 ```text
-H = clamp(
-      materializationP95 + schedulerP95 + safetyMargin,
+Horizon = clamp(
+      requestToConsumerReadyP95 + safetyMargin,
       configuredMin,
       configuredMax)
 ```
+
+这里使用完整 materialization 的实测分位数，不再重复加 scheduler，也不由阶段 P95 的和推导尾延迟保证。horizon 仅为
+有界预取策略参数，仍须以 deadline miss、错误预取 bytes 和端到端交互尾延迟验证。
 
 ### 11.3 Corridor
 

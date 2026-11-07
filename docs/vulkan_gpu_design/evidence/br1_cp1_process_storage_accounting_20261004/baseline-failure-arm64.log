@@ -1,0 +1,10 @@
+********* Start testing of KisPageStoreCpuMutationTest *********
+Config: Using QtTest library 6.8.0, Qt 6.8.0 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 17.0.0 (clang-1700.6.4.2)), macos 15.7
+PASS   : KisPageStoreCpuMutationTest::initTestCase()
+FAIL!  : KisPageStoreCpuMutationTest::processStorageReportsReservationSeparately() Compared values are not the same
+   Actual   (reserved.live.cpuRam): 580028
+   Expected (before.live.cpuRam)  : 575932
+   Loc: [/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp(1145)]
+PASS   : KisPageStoreCpuMutationTest::cleanupTestCase()
+Totals: 2 passed, 1 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of KisPageStoreCpuMutationTest *********

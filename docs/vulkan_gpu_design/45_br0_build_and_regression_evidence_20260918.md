@@ -1,5 +1,10 @@
 # BR0 构建、测试与 upstream 对照证据（2026-09-18）
 
+> 状态更新：本文只冻结 BR0 当时的证据与边界；51 记录 2026-09-19 的 BR1 功能/正确性 cutover，2026-09-20
+> resident CPU 性能审计后 BR1 以 `BR1-PERF` 重开，见
+> [52_br1_cpu_fast_path_optimization_plan_20260920.md](archive/br1_pre_m6_20260925/documents/52_br1_cpu_fast_path_optimization_plan_20260920.md)。本文中的
+> “BR1–BR6 尚未实现/后续从 BR1 开始”均为 BR0 关闭时点的历史表述。
+
 本文记录 BR0 F6 的本机可复现证据。它只证明 foundation、依赖边界和选定 CPU/OpenGL 核心路径，不证明
 BR1–BR6 的 production PageStore、GPU stroke、合成、WSI 或性能目标。
 

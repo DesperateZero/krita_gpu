@@ -1,0 +1,182 @@
+{
+  "scope": "Matched parent6ffe097 versus scoped metadata storage candidate; per-bucket descriptive95% intervals, no family qualification",
+  "inputs_verified": true,
+  "rows": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "pairs": 40,
+      "order_balanced_blocks": 20,
+      "medians": {
+        "parent": {
+          "cpu_us": 27.39310444376907,
+          "wall_us": 34.22426684782609
+        },
+        "current": {
+          "cpu_us": 26.40935063559322,
+          "wall_us": 33.25935732256356
+        }
+      },
+      "throughput_ratio": {
+        "estimate": 1.0263366239890732,
+        "two_sided_95": [
+          1.0191224937637504,
+          1.0350475672566117
+        ]
+      },
+      "cpu_ratio": {
+        "estimate": 0.9658256699496428,
+        "two_sided_95": [
+          0.9602808686407245,
+          0.9721180145669273
+        ]
+      },
+      "cpu_saving_us": {
+        "estimate": 0.9336874398304982,
+        "two_sided_95": [
+          0.7651448530262579,
+          1.0926336063349664
+        ]
+      },
+      "wall_saving_us": {
+        "estimate": 0.884838980331752,
+        "two_sided_95": [
+          0.6381367066332704,
+          1.1680991256270499
+        ]
+      }
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "pairs": 40,
+      "order_balanced_blocks": 20,
+      "medians": {
+        "parent": {
+          "cpu_us": 249.22042410714286,
+          "wall_us": 295.04248046875
+        },
+        "current": {
+          "cpu_us": 236.73577064732143,
+          "wall_us": 282.98277008928574
+        }
+      },
+      "throughput_ratio": {
+        "estimate": 1.050443416200281,
+        "two_sided_95": [
+          1.0277879669275434,
+          1.0744279908880874
+        ]
+      },
+      "cpu_ratio": {
+        "estimate": 0.9402127450993293,
+        "two_sided_95": [
+          0.9231818688769445,
+          0.9685114583786638
+        ]
+      },
+      "cpu_saving_us": {
+        "estimate": 15.063624829727573,
+        "two_sided_95": [
+          7.534618284970236,
+          19.34633064188416
+        ]
+      },
+      "wall_saving_us": {
+        "estimate": 14.808362965029758,
+        "two_sided_95": [
+          7.650776841517839,
+          21.07806332989925
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "pairs": 40,
+      "order_balanced_blocks": 20,
+      "medians": {
+        "parent": {
+          "cpu_us": 0.9215212725903614,
+          "wall_us": 47.2613265248494
+        },
+        "current": {
+          "cpu_us": 0.8923134383549932,
+          "wall_us": 45.91995371494528
+        }
+      },
+      "throughput_ratio": {
+        "estimate": 1.02173692766688,
+        "two_sided_95": [
+          1.017443954715646,
+          1.0293268279724552
+        ]
+      },
+      "cpu_ratio": {
+        "estimate": 0.9731998757131649,
+        "two_sided_95": [
+          0.9684668044172948,
+          0.9787550405909308
+        ]
+      },
+      "cpu_saving_us": {
+        "estimate": 0.024302360045674765,
+        "two_sided_95": [
+          0.0193770676629417,
+          0.029156457003057995
+        ]
+      },
+      "wall_saving_us": {
+        "estimate": 0.9961351726054559,
+        "two_sided_95": [
+          0.7969507898656474,
+          1.3672424931805427
+        ]
+      }
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "pairs": 40,
+      "order_balanced_blocks": 20,
+      "medians": {
+        "parent": {
+          "cpu_us": 8.61289453125,
+          "wall_us": 415.625715625
+        },
+        "current": {
+          "cpu_us": 8.25555390625,
+          "wall_us": 400.6810875
+        }
+      },
+      "throughput_ratio": {
+        "estimate": 1.036333889664738,
+        "two_sided_95": [
+          1.0313276317428808,
+          1.049713928027011
+        ]
+      },
+      "cpu_ratio": {
+        "estimate": 0.9605679632175196,
+        "two_sided_95": [
+          0.956269577597537,
+          0.963356665545677
+        ]
+      },
+      "cpu_saving_us": {
+        "estimate": 0.33791484375000014,
+        "two_sided_95": [
+          0.3194078598484844,
+          0.37897688210227276
+        ]
+      },
+      "wall_saving_us": {
+        "estimate": 14.826927126736123,
+        "two_sided_95": [
+          12.827629600694436,
+          20.376075311710835
+        ]
+      }
+    }
+  ]
+}

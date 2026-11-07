@@ -1,0 +1,18 @@
+{
+  "label": "boundaries",
+  "qualification": false,
+  "runner_pid": 43033,
+  "runner_stopped": true,
+  "native_cpu_pid": 43034,
+  "native_cpu_state_observed": "UE",
+  "native_cpu_exit_confirmed": false,
+  "native_cpu_architecture": "arm64",
+  "failure": "new test called first() on an empty initialReplicas array",
+  "debugger": "debug-nodes.log confirms KisPageStoreCpuMutationTest.cpp:4533",
+  "repair": "initialize one original replica with Fixture::init(4, 1)",
+  "physical_arm64_totals": "85 passed, 0 failed, 0 skipped",
+  "x86_64_jobs_dispatched": false,
+  "core_limit": 0,
+  "force_stop_signal": "SIGKILL",
+  "native_cpu_state_post_force_stop": "UE"
+}

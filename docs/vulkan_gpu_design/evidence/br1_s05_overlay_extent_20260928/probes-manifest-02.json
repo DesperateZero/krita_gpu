@@ -1,0 +1,198 @@
+[
+  {
+    "arch": "arm64",
+    "tag": "derived-extent-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "arm64",
+      "derived-extent-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/derived-extent-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-derived-extent-after-02.log"
+  },
+  {
+    "arch": "arm64",
+    "tag": "surface-failure-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "arm64",
+      "surface-failure-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/overlay-surface-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 250,
+    "driver_log": "driver-arm64-surface-failure-after-02.log"
+  },
+  {
+    "arch": "arm64",
+    "tag": "overlay-install-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "arm64",
+      "overlay-install-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/overlay-install-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-overlay-install-after-02.log"
+  },
+  {
+    "arch": "arm64",
+    "tag": "cleanup-reader-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "arm64",
+      "cleanup-reader-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/cleanup-reader-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-cleanup-reader-after-02.log"
+  },
+  {
+    "arch": "arm64",
+    "tag": "adapter-delivery-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "arm64",
+      "adapter-delivery-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_delivery_20260928/adapter-delivery-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-adapter-delivery-after-02.log"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "derived-extent-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "x86_64",
+      "derived-extent-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/derived-extent-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-derived-extent-after-02.log"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "overlay-install-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "x86_64",
+      "overlay-install-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/overlay-install-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-overlay-install-after-02.log"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "surface-failure-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "x86_64",
+      "surface-failure-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/overlay-surface-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 250,
+    "driver_log": "driver-x86_64-surface-failure-after-02.log"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "cleanup-reader-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "x86_64",
+      "cleanup-reader-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_commit_preparation_20260928/cleanup-reader-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-cleanup-reader-after-02.log"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "adapter-delivery-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "x86_64",
+      "adapter-delivery-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_delivery_20260928/adapter-delivery-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/allocation-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-adapter-delivery-after-02.log"
+  },
+  {
+    "arch": "arm64",
+    "tag": "adapter-failure-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "arm64",
+      "adapter-failure-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_candidates_20260928/adapter-candidates-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-adapter-failure-after-02.log"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "adapter-failure-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "x86_64",
+      "adapter-failure-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_adapter_candidates_20260928/adapter-candidates-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-adapter-failure-after-02.log"
+  },
+  {
+    "arch": "arm64",
+    "tag": "overlay-failure-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "arm64",
+      "overlay-failure-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/overlay-storage-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-arm64-overlay-failure-after-02.log"
+  },
+  {
+    "arch": "x86_64",
+    "tag": "overlay-failure-after-02",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_overlay_extent_20260928/run_install_probe.py",
+      "x86_64",
+      "overlay-failure-after-02",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s05_joint_publication_20260928/overlay-storage-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_map_migration_storage_20260928/map-storage-interposer.cpp"
+    ],
+    "returncode": 0,
+    "driver_log": "driver-x86_64-overlay-failure-after-02.log"
+  }
+]

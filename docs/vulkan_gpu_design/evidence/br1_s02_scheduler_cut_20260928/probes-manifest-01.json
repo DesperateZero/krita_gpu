@@ -1,0 +1,506 @@
+[
+  {
+    "arch": "arm64",
+    "tag": "address-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-address-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "address-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/stable-address-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "storage-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-storage-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "storage-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/storage-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "write-set-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-write-set-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "write-set-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/write-set-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/completion-failure-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "native-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-native-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "native-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/native-storage-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/mutation-storage-failure-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "address-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-address-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "address-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/stable-address-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "write-set-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-write-set-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "write-set-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/write-set-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/completion-failure-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "storage-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-storage-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "storage-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/storage-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "native-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-native-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "native-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/native-storage-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/mutation-storage-failure-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "outer-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-outer-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "outer-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "warm-read-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-warm-read-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "warm-read-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/warm-tile-read-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "legacy-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-legacy-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "legacy-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/legacy-install-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "legacy-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-legacy-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "legacy-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/legacy-install-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "reuse-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-reuse-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "reuse-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/slot-reuse-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "warm-read-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-warm-read-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "warm-read-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/warm-tile-read-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "outer-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-outer-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "outer-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/outer-cleanup-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "reuse-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-reuse-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "reuse-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/slot-reuse-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "admission-allocation-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-admission-allocation-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "admission-allocation-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "mutation-cleanup-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-mutation-cleanup-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "mutation-cleanup-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "admission-gate-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-admission-gate-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "admission-gate-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "admission-allocation-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-admission-allocation-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "admission-allocation-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "joint-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-joint-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "joint-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/joint-install-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "admission-gate-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-admission-gate-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "admission-gate-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-gate-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "mutation-cleanup-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-mutation-cleanup-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "mutation-cleanup-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_reusable_slots_20260928/mutation-cleanup-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "execution-allocation-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-execution-allocation-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "execution-allocation-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "admission-failure-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-admission-failure-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "admission-failure-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/mutation-storage-failure-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "execution-failure-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-execution-failure-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "execution-failure-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/mutation-storage-failure-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "execution-allocation-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-execution-allocation-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "execution-allocation-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "execution-cancel-progress-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-execution-cancel-progress-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "execution-cancel-progress-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_local_execution_20260928/execution-cancel-progress-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "execution-cancel-progress-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-execution-cancel-progress-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "execution-cancel-progress-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_local_execution_20260928/execution-cancel-progress-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "metadata-refresh-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-metadata-refresh-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "metadata-refresh-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_metadata_refresh_20260928/metadata-refresh-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "admission-failure-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-admission-failure-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "admission-failure-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/admission-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_admission_20260928/mutation-storage-failure-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "joint-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-joint-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "joint-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/joint-install-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_stable_storage_20260928/../br1_s09_write_admission_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "arm64",
+    "tag": "checkpoint-allocation-final-01",
+    "returncode": 0,
+    "driver_log": "driver-arm64-checkpoint-allocation-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "arm64",
+      "checkpoint-allocation-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_checkpoint_20260928/checkpoint-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "metadata-refresh-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-metadata-refresh-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "metadata-refresh-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s03_metadata_refresh_20260928/metadata-refresh-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "checkpoint-allocation-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-checkpoint-allocation-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "checkpoint-allocation-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_checkpoint_20260928/checkpoint-allocation-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/allocation-interposer.cpp"
+    ]
+  },
+  {
+    "arch": "x86_64",
+    "tag": "execution-failure-final-01",
+    "returncode": 0,
+    "driver_log": "driver-x86_64-execution-failure-final-01.log",
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_scheduler_cut_20260928/run_install_probe.py",
+      "x86_64",
+      "execution-failure-final-01",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/execution-failure-probe.cpp",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_s02_execution_borrow_20260928/mutation-storage-failure-interposer.cpp"
+    ]
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "base": "7c36dceb858b06b0dbb3ed66adc7ef21a1c34a58",
+  "commit": "ccbf0bcb0db6f13bab5c87ca03936439f25ee04d",
+  "source_diff_sha256": "c70b97c62f7a4570a70d4424fb3285b3ed60f30133b0e613c3fe31eafff5db79",
+  "source_diff_matches_both_runs": true,
+  "tests": {
+    "arm64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ],
+      "kis_lockless_stack_test": [
+        10,
+        0,
+        0
+      ]
+    },
+    "x86_64": {
+      "KisPageStoreCpuMutationTest": [
+        1694,
+        0,
+        0
+      ],
+      "kis_tiled_data_manager_test": [
+        1322,
+        0,
+        0
+      ],
+      "KisPageStorePhysicalClaimTest": [
+        398,
+        0,
+        0
+      ],
+      "KisPageStoreResidentReadTest": [
+        221,
+        0,
+        0
+      ],
+      "kis_lockless_stack_test": [
+        10,
+        0,
+        0
+      ]
+    }
+  },
+  "identities": {
+    "arm64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_lockless_stack_test": "4ad4387f48c73e2d4ef202318fdecc1d0bda47645fa6741681c5082d2a6e3fdb",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "0a20f078c79b823ac1aa6ce0d38519acca28dac1dfee1f62816ef9129aeaffbc",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "d54572bf6270c9286bf28b8bfafcc2c38a6a56ca0e3376b205f7714f25650161",
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "ac817a3050a981db629ca597ed3920817cb8d07071a502cb30d4ad93cfaf581b",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "390ea24f376c81177aaeb2a94718c337be9260b814197d6ed9877e0462baecfa"
+      }
+    },
+    "x86_64": {
+      "verified": true,
+      "hashes": {
+        "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_pipeline_refactor_20261010/run_validation.py": "d36f24ce73d52a5fd136a200f73689761549259e3170b80f6b0fd0ebd9da5e72",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest": "d54572bf6270c9286bf28b8bfafcc2c38a6a56ca0e3376b205f7714f25650161",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test": "0a20f078c79b823ac1aa6ce0d38519acca28dac1dfee1f62816ef9129aeaffbc",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest": "6f47a85198fada7f71c37b43e8e064a73f83e067d3532fdf714dabc7da988fcb",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_lockless_stack_test": "4ad4387f48c73e2d4ef202318fdecc1d0bda47645fa6741681c5082d2a6e3fdb",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest": "390ea24f376c81177aaeb2a94718c337be9260b814197d6ed9877e0462baecfa",
+        "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib": "ac817a3050a981db629ca597ed3920817cb8d07071a502cb30d4ad93cfaf581b"
+      }
+    }
+  },
+  "passed_total": 7290,
+  "old_symbols_absent": "Prepared compatibility tile is unavailable|preparedTiles[.]install[(]",
+  "numstat": [
+    "23\t4\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+    "5\t2\tlibs/image/pagestore/KisTiledDataManagerPageStoreBackend.h",
+    "34\t26\tlibs/image/tiles3/kis_tiled_data_manager.cc",
+    "6\t2\tlibs/image/tiles3/tests/kis_tiled_data_manager_test.cpp"
+  ],
+  "source_hashes": {
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp": "de78989a4a43c2bc7e1acf1d06f55b71c60c0987ac0290b41bfbbba65e5ca93e",
+    "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.h": "a3a6b68c263be482cde0646d344d468ed9a874fea07f6525af49111bea075e1a",
+    "libs/image/tiles3/kis_tiled_data_manager.cc": "0f56c6e119b9cc1d2610a785cd0a33dd591b6f2cbb5b2e27fdaa4db3f8ed0156",
+    "libs/image/tiles3/tests/kis_tiled_data_manager_test.cpp": "1e3291b611f1c4972de93308643b6614ed97ba9e314ee8673cc1b5a2c55d1dcf"
+  },
+  "audit_arguments": {
+    "package": "adapter",
+    "base": "7c36dceb858b06b0dbb3ed66adc7ef21a1c34a58",
+    "commit": "ccbf0bcb0db6f13bab5c87ca03936439f25ee04d",
+    "batch": "adapter-full-r1",
+    "absent": "Prepared compatibility tile is unavailable|preparedTiles[.]install[(]"
+  },
+  "limits": "Safety and source audit only; no time benefit claim."
+}

@@ -1,0 +1,350 @@
+{
+  "schema": 1,
+  "checkpoint": "BR1 convergence batch 4, C1/C2/C3 partial, 2026-09-23",
+  "scope": "current uncommitted worktree; not C4 budget completion or BR1-PERF qualification",
+  "before_snapshot": "/tmp/krita-br1-convergence-c4-osFhjP",
+  "counts": {
+    "production": {
+      "added": 63,
+      "deleted": 710
+    },
+    "tests": {
+      "added": 61,
+      "deleted": 19
+    },
+    "build": {
+      "added": 0,
+      "deleted": 1
+    },
+    "scripts": {
+      "added": 10,
+      "deleted": 9
+    }
+  },
+  "pagestore_physical_lines": 32225,
+  "production_changes": [
+    {
+      "path": "libs/image/pagestore/KisPageStore.cpp",
+      "before": {
+        "sha256": "9697ba4738acbf020ceab82c8de8fb852bb1bdb8e92322d519d762123df916fa",
+        "bytes": 179753
+      },
+      "after": {
+        "sha256": "d821b86aababa9c1b9520ea39fd5a0b28eb9447c615f8e0165b09afde16988d0",
+        "bytes": 178992
+      },
+      "added_lines": 10,
+      "deleted_lines": 23
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreCpuAccessSession.cpp",
+      "before": {
+        "sha256": "f82a96af8e63346ac838a2df5057be5bde69be08b0e67cd57a28ced2d2db865c",
+        "bytes": 15372
+      },
+      "after": {
+        "sha256": "c252a0a7e15710c57e212f91c1765fa24c482e4fc803ae014092184b25476d61",
+        "bytes": 11648
+      },
+      "added_lines": 19,
+      "deleted_lines": 102
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreIteratorReadScope.cpp",
+      "before": {
+        "sha256": "810de1ce533de0431d82697309a2257c1155c6ead0cbbaba0f585247bcabe30e",
+        "bytes": 5439
+      },
+      "after": {
+        "sha256": "689cf2d32c6ccb58169a9de3ed5f26b4e46f3056510bce03537f1e60ffed5832",
+        "bytes": 5862
+      },
+      "added_lines": 10,
+      "deleted_lines": 5
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreIteratorReadScope_p.h",
+      "before": {
+        "sha256": "98c8248ec8b1ecef8339670495aee360d164bde53b277a9784df8cbe8ee96e88",
+        "bytes": 3893
+      },
+      "after": {
+        "sha256": "df0c0f534203469a83f2cb39d2da0b99cbc5f6e7cb60efbc4bc5641bd6f35101",
+        "bytes": 4023
+      },
+      "added_lines": 3,
+      "deleted_lines": 1
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreLineIterator.cpp",
+      "before": {
+        "sha256": "be9497d610d8be14809d226fd6a4968b4c4b1e55e2a53f133a977acb89485390",
+        "bytes": 7693
+      },
+      "after": null,
+      "added_lines": 0,
+      "deleted_lines": 283
+    },
+    {
+      "path": "libs/image/pagestore/KisPageStoreLineIterator.h",
+      "before": {
+        "sha256": "cf77e43d78787b45bb6c9c2db00c6c994a390f29bb4b28c45e437a4de9d2c063",
+        "bytes": 3440
+      },
+      "after": null,
+      "added_lines": 0,
+      "deleted_lines": 97
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "before": {
+        "sha256": "4e44de9c8b7e2b284cdb717a45770d8dee9dd2d0b17457f71229a60eb944ab49",
+        "bytes": 54448
+      },
+      "after": {
+        "sha256": "89bb752be4f7ad46a34c1fab4677b3066a9458dcfca158c7be6b9eaf40281388",
+        "bytes": 52413
+      },
+      "added_lines": 15,
+      "deleted_lines": 86
+    },
+    {
+      "path": "libs/image/pagestore/KisPageWriteCoordinator_p.h",
+      "before": {
+        "sha256": "35e82b57655ebc038112ea5dae71b2b3af5ccc639d5554d0c9475dbd89b2a362",
+        "bytes": 21007
+      },
+      "after": {
+        "sha256": "d3d62a214195fb216b73d0376916a93ea9060a58c0405e4f4706eb99f46bbc38",
+        "bytes": 17766
+      },
+      "added_lines": 6,
+      "deleted_lines": 113
+    }
+  ],
+  "test_changes": [
+    {
+      "path": "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "before": {
+        "sha256": "c9cabcdbe45af2d42d8ddf4d44799a8111778e1fc23af0cf1c581c697908c68c",
+        "bytes": 217623
+      },
+      "after": {
+        "sha256": "1890deb233e75df518b68245202c4e9f5035682af93fe6cb62857591b26f60ff",
+        "bytes": 219853
+      },
+      "added_lines": 42,
+      "deleted_lines": 1
+    },
+    {
+      "path": "libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "before": {
+        "sha256": "a454248c94beef2e4b43853ba557d55ca6baf81ee4cda4daf9a432a768a6d6a7",
+        "bytes": 389361
+      },
+      "after": {
+        "sha256": "8526d22d148788b2aea0141dd33aa1cc61fbe6e96cd466ec423f6ca73ca78f67",
+        "bytes": 389328
+      },
+      "added_lines": 19,
+      "deleted_lines": 18
+    }
+  ],
+  "build_changes": [
+    {
+      "path": "libs/image/CMakeLists.txt",
+      "before": {
+        "sha256": "c059375878bc7567b64fd2e409f79b15ddd880bee15c722fb2f85e4e98601bb6",
+        "bytes": 16523
+      },
+      "after": {
+        "sha256": "7b1763eb5ffa17e359f0991919d74ab32886a1e2ac0ba9103c9b4844f6b08212",
+        "bytes": 16481
+      },
+      "added_lines": 0,
+      "deleted_lines": 1
+    }
+  ],
+  "script_changes": [
+    {
+      "path": "build-tools/ci-scripts/check-pagestore-architecture.py",
+      "before": {
+        "sha256": "8a1b5f9f8447d05ecae29a5819b49ee8d2a025a92c95dc418377a8132ba7087c",
+        "bytes": 70615
+      },
+      "after": {
+        "sha256": "143745015300b6acfcb8cd70a960c3d7eb4f73beb29e33567620a7844ba7b822",
+        "bytes": 70577
+      },
+      "added_lines": 10,
+      "deleted_lines": 9
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/pagestore-audit/reverse-callgraph.json",
+      "sha256": "34d967f5eb9b8c2ffe2b1bcb3bec6305566380a7a20cb6253bfa9776f498a600",
+      "bytes": 6628112
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/pagestore-audit/baseline-source.json",
+      "sha256": "14214cdb93e629f199eb5a30e87e065bcd17a8afc71a9e5ae7e77094daaf5354",
+      "bytes": 120200
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/build-tools/ci-scripts/pagestore-audit/convergence-start-source.json",
+      "sha256": "7313b87dd3775b600fc45abaeb59738330b5daebb0b33714b223cb96f32dfef2",
+      "bytes": 121828
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/compile_commands.json",
+      "sha256": "8bb0e40520c4fc2cc0ec8f80f160452f13fabebea1d91254c66a97dcfcb6507f",
+      "bytes": 23962622
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/CMakeCache.txt",
+      "sha256": "48d180b599faa5d5854d1dbf719d604c6583ae5a0a945a9339406c5aa3a8f4f7",
+      "bytes": 194963
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/libkritaimage.21.0.0.dylib",
+      "sha256": "3c2986138a2993272a45c0b4b9f88b126c32dea527ea98c311a3ecb2dfdaa056",
+      "bytes": 25094408
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest",
+      "sha256": "9bfa0e1fbc9949d473105bc9752fe2ecd0f55caf5932a8a50a7cd24323432589",
+      "bytes": 655880
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisCompletionRegistryTest",
+      "sha256": "c6d756ed810e55a44fa456dbfb956d73de2821a9885b8c3b84d03223e2f45ca4",
+      "bytes": 279928
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest",
+      "sha256": "2dd680c26f2ebc3dfdf99894217321a66c0f6613e8347329fdc179eabc397885",
+      "bytes": 2242664
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReadBaselineTest",
+      "sha256": "7c6a4c6a4aeaafd17f70bc27551bb0e570790cc971e0bc779dea1bbd47a0155f",
+      "bytes": 322144
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest",
+      "sha256": "04d934a841812193c5251fb07d74e1889bc049b0ee8622c8b6950f520616f70d",
+      "bytes": 424272
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest",
+      "sha256": "18dcdd7d27164c1ff831d4fed6a8066e58ee416551deb00037570eac497d81ea",
+      "bytes": 1481768
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest",
+      "sha256": "1ef5c2415d6bd4963003827470d2b17fc81778d034ae10b86a08718171b1c150",
+      "bytes": 343440
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test",
+      "sha256": "2aea7b558eb2109920fd0b975b8ea3b290e79f7f0693f978d7c53100f2810aa2",
+      "bytes": 1142552
+    },
+    {
+      "path": "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_painter_test",
+      "sha256": "1c7317ae2b248df95a8473472ee70a4512c88207634fd6816f4b8dbbc4caa793",
+      "bytes": 655488
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/README.md",
+      "sha256": "f2a397d2166b121432885c0cd0778f5e35d994b685fa3e617e4584b6a28779a7",
+      "bytes": 5089
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/architecture.txt",
+      "sha256": "e1f2b5490967bf88ca2975f6121ab80cf6cce79e79acf6e6854198454a76cab1",
+      "bytes": 772
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/build.txt",
+      "sha256": "982cdf14165bf14295b082bc98677d65a34065b00d1e3637b0b8c9c2dc804ae5",
+      "bytes": 296
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/core-details.txt",
+      "sha256": "e90bd42896b2b9def930ec5eceb53565c05fd001e209176b91e751f9cacac501",
+      "bytes": 122968
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/core.txt",
+      "sha256": "7844ee84e7887eeb1f6732aa118eef9cc6c04e902f6a6724970abdf55c76aa66",
+      "bytes": 1196
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/cpu-directed.txt",
+      "sha256": "ff49eb178adfa3b7e53b2347b2c51d5a06495f8f686514fc750c14384f7ed207",
+      "bytes": 1192
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/deletion-proof.json",
+      "sha256": "f90ac092c56166cbdaaad51c7b40ade3f04c9f0eb8c19c3ae3c5f0b9fc31c849",
+      "bytes": 67107
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/layout.txt",
+      "sha256": "d162d258a7cfb11e17ad78a9ba9a247eac66a1dad0bd71e22a7a648c849a9277",
+      "bytes": 665
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/painter.txt",
+      "sha256": "fb2ebb6a442cac83990d93dea4b557460590760e22f4b5bdf05124b29d74ba01",
+      "bytes": 8657
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/reference-directed.txt",
+      "sha256": "5ab6673a86f859d7973f999c96dedebac7337c316a1b58f27c9baafe97471308",
+      "bytes": 931
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/retired/KisPageStoreLineIterator.cpp",
+      "sha256": "be9497d610d8be14809d226fd6a4968b4c4b1e55e2a53f133a977acb89485390",
+      "bytes": 7693
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/retired/KisPageStoreLineIterator.h",
+      "sha256": "cf77e43d78787b45bb6c9c2db00c6c994a390f29bb4b28c45e437a4de9d2c063",
+      "bytes": 3440
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/retired/KisPageWriteCoordinator_p.h",
+      "sha256": "35e82b57655ebc038112ea5dae71b2b3af5ccc639d5554d0c9475dbd89b2a362",
+      "bytes": 21007
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c4_20260923/tiles3.txt",
+      "sha256": "c64184ebe03a884f0582654eb90cb147b3a1a0b35a9e68bf992299debed028ea",
+      "bytes": 30530
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_convergence_c3_20260923/manifest.json",
+      "sha256": "430e675a8b9eb3d2d782111ce2f1e15d61f78bf4d2b7be4d7cf4712654b7b536",
+      "bytes": 8177
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/68_br1_bounded_backing_handoff_and_zero_copy_writes_20260921.md",
+      "sha256": "f2b400536bb8c52bd03840c055c7fc7d4a45900bbb343f57857b7aba5c5140d5",
+      "bytes": 87829
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/69_br1_pagestore_decomposition_and_intrusion_audit_20260921.md",
+      "sha256": "b6e5a142e8a66b7ba3b45c4e301ae4fb579f51f387cc0da9af9c70ad64af6cf2",
+      "bytes": 27661
+    },
+    {
+      "path": "/Users/apple/krita_gpu/docs/vulkan_gpu_design/84_br1_full_optimization_convergence_and_cleanup_20260923.md",
+      "sha256": "eb0f2e77f4d15472d582fbe5b7892a93ba9a6575dd512539850d86106134d123",
+      "bytes": 23388
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "arch": "arm64",
+    "directory": "lifecycle-vm-02-arm64",
+    "product_commit": "8f84cc8461ca621bc284342dbcdeb6490470b66e",
+    "results": {
+      "pid": 25426,
+      "actual_exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 661.4082327500219,
+      "totals": [],
+      "failures": [],
+      "selected_image_loaded": true,
+      "observer_loaded": true,
+      "summary": [
+        "HEAP label=lifecycle-drained live=104515305 paid_live=1115056 peak=116736257 paid_peak=13031600 nodes=22078 paid_nodes=5 peak_nodes=52513 allocations=176846713 frees=176824635 overflow=0",
+        "VM_API label=lifecycle-drained live=35356672 peak=37044224 paid_live=1114112 paid_peak=2801664 created=31467 freed=31456 partial=0 native_free_calls=0 native_freed=0 native_failures=0 paid_free_still_mapped=0",
+        "TABLE_OVERFLOW pointer=0 site=0 symbol=0 duplicate=0 native_request=0 native_mapping=0 destructor=0 total=0",
+        "NATIVE_EVENTS creates=7 destroys=2 request_live=5 request_peak=6",
+        "USABLE label=lifecycle-drained live=104980352 peak=117242256 paid_live=1115056 paid_peak=13031600 paid_excess_peak=0",
+        "HEAP label=after-static-destructors live=35057025 paid_live=0 peak=116736257 paid_peak=13031600 nodes=1372 paid_nodes=0 peak_nodes=52513 allocations=176846715 frees=176845343 overflow=0",
+        "VM_API label=after-static-destructors live=34045952 peak=37044224 paid_live=0 paid_peak=2801664 created=31467 freed=31462 partial=0 native_free_calls=0 native_freed=0 native_failures=0 paid_free_still_mapped=0",
+        "TABLE_OVERFLOW pointer=0 site=0 symbol=0 duplicate=0 native_request=0 native_mapping=0 destructor=0 total=0",
+        "NATIVE_EVENTS creates=7 destroys=6 request_live=1 request_peak=6",
+        "USABLE label=after-static-destructors live=35356032 peak=117242256 paid_live=0 paid_peak=13031600 paid_excess_peak=0"
+      ]
+    },
+    "families": {
+      "checkpoint": {
+        "trials": 54,
+        "injected": 53,
+        "mmap_faults": 3
+      },
+      "capture": {
+        "trials": 8,
+        "injected": 7,
+        "mmap_faults": 0
+      },
+      "read": {
+        "trials": 1,
+        "injected": 0,
+        "mmap_faults": 0
+      },
+      "default-read": {
+        "trials": 5,
+        "injected": 4,
+        "mmap_faults": 0
+      },
+      "commit": {
+        "trials": 2172,
+        "injected": 2171,
+        "mmap_faults": 8
+      },
+      "rollback": {
+        "trials": 43,
+        "injected": 42,
+        "mmap_faults": 2
+      },
+      "purge": {
+        "trials": 1,
+        "injected": 0,
+        "mmap_faults": 0
+      },
+      "release": {
+        "trials": 4,
+        "injected": 3,
+        "mmap_faults": 0
+      },
+      "close": {
+        "trials": 1,
+        "injected": 0,
+        "mmap_faults": 0
+      }
+    },
+    "faults": 2280,
+    "controls": 9,
+    "absent": 0,
+    "mmap_faults": 13,
+    "run_log_sha256": "e45d9274d3a32b14de0bde6bec20b9bb19cc231e1327c7a063cedbd72e2a779e",
+    "limits": "First/last occurrences of observed paid sites on invoking thread; no other-thread, all-occurrence, aggregate hard-bound or dual-native-free-failure qualification."
+  },
+  {
+    "arch": "x86_64",
+    "directory": "lifecycle-vm-02-x86_64",
+    "product_commit": "8f84cc8461ca621bc284342dbcdeb6490470b66e",
+    "results": {
+      "pid": 15987,
+      "actual_exit_code": 0,
+      "reaped": true,
+      "timed_out": false,
+      "seconds": 879.5325084170327,
+      "totals": [],
+      "failures": [],
+      "selected_image_loaded": true,
+      "observer_loaded": true,
+      "summary": [
+        "HEAP label=lifecycle-drained live=104474841 paid_live=1065904 peak=116654833 paid_peak=12941488 nodes=22845 paid_nodes=5 peak_nodes=53280 allocations=176642621 frees=176619776 overflow=0",
+        "VM_API label=lifecycle-drained live=35258368 peak=36892672 paid_live=1064960 paid_peak=2699264 created=31438 freed=31427 partial=0 native_free_calls=0 native_freed=0 native_failures=0 paid_free_still_mapped=0",
+        "TABLE_OVERFLOW pointer=0 site=0 symbol=0 duplicate=0 native_request=0 native_mapping=0 destructor=0 total=0",
+        "NATIVE_EVENTS creates=7 destroys=2 request_live=5 request_peak=6",
+        "USABLE label=lifecycle-drained live=104954864 peak=117175808 paid_live=1065904 paid_peak=12941488 paid_excess_peak=0",
+        "HEAP label=after-static-destructors live=35065657 paid_live=0 peak=116654833 paid_peak=12941488 nodes=1395 paid_nodes=0 peak_nodes=53280 allocations=176642623 frees=176641228 overflow=0",
+        "VM_API label=after-static-destructors live=34033664 peak=36892672 paid_live=0 paid_peak=2699264 created=31438 freed=31433 partial=0 native_free_calls=0 native_freed=0 native_failures=0 paid_free_still_mapped=0",
+        "TABLE_OVERFLOW pointer=0 site=0 symbol=0 duplicate=0 native_request=0 native_mapping=0 destructor=0 total=0",
+        "NATIVE_EVENTS creates=7 destroys=6 request_live=1 request_peak=6",
+        "USABLE label=after-static-destructors live=35374592 peak=117175808 paid_live=0 paid_peak=12941488 paid_excess_peak=0"
+      ]
+    },
+    "families": {
+      "checkpoint": {
+        "trials": 53,
+        "injected": 52,
+        "mmap_faults": 3
+      },
+      "capture": {
+        "trials": 8,
+        "injected": 7,
+        "mmap_faults": 0
+      },
+      "read": {
+        "trials": 1,
+        "injected": 0,
+        "mmap_faults": 0
+      },
+      "default-read": {
+        "trials": 5,
+        "injected": 4,
+        "mmap_faults": 0
+      },
+      "commit": {
+        "trials": 2171,
+        "injected": 2170,
+        "mmap_faults": 8
+      },
+      "rollback": {
+        "trials": 43,
+        "injected": 42,
+        "mmap_faults": 2
+      },
+      "purge": {
+        "trials": 1,
+        "injected": 0,
+        "mmap_faults": 0
+      },
+      "release": {
+        "trials": 3,
+        "injected": 2,
+        "mmap_faults": 0
+      },
+      "close": {
+        "trials": 1,
+        "injected": 0,
+        "mmap_faults": 0
+      }
+    },
+    "faults": 2277,
+    "controls": 9,
+    "absent": 0,
+    "mmap_faults": 13,
+    "run_log_sha256": "e2fa092bf0defcdb061d01d350670c10c4e24e3d110a543fe0e50c1e5b5c708c",
+    "limits": "First/last occurrences of observed paid sites on invoking thread; no other-thread, all-occurrence, aggregate hard-bound or dual-native-free-failure qualification."
+  }
+]

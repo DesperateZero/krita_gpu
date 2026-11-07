@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "old_snapshot_interface_and_calls_deleted": true,
+    "query_has_one_shard_cut": true,
+    "query_has_no_qt_projection_or_owning_container": true,
+    "root_missing_and_selected_missing_remain_distinct": true,
+    "query_reuses_original_scalar_record_description": true,
+    "candidate_reads_original_replica_order_and_guards": true,
+    "caller_snapshot_and_candidate_loop_deleted": true,
+    "all_three_production_consumers_use_original_common_entry": true,
+    "private_replacement_no_compatibility_overload": true,
+    "removed_pending_and_default_candidate_controls_retained": true,
+    "virtual_default_preparation_and_real_rejections_retained": true,
+    "pressure_and_full_state_oracle_covered": true
+  },
+  "all_passed": true,
+  "remaining_protocols": [
+    {
+      "protocol": "generic metadata StateMachine temporary Qt capacity",
+      "consumers": "applyProjectedSequence / preparePublicationImpl / snapshot exporters",
+      "reason": "Touched transition values and seen/included/previous/retained/batch sets still allocate; replacing first-write observation does not migrate transition storage.",
+      "delete_when": "Actual working capacity and its shared state-machine policy migrate together through prepare/install/final cleanup."
+    },
+    {
+      "protocol": "proof, overlay, descriptor/default preparation and Failed/cancel",
+      "consumers": "original native/generic first write and seal/publication preparation",
+      "reason": "Base observation creates no claim or write permit; remaining real preparation can refuse, and original job ownership does not allow continuation.",
+      "delete_when": "Original preparation capacity, physical claims and CP5 job ownership close for their real consumers."
+    }
+  ],
+  "old_first_write_projection_deleted": true,
+  "new_persistent_state_or_queue": false,
+  "full_cp1_complete": false
+}

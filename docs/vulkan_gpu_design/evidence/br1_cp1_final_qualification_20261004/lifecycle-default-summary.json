@@ -1,0 +1,23 @@
+{
+  "rounds": {
+    "lifecycle-matrix-final-01": {
+      "processes": 515,
+      "faults": 497,
+      "controls": 18,
+      "actual_exit_zero": 515,
+      "fatal_substitution": true,
+      "results_sha256": "999a061dbb6f2e4628cbf1fa4ede631abe16059bf1e631925c271814a4edc8b4"
+    },
+    "lifecycle-matrix-default-final-01": {
+      "processes": 515,
+      "faults": 497,
+      "controls": 18,
+      "actual_exit_zero": 515,
+      "fatal_substitution": false,
+      "results_sha256": "65eed0282ee21b1d0b11e78c9faf848f844996b396f1499ca708e84a43847434"
+    }
+  },
+  "default_refusal_exit_scope": "497 handled first/last paid allocation refusals + 18 controls, original nine families",
+  "default_abort_exit_qualified": false,
+  "scope": "read/purge/close have no discovered malloc target; no complete joint caller/fence or historical UE exit qualification"
+}

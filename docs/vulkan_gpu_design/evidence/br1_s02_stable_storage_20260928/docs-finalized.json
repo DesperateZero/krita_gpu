@@ -1,0 +1,16 @@
+{
+  "remapped_source_links": 157,
+  "source_diff_sha256": "4d0db8a75988529ce53adad9ed1af976cf267fb6ec9bd804f392a2393fa29fac",
+  "passed": 6292,
+  "links": {
+    "storage": "[稳定存储与 allocator](/Users/apple/krita_gpu/krita/libs/image/pagestore/KisMutationStorage_p.h:64)",
+    "alloc": "[原预算的分配/释放入口](/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp:787)",
+    "get": "[WriteSet::getOrCreate / prepareIndex](/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp:865)",
+    "cold": "[ColdPageSet](/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:720)",
+    "claim": "[claimEntryLocked](/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:916)",
+    "range": "[reserveManagedRange](/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:1243)",
+    "native": "[beginWriteImpl](/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp:1413)",
+    "test": "[稳定增长与预算拒绝用例](/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp:5309)",
+    "business": "[原 session 的预算拒绝与晚 guard 用例](/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp:4453)"
+  }
+}

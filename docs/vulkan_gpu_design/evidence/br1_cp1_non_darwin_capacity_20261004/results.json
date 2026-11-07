@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-04",
+  "product_commit": "b51a7602c82bbee6bf2a0df79400dd943d6df5b6",
+  "parent_commit": "db7930797f4661e3a030b4004bca85c8a7011d4d",
+  "source_sha256": {
+    "krita/libs/image/pagestore/KisPagePlatformStorage_p.h": "a6e48369cd85db0e4564a09abb7198479c269082a332208ed2691c1f4dd3f7a3",
+    "krita/libs/image/pagestore/KisPageWriteCoordinator.cpp": "f6618a91ca6caf317f8cb29e177c937c9de4ba6bb99d53fb0fa92bd71cb17a9d",
+    "krita/libs/image/tests/KisPagePlatformStorageProbe.cpp": "2e46be859330de8942f2cbf28dca147e787a0a1f3f12deb14b05570c16a775fd",
+    "krita/libs/image/tests/CMakeLists.txt": "f7eb50c4583ffc4e84b6421716bd4abbe717c10aac009c3ce9fe03b68822f2b1"
+  },
+  "platform_implementation": {
+    "linux_unix": "page-rounded anonymous mmap; original base/span munmap",
+    "windows": "page-rounded VirtualAlloc reserve+commit; original base VirtualFree MEM_RELEASE",
+    "darwin_changed": false
+  },
+  "github_actions": {
+    "repository": "DesperateZero/krita",
+    "branch": "codex/cp1-platform-exits-ci",
+    "final_run_id": 37196520779,
+    "final_run_url": "https://github.com/DesperateZero/krita/actions/runs/37196520779",
+    "ci_head": "15e9e7c3f63c7f72b21efa7d3d54e7ab4480b868",
+    "linux": {
+      "job_id": 111419455078,
+      "runner": "ubuntu-24.04",
+      "page_size": 4096,
+      "boundary_cases": 48,
+      "concurrent_cases": 1024,
+      "result": "pass"
+    },
+    "windows": {
+      "job_id": 111419455219,
+      "runner": "windows-2025-vs2026",
+      "os": "Windows Server 2025",
+      "page_size": 4096,
+      "boundary_cases": 48,
+      "concurrent_cases": 1024,
+      "virtual_query_checked": true,
+      "result": "pass"
+    },
+    "initial_run": {
+      "run_id": 37196382058,
+      "linux": "pass",
+      "windows": "pre-compile runner environment failure: cl.exe not initialized"
+    }
+  },
+  "local_validation": {
+    "shared_unix_probe": {
+      "boundary_cases": 48,
+      "concurrent_cases": 1024,
+      "result": "pass"
+    },
+    "android_aarch64_api28_compile": "pass",
+    "darwin_arm64_target": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "darwin_x86_64_target": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "long_pressure_rerun": false
+  },
+  "default_abort_contract": {
+    "product_requirement": "double physical-release failure is non-returning and never reports free or releases the live charge",
+    "product_requirement_evidence": "section 16.93",
+    "host_default_sigabrt_reaping": "test-host health prerequisite, outside CP1 product qualification",
+    "current_host_qualified": false,
+    "current_ue_pid": 90016,
+    "repeat_probe": false
+  },
+  "cp1_complete": true,
+  "next_package": "CP2"
+}

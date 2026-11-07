@@ -1,0 +1,269 @@
+[
+  {
+    "arch": "arm64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 20.57,
+    "totals": [
+      "Totals: 1274 passed, 1 failed, 0 skipped, 0 blacklisted, 20508ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementRecordTransfersAtCapacity(registered-automatic-budget-release) 'queue.isDrained()' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.215,
+    "totals": [
+      "Totals: 659 passed, 0 failed, 0 skipped, 0 blacklisted, 2451ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.83,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 18ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest"
+    ],
+    "exit_code": 32,
+    "duration_seconds": 1.673,
+    "totals": [
+      "Totals: 189 passed, 32 failed, 0 skipped, 0 blacklisted, 156ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish1-cross1) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "arm64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.62,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 4ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "arm64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-arm64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 17.407,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 394ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "cpu",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 22.26,
+    "totals": [
+      "Totals: 1274 passed, 1 failed, 0 skipped, 0 blacklisted, 22077ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreCpuMutationTest::retirementRecordTransfersAtCapacity(registered-automatic-budget-release) 'queue.isDrained()' returned FALSE. ()"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "reference",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 3.814,
+    "totals": [
+      "Totals: 659 passed, 0 failed, 0 skipped, 0 blacklisted, 2969ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "physical",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStorePhysicalClaimTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.348,
+    "totals": [
+      "Totals: 379 passed, 0 failed, 0 skipped, 0 blacklisted, 41ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "resident",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreResidentReadTest"
+    ],
+    "exit_code": 33,
+    "duration_seconds": 0.609,
+    "totals": [
+      "Totals: 188 passed, 33 failed, 0 skipped, 0 blacklisted, 299ms"
+    ],
+    "failures": [
+      "FAIL!  : KisPageStoreResidentReadTest::defaultMaterializationAdmissionIsBounded(same-page-deduplication) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp1-warm1-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp4-warm1-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp8-warm1-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm0-publish1-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish0-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish0-cross1) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish1-cross0) Compared values are not the same",
+      "FAIL!  : KisPageStoreResidentReadTest::retainedVersionRediscoveryAfterRetag(bpp16-warm1-publish1-cross1) Compared values are not the same"
+    ],
+    "passed": false
+  },
+  {
+    "arch": "x86_64",
+    "suite": "foundation",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreFoundationTest"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.346,
+    "totals": [
+      "Totals: 28 passed, 0 failed, 0 skipped, 0 blacklisted, 14ms"
+    ],
+    "failures": [],
+    "passed": true
+  },
+  {
+    "arch": "x86_64",
+    "suite": "freehand",
+    "command": [
+      "arch",
+      "-x86_64",
+      "/Users/apple/krita_gpu/krita/_build-br0-cpu/bin/FreehandStrokeTest",
+      "testPersistentAutoBrushStrokePressure",
+      "testPersistentAutoBrushStrokePressureCancelled"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 21.288,
+    "totals": [
+      "Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 522ms"
+    ],
+    "failures": [],
+    "passed": true
+  }
+]

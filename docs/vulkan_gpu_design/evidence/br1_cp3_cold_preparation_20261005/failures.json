@@ -1,0 +1,67 @@
+[
+  {
+    "kind": "compile",
+    "evidence": "build-01.log",
+    "reason": "KisPageVersion has operator== and no operator!=; six candidate comparisons corrected"
+  },
+  {
+    "kind": "probe_compile",
+    "evidence": "build-publication-arm64-01.log",
+    "reason": "Frozen old private install call had one extra argument; current API used"
+  },
+  {
+    "kind": "probe_fault_miss",
+    "evidence": "publication-arm64/result.json",
+    "reason": "Old operator-new override does not intercept current paid allocator"
+  },
+  {
+    "kind": "probe_fault_miss",
+    "evidence": [
+      "publication-final-arm64/result.json",
+      "publication-final-x86_64/result.json"
+    ],
+    "reason": "malloc family does not intercept large index VM mapping"
+  },
+  {
+    "kind": "probe_interposer_bootstrap",
+    "evidence": "publication-vm-arm64-run/result.json",
+    "reason": "Unscoped VM interposition exits -6 before positive control; reaped; no product failure qualification"
+  },
+  {
+    "kind": "real_install_failure",
+    "evidence": [
+      "publication-scoped-vm-arm64-run/result.json",
+      "publication-stack-arm64-run/probe.log",
+      "parent-publication-02/result.json"
+    ],
+    "reason": "restore activity map frees129 at install; current source fixed original reservation lifetime"
+  },
+  {
+    "kind": "runtime_identity",
+    "evidence": "parent-publication/probe.log",
+    "observed_pid": 90210,
+    "observed_exit_code": 24,
+    "reason": "Missing image soname symlink caused current instead of saved-parent image; not parent proof"
+  },
+  {
+    "kind": "build_target",
+    "evidence": "build-vulkan.log",
+    "reason": "Wrong target name; corrected to actual KisVulkanFoundationContractsTest"
+  },
+  {
+    "kind": "launcher_target",
+    "reason": "KisFreehandStrokeTest path did not exist; no test launched. Correct FreehandStrokeTest and registered cases verified later"
+  },
+  {
+    "kind": "architecture",
+    "evidence": [
+      "architecture-final-02.log",
+      "architecture-current.log"
+    ],
+    "reason": "Deleted private consumePublicationActivity must migrate original retention contract checks; replaced by canonical claim/release plus forbidden consume before qualified checkpoint"
+  },
+  {
+    "kind": "analysis_assertion",
+    "reason": "CI checker is outside source inventory roots; separately reviewed its actual diff/hash. Corrected checkpoint-review-final.json; no weakened ceiling"
+  }
+]

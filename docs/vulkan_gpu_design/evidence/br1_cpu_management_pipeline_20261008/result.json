@@ -1,0 +1,50 @@
+{
+  "actual_exit": 0,
+  "timed_out": false,
+  "reaped": true,
+  "cases": [
+    {
+      "case": "current-canonical-read",
+      "size": 4,
+      "initially_sorted": true,
+      "copies_after_normalize": 0,
+      "copies_after_read": 4,
+      "detached": true,
+      "checksum": 4,
+      "passed": true
+    },
+    {
+      "case": "current-row-to-column",
+      "size": 4,
+      "initially_sorted": false,
+      "copies_after_normalize": 4,
+      "copies_after_read": 4,
+      "detached": true,
+      "checksum": 4,
+      "passed": true
+    },
+    {
+      "case": "const-canonical-read",
+      "size": 4,
+      "initially_sorted": true,
+      "copies_after_normalize": 0,
+      "copies_after_read": 0,
+      "detached": false,
+      "checksum": 4,
+      "passed": true
+    },
+    {
+      "case": "one-row-order-and-const-read",
+      "size": 4,
+      "initially_sorted": true,
+      "copies_after_normalize": 0,
+      "copies_after_read": 0,
+      "detached": false,
+      "checksum": 4,
+      "passed": true
+    }
+  ],
+  "actual_library_verified": true,
+  "inputs_verified": true,
+  "performance_measurement": false
+}

@@ -1,0 +1,72 @@
+{
+  "protocol_sha256": "04d3c779bf9d900babefec7951039c1aaccaf4d91756e14a1ee10ffb63b89d70",
+  "observations": [
+    {
+      "arch": "arm64",
+      "K": 1,
+      "pairs": 40,
+      "fresh_median_ns": 14958.0,
+      "handoff_median_ns": 14125.0,
+      "fresh_over_handoff": 1.0591212859173336,
+      "latency_reduction": 0.055821072339346856,
+      "one_sided_9875_lower_reduction": 0.0456699126366914,
+      "interval_975": [
+        0.0456699126366914,
+        0.06128632510870158
+      ],
+      "required_reduction": 0.2,
+      "passes_measured_scoped_gate": false
+    },
+    {
+      "arch": "arm64",
+      "K": 16,
+      "pairs": 40,
+      "fresh_median_ns": 154541.25,
+      "handoff_median_ns": 131260.5,
+      "fresh_over_handoff": 1.1667417106038205,
+      "latency_reduction": 0.14291227363211956,
+      "one_sided_9875_lower_reduction": 0.1388841245634811,
+      "interval_975": [
+        0.1388841245634811,
+        0.15183535183382557
+      ],
+      "required_reduction": 0.3,
+      "passes_measured_scoped_gate": false
+    },
+    {
+      "arch": "x86_64",
+      "K": 1,
+      "pairs": 40,
+      "fresh_median_ns": 22968.75,
+      "handoff_median_ns": 22073.0,
+      "fresh_over_handoff": 1.0448441862463944,
+      "latency_reduction": 0.042919496358109877,
+      "one_sided_9875_lower_reduction": 0.03477204368190567,
+      "interval_975": [
+        0.03477204368190567,
+        0.055076381527600415
+      ],
+      "required_reduction": 0.2,
+      "passes_measured_scoped_gate": false
+    },
+    {
+      "arch": "x86_64",
+      "K": 16,
+      "pairs": 40,
+      "fresh_median_ns": 232583.25,
+      "handoff_median_ns": 197333.25,
+      "fresh_over_handoff": 1.175180061327226,
+      "latency_reduction": 0.14906657038529147,
+      "one_sided_9875_lower_reduction": 0.13421291275306801,
+      "interval_975": [
+        0.13421291275306801,
+        0.16249415268947032
+      ],
+      "required_reduction": 0.3,
+      "passes_measured_scoped_gate": false
+    }
+  ],
+  "family_pass": false,
+  "inputs_verified": true,
+  "qualification": "current controlled-selector latency only; no formal M6/stroke E/fixed-M5 nonregression qualification"
+}

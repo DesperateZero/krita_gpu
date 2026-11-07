@@ -1,0 +1,225 @@
+{
+  "upstream": "9a24ae0d8c070884fb013594191002e1a1b39a19",
+  "source_files": [
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.cc",
+      "sha256": "23c686cf03dcb6ed2fad60e568792fefc02b3ff1be47ad682102ac88f26ccbef",
+      "current_lines": 1871,
+      "anchors": {
+        "KisTileSP KisTiledDataManager::getTile(": [
+          267
+        ],
+        "KisTileSP KisTiledDataManager::getReadOnlyTileLazy(": [
+          282
+        ],
+        "void KisTiledDataManager::attachPageStoreTile(": [
+          307
+        ],
+        "QRect KisTiledDataManager::extent() const": [
+          1464
+        ],
+        "bool KisTiledDataManager::checkpointStrokeMutation(": [
+          1665
+        ],
+        "KisPageStoreWriteOperationResult KisTiledDataManager::writePageStoreOperation(": [
+          1688
+        ]
+      },
+      "upstream_lines": 782,
+      "upstream_sha256": "eda6105342258f9b9692c027f936e6ce42b92dc4c5d70c01a63ac44d0ff6a083"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile.cc",
+      "sha256": "4fcccf3a2d942f4155ac3605ab8dc26258ca3be8d85557e7c206b26ecc1874cc",
+      "current_lines": 644,
+      "anchors": {
+        "bool KisTile::refreshPageStoreData()": [
+          143
+        ],
+        "bool KisTile::lockForRead() const": [
+          349
+        ]
+      },
+      "upstream_lines": 334,
+      "upstream_sha256": "ec5341bb863b592aca79531b890157268d44500b327e10f261abec1dab6e72d6"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile.h",
+      "sha256": "9de10e526eae65d3a712f2cc57bdf15c05afd89ad9e6f717a7b82f9c5bea2226",
+      "current_lines": 240,
+      "anchors": {
+        "mutable volatile int m_lockCounter;": [
+          184
+        ]
+      },
+      "upstream_lines": 181,
+      "upstream_sha256": "52829db404170a86b825e6cd93a956d347f847ccfa5ce157e19bd347ce5c3fab"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_data_wrapper.h",
+      "sha256": "edea458c082ed283bafbecee0739af08a8274ab6e910c38888dfeb681f968929",
+      "current_lines": 111,
+      "anchors": {
+        "KisTileSP tile = dm->getTile(": [
+          41
+        ]
+      },
+      "upstream_lines": 102,
+      "upstream_sha256": "bfc0f7c2b3e010fd1f7f6af2a6b2fbbad483123ebba4e8b49cb71e9a11fa0e6f"
+    },
+    {
+      "path": "libs/image/tiles3/kis_base_iterator.h",
+      "sha256": "6aeb2214c2289877cbfeda5b253ef15e70a9f7329bfd410b802a1bc7a8ce6c29",
+      "current_lines": 180,
+      "anchors": {
+        "inline bool lockTile(": [
+          53
+        ],
+        "void fetchTileDataForCache(": [
+          74
+        ]
+      },
+      "upstream_lines": 75,
+      "upstream_sha256": "8692fe3bf51413bac233c7a49d92743b90659a2fa9e8bf6dc7b3a0a4d65c2e79"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_hash_table_p.h",
+      "sha256": "86cd984e0661dc6ef6502fba3fdcca44627f6c3b05fffc2e5d910a081de0cc49",
+      "current_lines": 483,
+      "anchors": {
+        "KisTileHashTableTraits<T>::getReadOnlyTileLazy(": [
+          287
+        ]
+      },
+      "upstream_lines": 443,
+      "upstream_sha256": "af9c01bd6e8acd49b0d5c84adcc1e7907c2c5db71f1dd38559b9e20dbd5eb1a8"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tile_hash_table2.h",
+      "sha256": "7736ea4b57e55549be0a635431415914fc33ae9589603a1afcca016245b903b7",
+      "current_lines": 646,
+      "anchors": {
+        "KisTileHashTableTraits2<T>::getReadOnlyTileLazy(": [
+          504
+        ]
+      },
+      "upstream_lines": 536,
+      "upstream_sha256": "d410d5899e4c85a6b7550ae54d0eacc6e388d5e0905e6a966345109b902c973b"
+    },
+    {
+      "path": "libs/image/pagestore/KisTiledDataManagerPageStoreBackend.cpp",
+      "sha256": "7cbe532a997839554309a380f19181ded915ebd26b66f16910f5cf54fb870635",
+      "current_lines": 2442,
+      "anchors": {
+        "KisCapturedReadView KisTiledDataManagerPageStoreBackend::captureReadView(": [
+          1192
+        ],
+        "bool KisTiledDataManagerPageStoreBackend::hasCurrentThreadIteratorWrites() const": [
+          1283
+        ],
+        "KisTiledDataManagerPageStoreBackend::acquireTile(": [
+          1349
+        ]
+      },
+      "upstream_lines": null,
+      "upstream_sha256": null
+    },
+    {
+      "path": "libs/image/pagestore/KisTiles3PageReplicaProvider.cpp",
+      "sha256": "0b758725bbb8d71c4fbccddd0bcada6f59599b01fba3c8a22c3fdde145591d90",
+      "current_lines": 1219,
+      "anchors": {
+        "class Tiles3TileReadCache final": [
+          144
+        ]
+      },
+      "upstream_lines": null,
+      "upstream_sha256": null
+    },
+    {
+      "path": "libs/image/pagestore/KisCpuResidentBinding.cpp",
+      "sha256": "0fce83a9a305debf9cc43242a74096a11fc90c7a3fbbdb084f1dd0edcdb72fb6",
+      "current_lines": 410,
+      "anchors": {
+        "KisReplicaAllocationIdentity KisCpuResidentBinding::readIdentity(": [
+          327
+        ]
+      },
+      "upstream_lines": null,
+      "upstream_sha256": null
+    },
+    {
+      "path": "libs/image/kis_paint_device_strategies.h",
+      "sha256": "c315b214801741a5fc36c88ac51213435704671651b00f55cac13568ba295f4e",
+      "current_lines": 656,
+      "anchors": {
+        "m_d->dataManager()->extent(x, y, w, h);": [
+          103
+        ]
+      },
+      "upstream_lines": 465,
+      "upstream_sha256": "a0b1fe1abddae53e32bd28ff29948f7725cd7868354932c7f0e6cdce55cc2811"
+    },
+    {
+      "path": "libs/image/kis_paint_device.cc",
+      "sha256": "a187f802101a5e3a26b866e0a84c5f53cd02f711d2cfd8a1eab58e7f8466286b",
+      "current_lines": 2440,
+      "anchors": {
+        "QRect extent = data->dataManager()->extent();": [
+          355,
+          855
+        ],
+        "dm->purge(dm->extent());": [
+          1514
+        ]
+      },
+      "upstream_lines": 2358,
+      "upstream_sha256": "b1eb34fccde251aa67f85001c142fa2f2c4531055dd6f037ffca8fa7d19dda64"
+    },
+    {
+      "path": "libs/image/tiles3/kis_tiled_data_manager.h",
+      "sha256": "7ac41d696c59c96b7fa24d70237c949670c95cd4f8fc6f6c329cbd54ed91001d",
+      "current_lines": 423,
+      "anchors": {
+        "inline void getTilesPair(": [
+          144
+        ]
+      },
+      "upstream_lines": 410,
+      "upstream_sha256": "efdd3f0a31bd01543fecde681d4a9b477a855b961073485272a1385ffa40bbf5"
+    }
+  ],
+  "searches": [
+    {
+      "command": [
+        "rg",
+        "-n",
+        "getReadOnlyTileLazy\\(|getTilesPair\\(",
+        "libs",
+        "plugins",
+        "--glob",
+        "*.{h,cc,cpp}",
+        "--glob",
+        "!**/tests/**"
+      ],
+      "log": "callers-1.txt",
+      "scope": "text matches; templates, same-name APIs and virtual calls need manual classification"
+    },
+    {
+      "command": [
+        "rg",
+        "-n",
+        "(dataManager\\(\\)|dataManager|m_dataManager|m_d->dataManager|m_datamanager|m_dm|dm)->extent\\(",
+        "libs",
+        "plugins",
+        "--glob",
+        "*.{h,cc,cpp}",
+        "--glob",
+        "!**/tests/**"
+      ],
+      "log": "callers-2.txt",
+      "scope": "text matches; templates, same-name APIs and virtual calls need manual classification"
+    }
+  ],
+  "scope": "JP5/JP6 source anchors and dependency audit, not a race proof or runtime census"
+}

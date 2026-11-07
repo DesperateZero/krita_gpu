@@ -1,0 +1,58 @@
+{
+  "scope": "JP1 prepared overlay nodes/buckets, native/generic/conditional removal and deferred disposal; JP1-JP8 guide mapping. Development correctness only.",
+  "source_head": "5173c807c87bb1619325249a07a8b4f4f8f09f09",
+  "source_diff_sha256": "c1c6f145e69d6e841fb15c5873ea23db49da681f31ddc66f33b6530fd1ae3c2d",
+  "previous_source_diff_sha256": "7c5e6e2e96f5e56c2325ed74c78184cb12da058749910bce19be0aaa7881523a",
+  "QtCore_sha256": "cd0a48d2948af55889625ae0750a7d08895068deae9b6e85bdc3e1fac6dc9434",
+  "QtCore_unchanged": true,
+  "matrix_records": 44,
+  "matrix_totals": [
+    9154,
+    0,
+    0
+  ],
+  "probes": 66,
+  "overlay_installs_per_arch": 96,
+  "install_allocations": 0,
+  "install_frees": 0,
+  "preparation_refusals_per_arch": 627,
+  "preparation_controls_per_arch": 12,
+  "recovered_refusals": 0,
+  "tracked_blocks_and_bytes_after_cleanup": 0,
+  "reader_window_still_reproduces": true,
+  "graph": {
+    "translation_units": 87,
+    "apis": 1800,
+    "edges": 19382,
+    "callbacks": 17
+  },
+  "architecture": {
+    "manifests": 21,
+    "ownership_facts": 25,
+    "census_groups": 16,
+    "intrusion_files": 19,
+    "manager_identifiers": 25,
+    "manager_includes": 3,
+    "raised_ceiling": false
+  },
+  "changed_handwritten_files": [
+    "libs/image/pagestore/KisPageStore.cpp",
+    "libs/image/pagestore/KisPagePublicationCoordinator.cpp",
+    "libs/image/pagestore/KisPagePublicationCoordinator_p.h",
+    "libs/image/pagestore/KisPageStoreDiagnostics.cpp",
+    "libs/image/pagestore/KisPageStoreDiagnostics_p.h",
+    "libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+    "build-tools/ci-scripts/pagestore-audit/state-ownership.json",
+    "libs/image/pagestore/KisPageWriteCoordinator.cpp",
+    "build-tools/ci-scripts/check-pagestore-architecture.py"
+  ],
+  "remaining": [
+    "JP2-JP7 session/root/surface/current/adapter joint publication",
+    "JP8 necessary cleanup admission and full budgets",
+    "OFF product configuration",
+    "Real brush persistent owner/current/source/producer",
+    "M6/M7/M8",
+    "Vulkan/TSAN/Fresh 2%/BR1-PERF"
+  ],
+  "new_stage_or_performance_qualification": false
+}

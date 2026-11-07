@@ -1,0 +1,100 @@
+[
+  {
+    "side": "current",
+    "index": 0,
+    "phase": "capability",
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/krita/_build-br0-cpu/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_business_cost_localization_20261007/fixture-current/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "profiler_command": null,
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "profiler_exit": null,
+    "profiler_timed_out": false,
+    "replay_count": 1,
+    "samples": [
+      {
+        "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+        "canvas_visible_endpoint": false,
+        "image_destroyed": true,
+        "owner_teardown_ns": 576541,
+        "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+        "pen_up_to_projection_ready_ns": 8278292,
+        "projection_updates": 19,
+        "redo_drain_ns": 1387166,
+        "schema": 1,
+        "segment_callbacks": 8,
+        "setup_ns": 564757791,
+        "strategy": "ordinary-cpu-default",
+        "strategy_destroyed": true,
+        "stroke_to_projection_ready_ns": 8610166,
+        "total_fixture_ns": 610350666,
+        "undo_drain_ns": 449292,
+        "update_callbacks": 4,
+        "workers": 4,
+        "workload": "rgba8-buildup-over-512-8-lines-v1"
+      }
+    ],
+    "failures": [],
+    "loading_ok": true,
+    "passed": true,
+    "seconds": 2.471720292
+  },
+  {
+    "side": "upstream",
+    "index": 1,
+    "phase": "capability",
+    "command": [
+      "arch",
+      "-arm64",
+      "/usr/bin/env",
+      "DYLD_LIBRARY_PATH=/Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin",
+      "DYLD_PRINT_LIBRARIES=1",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_business_cost_localization_20261007/fixture-upstream/probe",
+      "testMatchedCpuBaseline",
+      "-nocrashhandler"
+    ],
+    "profiler_command": null,
+    "actual_exit": 0,
+    "timed_out": false,
+    "reaped": true,
+    "profiler_exit": null,
+    "profiler_timed_out": false,
+    "replay_count": 1,
+    "samples": [
+      {
+        "blank_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+        "canvas_visible_endpoint": false,
+        "image_destroyed": true,
+        "owner_teardown_ns": 256542,
+        "painted_sha256": "2c9ae317c3fe2f5f9931c0c354aea3734e69433e67aabdba85d42633ea76df29",
+        "pen_up_to_projection_ready_ns": 3811792,
+        "projection_updates": 19,
+        "redo_drain_ns": 163125,
+        "schema": 1,
+        "segment_callbacks": 8,
+        "setup_ns": 442937208,
+        "strategy": "ordinary-cpu-default",
+        "strategy_destroyed": true,
+        "stroke_to_projection_ready_ns": 4068959,
+        "total_fixture_ns": 481561000,
+        "undo_drain_ns": 61584,
+        "update_callbacks": 4,
+        "workers": 4,
+        "workload": "rgba8-buildup-over-512-8-lines-v1"
+      }
+    ],
+    "failures": [],
+    "loading_ok": true,
+    "passed": true,
+    "seconds": 2.014034166
+  }
+]

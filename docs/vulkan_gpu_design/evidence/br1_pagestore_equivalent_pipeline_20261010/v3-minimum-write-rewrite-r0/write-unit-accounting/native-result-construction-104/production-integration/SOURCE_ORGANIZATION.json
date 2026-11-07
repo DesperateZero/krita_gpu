@@ -1,0 +1,656 @@
+[
+  {
+    "original_line": 530,
+    "end_line": 573,
+    "declaration": "void KisNativeResultProtocol::Impl::initialize()",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 574,
+    "end_line": 609,
+    "declaration": "KisNativeResultProtocol::Impl::~Impl()",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 610,
+    "end_line": 626,
+    "declaration": "void KisNativeResultProtocol::Impl::ensureEdges(size_t n)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 627,
+    "end_line": 641,
+    "declaration": "KisNativeResultProtocol::Body *KisNativeResultProtocol::Impl::checkout()",
+    "destination": "Write"
+  },
+  {
+    "original_line": 642,
+    "end_line": 659,
+    "declaration": "void KisNativeResultProtocol::Impl::returnBody(Body *b) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 660,
+    "end_line": 665,
+    "declaration": "KisNativeResultProtocol::View *KisNativeResultProtocol::Impl::retentionOwner(quint64 begin, quint64 end) const",
+    "destination": "State_p.h (small shared fact operations)"
+  },
+  {
+    "original_line": 666,
+    "end_line": 674,
+    "declaration": "KisNativeResultProtocol::Impl::Selection KisNativeResultProtocol::Impl::selection(const Page &p, quint64 at) const",
+    "destination": "State_p.h (small shared fact operations)"
+  },
+  {
+    "original_line": 675,
+    "end_line": 681,
+    "declaration": "void KisNativeResultProtocol::Impl::linkEdge(Edge *e, View *v)",
+    "destination": "State_p.h (small shared fact operations)"
+  },
+  {
+    "original_line": 682,
+    "end_line": 688,
+    "declaration": "void KisNativeResultProtocol::Impl::unlinkEdge(Edge *e)",
+    "destination": "State_p.h (small shared fact operations)"
+  },
+  {
+    "original_line": 689,
+    "end_line": 761,
+    "declaration": "KisNativeResultProtocol::Impl::Resource *KisNativeResultProtocol::Impl::fresh(",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 762,
+    "end_line": 767,
+    "declaration": "void KisNativeResultProtocol::Impl::park(Resource *r) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 768,
+    "end_line": 797,
+    "declaration": "void KisNativeResultProtocol::Impl::retire(Resource *r) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 798,
+    "end_line": 845,
+    "declaration": "bool KisNativeResultProtocol::Impl::retireNow(Resource *r) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 846,
+    "end_line": 856,
+    "declaration": "void KisNativeResultProtocol::Impl::enqueueTerminalLocked(Resource *r) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 857,
+    "end_line": 868,
+    "declaration": "void KisNativeResultProtocol::Impl::startTerminalLocked() noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 869,
+    "end_line": 879,
+    "declaration": "void KisNativeResultProtocol::Impl::deferRetirement(Resource *r) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 880,
+    "end_line": 889,
+    "declaration": "void KisNativeResultProtocol::Impl::queueTerminal(Resource *r, quint64 serial) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 890,
+    "end_line": 899,
+    "declaration": "void KisNativeResultProtocol::Impl::completeTerminal(Resource *r) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 900,
+    "end_line": 952,
+    "declaration": "void KisNativeResultProtocol::Impl::runTerminals() noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 953,
+    "end_line": 965,
+    "declaration": "void KisNativeResultProtocol::Impl::finishTerminalJob() noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 966,
+    "end_line": 978,
+    "declaration": "void KisNativeResultProtocol::Impl::claimReleased(Resource *r, Resource *&head) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 979,
+    "end_line": 1030,
+    "declaration": "void KisNativeResultProtocol::Impl::settleReleased(Resource *head, bool retirePhysical) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 1031,
+    "end_line": 1037,
+    "declaration": "void KisNativeResultProtocol::Impl::reclassifyUnselected(Resource *r) noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 1038,
+    "end_line": 1065,
+    "declaration": "void KisNativeResultProtocol::Impl::cancelBody(Body *b) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1066,
+    "end_line": 1073,
+    "declaration": "void KisNativeResultProtocol::Impl::finishProducer(Body &b) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1074,
+    "end_line": 1080,
+    "declaration": "KisNativeResultProtocol::Body *KisNativeResultProtocol::Impl::iteratorBody() const",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1081,
+    "end_line": 1089,
+    "declaration": "void KisNativeResultProtocol::Impl::detachIterator(Body *b)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1090,
+    "end_line": 1103,
+    "declaration": "bool KisNativeResultProtocol::Impl::finishRawResult(Body *body) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1104,
+    "end_line": 1110,
+    "declaration": "void KisNativeResultProtocol::Impl::finishRaw(void *opaque) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1111,
+    "end_line": 1119,
+    "declaration": "bool KisNativeResultProtocol::Impl::finishIterator(Body *b, bool success)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1120,
+    "end_line": 1160,
+    "declaration": "bool KisNativeResultProtocol::Impl::bindRows(Body &b, const QRect &rect, QString *why, bool append)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1161,
+    "end_line": 1193,
+    "declaration": "bool KisNativeResultProtocol::Impl::prepareAdapter(Body &b, QString *why)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1194,
+    "end_line": 1203,
+    "declaration": "KisNativeResultProtocol::Impl::Selection KisNativeResultProtocol::Impl::viewSelection(const View &v, Key key) const",
+    "destination": "State_p.h (small shared fact operations)"
+  },
+  {
+    "original_line": 1204,
+    "end_line": 1330,
+    "declaration": "bool KisNativeResultProtocol::Impl::prepareTargets(Body &b, const quint8 *data,",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1331,
+    "end_line": 1367,
+    "declaration": "void KisNativeResultProtocol::Impl::buildPlan(Body &b)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1368,
+    "end_line": 1376,
+    "declaration": "void KisNativeResultProtocol::Impl::preparePlan(Body &b, KisBackingBudgetDelta &change)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1377,
+    "end_line": 1399,
+    "declaration": "bool KisNativeResultProtocol::Impl::samePlan(Body &b) const",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1400,
+    "end_line": 1549,
+    "declaration": "bool KisNativeResultProtocol::Impl::acceptBody(Body &b, const Faults *faults, QString *why)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1550,
+    "end_line": 1573,
+    "declaration": "void KisNativeResultProtocol::Impl::releaseView(View *v) noexcept",
+    "destination": "View"
+  },
+  {
+    "original_line": 1574,
+    "end_line": 1597,
+    "declaration": "void KisNativeResultProtocol::Impl::finishClosing() noexcept",
+    "destination": "Resource"
+  },
+  {
+    "original_line": 1598,
+    "end_line": 1615,
+    "declaration": "bool KisNativeResultProtocol::Impl::readSelection(Selection selected, quint8 *out,",
+    "destination": "View"
+  },
+  {
+    "original_line": 1616,
+    "end_line": 1691,
+    "declaration": "TileLease KisNativeResultProtocol::Impl::acquireTile(qint32 col, qint32 row, Access access, TileLease *cache)",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 1692,
+    "end_line": 1703,
+    "declaration": "KisNativeResultProtocol::KisNativeResultProtocol(KisTiledDataManager &adapter,",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 1704,
+    "end_line": 1711,
+    "declaration": "KisNativeResultProtocol::KisNativeResultProtocol(KisTiledDataManager &adapter,",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 1712,
+    "end_line": 1712,
+    "declaration": "KisNativeResultProtocol::~KisNativeResultProtocol() { close(); }",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 1713,
+    "end_line": 1713,
+    "declaration": "KisNativeResultProtocol::Prepared::~Prepared() { if (body) owner->cancelBody(body); }",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1714,
+    "end_line": 1715,
+    "declaration": "KisNativeResultProtocol::Prepared::Prepared(Prepared &&other) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1716,
+    "end_line": 1724,
+    "declaration": "KisNativeResultProtocol::Prepared &KisNativeResultProtocol::Prepared::operator=(Prepared &&other) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1725,
+    "end_line": 1734,
+    "declaration": "KisNativeResultProtocol::Prepared KisNativeResultProtocol::prepareWrite(",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1735,
+    "end_line": 1740,
+    "declaration": "bool KisNativeResultProtocol::accept(Prepared &p, QString *why, const Faults *faults)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1741,
+    "end_line": 1747,
+    "declaration": "KisNativeResultProtocol::Prepared KisNativeResultProtocol::prepareProducer(const QRect &pixels, QString *why)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1748,
+    "end_line": 1757,
+    "declaration": "quint8 *KisNativeResultProtocol::producerPage(Prepared &p, qint32 col, qint32 row, quint32 *stride)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1758,
+    "end_line": 1764,
+    "declaration": "bool KisNativeResultProtocol::finishProducer(Prepared &p, bool success, QString *)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1765,
+    "end_line": 1766,
+    "declaration": "bool KisNativeResultProtocol::ProducerCompletion::finish(bool success)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1767,
+    "end_line": 1769,
+    "declaration": "KisCompletionTicket KisNativeResultProtocol::ProducerCompletion::ticket() const",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1770,
+    "end_line": 1799,
+    "declaration": "KisNativeResultProtocol::ProducerCompletion KisNativeResultProtocol::deferProducer(Prepared &p, QString *why)",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1800,
+    "end_line": 1802,
+    "declaration": "void KisNativeResultProtocol::cancel(Prepared &p) noexcept",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1803,
+    "end_line": 1806,
+    "declaration": "bool KisNativeResultProtocol::write(const quint8 *bytes, const QRect &pixels, qsizetype stride,",
+    "destination": "Write"
+  },
+  {
+    "original_line": 1807,
+    "end_line": 1823,
+    "declaration": "KisNativeResultProtocol::Snapshot KisNativeResultProtocol::capture(QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 1824,
+    "end_line": 1852,
+    "declaration": "bool KisNativeResultProtocol::restore(const Snapshot &s, QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 1853,
+    "end_line": 1872,
+    "declaration": "KisNativeResultProtocol::Snapshot KisNativeResultProtocol::captureRange(const QRect &rect, QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 1873,
+    "end_line": 1915,
+    "declaration": "KisNativeResultProtocol::Snapshot KisNativeResultProtocol::capturePrepared(const Prepared &p, QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 1916,
+    "end_line": 1955,
+    "declaration": "bool KisNativeResultProtocol::alias(const Snapshot &s, const QRect &source, const QPoint &destination, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 1956,
+    "end_line": 1968,
+    "declaration": "bool KisNativeResultProtocol::remove(const QRect &pixels, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 1969,
+    "end_line": 1984,
+    "declaration": "bool KisNativeResultProtocol::Impl::prepareDefault(Body &b, const QByteArray &pixel, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 1985,
+    "end_line": 1992,
+    "declaration": "bool KisNativeResultProtocol::setDefaultPixel(const QByteArray &pixel, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 1993,
+    "end_line": 2041,
+    "declaration": "std::unique_ptr<KisNativeResultProtocol> KisNativeResultProtocol::cloneTo(KisTiledDataManager &adapter, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 2042,
+    "end_line": 2045,
+    "declaration": "bool KisNativeResultProtocol::read(const Snapshot &s, quint8 *bytes, const QRect &pixels,",
+    "destination": "View"
+  },
+  {
+    "original_line": 2046,
+    "end_line": 2062,
+    "declaration": "bool KisNativeResultProtocol::Snapshot::read(quint8 *bytes, const QRect &pixels,",
+    "destination": "View"
+  },
+  {
+    "original_line": 2063,
+    "end_line": 2093,
+    "declaration": "bool KisNativeResultProtocol::readCurrent(quint8 *bytes, const QRect &pixels, qsizetype stride, QString *why) const",
+    "destination": "View"
+  },
+  {
+    "original_line": 2094,
+    "end_line": 2096,
+    "declaration": "bool KisNativeResultProtocol::configureLimits(const KisPageBackingLimits &limits, QString *why)",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2097,
+    "end_line": 2109,
+    "declaration": "bool KisNativeResultProtocol::swapIdleForTest(QString *why)",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2110,
+    "end_line": 2140,
+    "declaration": "bool KisNativeResultProtocol::close(QString *why)",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2141,
+    "end_line": 2141,
+    "declaration": "KisNativeResultProtocol::Counts KisNativeResultProtocol::counts() const { QMutexLocker lock(&d->gate); return d->counts; }",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2142,
+    "end_line": 2143,
+    "declaration": "KisPageBackingUsage KisNativeResultProtocol::usage() const { return d->budget.usage(); }",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2144,
+    "end_line": 2159,
+    "declaration": "std::unique_ptr<KisNativeResultProtocol> KisNativeResultProtocol::createProduct(",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2160,
+    "end_line": 2186,
+    "declaration": "KisMementoSP KisNativeResultProtocol::beginHistory(QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2187,
+    "end_line": 2211,
+    "declaration": "bool KisNativeResultProtocol::commitHistory(QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2212,
+    "end_line": 2224,
+    "declaration": "bool KisNativeResultProtocol::abortHistory(const KisMementoSP &current, QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2225,
+    "end_line": 2232,
+    "declaration": "bool KisNativeResultProtocol::restoreHistory(const KisMementoSP &memento, bool before, QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2233,
+    "end_line": 2235,
+    "declaration": "bool KisNativeResultProtocol::hasHistory() const",
+    "destination": "View"
+  },
+  {
+    "original_line": 2236,
+    "end_line": 2259,
+    "declaration": "void KisNativeResultProtocol::purgeHistory(const KisMementoSP &oldest)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2260,
+    "end_line": 2283,
+    "declaration": "KisTileSP KisNativeResultProtocol::oldTile(qint32 col, qint32 row, bool *present, QString *why) const",
+    "destination": "View"
+  },
+  {
+    "original_line": 2284,
+    "end_line": 2318,
+    "declaration": "bool KisNativeResultProtocol::clear(QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 2319,
+    "end_line": 2324,
+    "declaration": "KisNativeResultProtocol::Snapshot KisNativeResultProtocol::captureOldData(QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2325,
+    "end_line": 2361,
+    "declaration": "bool KisNativeResultProtocol::mutate(const QRect &rect, const PageProducer &produce,",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 2362,
+    "end_line": 2372,
+    "declaration": "bool KisNativeResultProtocol::fill(const QRect &rect, const QByteArray &pixel, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 2373,
+    "end_line": 2377,
+    "declaration": "KisNativeResultProtocol::ReadAccess::~ReadAccess()",
+    "destination": "View"
+  },
+  {
+    "original_line": 2378,
+    "end_line": 2379,
+    "declaration": "KisNativeResultProtocol::ReadAccess::ReadAccess(ReadAccess &&other) noexcept",
+    "destination": "View"
+  },
+  {
+    "original_line": 2380,
+    "end_line": 2390,
+    "declaration": "KisNativeResultProtocol::ReadAccess &KisNativeResultProtocol::ReadAccess::operator=(ReadAccess &&other) noexcept",
+    "destination": "View"
+  },
+  {
+    "original_line": 2391,
+    "end_line": 2398,
+    "declaration": "KisPageVersion KisNativeResultProtocol::Snapshot::versionAt(qint32 col, qint32 row) const",
+    "destination": "View"
+  },
+  {
+    "original_line": 2399,
+    "end_line": 2423,
+    "declaration": "KisNativeResultProtocol::ReadAccess KisNativeResultProtocol::Snapshot::readPage(",
+    "destination": "View"
+  },
+  {
+    "original_line": 2424,
+    "end_line": 2445,
+    "declaration": "std::shared_ptr<const KisPageStoreIteratorReadScope> KisNativeResultProtocol::captureIteratorScope(",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2446,
+    "end_line": 2492,
+    "declaration": "bool KisNativeResultProtocol::copyFrom(const Snapshot &source, const QRect &rect, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 2493,
+    "end_line": 2526,
+    "declaration": "bool KisNativeResultProtocol::trim(const QRect &kept, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 2527,
+    "end_line": 2527,
+    "declaration": "void *KisNativeResultProtocol::IteratorSession::operator new(size_t n) { return kisAllocatePageProcessStorage(n, alignof(IteratorSession)); }",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2528,
+    "end_line": 2528,
+    "declaration": "void KisNativeResultProtocol::IteratorSession::operator delete(void *p) noexcept { kisFreePageProcessStorage(p, sizeof(IteratorSession), alignof(IteratorSession)); }",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2529,
+    "end_line": 2529,
+    "declaration": "KisNativeResultProtocol::IteratorSession::~IteratorSession() { if (body) owner->finishIterator(std::exchange(body, nullptr), false); }",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2530,
+    "end_line": 2530,
+    "declaration": "bool KisNativeResultProtocol::IteratorSession::finish() { return !body || owner->finishIterator(std::exchange(body, nullptr), true); }",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2531,
+    "end_line": 2532,
+    "declaration": "bool KisNativeResultProtocol::IteratorSession::isActive() const { return body && !body->failed && !owner->closing; }",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2533,
+    "end_line": 2546,
+    "declaration": "std::unique_ptr<KisTiledDataManagerIteratorWriteScope> KisNativeResultProtocol::beginIterator(QString *why)",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2547,
+    "end_line": 2595,
+    "declaration": "KisTileSP KisNativeResultProtocol::writableTile(qint32 col, qint32 row, QString *why)",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2596,
+    "end_line": 2627,
+    "declaration": "bool KisNativeResultProtocol::purge(const QRect &area, QString *why)",
+    "destination": "Operations"
+  },
+  {
+    "original_line": 2628,
+    "end_line": 2638,
+    "declaration": "bool KisNativeResultProtocol::beginHistoryMutation(const KisMementoSP &memento, QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2639,
+    "end_line": 2649,
+    "declaration": "bool KisNativeResultProtocol::checkpointHistoryMutation(const KisMementoSP &memento, QString *why)",
+    "destination": "View"
+  },
+  {
+    "original_line": 2650,
+    "end_line": 2758,
+    "declaration": "bool KisNativeResultProtocol::pixelOperation(const QVector<QRect> &rects,",
+    "destination": "Tiles3"
+  },
+  {
+    "original_line": 2759,
+    "end_line": 2771,
+    "declaration": "KisNativeResultProtocol::Layout KisNativeResultProtocol::layout()",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2772,
+    "end_line": 2787,
+    "declaration": "KisNativeResultProtocol::State KisNativeResultProtocol::state() const",
+    "destination": "Protocol"
+  },
+  {
+    "original_line": 2788,
+    "end_line": 2816,
+    "declaration": "KisTileSP KisNativeResultProtocol::selectReadTile(KisTileSP candidate, bool *present, QString *why)",
+    "destination": "Tiles3"
+  }
+]

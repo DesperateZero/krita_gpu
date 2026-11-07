@@ -1,0 +1,86 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--name",
+      "control-history-current",
+      "--root",
+      "/Users/apple/krita_gpu/krita",
+      "--build",
+      "_build-br0-cpu"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.9318208749999999,
+    "log": "final-controls-command-0.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_control_probe.py",
+      "--arch",
+      "arm64",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--name",
+      "control-history-m5",
+      "--root",
+      "/Users/apple/krita_gpu/build/br1-fixed-m5-20261005/source",
+      "--build",
+      "../build"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.2674705,
+    "log": "final-controls-command-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_control_probe.py",
+      "--arch",
+      "x86_64",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--name",
+      "control-history-current",
+      "--root",
+      "/Users/apple/krita_gpu/krita",
+      "--build",
+      "_build-br0-cpu"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.2754321249999996,
+    "log": "final-controls-command-2.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp3_metadata_batch_20261005/build_control_probe.py",
+      "--arch",
+      "x86_64",
+      "--source",
+      "fresh-history-throughput.cpp",
+      "--name",
+      "control-history-m5",
+      "--root",
+      "/Users/apple/krita_gpu/build/br1-fixed-m5-20261005/source",
+      "--build",
+      "../build"
+    ],
+    "exit_code": 0,
+    "reaped": true,
+    "timed_out": false,
+    "seconds": 1.2724776249999996,
+    "log": "final-controls-command-3.log"
+  }
+]

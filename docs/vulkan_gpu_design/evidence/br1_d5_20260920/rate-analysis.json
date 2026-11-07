@@ -1,0 +1,848 @@
+{
+  "schema": 1,
+  "manifest_sha256": "85bcbf5ba602dfc5235c45e407a6382c92dc8d5c18885e4fc64b102fa098fce1",
+  "purpose": "fixed-upstream shared-harness diagnostic; not full BR1-PERF qualification",
+  "phase": "rate",
+  "runs": 240,
+  "pairs_per_case": 12,
+  "limitations": [
+    "No pre-approved M non-inferiority margin: do not infer equivalence from a CI crossing 1",
+    "H=0, single thread and fixed in-flight=1; no per-event tails, pressure or product replay",
+    "No full metadata/allocation/background-drain counters; manager destruction is not complete retirement",
+    "Alias includes native operation management/content decisions but excludes prebuilt source initialization; label lifecycle operation, not pure M",
+    "K is a common memcpy control with ready read pins, not a production brush/SIMD kernel qualification",
+    "Rate is independently measured completed work; fixed-loop aggregate is not a single-event latency distribution"
+  ],
+  "results": [
+    {
+      "fixture": "guard-n1024-k16-b4",
+      "evidence_class": "M",
+      "metric_scope": "lifecycle-inclusive",
+      "completed_operations_per_second": {
+        "upstream_median": 6173116.592979562,
+        "current_median": 4562390.49371759,
+        "paired_median_ratio": 0.7408175138084596,
+        "exploratory_paired_95_interval": [
+          0.7343137089504632,
+          0.7484756938482948
+        ],
+        "pair_ratios": [
+          0.7412346244028342,
+          0.75364264033298,
+          0.7473977636853048,
+          0.7333943642939976,
+          0.7373788058407293,
+          0.7455898353887491,
+          0.7404004032140851,
+          0.7352330536069287,
+          0.7508902164262118,
+          0.749553624011285,
+          0.6980099545868825,
+          0.7249976509943025
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 161.98487306206707,
+        "current_median": 219.16825734274693,
+        "paired_median_ratio": 1.3501692039804043,
+        "exploratory_paired_95_interval": [
+          1.336230223911962,
+          1.3618833378406423
+        ],
+        "pair_ratios": [
+          1.3494828300343908,
+          1.3269067954159743,
+          1.3379360550445762,
+          1.363605545196073,
+          1.3561968783838128,
+          1.3413678238791513,
+          1.3508555779264177,
+          1.3601611304852115,
+          1.3317145887714692,
+          1.3345243927793478,
+          1.4318411542836917,
+          1.3794455584556216
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 161.98728581025395,
+        "current_median": 219.17405650274878,
+        "paired_median_ratio": 1.350199713220395,
+        "exploratory_paired_95_interval": [
+          1.3362307832257243,
+          1.3618962450060532
+        ],
+        "pair_ratios": [
+          1.3495306258034103,
+          1.326918132995802,
+          1.337939681178618,
+          1.3636135080395642,
+          1.3562030962614982,
+          1.3413890628221357,
+          1.3508688006373795,
+          1.3601789819725423,
+          1.3317251361224067,
+          1.3345218852728309,
+          1.4318489221763,
+          1.3794527441874784
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 1234656,
+        "current": 912480
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 98492416,
+        "current": 144580608
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "lookup-n1024-k16-b4",
+      "evidence_class": "M",
+      "metric_scope": "lifecycle-inclusive",
+      "completed_operations_per_second": {
+        "upstream_median": 3084726.714118734,
+        "current_median": 2397595.4412396783,
+        "paired_median_ratio": 0.7781329225411735,
+        "exploratory_paired_95_interval": [
+          0.7700624833781646,
+          0.788750163233098
+        ],
+        "pair_ratios": [
+          0.7698985469376577,
+          0.7732185268681402,
+          0.7782234729750351,
+          0.7921052054859058,
+          0.7835067666350315,
+          0.7678707130817596,
+          0.7854176656075834,
+          0.7920826608586127,
+          0.7923458145248479,
+          0.7780423721073118,
+          0.7702264198186716,
+          0.7642556465425482
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 324.1718003118053,
+        "current_median": 417.0842310320272,
+        "paired_median_ratio": 1.2849349006026571,
+        "exploratory_paired_95_interval": [
+          1.2678192643488049,
+          1.2987872561845841
+        ],
+        "pair_ratios": [
+          1.2988735172043397,
+          1.293601610453036,
+          1.2846080200031877,
+          1.2625024831629863,
+          1.2763628981034236,
+          1.302207883613802,
+          1.2731360455346235,
+          1.2624098107290112,
+          1.2620723007726047,
+          1.2852617812021263,
+          1.2987009951648283,
+          1.3083533701299142
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 324.1750750837395,
+        "current_median": 417.09256431008913,
+        "paired_median_ratio": 1.2849224556803143,
+        "exploratory_paired_95_interval": [
+          1.2678271813355981,
+          1.2987944225394417
+        ],
+        "pair_ratios": [
+          1.2988881306047444,
+          1.2936105014395893,
+          1.2846163234943975,
+          1.262512743995262,
+          1.2763652817339761,
+          1.3022290439445976,
+          1.2731416186759343,
+          1.2624203331900485,
+          1.2620741425253634,
+          1.285228587866231,
+          1.2987007144741387,
+          1.3083623742517154
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 616960,
+        "current": 479552
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 98508800,
+        "current": 144588800
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "blank-n64-k1-b4",
+      "evidence_class": "M",
+      "metric_scope": "lifecycle-inclusive",
+      "completed_operations_per_second": {
+        "upstream_median": 28625047.430093713,
+        "current_median": 22421491.44097881,
+        "paired_median_ratio": 0.7840369717449777,
+        "exploratory_paired_95_interval": [
+          0.7808551682410972,
+          0.7859640304038572
+        ],
+        "pair_ratios": [
+          0.7908697419844523,
+          0.7708664402091626,
+          0.7838025980828967,
+          0.7714943189450715,
+          0.7921693305987116,
+          0.781562460416023,
+          0.7841197849965593,
+          0.7801478760661715,
+          0.7875083774495388,
+          0.783954158493396,
+          0.7844073286565351,
+          0.7844196833581756
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 34.932370664367184,
+        "current_median": 44.59610892675302,
+        "paired_median_ratio": 1.2754880719353303,
+        "exploratory_paired_95_interval": [
+          1.272387737075034,
+          1.2806363729783017
+        ],
+        "pair_ratios": [
+          1.2643833117372887,
+          1.2972556306149734,
+          1.275899755380428,
+          1.2962636062621125,
+          1.262163074696534,
+          1.2795053258922644,
+          1.2753419244260003,
+          1.281767420064339,
+          1.2699669296340237,
+          1.2756342194446602,
+          1.2748085445160444,
+          1.2748407916346098
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 34.93276001011075,
+        "current_median": 44.597079988566215,
+        "paired_median_ratio": 1.2754904596117496,
+        "exploratory_paired_95_interval": [
+          1.2723813805758728,
+          1.2806471801764283
+        ],
+        "pair_ratios": [
+          1.2643848928751051,
+          1.297276437683306,
+          1.2758787593383458,
+          1.2962952040173783,
+          1.2621649209356745,
+          1.279514660315747,
+          1.2753461709249085,
+          1.2817797000371096,
+          1.269958990232197,
+          1.2756347482985904,
+          1.2748037709195488,
+          1.2748376043971732
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 5725056,
+        "current": 4484352
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 54951936,
+        "current": 55476224
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "intent-n64-k1-b4",
+      "evidence_class": "M",
+      "metric_scope": "lifecycle-inclusive",
+      "completed_operations_per_second": {
+        "upstream_median": 49481821.94973995,
+        "current_median": 42621004.497077815,
+        "paired_median_ratio": 0.8620625808412431,
+        "exploratory_paired_95_interval": [
+          0.8566395413679317,
+          0.8659311686564994
+        ],
+        "pair_ratios": [
+          0.8627775095800403,
+          0.8528598435780643,
+          0.8583615328941194,
+          0.8613100510470229,
+          0.8626132188782315,
+          0.8488322782767134,
+          0.8615119428042547,
+          0.8680997246988456,
+          0.8637626126141532,
+          0.8735169771397203,
+          0.8549175498417441,
+          0.8733505374676489
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 20.208653289224515,
+        "current_median": 23.461608405121964,
+        "paired_median_ratio": 1.1599175617288258,
+        "exploratory_paired_95_interval": [
+          1.1548380844378368,
+          1.1672847265939894
+        ],
+        "pair_ratios": [
+          1.1590268389778096,
+          1.1726631474626077,
+          1.1649471647491174,
+          1.1611050750748977,
+          1.1592212622611722,
+          1.178061049048532,
+          1.1606138611964791,
+          1.151963221441743,
+          1.1577129474339305,
+          1.1447416244181692,
+          1.1696222884388616,
+          1.1449810153649562
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 20.20895229318573,
+        "current_median": 23.461960423999898,
+        "paired_median_ratio": 1.1599216693715262,
+        "exploratory_paired_95_interval": [
+          1.154840143570148,
+          1.1672935942076714
+        ],
+        "pair_ratios": [
+          1.1590422952225585,
+          1.1726602078968007,
+          1.1649617287712835,
+          1.161009032580441,
+          1.1592256102487855,
+          1.1780507413815495,
+          1.160617728494267,
+          1.151960341237863,
+          1.1577199459024332,
+          1.1447332795286183,
+          1.1696254596440592,
+          1.1449736249804523
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 9896384,
+        "current": 8524224
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 56074240,
+        "current": 60432384
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "alias-n1024-k16-b4",
+      "evidence_class": "E",
+      "metric_scope": "endpoint",
+      "completed_operations_per_second": {
+        "upstream_median": 419426.76901352906,
+        "current_median": 10705.033070512025,
+        "paired_median_ratio": 0.02572203327467707,
+        "exploratory_paired_95_interval": [
+          0.025392556451095033,
+          0.026076964228620353
+        ],
+        "pair_ratios": [
+          0.026365500612591446,
+          0.02591670313004474,
+          0.026237225327195964,
+          0.025433685046723886,
+          0.025351427855466176,
+          0.025823805214066898,
+          0.02544092445064466,
+          0.025875198774789467,
+          0.026396149535660655,
+          0.024986214275141014,
+          0.025274737928788968,
+          0.02562026133528724
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 2384.151520115469,
+        "current_median": 93405.21622242648,
+        "paired_median_ratio": 38.87938939989378,
+        "exploratory_paired_95_interval": [
+          38.352643543473064,
+          39.38586956301106
+        ],
+        "pair_ratios": [
+          37.92917266027501,
+          38.58723307681768,
+          38.11805401012845,
+          39.327066554798,
+          39.444672571224125,
+          38.72945914865534,
+          39.30599220344324,
+          38.646730522086195,
+          37.88541537131972,
+          40.021601652672196,
+          39.558831199278316,
+          39.02931965113222
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 2384.1741235075406,
+        "current_median": 93407.62867647059,
+        "paired_median_ratio": 38.87970294588095,
+        "exploratory_paired_95_interval": [
+          38.35287362169222,
+          39.386105642160885
+        ],
+        "pair_ratios": [
+          37.9298950846398,
+          38.58749279101801,
+          38.11825445236643,
+          39.32711513661038,
+          39.44509614771139,
+          38.72952340004299,
+          39.30665404273816,
+          38.64716997443529,
+          37.88547411410268,
+          40.02199223651238,
+          39.559600506086,
+          39.02988249171891
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 83904,
+        "current": 2176
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 98762752,
+        "current": 150233088
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "write-n4096-k1-b4",
+      "evidence_class": "E",
+      "metric_scope": "endpoint",
+      "completed_operations_per_second": {
+        "upstream_median": 33832641.41410059,
+        "current_median": 91966.16798672364,
+        "paired_median_ratio": 0.0027227637739599022,
+        "exploratory_paired_95_interval": [
+          0.0027001122761096765,
+          0.002753363012725882
+        ],
+        "pair_ratios": [
+          0.0027235887271157807,
+          0.002694919697692665,
+          0.00281628943440482,
+          0.0027714172954674773,
+          0.0027353087299842862,
+          0.0027186792337189785,
+          0.0027330423295036503,
+          0.0027872202137160062,
+          0.002705304854526688,
+          0.0026945423853111283,
+          0.002721938820804024,
+          0.00266470047895803
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 29.551956040217636,
+        "current_median": 10872.179958767361,
+        "paired_median_ratio": 367.29256834270376,
+        "exploratory_paired_95_interval": [
+          363.2261066358236,
+          370.3497657499927
+        ],
+        "pair_ratios": [
+          367.1922952655424,
+          371.071898311958,
+          355.08136727757557,
+          360.8492089689465,
+          365.60300430270075,
+          367.8602276822977,
+          365.8913375188666,
+          358.7795307348513,
+          369.6276331880274,
+          371.12555658552793,
+          367.39284141986514,
+          375.3081628220858
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 29.552537932354852,
+        "current_median": 10872.395833333334,
+        "paired_median_ratio": 367.2937025484317,
+        "exploratory_paired_95_interval": [
+          363.22966376131114,
+          370.35176898283044
+        ],
+        "pair_ratios": [
+          367.19189079207,
+          371.07375022937833,
+          355.0810642334612,
+          360.85145215332426,
+          365.60787536929803,
+          367.8586819101286,
+          365.8917742767017,
+          358.7815299901242,
+          369.6297877362825,
+          371.12663203234507,
+          367.39551430479344,
+          375.311741349863
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 6766560,
+        "current": 18432
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 251076608,
+        "current": 361209856
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "write-n1024-k16-b4",
+      "evidence_class": "E",
+      "metric_scope": "endpoint",
+      "completed_operations_per_second": {
+        "upstream_median": 2513510.773705735,
+        "current_median": 9853.332272040729,
+        "paired_median_ratio": 0.003920860537928067,
+        "exploratory_paired_95_interval": [
+          0.0038909766764676484,
+          0.003979518889488951
+        ],
+        "pair_ratios": [
+          0.003976164124543197,
+          0.00411170615419405,
+          0.0038798075951621425,
+          0.003924479336395023,
+          0.0040274019531294225,
+          0.0038939483783905163,
+          0.003982873654434705,
+          0.003873837920893349,
+          0.0038880049745447804,
+          0.0039102357231980064,
+          0.003917241739461111,
+          0.0039639122893575015
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 397.83261103381153,
+        "current_median": 101480.18523185485,
+        "paired_median_ratio": 255.04180250863925,
+        "exploratory_paired_95_interval": [
+          251.31595736707405,
+          257.0045699900277
+        ],
+        "pair_ratios": [
+          251.50372297429413,
+          243.21924467174955,
+          257.67524780006397,
+          254.81089448640267,
+          248.30442626683785,
+          256.80782170386465,
+          251.12819175985396,
+          258.14694732971793,
+          257.20131827619076,
+          255.73889403444562,
+          255.27271053087586,
+          252.22689988634022
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 397.8392361302447,
+        "current_median": 101482.35887096774,
+        "paired_median_ratio": 255.045496535376,
+        "exploratory_paired_95_interval": [
+          251.31570882905385,
+          257.0065148626935
+        ],
+        "pair_ratios": [
+          251.50430759712012,
+          243.2215761095085,
+          257.67879191834095,
+          254.81561803145905,
+          248.3064614153014,
+          256.8086918750053,
+          251.1271100609876,
+          258.1437229479124,
+          257.2043378503817,
+          255.74354183107133,
+          255.27537503929298,
+          252.22769994319526
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 502720,
+        "current": 1984
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 98435072,
+        "current": 151527424
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "write-n64-k1-b8",
+      "evidence_class": "E",
+      "metric_scope": "endpoint",
+      "completed_operations_per_second": {
+        "upstream_median": 30948645.24017685,
+        "current_median": 103598.10287592668,
+        "paired_median_ratio": 0.0033595325489621025,
+        "exploratory_paired_95_interval": [
+          0.003319496306703514,
+          0.00337634200175751
+        ],
+        "pair_ratios": [
+          0.0032220961681664823,
+          0.003371452758145172,
+          0.003318104869364806,
+          0.003348056389345938,
+          0.003375425897240718,
+          0.0032410497590720693,
+          0.0033631066224333443,
+          0.0033559584754908603,
+          0.0034386210348646387,
+          0.003320887744042222,
+          0.0033772581062743016,
+          0.003436173647493142
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 32.31103666671483,
+        "current_median": 9652.019296281458,
+        "paired_median_ratio": 297.64734591792336,
+        "exploratory_paired_95_interval": [
+          296.1695524530535,
+          301.2382848449306
+        ],
+        "pair_ratios": [
+          310.28611053814177,
+          296.61878908921364,
+          301.3573417854073,
+          298.708209074148,
+          296.2647842114558,
+          308.5380941056395,
+          297.3173930949858,
+          297.97729874086093,
+          290.80450858655985,
+          301.1192279044539,
+          296.07432069465125,
+          291.0118064599309
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 32.311638764902995,
+        "current_median": 9652.17073243115,
+        "paired_median_ratio": 297.64748737108795,
+        "exploratory_paired_95_interval": [
+          296.17029000742207,
+          301.2384296886426
+        ],
+        "pair_ratios": [
+          310.2881691582469,
+          296.6221847384616,
+          301.3545767229467,
+          298.7111228805808,
+          296.26625878530956,
+          308.5396271587572,
+          297.31966906319315,
+          297.97530567898275,
+          290.80619099627813,
+          301.1222826543385,
+          296.0743212295345,
+          291.01295447541406
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 6189760,
+        "current": 20768
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 56139776,
+        "current": 70991872
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "write-n64-k1-b16",
+      "evidence_class": "E",
+      "metric_scope": "endpoint",
+      "completed_operations_per_second": {
+        "upstream_median": 26896867.539037444,
+        "current_median": 94994.79416524443,
+        "paired_median_ratio": 0.0035163781147074255,
+        "exploratory_paired_95_interval": [
+          0.0034715064404935154,
+          0.0035715910249741623
+        ],
+        "pair_ratios": [
+          0.0036450265230855133,
+          0.0035684334767232765,
+          0.0035126887893575627,
+          0.0035200674400572888,
+          0.003543751297858262,
+          0.003479121360081771,
+          0.0034559407782247453,
+          0.0034638915209052597,
+          0.0035781889675148065,
+          0.00341182346734237,
+          0.0035747485732250486,
+          0.00350545191320882
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 37.17857453893878,
+        "current_median": 10526.579112486019,
+        "paired_median_ratio": 284.3826055727528,
+        "exploratory_paired_95_interval": [
+          279.98483663936804,
+          288.04074996835084
+        ],
+        "pair_ratios": [
+          274.3345597739476,
+          280.2490890135667,
+          284.6733983170345,
+          284.09181282847106,
+          282.1699829858446,
+          287.39877823306824,
+          289.30282793596274,
+          288.68272170363343,
+          279.4812940597619,
+          293.0990100665617,
+          279.7205842651694,
+          285.2228034250262
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 37.17892308036632,
+        "current_median": 10526.791439280953,
+        "paired_median_ratio": 284.38439938139584,
+        "exploratory_paired_95_interval": [
+          279.986175205962,
+          288.04512911892346
+        ],
+        "pair_ratios": [
+          274.33894777935336,
+          280.2517713474241,
+          284.6755764993491,
+          284.0932222634425,
+          282.1708026845638,
+          287.40146419795224,
+          289.30445392534017,
+          288.6887940398946,
+          279.4833750496974,
+          293.10137679547705,
+          279.7205790644999,
+          285.22564921357446
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 5379392,
+        "current": 19040
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 59392000,
+        "current": 72441856
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    },
+    {
+      "fixture": "kernel-n1024-k16-b4",
+      "evidence_class": "K",
+      "metric_scope": "resident-kernel",
+      "completed_operations_per_second": {
+        "upstream_median": 278100.3763832541,
+        "current_median": 289484.9896008654,
+        "paired_median_ratio": 1.0408000695466202,
+        "exploratory_paired_95_interval": [
+          1.004453931487596,
+          1.0644880401208
+        ],
+        "pair_ratios": [
+          1.0041420875210902,
+          0.7088436731815283,
+          1.0536198066833795,
+          1.0785250893116898,
+          1.0279803324098609,
+          1.0683414414212613,
+          0.9957741918844457,
+          1.0207192598111252,
+          1.0606346388203387,
+          1.0901553235148118,
+          1.0047657754541017,
+          1.0553266596638122
+        ]
+      },
+      "rate_window_thread_cpu_ns_per_completed_operation": {
+        "upstream_median": 3595.7020800162527,
+        "current_median": 3454.6780246448297,
+        "paired_median_ratio": 0.9609239026275445,
+        "exploratory_paired_95_interval": [
+          0.9394101894761324,
+          0.9955963586757712
+        ],
+        "pair_ratios": [
+          0.9958899116440292,
+          1.4107254062405636,
+          0.9491425235997286,
+          0.9272655577261056,
+          0.9727052816553604,
+          0.9360127828025666,
+          1.0041519983023517,
+          0.9796356119978396,
+          0.9428075961496982,
+          0.9173381458129843,
+          0.9953028057075134,
+          0.9475940271629144
+        ]
+      },
+      "rate_window_process_cpu_ns_per_completed_operation": {
+        "upstream_median": 3595.762734283031,
+        "current_median": 3454.7614097623164,
+        "paired_median_ratio": 0.9609313056996536,
+        "exploratory_paired_95_interval": [
+          0.9394133733077296,
+          0.9956028941144986
+        ],
+        "pair_ratios": [
+          0.9958965566462414,
+          1.4107251074624763,
+          0.9491506382796786,
+          0.9272638045548334,
+          0.9727119731196284,
+          0.9360277990774983,
+          1.004162447175499,
+          0.9796398979315531,
+          0.9427989475379608,
+          0.917340423404234,
+          0.9953092315827559,
+          0.9476033014755693
+        ]
+      },
+      "rate_window_completed_operations": {
+        "upstream": 55680,
+        "current": 57920
+      },
+      "rate_process_peak_rss_bytes": {
+        "upstream": 98738176,
+        "current": 145031168
+      },
+      "qualification": "NotQualified: limited diagnostic scope, not formal M/K/E or BR1-PERF closure"
+    }
+  ]
+}

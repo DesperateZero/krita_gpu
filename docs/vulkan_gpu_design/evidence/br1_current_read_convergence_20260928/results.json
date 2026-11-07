@@ -1,0 +1,102 @@
+[
+  {
+    "architecture": "arm64",
+    "summary": {
+      "control_errors": 0,
+      "kind": "summary",
+      "observations": 172,
+      "publication_violations": 80,
+      "scenarios": 44,
+      "scope": "reproduction and compatibility controls; not a fix or performance qualification"
+    },
+    "observation_counts": [
+      {
+        "phase": "metadata_prepare",
+        "coherent": true,
+        "count": 32
+      },
+      {
+        "phase": "seal_cleanup",
+        "coherent": false,
+        "count": 32
+      },
+      {
+        "phase": "operation_cleanup",
+        "coherent": false,
+        "count": 32
+      },
+      {
+        "phase": "adapter_installed",
+        "coherent": true,
+        "count": 24
+      },
+      {
+        "phase": "after_return_other_thread",
+        "coherent": true,
+        "count": 24
+      },
+      {
+        "phase": "adapter_installed",
+        "coherent": false,
+        "count": 8
+      },
+      {
+        "phase": "after_return_other_thread",
+        "coherent": false,
+        "count": 8
+      }
+    ],
+    "acceptance_passed": false,
+    "acceptance_exit": 3
+  },
+  {
+    "architecture": "x86_64",
+    "summary": {
+      "control_errors": 0,
+      "kind": "summary",
+      "observations": 172,
+      "publication_violations": 80,
+      "scenarios": 44,
+      "scope": "reproduction and compatibility controls; not a fix or performance qualification"
+    },
+    "observation_counts": [
+      {
+        "phase": "metadata_prepare",
+        "coherent": true,
+        "count": 32
+      },
+      {
+        "phase": "seal_cleanup",
+        "coherent": false,
+        "count": 32
+      },
+      {
+        "phase": "operation_cleanup",
+        "coherent": false,
+        "count": 32
+      },
+      {
+        "phase": "adapter_installed",
+        "coherent": true,
+        "count": 24
+      },
+      {
+        "phase": "after_return_other_thread",
+        "coherent": true,
+        "count": 24
+      },
+      {
+        "phase": "adapter_installed",
+        "coherent": false,
+        "count": 8
+      },
+      {
+        "phase": "after_return_other_thread",
+        "coherent": false,
+        "count": 8
+      }
+    ],
+    "acceptance_passed": false,
+    "acceptance_exit": 3
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "K": 1,
+    "variant": "fresh",
+    "complete_samples": 16,
+    "median_requests": {
+      "allocations": 25.0,
+      "bytes": 4680.0,
+      "frees": 11.0
+    },
+    "scope": "malloc-family beginWrite requests only; not common metadata residency or VM payload"
+  },
+  {
+    "K": 1,
+    "variant": "handoff",
+    "complete_samples": 16,
+    "median_requests": {
+      "allocations": 16.0,
+      "bytes": 3776.0,
+      "frees": 7.0
+    },
+    "scope": "malloc-family beginWrite requests only; not common metadata residency or VM payload"
+  },
+  {
+    "K": 16,
+    "variant": "fresh",
+    "complete_samples": 16,
+    "median_requests": {
+      "allocations": 441.0,
+      "bytes": 91856.0,
+      "frees": 187.0
+    },
+    "scope": "malloc-family beginWrite requests only; not common metadata residency or VM payload"
+  },
+  {
+    "K": 16,
+    "variant": "handoff",
+    "complete_samples": 16,
+    "median_requests": {
+      "allocations": 238.0,
+      "bytes": 89728.0,
+      "frees": 169.0
+    },
+    "scope": "malloc-family beginWrite requests only; not common metadata residency or VM payload"
+  }
+]

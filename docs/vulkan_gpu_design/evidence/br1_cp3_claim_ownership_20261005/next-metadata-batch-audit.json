@@ -1,0 +1,24 @@
+{
+  "status": "Read-only finite responsibility review; no replacement implemented or qualified",
+  "source": "Current KisPageMetadataCoordinator.cpp ShardRecordStore::putBatch",
+  "facts": [
+    "The original shard record store owns the accepted batch, exact-version and physical-slot indexes, arena reservation and putReserved installation",
+    "putBatch validates physical uniqueness across every replica in every input snapshot using a temporary paid unordered_set",
+    "That scratch set reserves by snapshot count, then allocates one node per actual physical identity; its nodes and buckets die before returning from the original batch operation",
+    "canInstallPhysical remains a separate check against the existing canonical physical index; batch uniqueness cannot replace it",
+    "No mutable record installation occurs before all inputs validate and the actual arena/index reservation succeeds"
+  ],
+  "finite_next_endpoint": "Reconcile the complete transient batch uniqueness representation with actual replica cardinality and its original storage owner; review every caller, refusal, reservation and terminal before choosing a contiguous batch or other representation",
+  "preserve": [
+    "Every original logical version and replica, full provider/epoch/physical slot equality",
+    "Within-version and cross-version physical duplicate rejection",
+    "Existing canonical physical collision and allocation-generation rules",
+    "Original arena/index reservation, insertion order, rollback and eventual actual paid free",
+    "All original limits and zero-allocation/free prepared installation boundaries"
+  ],
+  "not_claimed": [
+    "No deletion or performance qualification from stack samples",
+    "No new snapshot owner, selector, persistent field or relaxed limiter",
+    "No re-opening the already delivered working-value moves, authority snapshot or source claim ownership"
+  ]
+}

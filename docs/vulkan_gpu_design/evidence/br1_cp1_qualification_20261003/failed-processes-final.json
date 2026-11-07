@@ -1,0 +1,13 @@
+{
+  "command": [
+    "ps",
+    "-o",
+    "pid,ppid,state,etime,comm",
+    "-p",
+    "32658,48549,43034,87095,59123,70089,83020,87052"
+  ],
+  "exit_code": 0,
+  "stdout": "  PID  PPID STAT     ELAPSED COMM\n32658     1 UE      02:43:05 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest\n43034     1 UE   01-03:59:12 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest\n48549     1 UE      02:11:42 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreReferenceTest\n59123 66413 UEs     13:00:17 /Users/apple/krita_gpu/build/br1-cp0-20261003/upstream-build/bin/FreehandStrokeTest\n70089     1 UE      12:37:37 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test\n83020     1 UE      12:07:12 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/kis_tiled_data_manager_test\n87052     1 UE         46:10 /Users/apple/krita_gpu/docs/vulkan_gpu_design/evidence/br1_cp1_qualification_20261003/tsan-01/control\n87095     1 UE   01-18:29:27 /Users/apple/krita_gpu/krita/_build-br0-cpu/bin/KisPageStoreCpuMutationTest\n",
+  "stderr": "",
+  "drained": false
+}

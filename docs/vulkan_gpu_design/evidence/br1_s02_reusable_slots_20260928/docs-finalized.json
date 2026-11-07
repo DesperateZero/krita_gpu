@@ -1,0 +1,74 @@
+{
+  "source_diff_sha256": "796219267176e019bb27b18c811250c8057fff56d79c82c329551dfcedfaf7b5",
+  "passed": 6352,
+  "remapped_source_links": 170,
+  "manual_files": 9,
+  "anchors": [
+    {
+      "label": "KisMutationStorage",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisMutationStorage_p.h",
+      "line": 75,
+      "needle": "class KisMutationStorage"
+    },
+    {
+      "label": "WriteSet::getOrCreate",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "line": 866,
+      "needle": "KisMutationPageEntry &KisMutationWriteSet::getOrCreate("
+    },
+    {
+      "label": "WriteAdmission::releaseOneLocked",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageWriteCoordinator.cpp",
+      "line": 1143,
+      "needle": "bool KisPageWriteAdmission::releaseOneLocked("
+    },
+    {
+      "label": "CpuWriteGuard::reset",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 1204,
+      "needle": "void KisCpuWriteGuard::reset()"
+    },
+    {
+      "label": "Private::cancelLocked",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 858,
+      "needle": "    bool cancelLocked("
+    },
+    {
+      "label": "Private::releaseStorageLocked",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 843,
+      "needle": "    void releaseStorageLocked("
+    },
+    {
+      "label": "Private::detachLocked",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 797,
+      "needle": "    void detachLocked("
+    },
+    {
+      "label": "Session::sealImpl",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/pagestore/KisPageStore.cpp",
+      "line": 1716,
+      "needle": "bool KisPageMutationSession::sealImpl("
+    },
+    {
+      "label": "slot/ABA/预算与 claim 用例",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreReferenceTest.cpp",
+      "line": 5372,
+      "needle": "void KisPageStoreReferenceTest::mutationStorageReclaimsBlocksAndRejectsABA()"
+    },
+    {
+      "label": "部分取消与新 writer 用例",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "line": 5485,
+      "needle": "void KisPageStoreCpuMutationTest::partialCancellationRetiresBeforeRetry()"
+    },
+    {
+      "label": "seal 中的空洞复用与预算归还用例",
+      "file": "/Users/apple/krita_gpu/krita/libs/image/tests/KisPageStoreCpuMutationTest.cpp",
+      "line": 4488,
+      "needle": "void KisPageStoreCpuMutationTest::mutationColdHolesAreReusedDuringSeal()"
+    }
+  ]
+}
